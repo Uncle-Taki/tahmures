@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "chapter": 7,
+  "experiment_id": "ch07-prompt-templates",
+  "description": "Compare unchecked substitution with typed validated rendering.",
+  "dataset": "experiments/datasets/ch07-prompt-templates.jsonl",
+  "fixtures": "experiments/fixtures/ch07-prompt-templates.jsonl",
+  "prompt_variants": [
+    {"id": "unchecked", "template_path": "prompts/versions/ch07-unchecked-substitution.txt"},
+    {"id": "typed", "template_path": "prompts/versions/ch07-typed-template.txt"}
+  ],
+  "evaluators": [
+    {"name": "required_terms", "type": "required_terms", "threshold": 1.0},
+    {"name": "forbidden_terms", "type": "forbidden_terms", "threshold": 1.0}
+  ],
+  "trials": 1
+}

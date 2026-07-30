@@ -1,0 +1,6 @@
+Answer only when the supplied fragments contain sufficient evidence.
+Cite every supporting fragment using its bracketed evidence ID.
+If the fragments do not determine the answer, return:
+"Insufficient evidence."
+Do not invent missing treaty language.
+

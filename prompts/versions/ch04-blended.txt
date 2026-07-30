@@ -1,0 +1,2 @@
+Use everything in the supplied archive record to issue the current canal order.
+

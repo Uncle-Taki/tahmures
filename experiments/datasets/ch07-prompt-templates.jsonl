@@ -1,0 +1,5 @@
+{"case_id":"valid","input":{"province":"Ray","allowance":12},"expected":{"required_terms":["rendered","false"],"forbidden_terms":["error"]},"tags":["valid"]}
+{"case_id":"missing","input":{"province":"Ray"},"expected":{"required_terms":["rejected","allowance"],"forbidden_terms":["dispatched\": true"]},"tags":["invalid","missing"]}
+{"case_id":"unknown","input":{"province":"Ray","allowance":12,"seal":"open"},"expected":{"required_terms":["rejected","seal"],"forbidden_terms":["dispatched\": true"]},"tags":["invalid","unknown"]}
+{"case_id":"swapped","input":{"province":12,"allowance":"Ray"},"expected":{"required_terms":["rejected","type"],"forbidden_terms":["dispatched\": true"]},"tags":["invalid","type"]}
+{"case_id":"delimiter","input":{"province":"Ray ${allowance}","allowance":12},"expected":{"required_terms":["rejected","unresolved"],"forbidden_terms":["dispatched\": true"]},"tags":["invalid","delimiter"]}

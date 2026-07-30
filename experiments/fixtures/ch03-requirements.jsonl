@@ -1,0 +1,7 @@
+{"case_id":"floodplain","variant_id":"baseline","trial":1,"response":{"text":"Stone is best because it is the strongest.","model_id":"fixture-v1"}}
+{"case_id":"military-road","variant_id":"baseline","trial":1,"response":{"text":"Arch is best because it will last longest.","model_id":"fixture-v1"}}
+{"case_id":"village-path","variant_id":"baseline","trial":1,"response":{"text":"Stone is best for a permanent crossing.","model_id":"fixture-v1"}}
+{"case_id":"floodplain","variant_id":"decision_brief","trial":1,"response":{"text":"Choose timber: its cost is within 80 and it remains safe in the spring flood; it trades permanence for affordability.","model_id":"fixture-v1"}}
+{"case_id":"military-road","variant_id":"decision_brief","trial":1,"response":{"text":"Choose trestle: it supports carts and meets the two-day repair constraint; the trade-off is more routine maintenance.","model_id":"fixture-v1"}}
+{"case_id":"village-path","variant_id":"decision_brief","trial":1,"response":{"text":"Choose rope: it is pedestrian safe and has the lower cost; stone offers durability that was not required.","model_id":"fixture-v1"}}
+

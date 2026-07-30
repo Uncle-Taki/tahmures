@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "chapter": 5,
+  "experiment_id": "ch05-instruction-hierarchy",
+  "description": "Resolve authenticated authority and escalate genuine conflicts.",
+  "dataset": "experiments/datasets/ch05-instruction-hierarchy.jsonl",
+  "fixtures": "experiments/fixtures/ch05-instruction-hierarchy.jsonl",
+  "prompt_variants": [
+    {"id": "concatenated", "template_path": "prompts/versions/ch05-concatenated.txt"},
+    {"id": "resolved", "template_path": "prompts/versions/ch05-resolved.txt"}
+  ],
+  "evaluators": [
+    {"name": "authority_decision", "type": "classification", "threshold": 1.0}
+  ],
+  "trials": 1
+}
+

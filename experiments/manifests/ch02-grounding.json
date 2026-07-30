@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "chapter": 2,
+  "experiment_id": "ch02-grounding",
+  "description": "Measure evidence use and abstention on treaty fragments.",
+  "dataset": "experiments/datasets/ch02-grounding.jsonl",
+  "fixtures": "experiments/fixtures/ch02-grounding.jsonl",
+  "prompt_variants": [
+    {"id": "baseline", "template_path": "prompts/versions/ch02-baseline.txt"},
+    {"id": "evidence_bound", "template_path": "prompts/versions/ch02-evidence-bound.txt"}
+  ],
+  "evaluators": [
+    {"name": "grounding", "type": "evidence", "threshold": 1.0}
+  ],
+  "trials": 2
+}
+

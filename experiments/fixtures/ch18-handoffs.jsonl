@@ -1,0 +1,6 @@
+{"case_id":"negation","variant_id":"summary","trial":1,"response":{"text":"{\"goal\":\"cross after sunset\",\"goal_version\":2,\"permitted_next_actions\":[\"cross\"]}","model_id":"fixture-v1"}}
+{"case_id":"negation","variant_id":"envelope","trial":1,"response":{"text":"{\"goal\":\"relay safely\",\"goal_version\":2,\"authority\":\"royal\",\"constraints\":[\"do not cross after sunset\"],\"permitted_next_actions\":[\"inspect\"]}","model_id":"fixture-v1"}}
+{"case_id":"stale","variant_id":"summary","trial":1,"response":{"text":"{\"goal\":\"old route\",\"goal_version\":2,\"authority\":\"royal\",\"permitted_next_actions\":[\"travel\"]}","model_id":"fixture-v1"}}
+{"case_id":"stale","variant_id":"envelope","trial":1,"response":{"text":"{\"goal\":\"new route\",\"goal_version\":3,\"authority\":\"royal\",\"constraints\":[],\"permitted_next_actions\":[\"inspect\",\"report\"]}","model_id":"fixture-v1"}}
+{"case_id":"authority","variant_id":"summary","trial":1,"response":{"text":"{\"goal\":\"continue\",\"goal_version\":1,\"permitted_next_actions\":[\"open\"]}","model_id":"fixture-v1"}}
+{"case_id":"authority","variant_id":"envelope","trial":1,"response":{"text":"{\"goal\":\"relay\",\"goal_version\":1,\"authority\":\"escort-only\",\"constraints\":[\"report only\"],\"permitted_next_actions\":[\"report\"]}","model_id":"fixture-v1"}}

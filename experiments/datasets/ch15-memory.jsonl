@@ -1,0 +1,3 @@
+{"case_id":"expired","input":{"subject":"traveller","time":"winter"},"expected":{"active_ids":["WINTER"],"forbidden_ids":["SPRING"]},"tags":["expiry"]}
+{"case_id":"corrected","input":{"subject":"traveller"},"expected":{"active_ids":["NEW_NAME"],"forbidden_ids":["OLD_NAME"]},"tags":["supersession"]}
+{"case_id":"forgotten","input":{"subject":"traveller"},"expected":{"active_ids":["PUBLIC_PREF"],"forbidden_ids":["DELETED_PRIVATE"]},"tags":["deletion"]}

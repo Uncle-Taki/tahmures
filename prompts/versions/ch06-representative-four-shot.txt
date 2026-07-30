@@ -1,0 +1,8 @@
+Classify the petition as approve, review, or reject.
+Examples:
+complete evidence from any petitioner -> approve
+missing required date -> review
+conflicting witness statements -> review
+forged seal -> reject
+Apply the pattern to the petition and return only the label.
+

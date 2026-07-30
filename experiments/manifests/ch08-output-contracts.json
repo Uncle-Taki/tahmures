@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "chapter": 8,
+  "experiment_id": "ch08-output-contracts",
+  "description": "Compare prose catalogues with a strict educational JSON contract.",
+  "dataset": "experiments/datasets/ch08-output-contracts.jsonl",
+  "fixtures": "experiments/fixtures/ch08-output-contracts.jsonl",
+  "prompt_variants": [
+    {"id": "prose", "template_path": "prompts/versions/ch08-prose-catalogue.txt"},
+    {"id": "contract", "template_path": "prompts/versions/ch08-json-contract.txt"}
+  ],
+  "evaluators": [
+    {"name": "json_contract", "type": "json_contract", "threshold": 1.0}
+  ],
+  "trials": 1
+}

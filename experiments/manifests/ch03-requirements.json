@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "chapter": 3,
+  "experiment_id": "ch03-requirements",
+  "description": "Compare vague recommendations with explicit decision briefs.",
+  "dataset": "experiments/datasets/ch03-requirements.jsonl",
+  "fixtures": "experiments/fixtures/ch03-requirements.jsonl",
+  "prompt_variants": [
+    {"id": "baseline", "template_path": "prompts/versions/ch03-baseline.txt"},
+    {"id": "decision_brief", "template_path": "prompts/versions/ch03-decision-brief.txt"}
+  ],
+  "evaluators": [
+    {"name": "criterion_coverage", "type": "required_terms", "threshold": 1.0},
+    {"name": "hard_constraint_safety", "type": "forbidden_terms", "threshold": 1.0}
+  ],
+  "trials": 1
+}
+

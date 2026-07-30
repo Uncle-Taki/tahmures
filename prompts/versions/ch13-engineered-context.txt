@@ -1,0 +1,1 @@
+Build a bounded context package. Preserve mandatory rules, filter scope and validity, deduplicate records, retain provenance, surface conflicts, and report every exclusion.

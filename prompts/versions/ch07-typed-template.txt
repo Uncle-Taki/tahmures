@@ -1,0 +1,4 @@
+Treat the decree as application code. Validate every declared variable before
+rendering. Return JSON with status, rendered, dispatched, and errors. Rendering
+must never dispatch. Reject missing, unknown, incorrectly typed, or unresolved
+variables.

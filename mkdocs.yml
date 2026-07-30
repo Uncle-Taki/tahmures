@@ -1,0 +1,97 @@
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
+site_name: Tahmures
+site_description: The Art and Engineering of Speaking with Intelligent Machines
+site_author: Mehdi Khoshtinat
+repo_url: https://github.com/mehdikhoshtinat/tahmures
+repo_name: mehdikhoshtinat/tahmures
+docs_dir: book
+site_dir: site
+strict: true
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.indexes
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+plugins:
+  - search
+
+extra:
+  alternate:
+    - name: English
+      link: /
+      lang: en
+    - name: فارسی
+      link: /fa/
+      lang: fa
+
+markdown_extensions:
+  admonition: {}
+  attr_list: {}
+  footnotes: {}
+  tables: {}
+  toc:
+    permalink: true
+  pymdownx.details: {}
+  pymdownx.highlight:
+    anchor_linenums: true
+  pymdownx.inlinehilite: {}
+  pymdownx.superfences:
+    custom_fences:
+      - name: mermaid
+        class: mermaid
+        format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - Home: index.md
+  - Part I — Language, Intent, and Models:
+      - part-1/index.md
+      - 1. What Is a Prompt?: part-1/01-what-is-a-prompt.md
+      - 2. Models, Meaning, and Uncertainty: part-1/02-models-meaning-and-uncertainty.md
+      - 3. Requirements Before Wording: part-1/03-requirements-before-wording.md
+      - 4. Anatomy of a Reliable Prompt: part-1/04-anatomy-of-a-reliable-prompt.md
+      - 5. Instruction Hierarchy and Conflict: part-1/05-instruction-hierarchy-and-conflict.md
+      - 6. Learning from Examples: part-1/06-learning-from-examples.md
+  - Part II — Designing Prompted Interactions:
+      - part-2/index.md
+      - 7. Reusable Prompt Templates: part-2/07-reusable-prompt-templates.md
+      - 8. Structured Outputs and Contracts: part-2/08-structured-outputs-and-contracts.md
+      - 9. Decomposition and Workflows: part-2/09-decomposition-and-workflows.md
+      - 10. Variance, Choice, and Control: part-2/10-variance-choice-and-control.md
+      - 11. Designing for Creativity: part-2/11-designing-for-creativity.md
+      - 12. Context Windows and Attention: part-2/12-context-windows-and-attention.md
+  - Part III — Knowledge, Memory, and Action:
+      - part-3/index.md
+      - 13. Context Engineering: part-3/13-context-engineering.md
+      - 14. Retrieval-Augmented Generation: part-3/14-retrieval-augmented-generation.md
+      - 15. Memory and State: part-3/15-memory-and-state.md
+      - 16. Tools and Permissions: part-3/16-tools-and-permissions.md
+      - 17. Agents and Termination: part-3/17-agents-and-termination.md
+      - 18. Hand-offs and Multi-step Systems: part-3/18-hand-offs-and-multi-step-systems.md
+  - Future Parts:
+      - Part IV: part-4/index.md
+  - Project:
+      - Charter: project-charter.md
+      - Narrative Continuity: narrative-continuity.md
+      - References: references.md
+
+copyright: >-
+  Content © 2026 Mehdi Khoshtinat · CC BY 4.0 ·
+  Code licensed under Apache-2.0

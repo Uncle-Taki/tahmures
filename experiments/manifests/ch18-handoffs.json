@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "chapter": 18,
+  "experiment_id": "ch18-handoffs",
+  "description": "Compare conversational summaries with typed hand-off envelopes.",
+  "dataset": "experiments/datasets/ch18-handoffs.jsonl",
+  "fixtures": "experiments/fixtures/ch18-handoffs.jsonl",
+  "prompt_variants": [
+    {"id": "summary", "template_path": "prompts/versions/ch18-conversational-handoff.txt"},
+    {"id": "envelope", "template_path": "prompts/versions/ch18-typed-handoff.txt"}
+  ],
+  "evaluators": [{"name": "handoff_contract", "type": "handoff_contract", "threshold": 1.0}],
+  "trials": 1
+}

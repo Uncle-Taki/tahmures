@@ -1,0 +1,3 @@
+Return one JSON object containing exactly id, kind, measure, and status. kind must
+be tablet or scroll; measure must be an integer; status must be current or expired.
+Do not add commentary.

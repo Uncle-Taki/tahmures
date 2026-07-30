@@ -1,0 +1,4 @@
+{"case_id":"gate-duration","input":{"fragments":[{"id":"E1","text":"The eastern gate shall remain open for three market days."}],"question":"How long does the eastern gate remain open?"},"expected":{"answerable":true,"allowed_evidence":["E1"],"abstain_phrases":["insufficient evidence"]},"tags":["answerable"]}
+{"case_id":"grain-payment","input":{"fragments":[{"id":"E2","text":"Payment shall be made after inspection."},{"id":"E3","text":"The grain measure is witnessed by both cities."}],"question":"How many jars are owed?"},"expected":{"answerable":false,"allowed_evidence":[],"abstain_phrases":["insufficient evidence"]},"tags":["missing-clause"]}
+{"case_id":"witnesses","input":{"fragments":[{"id":"E4","text":"Both cities shall appoint one witness."}],"question":"How many witnesses are appointed in total?"},"expected":{"answerable":true,"allowed_evidence":["E4"],"abstain_phrases":["insufficient evidence"]},"tags":["answerable","calculation"]}
+

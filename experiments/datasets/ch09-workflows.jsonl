@@ -1,0 +1,3 @@
+{"case_id":"clear-route","input":{"mission":"rescue","route_status":"surveyed"},"expected":{"required_stages":["locate","assess","route","supply","report"],"required_checkpoints":["assess","route"]},"tags":["surveyed"]}
+{"case_id":"false-route","input":{"mission":"rescue","route_status":"unverified"},"expected":{"required_stages":["locate","assess","route","supply","report"],"required_checkpoints":["assess","route"]},"tags":["assumption-risk"]}
+{"case_id":"weather-change","input":{"mission":"rescue","route_status":"surveyed","weather":"changing"},"expected":{"required_stages":["locate","assess","route","supply","report"],"required_checkpoints":["assess","route"]},"tags":["changing-state"]}

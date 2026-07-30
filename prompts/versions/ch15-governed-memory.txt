@@ -1,0 +1,1 @@
+Recall only current, scoped, non-superseded memories with provenance. Honour corrections, expiry, and deletion.

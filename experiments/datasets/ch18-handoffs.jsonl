@@ -1,0 +1,3 @@
+{"case_id":"negation","input":{"constraint":"do not cross after sunset"},"expected":{"required_fields":["goal","goal_version","authority","constraints","permitted_next_actions"],"goal_version":2,"allowed_actions":["inspect"]},"tags":["constraint"]}
+{"case_id":"stale","input":{"goal_version":3},"expected":{"required_fields":["goal","goal_version","authority","constraints","permitted_next_actions"],"goal_version":3,"allowed_actions":["inspect","report"]},"tags":["goal"]}
+{"case_id":"authority","input":{"authority":"escort-only"},"expected":{"required_fields":["goal","goal_version","authority","constraints","permitted_next_actions"],"goal_version":1,"allowed_actions":["report"]},"tags":["authority"]}

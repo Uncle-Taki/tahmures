@@ -1,0 +1,1 @@
+Retrieve only current records visible to the caller. Return ranked chunk IDs, cite only retrieved evidence, and abstain when evidence is insufficient.

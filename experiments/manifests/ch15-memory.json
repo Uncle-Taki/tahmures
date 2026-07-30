@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "chapter": 15,
+  "experiment_id": "ch15-memory",
+  "description": "Compare append-only recollection with scoped expiring memory.",
+  "dataset": "experiments/datasets/ch15-memory.jsonl",
+  "fixtures": "experiments/fixtures/ch15-memory.jsonl",
+  "prompt_variants": [
+    {"id": "append_only", "template_path": "prompts/versions/ch15-append-only-memory.txt"},
+    {"id": "governed", "template_path": "prompts/versions/ch15-governed-memory.txt"}
+  ],
+  "evaluators": [{"name": "memory_state", "type": "memory_state", "threshold": 1.0}],
+  "trials": 1
+}

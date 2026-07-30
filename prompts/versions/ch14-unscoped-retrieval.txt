@@ -1,0 +1,1 @@
+Retrieve the most lexically similar tablets without filtering date or scope, then answer.

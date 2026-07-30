@@ -1,0 +1,5 @@
+Apply the stated hard constraints before comparing preferences.
+Name the selected option, the satisfied hard constraints, and the important
+trade-off. Do not recommend an option that violates a hard constraint.
+The application, not this response, performs the final weighted calculation.
+

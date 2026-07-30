@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "chapter": 6,
+  "experiment_id": "ch06-few-shot",
+  "description": "Compare biased, representative, and rule-led examples.",
+  "dataset": "experiments/datasets/ch06-few-shot.jsonl",
+  "fixtures": "experiments/fixtures/ch06-few-shot.jsonl",
+  "prompt_variants": [
+    {"id": "biased", "template_path": "prompts/versions/ch06-biased-four-shot.txt"},
+    {"id": "representative", "template_path": "prompts/versions/ch06-representative-four-shot.txt"},
+    {"id": "rule_examples", "template_path": "prompts/versions/ch06-rule-and-examples.txt"}
+  ],
+  "evaluators": [
+    {"name": "classification", "type": "classification", "threshold": 1.0}
+  ],
+  "trials": 1
+}
+

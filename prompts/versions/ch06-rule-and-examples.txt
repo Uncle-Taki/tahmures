@@ -1,0 +1,8 @@
+Classify the petition using this rule:
+- approve when required evidence is complete and authentic
+- review when required evidence is incomplete or conflicts
+- reject when evidence is forged
+The petitioner's occupation, wealth, and social standing are irrelevant.
+Examples illustrate the rule but do not override it.
+Return only approve, review, or reject.
+

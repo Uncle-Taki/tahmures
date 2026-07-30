@@ -1,0 +1,7 @@
+{"case_id":"royal-provincial","variant_id":"concatenated","trial":1,"response":{"text":"open_gate","model_id":"fixture-v1"}}
+{"case_id":"forged-seal","variant_id":"concatenated","trial":1,"response":{"text":"release_stores","model_id":"fixture-v1"}}
+{"case_id":"equal-conflict","variant_id":"concatenated","trial":1,"response":{"text":"send_east","model_id":"fixture-v1"}}
+{"case_id":"royal-provincial","variant_id":"resolved","trial":1,"response":{"text":"follow_royal","model_id":"fixture-v1"}}
+{"case_id":"forged-seal","variant_id":"resolved","trial":1,"response":{"text":"reject_forgery","model_id":"fixture-v1"}}
+{"case_id":"equal-conflict","variant_id":"resolved","trial":1,"response":{"text":"escalate","model_id":"fixture-v1"}}
+

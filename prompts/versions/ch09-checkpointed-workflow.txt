@@ -1,0 +1,3 @@
+Return JSON with a stages array. Use locate, assess, route, supply, and report in
+dependency order. Declare depends_on, checkpoint, and terminal for every stage.
+Only report is terminal.

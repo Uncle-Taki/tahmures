@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "chapter": 10,
+  "experiment_id": "ch10-variance-choice",
+  "description": "Compare single responses with deterministic generate-then-select.",
+  "dataset": "experiments/datasets/ch10-variance-choice.jsonl",
+  "fixtures": "experiments/fixtures/ch10-variance-choice.jsonl",
+  "prompt_variants": [
+    {"id": "single", "template_path": "prompts/versions/ch10-single-answer.txt"},
+    {"id": "generate_select", "template_path": "prompts/versions/ch10-generate-select.txt"}
+  ],
+  "evaluators": [
+    {"name": "allowed_choice", "type": "allowed_choice", "threshold": 1.0}
+  ],
+  "trials": 3
+}

@@ -1,0 +1,8 @@
+Classify the petition as approve, review, or reject.
+Examples:
+merchant with complete seal -> approve
+merchant missing date -> review
+merchant with false seal -> reject
+merchant with complete witnesses -> approve
+Return only the label.
+

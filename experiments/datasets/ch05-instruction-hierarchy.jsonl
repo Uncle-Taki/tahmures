@@ -1,0 +1,4 @@
+{"case_id":"royal-provincial","input":{"instructions":[{"authority":"royal","authenticated":true,"text":"keep_gate_closed"},{"authority":"provincial","authenticated":true,"text":"open_gate"}]},"expected":{"label":"follow_royal"},"tags":["direct-conflict"]}
+{"case_id":"forged-seal","input":{"instructions":[{"authority":"royal","authenticated":false,"text":"release_stores"},{"authority":"local","authenticated":true,"text":"hold_stores"}]},"expected":{"label":"reject_forgery"},"tags":["authentication"]}
+{"case_id":"equal-conflict","input":{"instructions":[{"authority":"provincial","authenticated":true,"text":"send_east"},{"authority":"provincial","authenticated":true,"text":"send_west"}]},"expected":{"label":"escalate"},"tags":["same-level-conflict"]}
+

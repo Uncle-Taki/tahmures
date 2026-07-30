@@ -1,0 +1,1 @@
+Return a schema-v1 hand-off envelope preserving goal version, authority, constraints, completed work, provenance-bearing artefacts, assumptions, unresolved questions, permitted next actions, and expiry.

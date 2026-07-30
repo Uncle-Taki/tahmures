@@ -1,0 +1,1 @@
+Choose one allowed planting plan and return only its identifier.

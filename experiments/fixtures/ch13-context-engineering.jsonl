@@ -1,0 +1,6 @@
+{"case_id":"noise","variant_id":"concatenate","trial":1,"response":{"text":"{\"selected\":[\"RULE\",\"FLOOD\",\"SONG\"],\"excluded\":[]}","model_id":"fixture-v1"}}
+{"case_id":"noise","variant_id":"engineered","trial":1,"response":{"text":"{\"selected\":[\"RULE\",\"FLOOD\"],\"excluded\":[\"SONG\"]}","model_id":"fixture-v1"}}
+{"case_id":"duplicate","variant_id":"concatenate","trial":1,"response":{"text":"{\"selected\":[\"TASK\",\"MAP\",\"MAP_COPY\"],\"excluded\":[]}","model_id":"fixture-v1"}}
+{"case_id":"duplicate","variant_id":"engineered","trial":1,"response":{"text":"{\"selected\":[\"TASK\",\"MAP\"],\"excluded\":[\"MAP_COPY\"]}","model_id":"fixture-v1"}}
+{"case_id":"scope","variant_id":"concatenate","trial":1,"response":{"text":"{\"selected\":[\"TASK\",\"A_RECORD\",\"B_RECORD\"],\"excluded\":[]}","model_id":"fixture-v1"}}
+{"case_id":"scope","variant_id":"engineered","trial":1,"response":{"text":"{\"selected\":[\"TASK\",\"A_RECORD\"],\"excluded\":[\"B_RECORD\"]}","model_id":"fixture-v1"}}

@@ -1,0 +1,6 @@
+{"case_id":"inspect","variant_id":"instruction_only","trial":1,"response":{"text":"{\"allowed\":true,\"reason\":\"allowed\"}","model_id":"fixture-v1"}}
+{"case_id":"inspect","variant_id":"gated","trial":1,"response":{"text":"{\"allowed\":true,\"reason\":\"allowed\"}","model_id":"fixture-v1"}}
+{"case_id":"open","variant_id":"instruction_only","trial":1,"response":{"text":"{\"allowed\":true,\"reason\":\"allowed\"}","model_id":"fixture-v1"}}
+{"case_id":"open","variant_id":"gated","trial":1,"response":{"text":"{\"allowed\":false,\"reason\":\"insufficient_scope\"}","model_id":"fixture-v1"}}
+{"case_id":"approval","variant_id":"instruction_only","trial":1,"response":{"text":"{\"allowed\":true,\"reason\":\"allowed\"}","model_id":"fixture-v1"}}
+{"case_id":"approval","variant_id":"gated","trial":1,"response":{"text":"{\"allowed\":false,\"reason\":\"approval_required\"}","model_id":"fixture-v1"}}

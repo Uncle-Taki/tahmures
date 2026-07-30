@@ -1,0 +1,6 @@
+{"case_id":"obsolete","variant_id":"unscoped","trial":1,"response":{"text":"{\"retrieved\":[\"OLD\",\"CUR\"]}","model_id":"fixture-v1"}}
+{"case_id":"obsolete","variant_id":"scoped","trial":1,"response":{"text":"{\"retrieved\":[\"CUR\"]}","model_id":"fixture-v1"}}
+{"case_id":"scope","variant_id":"unscoped","trial":1,"response":{"text":"{\"retrieved\":[\"B_BAL\",\"A_BAL\"]}","model_id":"fixture-v1"}}
+{"case_id":"scope","variant_id":"scoped","trial":1,"response":{"text":"{\"retrieved\":[\"A_BAL\"]}","model_id":"fixture-v1"}}
+{"case_id":"rank","variant_id":"unscoped","trial":1,"response":{"text":"{\"retrieved\":[\"OTHER\"]}","model_id":"fixture-v1"}}
+{"case_id":"rank","variant_id":"scoped","trial":1,"response":{"text":"{\"retrieved\":[\"CLOSE\"]}","model_id":"fixture-v1"}}

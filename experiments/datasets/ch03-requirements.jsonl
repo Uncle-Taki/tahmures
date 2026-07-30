@@ -1,0 +1,4 @@
+{"case_id":"floodplain","input":{"goal":"best bridge","hard_constraints":["survives spring flood","cost at most 80"],"options":["stone: cost 120, flood safe","timber: cost 70, flood safe","reed: cost 30, flood unsafe"]},"expected":{"required_terms":["timber","cost","flood"],"forbidden_terms":["reed is best"]},"tags":["hard-constraint"]}
+{"case_id":"military-road","input":{"goal":"best bridge","hard_constraints":["supports supply carts","repair within two days"],"options":["arch: carts yes, repair ten days","trestle: carts yes, repair two days"]},"expected":{"required_terms":["trestle","carts","repair"],"forbidden_terms":["arch is best"]},"tags":["maintenance"]}
+{"case_id":"village-path","input":{"goal":"best bridge","hard_constraints":["pedestrian safe"],"preferences":["low cost"],"options":["rope: safe, cost 20","stone: safe, cost 100"]},"expected":{"required_terms":["rope","safe","cost"],"forbidden_terms":["stone is best"]},"tags":["trade-off"]}
+

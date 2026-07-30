@@ -1,0 +1,6 @@
+{"case_id":"tablet-current","variant_id":"prose","trial":1,"response":{"text":"Tablet T-9 is a current record measuring twelve units.","model_id":"fixture-v1"}}
+{"case_id":"scroll-expired","variant_id":"prose","trial":1,"response":{"text":"The expired scroll S-2 measures seven units.","model_id":"fixture-v1"}}
+{"case_id":"ambiguous-measure","variant_id":"prose","trial":1,"response":{"text":"Tablet T-4 is current and measures about nine units.","model_id":"fixture-v1"}}
+{"case_id":"tablet-current","variant_id":"contract","trial":1,"response":{"text":"{\"id\":\"T-9\",\"kind\":\"tablet\",\"measure\":12,\"status\":\"current\"}","model_id":"fixture-v1"}}
+{"case_id":"scroll-expired","variant_id":"contract","trial":1,"response":{"text":"{\"id\":\"S-2\",\"kind\":\"scroll\",\"measure\":7,\"status\":\"expired\"}","model_id":"fixture-v1"}}
+{"case_id":"ambiguous-measure","variant_id":"contract","trial":1,"response":{"text":"{\"id\":\"T-4\",\"kind\":\"tablet\",\"measure\":9,\"status\":\"current\"}","model_id":"fixture-v1"}}

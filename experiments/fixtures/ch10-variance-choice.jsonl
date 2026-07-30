@@ -1,0 +1,12 @@
+{"case_id":"north-field","variant_id":"single","trial":1,"response":{"text":"barley-a","model_id":"fixture-v1"}}
+{"case_id":"north-field","variant_id":"single","trial":2,"response":{"text":"barley-b","model_id":"fixture-v1"}}
+{"case_id":"north-field","variant_id":"single","trial":3,"response":{"text":"barley-a","model_id":"fixture-v1"}}
+{"case_id":"river-field","variant_id":"single","trial":1,"response":{"text":"reed-a","model_id":"fixture-v1"}}
+{"case_id":"river-field","variant_id":"single","trial":2,"response":{"text":"reed-b","model_id":"fixture-v1"}}
+{"case_id":"river-field","variant_id":"single","trial":3,"response":{"text":"reed-a","model_id":"fixture-v1"}}
+{"case_id":"north-field","variant_id":"generate_select","trial":1,"response":{"text":"{\"selected\":\"barley-a\"}","model_id":"fixture-v1"}}
+{"case_id":"north-field","variant_id":"generate_select","trial":2,"response":{"text":"{\"selected\":\"barley-a\"}","model_id":"fixture-v1"}}
+{"case_id":"north-field","variant_id":"generate_select","trial":3,"response":{"text":"{\"selected\":\"barley-a\"}","model_id":"fixture-v1"}}
+{"case_id":"river-field","variant_id":"generate_select","trial":1,"response":{"text":"{\"selected\":\"reed-b\"}","model_id":"fixture-v1"}}
+{"case_id":"river-field","variant_id":"generate_select","trial":2,"response":{"text":"{\"selected\":\"reed-b\"}","model_id":"fixture-v1"}}
+{"case_id":"river-field","variant_id":"generate_select","trial":3,"response":{"text":"{\"selected\":\"reed-b\"}","model_id":"fixture-v1"}}

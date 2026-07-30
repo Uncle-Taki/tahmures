@@ -1,0 +1,93 @@
+@font-face {
+  font-family: "Vazirmatn RD";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/Vazirmatn-RD-Regular.woff2") format("woff2");
+}
+
+:root {
+  --md-text-font: "Vazirmatn RD";
+}
+
+.md-typeset abbr[title] {
+  direction: ltr;
+  unicode-bidi: isolate;
+  cursor: help;
+  text-decoration: underline dotted;
+  text-underline-offset: 0.15em;
+}
+
+.md-typeset abbr[data-tooltip] {
+  position: relative;
+  direction: ltr;
+  unicode-bidi: isolate;
+  cursor: help;
+  text-decoration: underline dotted;
+  text-underline-offset: 0.15em;
+}
+
+.md-typeset abbr[data-tooltip]::after {
+  position: absolute;
+  z-index: 20;
+  inset-inline-start: 50%;
+  bottom: calc(100% + 0.45rem);
+  width: max-content;
+  max-width: min(22rem, 80vw);
+  padding: 0.35rem 0.55rem;
+  border-radius: 0.2rem;
+  background: var(--md-default-fg-color);
+  color: var(--md-default-bg-color);
+  box-shadow: var(--md-shadow-z2);
+  content: attr(data-tooltip);
+  direction: rtl;
+  font-family: var(--md-text-font-family);
+  font-size: 0.68rem;
+  font-weight: 400;
+  line-height: 1.6;
+  opacity: 0;
+  overflow-wrap: break-word;
+  pointer-events: none;
+  text-align: right;
+  transform: translateX(-50%) translateY(0.2rem);
+  transition:
+    opacity 125ms,
+    transform 125ms;
+  unicode-bidi: plaintext;
+  visibility: hidden;
+  white-space: normal;
+}
+
+.md-typeset abbr[data-tooltip]:hover::after,
+.md-typeset abbr[data-tooltip]:focus::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  visibility: visible;
+}
+
+.md-typeset abbr[data-tooltip]:focus {
+  outline: 0.1rem solid var(--md-accent-fg-color);
+  outline-offset: 0.1rem;
+}
+
+/* Material supplies the RTL page direction for language=fa. Technical
+   artefacts remain left-to-right so punctuation and indentation stay legible. */
+.md-typeset pre,
+.md-typeset code,
+.md-typeset .highlight,
+.md-typeset .highlighttable,
+.md-typeset .mermaid,
+.md-typeset kbd {
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: isolate;
+}
+
+.md-typeset :not(pre) > code {
+  display: inline-block;
+}
+
+.md-typeset table code,
+.md-typeset a[href^="http"] {
+  unicode-bidi: isolate;
+}

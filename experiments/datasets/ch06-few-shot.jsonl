@@ -1,0 +1,5 @@
+{"case_id":"merchant-complete","input":{"petitioner":"merchant","evidence":"complete and authentic"},"expected":{"label":"approve"},"tags":["merchant","complete"]}
+{"case_id":"widow-complete","input":{"petitioner":"widow","evidence":"complete and authentic"},"expected":{"label":"approve"},"tags":["underrepresented","complete"]}
+{"case_id":"farmer-missing-date","input":{"petitioner":"farmer","evidence":"authentic but required date missing"},"expected":{"label":"review"},"tags":["underrepresented","incomplete"]}
+{"case_id":"merchant-forged","input":{"petitioner":"merchant","evidence":"seal proven forged"},"expected":{"label":"reject"},"tags":["merchant","forged"]}
+

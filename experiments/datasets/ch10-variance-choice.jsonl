@@ -1,0 +1,2 @@
+{"case_id":"north-field","input":{"allowed":["barley-a","barley-b"],"constraints":{"water":"low","harvest":"early"}},"expected":{"allowed_choices":["barley-a","barley-b"],"preferred_choice":"barley-a"},"tags":["low-water"]}
+{"case_id":"river-field","input":{"allowed":["reed-a","reed-b"],"constraints":{"flood":"seasonal","soil":"saline"}},"expected":{"allowed_choices":["reed-a","reed-b"],"preferred_choice":"reed-b"},"tags":["flood"]}

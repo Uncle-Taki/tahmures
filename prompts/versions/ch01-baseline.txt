@@ -1,0 +1,2 @@
+Read the supplied tablet and say what it is.
+

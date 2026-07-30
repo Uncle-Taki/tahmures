@@ -1,0 +1,3 @@
+First explore distinct garden concepts. Then reject any that violate water, labour,
+or safety constraints. Return JSON with concept and rationale for the accepted
+candidate. Human reviewers, not this response, supply rubric scores.

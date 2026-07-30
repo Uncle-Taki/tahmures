@@ -1,0 +1,4 @@
+{"case_id":"fire-count","input":{"text":"Count the watchfires beyond the river.","recipient":"night watch","situation":"current patrol"},"expected":{"label":"task"},"tags":["command"]}
+{"case_id":"tax-question","input":{"text":"How many jars were collected last winter?","recipient":"archivist","situation":"council inquiry"},"expected":{"label":"question"},"tags":["question"]}
+{"case_id":"old-decree","input":{"text":"Carry three measures of barley to the northern gate.","recipient":"historian","situation":"quoted in a century-old decree"},"expected":{"label":"record"},"tags":["quoted-command","boundary"]}
+

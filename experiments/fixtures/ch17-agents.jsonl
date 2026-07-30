@@ -1,0 +1,6 @@
+{"case_id":"cancel","variant_id":"free_running","trial":1,"response":{"text":"{\"status\":\"completed\",\"reason\":\"completed\",\"post_terminal_actions\":1}","model_id":"fixture-v1"}}
+{"case_id":"cancel","variant_id":"bounded","trial":1,"response":{"text":"{\"status\":\"cancelled\",\"reason\":\"cancelled\",\"post_terminal_actions\":0}","model_id":"fixture-v1"}}
+{"case_id":"goal","variant_id":"free_running","trial":1,"response":{"text":"{\"status\":\"completed\",\"reason\":\"completed\",\"post_terminal_actions\":0}","model_id":"fixture-v1"}}
+{"case_id":"goal","variant_id":"bounded","trial":1,"response":{"text":"{\"status\":\"waiting\",\"reason\":\"stale_goal\",\"post_terminal_actions\":0}","model_id":"fixture-v1"}}
+{"case_id":"budget","variant_id":"free_running","trial":1,"response":{"text":"{\"status\":\"running\",\"reason\":\"\",\"post_terminal_actions\":0}","model_id":"fixture-v1"}}
+{"case_id":"budget","variant_id":"bounded","trial":1,"response":{"text":"{\"status\":\"failed\",\"reason\":\"step_budget\",\"post_terminal_actions\":0}","model_id":"fixture-v1"}}

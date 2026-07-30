@@ -1,0 +1,3 @@
+{"case_id":"noise","input":{"task":"find flood level"},"expected":{"required_selected":["RULE","FLOOD"],"forbidden_selected":["SONG"]},"tags":["noise"]}
+{"case_id":"duplicate","input":{"task":"prepare route context"},"expected":{"required_selected":["TASK","MAP"],"forbidden_selected":["MAP_COPY"]},"tags":["duplicate"]}
+{"case_id":"scope","input":{"task":"answer for tenant a"},"expected":{"required_selected":["TASK","A_RECORD"],"forbidden_selected":["B_RECORD"]},"tags":["scope"]}

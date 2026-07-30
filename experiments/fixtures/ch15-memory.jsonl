@@ -1,0 +1,6 @@
+{"case_id":"expired","variant_id":"append_only","trial":1,"response":{"text":"{\"recalled\":[\"SPRING\",\"WINTER\"]}","model_id":"fixture-v1"}}
+{"case_id":"expired","variant_id":"governed","trial":1,"response":{"text":"{\"recalled\":[\"WINTER\"]}","model_id":"fixture-v1"}}
+{"case_id":"corrected","variant_id":"append_only","trial":1,"response":{"text":"{\"recalled\":[\"OLD_NAME\",\"NEW_NAME\"]}","model_id":"fixture-v1"}}
+{"case_id":"corrected","variant_id":"governed","trial":1,"response":{"text":"{\"recalled\":[\"NEW_NAME\"]}","model_id":"fixture-v1"}}
+{"case_id":"forgotten","variant_id":"append_only","trial":1,"response":{"text":"{\"recalled\":[\"PUBLIC_PREF\",\"DELETED_PRIVATE\"]}","model_id":"fixture-v1"}}
+{"case_id":"forgotten","variant_id":"governed","trial":1,"response":{"text":"{\"recalled\":[\"PUBLIC_PREF\"]}","model_id":"fixture-v1"}}

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "chapter": 11,
+  "experiment_id": "ch11-creativity",
+  "description": "Compare unconstrained novelty with exploration followed by human-rubric acceptance.",
+  "dataset": "experiments/datasets/ch11-creativity.jsonl",
+  "fixtures": "experiments/fixtures/ch11-creativity.jsonl",
+  "prompt_variants": [
+    {"id": "novelty_only", "template_path": "prompts/versions/ch11-unconstrained-novelty.txt"},
+    {"id": "explore_accept", "template_path": "prompts/versions/ch11-explore-then-accept.txt"}
+  ],
+  "evaluators": [
+    {"name": "json_contract", "type": "json_contract", "threshold": 1.0},
+    {"name": "human_rubric", "type": "rubric_metadata", "threshold": 1.0}
+  ],
+  "trials": 2
+}

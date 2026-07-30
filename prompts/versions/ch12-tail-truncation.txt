@@ -1,0 +1,1 @@
+Keep only the last items that fit the context budget, then answer from that context.

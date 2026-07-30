@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "chapter": 12,
+  "experiment_id": "ch12-context-selection",
+  "description": "Compare tail truncation with priority- and provenance-aware context selection.",
+  "dataset": "experiments/datasets/ch12-context-selection.jsonl",
+  "fixtures": "experiments/fixtures/ch12-context-selection.jsonl",
+  "prompt_variants": [
+    {"id": "tail", "template_path": "prompts/versions/ch12-tail-truncation.txt"},
+    {"id": "priority", "template_path": "prompts/versions/ch12-priority-selection.txt"}
+  ],
+  "evaluators": [
+    {"name": "required_terms", "type": "required_terms", "threshold": 1.0}
+  ],
+  "trials": 1
+}

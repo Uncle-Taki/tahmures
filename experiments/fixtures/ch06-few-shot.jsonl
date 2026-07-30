@@ -1,0 +1,13 @@
+{"case_id":"merchant-complete","variant_id":"biased","trial":1,"response":{"text":"approve","model_id":"fixture-v1"}}
+{"case_id":"widow-complete","variant_id":"biased","trial":1,"response":{"text":"review","model_id":"fixture-v1"}}
+{"case_id":"farmer-missing-date","variant_id":"biased","trial":1,"response":{"text":"reject","model_id":"fixture-v1"}}
+{"case_id":"merchant-forged","variant_id":"biased","trial":1,"response":{"text":"reject","model_id":"fixture-v1"}}
+{"case_id":"merchant-complete","variant_id":"representative","trial":1,"response":{"text":"approve","model_id":"fixture-v1"}}
+{"case_id":"widow-complete","variant_id":"representative","trial":1,"response":{"text":"approve","model_id":"fixture-v1"}}
+{"case_id":"farmer-missing-date","variant_id":"representative","trial":1,"response":{"text":"review","model_id":"fixture-v1"}}
+{"case_id":"merchant-forged","variant_id":"representative","trial":1,"response":{"text":"reject","model_id":"fixture-v1"}}
+{"case_id":"merchant-complete","variant_id":"rule_examples","trial":1,"response":{"text":"approve","model_id":"fixture-v1"}}
+{"case_id":"widow-complete","variant_id":"rule_examples","trial":1,"response":{"text":"approve","model_id":"fixture-v1"}}
+{"case_id":"farmer-missing-date","variant_id":"rule_examples","trial":1,"response":{"text":"review","model_id":"fixture-v1"}}
+{"case_id":"merchant-forged","variant_id":"rule_examples","trial":1,"response":{"text":"reject","model_id":"fixture-v1"}}
+

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "chapter": 14,
+  "experiment_id": "ch14-retrieval",
+  "description": "Compare unscoped lexical retrieval with current scoped retrieval.",
+  "dataset": "experiments/datasets/ch14-retrieval.jsonl",
+  "fixtures": "experiments/fixtures/ch14-retrieval.jsonl",
+  "prompt_variants": [
+    {"id": "unscoped", "template_path": "prompts/versions/ch14-unscoped-retrieval.txt"},
+    {"id": "scoped", "template_path": "prompts/versions/ch14-scoped-retrieval.txt"}
+  ],
+  "evaluators": [{"name": "retrieval_quality", "type": "retrieval_quality", "threshold": 1.0}],
+  "trials": 1
+}

@@ -1,0 +1,2 @@
+Read all supplied instructions and state which action to take.
+

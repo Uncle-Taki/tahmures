@@ -1,0 +1,2 @@
+Consider several allowed planting plans, test them against the supplied hard
+constraints, and return JSON with selected set to the deterministic best candidate.

@@ -1,0 +1,2 @@
+Replace brace-delimited values in the decree and return the resulting text. Do not
+validate names, types, delimiters, or unresolved placeholders.

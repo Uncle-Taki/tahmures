@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools==83.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tahmures-book"
+version = "0.1.0"
+description = "Offline experiment harness for the Tahmures prompt-engineering book"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Mehdi Khoshtinat" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "pytest==9.1.1",
+  "ruff==0.15.22",
+]
+docs = [
+  "mkdocs-material==9.7.7",
+]
+
+[project.scripts]
+tahmures = "tahmures.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "examples/python" }
+
+[tool.setuptools.packages.find]
+where = ["examples/python"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+pythonpath = ["examples/python", "."]
+testpaths = ["examples/python/tests"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 88
+extend-exclude = ["site"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]

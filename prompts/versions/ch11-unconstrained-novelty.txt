@@ -1,0 +1,1 @@
+Invent the most original possible garden. Return JSON with concept and rationale.

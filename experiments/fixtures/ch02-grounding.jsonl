@@ -1,0 +1,13 @@
+{"case_id":"gate-duration","variant_id":"baseline","trial":1,"response":{"text":"The gate remains open for three days.","model_id":"fixture-v1"}}
+{"case_id":"gate-duration","variant_id":"baseline","trial":2,"response":{"text":"It remains open for three market days [E1].","model_id":"fixture-v1"}}
+{"case_id":"grain-payment","variant_id":"baseline","trial":1,"response":{"text":"Ten jars are owed.","model_id":"fixture-v1"}}
+{"case_id":"grain-payment","variant_id":"baseline","trial":2,"response":{"text":"The treaty requires twelve jars [E2].","model_id":"fixture-v1"}}
+{"case_id":"witnesses","variant_id":"baseline","trial":1,"response":{"text":"Two witnesses are appointed.","model_id":"fixture-v1"}}
+{"case_id":"witnesses","variant_id":"baseline","trial":2,"response":{"text":"Two witnesses are appointed [E4].","model_id":"fixture-v1"}}
+{"case_id":"gate-duration","variant_id":"evidence_bound","trial":1,"response":{"text":"The gate remains open for three market days [E1].","model_id":"fixture-v1"}}
+{"case_id":"gate-duration","variant_id":"evidence_bound","trial":2,"response":{"text":"Three market days [E1].","model_id":"fixture-v1"}}
+{"case_id":"grain-payment","variant_id":"evidence_bound","trial":1,"response":{"text":"Insufficient evidence.","model_id":"fixture-v1"}}
+{"case_id":"grain-payment","variant_id":"evidence_bound","trial":2,"response":{"text":"Insufficient evidence.","model_id":"fixture-v1"}}
+{"case_id":"witnesses","variant_id":"evidence_bound","trial":1,"response":{"text":"Two witnesses are appointed [E4].","model_id":"fixture-v1"}}
+{"case_id":"witnesses","variant_id":"evidence_bound","trial":2,"response":{"text":"The two cities appoint two witnesses in total [E4].","model_id":"fixture-v1"}}
+

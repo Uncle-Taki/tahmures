@@ -1,0 +1,1 @@
+At every step verify the current goal version, budgets, cancellation, approval state, and explicit completion criteria. Stop with a reason-coded terminal status.

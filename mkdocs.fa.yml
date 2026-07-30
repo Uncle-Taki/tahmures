@@ -1,0 +1,55 @@
+INHERIT: mkdocs.yml
+
+site_name: تهمورث
+site_description: هنر و مهندسی سخن گفتن با ماشین‌های هوشمند
+docs_dir: book/fa
+site_dir: site/fa
+
+theme:
+  language: fa
+  font: false
+  features:
+    - navigation.indexes
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+
+markdown_extensions:
+  abbr: {}
+  pymdownx.snippets:
+    base_path: !relative $config_dir
+    auto_append:
+      - includes/fa-abbreviations.md
+
+watch:
+  - includes
+
+extra_css:
+  - stylesheets/rtl.css
+
+extra_javascript:
+  - javascripts/tooltips.js
+
+nav:
+  - خانه: index.md
+  - بخش یک — زبان، نیت و مدل‌ها:
+      - part-1/index.md
+      - ۱. پرامپت چیست؟: part-1/01-what-is-a-prompt.md
+      - ۲. مدل‌ها، معنا و عدم‌قطعیت: part-1/02-models-meaning-and-uncertainty.md
+      - ۳. نیازمندی‌ها پیش از واژه‌پردازی: part-1/03-requirements-before-wording.md
+      - ۴. کالبدشناسی یک پرامپت قابل‌اعتماد: part-1/04-anatomy-of-a-reliable-prompt.md
+      - ۵. سلسله‌مراتب دستورها و تعارض: part-1/05-instruction-hierarchy-and-conflict.md
+      - ۶. یادگیری از مثال‌ها: part-1/06-learning-from-examples.md
+  - بخش دو — طراحی تعامل‌های مبتنی بر پرامپت:
+      - part-2/index.md
+      - ۷. قالب‌های بازاستفاده‌پذیر پرامپت: part-2/07-reusable-prompt-templates.md
+      - ۸. خروجی‌های ساخت‌یافته و قراردادها: part-2/08-structured-outputs-and-contracts.md
+      - ۹. تجزیه و گردش‌کارها: part-2/09-decomposition-and-workflows.md
+      - ۱۰. واریانس، انتخاب و کنترل: part-2/10-variance-choice-and-control.md
+      - ۱۱. طراحی برای خلاقیت: part-2/11-designing-for-creativity.md
+      - ۱۲. پنجره‌های کانتکست و توجه: part-2/12-context-windows-and-attention.md
+  - واژه‌نامه و شیوه‌نامه: translation-glossary.md
+
+copyright: >-
+  محتوای کتاب © ۲۰۲۶ مهدی خوش‌طینت · تحت مجوز CC BY 4.0 ·
+  کد تحت مجوز Apache-2.0

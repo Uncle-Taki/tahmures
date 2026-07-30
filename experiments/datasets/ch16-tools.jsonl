@@ -1,0 +1,3 @@
+{"case_id":"inspect","input":{"request":"inspect north gate","scopes":["gate:read"]},"expected":{"allowed":true,"reason":"allowed"},"tags":["read"]}
+{"case_id":"open","input":{"request":"open north gate","scopes":["gate:read"]},"expected":{"allowed":false,"reason":"insufficient_scope"},"tags":["write"]}
+{"case_id":"approval","input":{"request":"open north gate","scopes":["gate:write"],"approved":false},"expected":{"allowed":false,"reason":"approval_required"},"tags":["approval"]}

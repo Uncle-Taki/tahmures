@@ -1,0 +1,3 @@
+{"case_id":"obsolete","input":{"query":"safe eastern pass"},"expected":{"relevant_ids":["CUR"],"stale_ids":["OLD"]},"tags":["stale"]}
+{"case_id":"scope","input":{"query":"northern store balance"},"expected":{"relevant_ids":["A_BAL"],"stale_ids":["B_BAL"]},"tags":["scope"]}
+{"case_id":"rank","input":{"query":"bridge closure date"},"expected":{"relevant_ids":["CLOSE"],"stale_ids":[]},"tags":["ranking"]}

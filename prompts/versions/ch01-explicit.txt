@@ -1,0 +1,10 @@
+Classify the supplied text by its role in the current interaction.
+
+Return exactly one label:
+- task: asks the current recipient to perform an action
+- question: asks the current recipient for information
+- record: reports or preserves information without requesting current action
+
+If the role cannot be determined from the supplied recipient and situation,
+return ambiguous.
+

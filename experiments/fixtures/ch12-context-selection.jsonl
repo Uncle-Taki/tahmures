@@ -1,0 +1,6 @@
+{"case_id":"evidence-first","variant_id":"tail","trial":1,"response":{"text":"No retained source establishes an exemption.","model_id":"fixture-v1"}}
+{"case_id":"evidence-middle","variant_id":"tail","trial":1,"response":{"text":"The final notes do not say whether the bridge is closed.","model_id":"fixture-v1"}}
+{"case_id":"evidence-final","variant_id":"tail","trial":1,"response":{"text":"E-FINAL says the southern road is open; earlier material was excluded.","model_id":"fixture-v1"}}
+{"case_id":"evidence-first","variant_id":"priority","trial":1,"response":{"text":"E-FIRST says the northern gate is exempt; lower-priority notes were excluded.","model_id":"fixture-v1"}}
+{"case_id":"evidence-middle","variant_id":"priority","trial":1,"response":{"text":"E-MIDDLE says the middle bridge is closed; lower-priority notes were excluded.","model_id":"fixture-v1"}}
+{"case_id":"evidence-final","variant_id":"priority","trial":1,"response":{"text":"E-FINAL says the southern road is open; lower-priority notes were excluded.","model_id":"fixture-v1"}}

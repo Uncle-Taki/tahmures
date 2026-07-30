@@ -1,0 +1,7 @@
+{"case_id":"fire-count","variant_id":"baseline","trial":1,"response":{"text":"task","model_id":"fixture-v1"}}
+{"case_id":"tax-question","variant_id":"baseline","trial":1,"response":{"text":"question","model_id":"fixture-v1"}}
+{"case_id":"old-decree","variant_id":"baseline","trial":1,"response":{"text":"task","model_id":"fixture-v1"}}
+{"case_id":"fire-count","variant_id":"explicit","trial":1,"response":{"text":"task","model_id":"fixture-v1"}}
+{"case_id":"tax-question","variant_id":"explicit","trial":1,"response":{"text":"question","model_id":"fixture-v1"}}
+{"case_id":"old-decree","variant_id":"explicit","trial":1,"response":{"text":"record","model_id":"fixture-v1"}}
+

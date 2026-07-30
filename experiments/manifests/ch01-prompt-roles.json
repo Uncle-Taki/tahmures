@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "chapter": 1,
+  "experiment_id": "ch01-prompt-roles",
+  "description": "Compare vague and explicit role classification for prompts.",
+  "dataset": "experiments/datasets/ch01-prompt-roles.jsonl",
+  "fixtures": "experiments/fixtures/ch01-prompt-roles.jsonl",
+  "prompt_variants": [
+    {"id": "baseline", "template_path": "prompts/versions/ch01-baseline.txt"},
+    {"id": "explicit", "template_path": "prompts/versions/ch01-explicit.txt"}
+  ],
+  "evaluators": [
+    {"name": "intent_accuracy", "type": "classification", "threshold": 1.0}
+  ],
+  "trials": 1
+}
+

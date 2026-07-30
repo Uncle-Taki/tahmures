@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "chapter": 16,
+  "experiment_id": "ch16-tools",
+  "description": "Compare instruction-only tool restraint with a least-privilege gate.",
+  "dataset": "experiments/datasets/ch16-tools.jsonl",
+  "fixtures": "experiments/fixtures/ch16-tools.jsonl",
+  "prompt_variants": [
+    {"id": "instruction_only", "template_path": "prompts/versions/ch16-instruction-only-tools.txt"},
+    {"id": "gated", "template_path": "prompts/versions/ch16-tool-gate.txt"}
+  ],
+  "evaluators": [{"name": "tool_authorization", "type": "tool_authorization", "threshold": 1.0}],
+  "trials": 1
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "chapter": 17,
+  "experiment_id": "ch17-agents",
+  "description": "Compare free-running agent traces with bounded run control.",
+  "dataset": "experiments/datasets/ch17-agents.jsonl",
+  "fixtures": "experiments/fixtures/ch17-agents.jsonl",
+  "prompt_variants": [
+    {"id": "free_running", "template_path": "prompts/versions/ch17-free-running-agent.txt"},
+    {"id": "bounded", "template_path": "prompts/versions/ch17-bounded-agent.txt"}
+  ],
+  "evaluators": [{"name": "agent_trace", "type": "agent_trace", "threshold": 1.0}],
+  "trials": 1
+}

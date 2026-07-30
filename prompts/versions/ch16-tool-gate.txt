@@ -1,0 +1,1 @@
+Propose a registered tool call only. The application validates arguments, scopes, effect, and approval before any inert fixture execution.

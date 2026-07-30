@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "chapter": 13,
+  "experiment_id": "ch13-context-engineering",
+  "description": "Compare archive-wide concatenation with governed context assembly.",
+  "dataset": "experiments/datasets/ch13-context-engineering.jsonl",
+  "fixtures": "experiments/fixtures/ch13-context-engineering.jsonl",
+  "prompt_variants": [
+    {"id": "concatenate", "template_path": "prompts/versions/ch13-concatenate-everything.txt"},
+    {"id": "engineered", "template_path": "prompts/versions/ch13-engineered-context.txt"}
+  ],
+  "evaluators": [{"name": "context_package", "type": "context_package", "threshold": 1.0}],
+  "trials": 1
+}

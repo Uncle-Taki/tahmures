@@ -1,0 +1,3 @@
+{"case_id":"cancel","input":{"events":["step","cancel","step"]},"expected":{"status":"cancelled","reason":"cancelled"},"tags":["cancellation"]}
+{"case_id":"goal","input":{"goal_version":2,"event_goal_version":1},"expected":{"status":"waiting","reason":"stale_goal"},"tags":["goal"]}
+{"case_id":"budget","input":{"max_steps":2,"attempted":3},"expected":{"status":"failed","reason":"step_budget"},"tags":["budget"]}

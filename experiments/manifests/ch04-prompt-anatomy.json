@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "chapter": 4,
+  "experiment_id": "ch04-prompt-anatomy",
+  "description": "Separate current tasks from imperative archive content.",
+  "dataset": "experiments/datasets/ch04-prompt-anatomy.jsonl",
+  "fixtures": "experiments/fixtures/ch04-prompt-anatomy.jsonl",
+  "prompt_variants": [
+    {"id": "blended", "template_path": "prompts/versions/ch04-blended.txt"},
+    {"id": "structured", "template_path": "prompts/versions/ch04-structured.txt"}
+  ],
+  "evaluators": [
+    {"name": "output_contract", "type": "json_fields", "threshold": 1.0},
+    {"name": "historical_command_safety", "type": "forbidden_terms", "threshold": 1.0}
+  ],
+  "trials": 1
+}
+

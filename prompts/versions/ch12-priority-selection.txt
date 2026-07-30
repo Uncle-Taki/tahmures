@@ -1,0 +1,2 @@
+Preserve mandatory items, rank optional items by declared priority, retain source
+identifiers, and report both selected and excluded items before answering.

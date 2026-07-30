@@ -1,0 +1,10 @@
+{"case_id":"valid","variant_id":"unchecked","trial":1,"response":{"text":"{\"status\":\"rendered\",\"dispatched\":false,\"text\":\"Province Ray receives 12\"}","model_id":"fixture-v1"}}
+{"case_id":"missing","variant_id":"unchecked","trial":1,"response":{"text":"{\"status\":\"rendered\",\"dispatched\":true,\"text\":\"Province Ray receives ${allowance}\"}","model_id":"fixture-v1"}}
+{"case_id":"unknown","variant_id":"unchecked","trial":1,"response":{"text":"{\"status\":\"rendered\",\"dispatched\":true,\"text\":\"Province Ray receives 12\"}","model_id":"fixture-v1"}}
+{"case_id":"swapped","variant_id":"unchecked","trial":1,"response":{"text":"{\"status\":\"rendered\",\"dispatched\":true,\"text\":\"Province 12 receives Ray\"}","model_id":"fixture-v1"}}
+{"case_id":"delimiter","variant_id":"unchecked","trial":1,"response":{"text":"{\"status\":\"rendered\",\"dispatched\":true,\"text\":\"Province Ray 12 receives 12\"}","model_id":"fixture-v1"}}
+{"case_id":"valid","variant_id":"typed","trial":1,"response":{"text":"{\"status\":\"rendered\",\"dispatched\":false,\"text\":\"Province Ray receives 12\"}","model_id":"fixture-v1"}}
+{"case_id":"missing","variant_id":"typed","trial":1,"response":{"text":"{\"status\":\"rejected\",\"dispatched\":false,\"errors\":[\"missing allowance\"]}","model_id":"fixture-v1"}}
+{"case_id":"unknown","variant_id":"typed","trial":1,"response":{"text":"{\"status\":\"rejected\",\"dispatched\":false,\"errors\":[\"unknown seal\"]}","model_id":"fixture-v1"}}
+{"case_id":"swapped","variant_id":"typed","trial":1,"response":{"text":"{\"status\":\"rejected\",\"dispatched\":false,\"errors\":[\"type mismatch\"]}","model_id":"fixture-v1"}}
+{"case_id":"delimiter","variant_id":"typed","trial":1,"response":{"text":"{\"status\":\"rejected\",\"dispatched\":false,\"errors\":[\"unresolved placeholder\"]}","model_id":"fixture-v1"}}

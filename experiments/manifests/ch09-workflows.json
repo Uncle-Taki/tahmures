@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "chapter": 9,
+  "experiment_id": "ch09-workflows",
+  "description": "Compare a monolithic mission response with a checkpointed workflow.",
+  "dataset": "experiments/datasets/ch09-workflows.jsonl",
+  "fixtures": "experiments/fixtures/ch09-workflows.jsonl",
+  "prompt_variants": [
+    {"id": "monolithic", "template_path": "prompts/versions/ch09-monolithic-mission.txt"},
+    {"id": "workflow", "template_path": "prompts/versions/ch09-checkpointed-workflow.txt"}
+  ],
+  "evaluators": [
+    {"name": "workflow_trace", "type": "workflow_trace", "threshold": 1.0}
+  ],
+  "trials": 1
+}
