@@ -49,13 +49,13 @@ chapters:
       human_reviewed: true
       machine_prechecked: true
       review_notes: Calibration corpus from author review.
-  08:
+  '08':
     persian:
       status: human_reviewed
       human_reviewed: true
       machine_prechecked: true
       review_notes: Calibration corpus from author review.
-  09:
+  '09':
     persian:
       status: human_reviewed
       human_reviewed: true

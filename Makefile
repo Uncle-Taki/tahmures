@@ -55,6 +55,6 @@ serve-en:
 serve-fa:
 	$(PYTHON) -m mkdocs serve -f mkdocs.fa.yml
 
-check: lint test validate validate-translations experiments parity docs
+check: lint test validate validate-translations editorial-check experiments parity docs
 
 -include editorial.mk
