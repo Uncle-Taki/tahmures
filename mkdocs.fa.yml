@@ -32,7 +32,7 @@ extra_javascript:
 
 nav:
   - خانه: index.md
-  - بخش یک — زبان، نیت و مدل‌ها:
+  - بخش یک — زبان، نیت و دستورهای قابل‌اعتماد:
       - part-1/index.md
       - ۱. پرامپت چیست؟: part-1/01-what-is-a-prompt.md
       - ۲. مدل‌ها، معنا و عدم‌قطعیت: part-1/02-models-meaning-and-uncertainty.md
@@ -40,7 +40,7 @@ nav:
       - ۴. کالبدشناسی یک پرامپت قابل‌اعتماد: part-1/04-anatomy-of-a-reliable-prompt.md
       - ۵. سلسله‌مراتب دستورها و تعارض: part-1/05-instruction-hierarchy-and-conflict.md
       - ۶. یادگیری از مثال‌ها: part-1/06-learning-from-examples.md
-  - بخش دو — طراحی تعامل‌های مبتنی بر پرامپت:
+  - بخش دو — طراحی پرامپت و تولید کنترل‌شده:
       - part-2/index.md
       - ۷. قالب‌های بازاستفاده‌پذیر پرامپت: part-2/07-reusable-prompt-templates.md
       - ۸. خروجی‌های ساخت‌یافته و قراردادها: part-2/08-structured-outputs-and-contracts.md
@@ -48,6 +48,22 @@ nav:
       - ۱۰. واریانس، انتخاب و کنترل: part-2/10-variance-choice-and-control.md
       - ۱۱. طراحی برای خلاقیت: part-2/11-designing-for-creativity.md
       - ۱۲. پنجره‌های کانتکست و توجه: part-2/12-context-windows-and-attention.md
+  - بخش سه — Context، حافظه، ابزارها و Agentها:
+      - part-3/index.md
+      - ۱۳. مهندسی کانتکست: part-3/13-context-engineering.md
+      - ۱۴. تولید تقویت‌شده با بازیابی (RAG): part-3/14-retrieval-augmented-generation.md
+      - ۱۵. حافظه و وضعیت: part-3/15-memory-and-state.md
+      - ۱۶. ابزارها و مجوزها: part-3/16-tools-and-permissions.md
+      - ۱۷. عامل‌ها و خاتمه: part-3/17-agents-and-termination.md
+      - ۱۸. واگذاری‌ها و سامانه‌های چندمرحله‌ای: part-3/18-hand-offs-and-multi-step-systems.md
+  - بخش چهار — ارزیابی، امنیت و محیط عملیاتی:
+      - part-4/index.md
+      - ۱۹. ارزیابی و معیارنامه‌ها: part-4/19-evaluation-and-rubrics.md
+      - ۲۰. آزمون رگرسیون برای سامانه‌های مبتنی بر پرامپت: part-4/20-regression-testing-for-prompted-systems.md
+      - ۲۱. تزریق پرامپت و مرزهای اعتماد: part-4/21-prompt-injection-and-trust-boundaries.md
+      - ۲۲. تأییدها، قابلیت‌ها و اقدام‌های پیامددار: part-4/22-approvals-capabilities-and-consequential-action.md
+      - ۲۳. عملیات محیط تولید و رانش: part-4/23-production-operations-and-drift.md
+      - "۲۴. فراتر از پرامپت: انتخاب سازوکار کنترل مناسب": part-4/24-beyond-prompting-choosing-the-right-control.md
   - واژه‌نامه و شیوه‌نامه: translation-glossary.md
 
 copyright: >-

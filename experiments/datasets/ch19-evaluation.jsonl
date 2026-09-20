@@ -1,0 +1,3 @@
+{"case_id":"unsupported","input":{"answer":"fluent claim without record"},"expected":{"passed":false,"requires_adjudication":true,"disqualified":true},"tags":["evidence"]}
+{"case_id":"split_review","input":{"answer":"two reviewers disagree"},"expected":{"passed":false,"requires_adjudication":true,"disqualified":false},"tags":["disagreement"]}
+{"case_id":"anchored_pass","input":{"answer":"criteria met with cited evidence"},"expected":{"passed":true,"requires_adjudication":false,"disqualified":false},"tags":["acceptance"]}

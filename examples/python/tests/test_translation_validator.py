@@ -1,3 +1,4 @@
+import re
 from pathlib import Path
 
 import pytest
@@ -9,9 +10,17 @@ SOURCE = Path("book/part-1/01-what-is-a-prompt.md")
 TRANSLATION = Path("book/fa/part-1/01-what-is-a-prompt.md")
 
 
-@pytest.mark.parametrize("chapter", range(1, 13))
+@pytest.mark.parametrize("chapter", range(1, 25))
 def test_committed_persian_translation_passes(chapter: int) -> None:
-    part = "part-1" if chapter <= 6 else "part-2"
+    part = (
+        "part-1"
+        if chapter <= 6
+        else "part-2"
+        if chapter <= 12
+        else "part-3"
+        if chapter <= 18
+        else "part-4"
+    )
     source = next(Path(f"book/{part}").glob(f"{chapter:02d}-*.md"))
     translation = Path("book/fa") / part / source.name
     slug, episode = validate_pair(source, translation)
@@ -19,15 +28,31 @@ def test_committed_persian_translation_passes(chapter: int) -> None:
     assert episode
 
 
+def test_part_three_uses_persian_title_and_preserves_episode() -> None:
+    source = Path("book/part-3/13-context-engineering.md")
+    translation = Path("book/fa/part-3/13-context-engineering.md")
+    slug, episode = validate_pair(source, translation)
+    assert slug == "context-engineering"
+    assert episode == "The Archive That Answered Everything"
+
+
+def test_part_four_uses_persian_title_and_episode() -> None:
+    source = Path("book/part-4/19-evaluation-and-rubrics.md")
+    translation = Path("book/fa/part-4/19-evaluation-and-rubrics.md")
+    slug, episode = validate_pair(source, translation)
+    assert slug == "evaluation-and-rubrics"
+    assert episode == "دادگاه بی‌وزنه"
+
+
 def test_stale_source_hash_is_rejected(tmp_path: Path) -> None:
     changed = tmp_path / TRANSLATION.name
     changed.write_text(
-        TRANSLATION.read_text(encoding="utf-8").replace(
-            (
-                'source_sha256: "39c313c89012e979d6e46b543cc41738'
-                'dfc2785872c7f72c27bb7fa7fd51d68b"'
-            ),
+        re.sub(
+            r'^source_sha256: "[0-9a-f]{64}"$',
             f'source_sha256: "{"0" * 64}"',
+            TRANSLATION.read_text(encoding="utf-8"),
+            count=1,
+            flags=re.MULTILINE,
         ),
         encoding="utf-8",
     )

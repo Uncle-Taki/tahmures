@@ -7,6 +7,7 @@ summary: "Preserve goals, authority, constraints, state, provenance, and unresol
 maturity: "draft"
 last_reviewed: "2026-07-30"
 narrative_episode: "The Broken Relay"
+narrative_origin: "original-teaching-fiction"
 learning_objectives:
   - "Design explicit versioned hand-off envelopes"
   - "Preserve constraints, authority, artefact provenance, and uncertainty"
@@ -26,8 +27,6 @@ denied, and operated.
 
 ## The Tale of Tahmures
 
-*The following is an original fictional episode created for teaching. It is not
-a translation, adaptation, or reconstructed passage from the* Shahnameh.
 
 ### The Setting
 
@@ -407,5 +406,6 @@ The new envelope reached every tower intact. Yet three advisers still judged the
 ## Citations and Further Reading
 
 - World Wide Web Consortium. 2021. *Trace Context, W3C Recommendation*.
-- Cloud Native Computing Foundation. 2024. *CloudEvents Specification*, Version 1.0.2.
+- Cloud Native Computing Foundation. 2022. *CloudEvents Specification*, Version 1.0.2.
+  https://github.com/cloudevents/spec/releases/tag/ce%40v1.0.2.
 - Kleppmann, Martin. 2017. *Designing Data-Intensive Applications*. Sebastopol, CA: O’Reilly Media.

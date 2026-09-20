@@ -1,0 +1,21 @@
+version: 1
+status: proposed_reader_facing_only
+rule: Keep internal part-1..part-4 paths stable unless a separate migration is explicitly
+  approved.
+parts:
+  part-1:
+    chapters: 01-06
+    en: Language, Intent, and Reliable Instructions
+    fa: زبان، نیت و دستورهای قابل‌اعتماد
+  part-2:
+    chapters: 07-12
+    en: Prompt Design and Controlled Generation
+    fa: طراحی پرامپت و تولید کنترل‌شده
+  part-3:
+    chapters: 13-18
+    en: Context, Memory, Tools, and Agents
+    fa: Context، حافظه، ابزارها و Agentها
+  part-4:
+    chapters: 19-24
+    en: Evaluation, Security, and Production
+    fa: ارزیابی، امنیت و محیط عملیاتی

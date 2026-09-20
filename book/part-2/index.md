@@ -3,7 +3,7 @@ title: "Part II — Designing Prompted Interactions"
 summary: "Completed chapters on templates, contracts, workflows, variance, creativity, and context windows."
 ---
 
-# Part II — Designing Prompted Interactions
+# Part II — Prompt Design and Controlled Generation
 
 Part II moves from analysing individual prompts to designing bounded
 interactions. Tahmures and the First Scribe treat templates as application

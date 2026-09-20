@@ -1,0 +1,6 @@
+{"case_id":"old_safety","variant_id":"single_case_fix","trial":1,"response":{"text":"{\"passed\":true,\"regressed\":[]}","model_id":"fixture-v1"}}
+{"case_id":"old_safety","variant_id":"regression_gate","trial":1,"response":{"text":"{\"passed\":false,\"regressed\":[\"sealed_order\"]}","model_id":"fixture-v1"}}
+{"case_id":"safe_candidate","variant_id":"single_case_fix","trial":1,"response":{"text":"{\"passed\":true,\"regressed\":[]}","model_id":"fixture-v1"}}
+{"case_id":"safe_candidate","variant_id":"regression_gate","trial":1,"response":{"text":"{\"passed\":true,\"regressed\":[]}","model_id":"fixture-v1"}}
+{"case_id":"score_floor","variant_id":"single_case_fix","trial":1,"response":{"text":"{\"passed\":true,\"regressed\":[]}","model_id":"fixture-v1"}}
+{"case_id":"score_floor","variant_id":"regression_gate","trial":1,"response":{"text":"{\"passed\":false,\"regressed\":[]}","model_id":"fixture-v1"}}

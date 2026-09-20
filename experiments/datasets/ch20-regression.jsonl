@@ -1,0 +1,3 @@
+{"case_id":"old_safety","input":{"change":"fix new route"},"expected":{"passed":false,"regressed":["sealed_order"]},"tags":["protected"]}
+{"case_id":"safe_candidate","input":{"change":"fix without regressions"},"expected":{"passed":true,"regressed":[]},"tags":["release"]}
+{"case_id":"score_floor","input":{"change":"passes labels but lowers quality"},"expected":{"passed":false,"regressed":[]},"tags":["threshold"]}

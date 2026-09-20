@@ -7,6 +7,7 @@ summary: "Engineer a sufficient, scoped, traceable working set rather than accum
 maturity: "draft"
 last_reviewed: "2026-07-30"
 narrative_episode: "The Archive That Answered Everything"
+narrative_origin: "original-teaching-fiction"
 learning_objectives:
   - "Design task-specific context packages across sources"
   - "Preserve authority, provenance, conflicts, and exclusions"
@@ -26,8 +27,6 @@ denied, and operated.
 
 ## The Tale of Tahmures
 
-*The following is an original fictional episode created for teaching. It is not
-a translation, adaptation, or reconstructed passage from the* Shahnameh.
 
 ### The Setting
 

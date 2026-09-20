@@ -1,0 +1,561 @@
+# Tahmures Persian terminology candidate registry
+# This file is intentionally a candidate registry, NOT an unconditional whitelist.
+# Promote a term to `approved` only after contextual review and, when appropriate,
+# synchronization with book/fa/translation-glossary.md.
+
+meta:
+  version: 1
+  project: Tahmures
+  scope: Persian edition
+  source: human review of chapters 01-09
+  created: "2026-08-19"
+  canonical_policy: writing_persian_eng_books.md
+  allowed_actions:
+    - PRESERVE_EXACT
+    - RETAIN_ENGLISH
+    - TRANSLATE_PERSIAN
+    - TRANSLITERATE_PERSIAN
+    - REVIEW
+  allowed_status:
+    - candidate
+    - approved
+    - rejected
+    - needs_context
+  rules:
+    - "A candidate term is not automatically retained in every context."
+    - "Technical identity, searchability, interoperability, and implementation correspondence are valid reasons for English retention."
+    - "Ordinary prose should normally remain Persian."
+    - "Identifiers, literal fields, commands, paths, API names, and syntax are handled by PRESERVE_EXACT rather than ordinary terminology policy."
+    - "Persian grammar governs the sentence around every retained English term."
+    - "Do not use stylistic variation for established technical terminology."
+    - "If a term changes meaning by domain or grammatical role, classify the occurrence rather than the dictionary word."
+
+entries:
+  interface:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: false
+    rationale: "Widely recognizable software/engineering technical identity."
+
+  delimiter:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Often useful for correspondence with code, parsers, and documentation."
+
+  label:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "May be a literal UI/data field or ordinary prose; inspect context."
+
+  payload:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: false
+    rationale: "Common API/network/software term with useful English identity."
+
+  Application:
+    proposed_action: REVIEW
+    status: needs_context
+    context_sensitive: true
+    rationale: "May be an official technical object/name, an application layer, or ordinary 'کاربرد/برنامه'. Preserve capitalization only when technically meaningful."
+
+  retriever:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: false
+    rationale: "Specific RAG/system component term."
+
+  schema:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: false
+    rationale: "High searchability and strong technical identity in structured data/API contexts."
+
+  pilot:
+    proposed_action: REVIEW
+    status: needs_context
+    context_sensitive: true
+    rationale: "May mean pilot study/run/system or ordinary concept."
+
+  classifier:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: false
+    rationale: "Recognizable ML/system component."
+
+  variant:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Useful in experiment/version contexts; ordinary Persian may use an equivalent."
+
+  normalize:
+    proposed_action: REVIEW
+    status: needs_context
+    context_sensitive: true
+    rationale: "Verb in prose may be better Persian; exact function/operation names may require preservation."
+
+  baseline:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: false
+    rationale: "Strong experimental/evaluation identity."
+
+  adapter:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: false
+    rationale: "Software architecture term with useful documentation correspondence."
+
+  live:
+    proposed_action: REVIEW
+    status: needs_context
+    context_sensitive: true
+    rationale: "Retain for live API/live model/live run when established; translate ordinary uses."
+
+  deadline:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Common software/concurrency term; context may favor Persian."
+
+  cancellation:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Useful in async/concurrency/request lifecycle contexts."
+
+  authentication:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Searchable security term; Persian equivalent may also be established."
+
+  enforcement:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Useful when distinguishing linguistic guidance from deterministic enforcement."
+
+  coherent:
+    proposed_action: REVIEW
+    status: needs_context
+    context_sensitive: true
+    rationale: "Usually ordinary descriptive prose; retain only if serving a defined technical label."
+
+  continuation:
+    proposed_action: REVIEW
+    status: needs_context
+    context_sensitive: true
+    rationale: "May be a technical continuation/state concept or ordinary prose."
+
+  machine-observable:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: false
+    rationale: "Specialized engineering qualifier; preserve as a defined term if used consistently."
+
+  quantity:
+    proposed_action: REVIEW
+    status: needs_context
+    context_sensitive: true
+    rationale: "Often naturally Persian unless used as a schema/type/domain label."
+
+  evaluator:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: false
+    rationale: "Core technical role/component in the book."
+
+  claim:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Useful when discussing claim/evidence structures; ordinary prose may use Persian."
+
+  audit:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Strong technical/process identity in security and evaluation."
+
+  metric:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: false
+    rationale: "Common evaluation term with high documentation/search value."
+
+  self-confidence:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Retain if used as a defined model-output/evaluation concept."
+
+  query:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: false
+    rationale: "Core database/search/RAG term."
+
+  syntax:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Common technical term; Persian equivalent may be used in explanatory prose."
+
+  reviewer:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Useful for named evaluation roles; ordinary prose can use Persian."
+
+  iteration:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Common development/optimization term."
+
+  functional:
+    proposed_action: REVIEW
+    status: needs_context
+    context_sensitive: true
+    rationale: "Meaning varies: functional requirement, functional programming, functioning, etc."
+
+  latency:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: false
+    rationale: "Standard systems-performance term."
+
+  clarity:
+    proposed_action: REVIEW
+    status: needs_context
+    context_sensitive: true
+    rationale: "Usually ordinary prose; retain only as a named rubric/metric label."
+
+  proxy:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "May be a software/network/statistical proxy; inspect concept."
+
+  topic:
+    proposed_action: REVIEW
+    status: needs_context
+    context_sensitive: true
+    rationale: "Often ordinary prose unless a literal field/category."
+
+  brief:
+    proposed_action: REVIEW
+    status: needs_context
+    context_sensitive: true
+    rationale: "May be a named artifact such as decision brief; otherwise translate."
+
+  minor unit:
+    proposed_action: REVIEW
+    status: needs_context
+    context_sensitive: true
+    rationale: "Needs exact domain meaning before establishing a book-wide convention."
+
+  floating-point:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: false
+    rationale: "Recognizable computing term and search-critical."
+
+  ineligible:
+    proposed_action: REVIEW
+    status: needs_context
+    context_sensitive: true
+    rationale: "Usually ordinary adjective unless literal enum/status value."
+
+  suite:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Useful for test suite/tool suite when used as a technical unit."
+
+  arithmetic:
+    proposed_action: REVIEW
+    status: needs_context
+    context_sensitive: true
+    rationale: "May naturally be Persian; retain for exact named technical constructs if needed."
+
+  trade-off:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: false
+    rationale: "Common engineering decision term with recognized identity."
+
+  bundle:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Useful for package/artifact bundles; ordinary use may be Persian."
+
+  attention:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Retain for the ML mechanism; translate ordinary human attention."
+
+  attack:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Useful in named security attack classes; ordinary prose may be Persian."
+
+  generation:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Useful for model generation pipeline; ordinary prose may be Persian."
+
+  response:
+    proposed_action: REVIEW
+    status: needs_context
+    context_sensitive: true
+    rationale: "Retain for API/object identity or exact schema; ordinary explanatory prose usually favors Persian."
+
+  type:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Often exact programming/schema concept; ordinary categorization may be Persian."
+
+  mutation:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Technical identity in state/data/GraphQL contexts."
+
+  version:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Common technical word; Persian equivalent may also be natural."
+
+  failure:
+    proposed_action: REVIEW
+    status: needs_context
+    context_sensitive: true
+    rationale: "Core book concept but often natural Persian; retain only when a defined label/type."
+
+  value:
+    proposed_action: REVIEW
+    status: needs_context
+    context_sensitive: true
+    rationale: "Retain for literal key/value/type contexts; ordinary prose usually favors Persian."
+
+  invariant:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: false
+    rationale: "Specific engineering/mathematical concept."
+
+  interpretation:
+    proposed_action: REVIEW
+    status: needs_context
+    context_sensitive: true
+    rationale: "Usually ordinary explanatory prose unless a defined label."
+
+  specific:
+    proposed_action: REVIEW
+    status: needs_context
+    context_sensitive: true
+    rationale: "Ordinary adjective in most prose; not a default retained term."
+
+  genuine:
+    proposed_action: REVIEW
+    status: needs_context
+    context_sensitive: true
+    rationale: "Ordinary adjective in most prose; retain only for a defined contrast."
+
+  origin:
+    proposed_action: REVIEW
+    status: needs_context
+    context_sensitive: true
+    rationale: "May be metadata/provenance field or ordinary prose."
+
+  recency:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Useful as a retrieval/ranking/evaluation concept."
+
+  credential:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: false
+    rationale: "Security/identity term with high technical identity."
+
+  case:
+    proposed_action: REVIEW
+    status: needs_context
+    context_sensitive: true
+    rationale: "Could mean test case, use case, grammatical case, scenario, etc."
+
+  form:
+    proposed_action: REVIEW
+    status: needs_context
+    context_sensitive: true
+    rationale: "Could be UI form, data form, structure, or ordinary prose."
+
+  proof:
+    proposed_action: REVIEW
+    status: needs_context
+    context_sensitive: true
+    rationale: "Could be mathematical proof, evidence, proof artifact, or ordinary word."
+
+  class:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Preserve for programming/ML class identity; translate ordinary category uses."
+
+  correlation:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Recognizable statistical term; Persian may be suitable in explanatory prose."
+
+  edge behavior:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Useful as a defined testing/system term; verify intended meaning."
+
+  nuance:
+    proposed_action: REVIEW
+    status: needs_context
+    context_sensitive: true
+    rationale: "Usually ordinary prose; retain only if deliberately defined."
+
+  substitution:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "May identify a template/prompt operation; ordinary use may be Persian."
+
+  placeholder:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: false
+    rationale: "Strong template/programming identity."
+
+  serializer:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: false
+    rationale: "Specific software component."
+
+  command:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Retain for CLI/command objects; ordinary imperative/explanatory prose may be Persian."
+
+  permissive:
+    proposed_action: REVIEW
+    status: needs_context
+    context_sensitive: true
+    rationale: "Usually adjective; technical meaning depends on policy/parser/security context."
+
+  integration:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Common software/system term; Persian may be acceptable in ordinary prose."
+
+  load:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Could be system load, load operation, model loading, or ordinary meaning."
+
+  pinned:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Useful for pinned version/dependency/config behavior."
+
+  transition:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Useful for state-machine/workflow transition; ordinary prose may be Persian."
+
+  renderer:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: false
+    rationale: "Specific software/documentation component."
+
+  asset:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Useful in software/docs build context; ordinary meaning may differ."
+
+  uniform:
+    proposed_action: REVIEW
+    status: needs_context
+    context_sensitive: true
+    rationale: "Could be statistical distribution, consistency adjective, or ordinary word."
+
+  style:
+    proposed_action: REVIEW
+    status: needs_context
+    context_sensitive: true
+    rationale: "Could be CSS/style system, writing style, UI style, etc."
+
+  batch:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Common computing/processing term."
+
+  notation:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Technical identity may matter; ordinary mathematical explanation may use Persian."
+
+  incident:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Strong operations/security meaning in incident management."
+
+  route:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Could be web/API route, workflow routing, or ordinary path."
+
+  synthetic:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Useful in synthetic data/fixtures; ordinary adjective may be Persian."
+
+  contract:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Core book/software concept; retain where it names a formal machine contract."
+
+  asses:
+    proposed_action: REVIEW
+    status: needs_context
+    context_sensitive: true
+    rationale: "The submitted token may be intentional or may be a typo for 'assess'. Do not silently correct; locate the source occurrence and verify."
+    note: "Do not promote until exact source spelling and intended meaning are confirmed."
+
+  opaque:
+    proposed_action: RETAIN_ENGLISH
+    status: candidate
+    context_sensitive: true
+    rationale: "Useful as a defined systems/security/data qualifier; ordinary prose may be Persian."

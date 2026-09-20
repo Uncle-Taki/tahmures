@@ -7,6 +7,7 @@ summary: "Bound autonomous loops with current goals, budgets, cancellation, appr
 maturity: "draft"
 last_reviewed: "2026-07-30"
 narrative_episode: "The Messenger Who Continued"
+narrative_origin: "original-teaching-fiction"
 learning_objectives:
   - "Model agents as controlled loops rather than independent authorities"
   - "Enforce goal versions, budgets, cancellation, and completion evidence"
@@ -26,8 +27,6 @@ denied, and operated.
 
 ## The Tale of Tahmures
 
-*The following is an original fictional episode created for teaching. It is not
-a translation, adaptation, or reconstructed passage from the* Shahnameh.
 
 ### The Setting
 

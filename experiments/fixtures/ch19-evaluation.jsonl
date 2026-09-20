@@ -1,0 +1,6 @@
+{"case_id":"unsupported","variant_id":"preference_only","trial":1,"response":{"text":"{\"passed\":true,\"requires_adjudication\":false,\"disqualified\":false}","model_id":"fixture-v1"}}
+{"case_id":"unsupported","variant_id":"anchored_rubric","trial":1,"response":{"text":"{\"passed\":false,\"requires_adjudication\":true,\"disqualified\":true}","model_id":"fixture-v1"}}
+{"case_id":"split_review","variant_id":"preference_only","trial":1,"response":{"text":"{\"passed\":true,\"requires_adjudication\":false,\"disqualified\":false}","model_id":"fixture-v1"}}
+{"case_id":"split_review","variant_id":"anchored_rubric","trial":1,"response":{"text":"{\"passed\":false,\"requires_adjudication\":true,\"disqualified\":false}","model_id":"fixture-v1"}}
+{"case_id":"anchored_pass","variant_id":"preference_only","trial":1,"response":{"text":"{\"passed\":true,\"requires_adjudication\":false,\"disqualified\":false}","model_id":"fixture-v1"}}
+{"case_id":"anchored_pass","variant_id":"anchored_rubric","trial":1,"response":{"text":"{\"passed\":true,\"requires_adjudication\":false,\"disqualified\":false}","model_id":"fixture-v1"}}

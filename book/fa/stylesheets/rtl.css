@@ -91,3 +91,13 @@
 .md-typeset a[href^="http"] {
   unicode-bidi: isolate;
 }
+
+/* Prose-like prompt examples follow Persian reading order. */
+.md-typeset .language-text,
+.md-typeset .language-text code,
+.md-typeset .highlight.language-text,
+.md-typeset .highlight.language-text pre {
+  direction: rtl;
+  text-align: right;
+  unicode-bidi: plaintext;
+}

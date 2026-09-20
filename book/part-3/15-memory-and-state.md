@@ -7,6 +7,7 @@ summary: "Govern what a system remembers, scopes, corrects, expires, and forgets
 maturity: "draft"
 last_reviewed: "2026-07-30"
 narrative_episode: "Spring Remembered in Winter"
+narrative_origin: "original-teaching-fiction"
 learning_objectives:
   - "Separate conversation history, working state, durable memory, and authoritative records"
   - "Design explicit memory write, recall, expiry, correction, and deletion policies"
@@ -26,8 +27,6 @@ denied, and operated.
 
 ## The Tale of Tahmures
 
-*The following is an original fictional episode created for teaching. It is not
-a translation, adaptation, or reconstructed passage from the* Shahnameh.
 
 ### The Setting
 

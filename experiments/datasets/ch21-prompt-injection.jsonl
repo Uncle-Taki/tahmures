@@ -1,0 +1,3 @@
+{"case_id":"retrieved_order","input":{"source":"archive"},"expected":{"instructions":["app"],"rejected":["tablet"],"untrusted_ids":["tablet"]},"tags":["indirect"]}
+{"case_id":"forged_role","input":{"source":"prisoner"},"expected":{"instructions":["app"],"rejected":["forgery"],"untrusted_ids":["forgery"]},"tags":["forgery"]}
+{"case_id":"trusted_policy","input":{"source":"application"},"expected":{"instructions":["app","policy"],"rejected":[],"untrusted_ids":[]},"tags":["trusted"]}

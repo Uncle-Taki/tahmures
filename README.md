@@ -3,16 +3,16 @@
 *The Art and Engineering of Speaking with Intelligent Machines*
 
 Tahmures is a practical, narrative-supported book about designing, evaluating,
-and operating reliable language-model interactions. The completed Parts I–III
-contain eighteen chapters, shared offline experiments, and equivalent Python
+and operating reliable language-model interactions. The completed Parts I–IV
+contain twenty-four chapters, shared offline experiments, and equivalent Python
 and Go implementations.
 
 The chapter stories are original teaching fiction inspired by the legendary
 figure of Tahmures in Iranian epic tradition. They are not translations,
 adaptations, or reconstructed passages from Ferdowsi's *Shahnameh*.
 
-Chapters 1–12 are also available as a first-class Persian edition with an RTL
-MkDocs build. Part III is currently English-only. The Persian manuscript is a
+All twenty-four chapters are also available as a first-class Persian edition
+with an RTL MkDocs build. The Persian manuscript is a
 faithful editorial translation; code and offline experiment assets remain
 shared with the English edition.
 
@@ -68,7 +68,7 @@ no network calls and require no model-provider credentials.
 ## Project map
 
 - `book/` — manuscript, references, and narrative continuity
-- `book/fa/` — Persian Parts I–II manuscript and translation glossary
+- `book/fa/` — complete Persian manuscript and translation glossary
 - `examples/python/` — canonical provider-neutral experiment library
 - `examples/go/` — behaviourally equivalent Go implementation
 - `experiments/` — shared manifests, datasets, and response fixtures

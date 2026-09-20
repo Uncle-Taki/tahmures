@@ -119,6 +119,12 @@ divs as elements of Iranian tradition:
 - Do not reduce Iranian mythology to exotic scenery or use crude stereotypes.
 - Transliterate specialist terms consistently and explain them on first use.
 
+Record `narrative_origin: "original-teaching-fiction"` in every chapter's
+front matter. Keep the `The Tale of Tahmures` heading, but do not repeat the
+full cultural-integrity disclaimer inside every chapter; the book-level note
+and machine-readable metadata carry that distinction without interrupting the
+opening narrative.
+
 ## Narrative Purpose
 
 Every chapter must begin with an original short story from the world of

@@ -7,6 +7,7 @@ summary: "Evaluate retrieval, evidence, and citations as distinct components of 
 maturity: "draft"
 last_reviewed: "2026-07-30"
 narrative_episode: "The Correct Answer from the Wrong Tablet"
+narrative_origin: "original-teaching-fiction"
 learning_objectives:
   - "Measure retrieval quality before answer quality"
   - "Preserve chunk identity, scope, freshness, and provenance"
@@ -26,8 +27,6 @@ denied, and operated.
 
 ## The Tale of Tahmures
 
-*The following is an original fictional episode created for teaching. It is not
-a translation, adaptation, or reconstructed passage from the* Shahnameh.
 
 ### The Setting
 

@@ -47,6 +47,13 @@ goal.
 
 [Continue to Part III](part-3/index.md)
 
+Part IV follows him from system designer to evaluator, operator, guardian, and
+teacher. He builds anchored rubrics and regression gates, defends trust
+boundaries, binds consequential authority, observes drift, and learns which
+requirements must be enforced by mechanisms other than language.
+
+[Complete Part IV](part-4/index.md)
+
 ## How to use the book
 
 Each chapter moves through the same learning rhythm:

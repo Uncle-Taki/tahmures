@@ -1,0 +1,3 @@
+{"case_id":"missing_approval","input":{"effect":"write"},"expected":{"allowed":false,"reason":"approval_required"},"tags":["approval"]}
+{"case_id":"changed_arguments","input":{"digest":"changed"},"expected":{"allowed":false,"reason":"digest_mismatch"},"tags":["binding"]}
+{"case_id":"valid_read","input":{"effect":"read"},"expected":{"allowed":true,"reason":"allowed"},"tags":["least-privilege"]}

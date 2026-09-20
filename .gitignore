@@ -8,3 +8,5 @@ site/
 reports/
 coverage.xml
 .DS_Store
+.zcode/
+.~lock.*

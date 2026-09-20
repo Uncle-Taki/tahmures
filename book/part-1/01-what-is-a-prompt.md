@@ -7,6 +7,7 @@ summary: "Treat a prompt as the complete, structured interaction through which a
 maturity: "draft"
 last_reviewed: "2026-07-29"
 narrative_episode: "The Three Readings"
+narrative_origin: "original-teaching-fiction"
 learning_objectives:
   - "Distinguish a prompt from the latest user message"
   - "Identify task, data, context, constraints, examples, and output expectations"
@@ -17,7 +18,6 @@ prerequisites:
 
 # What Is a Prompt?
 
-[نسخهٔ فارسی این فصل](../fa/part-1/01-what-is-a-prompt.md)
 
 ## Learning Objectives
 
@@ -31,8 +31,6 @@ By the end of this chapter, you will be able to:
 
 ## The Tale of Tahmures
 
-*The following is an original fictional episode created for this book. It is
-not a passage or translation from the* Shahnameh.
 
 ### The Setting
 

@@ -1,0 +1,153 @@
+version: 1
+project: Tahmures
+updated: '2026-08-19'
+meaning:
+  human_reviewed: Human line-by-line review has occurred.
+  machine_prechecked: Automated/Codex editorial checks have been applied; this is
+    not human approval.
+  unreviewed: No human review has been recorded.
+chapters:
+  '01':
+    persian:
+      status: human_reviewed
+      human_reviewed: true
+      machine_prechecked: true
+      review_notes: Calibration corpus from author review.
+  '02':
+    persian:
+      status: human_reviewed
+      human_reviewed: true
+      machine_prechecked: true
+      review_notes: Calibration corpus from author review.
+  '03':
+    persian:
+      status: human_reviewed
+      human_reviewed: true
+      machine_prechecked: true
+      review_notes: Calibration corpus from author review.
+  '04':
+    persian:
+      status: human_reviewed
+      human_reviewed: true
+      machine_prechecked: true
+      review_notes: Calibration corpus from author review.
+  '05':
+    persian:
+      status: human_reviewed
+      human_reviewed: true
+      machine_prechecked: true
+      review_notes: Calibration corpus from author review.
+  '06':
+    persian:
+      status: human_reviewed
+      human_reviewed: true
+      machine_prechecked: true
+      review_notes: Calibration corpus from author review.
+  '07':
+    persian:
+      status: human_reviewed
+      human_reviewed: true
+      machine_prechecked: true
+      review_notes: Calibration corpus from author review.
+  08:
+    persian:
+      status: human_reviewed
+      human_reviewed: true
+      machine_prechecked: true
+      review_notes: Calibration corpus from author review.
+  09:
+    persian:
+      status: human_reviewed
+      human_reviewed: true
+      machine_prechecked: true
+      review_notes: Calibration corpus from author review.
+  '10':
+    persian:
+      status: machine_prechecked
+      human_reviewed: false
+      machine_prechecked: true
+      review_notes: Known Chapters 01–09 failure classes and bilingual parity checks applied; human line review remains pending.
+  '11':
+    persian:
+      status: machine_prechecked
+      human_reviewed: false
+      machine_prechecked: true
+      review_notes: Known Chapters 01–09 failure classes and bilingual parity checks applied; human line review remains pending.
+  '12':
+    persian:
+      status: machine_prechecked
+      human_reviewed: false
+      machine_prechecked: true
+      review_notes: Known Chapters 01–09 failure classes and bilingual parity checks applied; human line review remains pending.
+  '13':
+    persian:
+      status: machine_prechecked
+      human_reviewed: false
+      machine_prechecked: true
+      review_notes: Known Chapters 01–09 failure classes and bilingual parity checks applied; human line review remains pending.
+  '14':
+    persian:
+      status: machine_prechecked
+      human_reviewed: false
+      machine_prechecked: true
+      review_notes: Known Chapters 01–09 failure classes and bilingual parity checks applied; human line review remains pending.
+  '15':
+    persian:
+      status: machine_prechecked
+      human_reviewed: false
+      machine_prechecked: true
+      review_notes: Known Chapters 01–09 failure classes and bilingual parity checks applied; human line review remains pending.
+  '16':
+    persian:
+      status: machine_prechecked
+      human_reviewed: false
+      machine_prechecked: true
+      review_notes: Known Chapters 01–09 failure classes and bilingual parity checks applied; human line review remains pending.
+  '17':
+    persian:
+      status: machine_prechecked
+      human_reviewed: false
+      machine_prechecked: true
+      review_notes: Known Chapters 01–09 failure classes and bilingual parity checks applied; human line review remains pending.
+  '18':
+    persian:
+      status: machine_prechecked
+      human_reviewed: false
+      machine_prechecked: true
+      review_notes: Known Chapters 01–09 failure classes and bilingual parity checks applied; human line review remains pending.
+  '19':
+    persian:
+      status: machine_prechecked
+      human_reviewed: false
+      machine_prechecked: true
+      review_notes: Known Chapters 01–09 failure classes and bilingual parity checks applied; human line review remains pending.
+  '20':
+    persian:
+      status: machine_prechecked
+      human_reviewed: false
+      machine_prechecked: true
+      review_notes: Known Chapters 01–09 failure classes and bilingual parity checks applied; human line review remains pending.
+  '21':
+    persian:
+      status: machine_prechecked
+      human_reviewed: false
+      machine_prechecked: true
+      review_notes: Known Chapters 01–09 failure classes and bilingual parity checks applied; human line review remains pending.
+  '22':
+    persian:
+      status: machine_prechecked
+      human_reviewed: false
+      machine_prechecked: true
+      review_notes: Known Chapters 01–09 failure classes and bilingual parity checks applied; human line review remains pending.
+  '23':
+    persian:
+      status: machine_prechecked
+      human_reviewed: false
+      machine_prechecked: true
+      review_notes: Known Chapters 01–09 failure classes and bilingual parity checks applied; human line review remains pending.
+  '24':
+    persian:
+      status: machine_prechecked
+      human_reviewed: false
+      machine_prechecked: true
+      review_notes: Known Chapters 01–09 failure classes and bilingual parity checks applied; human line review remains pending.

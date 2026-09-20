@@ -7,6 +7,7 @@ summary: "Authenticate instruction sources, apply explicit precedence, detect co
 maturity: "draft"
 last_reviewed: "2026-07-29"
 narrative_episode: "Seals Above Seals"
+narrative_origin: "original-teaching-fiction"
 learning_objectives:
   - "Distinguish authority from persuasive wording"
   - "Resolve instruction precedence deterministically"
@@ -17,7 +18,6 @@ prerequisites:
 
 # Instruction Hierarchy and Conflict
 
-[نسخهٔ فارسی این فصل](../fa/part-1/05-instruction-hierarchy-and-conflict.md)
 
 ## Learning Objectives
 
@@ -27,8 +27,6 @@ rather than inviting a model to improvise policy.
 
 ## The Tale of Tahmures
 
-*The following is an original fictional episode created for this book. It is
-not a passage or translation from the* Shahnameh.
 
 ### The Setting
 

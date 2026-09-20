@@ -7,6 +7,7 @@ summary: "Budget, select, order, and trace context instead of assuming that ever
 maturity: "draft"
 last_reviewed: "2026-07-29"
 narrative_episode: "The Decree That Forgot Its Beginning"
+narrative_origin: "original-teaching-fiction"
 learning_objectives:
   - "Distinguish context capacity from effective context use"
   - "Select context deterministically by obligation, priority, and provenance"
@@ -17,7 +18,6 @@ prerequisites:
 
 # Context Windows and Attention
 
-[این فصل را به فارسی بخوانید](../fa/part-2/12-context-windows-and-attention.md)
 
 ## Learning Objectives
 
@@ -29,8 +29,6 @@ state should replace an expanding prompt.
 
 ## The Tale of Tahmures
 
-*The following is an original fictional episode created for teaching. It is not
-a translation, adaptation, or reconstructed passage from the* Shahnameh.
 
 ### The Setting
 
@@ -352,6 +350,8 @@ tokenizer. Invalidate caches when sources change or permissions are revoked.
 Set a terminal failure for impossible budgets. A system that repeatedly
 summarises until content fits can consume cost and destroy meaning without
 converging safely.
+
+Before release, have a reviewer reconstruct one decision from retained evidence. If its active inputs, versions, owner, and reason code cannot be identified, the boundary is not yet operationally auditable.
 
 ## Trade-Offs
 

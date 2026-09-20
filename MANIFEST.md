@@ -1,0 +1,26 @@
+# Generated File Manifest
+
+- `.agents/skills/tahmures-editorial/SKILL.md` — sha256 `bb8eda63625658cca912d587aa022a485518ab41b0828c99293ec195b3da6283`
+- `.agents/skills/tahmures-editorial/references/gates.md` — sha256 `344150919799a5220bb64489df14b1ab76a2ab9aa480296aedddc7915d1a4a03`
+- `.agents/skills/tahmures-editorial/references/workflow.md` — sha256 `b25dda186e302a2dcbccceeaeefa87750815cee7823ab33d8072800fa81db77d`
+- `AGENTS.md` — sha256 `2bc62f0ef5f420fe8fde4e41c4717b29bc4d39667097c8c8700ca5e23ea3fcb0`
+- `editorial/INSTALL.md` — sha256 `a8bdd907213ea76751e1aefaeca8a0d73c564cd54b3deb26ee5c73e5a4bc1d5a`
+- `editorial/README.md` — sha256 `3f579c368ac17ed75fd0e7ab1453fecfc464b8e1a79adc6b566208c770490595`
+- `editorial/fa-review/chapters-01-09.md` — sha256 `432d72fab69e81e345778027ab7eef7513410dce74225aef48afdffa309703e8`
+- `editorial/fa-review/regression-cases.yml` — sha256 `15960cf789d037dd8845a61fef68685f56e3790374eec284038b05a81e2a7c59`
+- `editorial/fa-review/terminology-candidates.yml` — sha256 `7cc967dd52317f02f4a06d74f2af65344d99294765d501ec77081f4df91cc82b`
+- `editorial/part-titles.yml` — sha256 `906bb36e24ac9203a40f66277dcd24f40eb770aac2c63b8b14452e2d9992e55c`
+- `editorial/review-status.yml` — sha256 `66c2565e6260ed854c1c01a9f19222ad2f91afb55c7b3197a60f2bad16ad636a`
+- `editorial/toolchain-lock.md` — sha256 `a569d60b66344d3922898ce48d1bb685fcbe2f3d24c999fa1e612760f02d7637`
+- `editorial.mk` — sha256 `beb2e5bcd9a5756dc9844a6f12d5df7b28b619b7457fd46af558e0313a9bb775`
+- `prompts/final-book-review.md` — sha256 `bc70b429d39b1c76d7f9b16c5a17ea4541ce52f289545a1c7e3cce58d5fddcd4`
+- `prompts/persian-batch-review.md` — sha256 `1656f8d2655a13da233a746fdbb7c8757f448b1dac193c98343e2c30e0409b6e`
+- `scripts/_editorial_common.py` — sha256 `44761d178cd4aa0b15354d48fe523b6290e6462770c102a21a7bf9fdc0044f00`
+- `scripts/editorial_check.py` — sha256 `5e690b5b98a11d528f17852820d4ae450515227081d83e5e84bb305ba58a6629`
+- `scripts/install_codex_gpt3_tools.sh` — sha256 `da01411bc1d5ff33505a3ce087c1958be7ae94f09798d373dcfdead924258eb0`
+- `scripts/validate_editorial_status.py` — sha256 `4efb30e51932c46c4be2c010801b08a19037066977b4a5ce1f940cd0773b97a0`
+- `scripts/validate_fa_editorial.py` — sha256 `23eb296f048d6861694a20182feb4fd83f92e4e55ec5fb07cf6505d47612b025`
+- `scripts/validate_protected_parity.py` — sha256 `06f5e8e373b5ef76d3fd27088f1e06034f7e8a15200c0fb13eac5fbebdcc2968`
+- `scripts/validate_reference_parity.py` — sha256 `d7e352dc5063ed722a77ff205b0615064e8f5e1b2c4b5b7caea553a91b251061`
+- `scripts/verify_codex_gpt3_tools.sh` — sha256 `c5b1d48fe182e8eeaea414ebdbf6758bb03cfbaf939f7721b77cca96769dfde4`
+- `writing_persian_eng_books.md` — sha256 `323c667671af5b8abf64a3685d3427232a896f81d79e628126c756e1a63a13a5`

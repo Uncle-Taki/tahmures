@@ -7,6 +7,7 @@ summary: "Select, label, order, and evaluate examples as a small dataset rather 
 maturity: "draft"
 last_reviewed: "2026-07-29"
 narrative_episode: "Four Examples and a Fifth"
+narrative_origin: "original-teaching-fiction"
 learning_objectives:
   - "Choose examples that represent the target cases"
   - "Distinguish examples from governing rules"
@@ -18,7 +19,6 @@ prerequisites:
 
 # Learning from Examples
 
-[نسخهٔ فارسی این فصل](../fa/part-1/06-learning-from-examples.md)
 
 ## Learning Objectives
 
@@ -28,8 +28,6 @@ by class and subgroup rather than headline accuracy alone.
 
 ## The Tale of Tahmures
 
-*The following is an original fictional episode created for this book. It is
-not a passage or translation from the* Shahnameh.
 
 ### The Setting
 

@@ -1,0 +1,1 @@
+Create the second language edition while preserving technical meaning and glossary decisions.

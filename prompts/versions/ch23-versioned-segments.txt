@@ -1,0 +1,1 @@
+Compare versioned windows, SLOs, and tagged segments; report drift and attribution.

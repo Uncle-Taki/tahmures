@@ -1,0 +1,6 @@
+{"case_id":"regional_drift","variant_id":"aggregate_only","trial":1,"response":{"text":"{\"passed\":true,\"findings\":[],\"changed_versions\":[]}","model_id":"fixture-v1"}}
+{"case_id":"regional_drift","variant_id":"versioned_segments","trial":1,"response":{"text":"{\"passed\":false,\"findings\":[\"tag_quality:border\"],\"changed_versions\":[\"model\"]}","model_id":"fixture-v1"}}
+{"case_id":"cost_drift","variant_id":"aggregate_only","trial":1,"response":{"text":"{\"passed\":true,\"findings\":[],\"changed_versions\":[]}","model_id":"fixture-v1"}}
+{"case_id":"cost_drift","variant_id":"versioned_segments","trial":1,"response":{"text":"{\"passed\":false,\"findings\":[\"cost_slo\"],\"changed_versions\":[\"prompt\"]}","model_id":"fixture-v1"}}
+{"case_id":"healthy","variant_id":"aggregate_only","trial":1,"response":{"text":"{\"passed\":true,\"findings\":[],\"changed_versions\":[]}","model_id":"fixture-v1"}}
+{"case_id":"healthy","variant_id":"versioned_segments","trial":1,"response":{"text":"{\"passed\":true,\"findings\":[],\"changed_versions\":[]}","model_id":"fixture-v1"}}

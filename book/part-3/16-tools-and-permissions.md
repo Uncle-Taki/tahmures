@@ -7,6 +7,7 @@ summary: "Let models propose bounded actions without granting them excessive or 
 maturity: "draft"
 last_reviewed: "2026-07-30"
 narrative_episode: "Permission to Inspect"
+narrative_origin: "original-teaching-fiction"
 learning_objectives:
   - "Separate tool proposals, validation, authorisation, approval, and execution"
   - "Design least-privilege read and write capabilities"
@@ -26,8 +27,6 @@ denied, and operated.
 
 ## The Tale of Tahmures
 
-*The following is an original fictional episode created for teaching. It is not
-a translation, adaptation, or reconstructed passage from the* Shahnameh.
 
 ### The Setting
 

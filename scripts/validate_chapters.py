@@ -15,6 +15,7 @@ FRONT_MATTER_KEYS = [
     "maturity:",
     "last_reviewed:",
     "narrative_episode:",
+    "narrative_origin:",
     "learning_objectives:",
     "prerequisites:",
 ]
@@ -82,8 +83,8 @@ def validate(path: Path) -> tuple[int, str, str]:
     words = narrative_words(text)
     if not 400 <= words <= 900:
         raise ValueError(f"{path}: narrative has {words} words; expected 400–900")
-    if "original fictional episode" not in text:
-        raise ValueError(f"{path}: missing original-fiction notice")
+    if 'narrative_origin: "original-teaching-fiction"' not in front_matter:
+        raise ValueError(f"{path}: narrative origin must identify teaching fiction")
     if "<!-- next: ch" not in text:
         raise ValueError(f"{path}: missing machine-readable next-tale hook")
     if not re.search(r"## Citations and Further Reading\n\n.+", text, re.DOTALL):
@@ -96,7 +97,7 @@ def validate(path: Path) -> tuple[int, str, str]:
     if not chapter:
         raise ValueError(f"{path}: chapter must be numeric")
     number = int(chapter.group(1))
-    if 7 <= number <= 18:
+    if 7 <= number <= 24:
         words = prose_words(text)
         if not 3500 <= words <= 5500:
             raise ValueError(f"{path}: prose has {words} words; expected 3,500–5,500")

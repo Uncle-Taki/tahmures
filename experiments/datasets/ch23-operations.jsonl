@@ -1,0 +1,3 @@
+{"case_id":"regional_drift","input":{"window":"current"},"expected":{"passed":false,"findings":["tag_quality:border"],"changed_versions":["model"]},"tags":["segment"]}
+{"case_id":"cost_drift","input":{"window":"current"},"expected":{"passed":false,"findings":["cost_slo"],"changed_versions":["prompt"]},"tags":["cost"]}
+{"case_id":"healthy","input":{"window":"current"},"expected":{"passed":true,"findings":[],"changed_versions":[]},"tags":["control"]}

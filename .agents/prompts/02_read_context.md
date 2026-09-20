@@ -1,0 +1,1 @@
+Read all project context and canonical files. Summarize rules, constraints, authority order, and missing information.

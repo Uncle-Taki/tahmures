@@ -1,0 +1,1 @@
+Create project_context.md and required foundations for a new technical book. Do not write chapters yet.

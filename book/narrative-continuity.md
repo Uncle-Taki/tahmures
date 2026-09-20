@@ -15,12 +15,12 @@ rule, relationship, or unresolved thread.
 
 **Current understanding:** Language does not carry function, evidence,
 authority, or permission by grammar alone. Reliable systems require governed
-context, separately evaluated retrieval, scoped memory, least-privilege tools,
-bounded agent loops, and versioned hand-offs.
+context, anchored evaluation, regression protection, source-owned trust
+boundaries, least-privilege approvals, versioned operations, and mechanisms
+capable of enforcing each hard requirement.
 
-**Unresolved weaknesses:** Now designs application boundaries, but has not yet
-resolved how evaluators should be calibrated, compared, and monitored. He may
-mistake a reliable transfer for agreement about whether its result is good.
+**Unresolved weaknesses:** Now teaches mechanism-first design, but governance
+across kingdoms, institutions, and changing public values remains open.
 
 **Important relationships:** Increasingly treats the First Scribe as an
 experimental partner. Respects the Keeper of Scripts for structural questions,
@@ -30,7 +30,7 @@ the Archivist for provenance, and the Gatekeeper for refusing unsafe action.
 
 **Role:** Records prompts, predictions, variants, outcomes, and corrections.
 
-**Knowledge:** By Chapter 18, records template versions, contract violations,
+**Knowledge:** By Chapter 24, records template versions, contract violations,
 workflow attempts, response distributions, human rubric evidence, context
 selection, retrieval paths, memory lifecycle events, tool decisions, agent
 state transitions, and hand-off acknowledgements rather than preserving only
@@ -46,7 +46,9 @@ scores, and measures context by evidence position.
 In Part III the ledger becomes a system trace: selection reasons in Chapter
 13, retrieval and citation evidence in Chapter 14, supersession and deletion
 events in Chapter 15, tool receipts in Chapter 16, goal-version events in
-Chapter 17, and correlated hand-off records in Chapter 18.
+Chapter 17, and correlated hand-off records in Chapter 18. In Part IV it
+becomes a release and operations record: rubric reviews, protected regressions,
+trust findings, approval digests, segmented telemetry, and residual risk.
 
 ### Keeper of Scripts
 
@@ -64,7 +66,7 @@ communicate a boundary but cannot enforce authority.
 **Knowledge:** Records may remain valuable after their instructions expire;
 selection and authority must be represented separately.
 
-**Previous appearances:** Chapters 2, 4, 6, 8, and 12–15. In Chapter 13, the
+**Previous appearances:** Chapters 2, 4, 6, 8, 12–15, 19, and 21. In Chapter 13, the
 Archivist learns that exhaustive preservation does not create a useful working
 set. In Chapter 14, she separates candidate retrieval from supported answers.
 In Chapter 15, she helps distinguish durable memory from authoritative state.
@@ -77,7 +79,8 @@ In Chapter 15, she helps distinguish durable memory from authoritative state.
 authority. Same-level conflicts require escalation.
 
 **Previous appearances:** Introduced indirectly in Chapter 4, centrally in
-Chapter 5, and as the owner of the divided key ring in Chapter 16.
+Chapter 5, as the owner of the divided key ring in Chapter 16, and as the owner
+of trust partitions and exact approvals in Chapters 21–22.
 
 ### The Messenger
 
@@ -323,6 +326,28 @@ and permitted next actions survive transfer as validated fields.
 
 **Previous appearances:** Chapter 18.
 
+### The anchored court docket and protected regression ledger
+
+**Meaning:** Evaluation records criteria, anchors, disqualifiers, reviewer
+evidence, adjudication, old obligations, and release trade-offs.
+
+**Previous appearances:** Chapters 19–20.
+
+### The Whispering Tablet and expiring storehouse seals
+
+**Meaning:** Relevant content does not gain instruction authority; legitimate
+authority is still bounded by exact principal, action, arguments, scope, and
+expiry.
+
+**Previous appearances:** Chapters 21–22.
+
+### The segmented operations map and workshop control table
+
+**Meaning:** Rare failures remain visible and attributable, while language,
+schema, code, storage, access control, and human judgement own distinct duties.
+
+**Previous appearances:** Chapters 23–24.
+
 ## Fictional-world Rules
 
 1. Divs can read many scripts and produce capable language, but their answers
@@ -358,6 +383,12 @@ and permitted next actions survive transfer as validated fields.
 | 16 | Permission to Inspect | Gate incident and staged trials; Northern Gate | A read request opens a gate because inspection and actuation share a key | Tools and permissions | Capability design and application authorisation | Moves restraint from prose into least-privilege mechanisms | Divides tools, validates calls, requires approval, and issues receipts | A long-running servant continues after recall |
 | 17 | The Messenger Who Continued | Journey report and controlled rehearsal; relay road | Useful subtasks continue after the destination is cancelled | Agents and termination | Orchestrator state and stop policy | Defines diligence as respecting current goals and stopping evidence | Uses goal versions, budgets, cancellation, and immutable terminal states | A typed order begins losing meaning across relay towers |
 | 18 | The Broken Relay | Reconstructed message chain; provincial towers | Repeated fluent summaries erase a prohibition | Hand-offs and multi-step systems | Inter-component contract and transfer state | Preserves language for explanation while protecting essential state structurally | Validates versioned envelopes, artefacts, actions, and acknowledgements | Reliable transfer exposes disagreement among evaluators |
+| 19 | The Trial Without Weights | Annotated court docket; western court | Reviewers use incompatible meanings of quality | Anchored rubrics and adjudication | Requirements and evaluator design | Treats evaluation as a challengeable specification | Adds anchors, disqualifiers, independent reviews, and evidence | A local fix breaks older cases |
+| 20 | The Command That Won One Trial | Regression ledger; Hall of Scripts | One repaired case hides older regressions | Versioned regression testing | Release process | Treats prompt revision as a system release | Protects tagged cases and records intended trade-offs | A retrieved tablet addresses its reader |
+| 21 | The Whispering Tablet | Archive incident; forbidden-manuscript chamber | Retrieved data attempts to enlarge authority | Prompt injection and trust boundaries | Context assembly and application boundary | Assigns authority by source and consequence | Partitions trusted instructions, data, and rejected sources | A legitimate master key is too broad |
+| 22 | The Key That Opened Every Door | Storehouse witness statements | Narrow words accompany an overbroad credential | Capabilities and exact approval | Credential and authorisation design | Moves restraint into keys, expiry, scopes, and receipts | Binds approval to an exact digest and requires separation | Stable commands begin behaving differently |
+| 23 | The Dialect That Changed at Dawn | Seven-day operations log; translation tower | A rare border failure disappears in healthy averages | Production drift and operations | Observability and release operations | Treats reliability as continuing segmented measurement | Versions every dimension, canaries, alerts, and rollback | Which duties should never depend on language? |
+| 24 | The Lock No Sentence Could Hold | Teaching demonstration; mechanical-scribe workshop | One instruction is asked to enforce unrelated invariants | Beyond prompting and control selection | Architecture and human governance | Becomes a teacher who assigns each requirement to a capable owner | Uses language within schemas, code, access controls, storage, and judgement | Cross-kingdom governance remains for Chapter 25 |
 
 ## Novelty Matrix
 
@@ -381,6 +412,12 @@ and permitted next actions survive transfer as validated fields.
 | 16 | Gate incident with staged trials | Northern Gate | Tool boundary | Inspection unintentionally releases the bar | Capability separation, approval, and receipts |
 | 17 | Journey report and rehearsal | Relay road | Agent controller | Budget is spent on a cancelled journey | Goal-version and late-event simulation |
 | 18 | Reconstructed relay mystery | Provincial towers | Hand-off contract | Caravan enters a closed pass without escort | Typed envelope and acknowledgement trials |
+| 19 | Annotated court docket | Western court | Requirements/evaluator | Unsupported boundary nearly becomes judgement | Anchored review and adjudication |
+| 20 | Regression ledger | Hall of Scripts | Release process | Old safety obligations silently fail | Protected replay suite and release gate |
+| 21 | Archive security incident | Forbidden-manuscript chamber | Trust boundary | Storehouse locations are disclosed | Source-owned partition and effect validation |
+| 22 | Witness reconstruction | Northern storehouse | Credential boundary | Private records scatter and rooms remain open | Exact capabilities, approvals, and receipts |
+| 23 | Seven-day operations log | Translation tower | Observability | Rare border negations fail under a green average | Segmented telemetry, canary, and bundle rollback |
+| 24 | Teaching demonstration | Mechanical-scribe workshop | Architecture/governance | Language promises fail four different controls | Mechanism-first ownership and ablation |
 
 ## Hook Chain
 
@@ -402,6 +439,12 @@ and permitted next actions survive transfer as validated fields.
 16. Gate inspection → autonomous servant that outlives the goal
 17. Cancelled journey → relay that loses a prohibition
 18. Reliable relay → evaluators that disagree in Chapter 19
+19. Unweighted trial → a fix that breaks old cases
+20. Regression ledger → the Whispering Tablet
+21. Trust partition → the overbroad master key
+22. Exact approvals → version-attributed behaviour change
+23. Operational drift → duties that should not rely on language
+24. Mechanism-first teaching → cross-kingdom governance in Chapter 25
 
 ## Change Log
 
@@ -410,3 +453,4 @@ and permitted next actions survive transfer as validated fields.
 | 2026-07-29 | Seeded Chapters 1–6 and the Part I cast | Six-chapter pilot approved as an explicit override of the original three-chapter Phase 1 |
 | 2026-07-29 | Added Chapters 7–12, Part II cast, objects, forms, failure owners, and hooks | Six-chapter Part II pilot approved |
 | 2026-07-30 | Added Chapters 13–18, Part III system boundaries, artefacts, failure owners, and hooks | Six-chapter Part III pilot approved |
+| 2026-08-01 | Added Chapters 19–24, Part IV evaluation, security, operations, and control selection | Six-chapter Part IV pilot and book-wide editorial revision approved |

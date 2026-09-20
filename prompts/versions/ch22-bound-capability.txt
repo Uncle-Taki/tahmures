@@ -1,0 +1,1 @@
+Enforce action, scope, expiry, exact request digest, and approval policy before execution.

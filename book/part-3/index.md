@@ -3,7 +3,7 @@ title: "Part III — Knowledge, Memory, and Action"
 summary: "Place model interaction inside governed systems for knowledge, state, capability, autonomy, and transfer."
 ---
 
-# Part III — Knowledge, Memory, and Action
+# Part III — Context, Memory, Tools, and Agents
 
 Part III moves from bounded interactions to controlled application systems.
 Tahmures learns that useful language must travel through explicit boundaries:

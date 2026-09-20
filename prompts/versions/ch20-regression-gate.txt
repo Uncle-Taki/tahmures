@@ -1,0 +1,1 @@
+Compare the candidate against the complete versioned suite and protected tags.

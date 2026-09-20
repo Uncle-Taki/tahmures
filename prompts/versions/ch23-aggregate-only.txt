@@ -1,0 +1,1 @@
+Decide whether the service is healthy from its overall average.

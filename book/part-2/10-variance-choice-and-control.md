@@ -7,6 +7,7 @@ summary: "Separate response variation from error and generated candidates from a
 maturity: "draft"
 last_reviewed: "2026-07-29"
 narrative_episode: "The Many-Voiced Council"
+narrative_origin: "original-teaching-fiction"
 learning_objectives:
   - "Measure response diversity across repeated trials"
   - "Separate candidate generation from deterministic selection"
@@ -17,7 +18,6 @@ prerequisites:
 
 # Variance, Choice, and Control
 
-[این فصل را به فارسی بخوانید](../fa/part-2/10-variance-choice-and-control.md)
 
 ## Learning Objectives
 
@@ -29,8 +29,6 @@ stability.
 
 ## The Tale of Tahmures
 
-*The following is an original fictional episode created for teaching. It is not
-a translation, adaptation, or reconstructed passage from the* Shahnameh.
 
 ### The Setting
 
@@ -327,6 +325,8 @@ candidate generation.
 
 Cache stable deterministic selection inputs carefully and invalidate them when
 constraints change. Store enough candidate provenance to reproduce decisions.
+
+Before release, have a reviewer reconstruct one decision from retained evidence. If its active inputs, versions, owner, and reason code cannot be identified, the boundary is not yet operationally auditable.
 
 ## Trade-Offs
 

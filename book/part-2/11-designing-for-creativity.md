@@ -7,6 +7,7 @@ summary: "Design creative exploration and accountable acceptance as different st
 maturity: "draft"
 last_reviewed: "2026-07-29"
 narrative_episode: "The Garden That Had Never Grown"
+narrative_origin: "original-teaching-fiction"
 learning_objectives:
   - "Separate divergent exploration from convergent acceptance"
   - "Evaluate novelty alongside feasibility, relevance, and harm"
@@ -17,7 +18,6 @@ prerequisites:
 
 # Designing for Creativity
 
-[این فصل را به فارسی بخوانید](../fa/part-2/11-designing-for-creativity.md)
 
 ## Learning Objectives
 
@@ -28,8 +28,6 @@ disagreement, and avoid using a model’s self-reported score as evidence.
 
 ## The Tale of Tahmures
 
-*The following is an original fictional episode created for teaching. It is not
-a translation, adaptation, or reconstructed passage from the* Shahnameh.
 
 ### The Setting
 
@@ -335,6 +333,8 @@ briefs.
 
 Store generated candidates only as long as needed. Provide a process for
 provenance and similarity review before public release.
+
+Before release, have a reviewer reconstruct one decision from retained evidence. If its active inputs, versions, owner, and reason code cannot be identified, the boundary is not yet operationally auditable.
 
 ## Trade-Offs
 

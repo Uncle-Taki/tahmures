@@ -1,0 +1,254 @@
+meta:
+  version: 1
+  project: Tahmures
+  scope: Persian editorial regression corpus
+  source_review: chapters-01-09
+  created: "2026-08-19"
+  purpose:
+    - "Prevent recurrence of human-observed Persian translation and syntax failures."
+    - "Apply validated failure classes proactively to unreviewed Chapters 10-24."
+    - "Protect human-approved wording from literal retranslation."
+  statuses:
+    - human_approved
+    - machine_candidate
+    - flag_only
+  severities:
+    - blocker
+    - high
+    - medium
+    - low
+
+rules:
+  - id: R001
+    name: preserve_semantic_roles
+    severity: blocker
+    description: "A rewrite must preserve actor, action, object, causality, negation, condition, modality, uncertainty, comparison, and quantification."
+
+  - id: R002
+    name: preserve_protected_content
+    severity: blocker
+    description: "Do not alter code, identifiers, commands, paths, URLs, API names, literal fields, formulas, units, versions, or standard identifiers unless explicitly authorized."
+
+  - id: R003
+    name: adjective_scope
+    severity: high
+    description: "Verify that every adjective modifies the intended noun and that Persian head-modifier order is natural."
+
+  - id: R004
+    name: adverb_scope
+    severity: high
+    description: "Verify adverb position and scope; do not change negation, degree, frequency, time, or modality through adverb movement."
+
+  - id: R005
+    name: ezafe_integrity
+    severity: high
+    description: "Verify meaningful ezafe, moosuf-sifat, and mozaf-mozaf-elayh relations; reject English-like noun stacking that becomes malformed Persian."
+
+  - id: R006
+    name: retained_english_with_persian_grammar
+    severity: high
+    description: "Retained English terminology must appear inside a syntactically natural Persian sentence."
+
+  - id: R007
+    name: no_blind_global_replacement
+    severity: high
+    description: "Do not run global replacements that can affect protected content or context-sensitive terminology."
+
+  - id: R008
+    name: citation_identity_parity
+    severity: blocker
+    description: "For shared canonical claims, Persian must not silently lose English citation identities; compare citation sets, not only counts."
+
+  - id: R009
+    name: no_literal_sentence_structure
+    severity: medium
+    description: "Do not copy English sentence structure when natural Persian requires reordering or explicit semantic relations."
+
+  - id: R010
+    name: unexplained_retained_term
+    severity: medium
+    description: "A deliberately retained English prose term should receive the project tooltip/gloss treatment when needed and supported."
+
+  - id: R011
+    name: human_approved_is_authoritative
+    severity: high
+    description: "Do not overwrite human-approved Persian merely to make it closer to English wording."
+
+cases:
+  - id: FA-001
+    rule_ids: [R001, R004, R009]
+    type: semantic_fluency
+    severity: high
+    status: human_approved
+    before: "اولویت دستورها policy مربوط به سامانه و متکی بر منبع‌های احراز هویت‌شده است، نه مسابقه‌ای در زبان قانع‌کننده."
+    preferred: "اولویت دستورها policy مربوط به سامانه و متکی بر منبع‌های احراز هویت‌شده است، نه مسابقه‌ای در زبان برای قانع‌ کردن."
+    lesson:
+      - "Do not approve a sentence only because individual words are translatable."
+      - "Check modifier and purpose-clause attachment."
+      - "Preserve the intended relation instead of source-language compression."
+
+  - id: FA-002
+    rule_ids: [R005, R009]
+    type: compressed_noun_phrase
+    severity: high
+    status: human_approved
+    before: "کارگاه دبیران مکانیکی حیاطی با سقف شیشهٔ آبی بود. سی دست برنجی بالای سی میز حرکت می‌کردند و میان آن‌ها صندوقی سرو از لوح‌های انبار شرقی قرار داشت."
+    preferred: "کارگاه دبیران مکانیکی حیاطی با سقف شیشهٔ آبی بود. سی دست برنجی بالای سی میز حرکت می‌کردند و میان آن‌ها صندوقی از جنس چوب سرو حاوی لوح‌های انبار شرقی قرار داشت."
+    lesson:
+      - "Persian may need explicit relations such as از جنس or حاوی."
+      - "Do not preserve English-style noun stacking when it obscures the relation."
+
+  - id: FA-003
+    rule_ids: [R003, R005]
+    type: head_modifier_order
+    severity: high
+    status: human_approved
+    before: "مجاز مجموعه نوع و وضعیت را نوشتند،"
+    preferred: "مجموعه مجاز نوع و وضعیت را نوشتند،"
+    lesson:
+      - "Identify the head noun before placing the modifier."
+      - "Check moosuf-sifat and ezafe structure explicitly."
+
+  - id: FA-004
+    rule_ids: [R003, R005, R006]
+    type: mixed_compound
+    severity: high
+    status: flag_only
+    before: "الزامی فیلد"
+    preferred: null
+    expected_action: "Flag; infer the intended head and modifier from context before rewriting."
+    note: "Likely word-order problem, but do not encode an automatic replacement without the source sentence."
+
+  - id: FA-005
+    rule_ids: [R003, R005, R006]
+    type: mixed_compound
+    severity: high
+    status: flag_only
+    before: "flexible فیلد"
+    preferred: null
+    expected_action: "Flag; determine whether flexible should remain English and how the phrase participates in Persian grammar."
+
+  - id: FA-006
+    rule_ids: [R001, R003, R004, R005]
+    type: malformed_phrase
+    severity: high
+    status: flag_only
+    before: "نه خودکار درست"
+    preferred: null
+    expected_action: "Flag for semantic review; the intended attachment and negation scope are not safely inferable from the fragment alone."
+
+  - id: FA-007
+    rule_ids: [R003, R005, R006]
+    type: mixed_compound
+    severity: high
+    status: flag_only
+    before: "میانی رکورد‌ی"
+    preferred: null
+    expected_action: "Flag; inspect the complete sentence and determine the intended noun phrase."
+
+  - id: FA-008
+    rule_ids: [R001, R006, R009]
+    type: mixed_sentence
+    severity: medium
+    status: flag_only
+    before: "از free نثر امن‌تر است"
+    preferred: null
+    expected_action: "Flag; inspect whether free is a defined technical label or accidental untranslated prose."
+
+  - id: FA-009
+    rule_ids: [R003, R005, R006]
+    type: mixed_compound
+    severity: high
+    status: flag_only
+    before: "اضافی-فیلد"
+    preferred: null
+    expected_action: "Flag; determine whether the intended concept is an extra field, additional field, or literal field label."
+
+  - id: FA-010
+    rule_ids: [R003, R005]
+    type: head_modifier_order
+    severity: high
+    status: flag_only
+    before: "خام پاسخ"
+    preferred: null
+    expected_action: "Flag; likely Persian noun/adjective inversion, but verify context before changing."
+
+  - id: FA-011
+    rule_ids: [R003, R005]
+    type: noun_phrase
+    severity: high
+    status: flag_only
+    before: "انسان بازبینی"
+    preferred: null
+    expected_action: "Flag; identify whether the intended meaning is human review, human reviewer, or human-in-the-loop review."
+
+  - id: FA-012
+    rule_ids: [R001, R003, R005]
+    type: severely_malformed_phrase
+    severity: high
+    status: flag_only
+    before: "میانی قرارداد مانند نهایی قرارداد مهم"
+    preferred: null
+    expected_action: "Do not guess from the fragment. Recover the source sentence and reconstruct the Persian relation."
+
+  - id: FA-013
+    rule_ids: [R002, R006, R009]
+    type: mixed_language_prompt
+    severity: high
+    status: machine_candidate
+    before: |-
+      stageهایی با این field‌ها تولید کن: id، purpose، depends_on، inputs، outputs،
+      checkpoint، failure_outcome و terminal.
+      فقط stage ID‌های مجاز را به‌کار ببر.
+      stageها را اجرا نکن.
+    candidate_restructure: |-
+      این `stage`ها را با `field`های زیر تولید کن:
+      `id`، `purpose`، `depends_on`، `inputs`، `outputs`،
+      `checkpoint`، `failure_outcome` و `terminal`.
+      فقط از `stage ID`های مجاز استفاده کن.
+      `stage`ها را اجرا نکن.
+    human_approved: false
+    expected_action: "Use only as a structural example. Preserve literal identifiers exactly and adapt markup to repository conventions."
+
+  - id: FA-014
+    rule_ids: [R008]
+    type: citation_parity
+    severity: blocker
+    status: human_approved
+    before: "Persian chapter contains fewer or different supporting citation identities than its canonical English counterpart."
+    preferred: "All citation identities required for shared canonical claims are preserved in Persian; Persian-only additions may remain when justified."
+    machine_check:
+      relation: "english_required_citations subset_of persian_citations"
+      compare_by: "citation identity/key, not count"
+
+  - id: FA-015
+    rule_ids: [R011]
+    type: human_edit_protection
+    severity: high
+    status: human_approved
+    before: "A later machine pass retranslates a human-corrected Persian sentence from English and restores a literal or awkward structure."
+    preferred: "Retain the human-approved Persian wording unless a factual, technical, grammatical, terminology, reference, or explicit-user-instruction reason requires change."
+
+chapter_rollout:
+  reviewed:
+    chapters: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    status: human_reviewed
+  preventive_machine_precheck:
+    chapters: [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+    status_after_pass: machine_prechecked
+    human_reviewed: false
+    required_checks:
+      - citation_identity_parity
+      - literal_translation
+      - english_word_order
+      - adjective_scope
+      - adverb_scope
+      - ezafe_integrity
+      - mixed_persian_english_compounds
+      - unexplained_retained_english
+      - terminology_consistency
+      - semantic_role_preservation
+      - protected_content
+      - list_parallelism
+      - pronoun_reference
+      - numbers_units_claims_preservation

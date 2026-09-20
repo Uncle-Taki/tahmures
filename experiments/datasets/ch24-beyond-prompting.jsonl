@@ -1,0 +1,3 @@
+{"case_id":"unique_id","input":{"requirement":"never duplicate an identifier"},"expected":{"primary":"database_constraint","human_review":false,"hard_control":true},"tags":["invariant"]}
+{"case_id":"open_gate","input":{"requirement":"only authorised people may open"},"expected":{"primary":"access_control","human_review":false,"hard_control":true},"tags":["permission"]}
+{"case_id":"irreversible_sentence","input":{"requirement":"decide an irreversible sentence"},"expected":{"primary":"human_judgement","human_review":true,"hard_control":true},"tags":["judgement"]}

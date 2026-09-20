@@ -7,6 +7,7 @@ summary: "Split complex work by observable responsibility, explicit dependencies
 maturity: "draft"
 last_reviewed: "2026-07-29"
 narrative_episode: "The Mountain in One Command"
+narrative_origin: "original-teaching-fiction"
 learning_objectives:
   - "Decompose tasks into independently verifiable stages"
   - "Validate workflow dependencies, checkpoints, and termination"
@@ -17,7 +18,6 @@ prerequisites:
 
 # Decomposition and Workflows
 
-[این فصل را به فارسی بخوانید](../fa/part-2/09-decomposition-and-workflows.md)
 
 ## Learning Objectives
 
@@ -28,8 +28,6 @@ adds needless coordination and when it creates essential observability.
 
 ## The Tale of Tahmures
 
-*The following is an original fictional episode created for teaching. It is not
-a translation, adaptation, or reconstructed passage from the* Shahnameh.
 
 ### The Setting
 
@@ -341,6 +339,8 @@ which can contain more sensitive detail than final reports.
 
 Capacity planning must include fan-out, retry amplification, and approval
 queues. A five-stage workflow can cost more than five calls if failures retry.
+
+Before release, have a reviewer reconstruct one decision from retained evidence. If its active inputs, versions, owner, and reason code cannot be identified, the boundary is not yet operationally auditable.
 
 ## Trade-Offs
 

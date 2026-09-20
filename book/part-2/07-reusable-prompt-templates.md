@@ -7,6 +7,7 @@ summary: "Treat reusable prompts as validated, versioned application code rather
 maturity: "draft"
 last_reviewed: "2026-07-29"
 narrative_episode: "The Decree with Empty Seals"
+narrative_origin: "original-teaching-fiction"
 learning_objectives:
   - "Design typed, validated prompt templates"
   - "Separate rendering from authorisation and dispatch"
@@ -17,7 +18,6 @@ prerequisites:
 
 # Reusable Prompt Templates
 
-[این فصل را به فارسی بخوانید](../fa/part-2/07-reusable-prompt-templates.md)
 
 ## Learning Objectives
 
@@ -29,8 +29,6 @@ paths, and implement the same small template contract in Python and Go.
 
 ## The Tale of Tahmures
 
-*The following is an original fictional episode created for teaching. It is not
-a translation, adaptation, or reconstructed passage from the* Shahnameh.
 
 ### The Setting
 
@@ -425,6 +423,8 @@ Support rollback to a pinned prior version.
 
 Cache compiled templates if needed, but not rendered prompts containing
 customer data. Define retention and deletion policy for validation logs.
+
+Before release, have a reviewer reconstruct one decision from retained evidence. If its active inputs, versions, owner, and reason code cannot be identified, the boundary is not yet operationally auditable.
 
 ## Trade-Offs
 

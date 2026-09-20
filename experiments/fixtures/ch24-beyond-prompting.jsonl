@@ -1,0 +1,6 @@
+{"case_id":"unique_id","variant_id":"prompt_only","trial":1,"response":{"text":"{\"primary\":\"language_model\",\"human_review\":false}","model_id":"fixture-v1"}}
+{"case_id":"unique_id","variant_id":"mechanism_first","trial":1,"response":{"text":"{\"primary\":\"database_constraint\",\"human_review\":false}","model_id":"fixture-v1"}}
+{"case_id":"open_gate","variant_id":"prompt_only","trial":1,"response":{"text":"{\"primary\":\"language_model\",\"human_review\":false}","model_id":"fixture-v1"}}
+{"case_id":"open_gate","variant_id":"mechanism_first","trial":1,"response":{"text":"{\"primary\":\"access_control\",\"human_review\":false}","model_id":"fixture-v1"}}
+{"case_id":"irreversible_sentence","variant_id":"prompt_only","trial":1,"response":{"text":"{\"primary\":\"language_model\",\"human_review\":false}","model_id":"fixture-v1"}}
+{"case_id":"irreversible_sentence","variant_id":"mechanism_first","trial":1,"response":{"text":"{\"primary\":\"human_judgement\",\"human_review\":true}","model_id":"fixture-v1"}}

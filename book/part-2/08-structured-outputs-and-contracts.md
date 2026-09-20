@@ -7,6 +7,7 @@ summary: "Turn generated text into an explicitly validated interface without con
 maturity: "draft"
 last_reviewed: "2026-07-29"
 narrative_episode: "Thirty Catalogues"
+narrative_origin: "original-teaching-fiction"
 learning_objectives:
   - "Define and validate bounded JSON output contracts"
   - "Separate syntactic, structural, semantic, and authority checks"
@@ -17,7 +18,6 @@ prerequisites:
 
 # Structured Outputs and Contracts
 
-[این فصل را به فارسی بخوانید](../fa/part-2/08-structured-outputs-and-contracts.md)
 
 ## Learning Objectives
 
@@ -28,8 +28,6 @@ parse success, and implement matching educational validators in Python and Go.
 
 ## The Tale of Tahmures
 
-*The following is an original fictional episode created for teaching. It is not
-a translation, adaptation, or reconstructed passage from the* Shahnameh.
 
 ### The Setting
 
@@ -364,6 +362,8 @@ contract version used originally.
 
 Bound retries and expose exhaustion as a terminal status. A repair service is
 another component with its own contract, cost, and failure modes.
+
+Before release, have a reviewer reconstruct one decision from retained evidence. If its active inputs, versions, owner, and reason code cannot be identified, the boundary is not yet operationally auditable.
 
 ## Trade-Offs
 

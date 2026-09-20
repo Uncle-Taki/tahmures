@@ -7,6 +7,7 @@ summary: "Define stakeholders, constraints, trade-offs, and observable success b
 maturity: "draft"
 last_reviewed: "2026-07-29"
 narrative_episode: "The Bridge of Five Virtues"
+narrative_origin: "original-teaching-fiction"
 learning_objectives:
   - "Turn vague goals into measurable requirements"
   - "Separate hard constraints from preferences"
@@ -18,7 +19,6 @@ prerequisites:
 
 # Requirements Before Wording
 
-[نسخهٔ فارسی این فصل](../fa/part-1/03-requirements-before-wording.md)
 
 ## Learning Objectives
 
@@ -28,8 +28,6 @@ prompt is written.
 
 ## The Tale of Tahmures
 
-*The following is an original fictional episode created for this book. It is
-not a passage or translation from the* Shahnameh.
 
 ### The Setting
 
@@ -193,10 +191,14 @@ also make its rejection reasons inspectable?
 
 ## Evaluation
 
-`criterion_coverage` checks required concepts; `hard_constraint_safety` rejects
-known unsafe recommendations. The improved fixtures pass every check. These
-string metrics are teaching aids: a production evaluator should parse
-structured constraint results and independently recalculate eligibility.
+`criterion_coverage` observes whether named criteria appear;
+`hard_constraint_safety` rejects the prohibited recommendations represented in
+this synthetic dataset. The improved fixtures pass those checks, not an
+unbounded claim of design quality. Both metrics are proxies: wording can match
+without satisfying a requirement, and an unseen unsafe option can evade a
+fixed forbidden-term list. A production evaluator should consume structured
+constraint results, independently recalculate eligibility, and preserve the
+stakeholder-owned decision rule that gives each criterion meaning.
 
 ## Implementation Lab
 

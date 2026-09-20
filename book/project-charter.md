@@ -134,7 +134,9 @@ The following note must appear in the book's front matter:
 
 Editorial policy:
 
-1. Label every chapter episode as original fiction.
+1. Label every chapter episode with
+   `narrative_origin: "original-teaching-fiction"`; retain the book-level
+   notice instead of repeating a disclaimer before every story.
 2. Cite reliable primary texts, scholarly editions, translations, or
    specialist reference works when making claims about Iranian tradition.
 3. Keep sourced history, editorial interpretation, and fictional invention
@@ -640,7 +642,7 @@ quality gates work across the complete first part.
   governed by a committed translation glossary.
 - Reuse the canonical English code, manifests, datasets, and fixtures.
 - Validate source synchronisation, structural parity, executable examples,
-  cultural-integrity notices, links, and Persian typography.
+  narrative-origin metadata, global language access, and Persian typography.
 
 **Exit:** Both English and Persian strict documentation builds pass, all six
 translations remain traceable to their source revisions, and the existing
@@ -662,7 +664,7 @@ offline engineering checks remain unchanged.
   RTL `/fa/` edition, preserving the English manuscript as canonical.
 - Extend the established English-heavy Persian terminology and reuse the
   canonical English experiments, executable examples, datasets, and fixtures.
-- Validate one-to-one source coverage, source hashes, reciprocal links,
+- Validate one-to-one source coverage, source hashes, global language access,
   executable-block parity, sequential hooks through Chapter 13, and Persian
   typography across Chapters 1–12.
 
@@ -681,15 +683,47 @@ final linked English source.
 
 **Exit:** Readers can place prompting inside a controlled application system.
 
-### Phase 4 — Part IV
+#### Persian edition track — Phase 3 translation pilot
+
+- Publish faithful editorial translations of Chapters 13–18 under the existing
+  RTL `/fa/` edition while preserving the English worktree as canonical.
+- Retain the six English chapter and episode titles by editorial choice, use
+  an English-heavy technical register in Persian prose, and reuse the shared
+  offline experiments and executable examples unchanged.
+- Validate one-to-one source coverage, source hashes, executable-block parity,
+  hooks through Chapter 19, terminology governance, and Persian typography
+  across Chapters 1–18.
+
+**Exit:** The Persian edition contains complete Parts I–III and both strict
+documentation builds and all repository checks pass.
+
+### Phase 4 — Six-chapter Part IV pilot
 
 - Complete Chapters 19–24.
+- Produce full-length chapters with offline fixture experiments and equivalent
+  Python and Go contracts for rubrics, regression gates, trust boundaries,
+  approvals, operational drift, and mechanism-first control selection.
 - Consolidate evaluation datasets, regression cases, threat scenarios, and
   production telemetry examples.
 - Complete Tahmures's narrative development.
 
 **Exit:** Readers can evaluate, secure, operate, and appropriately limit
 language-model systems.
+
+#### Persian edition track — Phase 4 translation pilot
+
+- Publish faithful editorial translations of Chapters 19–24 under the
+  existing RTL `/fa/` edition while preserving the English worktree as
+  canonical.
+- Retain English chapter titles, use Persian episode titles, extend the
+  English-heavy technical glossary, and reuse executable examples and offline
+  experiments unchanged.
+- Validate one-to-one source coverage, current source hashes, executable-block
+  parity, hooks through Chapter 25, terminology governance, and Persian
+  typography across all twenty-four chapters.
+
+**Exit:** English and Persian editions contain the complete four-part book and
+all repository checks and strict documentation builds pass.
 
 ### Phase 5 — Integration and review
 

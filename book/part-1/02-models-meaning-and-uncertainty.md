@@ -7,6 +7,7 @@ summary: "Separate fluent completion from supported knowledge, and design eviden
 maturity: "draft"
 last_reviewed: "2026-07-29"
 narrative_episode: "The Mirror and the Missing Treaty"
+narrative_origin: "original-teaching-fiction"
 learning_objectives:
   - "Explain why fluent output is not evidence of factual support"
   - "Design grounded-answer and abstention contracts"
@@ -17,7 +18,6 @@ prerequisites:
 
 # Models, Meaning, and Uncertainty
 
-[نسخهٔ فارسی این فصل](../fa/part-1/02-models-meaning-and-uncertainty.md)
 
 ## Learning Objectives
 
@@ -27,8 +27,6 @@ variation over more than one response.
 
 ## The Tale of Tahmures
 
-*The following is an original fictional episode created for this book. It is
-not a passage or translation from the* Shahnameh.
 
 ### The Setting
 
@@ -259,10 +257,13 @@ allow-list, and checks abstention against answerability. It reports:
 - `unsupported_claim`
 - overall pass rate
 
-In the fixtures, the baseline passes two of six trials; the evidence-bound
-variant passes all six. The experiment does not assess whether arbitrary prose
-is entailed by a source; that requires a stronger evaluator and human
-calibration.
+In these committed fixtures, the baseline passes two of six case-trials and
+the evidence-bound variant passes all six. “Pass” has a deliberately narrow
+meaning: the response cited only permitted IDs when the case was answerable,
+or used the required abstention phrase when it was not. This evaluator does
+not establish that every sentence is entailed by its citation, that the source
+is true, or that a numerical confidence is calibrated. Those are separate
+claims requiring stronger evidence and, for consequential use, human review.
 
 ## Implementation Lab
 

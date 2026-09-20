@@ -42,6 +42,30 @@ language: "fa"
 | truncation | کوتاه‌سازی |
 | token budget | بودجهٔ `token` |
 | provenance | provenance |
+| context engineering | `context engineering` |
+| context package | `context package` |
+| context assembly | `context assembly` |
+| retrieval / RAG | `retrieval` / `RAG` |
+| chunk / citation | `chunk` / `citation` |
+| memory / state | `memory` / `state` |
+| tool / permission | `tool` / `permission` |
+| authorisation / capability | `authorisation` / `capability` |
+| agent / termination | `agent` / `termination` |
+| goal version | `goal version` |
+| hand-off | `hand-off` |
+| envelope / acknowledgement | `envelope` / `acknowledgement` |
+| rubric / anchor / criterion | `rubric` / `anchor` / `criterion` |
+| disqualifier / adjudication | `disqualifier` / `adjudication` |
+| regression gate / protected tag | `regression gate` / `protected tag` |
+| trust boundary / quarantine | `trust boundary` / `quarantine` |
+| approval / approver | `approval` / `approver` |
+| request digest | `request digest` |
+| telemetry / SLO / drift | `telemetry` / `SLO` / `drift` |
+| canary / rollback | `canary` / `rollback` |
+| control selection / hard invariant | `control selection` / `hard invariant` |
+| database constraint / access control | `database constraint` / `access control` |
+| human judgement / least privilege | `human judgement` / `least privilege` |
+| residual risk | `residual risk` |
 
 ## اصل انتخاب واژه
 

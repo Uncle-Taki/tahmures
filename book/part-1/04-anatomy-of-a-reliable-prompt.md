@@ -7,6 +7,7 @@ summary: "Separate task, authority, context, constraints, and output contract wi
 maturity: "draft"
 last_reviewed: "2026-07-29"
 narrative_episode: "The Letter Inside the Ledger"
+narrative_origin: "original-teaching-fiction"
 learning_objectives:
   - "Identify the functional components of a prompt"
   - "Separate instructions from limited-authority data"
@@ -18,7 +19,6 @@ prerequisites:
 
 # Anatomy of a Reliable Prompt
 
-[نسخهٔ فارسی این فصل](../fa/part-1/04-anatomy-of-a-reliable-prompt.md)
 
 ## Learning Objectives
 
@@ -28,8 +28,6 @@ controls must remain in the application.
 
 ## The Tale of Tahmures
 
-*The following is an original fictional episode created for this book. It is
-not a passage or translation from the* Shahnameh.
 
 ### The Setting
 
