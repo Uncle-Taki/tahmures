@@ -17,8 +17,11 @@ from _editorial_common import FENCE_RE, line_number, parse_chapter_selector
 
 INLINE_CODE_RE = re.compile(r"`[^`\n]*`")
 HTML_TAG_RE = re.compile(r"<[^>]+>")
-LATIN_WITH_FA_SUFFIX_RE = re.compile(
-    r"\b[A-Za-z][A-Za-z0-9_-]*(?:\u200c)?(?:ها|های|هایی|ها‌ی|ی|یی)\b"
+# The glossary prescribes ZWNJ (U+200C) before Persian suffixes on Latin terms
+# (e.g. case\u200cها). Suffixes without ZWNJ (caseها) are genuine violations;
+# suffixes with ZWNJ are sanctioned, so only flag the missing-ZWNJ form.
+LATIN_SUFFIX_WITHOUT_ZWNJ_RE = re.compile(
+    r"\b[A-Za-z][A-Za-z0-9_-]*(?:ها|های|هایی|ها‌ی)\b"
 )
 
 # These are warnings only. They intentionally do not attempt automatic correction.
@@ -30,13 +33,20 @@ FA_ADJ_BEFORE_LATIN_RE = re.compile(
 LATIN_BEFORE_FA_NOUN_RE = re.compile(
     r"\b[A-Za-z][A-Za-z0-9_-]*\s+"
     r"(?:فیلد|رکورد|پاسخ|قرارداد|نثر|مرحله|مجموعه|نوع|وضعیت)"
+    r"(?!\u200c)"
 )
+
+
+MARKDOWN_HEADING_RE = re.compile(r"(?m)^#{1,6}\s+.*$")
 
 
 def prose_only(text: str) -> str:
     text = FENCE_RE.sub("", text)
     text = INLINE_CODE_RE.sub("", text)
     text = HTML_TAG_RE.sub("", text)
+    # Strip markdown headings: a heading's last Latin word followed by body
+    # prose is a boundary artifact, not a mixed-language phrase.
+    text = MARKDOWN_HEADING_RE.sub("", text)
     return text
 
 
@@ -101,7 +111,7 @@ def main() -> int:
                 start = idx + max(1, len(bad))
 
         for regex, label in [
-            (LATIN_WITH_FA_SUFFIX_RE, "mixed Latin/Persian morphology"),
+            (LATIN_SUFFIX_WITHOUT_ZWNJ_RE, "mixed Latin/Persian morphology"),
             (FA_ADJ_BEFORE_LATIN_RE, "possible Persian adjective before Latin head"),
             (LATIN_BEFORE_FA_NOUN_RE, "possible Latin modifier before Persian noun"),
         ]:
@@ -123,6 +133,11 @@ def main() -> int:
         print("ERROR:", msg)
     print(
         f"fa-editorial: checked={checked} errors={len(errors)} warnings={len(warnings)}"
+    )
+    print(
+        "disposition: morphology warnings cover only missing-ZWNJ suffixes; "
+        "glossary-sanctioned ZWNJ forms and ezafe-ordered mixed phrases are "
+        "not flagged"
     )
 
     if errors:

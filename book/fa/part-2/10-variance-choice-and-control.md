@@ -9,7 +9,7 @@ last_reviewed: "2026-07-29"
 narrative_episode: "شورای چندصدا"
 narrative_origin: "original-teaching-fiction"
 learning_objectives:
-  - "اندازه‌گیری diversity پاسخ‌ها در trial‌های تکراری"
+  - "اندازه‌گیری diversityِ پاسخ‌ها در trial‌های تکراری"
   - "جداسازی گزینه generation از انتخاب قطعی"
   - "تعریف جای مناسب stability، diversity یا escalation"
 prerequisites:
@@ -182,7 +182,7 @@ self-reported score مدل نیز محاسبه و order-sensitive است. featur
 اگر price بازیابی‌شده عوض شده، دما مسئله را حل نمی‌کند. انتخاب
 شکست شامل ID بیرون از set مجاز، نقض قید سخت، تساوی ناپایدار،
 ترجیح پنهان در ترتیب و شواهد مدل‌شده است. تنوع شکست شامل
-near-duplicateهایی است که تازه شمرده یا گزینه اقلیت در voting زودهنگام
+near-duplicate‌هایی است که تازه شمرده یا گزینه اقلیت در voting زودهنگام
 حذف می‌شود.
 
 ## طراحی بهبودیافته
@@ -294,7 +294,7 @@ drift، نه punctuation بی‌ضرر، هشدار کنید. تکرارشده t
 می‌کند. انتخاب قطعی reproducibility و احتمال ترجیح brittle
 می‌آورد. انسان انتخاب ظرافت و نیز inconsistency/تأخیر دارد. تغییرپذیری کم
 برای رده‌بندی مناسب و برای ideation مضر است. کاوش و کنترل را
-knobهای مرحله‌های جدا بدانید.
+knob‌های مرحله‌های جدا بدانید.
 
 در variance بازبینی واحد پایدار را نام ببرید: دقیق پاسخ، برچسب canonical،
 set واقعیت cited، سیاست انتخاب‌شده یا قید compliance. یکسان‌سازی مرجع

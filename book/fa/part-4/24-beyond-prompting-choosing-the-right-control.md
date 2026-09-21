@@ -9,7 +9,7 @@ last_reviewed: "2026-08-01"
 narrative_episode: "قفلی که هیچ جمله‌ای نگهش نداشت"
 narrative_origin: "original-teaching-fiction"
 learning_objectives:
-  - "تشخیص requirementهایی که prompt نمی‌تواند enforce کند"
+  - "تشخیص requirement‌هایی که prompt نمی‌تواند enforce کند"
   - "انتخاب control اصلی و پشتیبان بر اساس consequence"
   - "طراحی mechanism-first با استفادهٔ درست از language"
 prerequisites:
