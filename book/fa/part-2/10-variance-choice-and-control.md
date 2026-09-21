@@ -410,8 +410,8 @@ tie-break پنهان نگه می‌دارد. تفاوت را از قابل‌ا�
 ## منابع و مطالعهٔ بیشتر
 
 - Dodge, Jesse, et al. 2020. “Fine-Tuning Pretrained Language Models: Weight
-  Initializations, داده Orders, and Early Stopping.” arXiv:2002.06305.
-- Amabile, Teresa M. 1996. *Creativity in کانتکست*. Boulder, CO: Westview
+  Initializations, Data Orders, and Early Stopping.” arXiv:2002.06305.
+- Amabile, Teresa M. 1996. *Creativity in Context*. Boulder, CO: Westview
   Press.
 - Montgomery, Douglas C. 2019. *Design and Analysis of Experiments*. 10th ed.
   Hoboken, NJ: Wiley.

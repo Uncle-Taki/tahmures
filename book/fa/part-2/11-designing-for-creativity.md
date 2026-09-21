@@ -415,10 +415,10 @@ stopping قاعده تعریف کنید: گزینه پذیرفته‌شده با
 
 ## منابع و مطالعهٔ بیشتر
 
-- Amabile, Teresa M. 1996. *خلاقیت in کانتکست*. Boulder, CO: Westview
+- Amabile, Teresa M. 1996. *Creativity in Context*. Boulder, CO: Westview
   Press.
 - Cropley, David H., and Arthur J. Cropley. 2010. “Recognizing and Fostering
-  خلاقیت in Technological طرح Education.” *International Journal of
-  Technology and طرح Education* 20: 345–358.
+  Creativity in Technological Design Education.” *International Journal of
+  Technology and Design Education* 20: 345–358.
 - Runco, Mark A., and Garrett J. Jaeger. 2012. “The Standard Definition of
-  خلاقیت.” *خلاقیت Research Journal* 24 (1): 92–96.
+  Creativity.” *Creativity Research Journal* 24 (1): 92–96.

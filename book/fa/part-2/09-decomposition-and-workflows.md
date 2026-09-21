@@ -302,8 +302,7 @@ approver شواهد ندارد یا click-through می‌کند تشریفاتی
 اجرا بلند ماندگار وضعیت، مهلت، heartbeat/lease و بازیابی پس از crash
 می‌خواهد. برنامه، پرامپت و evaluator نسخه را pin و گذار و دلیل را
 expose کنید. میانی داده ممکن است از نهایی گزارش حساس‌تر باشد؛ نگهداشت
-جدا لازم است. capacity planning fan-out، تلاش دوباره amplification و تأیید صف
-را شامل می‌شود.
+جدا لازم است. capacity planning fan-out، تلاش دوباره amplification و صفِ `waiting_approval` را شامل می‌شود؛ صفِ روبه‌رشدِ آن می‌تواند مشکل ظرفیت باشد، صفِ روبه‌رشدِ گام‌های آماده مشکل worker و خروجی نامعتبرِ مکرر واپس‌رویِ پرامپت یا مدل.
 
 پیش از انتشار، از یک بازبین بخواهید یک تصمیم را از روی شواهد نگه‌داری‌شده بازسازی کند. اگر ورودی‌های فعال، نسخه‌ها، مالک و کد دلیل آن مشخص نیست، مرز هنوز برای عملیات به‌اندازهٔ کافی حسابرسی‌پذیر نیست.
 
@@ -420,9 +419,9 @@ engine کنترل کنید. پرامپت می‌تواند سند را interpret
 
 ## منابع و مطالعهٔ بیشتر
 
-- van der Aalst, Wil M. P. 2016. *Process Mining: داده Science in اقدام*. 2nd
+- van der Aalst, Wil M. P. 2016. *Process Mining: Data Science in Action*. 2nd
   ed. Berlin: Springer.
-- Kleppmann, Martin. 2017. *Designing داده-Intensive Applications*. Sebastopol,
+- Kleppmann, Martin. 2017. *Designing Data-Intensive Applications*. Sebastopol,
   CA: O’Reilly Media.
 - Amazon Web Services. 2026. “REL04-BP04 Make Mutating Operations Idempotent.”
   *AWS Well-Architected Framework*.

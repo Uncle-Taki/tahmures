@@ -457,5 +457,5 @@ provenance نگهداشت، کنارگذاری افشا و جایگاه آزمو
 - Robertson, Stephen, and Hugo Zaragoza. 2009. “The Probabilistic ارتباط
   Framework: BM25 and Beyond.” *Foundations and Trends in Information
   بازیابی* 3 (4): 333–389.
-- Kleppmann, Martin. 2017. *Designing داده-Intensive Applications*. Sebastopol,
+- Kleppmann, Martin. 2017. *Designing Data-Intensive Applications*. Sebastopol,
   CA: O’Reilly Media.
