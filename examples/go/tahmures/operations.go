@@ -104,7 +104,6 @@ func CompareWindows(baseline, current []TelemetryEvent, policy OperationalPolicy
 			changed = append(changed, d.name)
 		}
 	}
-	sort.Strings(findings)
 	return OperationalReport{len(findings) == 0, old, now, summaries, findings, changed}, nil
 }
 func models(events []TelemetryEvent, kind int) map[string]bool {

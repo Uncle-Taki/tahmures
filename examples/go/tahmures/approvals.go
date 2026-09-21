@@ -74,10 +74,14 @@ func Authorize(request CapabilityRequest, approvals []ApprovalRecord, policy App
 			approvers[approval.Approver] = true
 		}
 	}
+	approvalEffects := policy.ApprovalEffects
+	if approvalEffects == nil {
+		approvalEffects = []string{"write"}
+	}
 	required := 0
 	if stringSetAny(policy.DualApprovalEffects)[request.Effect] {
 		required = 2
-	} else if stringSetAny(policy.ApprovalEffects)[request.Effect] {
+	} else if stringSetAny(approvalEffects)[request.Effect] {
 		required = 1
 	}
 	if len(approvers) < required {
