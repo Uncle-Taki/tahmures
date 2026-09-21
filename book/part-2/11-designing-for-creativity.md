@@ -565,5 +565,7 @@ attention. At the border, an early exemption would be forgotten.
 - Cropley, David H., and Arthur J. Cropley. 2010. “Recognizing and Fostering
   Creativity in Technological Design Education.” *International Journal of
   Technology and Design Education* 20: 345–358.
+  [https://doi.org/10.1007/s10798-009-9089-5](https://doi.org/10.1007/s10798-009-9089-5).
 - Runco, Mark A., and Garrett J. Jaeger. 2012. “The Standard Definition of
   Creativity.” *Creativity Research Journal* 24 (1): 92–96.
+  [https://doi.org/10.1080/10400419.2012.650092](https://doi.org/10.1080/10400419.2012.650092).

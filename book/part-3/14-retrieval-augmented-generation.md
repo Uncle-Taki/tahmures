@@ -410,4 +410,6 @@ The evidence audit revealed why the old map ranked so well: a servant had repeat
 ## Citations and Further Reading
 
 - Lewis, Patrick, et al. 2020. “Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.” *Advances in Neural Information Processing Systems* 33.
+  [https://arxiv.org/abs/2005.11401](https://arxiv.org/abs/2005.11401).
 - Thakur, Nandan, et al. 2021. “BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models.” *NeurIPS Datasets and Benchmarks*.
+  [https://arxiv.org/abs/2104.08663](https://arxiv.org/abs/2104.08663).

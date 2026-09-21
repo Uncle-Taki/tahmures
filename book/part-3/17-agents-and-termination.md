@@ -410,4 +410,5 @@ The corrected mission left the palace as a typed order. At each provincial tower
 ## Citations and Further Reading
 
 - Yao, Shunyu, et al. 2023. “ReAct: Synergizing Reasoning and Acting in Language Models.” *International Conference on Learning Representations*.
+  [https://arxiv.org/abs/2210.03629](https://arxiv.org/abs/2210.03629).
 - Kleppmann, Martin. 2017. *Designing Data-Intensive Applications*. Sebastopol, CA: O’Reilly Media.

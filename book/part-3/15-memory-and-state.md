@@ -405,3 +405,4 @@ After correcting the route memory, Tahmures asked a div to inspect why the north
 
 - Kleppmann, Martin. 2017. *Designing Data-Intensive Applications*. Sebastopol, CA: O’Reilly Media.
 - National Institute of Standards and Technology. 2020. *NIST Privacy Framework: A Tool for Improving Privacy through Enterprise Risk Management*, Version 1.0.
+  [https://doi.org/10.6028/NIST.CSWP.48](https://doi.org/10.6028/NIST.CSWP.48).

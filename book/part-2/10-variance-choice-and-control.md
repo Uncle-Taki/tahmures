@@ -565,7 +565,8 @@ built?
 ## Citations and Further Reading
 
 - Dodge, Jesse, et al. 2020. “Fine-Tuning Pretrained Language Models: Weight
-  Initializations, Data Orders, and Early Stopping.” arXiv:2002.06305.
+  Initializations, Data Orders, and Early Stopping.”
+  [https://arxiv.org/abs/2002.06305](https://arxiv.org/abs/2002.06305).
 - Amabile, Teresa M. 1996. *Creativity in Context*. Boulder, CO: Westview
   Press.
 - Montgomery, Douglas C. 2019. *Design and Analysis of Experiments*. 10th ed.

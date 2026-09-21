@@ -407,4 +407,6 @@ With the gate tools divided, the court entrusted a longer journey to the Wanderi
 ## Citations and Further Reading
 
 - Saltzer, Jerome H., and Michael D. Schroeder. 1975. “The Protection of Information in Computer Systems.” *Proceedings of the IEEE* 63 (9): 1278–1308.
+  [https://doi.org/10.1109/proc.1975.9939](https://doi.org/10.1109/proc.1975.9939).
 - National Institute of Standards and Technology. 2020. *Zero Trust Architecture*. NIST SP 800-207.
+  [https://doi.org/10.6028/NIST.SP.800-207](https://doi.org/10.6028/NIST.SP.800-207).

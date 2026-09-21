@@ -410,4 +410,5 @@ The rebuilt package selected one map whose route recommendation was correct. The
 ## Citations and Further Reading
 
 - Liu, Nelson F., et al. 2024. “Lost in the Middle: How Language Models Use Long Contexts.” *Transactions of the Association for Computational Linguistics* 12: 157–173.
+  [https://doi.org/10.1162/tacl_a_00638](https://doi.org/10.1162/tacl_a_00638).
 - Kleppmann, Martin. 2017. *Designing Data-Intensive Applications*. Sebastopol, CA: O’Reilly Media.

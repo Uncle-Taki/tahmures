@@ -16,7 +16,7 @@ prerequisites:
   - "فصل ۹"
 language: "fa"
 translation_of: "part-2/10-variance-choice-and-control.md"
-source_sha256: "251b5f3b1a12e38111030ee48cb70d2a349cefda4d1709130eb11b5b8dfe54b3"
+source_sha256: "1312a48ef5e0f52770f3b4eb4b41071680d70af85d7fc21827c59f7d22954de5"
 translation_status: "draft"
 last_translated: "2026-07-30"
 ---
@@ -410,7 +410,8 @@ tie-break پنهان نگه می‌دارد. تفاوت را از قابل‌ا�
 ## منابع و مطالعهٔ بیشتر
 
 - Dodge, Jesse, et al. 2020. “Fine-Tuning Pretrained Language Models: Weight
-  Initializations, Data Orders, and Early Stopping.” arXiv:2002.06305.
+  Initializations, Data Orders, and Early Stopping.”
+  [https://arxiv.org/abs/2002.06305](https://arxiv.org/abs/2002.06305).
 - Amabile, Teresa M. 1996. *Creativity in Context*. Boulder, CO: Westview
   Press.
 - Montgomery, Douglas C. 2019. *Design and Analysis of Experiments*. 10th ed.

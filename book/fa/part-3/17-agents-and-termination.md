@@ -16,7 +16,7 @@ prerequisites:
   - "فصل 16"
 language: "fa"
 translation_of: "part-3/17-agents-and-termination.md"
-source_sha256: "acb41a150fe5ec3c99c3f2c13b072985a7ab35846e288adfc41057c532abd4a3"
+source_sha256: "47edf39c49730ccc43f25ec41ed25a005132addcc40aecd503997f8994c2275c"
 translation_status: "draft"
 last_translated: "2026-08-01"
 ---
@@ -229,4 +229,5 @@ Agents and Termination، agent و termination را به قرارداد دارا�
 ## منابع و مطالعهٔ بیشتر
 
 - Yao, Shunyu, et al. 2023. “ReAct: Synergizing Reasoning and Acting in Language Models.” *International Conference on Learning Representations*.
+  [https://arxiv.org/abs/2210.03629](https://arxiv.org/abs/2210.03629).
 - Kleppmann, Martin. 2017. *Designing Data-Intensive Applications*. Sebastopol, CA: O’Reilly Media.

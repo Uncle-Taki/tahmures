@@ -16,7 +16,7 @@ prerequisites:
   - "فصل ۸"
 language: "fa"
 translation_of: "part-2/09-decomposition-and-workflows.md"
-source_sha256: "19ea9b376e5c34c4ddc52452b144cd3be9837a97fedab948c70423d8b396730e"
+source_sha256: "29d580dcad9d60baab25ce944ca32a9453cc3e1d0cd0991530729ac06c425c57"
 translation_status: "draft"
 last_translated: "2026-07-30"
 ---
@@ -421,6 +421,7 @@ engine کنترل کنید. پرامپت می‌تواند سند را interpret
 
 - van der Aalst, Wil M. P. 2016. *Process Mining: Data Science in Action*. 2nd
   ed. Berlin: Springer.
+  [https://doi.org/10.1007/978-3-662-49851-4](https://doi.org/10.1007/978-3-662-49851-4).
 - Kleppmann, Martin. 2017. *Designing Data-Intensive Applications*. Sebastopol,
   CA: O’Reilly Media.
 - Amazon Web Services. 2026. “REL04-BP04 Make Mutating Operations Idempotent.”

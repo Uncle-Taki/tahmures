@@ -16,7 +16,7 @@ prerequisites:
   - "فصل ۱۰"
 language: "fa"
 translation_of: "part-2/11-designing-for-creativity.md"
-source_sha256: "1a54eeccc26860d63cc8ad0a3a282bd1de03356e937845cbd011e1671086e8ec"
+source_sha256: "4cebd46f3357dae068141b059138fcd2f6ec888bf88b4fb0f6952d75300aa2fd"
 translation_status: "draft"
 last_translated: "2026-07-30"
 ---
@@ -420,5 +420,7 @@ stopping قاعده تعریف کنید: گزینه پذیرفته‌شده با
 - Cropley, David H., and Arthur J. Cropley. 2010. “Recognizing and Fostering
   Creativity in Technological Design Education.” *International Journal of
   Technology and Design Education* 20: 345–358.
+  [https://doi.org/10.1007/s10798-009-9089-5](https://doi.org/10.1007/s10798-009-9089-5).
 - Runco, Mark A., and Garrett J. Jaeger. 2012. “The Standard Definition of
   Creativity.” *Creativity Research Journal* 24 (1): 92–96.
+  [https://doi.org/10.1080/10400419.2012.650092](https://doi.org/10.1080/10400419.2012.650092).

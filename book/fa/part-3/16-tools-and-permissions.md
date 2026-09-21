@@ -16,7 +16,7 @@ prerequisites:
   - "فصل 15"
 language: "fa"
 translation_of: "part-3/16-tools-and-permissions.md"
-source_sha256: "d10a7c7662e61c450d0d83e4c694f5af89f858b3564d6541ac0c80296c009cde"
+source_sha256: "05f5e75a3632f43c9466c4cf4aa19491f5d2a98fb29adc2e5e83228632489796"
 translation_status: "draft"
 last_translated: "2026-08-01"
 ---
@@ -228,4 +228,6 @@ Tools and Permissions، tool و permission را به قرارداد دارای �
 ## منابع و مطالعهٔ بیشتر
 
 - Saltzer, Jerome H., and Michael D. Schroeder. 1975. “The Protection of Information in Computer Systems.” *Proceedings of the IEEE* 63 (9): 1278–1308.
+  [https://doi.org/10.1109/proc.1975.9939](https://doi.org/10.1109/proc.1975.9939).
 - National Institute of Standards and Technology. 2020. *Zero Trust Architecture*. NIST SP 800-207.
+  [https://doi.org/10.6028/NIST.SP.800-207](https://doi.org/10.6028/NIST.SP.800-207).

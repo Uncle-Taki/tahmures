@@ -16,7 +16,7 @@ prerequisites:
   - "فصل 14"
 language: "fa"
 translation_of: "part-3/15-memory-and-state.md"
-source_sha256: "262c8d6f64375f358158f49eba659ea3a1279cbf02a7a3aa747db5b50c1a206a"
+source_sha256: "759937146a9b95f0b0481d51f84cbbed47301bfd9727f986ce28f58812a38a1a"
 translation_status: "draft"
 last_translated: "2026-08-01"
 ---
@@ -226,3 +226,4 @@ Memory and State، memory و state را به قرارداد دارای مالک 
 
 - Kleppmann, Martin. 2017. *Designing Data-Intensive Applications*. Sebastopol, CA: O’Reilly Media.
 - National Institute of Standards and Technology. 2020. *NIST Privacy Framework: A Tool for Improving Privacy through Enterprise Risk Management*, Version 1.0.
+  [https://doi.org/10.6028/NIST.CSWP.48](https://doi.org/10.6028/NIST.CSWP.48).

@@ -16,7 +16,7 @@ prerequisites:
   - "فصل 13"
 language: "fa"
 translation_of: "part-3/14-retrieval-augmented-generation.md"
-source_sha256: "e317796b5780cc83e6c35460f6e8f24a31d984b25e2cca0736db7fd816c49f17"
+source_sha256: "6acebbbd19f9fc282cfefccb1b7dacbe5f4a5e61dbf694212c18fa05ebfed347"
 translation_status: "draft"
 last_translated: "2026-08-01"
 ---
@@ -228,4 +228,6 @@ Retrieval-Augmented Generation، retrieval و RAG را به قرارداد دا�
 ## منابع و مطالعهٔ بیشتر
 
 - Lewis, Patrick, et al. 2020. “Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.” *Advances in Neural Information Processing Systems* 33.
+  [https://arxiv.org/abs/2005.11401](https://arxiv.org/abs/2005.11401).
 - Thakur, Nandan, et al. 2021. “BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models.” *NeurIPS Datasets and Benchmarks*.
+  [https://arxiv.org/abs/2104.08663](https://arxiv.org/abs/2104.08663).

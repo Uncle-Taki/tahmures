@@ -557,6 +557,7 @@ difference itself was failure.
 
 - van der Aalst, Wil M. P. 2016. *Process Mining: Data Science in Action*. 2nd
   ed. Berlin: Springer.
+  [https://doi.org/10.1007/978-3-662-49851-4](https://doi.org/10.1007/978-3-662-49851-4).
 - Kleppmann, Martin. 2017. *Designing Data-Intensive Applications*. Sebastopol,
   CA: O’Reilly Media.
 - Amazon Web Services. 2026. “REL04-BP04 Make Mutating Operations Idempotent.”

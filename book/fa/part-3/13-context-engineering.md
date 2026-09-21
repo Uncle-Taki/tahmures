@@ -16,7 +16,7 @@ prerequisites:
   - "فصل 12"
 language: "fa"
 translation_of: "part-3/13-context-engineering.md"
-source_sha256: "0267e779881c9cf21cfbb508520e4d5aa582a31ff6dc25ba973286fd7d16732d"
+source_sha256: "e8c011375954ba5e8bba4397807dc3cdfec3305c28cbd1d7400ad4d8de814d8f"
 translation_status: "draft"
 last_translated: "2026-08-01"
 ---
@@ -239,4 +239,5 @@ Context Engineering، مهندسی کانتکست را به قرارداد دا�
 ## منابع و مطالعهٔ بیشتر
 
 - Liu, Nelson F., et al. 2024. “Lost in the Middle: How Language Models Use Long Contexts.” *Transactions of the Association for Computational Linguistics* 12: 157–173.
+  [https://doi.org/10.1162/tacl_a_00638](https://doi.org/10.1162/tacl_a_00638).
 - Kleppmann, Martin. 2017. *Designing Data-Intensive Applications*. Sebastopol, CA: O’Reilly Media.
