@@ -12,8 +12,7 @@ learning_objectives:
   - "Design typed, validated prompt templates"
   - "Separate rendering from authorisation and dispatch"
   - "Test template versions against invalid and adversarial values"
-prerequisites:
-  - "Chapters 1–6"
+prerequisites: [C04]
 ---
 
 # Reusable Prompt Templates

@@ -1,5 +1,5 @@
 ---
-title: "Part III — Knowledge, Memory, and Action"
+title: "Part III — Context, Memory, Tools, and Agents"
 summary: "Place model interaction inside governed systems for knowledge, state, capability, autonomy, and transfer."
 ---
 

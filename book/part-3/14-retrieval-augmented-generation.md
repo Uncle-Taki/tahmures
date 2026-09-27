@@ -12,8 +12,7 @@ learning_objectives:
   - "Measure retrieval quality before answer quality"
   - "Preserve chunk identity, scope, freshness, and provenance"
   - "Reject correct-looking answers supported by the wrong evidence"
-prerequisites:
-  - "Chapter 13"
+prerequisites: [C13]
 ---
 
 # Retrieval-Augmented Generation

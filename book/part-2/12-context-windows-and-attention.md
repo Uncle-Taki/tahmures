@@ -12,8 +12,7 @@ learning_objectives:
   - "Distinguish context capacity from effective context use"
   - "Select context deterministically by obligation, priority, and provenance"
   - "Evaluate evidence retention by position and report exclusions"
-prerequisites:
-  - "Chapter 11"
+prerequisites: [C04]
 ---
 
 # Context Windows and Attention
@@ -26,6 +25,10 @@ drawer. You will preserve mandatory instructions, rank optional evidence,
 retain provenance, disclose exclusions, and evaluate first-, middle-, and
 final-position evidence separately. You will also recognise when retrieval or
 state should replace an expanding prompt.
+
+This chapter measures what a fixed context window can hold, attend to, or
+displace; Chapter 13 owns the policy for deliberately selecting, ordering,
+compressing, or omitting information before assembly.
 
 ## The Tale of Tahmures
 

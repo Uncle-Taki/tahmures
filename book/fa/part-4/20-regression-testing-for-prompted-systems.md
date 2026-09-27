@@ -12,11 +12,10 @@ learning_objectives:
   - "ساخت regression suite نسخه‌دار برای سامانهٔ prompt"
   - "طبقه‌بندی improvement، regression و تغییر عمدی"
   - "gateکردن release بر اساس case محافظت‌شده و score floor"
-prerequisites:
-  - "فصل 19"
+prerequisites: [C06, C19]
 language: "fa"
 translation_of: "part-4/20-regression-testing-for-prompted-systems.md"
-source_sha256: "d00fa7ed3e41913b6121064403b6c4b8bbaf839ecde856be07789a033e68bad2"
+source_sha256: "c5b2a451e8c5a32d26aad64f0201efe9d22641f11d3406b45ed79f7c6c81ab01"
 translation_status: "draft"
 last_translated: "2026-08-01"
 ---

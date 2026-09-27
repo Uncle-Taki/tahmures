@@ -12,11 +12,10 @@ learning_objectives:
   - "اندازه‌گیری diversityِ پاسخ‌ها در trial‌های تکراری"
   - "جداسازی گزینه generation از انتخاب قطعی"
   - "تعریف جای مناسب stability، diversity یا escalation"
-prerequisites:
-  - "فصل ۹"
+prerequisites: [C03, C06]
 language: "fa"
 translation_of: "part-2/10-variance-choice-and-control.md"
-source_sha256: "1312a48ef5e0f52770f3b4eb4b41071680d70af85d7fc21827c59f7d22954de5"
+source_sha256: "dd94027e766d0f2852f9590747cf3ec5df3b9e2798619990f72d8db72bbf01ed"
 translation_status: "draft"
 last_translated: "2026-07-30"
 ---

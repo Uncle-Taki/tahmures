@@ -12,12 +12,10 @@ learning_objectives:
   - "انتخاب مثال‌های نمایندهٔ case‌های target"
   - "تمایز مثال‌ها از rule حاکم"
   - "ارزیابی پرامپت few-shot بر اساس class و subgroup"
-prerequisites:
-  - "فصل ۳ — نیازمندی‌ها پیش از واژه‌پردازی"
-  - "فصل ۵ — سلسله‌مراتب دستورها و تعارض"
+prerequisites: [C03]
 language: "fa"
 translation_of: "part-1/06-learning-from-examples.md"
-source_sha256: "332b23cec2d3523e875f186be50374a4fe878ec6a44555cb4ca310d9e5fe0597"
+source_sha256: "04415972202212384c7b87dc6c3f65ddf06597bfb0255e4306a13e0d20f1fd90"
 translation_status: "draft"
 last_translated: "2026-07-30"
 ---

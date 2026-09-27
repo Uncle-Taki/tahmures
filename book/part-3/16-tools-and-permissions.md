@@ -12,8 +12,7 @@ learning_objectives:
   - "Separate tool proposals, validation, authorisation, approval, and execution"
   - "Design least-privilege read and write capabilities"
   - "Test confused-deputy and invalid-argument failures"
-prerequisites:
-  - "Chapter 15"
+prerequisites: [C05, C08, C15]
 ---
 
 # Tools and Permissions

@@ -1,5 +1,5 @@
 ---
-title: "Part II — Designing Prompted Interactions"
+title: "Part II — Prompt Design and Controlled Generation"
 summary: "Completed chapters on templates, contracts, workflows, variance, creativity, and context windows."
 ---
 

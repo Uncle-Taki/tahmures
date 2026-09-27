@@ -12,11 +12,10 @@ learning_objectives:
   - "جداسازی پیشنهاد tool، validation، authorisation، approval و execution"
   - "طراحی capability کم‌اختیار برای read و write"
   - "آزمودن confused deputy و argument نامعتبر"
-prerequisites:
-  - "فصل 15"
+prerequisites: [C05, C08, C15]
 language: "fa"
 translation_of: "part-3/16-tools-and-permissions.md"
-source_sha256: "05f5e75a3632f43c9466c4cf4aa19491f5d2a98fb29adc2e5e83228632489796"
+source_sha256: "9755ed49ebe0223ef6f30c3907cdf83bfe07d13ebce3c82a1e9c7988d00ad5cc"
 translation_status: "draft"
 last_translated: "2026-08-01"
 ---

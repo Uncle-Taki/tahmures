@@ -32,8 +32,13 @@ FA_ADJ_BEFORE_LATIN_RE = re.compile(
 )
 LATIN_BEFORE_FA_NOUN_RE = re.compile(
     r"\b[A-Za-z][A-Za-z0-9_-]*\s+"
-    r"(?:فیلد|رکورد|پاسخ|قرارداد|نثر|مرحله|مجموعه|نوع|وضعیت)"
-    r"(?!\u200c)"
+    # A Latin technical noun followed by an ezafe-marked Persian stage and its
+    # modifier (for example, "interpolation مرحلهٔ دوم") is a sanctioned,
+    # grammatically ordered construction rather than a Latin modifier.
+    r"(?:فیلد|رکورد|پاسخ|قرارداد|نثر|مجموعه|نوع|وضعیت|مرحله(?![\u0654\u200c]))"
+    # Require a complete noun; do not flag the prefix of a Persian predicate
+    # such as "requirements پاسخگو".
+    r"(?![\u0600-\u06FF\u200c])"
 )
 
 

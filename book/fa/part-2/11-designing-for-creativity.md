@@ -12,11 +12,10 @@ learning_objectives:
   - "جداسازی exploration واگرا از acceptance همگرا"
   - "ارزیابی novelty همراه feasibility، relevance و harm"
   - "استفاده از rubric انسانی ثبت‌شده بدون self-grading مدل"
-prerequisites:
-  - "فصل ۱۰"
+prerequisites: [C10]
 language: "fa"
 translation_of: "part-2/11-designing-for-creativity.md"
-source_sha256: "4cebd46f3357dae068141b059138fcd2f6ec888bf88b4fb0f6952d75300aa2fd"
+source_sha256: "5cf3957be68bb118a02511d3a1ee2f049f21ff78d04b4a15f57c66ade36f2e1e"
 translation_status: "draft"
 last_translated: "2026-07-30"
 ---

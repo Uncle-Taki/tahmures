@@ -12,8 +12,7 @@ learning_objectives:
   - "Distinguish relevant content from authorised instruction"
   - "Design typed trust partitions and quarantine paths"
   - "Test direct and indirect prompt injection at system boundaries"
-prerequisites:
-  - "Chapter 20"
+prerequisites: [C05, C13, C14, C16]
 ---
 
 # Prompt Injection and Trust Boundaries

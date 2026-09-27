@@ -1,0 +1,28 @@
+schema_version: 1
+# Only load-bearing educational prerequisites belong here.  The `Cnn` identifiers
+# are intentionally stable, locale-neutral chapter references.
+required_prerequisites:
+  C01: []
+  C02: [C01]
+  C03: [C01]
+  C04: [C01, C03]
+  C05: [C04]
+  C06: [C03]
+  C07: [C04]
+  C08: [C04]
+  C09: [C03, C08]
+  C10: [C03, C06]
+  C11: [C10]
+  C12: [C04]
+  C13: [C12]
+  C14: [C13]
+  C15: [C05, C12]
+  C16: [C05, C08, C15]
+  C17: [C09, C16]
+  C18: [C08, C12, C17]
+  C19: [C03, C08, C10]
+  C20: [C06, C19]
+  C21: [C05, C13, C14, C16]
+  C22: [C16, C21]
+  C23: [C19, C20, C22]
+  C24: [C17, C18, C19, C20, C21, C22, C23]

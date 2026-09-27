@@ -1,5 +1,5 @@
 ---
-title: "بخش سه — دانش، حافظه و کنش"
+title: "بخش سه — Context، حافظه، ابزارها و Agentها"
 summary: "قرار دادن context، retrieval، memory، tool، agent و hand-off درون مرزهای قابل‌آزمون سامانه."
 language: "fa"
 ---

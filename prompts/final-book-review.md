@@ -381,9 +381,6 @@ When a term's book-wide decision becomes stable:
 4. keep exact identifiers separate from terminology decisions;
 5. add or update regression coverage when useful.
 
-Verify the submitted token `asses` from context rather than silently assuming it means
-`assess`.
-
 ## 10. Regression learning
 
 When you find a new issue that generalizes beyond one sentence:

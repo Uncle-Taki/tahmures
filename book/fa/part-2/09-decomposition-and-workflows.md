@@ -12,11 +12,10 @@ learning_objectives:
   - "تجزیهٔ کار به stage‌های مستقل و قابل‌راستی‌آزمایی"
   - "اعتبارسنجی dependency، checkpoint و termination گردش‌کار"
   - "طراحی تلاش دوباره محدود و compensation برای شکست جزئی"
-prerequisites:
-  - "فصل ۸"
+prerequisites: [C03, C08]
 language: "fa"
 translation_of: "part-2/09-decomposition-and-workflows.md"
-source_sha256: "29d580dcad9d60baab25ce944ca32a9453cc3e1d0cd0991530729ac06c425c57"
+source_sha256: "959a45b7b7d98d0ed6116f7ee190fad90afe6d5a38e757362b25601c7f3a711b"
 translation_status: "draft"
 last_translated: "2026-07-30"
 ---
@@ -238,7 +237,7 @@ fixture‌ها مأموریت نثر را با آرایه مرحله شامل م
 
 الزامی-مرحله پوشش، وابستگی اعتبار، نقطهٔ کنترل presence،
 unsupported-گذار نرخ و پایانی درستی را بسنجید. runtime نیز
-تکمیل، زمان per وضعیت، تلاش دوباره، جبران، لغو تأخیر و
+تکمیل، زمان به تفکیک وضعیت، تلاش دوباره، جبران، لغو تأخیر و
 تأیید wait را می‌خواهد. مرحله پوشش تنها را optimize نکنید؛ همهٔ مرحله‌ها
 ممکن است در ترتیب ناامن حاضر باشند. fault injection هر مرز و امن stop
 هنگام پیش‌شرط شکست اغلب ارزشمندترین آزمون است.

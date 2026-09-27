@@ -12,11 +12,10 @@ learning_objectives:
   - "طراحی rubric دارای anchor برای پیامد"
   - "جداسازی شکست مدل، سامانه و evaluator"
   - "مدیریت اختلاف reviewer بدون پنهان‌کردن آن در average"
-prerequisites:
-  - "فصل 18"
+prerequisites: [C03, C08, C10]
 language: "fa"
 translation_of: "part-4/19-evaluation-and-rubrics.md"
-source_sha256: "c95b7a903ef871ae96af2c73ad56bcfa9bd71774ece020f3f67806d111a9cddf"
+source_sha256: "d92f334fb6bbab7bfa913026eff32b694e9a14753d47f1fdcc7235e46e3d0186"
 translation_status: "draft"
 last_translated: "2026-08-01"
 ---

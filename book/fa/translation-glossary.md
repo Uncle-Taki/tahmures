@@ -22,7 +22,10 @@ language: "fa"
 | abstention | `abstention` |
 | calibration | `calibration` |
 | requirements | نیازمندی‌ها |
+| contract | `contract` |
 | output contract | قرارداد خروجی |
+| interface | `interface` |
+| payload | `payload` |
 | schema | `schema` |
 | dataset | `dataset` |
 | fixture | fixture |
@@ -46,7 +49,9 @@ language: "fa"
 | context package | `context package` |
 | context assembly | `context assembly` |
 | retrieval / RAG | `retrieval` / `RAG` |
+| retriever | `retriever` |
 | chunk / citation | `chunk` / `citation` |
+| delimiter | `delimiter` |
 | memory / state | `memory` / `state` |
 | tool / permission | `tool` / `permission` |
 | authorisation / capability | `authorisation` / `capability` |

@@ -12,11 +12,10 @@ learning_objectives:
   - "تمایز اختیار از واژه‌پردازی persuasive"
   - "حل deterministic precedence دستورها"
   - "escalation امن تعارض هم‌سطح یا unauthenticated"
-prerequisites:
-  - "فصل ۴ — کالبدشناسی یک پرامپت قابل‌اعتماد"
+prerequisites: [C04]
 language: "fa"
 translation_of: "part-1/05-instruction-hierarchy-and-conflict.md"
-source_sha256: "ae8f875f9cd8487b1a3a3f086c4c29ea00759e5e1a6894b6b09d358c5b00c261"
+source_sha256: "c08b5fc5bb3d58efaf09160725cfe18b9723abf855b78a5ac5958c4373523d79"
 translation_status: "draft"
 last_translated: "2026-07-30"
 ---

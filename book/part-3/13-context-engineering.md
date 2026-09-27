@@ -12,8 +12,7 @@ learning_objectives:
   - "Design task-specific context packages across sources"
   - "Preserve authority, provenance, conflicts, and exclusions"
   - "Evaluate context construction independently from model output"
-prerequisites:
-  - "Chapter 12"
+prerequisites: [C12]
 ---
 
 # Context Engineering
@@ -24,6 +23,10 @@ By the end of this chapter, you can design task-specific context packages across
 preserve authority, provenance, conflicts, and exclusions, and evaluate context construction independently from model output. The goal is
 not a persuasive demonstration but a boundary that can be inspected, tested,
 denied, and operated.
+
+This chapter owns the policy for deliberately selecting, ordering, compressing,
+or omitting information; Chapter 12 measures the fixed window's capacity,
+attention behaviour, and displacement effects.
 
 ## The Tale of Tahmures
 

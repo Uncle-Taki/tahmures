@@ -11,13 +11,11 @@ narrative_origin: "original-teaching-fiction"
 learning_objectives:
   - "شناسایی اجزای functional پرامپت"
   - "جداسازی دستورها از دادهٔ دارای اختیار محدود"
-  - "طراحی و validation قرارداد خروجی"
-prerequisites:
-  - "فصل ۱ — پرامپت چیست؟"
-  - "فصل ۳ — نیازمندی‌ها پیش از واژه‌پردازی"
+  - "طراحی و اعتبارسنجیِ قرارداد خروجی"
+prerequisites: [C01, C03]
 language: "fa"
 translation_of: "part-1/04-anatomy-of-a-reliable-prompt.md"
-source_sha256: "1c0eb22ba796054749b2931310523d5f069f1ef8439f2d2d1aae80a6436be4b0"
+source_sha256: "1cd78dfd7159dc1b9877c80dc9a91aa3681990630fea3b1b41d7061ad48a005a"
 translation_status: "draft"
 last_translated: "2026-07-30"
 ---

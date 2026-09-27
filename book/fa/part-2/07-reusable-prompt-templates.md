@@ -12,11 +12,10 @@ learning_objectives:
   - "طراحی قالب‌های پرامپت typed و اعتبارسنجی‌شده"
   - "جداسازی رندر از authorisation و dispatch"
   - "آزمودن version‌های قالب با مقدارهای نامعتبر و adversarial"
-prerequisites:
-  - "فصل‌های ۱ تا ۶"
+prerequisites: [C04]
 language: "fa"
 translation_of: "part-2/07-reusable-prompt-templates.md"
-source_sha256: "9eccbbabe506d8c2cbbd386baf279327bd2dde50e8de5fe2a6fa675d70a929c1"
+source_sha256: "a0b2061a7b136428d226a3431e0e9ed34e38bf6ec3e7126b2594de0ae2bcb103"
 translation_status: "draft"
 last_translated: "2026-07-30"
 ---
@@ -143,7 +142,7 @@ operation‌هایی با مجوز و گزارش جدا هستند. سه قرا�
 ## مفاهیم اصلی
 
 برای هر متغیر دست‌کم نوع، requiredبودن و پیش‌فرض را اعلام کنید. در صورت
-نیاز مجاز set، بازهٔ عددی، حداکثر طول، encoding یا اعتبارسنج دامنه نیز
+نیاز مجموعهٔ مجاز، بازهٔ عددی، حداکثر طول، encoding یا اعتبارسنج دامنه نیز
 لازم است. `province` می‌تواند شناسه‌ای پایدار باشد، `allowance` باید عدد صحیح
 در بازهٔ مصوب باشد و `documents` بهتر است فهرست از رکورد‌های نوع‌دار باشد.
 

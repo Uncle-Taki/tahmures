@@ -12,11 +12,10 @@ learning_objectives:
   - "توضیح این‌که خروجی روان شاهدی بر پشتیبانی factual نیست"
   - "طراحی قرارداد پاسخ grounded و abstention"
   - "ارزیابی ادعاهای بی‌پشتوانه در trial‌های تکرارشده"
-prerequisites:
-  - "فصل ۱ — پرامپت چیست؟"
+prerequisites: [C01]
 language: "fa"
 translation_of: "part-1/02-models-meaning-and-uncertainty.md"
-source_sha256: "dff720a1bad56a33fa0764d08c9e5507393956bfc35baaabf4bc10c8a759fb7a"
+source_sha256: "cc6df9fa6940951ac3d53078fbd09a24d434b802a0397b8b4d1d0c6c8b08d55b"
 translation_status: "draft"
 last_translated: "2026-07-30"
 ---

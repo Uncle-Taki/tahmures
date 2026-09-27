@@ -12,8 +12,7 @@ learning_objectives:
   - "Decompose tasks into independently verifiable stages"
   - "Validate workflow dependencies, checkpoints, and termination"
   - "Design bounded retries and compensation for partial failure"
-prerequisites:
-  - "Chapter 8"
+prerequisites: [C03, C08]
 ---
 
 # Decomposition and Workflows

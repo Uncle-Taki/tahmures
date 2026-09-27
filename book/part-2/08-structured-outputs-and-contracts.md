@@ -12,8 +12,7 @@ learning_objectives:
   - "Define and validate bounded JSON output contracts"
   - "Separate syntactic, structural, semantic, and authority checks"
   - "Choose safely among reject, retry, repair, and escalation"
-prerequisites:
-  - "Chapter 7"
+prerequisites: [C04]
 ---
 
 # Structured Outputs and Contracts

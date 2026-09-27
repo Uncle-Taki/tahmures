@@ -12,8 +12,7 @@ learning_objectives:
   - "Define versioned operational telemetry for prompted systems"
   - "Detect segment-level drift hidden by aggregates"
   - "Design rollback, incident, and change-management procedures"
-prerequisites:
-  - "Chapter 22"
+prerequisites: [C19, C20, C22]
 ---
 
 # Production Operations and Drift

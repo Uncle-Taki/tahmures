@@ -12,9 +12,7 @@ learning_objectives:
   - "Turn vague goals into measurable requirements"
   - "Separate hard constraints from preferences"
   - "Choose evaluation criteria before comparing prompt variants"
-prerequisites:
-  - "Chapter 1 — What Is a Prompt?"
-  - "Chapter 2 — Models, Meaning, and Uncertainty"
+prerequisites: [C01]
 ---
 
 # Requirements Before Wording

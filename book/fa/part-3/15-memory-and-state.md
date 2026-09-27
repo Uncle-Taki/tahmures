@@ -12,11 +12,10 @@ learning_objectives:
   - "جداسازی تاریخچهٔ گفتگو، working state، durable memory و authoritative state"
   - "طراحی خط‌مشی صریح نوشتن، recall، expiry، correction و deletion"
   - "آزمودن شکست memory منقضی و عبور از scope"
-prerequisites:
-  - "فصل 14"
+prerequisites: [C05, C12]
 language: "fa"
 translation_of: "part-3/15-memory-and-state.md"
-source_sha256: "759937146a9b95f0b0481d51f84cbbed47301bfd9727f986ce28f58812a38a1a"
+source_sha256: "6ac34748db0861c12ec515012f5eacb6f6299b46e11d5109c4956ad7ff8ce7d1"
 translation_status: "draft"
 last_translated: "2026-08-01"
 ---

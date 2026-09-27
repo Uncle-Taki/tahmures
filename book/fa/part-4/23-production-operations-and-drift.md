@@ -12,11 +12,10 @@ learning_objectives:
   - "تعریف telemetry عملیاتی نسخه‌دار"
   - "تشخیص drift در segment که aggregate پنهان می‌کند"
   - "طراحی rollback، incident و change management"
-prerequisites:
-  - "فصل 22"
+prerequisites: [C19, C20, C22]
 language: "fa"
 translation_of: "part-4/23-production-operations-and-drift.md"
-source_sha256: "a5e3e024d618963f48bfd7a86451c2e67ee3b3aca6ecf238e431b707482e48f8"
+source_sha256: "e49dcf3727a3e7703d3f97b126667a6cde9dcdc838a690d2fa9465fcd9ac91bf"
 translation_status: "draft"
 last_translated: "2026-08-01"
 ---

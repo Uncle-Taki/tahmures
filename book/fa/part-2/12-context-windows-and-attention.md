@@ -12,11 +12,10 @@ learning_objectives:
   - "تمایز capacity پنجرهٔ کانتکست از استفادهٔ مؤثر کانتکست"
   - "انتخاب قطعی کانتکست بر اساس obligation، priority و provenance"
   - "ارزیابی retention شواهد بر اساس position و گزارش موارد excluded"
-prerequisites:
-  - "فصل ۱۱"
+prerequisites: [C04]
 language: "fa"
 translation_of: "part-2/12-context-windows-and-attention.md"
-source_sha256: "19ae79a8cb0461125ce2d24f247eaca325ecae559e3f61eda6d7fa305ae249f3"
+source_sha256: "ff424dabaa4e038e2d42f1edc2193a2287d067e0cb2d82f551a255e89dd4ad6f"
 translation_status: "draft"
 last_translated: "2026-07-30"
 ---
@@ -30,6 +29,10 @@ last_translated: "2026-07-30"
 الزامی را حفظ، شواهد اختیاری را رتبه، provenance را نگه و کنارگذاری
 را disclose می‌کنید و شواهد اول، میانه و پایان را جدا می‌سنجید. همچنین
 تشخیص می‌دهید بازیابی یا وضعیت کجا باید جای پرامپت در حال رشد را بگیرد.
+
+این فصل می‌سنجد پنجرهٔ کانتکستِ ثابت چه چیزی را جا می‌دهد، به آن توجه می‌کند
+یا کنار می‌زند؛ فصل ۱۳ مالک سیاستِ انتخاب، ترتیب‌دهی، فشرده‌سازی یا حذفِ
+آگاهانهٔ اطلاعات پیش از گردآوری است.
 
 ## روایت تهمورث
 

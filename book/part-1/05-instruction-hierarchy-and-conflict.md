@@ -12,8 +12,7 @@ learning_objectives:
   - "Distinguish authority from persuasive wording"
   - "Resolve instruction precedence deterministically"
   - "Escalate same-level and unauthenticated conflicts safely"
-prerequisites:
-  - "Chapter 4 — Anatomy of a Reliable Prompt"
+prerequisites: [C04]
 ---
 
 # Instruction Hierarchy and Conflict

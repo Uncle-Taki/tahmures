@@ -12,11 +12,10 @@ learning_objectives:
   - "طراحی hand-off envelope صریح و نسخه‌دار"
   - "حفظ constraint، authority، provenance artefact و uncertainty"
   - "رد انتقال منقضی یا گسترش‌دهندهٔ authority"
-prerequisites:
-  - "فصل 17"
+prerequisites: [C08, C12, C17]
 language: "fa"
 translation_of: "part-3/18-hand-offs-and-multi-step-systems.md"
-source_sha256: "ad9fc8bbd27a60db3efe0e3cbe1579fc884cd3a3a914021a3c54ee34a95acb8b"
+source_sha256: "64e2970f031504696a609bd85e84e7393e17135d9cb0025ac6bba8aa8d49b8ee"
 translation_status: "draft"
 last_translated: "2026-08-01"
 ---

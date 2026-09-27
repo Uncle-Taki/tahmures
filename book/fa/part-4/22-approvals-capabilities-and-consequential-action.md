@@ -12,11 +12,10 @@ learning_objectives:
   - "نمایش authority به‌صورت capability محدود"
   - "اتصال approval به action، argument و expiry دقیق"
   - "طراحی denial و escalation قابل‌حسابرسی"
-prerequisites:
-  - "فصل 21"
+prerequisites: [C16, C21]
 language: "fa"
 translation_of: "part-4/22-approvals-capabilities-and-consequential-action.md"
-source_sha256: "b4854e4a529904ad15cf22aacb170dcccf0dfea37f46c98993d639441f2368a9"
+source_sha256: "2c657351f8a7182ef75eba33ae4142605a2a862520d9192380bb6c455b2cae62"
 translation_status: "draft"
 last_translated: "2026-08-01"
 ---

@@ -12,8 +12,7 @@ learning_objectives:
   - "Measure response diversity across repeated trials"
   - "Separate candidate generation from deterministic selection"
   - "Define when stability, diversity, or escalation is appropriate"
-prerequisites:
-  - "Chapter 9"
+prerequisites: [C03, C06]
 ---
 
 # Variance, Choice, and Control

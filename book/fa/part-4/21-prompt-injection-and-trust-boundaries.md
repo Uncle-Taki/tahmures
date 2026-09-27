@@ -12,11 +12,10 @@ learning_objectives:
   - "جداسازی content مرتبط از instruction دارای authority"
   - "طراحی trust partition typed و quarantine path"
   - "آزمودن prompt injection مستقیم و غیرمستقیم در system boundary"
-prerequisites:
-  - "فصل 20"
+prerequisites: [C05, C13, C14, C16]
 language: "fa"
 translation_of: "part-4/21-prompt-injection-and-trust-boundaries.md"
-source_sha256: "be36064846fcfa253a6ee3ce6e301967c0a09b7cba0b909482037fe2c93fba97"
+source_sha256: "ab1dc678e8cbfd642444cca558ccd39bedfa8f24f456a3eee33cc05329361a6f"
 translation_status: "draft"
 last_translated: "2026-08-01"
 ---

@@ -29,17 +29,18 @@ meta:
     - "Persian grammar governs the sentence around every retained English term."
     - "Do not use stylistic variation for established technical terminology."
     - "If a term changes meaning by domain or grammatical role, classify the occurrence rather than the dictionary word."
+    - "An approved REVIEW entry records its contextual decision rule; it does not authorize blind replacement."
 
 entries:
   interface:
     proposed_action: RETAIN_ENGLISH
-    status: candidate
+    status: approved
     context_sensitive: false
     rationale: "Widely recognizable software/engineering technical identity."
 
   delimiter:
     proposed_action: RETAIN_ENGLISH
-    status: candidate
+    status: approved
     context_sensitive: true
     rationale: "Often useful for correspondence with code, parsers, and documentation."
 
@@ -51,33 +52,35 @@ entries:
 
   payload:
     proposed_action: RETAIN_ENGLISH
-    status: candidate
+    status: approved
     context_sensitive: false
     rationale: "Common API/network/software term with useful English identity."
 
   Application:
     proposed_action: REVIEW
-    status: needs_context
+    status: approved
     context_sensitive: true
     rationale: "May be an official technical object/name, an application layer, or ordinary 'کاربرد/برنامه'. Preserve capitalization only when technically meaningful."
+    context_rule: "Use «سامانه» for an application layer and Persian ordinary prose; preserve exact spelling only for an official product name, identifier, API name, or literal field."
 
   retriever:
     proposed_action: RETAIN_ENGLISH
-    status: candidate
+    status: approved
     context_sensitive: false
     rationale: "Specific RAG/system component term."
 
   schema:
     proposed_action: RETAIN_ENGLISH
-    status: candidate
+    status: approved
     context_sensitive: false
     rationale: "High searchability and strong technical identity in structured data/API contexts."
 
   pilot:
     proposed_action: REVIEW
-    status: needs_context
+    status: approved
     context_sensitive: true
     rationale: "May mean pilot study/run/system or ordinary concept."
+    context_rule: "Use «آزمایشی» or «اجرای آزمایشی» in prose; retain English only in an exact named run, product label, identifier, or cited terminology."
 
   classifier:
     proposed_action: RETAIN_ENGLISH
@@ -93,9 +96,10 @@ entries:
 
   normalize:
     proposed_action: REVIEW
-    status: needs_context
+    status: approved
     context_sensitive: true
     rationale: "Verb in prose may be better Persian; exact function/operation names may require preservation."
+    context_rule: "Translate the prose verb according to the operation (for example «نرمال‌سازی» or «یکنواخت‌سازی»); preserve exact spelling only for a function, operation, command, or identifier."
 
   baseline:
     proposed_action: RETAIN_ENGLISH
@@ -111,9 +115,10 @@ entries:
 
   live:
     proposed_action: REVIEW
-    status: needs_context
+    status: approved
     context_sensitive: true
     rationale: "Retain for live API/live model/live run when established; translate ordinary uses."
+    context_rule: "Translate ordinary prose (for example «زنده» or «عملیاتی»); retain only in established compound labels such as live API, live model, or a literal run name."
 
   deadline:
     proposed_action: RETAIN_ENGLISH
@@ -141,15 +146,17 @@ entries:
 
   coherent:
     proposed_action: REVIEW
-    status: needs_context
+    status: approved
     context_sensitive: true
     rationale: "Usually ordinary descriptive prose; retain only if serving a defined technical label."
+    context_rule: "Translate to natural Persian descriptive prose; retain English only when it is an explicitly defined technical label."
 
   continuation:
     proposed_action: REVIEW
-    status: needs_context
+    status: approved
     context_sensitive: true
     rationale: "May be a technical continuation/state concept or ordinary prose."
+    context_rule: "Translate ordinary prose as «ادامه» or «ادامه‌دادن»; retain English only for a defined state, operation, or literal API/schema value."
 
   machine-observable:
     proposed_action: RETAIN_ENGLISH
@@ -159,9 +166,10 @@ entries:
 
   quantity:
     proposed_action: REVIEW
-    status: needs_context
+    status: approved
     context_sensitive: true
     rationale: "Often naturally Persian unless used as a schema/type/domain label."
+    context_rule: "Use «مقدار» or another natural Persian measure term in prose; preserve English only for a literal schema/type/domain label."
 
   evaluator:
     proposed_action: RETAIN_ENGLISH
@@ -219,9 +227,10 @@ entries:
 
   functional:
     proposed_action: REVIEW
-    status: needs_context
+    status: approved
     context_sensitive: true
     rationale: "Meaning varies: functional requirement, functional programming, functioning, etc."
+    context_rule: "Translate by sense: «کارکردی» for requirements, «تابعی» for functional programming, and natural Persian for ordinary prose; retain English only as a defined label or identifier."
 
   latency:
     proposed_action: RETAIN_ENGLISH
@@ -231,9 +240,10 @@ entries:
 
   clarity:
     proposed_action: REVIEW
-    status: needs_context
+    status: approved
     context_sensitive: true
     rationale: "Usually ordinary prose; retain only as a named rubric/metric label."
+    context_rule: "Use «شفافیت» in prose; retain English only for an exact named rubric, metric, field, or label."
 
   proxy:
     proposed_action: RETAIN_ENGLISH
@@ -243,21 +253,24 @@ entries:
 
   topic:
     proposed_action: REVIEW
-    status: needs_context
+    status: approved
     context_sensitive: true
     rationale: "Often ordinary prose unless a literal field/category."
+    context_rule: "Use «موضوع» in prose; preserve English only for a literal field, category, identifier, or named taxonomy."
 
   brief:
     proposed_action: REVIEW
-    status: needs_context
+    status: approved
     context_sensitive: true
     rationale: "May be a named artifact such as decision brief; otherwise translate."
+    context_rule: "Use «یادداشت» or «خلاصه» for ordinary artifacts; retain English only when a named artifact, template, or literal title defines Brief as its technical identity."
 
   minor unit:
     proposed_action: REVIEW
-    status: needs_context
+    status: approved
     context_sensitive: true
     rationale: "Needs exact domain meaning before establishing a book-wide convention."
+    context_rule: "Translate according to the domain (for money, «واحد خرد»); preserve exact English only for a named type, field, standard, or API value."
 
   floating-point:
     proposed_action: RETAIN_ENGLISH
@@ -267,9 +280,10 @@ entries:
 
   ineligible:
     proposed_action: REVIEW
-    status: needs_context
+    status: approved
     context_sensitive: true
     rationale: "Usually ordinary adjective unless literal enum/status value."
+    context_rule: "Use «فاقد شرایط» or «نامجاز» in prose; preserve English only as an exact enum, status, field, or externally defined label."
 
   suite:
     proposed_action: RETAIN_ENGLISH
@@ -279,9 +293,10 @@ entries:
 
   arithmetic:
     proposed_action: REVIEW
-    status: needs_context
+    status: approved
     context_sensitive: true
     rationale: "May naturally be Persian; retain for exact named technical constructs if needed."
+    context_rule: "Use «حسابی» or «محاسباتی» in explanatory prose; preserve English only in a named technical construct, identifier, or quoted source term."
 
   trade-off:
     proposed_action: RETAIN_ENGLISH
@@ -315,9 +330,10 @@ entries:
 
   response:
     proposed_action: REVIEW
-    status: needs_context
+    status: approved
     context_sensitive: true
     rationale: "Retain for API/object identity or exact schema; ordinary explanatory prose usually favors Persian."
+    context_rule: "Use «پاسخ» in ordinary prose; preserve English only for an API/object identity, literal schema field, identifier, or externally defined label."
 
   type:
     proposed_action: RETAIN_ENGLISH
@@ -339,15 +355,17 @@ entries:
 
   failure:
     proposed_action: REVIEW
-    status: needs_context
+    status: approved
     context_sensitive: true
     rationale: "Core book concept but often natural Persian; retain only when a defined label/type."
+    context_rule: "Use «شکست» in prose; retain English only for a defined failure type, literal status, identifier, or test label."
 
   value:
     proposed_action: REVIEW
-    status: needs_context
+    status: approved
     context_sensitive: true
     rationale: "Retain for literal key/value/type contexts; ordinary prose usually favors Persian."
+    context_rule: "Use «مقدار» in prose; preserve English only in a literal key/value/type expression, identifier, or externally defined schema label."
 
   invariant:
     proposed_action: RETAIN_ENGLISH
@@ -357,27 +375,31 @@ entries:
 
   interpretation:
     proposed_action: REVIEW
-    status: needs_context
+    status: approved
     context_sensitive: true
     rationale: "Usually ordinary explanatory prose unless a defined label."
+    context_rule: "Use «تفسیر» in prose; retain English only for a defined method, label, field, or quoted source term."
 
   specific:
     proposed_action: REVIEW
-    status: needs_context
+    status: approved
     context_sensitive: true
     rationale: "Ordinary adjective in most prose; not a default retained term."
+    context_rule: "Translate to natural Persian such as «مشخص» or «معین»; preserve English only in an exact named label or identifier."
 
   genuine:
     proposed_action: REVIEW
-    status: needs_context
+    status: approved
     context_sensitive: true
     rationale: "Ordinary adjective in most prose; retain only for a defined contrast."
+    context_rule: "Translate to natural Persian such as «واقعی» or «اصیل»; retain English only for an explicitly defined contrast or label."
 
   origin:
     proposed_action: REVIEW
-    status: needs_context
+    status: approved
     context_sensitive: true
     rationale: "May be metadata/provenance field or ordinary prose."
+    context_rule: "Use «منشأ» in prose; preserve English only for a literal metadata/provenance field, identifier, or external schema label."
 
   recency:
     proposed_action: RETAIN_ENGLISH
@@ -393,21 +415,24 @@ entries:
 
   case:
     proposed_action: REVIEW
-    status: needs_context
+    status: approved
     context_sensitive: true
     rationale: "Could mean test case, use case, grammatical case, scenario, etc."
+    context_rule: "Use the established glossary sense «مورد آزمایشی» only for a test case; translate other senses by context, and preserve English only for literal identifiers or defined labels."
 
   form:
     proposed_action: REVIEW
-    status: needs_context
+    status: approved
     context_sensitive: true
     rationale: "Could be UI form, data form, structure, or ordinary prose."
+    context_rule: "Translate by sense (for example «فرم» for a UI form or «صورت/ساختار» in prose); preserve English only for a literal field, type, identifier, or named artifact."
 
   proof:
     proposed_action: REVIEW
-    status: needs_context
+    status: approved
     context_sensitive: true
     rationale: "Could be mathematical proof, evidence, proof artifact, or ordinary word."
+    context_rule: "Translate by sense («برهان» for mathematics, «شاهد/مدرک» for evidence); retain English only for a defined artifact, field, or external term."
 
   class:
     proposed_action: RETAIN_ENGLISH
@@ -429,9 +454,10 @@ entries:
 
   nuance:
     proposed_action: REVIEW
-    status: needs_context
+    status: approved
     context_sensitive: true
     rationale: "Usually ordinary prose; retain only if deliberately defined."
+    context_rule: "Use «ظرافت» or another natural Persian equivalent in prose; retain English only for a deliberately defined label."
 
   substitution:
     proposed_action: RETAIN_ENGLISH
@@ -459,9 +485,10 @@ entries:
 
   permissive:
     proposed_action: REVIEW
-    status: needs_context
+    status: approved
     context_sensitive: true
     rationale: "Usually adjective; technical meaning depends on policy/parser/security context."
+    context_rule: "Use «آسان‌گیر» or «مجازدهنده» according to policy/parser/security context; preserve English only for a named mode, flag, or literal configuration value."
 
   integration:
     proposed_action: RETAIN_ENGLISH
@@ -501,15 +528,17 @@ entries:
 
   uniform:
     proposed_action: REVIEW
-    status: needs_context
+    status: approved
     context_sensitive: true
     rationale: "Could be statistical distribution, consistency adjective, or ordinary word."
+    context_rule: "Use «یکنواخت» in ordinary prose; preserve English only for a named statistical distribution, type, field, or literal label."
 
   style:
     proposed_action: REVIEW
-    status: needs_context
+    status: approved
     context_sensitive: true
     rationale: "Could be CSS/style system, writing style, UI style, etc."
+    context_rule: "Use «سبک» in writing and UI prose; preserve English only for a literal CSS/style-system field, identifier, or named design token."
 
   batch:
     proposed_action: RETAIN_ENGLISH
@@ -543,16 +572,16 @@ entries:
 
   contract:
     proposed_action: RETAIN_ENGLISH
-    status: candidate
+    status: approved
     context_sensitive: true
     rationale: "Core book/software concept; retain where it names a formal machine contract."
 
   asses:
     proposed_action: REVIEW
-    status: needs_context
+    status: rejected
     context_sensitive: true
-    rationale: "The submitted token may be intentional or may be a typo for 'assess'. Do not silently correct; locate the source occurrence and verify."
-    note: "Do not promote until exact source spelling and intended meaning are confirmed."
+    rationale: "Owner decision D11 (2026-09-22): no source occurrence exists. A full search of book/ and book/fa/ on 2026-09-22 found the token only in this registry and in prompts/final-book-review.md; 'passes' inside a code fence in fa/part-2/11 is unrelated. The token is a transcription artifact, not a manuscript term."
+    note: "Closed 2026-09-22. Nothing to preserve or translate."
 
   opaque:
     proposed_action: RETAIN_ENGLISH

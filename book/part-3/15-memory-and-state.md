@@ -12,8 +12,7 @@ learning_objectives:
   - "Separate conversation history, working state, durable memory, and authoritative records"
   - "Design explicit memory write, recall, expiry, correction, and deletion policies"
   - "Test stale and cross-scope memory failures"
-prerequisites:
-  - "Chapter 14"
+prerequisites: [C05, C12]
 ---
 
 # Memory and State

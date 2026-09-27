@@ -12,8 +12,7 @@ learning_objectives:
   - "Model agents as controlled loops rather than independent authorities"
   - "Enforce goal versions, budgets, cancellation, and completion evidence"
   - "Test late events and actions after termination"
-prerequisites:
-  - "Chapter 16"
+prerequisites: [C09, C16]
 ---
 
 # Agents and Termination

@@ -12,11 +12,10 @@ learning_objectives:
   - "مدل‌کردن agent به‌عنوان حلقهٔ کنترل‌شده نه authority مستقل"
   - "اجرای goal version، بودجه، cancellation و completion evidence"
   - "آزمودن رویداد دیررس و اقدام پس از termination"
-prerequisites:
-  - "فصل 16"
+prerequisites: [C09, C16]
 language: "fa"
 translation_of: "part-3/17-agents-and-termination.md"
-source_sha256: "47edf39c49730ccc43f25ec41ed25a005132addcc40aecd503997f8994c2275c"
+source_sha256: "168d0cce7a68d25d8000ecd8ed3cb612bc9026ddac446f19ff4eba985d3b34cb"
 translation_status: "draft"
 last_translated: "2026-08-01"
 ---

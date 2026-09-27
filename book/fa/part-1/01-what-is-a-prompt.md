@@ -12,11 +12,10 @@ learning_objectives:
   - "تمایز پرامپت از آخرین پیام کاربر"
   - "شناسایی وظیفه، داده، کانتکست، محدودیت، مثال و انتظار خروجی"
   - "تشخیص ابهام در مرز رابط پیش از بازنویسی نثر"
-prerequisites:
-  - "توانایی خواندن JSON و برنامه‌های کوتاه Python یا Go"
+prerequisites: []
 language: "fa"
 translation_of: "part-1/01-what-is-a-prompt.md"
-source_sha256: "2edfa922e4ff81d51c73ee9f55859bf056dcbfd5081bbc74d1b9b1c708db3164"
+source_sha256: "59d0df083a5e3a6febc2ac52052f0b15bd49aa305d350aa10a133780813bff9e"
 translation_status: "draft"
 last_translated: "2026-07-29"
 ---

@@ -12,11 +12,10 @@ learning_objectives:
   - "تشخیص requirement‌هایی که prompt نمی‌تواند enforce کند"
   - "انتخاب control اصلی و پشتیبان بر اساس consequence"
   - "طراحی mechanism-first با استفادهٔ درست از language"
-prerequisites:
-  - "فصل 23"
+prerequisites: [C17, C18, C19, C20, C21, C22, C23]
 language: "fa"
 translation_of: "part-4/24-beyond-prompting-choosing-the-right-control.md"
-source_sha256: "c5079c8e970f395ec706c75ace36748aef57fb3c9bb217dd82df447ea96a10ed"
+source_sha256: "8c55f55f2764099f0b97bb36109741b969851294e525cd2fde9d3451b00239b6"
 translation_status: "draft"
 last_translated: "2026-08-01"
 ---

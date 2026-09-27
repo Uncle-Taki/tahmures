@@ -12,8 +12,7 @@ learning_objectives:
   - "Design explicit versioned hand-off envelopes"
   - "Preserve constraints, authority, artefact provenance, and uncertainty"
   - "Reject stale or authority-expanding transfers"
-prerequisites:
-  - "Chapter 17"
+prerequisites: [C08, C12, C17]
 ---
 
 # Hand-offs and Multi-step Systems

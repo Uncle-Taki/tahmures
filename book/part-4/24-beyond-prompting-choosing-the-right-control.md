@@ -12,8 +12,7 @@ learning_objectives:
   - "Recognise requirements that prompts cannot enforce"
   - "Select primary and supporting controls by consequence"
   - "Design mechanism-first systems that still use language well"
-prerequisites:
-  - "Chapter 23"
+prerequisites: [C17, C18, C19, C20, C21, C22, C23]
 ---
 
 # Beyond Prompting: Choosing the Right Control

@@ -12,8 +12,7 @@ learning_objectives:
   - "Explain why fluent output is not evidence of factual support"
   - "Design grounded-answer and abstention contracts"
   - "Evaluate unsupported claims across repeated trials"
-prerequisites:
-  - "Chapter 1 — What Is a Prompt?"
+prerequisites: [C01]
 ---
 
 # Models, Meaning, and Uncertainty

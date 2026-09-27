@@ -1,5 +1,5 @@
 ---
-title: "Part I — Language, Intent, and Models"
+title: "Part I — Language, Intent, and Reliable Instructions"
 summary: "Foundations for inspectable and testable model interactions."
 ---
 

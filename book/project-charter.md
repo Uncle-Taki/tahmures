@@ -170,6 +170,10 @@ expanded through invention. Useful starting sources are:
 
 ## 6. Complete Chapter Map
 
+The Part headings in this map are internal working names. Reader-facing part
+names are canonical in `editorial/part-titles.yml` and must remain aligned with
+the MkDocs navigation and part-index titles.
+
 ### Part I — Language, Intent, and Models
 
 | Chapter | Title | Engineering question | Principal failure owner |
@@ -208,11 +212,11 @@ expanded through invention. Useful starting sources are:
 | Chapter | Title | Engineering question | Principal failure owner |
 |---:|---|---|---|
 | 19 | Evaluation and Rubrics | How is success defined and measured across subjective or variable output? | Evaluator and requirements |
-| 20 | Experiments and Regression Tests | How can a change improve representative cases without reviving old failures? | Test design and versioning |
-| 21 | Prompt Injection and Untrusted Content | How should a system treat hostile instructions embedded in data? | Trust boundary |
-| 22 | Security Boundaries and Human Approval | Which controls must exist outside language, and when must a person decide? | Capability and approval design |
-| 23 | Production Operations and Model Change | How are cost, latency, quality, drift, and provider changes observed? | Operations |
-| 24 | Beyond Prompting: Reliable AI Systems | When must language yield to code, constraints, architecture, or judgement? | System and human decision |
+| 20 | Regression Testing for Prompted Systems | How can a change improve representative cases without reviving old failures? | Test design and versioning |
+| 21 | Prompt Injection and Trust Boundaries | How should a system treat hostile instructions embedded in data? | Trust boundary |
+| 22 | Approvals, Capabilities, and Consequential Action | Which controls must exist outside language, and when must a person decide? | Capability and approval design |
+| 23 | Production Operations and Drift | How are cost, latency, quality, drift, and provider changes observed? | Operations |
+| 24 | Beyond Prompting: Choosing the Right Control | When must language yield to code, constraints, architecture, or judgement? | System and human decision |
 
 Every chapter retains the full chapter contract in `meta-prompt.md`. Conceptual
 chapters may use small implementations, but their Python and Go subsections
@@ -347,11 +351,11 @@ documents an intentional development.
 flowchart TD
     C01["1 · What Is a Prompt?"] --> C02["2 · Models and Uncertainty"]
     C01 --> C03["3 · Requirements"]
-    C02 --> C04["4 · Prompt Anatomy"]
+    C01 --> C04["4 · Prompt Anatomy"]
     C03 --> C04
 
     C04 --> C05["5 · Instruction Hierarchy"]
-    C04 --> C06["6 · Examples"]
+    C03 --> C06["6 · Examples"]
     C04 --> C07["7 · Templates"]
     C04 --> C08["8 · Structured Outputs"]
 
@@ -359,7 +363,6 @@ flowchart TD
     C08 --> C09
     C03 --> C10["10 · Variance"]
     C06 --> C10
-    C09 --> C10
     C10 --> C11["11 · Creativity"]
 
     C04 --> C12["12 · Context Windows"]
@@ -399,9 +402,10 @@ flowchart TD
     C23 --> C24
 ```
 
-The graph represents conceptual prerequisites, not a prohibition on selective
-reading. Each chapter will link back to the minimum concepts needed for readers
-who enter out of order.
+The graph represents verified, load-bearing educational prerequisites, not a
+prohibition on selective reading. Supporting relationships are deliberately
+excluded. `editorial/chapter-dependencies.yml` is the machine-readable canonical
+model; the diagram and bilingual chapter metadata must match it.
 
 ## 11. Repository Architecture
 

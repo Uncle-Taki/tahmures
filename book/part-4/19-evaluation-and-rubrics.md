@@ -12,8 +12,7 @@ learning_objectives:
   - "Design anchored outcome rubrics"
   - "Separate model, system, and evaluator failures"
   - "Handle reviewer disagreement without hiding it in an average"
-prerequisites:
-  - "Chapter 18"
+prerequisites: [C03, C08, C10]
 ---
 
 # Evaluation and Rubrics

@@ -12,8 +12,7 @@ learning_objectives:
   - "Build versioned prompt-system regression suites"
   - "Classify improvements, regressions, and intended changes"
   - "Gate releases on protected cases and score floors"
-prerequisites:
-  - "Chapter 19"
+prerequisites: [C06, C19]
 ---
 
 # Regression Testing for Prompted Systems

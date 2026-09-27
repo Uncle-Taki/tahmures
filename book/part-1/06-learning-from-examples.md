@@ -12,9 +12,7 @@ learning_objectives:
   - "Choose examples that represent the target cases"
   - "Distinguish examples from governing rules"
   - "Evaluate few-shot prompts by class and subgroup"
-prerequisites:
-  - "Chapter 3 — Requirements Before Wording"
-  - "Chapter 5 — Instruction Hierarchy and Conflict"
+prerequisites: [C03]
 ---
 
 # Learning from Examples

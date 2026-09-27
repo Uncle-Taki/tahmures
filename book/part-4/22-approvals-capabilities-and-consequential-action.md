@@ -12,8 +12,7 @@ learning_objectives:
   - "Represent authority as narrow capabilities"
   - "Bind approval to exact action arguments and expiry"
   - "Design auditable denial and escalation paths"
-prerequisites:
-  - "Chapter 21"
+prerequisites: [C16, C21]
 ---
 
 # Approvals, Capabilities, and Consequential Action

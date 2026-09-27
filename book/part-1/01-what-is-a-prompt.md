@@ -12,8 +12,7 @@ learning_objectives:
   - "Distinguish a prompt from the latest user message"
   - "Identify task, data, context, constraints, examples, and output expectations"
   - "Diagnose ambiguity at the interface before rewriting prose"
-prerequisites:
-  - "Ability to read JSON and short Python or Go programs"
+prerequisites: []
 ---
 
 # What Is a Prompt?

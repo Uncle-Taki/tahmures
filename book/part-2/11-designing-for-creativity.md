@@ -12,8 +12,7 @@ learning_objectives:
   - "Separate divergent exploration from convergent acceptance"
   - "Evaluate novelty alongside feasibility, relevance, and harm"
   - "Use committed human rubric data without model self-grading"
-prerequisites:
-  - "Chapter 10"
+prerequisites: [C10]
 ---
 
 # Designing for Creativity

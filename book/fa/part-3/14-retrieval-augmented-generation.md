@@ -12,11 +12,10 @@ learning_objectives:
   - "سنجش کیفیت retrieval پیش از کیفیت پاسخ"
   - "حفظ شناسهٔ chunk، scope، freshness و provenance"
   - "رد پاسخ ظاهراً درست که شاهد نادرست پشتیبان آن است"
-prerequisites:
-  - "فصل 13"
+prerequisites: [C13]
 language: "fa"
 translation_of: "part-3/14-retrieval-augmented-generation.md"
-source_sha256: "6acebbbd19f9fc282cfefccb1b7dacbe5f4a5e61dbf694212c18fa05ebfed347"
+source_sha256: "53f11185bd192ea2c854deb3940c81ba2ea809e6da02da5f8fc2ae6d02c83fb1"
 translation_status: "draft"
 last_translated: "2026-08-01"
 ---

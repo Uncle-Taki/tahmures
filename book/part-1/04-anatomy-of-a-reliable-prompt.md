@@ -12,9 +12,7 @@ learning_objectives:
   - "Identify the functional components of a prompt"
   - "Separate instructions from limited-authority data"
   - "Design and validate an output contract"
-prerequisites:
-  - "Chapter 1 — What Is a Prompt?"
-  - "Chapter 3 — Requirements Before Wording"
+prerequisites: [C01, C03]
 ---
 
 # Anatomy of a Reliable Prompt

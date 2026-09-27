@@ -12,12 +12,10 @@ learning_objectives:
   - "تبدیل هدف مبهم به نیازمندی قابل‌اندازه‌گیری"
   - "جداسازی محدودیت سخت از ترجیح"
   - "انتخاب معیار ارزیابی پیش از مقایسهٔ variant‌های پرامپت"
-prerequisites:
-  - "فصل ۱ — پرامپت چیست؟"
-  - "فصل ۲ — مدل‌ها، معنا و عدم‌قطعیت"
+prerequisites: [C01]
 language: "fa"
 translation_of: "part-1/03-requirements-before-wording.md"
-source_sha256: "2d0aeeaa04008136b3ee6742cf7940b5c004d55d3a4d73c80deb76b1aec7ad27"
+source_sha256: "0e7a2804c349f8014aaa8e11481368b18387caca25e57c0fbe5caca1f4a0eb5a"
 translation_status: "draft"
 last_translated: "2026-07-30"
 ---
