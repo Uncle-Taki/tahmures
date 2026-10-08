@@ -1,0 +1,2117 @@
+{
+  "schema_version": 1,
+  "contract": "D27: both changed_versions values must be present JSON arrays containing only strings. Equality is exact, case-sensitive set equality; order and duplicates do not matter. Invalid structures score 0. No dimension-name whitelist or new metrics.",
+  "oracle": "D27 attribution verdicts; other fields and language-specific diagnostics captured from unchanged Python/Go runtimes.",
+  "cases": [
+    {
+      "id": "exact_single",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": [
+          "prompt"
+        ]
+      },
+      "response": "{\"passed\": false, \"findings\": [], \"changed_versions\": [\"prompt\"]}",
+      "attribution": 1.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": true,
+        "score": 1.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 1.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': ['prompt']}; received={'passed': False, 'findings': [], 'changed_versions': ['prompt']}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": true,
+        "score": 1.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 1.0
+        },
+        "reason": "expected=map[changed_versions:[prompt] findings:[] passed:false]; received=map[changed_versions:[prompt] findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "exact_multiple",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": [
+          "model",
+          "prompt"
+        ]
+      },
+      "response": "{\"passed\": false, \"findings\": [], \"changed_versions\": [\"model\", \"prompt\"]}",
+      "attribution": 1.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": true,
+        "score": 1.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 1.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': ['model', 'prompt']}; received={'passed': False, 'findings': [], 'changed_versions': ['model', 'prompt']}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": true,
+        "score": 1.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 1.0
+        },
+        "reason": "expected=map[changed_versions:[model prompt] findings:[] passed:false]; received=map[changed_versions:[model prompt] findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "reordered",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": [
+          "model",
+          "prompt"
+        ]
+      },
+      "response": "{\"passed\": false, \"findings\": [], \"changed_versions\": [\"prompt\", \"model\"]}",
+      "attribution": 1.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": true,
+        "score": 1.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 1.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': ['model', 'prompt']}; received={'passed': False, 'findings': [], 'changed_versions': ['prompt', 'model']}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": true,
+        "score": 1.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 1.0
+        },
+        "reason": "expected=map[changed_versions:[model prompt] findings:[] passed:false]; received=map[changed_versions:[prompt model] findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "duplicate_actual",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": [
+          "prompt"
+        ]
+      },
+      "response": "{\"passed\": false, \"findings\": [], \"changed_versions\": [\"prompt\", \"prompt\"]}",
+      "attribution": 1.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": true,
+        "score": 1.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 1.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': ['prompt']}; received={'passed': False, 'findings': [], 'changed_versions': ['prompt', 'prompt']}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": true,
+        "score": 1.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 1.0
+        },
+        "reason": "expected=map[changed_versions:[prompt] findings:[] passed:false]; received=map[changed_versions:[prompt prompt] findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "duplicate_expected",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": [
+          "prompt",
+          "prompt"
+        ]
+      },
+      "response": "{\"passed\": false, \"findings\": [], \"changed_versions\": [\"prompt\"]}",
+      "attribution": 1.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": true,
+        "score": 1.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 1.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': ['prompt', 'prompt']}; received={'passed': False, 'findings': [], 'changed_versions': ['prompt']}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": true,
+        "score": 1.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 1.0
+        },
+        "reason": "expected=map[changed_versions:[prompt prompt] findings:[] passed:false]; received=map[changed_versions:[prompt] findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "duplicates_both",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": [
+          "model",
+          "prompt",
+          "model"
+        ]
+      },
+      "response": "{\"passed\": false, \"findings\": [], \"changed_versions\": [\"prompt\", \"model\", \"prompt\"]}",
+      "attribution": 1.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": true,
+        "score": 1.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 1.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': ['model', 'prompt', 'model']}; received={'passed': False, 'findings': [], 'changed_versions': ['prompt', 'model', 'prompt']}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": true,
+        "score": 1.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 1.0
+        },
+        "reason": "expected=map[changed_versions:[model prompt model] findings:[] passed:false]; received=map[changed_versions:[prompt model prompt] findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "extra_one",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": [
+          "prompt"
+        ]
+      },
+      "response": "{\"passed\": false, \"findings\": [], \"changed_versions\": [\"prompt\", \"temperature\"]}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': ['prompt']}; received={'passed': False, 'findings': [], 'changed_versions': ['prompt', 'temperature']}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[prompt] findings:[] passed:false]; received=map[changed_versions:[prompt temperature] findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "extra_multiple",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": [
+          "prompt"
+        ]
+      },
+      "response": "{\"passed\": false, \"findings\": [], \"changed_versions\": [\"prompt\", \"temperature\", \"region\"]}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': ['prompt']}; received={'passed': False, 'findings': [], 'changed_versions': ['prompt', 'temperature', 'region']}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[prompt] findings:[] passed:false]; received=map[changed_versions:[prompt temperature region] findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "extra_duplicated",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": [
+          "prompt"
+        ]
+      },
+      "response": "{\"passed\": false, \"findings\": [], \"changed_versions\": [\"prompt\", \"temperature\", \"temperature\"]}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': ['prompt']}; received={'passed': False, 'findings': [], 'changed_versions': ['prompt', 'temperature', 'temperature']}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[prompt] findings:[] passed:false]; received=map[changed_versions:[prompt temperature temperature] findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "missing_one",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": [
+          "model",
+          "prompt"
+        ]
+      },
+      "response": "{\"passed\": false, \"findings\": [], \"changed_versions\": [\"prompt\"]}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': ['model', 'prompt']}; received={'passed': False, 'findings': [], 'changed_versions': ['prompt']}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[model prompt] findings:[] passed:false]; received=map[changed_versions:[prompt] findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "missing_all",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": [
+          "prompt"
+        ]
+      },
+      "response": "{\"passed\": false, \"findings\": [], \"changed_versions\": []}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': ['prompt']}; received={'passed': False, 'findings': [], 'changed_versions': []}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[prompt] findings:[] passed:false]; received=map[changed_versions:[] findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "substituted",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": [
+          "prompt"
+        ]
+      },
+      "response": "{\"passed\": false, \"findings\": [], \"changed_versions\": [\"model\"]}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': ['prompt']}; received={'passed': False, 'findings': [], 'changed_versions': ['model']}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[prompt] findings:[] passed:false]; received=map[changed_versions:[model] findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "case_sensitive",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": [
+          "prompt"
+        ]
+      },
+      "response": "{\"passed\": false, \"findings\": [], \"changed_versions\": [\"Prompt\"]}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': ['prompt']}; received={'passed': False, 'findings': [], 'changed_versions': ['Prompt']}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[prompt] findings:[] passed:false]; received=map[changed_versions:[Prompt] findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "whitespace_not_normalised",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": [
+          "prompt"
+        ]
+      },
+      "response": "{\"passed\": false, \"findings\": [], \"changed_versions\": [\" prompt\"]}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': ['prompt']}; received={'passed': False, 'findings': [], 'changed_versions': [' prompt']}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[prompt] findings:[] passed:false]; received=map[changed_versions:[ prompt] findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "healthy_exact",
+      "expected": {
+        "passed": true,
+        "findings": [],
+        "changed_versions": []
+      },
+      "response": "{\"passed\": true, \"findings\": [], \"changed_versions\": []}",
+      "attribution": 1.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": true,
+        "score": 1.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 1.0
+        },
+        "reason": "expected={'passed': True, 'findings': [], 'changed_versions': []}; received={'passed': True, 'findings': [], 'changed_versions': []}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": true,
+        "score": 1.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 1.0
+        },
+        "reason": "expected=map[changed_versions:[] findings:[] passed:true]; received=map[changed_versions:[] findings:[] passed:true]"
+      }
+    },
+    {
+      "id": "healthy_fabricated",
+      "expected": {
+        "passed": true,
+        "findings": [],
+        "changed_versions": []
+      },
+      "response": "{\"passed\": true, \"findings\": [], \"changed_versions\": [\"prompt\"]}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': True, 'findings': [], 'changed_versions': []}; received={'passed': True, 'findings': [], 'changed_versions': ['prompt']}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[] findings:[] passed:true]; received=map[changed_versions:[prompt] findings:[] passed:true]"
+      }
+    },
+    {
+      "id": "healthy_multiple_fabricated",
+      "expected": {
+        "passed": true,
+        "findings": [],
+        "changed_versions": []
+      },
+      "response": "{\"passed\": true, \"findings\": [], \"changed_versions\": [\"prompt\", \"model\"]}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': True, 'findings': [], 'changed_versions': []}; received={'passed': True, 'findings': [], 'changed_versions': ['prompt', 'model']}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[] findings:[] passed:true]; received=map[changed_versions:[prompt model] findings:[] passed:true]"
+      }
+    },
+    {
+      "id": "unknown_expected_dimension_no_whitelist",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": [
+          "temperature"
+        ]
+      },
+      "response": "{\"passed\": false, \"findings\": [], \"changed_versions\": [\"temperature\"]}",
+      "attribution": 1.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": true,
+        "score": 1.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 1.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': ['temperature']}; received={'passed': False, 'findings': [], 'changed_versions': ['temperature']}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": true,
+        "score": 1.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 1.0
+        },
+        "reason": "expected=map[changed_versions:[temperature] findings:[] passed:false]; received=map[changed_versions:[temperature] findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "unicode_dimension",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": [
+          "\u0646\u0633\u062e\u0647"
+        ]
+      },
+      "response": "{\"passed\": false, \"findings\": [], \"changed_versions\": [\"\\u0646\\u0633\\u062e\\u0647\"]}",
+      "attribution": 1.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": true,
+        "score": 1.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 1.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': ['\u0646\u0633\u062e\u0647']}; received={'passed': False, 'findings': [], 'changed_versions': ['\u0646\u0633\u062e\u0647']}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": true,
+        "score": 1.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 1.0
+        },
+        "reason": "expected=map[changed_versions:[\u0646\u0633\u062e\u0647] findings:[] passed:false]; received=map[changed_versions:[\u0646\u0633\u062e\u0647] findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "malformed_actual_changed_null",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": [
+          "prompt"
+        ]
+      },
+      "response": "{\"passed\": false, \"findings\": [], \"changed_versions\": null}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': ['prompt']}; received={'passed': False, 'findings': [], 'changed_versions': None}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[prompt] findings:[] passed:false]; received=map[changed_versions:<nil> findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "malformed_actual_healthy_null",
+      "expected": {
+        "passed": true,
+        "findings": [],
+        "changed_versions": []
+      },
+      "response": "{\"passed\": true, \"findings\": [], \"changed_versions\": null}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': True, 'findings': [], 'changed_versions': []}; received={'passed': True, 'findings': [], 'changed_versions': None}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[] findings:[] passed:true]; received=map[changed_versions:<nil> findings:[] passed:true]"
+      }
+    },
+    {
+      "id": "malformed_expected_null",
+      "expected": {
+        "passed": true,
+        "findings": [],
+        "changed_versions": null
+      },
+      "response": "{\"passed\": true, \"findings\": [], \"changed_versions\": []}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': True, 'findings': [], 'changed_versions': None}; received={'passed': True, 'findings': [], 'changed_versions': []}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:<nil> findings:[] passed:true]; received=map[changed_versions:[] findings:[] passed:true]"
+      }
+    },
+    {
+      "id": "malformed_actual_changed_string",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": [
+          "prompt"
+        ]
+      },
+      "response": "{\"passed\": false, \"findings\": [], \"changed_versions\": \"prompt\"}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': ['prompt']}; received={'passed': False, 'findings': [], 'changed_versions': 'prompt'}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[prompt] findings:[] passed:false]; received=map[changed_versions:prompt findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "malformed_actual_healthy_string",
+      "expected": {
+        "passed": true,
+        "findings": [],
+        "changed_versions": []
+      },
+      "response": "{\"passed\": true, \"findings\": [], \"changed_versions\": \"prompt\"}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': True, 'findings': [], 'changed_versions': []}; received={'passed': True, 'findings': [], 'changed_versions': 'prompt'}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[] findings:[] passed:true]; received=map[changed_versions:prompt findings:[] passed:true]"
+      }
+    },
+    {
+      "id": "malformed_expected_string",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": "prompt"
+      },
+      "response": "{\"passed\": false, \"findings\": [], \"changed_versions\": []}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': 'prompt'}; received={'passed': False, 'findings': [], 'changed_versions': []}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:prompt findings:[] passed:false]; received=map[changed_versions:[] findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "malformed_actual_changed_object",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": [
+          "prompt"
+        ]
+      },
+      "response": "{\"passed\": false, \"findings\": [], \"changed_versions\": {\"prompt\": true}}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': ['prompt']}; received={'passed': False, 'findings': [], 'changed_versions': {'prompt': True}}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[prompt] findings:[] passed:false]; received=map[changed_versions:map[prompt:true] findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "malformed_actual_healthy_object",
+      "expected": {
+        "passed": true,
+        "findings": [],
+        "changed_versions": []
+      },
+      "response": "{\"passed\": true, \"findings\": [], \"changed_versions\": {\"prompt\": true}}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': True, 'findings': [], 'changed_versions': []}; received={'passed': True, 'findings': [], 'changed_versions': {'prompt': True}}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[] findings:[] passed:true]; received=map[changed_versions:map[prompt:true] findings:[] passed:true]"
+      }
+    },
+    {
+      "id": "malformed_expected_object",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": {
+          "prompt": true
+        }
+      },
+      "response": "{\"passed\": false, \"findings\": [], \"changed_versions\": []}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': {'prompt': True}}; received={'passed': False, 'findings': [], 'changed_versions': []}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:map[prompt:true] findings:[] passed:false]; received=map[changed_versions:[] findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "malformed_actual_changed_number",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": [
+          "prompt"
+        ]
+      },
+      "response": "{\"passed\": false, \"findings\": [], \"changed_versions\": 1}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': ['prompt']}; received={'passed': False, 'findings': [], 'changed_versions': 1}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[prompt] findings:[] passed:false]; received=map[changed_versions:1 findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "malformed_actual_healthy_number",
+      "expected": {
+        "passed": true,
+        "findings": [],
+        "changed_versions": []
+      },
+      "response": "{\"passed\": true, \"findings\": [], \"changed_versions\": 1}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': True, 'findings': [], 'changed_versions': []}; received={'passed': True, 'findings': [], 'changed_versions': 1}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[] findings:[] passed:true]; received=map[changed_versions:1 findings:[] passed:true]"
+      }
+    },
+    {
+      "id": "malformed_expected_number",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": 1
+      },
+      "response": "{\"passed\": false, \"findings\": [], \"changed_versions\": []}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': 1}; received={'passed': False, 'findings': [], 'changed_versions': []}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:1 findings:[] passed:false]; received=map[changed_versions:[] findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "malformed_actual_changed_boolean",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": [
+          "prompt"
+        ]
+      },
+      "response": "{\"passed\": false, \"findings\": [], \"changed_versions\": true}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': ['prompt']}; received={'passed': False, 'findings': [], 'changed_versions': True}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[prompt] findings:[] passed:false]; received=map[changed_versions:true findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "malformed_actual_healthy_boolean",
+      "expected": {
+        "passed": true,
+        "findings": [],
+        "changed_versions": []
+      },
+      "response": "{\"passed\": true, \"findings\": [], \"changed_versions\": true}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': True, 'findings': [], 'changed_versions': []}; received={'passed': True, 'findings': [], 'changed_versions': True}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[] findings:[] passed:true]; received=map[changed_versions:true findings:[] passed:true]"
+      }
+    },
+    {
+      "id": "malformed_expected_boolean",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": true
+      },
+      "response": "{\"passed\": false, \"findings\": [], \"changed_versions\": []}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': True}; received={'passed': False, 'findings': [], 'changed_versions': []}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:true findings:[] passed:false]; received=map[changed_versions:[] findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "malformed_actual_changed_non_string_number",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": [
+          "prompt"
+        ]
+      },
+      "response": "{\"passed\": false, \"findings\": [], \"changed_versions\": [\"prompt\", 1]}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': ['prompt']}; received={'passed': False, 'findings': [], 'changed_versions': ['prompt', 1]}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[prompt] findings:[] passed:false]; received=map[changed_versions:[prompt 1] findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "malformed_actual_healthy_non_string_number",
+      "expected": {
+        "passed": true,
+        "findings": [],
+        "changed_versions": []
+      },
+      "response": "{\"passed\": true, \"findings\": [], \"changed_versions\": [\"prompt\", 1]}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': True, 'findings': [], 'changed_versions': []}; received={'passed': True, 'findings': [], 'changed_versions': ['prompt', 1]}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[] findings:[] passed:true]; received=map[changed_versions:[prompt 1] findings:[] passed:true]"
+      }
+    },
+    {
+      "id": "malformed_expected_non_string_number",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": [
+          "prompt",
+          1
+        ]
+      },
+      "response": "{\"passed\": false, \"findings\": [], \"changed_versions\": []}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': ['prompt', 1]}; received={'passed': False, 'findings': [], 'changed_versions': []}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[prompt 1] findings:[] passed:false]; received=map[changed_versions:[] findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "malformed_actual_changed_non_string_boolean",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": [
+          "prompt"
+        ]
+      },
+      "response": "{\"passed\": false, \"findings\": [], \"changed_versions\": [\"prompt\", false]}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': ['prompt']}; received={'passed': False, 'findings': [], 'changed_versions': ['prompt', False]}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[prompt] findings:[] passed:false]; received=map[changed_versions:[prompt false] findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "malformed_actual_healthy_non_string_boolean",
+      "expected": {
+        "passed": true,
+        "findings": [],
+        "changed_versions": []
+      },
+      "response": "{\"passed\": true, \"findings\": [], \"changed_versions\": [\"prompt\", false]}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': True, 'findings': [], 'changed_versions': []}; received={'passed': True, 'findings': [], 'changed_versions': ['prompt', False]}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[] findings:[] passed:true]; received=map[changed_versions:[prompt false] findings:[] passed:true]"
+      }
+    },
+    {
+      "id": "malformed_expected_non_string_boolean",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": [
+          "prompt",
+          false
+        ]
+      },
+      "response": "{\"passed\": false, \"findings\": [], \"changed_versions\": []}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': ['prompt', False]}; received={'passed': False, 'findings': [], 'changed_versions': []}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[prompt false] findings:[] passed:false]; received=map[changed_versions:[] findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "malformed_actual_changed_non_string_null",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": [
+          "prompt"
+        ]
+      },
+      "response": "{\"passed\": false, \"findings\": [], \"changed_versions\": [\"prompt\", null]}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': ['prompt']}; received={'passed': False, 'findings': [], 'changed_versions': ['prompt', None]}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[prompt] findings:[] passed:false]; received=map[changed_versions:[prompt <nil>] findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "malformed_actual_healthy_non_string_null",
+      "expected": {
+        "passed": true,
+        "findings": [],
+        "changed_versions": []
+      },
+      "response": "{\"passed\": true, \"findings\": [], \"changed_versions\": [\"prompt\", null]}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': True, 'findings': [], 'changed_versions': []}; received={'passed': True, 'findings': [], 'changed_versions': ['prompt', None]}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[] findings:[] passed:true]; received=map[changed_versions:[prompt <nil>] findings:[] passed:true]"
+      }
+    },
+    {
+      "id": "malformed_expected_non_string_null",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": [
+          "prompt",
+          null
+        ]
+      },
+      "response": "{\"passed\": false, \"findings\": [], \"changed_versions\": []}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': ['prompt', None]}; received={'passed': False, 'findings': [], 'changed_versions': []}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[prompt <nil>] findings:[] passed:false]; received=map[changed_versions:[] findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "malformed_actual_changed_nested_array",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": [
+          "prompt"
+        ]
+      },
+      "response": "{\"passed\": false, \"findings\": [], \"changed_versions\": [[\"prompt\"]]}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': ['prompt']}; received={'passed': False, 'findings': [], 'changed_versions': [['prompt']]}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[prompt] findings:[] passed:false]; received=map[changed_versions:[[prompt]] findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "malformed_actual_healthy_nested_array",
+      "expected": {
+        "passed": true,
+        "findings": [],
+        "changed_versions": []
+      },
+      "response": "{\"passed\": true, \"findings\": [], \"changed_versions\": [[\"prompt\"]]}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': True, 'findings': [], 'changed_versions': []}; received={'passed': True, 'findings': [], 'changed_versions': [['prompt']]}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[] findings:[] passed:true]; received=map[changed_versions:[[prompt]] findings:[] passed:true]"
+      }
+    },
+    {
+      "id": "malformed_expected_nested_array",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": [
+          [
+            "prompt"
+          ]
+        ]
+      },
+      "response": "{\"passed\": false, \"findings\": [], \"changed_versions\": []}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': [['prompt']]}; received={'passed': False, 'findings': [], 'changed_versions': []}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[[prompt]] findings:[] passed:false]; received=map[changed_versions:[] findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "malformed_actual_changed_nested_object",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": [
+          "prompt"
+        ]
+      },
+      "response": "{\"passed\": false, \"findings\": [], \"changed_versions\": [{\"dimension\": \"prompt\"}]}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': ['prompt']}; received={'passed': False, 'findings': [], 'changed_versions': [{'dimension': 'prompt'}]}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[prompt] findings:[] passed:false]; received=map[changed_versions:[map[dimension:prompt]] findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "malformed_actual_healthy_nested_object",
+      "expected": {
+        "passed": true,
+        "findings": [],
+        "changed_versions": []
+      },
+      "response": "{\"passed\": true, \"findings\": [], \"changed_versions\": [{\"dimension\": \"prompt\"}]}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': True, 'findings': [], 'changed_versions': []}; received={'passed': True, 'findings': [], 'changed_versions': [{'dimension': 'prompt'}]}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[] findings:[] passed:true]; received=map[changed_versions:[map[dimension:prompt]] findings:[] passed:true]"
+      }
+    },
+    {
+      "id": "malformed_expected_nested_object",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": [
+          {
+            "dimension": "prompt"
+          }
+        ]
+      },
+      "response": "{\"passed\": false, \"findings\": [], \"changed_versions\": []}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': [{'dimension': 'prompt'}]}; received={'passed': False, 'findings': [], 'changed_versions': []}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[map[dimension:prompt]] findings:[] passed:false]; received=map[changed_versions:[] findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "missing_actual_changed",
+      "expected": {
+        "passed": false,
+        "findings": [],
+        "changed_versions": [
+          "prompt"
+        ]
+      },
+      "response": "{\"passed\": false, \"findings\": []}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': False, 'findings': [], 'changed_versions': ['prompt']}; received={'passed': False, 'findings': []}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[prompt] findings:[] passed:false]; received=map[findings:[] passed:false]"
+      }
+    },
+    {
+      "id": "missing_actual_healthy",
+      "expected": {
+        "passed": true,
+        "findings": [],
+        "changed_versions": []
+      },
+      "response": "{\"passed\": true, \"findings\": []}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': True, 'findings': [], 'changed_versions': []}; received={'passed': True, 'findings': []}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[] findings:[] passed:true]; received=map[findings:[] passed:true]"
+      }
+    },
+    {
+      "id": "missing_expected",
+      "expected": {
+        "passed": true,
+        "findings": []
+      },
+      "response": "{\"passed\": true, \"findings\": [], \"changed_versions\": []}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': True, 'findings': []}; received={'passed': True, 'findings': [], 'changed_versions': []}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[findings:[] passed:true]; received=map[changed_versions:[] findings:[] passed:true]"
+      }
+    },
+    {
+      "id": "invalid_json",
+      "expected": {
+        "passed": true,
+        "findings": [],
+        "changed_versions": []
+      },
+      "response": "not json",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 0.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': True, 'findings': [], 'changed_versions': []}; received={}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 0,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[] findings:[] passed:true]; received=map[]"
+      }
+    },
+    {
+      "id": "null_root",
+      "expected": {
+        "passed": true,
+        "findings": [],
+        "changed_versions": []
+      },
+      "response": "null",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 0.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': True, 'findings': [], 'changed_versions': []}; received={}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 0,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[] findings:[] passed:true]; received=map[]"
+      }
+    },
+    {
+      "id": "array_root",
+      "expected": {
+        "passed": true,
+        "findings": [],
+        "changed_versions": []
+      },
+      "response": "[]",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 0.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': True, 'findings': [], 'changed_versions': []}; received={}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 0,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[] findings:[] passed:true]; received=map[]"
+      }
+    },
+    {
+      "id": "scalar_root",
+      "expected": {
+        "passed": true,
+        "findings": [],
+        "changed_versions": []
+      },
+      "response": "true",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 0.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': True, 'findings': [], 'changed_versions': []}; received={}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 0,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[] findings:[] passed:true]; received=map[]"
+      }
+    },
+    {
+      "id": "wrong_root_structure",
+      "expected": {
+        "passed": true,
+        "findings": [],
+        "changed_versions": []
+      },
+      "response": "[ {\"changed_versions\": []} ]",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 0.0,
+          "finding_recall": 1.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': True, 'findings': [], 'changed_versions': []}; received={}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 0,
+          "finding_recall": 1,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[] findings:[] passed:true]; received=map[]"
+      }
+    },
+    {
+      "id": "committed_regional_drift_aggregate_only",
+      "expected": {
+        "passed": false,
+        "findings": [
+          "tag_quality:border"
+        ],
+        "changed_versions": [
+          "model"
+        ]
+      },
+      "response": "{\"passed\":true,\"findings\":[],\"changed_versions\":[]}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 0.0,
+          "finding_recall": 0.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': False, 'findings': ['tag_quality:border'], 'changed_versions': ['model']}; received={'passed': True, 'findings': [], 'changed_versions': []}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 0,
+          "finding_recall": 0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[model] findings:[tag_quality:border] passed:false]; received=map[changed_versions:[] findings:[] passed:true]"
+      }
+    },
+    {
+      "id": "committed_regional_drift_versioned_segments",
+      "expected": {
+        "passed": false,
+        "findings": [
+          "tag_quality:border"
+        ],
+        "changed_versions": [
+          "model"
+        ]
+      },
+      "response": "{\"passed\":false,\"findings\":[\"tag_quality:border\"],\"changed_versions\":[\"model\"]}",
+      "attribution": 1.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": true,
+        "score": 1.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 1.0
+        },
+        "reason": "expected={'passed': False, 'findings': ['tag_quality:border'], 'changed_versions': ['model']}; received={'passed': False, 'findings': ['tag_quality:border'], 'changed_versions': ['model']}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": true,
+        "score": 1.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 1.0
+        },
+        "reason": "expected=map[changed_versions:[model] findings:[tag_quality:border] passed:false]; received=map[changed_versions:[model] findings:[tag_quality:border] passed:false]"
+      }
+    },
+    {
+      "id": "committed_cost_drift_aggregate_only",
+      "expected": {
+        "passed": false,
+        "findings": [
+          "cost_slo"
+        ],
+        "changed_versions": [
+          "prompt"
+        ]
+      },
+      "response": "{\"passed\":true,\"findings\":[],\"changed_versions\":[]}",
+      "attribution": 0.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 0.0,
+          "finding_recall": 0.0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected={'passed': False, 'findings': ['cost_slo'], 'changed_versions': ['prompt']}; received={'passed': True, 'findings': [], 'changed_versions': []}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": false,
+        "score": 0.0,
+        "metrics": {
+          "drift_decision_accuracy": 0,
+          "finding_recall": 0,
+          "version_attribution": 0.0
+        },
+        "reason": "expected=map[changed_versions:[prompt] findings:[cost_slo] passed:false]; received=map[changed_versions:[] findings:[] passed:true]"
+      }
+    },
+    {
+      "id": "committed_cost_drift_versioned_segments",
+      "expected": {
+        "passed": false,
+        "findings": [
+          "cost_slo"
+        ],
+        "changed_versions": [
+          "prompt"
+        ]
+      },
+      "response": "{\"passed\":false,\"findings\":[\"cost_slo\"],\"changed_versions\":[\"prompt\"]}",
+      "attribution": 1.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": true,
+        "score": 1.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 1.0
+        },
+        "reason": "expected={'passed': False, 'findings': ['cost_slo'], 'changed_versions': ['prompt']}; received={'passed': False, 'findings': ['cost_slo'], 'changed_versions': ['prompt']}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": true,
+        "score": 1.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 1.0
+        },
+        "reason": "expected=map[changed_versions:[prompt] findings:[cost_slo] passed:false]; received=map[changed_versions:[prompt] findings:[cost_slo] passed:false]"
+      }
+    },
+    {
+      "id": "committed_healthy_aggregate_only",
+      "expected": {
+        "passed": true,
+        "findings": [],
+        "changed_versions": []
+      },
+      "response": "{\"passed\":true,\"findings\":[],\"changed_versions\":[]}",
+      "attribution": 1.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": true,
+        "score": 1.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 1.0
+        },
+        "reason": "expected={'passed': True, 'findings': [], 'changed_versions': []}; received={'passed': True, 'findings': [], 'changed_versions': []}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": true,
+        "score": 1.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 1.0
+        },
+        "reason": "expected=map[changed_versions:[] findings:[] passed:true]; received=map[changed_versions:[] findings:[] passed:true]"
+      }
+    },
+    {
+      "id": "committed_healthy_versioned_segments",
+      "expected": {
+        "passed": true,
+        "findings": [],
+        "changed_versions": []
+      },
+      "response": "{\"passed\":true,\"findings\":[],\"changed_versions\":[]}",
+      "attribution": 1.0,
+      "result_python": {
+        "evaluator": "operational_drift",
+        "passed": true,
+        "score": 1.0,
+        "metrics": {
+          "drift_decision_accuracy": 1.0,
+          "finding_recall": 1.0,
+          "version_attribution": 1.0
+        },
+        "reason": "expected={'passed': True, 'findings': [], 'changed_versions': []}; received={'passed': True, 'findings': [], 'changed_versions': []}"
+      },
+      "result_go": {
+        "evaluator": "operational_drift",
+        "passed": true,
+        "score": 1.0,
+        "metrics": {
+          "drift_decision_accuracy": 1,
+          "finding_recall": 1,
+          "version_attribution": 1.0
+        },
+        "reason": "expected=map[changed_versions:[] findings:[] passed:true]; received=map[changed_versions:[] findings:[] passed:true]"
+      }
+    }
+  ]
+}

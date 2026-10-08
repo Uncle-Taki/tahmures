@@ -138,7 +138,16 @@ The integrity of text, adjectives, and adverbs is mandatory.
 
 ## Human review protection
 
-Chapters 01–09 are the human-reviewed Persian calibration corpus.
+When `.agents/human_review_*.txt` or equivalent notes target Persian chapters,
+route reconciliation through `$mehdi-human-review`. These are human editorial
+evidence, not final approval of the resulting machine repairs. Frozen English
+controls semantic meaning. Repair flagged passages and direct consequences,
+preserve protected content, and run the full gate after a repair batch. Do not
+use this route for wholesale retranslation.
+
+Chapters 01–09 have historical human-review evidence and form the Persian
+calibration corpus. Their current resynchronized/repaired revisions require
+renewed explicit human signoff before that history certifies the current text.
 
 Do not retranslate them wholesale.
 
@@ -147,6 +156,21 @@ Use `editorial/fa-review/regression-cases.yml` to detect recurrence and
 
 Chapters 10–24 are not human-reviewed. Apply the validated failure classes to them
 proactively, but do not call them human-reviewed after a machine pass.
+
+Preserve `editorial/review-status.yml` during machine reconciliation and
+supervisory acceptance. Only a separate post-signoff metadata step may record
+current human approval, with revision-specific evidence. Persian-only edits do
+not change `source_sha256`.
+
+## Mythic narrative preflight
+
+For a tale change that adds or replaces a named character, introduces a mythic
+place, changes a canonical relationship, or localizes a recurring name, use
+`$tahmures-narrative` with `$mehdi-narrative` before editing. Classify direct
+*Shahnameh* evidence, later tradition, and project fiction separately. Check
+`book/narrative-continuity.md`, the tale's technical failure owner, the
+English/Persian counterpart, and the accepted ancient-world register. Do not
+perform a cast migration merely because a source character is available.
 
 ## References
 

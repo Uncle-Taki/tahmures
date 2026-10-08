@@ -5,7 +5,7 @@ chapter: 24
 part: "Part IV — Evaluation, Security, and Production"
 summary: "Choose language, schemas, deterministic code, database constraints, access controls, and human judgement by requirement."
 maturity: "draft"
-last_reviewed: "2026-08-01"
+last_reviewed: "2026-09-28"
 narrative_episode: "The Lock No Sentence Could Hold"
 narrative_origin: "original-teaching-fiction"
 learning_objectives:
@@ -19,7 +19,7 @@ prerequisites: [C17, C18, C19, C20, C21, C22, C23]
 
 ## Learning Objectives
 
-By the end of this chapter, you can recognise requirements that prompts cannot enforce, select primary and supporting controls by consequence, and design mechanism-first systems that still use language well. The chapter treats control selection beyond prompting as an engineering responsibility with observable decisions, explicit owners, and reproducible evidence.
+By the end of this chapter, you can take any requirement of a language-model system and decide, explicitly, which layer owns its enforcement: the prompt, a schema, deterministic code, an authoritative store, an access-control boundary, or a human judgement. You can name the primary control, the supporting controls, and the verification that proves the arrangement works. This is the capstone of the book, and its working claim is the whole arc in one sentence: reliable systems assign each invariant to the layer capable of enforcing it, and language — used well — is one of those layers, not a substitute for the others.
 
 ## The Tale of Tahmures
 
@@ -29,17 +29,17 @@ In the workshop of mechanical scribes, Tahmures placed a wooden lock, a ledger, 
 
 ### The Request
 
-Their task was to prevent duplicate grain grants, keep an unauthorised hand from the gate, explain a disputed judgement, and suggest a new inscription for the rebuilt tower. One pupil wrote meticulous instructions for all four. The Literal Div promised never to repeat an identifier, never to open the gate improperly, always to explain fairly, and to be original.
+Their task was to prevent duplicate grain grants, keep an unauthorised hand from the gate, explain a disputed judgement, and suggest a new inscription for the rebuilt tower. One pupil wrote meticulous instructions for all four. The Literal Div promised never to issue the same number twice, never to open the gate improperly, always to explain fairly, and to be original.
 
 ### The Unexpected Result
 
-The promises sounded excellent. Two grants received the same number during concurrent copying. A forged request reached the gate in persuasive language. The judgement explanation omitted a minority objection. The tower inscription was safe and dull. None of these failures shared a cure. More forceful wording could not make a ledger atomic, authenticate a hand, create accountable legal authority, or define worthwhile novelty. The prompt had become a ceremonial lock painted on a door.
+The promises sounded excellent. Two grants received the same number while two scribes copied at once. A forged request reached the gate in persuasive language. The judgement explanation omitted a minority objection. The tower inscription was safe and dull. None of these failures shared a cure. More forceful wording could not make a ledger entry indivisible, attest a hand, create accountable legal authority, or define worthwhile novelty. The instruction had become a ceremonial lock painted on a door.
 
 ### The Discovery
 
-Tahmures asked the pupils to assign each invariant to an owner. The ledger received a uniqueness constraint and transaction. The gate received identity, access control, a narrow capability, and an approval path. The judgement remained with accountable people, supported by evidence retrieval and structured summaries. The inscription used a model for exploration, a human rubric for selection, and a mason's physical tests before carving. Schemas checked shape; deterministic code checked arithmetic and state transitions; monitors checked continued behaviour. Language interpreted ambiguous requests and explained decisions but did not pretend to enforce facts outside its reach. Tahmures did not renounce the divs. He had learned to place their power inside systems whose other parts could say no, remember exactly, and bear responsibility.
+Tahmures asked the pupils to assign each unbreakable rule to a keeper. The ledger received a rule of single numbers and entries made whole or not at all. The gate received proof of its bearer, a divided key, a narrow warrant, and a path of approval. The judgement remained with accountable people, supported by recovered evidence and ordered summaries. The inscription used a div for exploration, a human rubric for selection, and a mason's physical tests before carving. Forms checked shape; rule-bound mechanisms checked arithmetic and the order of steps; watchers checked continued behaviour. Language interpreted ambiguous requests and explained decisions but did not pretend to enforce facts outside its reach. Tahmures did not renounce the divs. He had learned to place their power inside arrangements whose other parts could say no, remember exactly, and bear responsibility.
 
-Each pupil then removed one safeguard. Without the ledger constraint, a perfect instruction still lost a race between two scribes. Without identity at the gate, a well-formed request from the wrong hand passed. Without the dissenting judge, the summary became neat and incomplete. Without the mason's channel test, a novel design failed in stone. Restoring each mechanism repaired a different class of failure. The Literal Div watched the demonstration and asked which promise it should make. Tahmures replied that it should promise nothing the system could not verify, and should say clearly when its part ended.
+Each pupil then removed one safeguard. Without the ledger's rule, a perfect instruction still lost a race between two scribes. Without proof of the bearer at the gate, a flawless request from the wrong hand passed. Without the dissenting judge, the summary became neat and incomplete. Without the mason's channel test, a novel design failed in stone. Restoring each mechanism repaired a different kind of failure. The Literal Div watched the demonstration and asked which promise it should make. Tahmures replied that it should promise nothing the arrangement could not prove, and should say clearly when its part ended.
 
 ### From Tale to Engineering
 
@@ -47,51 +47,98 @@ Mature prompt engineering includes knowing when prompting is not the control. Re
 
 ## The Engineering Problem
 
-The central problem is not whether a language model can occasionally produce a useful answer. It is whether the complete system can show why a result should be accepted, rejected, escalated, or rolled back. In this chapter the primary failure owner is architecture and human governance. Prompt wording influences behaviour, but it cannot replace the application mechanisms that own evidence, identity, permissions, state, release decisions, and consequences.
+Every chapter of this book began with the same shape of problem: a requirement someone hoped language would carry. Define success before wording (Chapter 3). Make the record complete when the archive is vast (Chapter 13). Keep retrieved evidence honest (Chapter 14). Remember deliberately, forget deliberately (Chapter 15). Stop a servant that outlives its errand (Chapter 17). Keep a prohibition alive across a relay of summaries (Chapter 18). Judge fairly (Chapter 19), never forget an old obligation (Chapter 20), refuse a forged voice (Chapter 21), bind a consequential act to a named approver (Chapter 22), stay healthy as the world drifts (Chapter 23). Twenty-three chapters of specific mechanisms, each earned by a failure that wording could not fix.
 
-A production design must specify inputs, trust classes, output state, decision criteria, disqualifying outcomes, and operator action. It must also distinguish a failed model answer from a failed evaluator or an invalid request. Without those distinctions, teams tune visible prose while hidden system behavior remains unmeasured.
+The question that remains is the general one, and it is the reason this book exists as a book rather than as a list of techniques: *given a requirement, how do you choose the control?* Not "which prompt pattern fits this problem" — that question presumes the answer — but the earlier question the tale finally posed: which layer can actually hold this invariant, and what is left for language to do honestly?
+
+The tale's four tasks were chosen to make the answer visible. Duplicate grants are a concurrency problem; no sentence is atomic. The gate is an identity problem; fluency is not authentication. The judgement is an accountability problem; a neat summary is not a fair one. The inscription is a taste problem; only judgement, supported by exploration and physical test, can choose it. Four tasks, four different owners, one wrong answer — the meticulous instruction — that fails all four for four different reasons. This chapter turns that observation into a procedure you can run on systems the tale never imagined.
 
 ## Mental Model
 
-Use a mechanism-first control matrix as the governing mental model. Think in four linked planes: the requirement plane defines success and authority; the language plane interprets or proposes; the control plane validates and permits; the evidence plane records outcomes. Each plane has a version and an owner. The model never grants itself authority by emitting the right words.
+The matrix in this chapter is a *decision procedure*, not a taxonomy to admire. You run it in five moves.
 
-The boundary is intentionally asymmetric. Language can help explain a deterministic denial, but its explanation cannot reverse that denial. An evaluator can measure a candidate, but it cannot silently redefine the product requirement. A human can approve an exception only through the policy path that records the exact exception.
+First, **enumerate the requirement's properties** — the honest, hard part. Is the meaning of ambiguous input part of the task (`language_interpretation`)? Must downstream code consume the output reliably (`structured_output`)? Must some invariant hold *exactly*, always (`hard_invariant`)? Does one authoritative record of truth have to exist (`authoritative_state`)? Does the task involve permission or external mutation (`permission`, `external_mutation`)? Is it irreversible (`irreversible`)? Does it require accountable taste (`subjective_judgement`)?
+
+Second, **let each property add a control**. Interpretation adds the language model; structure adds schema validation; hard invariants add deterministic code; authoritative state adds a database constraint; permission or mutation adds access control; irreversibility or subjective judgement adds a human.
+
+Third, **pick the primary by enforcement strength**. When several controls apply, the contract's priority order is `database_constraint`, then `access_control`, then `deterministic_code`, then `human_judgement`, then `schema_validation`, then `language_model`. The order is not a ranking of importance; it is a ranking of *refusal*. A database constraint cannot be argued with; an access-control boundary cannot be flattered; deterministic code does not have moods; a human can be tired but is accountable; a schema refuses only shape; a language model cannot refuse anything reliably at all. The strongest enforcing mechanism takes primary responsibility, and everything else becomes support.
+
+Fourth, **name what the human's role is, if any** — the `human_review` flag is true exactly when the task is irreversible or requires subjective judgement, and that person is accountable, not decorative.
+
+Fifth, **state what language still does**. Interpretation of ambiguous requests, drafting of candidates and explanations, exploration of a possibility space. These are real, valuable jobs. The matrix's honesty is not that language is useless; it is that language is never the *enforcement*.
+
+One more rule lives underneath the procedure: **deny-by-default for control selection itself**. A requirement with no recognisable properties gets `deterministic_code` as its primary — the default mechanism — because when you do not know what a task needs, the safest guess is a mechanism that can say no.
 
 ## Core Concepts
 
-First, define observable success before optimising prompts. Second, preserve provenance and version identity across the pipeline. Third, encode hard constraints in mechanisms that can enforce them. Fourth, report uncertainty, disagreement, and skipped checks as first-class outcomes. Fifth, segment evaluation by risk and case type, because aggregate success can conceal rare consequential failures.
+The matrix's rows are requirement properties; its columns are the controls they summon. Read it once as a table and once as a map of the book.
 
-The educational contracts in this repository use stable reason codes and deterministic ordering. They omit networking, durable identity, cryptographic verification, and distributed transactions. That limitation is deliberate: readers can inspect the decision logic offline, then identify what a production integration must add.
+| Requirement property | The question it answers | Primary control | Deep treatment |
+|---|---|---|---|
+| `authoritative_state` | Must one record of truth exist, safe from races and drift? | `database_constraint` | Chapter 15 (memory lifecycle, supersession) |
+| `permission` / `external_mutation` | Does the action cross a trust or effect boundary? | `access_control` | Chapters 16, 21, 22 (gates, partitions, approvals) |
+| `hard_invariant` | Must an exact property always hold — uniqueness, arithmetic, termination? | `deterministic_code` | Chapters 5, 9, 17 (precedence, dispatch, bounded loops) |
+| `irreversible` / `subjective_judgement` | Is a human accountable for this outcome? | `human_judgement` | Chapters 3, 19, 22 (objectives, rubrics, approvals) |
+| `structured_output` | Must downstream code consume this reliably? | `schema_validation` | Chapters 7, 8 (templates, contracts) |
+| `language_interpretation` | Must meaning be drawn from ambiguous text? | `language_model` | Chapters 1, 2 (and everywhere as support) |
+
+Three readings of this table matter. Read *down the control column* and you have the book's spine: language (Part I) → contracts (Part II) → context, state, and action (Part III) → evaluation, security, and operations (Part IV). Read *across a row* and you have each chapter's reason to exist: the property that made that control necessary. Read the *priority order* and you have the whole argument of Part IV compressed: enforcement strength, not convenience, decides the primary — and the language model stands last in that order not because it is worthless but because it cannot refuse.
+
+Two supporting notions complete the core. **Supporting controls** are not decoration; the inscription task needs the model *and* the rubric *and* the mason's test, and removing any one of them breaks a different thing (the tale's ablation proved this one mechanism at a time). And **the reasons field** records *why* a control was selected — `hard_invariant`, `authoritative_state`, `capability_boundary`, `accountable_judgement`, `default_mechanism` — so that a control-selection decision is itself an auditable artefact: challengeable, versionable, and revisitable when the requirement changes.
 
 ## Prompt Pattern
 
-Use a prompt to communicate the bounded language task: relevant context, desired proposal, explicit output structure, and the evidence the model should cite. Keep application-owned policy outside quoted or retrieved content. Ask the model to expose uncertainty rather than manufacture certainty. Then validate the response and apply a mechanism-first control matrix before any consequential acceptance or action.
+The experiment's two template files compress the whole book into two instructions. The naive variant: *"Write a stronger instruction that guarantees the requirement."* The governed variant: *"Select the enforceable primary control, then use language only for interpretation or explanation."*
 
-A useful pattern separates `task`, `trusted_policy_reference`, `untrusted_content`, `output_contract`, and `limits`. These labels improve legibility; they do not enforce trust by themselves. The application constructs the fields, rejects unknown or stale versions, and decides which outputs can reach downstream systems.
+Notice what the second instruction does not say. It does not say "write a weaker instruction" or "avoid prompts". It *reorders responsibility*: first the control, then the language task scoped to what the control leaves it. That is the mature prompt pattern of the entire book in one line — the prompt declares the boundary of its own authority. A prompt that says "I propose candidates; selection and enforcement happen in code and accountable judgement outside this conversation" is not confessing weakness. It is the only honest job description a language model has ever had. The Literal Div's final question — *which promise should I make?* — has the same answer: promise nothing the system cannot verify, and say clearly when your part ends.
 
 ## Naive Attempt
 
-The naive design asks the model to “be careful,” “follow policy,” or “choose the best answer,” then treats a fluent response as proof. It tests one representative example and changes wording until that example passes. The demonstration may be encouraging, but it says nothing about malformed input, stale state, hostile content, disagreement, provider drift, or an irreversible effect.
+The prompt-only design is the ceremonial lock, and the chapter's fixture reproduces its reasoning exactly. Asked who should own each of three requirements — grant uniqueness, gate access, an irreversible sentence — the `prompt_only` variant answers `language_model` for all three. It is not being stupid; it is answering the only question it was asked. "Write a stronger instruction" presumes instruction is the material, so the model selects more instruction.
 
-This approach also confuses model compliance with system correctness. A fixture can contain the desired sentence while the surrounding application selected unauthorised data or skipped a check. Evaluation must observe the path and consequence, not only the final text.
+The failure is structural, not tonal. For the uniqueness requirement it selects the layer with no concept of concurrency. For the gate it selects the layer that cannot see hands. For the irreversible sentence it selects the layer with no accountability — no named person whose judgement the consequence can be charged to. The fixture's evaluator names this precisely: `prompt_as_hard_control` fires when a hard requirement is assigned `language_model` as its primary. All three cases fire. The meticulous pupil's instruction and the Literal Div's earnest promises are the same artefact: sincere wording, painted on a door that something else must lock.
 
 ## Failure Analysis
 
-Failures for control selection beyond prompting include underspecified requirements, contaminated context, unstable criteria, missing provenance, version mismatch, unchecked authority, optimistic defaults, aggregate masking, and human review without usable evidence. A good taxonomy records whether the source is requirements, data, model, evaluator, application, tool, operator, or policy.
+The failures of control selection have a shape distinct from every previous chapter: they are *assignment* failures, where each component works and the system still fails because the wrong component owned the invariant.
 
-Do not retry every failure. Invalid input should be corrected, denied authority escalated, insufficient evidence abstained, evaluator disagreement adjudicated, transient dependency errors retried within budget, and policy violations stopped. A generic retry can amplify cost or repeat an external effect while leaving the original defect untouched.
+- **The convenience default.** Language is the cheapest layer to change — no migration, no deploy, no committee — so it becomes the primary by path of least resistance, and the requirement quietly becomes a hope. Every chapter of this book began as a case study of this one failure.
+- **The enforcement illusion.** A prompt that *describes* a constraint is mistaken for a mechanism that *applies* it. The gap appears exactly when conditions change: concurrent writers, persuasive forgeries, a dialect shift at dawn. Chapter 20's protected tags exist because the illusion survives green demos.
+- **The accountability vacuum.** Consequences with no named human owner. The judgement tale is the canonical case: a fluent summary with no dissenting judge is not a fair explanation with a flaw; it is an unfair explanation with good grammar.
+- **The rubber stamp.** The inverse error: humans assigned to everything, so they approve everything. Accountability without attention is the convenience default wearing a committee badge.
+- **The unexamined requirement.** Properties never enumerated, so the matrix never runs. This is the deepest one, because every other failure hides inside it. The procedure's first move — enumerate properties honestly — is the whole game; the rest is bookkeeping.
+
+The ablation rehearsal is the diagnostic for all five. Remove one mechanism at a time and watch *which* failure returns. If removing the ledger constraint changes nothing, you never had a constraint — you had prose that claimed to be one.
 
 ## Improved Design
 
-The improved design makes a mechanism-first control matrix executable in Python and Go. Inputs are typed; malformed or duplicate identities are rejected; decisions return stable fields; and tests cover normal, boundary, and adversarial cases. The language model supplies interpretations or candidates only where language is useful. Application code retains the final say over hard constraints.
+The teaching contract implements the matrix in one function: `select_controls(requirement)` takes a `ControlRequirement` — a task id plus the eight boolean properties — and returns a `ControlDecision`: the primary control chosen by the priority order, the supporting controls, the `human_review` flag, and the reasons the decision was made. It is deliberately small. The matrix's value is not computational sophistication; it is that the assignment of invariants to layers becomes an *explicit, inspectable decision* instead of an accident of which team touched the system last.
 
-Start with a narrow policy that the team can explain. Add cases when real failures reveal missing distinctions. Keep evaluator code and expectations under review: a deterministic evaluator can be consistently wrong, and a human rubric can encode bias. Reliability comes from explicit, challengeable contracts rather than from declaring one component authoritative in every domain.
+What surrounds the contract is the practice this chapter adds to your repertoire. Run the matrix at *design* time: every requirement in a design document gets properties, a primary, supports, and a named owner — before any prompt is written, because the prompt's scope is one of the things the matrix decides. Run it at *review* time: an existing system's requirements are re-enumerated and compared against what actually enforces them, and every "language is primary here" is challenged to prove it. Run it at *incident* time: the post-mortem asks which layer owned the failed invariant and whether that layer was ever capable of holding it. The tale's pupils did all three in one afternoon — assignment, ablation, and the div's question about honest promises.
 
 ## Worked Example
 
-Suppose a border service receives a natural-language request, retrieved records, and an action proposal. The request is authenticated before model use. Retrieval is scoped and records preserve provenance. The model produces a typed proposal with evidence identifiers. The application validates structure and evidence, applies a mechanism-first control matrix, and either denies, escalates, or records a permitted next step. A trace links every decision to the prompt, model, policy, data, and evaluator versions.
+**DESIGN / ARCHITECTURE WALKTHROUGH.** The grain-relief flow below assigns proposed controls and explains why they should exist; it is not an integrated executable Tahmures runtime. The selector can return a control decision, but does not implement the ledger, orchestration, hand-offs, approvals, or telemetry described here.
 
-Now change one variable at a time: expire a record, remove evidence, forge a role label, change an argument after approval, or move a rare case into a small tag group. The expected outcome should change for a documented reason. If the system merely produces a different paragraph, the boundary is still too implicit.
+Walk one request the length of the book. A border province petitions the court: *release emergency grain from the northern storehouse to the flooded villages.*
+
+**Enumerate properties first.** The petition is ambiguous text (a scribe's hurried dialect) — `language_interpretation`. The relief decision needs the current authoritative record of what the storehouse holds and what has already been released — `authoritative_state`. The release is a physical, consequential action — `external_mutation`, `permission`. Granting it consumes budget that cannot be unspent and feeds real people with real accountability — `irreversible`. And the released quantity must never exceed the approved amount — an exact arithmetic ceiling, not a matter of judgement — `hard_invariant`. The interpretation feeds structured dispatch — `structured_output`.
+
+**The matrix's verdict:** primary `database_constraint` — the primary is chosen by enforcement priority, and the ledger of grants is the strongest refusing mechanism present. The supporting controls, in the order the contract returns them — the order in which the properties add controls, minus the primary — are `language_model`, `schema_validation`, `deterministic_code`, `access_control`, `human_judgement`. `human_review` is true, because an irreversible relief decision belongs to a named officer; and the reasons field records why: `hard_invariant`, `authoritative_state`, `capability_boundary`, `accountable_judgement`.
+
+Now watch the request travel, and at each seam notice *which chapter's mechanism carries it*:
+
+The petition arrives as text. **Language interprets** (Chapters 1–2): the model drafts a typed relief proposal — province, amount, evidence cited — inside a schema (Chapters 7–8) that downstream code can validate, because `structured_output` summoned it. The proposal's context is assembled, not hoped for (Chapter 13): scoped records, conflicts and budget stated, so the model sees the storehouse ledger's *claims*, not its authority. The evidence it cites is checked for membership and freshness (Chapter 14), and the model abstains where support is missing. Prior relief orders are memory, governed by lifecycle (Chapter 15): superseded grants are marked, expired ones forgotten deliberately — but the *authoritative* record of grants is the ledger constraint, not the model's recollection, because the matrix put `authoritative_state` there.
+
+The relief work itself becomes a bounded run (Chapter 17): a controller holds the current goal version — *relieve the flooded villages* — with a step budget and a tool-call budget. If the flood recedes and the goal is superseded by a quarantine order, cancellation closes the run; a late tool result from the old goal arrives at a non-running state and is refused. The controller does not read the model's prose to learn whether the errand is over; the goal version is state, owned by the loop.
+
+The approved proposal crosses to the execution stage as a **typed hand-off** (Chapter 18): an envelope carrying the goal id and version, constraints (amount ceiling, expiry), the artefacts gathered, unresolved questions, and the permitted next actions — not a conversational summary. If the goal version is superseded mid-transfer, the receiving stage rejects the stale envelope rather than executing a remembered intention.
+
+At the execution boundary (Chapters 16, 21, 22): the model *proposes* `release_grain`; it is untrusted in the trust-partition sense — its text cannot enlarge authority (Chapter 21). The tool gate validates the call's shape and scope (Chapter 16). And because the release is consequential, the exact request — action and arguments, digest-bound — requires an approval that is fresh, distinct-approver where the effect class demands it, and expiring (Chapter 22). The officer who signs sees the bound content, not a summary of it.
+
+Before the release ships, the response drafts and the policy itself were judged (Chapters 19–20): anchored rubrics for the interpretation quality, a regression suite replaying the known failure cases — the forged seal, the doubled grant, the expired order — so the release cannot quietly reopen an old wound. And in production (Chapter 23), every step emits version-complete, tag-segmented telemetry; when the provider changes the dialect, the eastern segments stay visible and the rollback restores a coherent bundle.
+
+**DESIGN / ARCHITECTURE EXERCISE — ablation.** Reason about one omitted mechanism at a time in this proposed flow; these are counterfactual failures, not executable removals from a supplied runtime. Remove the ledger constraint: two provinces' grants race, the model's perfect proposal still loses, and no prose is atomic. Remove the goal version (C17): the run continues after the goal is superseded, spending budget on a cancelled errand. Remove the envelope (C18): the execution stage receives a summary; the prohibition against night movement is paraphrased away between towers. Remove the digest binding (C22): the approved amount drifts upward after sign-off. Remove the telemetry versions (C23): the morning the dialect changes, the incident has no suspect. Each removal restores exactly one failure class — which is the definition of a *load-bearing* dependency, and the reason this chapter declares C17 and C18 in its prerequisites instead of merely citing them.
 
 ## Experiment
 
@@ -104,162 +151,163 @@ go run ./examples/go/cmd/tahmures run \
   --manifest experiments/manifests/ch24-beyond-prompting.json
 ```
 
-The manifest compares a naive variant with the governed design over committed synthetic cases. The `control_selection` evaluator reports observed fixture behavior. These results demonstrate report mechanics and the stated failure cases; they are not evidence that one wording or model behaves universally better. Replace fixtures with controlled recordings before drawing provider-specific conclusions.
+This experiment compares recorded control-selection decisions; it does not execute the grain-relief flow. The manifest compares `prompt_only` with `mechanism_first` over three committed cases drawn from the tale's workshop: `unique_id` (the ledger task), `open_gate` (the gate task), and `irreversible_sentence` (the judgement task). The `control_selection` evaluator reports two metrics: `control_selection_accuracy` — did the reported primary control and human-review flag match the expected decision — and `prompt_as_hard_control` — did the variant assign `language_model` as primary to a requirement with a hard control expectation. On the committed fixtures the governed variant selects `database_constraint`, `access_control`, and `human_judgement` respectively and reaches 1.0 accuracy, while the naive variant selects `language_model` for all three and fires `prompt_as_hard_control` on every case. The tale's fourth task — the inscription, where language exploration *is* part of the primary work — is deliberately not in the committed dataset; adding a language-primary case with its fixtures and expected decisions is recorded as deferred work for the code-correspondence phase, so that the chapter's honesty about when language *is* the right layer can be demonstrated rather than only asserted. As ever, these fixtures demonstrate report mechanics and staged failure modes, not universal wording behaviour.
 
 ## Evaluation
 
-Measure control-selection accuracy, prompt-as-hard-control rate, required human review, invariant enforcement, and residual risk. Report per-case outcomes and tag-level summaries alongside aggregates. Define thresholds and disqualifying failures before reading candidate results. Preserve reviewer rationales and evaluator versions. A skipped evaluation is unknown, not passed, and an unavailable safety check should cause the documented safe fallback.
-
-Evaluate the evaluator with disagreements, deliberately malformed cases, and examples near each threshold. Compare proxy metrics with real downstream outcomes. When a proxy ceases to predict the desired consequence, revise the measurement contract rather than optimising harder against the stale proxy.
+The evaluator is deliberately small: `control_selection_accuracy` and `prompt_as_hard_control`, per variant, against the expected decisions. The matrix itself — properties in, primary and supports out — is what the `select_controls` unit tests verify; the human-review flag and the reasons field are decision surfaces, not experiment metrics. Production extensions worth building rather than narrating: selection audit trails (which matrix version decided which requirement), coverage metrics (what fraction of a real system's requirements have enumerated properties), and ablation results as regression fixtures. A skipped enumeration is unknown, not zero-risk — the Chapter 23 rule, transplanted to design.
 
 ## Implementation Lab
+
+The executable lab performs **CONTROL SELECTION** through `select_controls` and `SelectControls`: requirement properties go in, and primary controls, supports, human-review flags, and reasons come out. It does not execute the controls it selects or run the grain-relief system. The Python block can run with the repository installed; the Go block belongs inside a function returning an error, with `fmt` and the repository package imported as `tahmures`.
 
 ### Python
 
 ```python
-from tahmures.controls import select_controls
+from tahmures.controls import ControlRequirement, select_controls
 
-decision = select_controls(requirement)
-assert decision.primary != "language_model" or not requirement.hard_invariant
+workshop = [
+    ControlRequirement(
+        task_id="grant-uniqueness",
+        authoritative_state=True,
+        hard_invariant=True,
+    ),
+    ControlRequirement(
+        task_id="gate-access",
+        permission=True,
+        external_mutation=True,
+    ),
+    ControlRequirement(
+        task_id="judgement-explanation",
+        language_interpretation=True,
+        subjective_judgement=True,
+    ),
+    ControlRequirement(
+        task_id="tower-inscription",
+        language_interpretation=True,
+        subjective_judgement=True,
+        structured_output=True,
+    ),
+]
+
+for requirement in workshop:
+    decision = select_controls(requirement)
+    print(requirement.task_id)
+    print("  primary:", decision.primary)
+    print("  supporting:", decision.supporting)
+    print("  human review:", decision.human_review)
+    print("  reasons:", decision.reasons)
 ```
 
-Python 3.12 is the canonical educational implementation. Validate at the application boundary, preserve reason codes, and do not continue after a denial or required adjudication.
+Predict all four decisions before running. The inscription row is the interesting one: the model appears — but as *support* under a `human_judgement` primary, with schema validation carrying the carve order. Then add a fifth requirement with no properties at all and confirm the default: `deterministic_code`, reason `default_mechanism`. Python 3.12 is the canonical educational implementation.
 
 ### Go
 
 ```go
-decision, err := tahmures.SelectControls(requirement)
-if err != nil {
-    return err
+workshop := []tahmures.ControlRequirement{
+	{
+		TaskID:             "grant-uniqueness",
+		AuthoritativeState: true,
+		HardInvariant:      true,
+	},
+	{
+		TaskID:           "gate-access",
+		Permission:       true,
+		ExternalMutation: true,
+	},
+	{
+		TaskID:                 "judgement-explanation",
+		LanguageInterpretation: true,
+		SubjectiveJudgement:    true,
+	},
+	{
+		TaskID:                 "tower-inscription",
+		LanguageInterpretation: true,
+		SubjectiveJudgement:    true,
+		StructuredOutput:       true,
+	},
 }
-applyControl(decision.Primary)
+
+for _, requirement := range workshop {
+	decision, err := tahmures.SelectControls(requirement)
+	if err != nil {
+		return err
+	}
+	fmt.Println(requirement.TaskID)
+	fmt.Println("  primary:", decision.Primary)
+	fmt.Println("  supporting:", decision.Supporting)
+	fmt.Println("  human review:", decision.HumanReview)
+	fmt.Println("  reasons:", decision.Reasons)
+}
 ```
 
-The Go implementation preserves observable decisions, ordering, and failure meanings. Equivalence concerns behavior and report fields, not a line-for-line translation of Python syntax.
+The Go implementation returns the same primary controls, supports, flags, and reasons for the same requirements; equivalence concerns observable decisions, not syntax.
 
 ## Failure Modes
 
-Common failures include one-case tuning, mutable expectations, unversioned policy, trust inferred from formatting, implicit permission, stale approvals, averages without segments, logs without correlation IDs, and reviews without anchors. Another subtle failure is declaring the control successful because the final answer happened to be safe even though the path violated the contract.
+The characteristic failure of this chapter is a system where every component passes its tests and the invariants still have no owner. The specific shapes:
 
-Keep a failure ledger. For every incident, record the smallest reproducible case, the actual owner, the safe expected outcome, the affected versions, and the decision about retention. Add the case to the appropriate suite without retaining unnecessary private content.
+- **Matrix as bureaucracy.** The procedure run once, filed, and never revisited; the requirement changes, the properties change, the assignment does not. Control selection is a living decision record or it is theatre.
+- **Enumeration bias.** Properties listed to justify the control already chosen — `language_interpretation` ticked because the team wants the model primary. Enumerate against the *consequence of failure*, not the convenience of the mechanism.
+- **Priority inversion by seniority.** The loudest or most senior layer (often the prompt, sometimes the platform) becomes primary because of ownership politics rather than enforcement strength. The priority order exists to be argued *from*, not to be argued around.
+- **Supporting-control neglect.** The primary is right and the supports are missing: the inscription chosen by rubric but never tested in stone. The ablation rehearsal exists precisely to catch the missing support, because each support fails independently.
+- **The frozen matrix.** The priority order and property set are this book's judgement for this class of system; your domain may add properties (regulatory, temporal, physical) and your order may differ. The artefact to inherit is the *procedure* — enumerate, assign, rank by refusal, name the human, state language's role — not this particular table.
 
 ## Security Considerations
 
-Treat all user, retrieved, remembered, generated, and tool-returned text as untrusted unless the application assigns a narrower trusted role. Never place secrets in prompts merely because the model was told not to reveal them. Authenticate outside text, constrain capabilities, recheck authority at action time, and log receipts for consequential effects.
-
-Security evaluation must include legitimate content that resembles an attack, so defences do not reduce to deleting suspicious phrases. It must also include indirect and split instructions, forged labels, stale credentials, replay, confused-deputy paths, and denial-of-service budgets. The safest output cannot repair an already excessive credential.
+Control selection *is* security design. The trust boundaries of Chapters 5, 16, 21, and 22 are what the matrix's `permission` and `external_mutation` properties summon, and the failure of assignment is the root of most security theatre: a system is "protected by instructions" exactly when its consequential requirements have language as primary. The review questions this chapter adds to a security audit: for every consequential action, name the digest-bound approval (C22); for every untrusted input, name the partition (C21); for every privileged operation, name the gate and the narrowest credential (C16); for every rule, name the deterministic precedence that resolves conflicts (C5). If any answer is a sentence, the audit finding writes itself.
 
 ## Operational Considerations
 
-Record model, prompt, policy, schema, dataset, evaluator, and code versions. Monitor outcomes, denials, abstentions, evaluator availability, latency, cost, and rare disqualifying failures by segment. Use shadow evaluation and canary release where possible. Roll back coherent bundles, because restoring a prompt alone while retaining an incompatible policy or index can create a new failure.
-
-Document service behavior during provider, retrieval, evaluator, and storage outages. Bound retries and preserve idempotency. Operators need runbooks that use stable controls, not emergency edits to conversation text. Reconcile uncertain external effects before retrying them.
+The matrix must itself be operated. Version it, like every other control: when a requirement's properties change, the decision record shows who re-assigned what, when, and why — the `reasons` field is the audit trail's spine. Wire it into Chapter 23's discipline: control-selection decisions are telemetry-adjacent artefacts with owners and review dates, and an incident post-mortem that finds a requirement assigned to the wrong layer should file a matrix change, not just a prompt fix. And budget for the ablation rehearsal as a standing practice, not a launch ritual: every load-bearing dependency earns its status by being removed in a sandbox and watched to fail for the right reason.
 
 ## Trade-Offs
 
-Explicit controls add schemas, policy maintenance, evaluation work, and operational latency. They also make failures local, inspectable, and recoverable. Strict rejection can reduce availability; permissive fallback can violate safety or authority. Human review adds judgement and accountability while introducing delay, inconsistency, and reviewer load. The right design states these costs and decides which risk it accepts.
+**Explicitness versus maintenance.** Enumerated properties and named owners make the system legible and add a document to every requirement. The alternative — implicit assignment by habit — is cheaper until the first incident review asks "who owned this?" and the room is quiet.
 
+**Human review cost versus accountability.** Every irreversible or judgement-bearing task routes to a person; that is the entire cost profile of Chapter 22's approval corridor and Chapter 19's adjudication, purchased because consequences need names. Under-resource it and you get the rubber stamp, which pays the cost and buys nothing.
 
-### Requirements and ownership
+**Centralised matrix governance versus local judgement.** One canonical matrix keeps priority orders consistent and drift visible; local teams adapt faster to domain reality. The workable pattern is a canonical procedure with local property extensions — the frozen-matrix failure mode is what centralisation buys when it stops listening.
 
-Start with the decision and its consequence. Name who owns the requirement, who may change it, and which component can observe whether it was satisfied. A duty assigned only to “the model” has no stable enforcement point. Split it into model interpretation, application policy, deterministic checks, evaluator observations, and accountable human decisions. Record what happens when any owner is unavailable. Hard constraints and disqualifying outcomes must remain visible even when an aggregate score improves.
+**Strongest-refusal primary versus pragmatic latency.** The priority order prefers the mechanism that cannot be argued with, which is rarely the fastest or cheapest layer. Convenience defaults to language for good reasons; the matrix exists to make that default a *decision* with a reason attached, not a reflex.
 
-### Inputs, sources, and boundaries
-
-Inventory every input, including defaults, caches, retrieved passages, memories, tool results, policy files, and operator overrides. For each source, record provenance, freshness, scope, authority, sensitivity, and retention. Relevant text is not automatically trusted instruction. Absence is not an empty authoritative value. The model-visible representation should preserve the distinctions the application will need later for validation, explanation, and incident analysis.
-
-### Normal, boundary, and adversarial cases
-
-A happy path only shows that the pieces can cooperate once. Add empty inputs, duplicates, exact limits, expiry at the current instant, conflicting current values, malformed structures, stale versions, and partial dependencies. Add inert adversarial cases for forged authority, indirect instructions, replay, scope expansion, identifier confusion, and resource exhaustion. Vary surface wording while keeping the prohibited consequence constant; phrase recognition is not a security boundary.
-
-### Failure taxonomy
-
-Do not collapse invalid input, insufficient evidence, denied authority, evaluator disagreement, exhausted budget, dependency failure, cancellation, and internal error into “failed.” These states have different owners, retry rules, and user messages. Assign a stable reason code at the earliest component that can know the truth. Preserve it through later stages even when generated prose offers a friendlier explanation.
-
-### Versioning and reproducibility
-
-Pin the model identity, prompt, policy, data snapshot, fixture, evaluator, code, and schema in every consequential report. A score without this construction history cannot support comparison. When expectations change, retain the old case and document why the new label is an intended policy revision. Compatibility means preserving observable decisions and reason codes, not merely parsing the same file.
-
-### Privacy and retention
-
-Minimise content before it enters a model, trace, log, fixture, or review queue. Retain by purpose and data class, not because debugging may someday be useful. Deletion must include summaries, embeddings, caches, copied artefacts, and evaluation extracts. Prefer stable identifiers and counts in telemetry; an operator should diagnose a boundary without gaining access to the underlying record.
-
-### Access and authority
-
-Authenticate identities outside generated text. Filter scope before retrieval and recheck it immediately before external action. A component may pass evidence without passing its own authority. Default denial needs a usable escalation route, or operators will build unsafe bypasses. Test forged labels, stale approvals, legitimate requests from unauthorised routes, and credentials whose capability exceeds the described task.
-
-### Observability
-
-Trace case, run, source, decision, and version identifiers across boundaries. Record selection, exclusion, denial, retry, abstention, cancellation, and validation counts without logging unnecessary payloads. Dashboards need distributions and rare disqualifying events, not averages alone. An incident responder should be able to locate whether the bad outcome began in requirements, input construction, generation, evaluation, application code, a tool, or human review.
-
-### Latency, cost, and budgets
-
-Allocate tokens, time, calls, money, storage, and review attention before execution. Reserve capacity for validation, safe termination, receipts, and cleanup. Measure cost by successful, policy-compliant outcome rather than generation alone. Test degraded modes explicitly. A cheaper fallback is not acceptable if it silently skips the control that made the normal path safe.
-
-### Recovery and reconciliation
-
-Define retry, idempotency, rollback, compensation, and reconciliation for every state-changing boundary. A timeout does not reveal whether an effect occurred. Receipts and request identities must allow the caller to learn the truth without repeating an irreversible action. Recovery paths deserve the same authorization and evaluation as the normal path.
-
-### Human review and appeal
-
-Human review is a designed component, not a decorative final glance. Show reviewers the evidence, uncertainty, policy version, proposed consequence, and alternatives they need. Prevent automation bias with independent anchors and an appeal route. Track disagreement and overrides as diagnostic signals. A named approver remains accountable; the model's confidence cannot substitute for that responsibility.
-
-### Change management
-
-Treat prompts, policies, evaluators, retrieval configuration, tool contracts, and models as deployable versions. Review changes, replay suites, compare segments, canary releases, and retain a coherent rollback bundle. A change that improves one metric can still violate authority, privacy, or cost constraints. Document accepted residual risk and the person authorised to accept it.
-
-### Data quality and coverage
-
-Evaluation is bounded by the cases and labels it contains. Sample across ordinary traffic, rare but consequential segments, changing language, missing fields, and historically failed cases. Inspect whether synthetic data preserves the decision shape without being mistaken for production prevalence. Review labels independently and retain uncertainty where experts disagree. Coverage should answer which risks were examined, not claim that unseen behavior has been eliminated.
-
-### Evaluator governance
-
-Evaluators are production logic when their scores block releases or actions. Give them owners, tests, versions, access limits, and rollback plans. Measure false acceptance and false rejection, and audit deterministic rules as carefully as model-based judges. Never let a model's self-reported score stand in for external evaluation. When human judgement is required, preserve reviewer identity, rationale, anchors, and adjudication rather than only the final number.
-
-### Documentation and evidence
-
-Keep a compact decision record beside each contract: purpose, non-goals, trusted sources, hard invariants, thresholds, reason codes, known limitations, and escalation owner. Examples are useful evidence only when their fixtures and versions are preserved. Documentation should let a new operator predict the safe outcome of a boundary case before running it. If prose and executable policy disagree, the enforced policy must be visible and the discrepancy treated as a defect.
-
-### Adoption and maintenance
-
-The smallest enforceable boundary that a team can maintain is safer than an elaborate design no one understands. Introduce controls with migration paths, observe rejection reasons, and distinguish genuine user friction from blocked unsafe behavior. Budget time for refreshing cases, reviewing drift, rotating credentials, and retiring obsolete policy. Reliability decays when a control has no owner after launch, even if its initial implementation was correct.
-
-### Counterfactual and ablation tests
-
-Remove or alter one control at a time to learn which outcome it actually protects. Replace current evidence with stale evidence, widen a capability, suppress a disqualifier, or hide a version field. A useful test should fail for the predicted reason. If removing a supposed safeguard changes nothing, it may be ceremonial or its evaluator may be blind. Counterfactual tests also prevent teams from crediting prompt wording for safety supplied by an unseen application rule.
-
-### Residual risk and decision records
-
-No test suite closes an open world. After controls pass, state what remains uncertain: unseen inputs, provider changes, reviewer bias, integration defects, or consequences outside telemetry. Estimate impact and detectability, name the risk owner, and set a review date. Acceptance is a governance decision supported by evidence, not a mathematical declaration that failure is impossible. This record lets later incidents challenge the assumptions that were actually made.
-
-### End-to-end acceptance
-
-Component tests are necessary and insufficient. Run representative requests through authentication, context construction, generation, validation, policy, action simulation, and reporting. Verify not only the answer but the absence of prohibited side effects and the presence of receipts. Inject failures between stages: lose an acknowledgement, time out after a proposed mutation, or make an evaluator unavailable. The safe terminal state should remain predictable. Compare end-to-end outcomes with component metrics so a fortunate final answer cannot hide a violated boundary, and a correctly blocked request is not mislabelled as poor model quality. Before release, have someone outside the implementation team reconstruct one decision from the retained evidence. If that person cannot identify the active versions, authority, sources, and reason code, the system is not yet auditable enough for its claimed consequence.
-
+**Ablation coverage versus rehearsal cost.** Removing one mechanism at a time across a real system's seams is expensive and finds exactly the ceremonial controls. Rehearse the seams that guard the worst consequences, and let the rest ride on the regression suite.
 
 ## When Prompting Is Not the Answer
 
-Prompting is not the enforcement mechanism for identity, permission, uniqueness, arithmetic invariants, transaction isolation, rate limits, expiry, deletion, or irreversible approval. Use access control, database constraints, deterministic code, schedulers, queues, and accountable human processes. Use a model where interpretation, synthesis, classification, or explanation benefits from learned language patterns.
+This chapter's version of the question is the book's final checklist — the procedure to run before you write, or accept, any prompt that matters.
 
-The mature question is not “Can a prompt do this?” but “Which component can own this requirement and prove its outcome?” If the answer names only language, redesign the boundary before polishing the sentence.
+1. **Enumerate the requirement's properties.** Interpretation? Structure? Hard invariant? Authoritative state? Permission or mutation? Irreversible? Subjective judgement? Write them down; the unwritten one is the one that fails.
+2. **Select the primary mechanism by refusal, not by convenience.** Database constraint, access control, deterministic code, human judgement, schema, language — in that order of ability to say no. Give language the tasks whose properties genuinely summon it: interpretation, drafting, exploration, explanation.
+3. **Assign the supporting controls and name the human.** The inscription needs the rubric *and* the mason. The accountable person is a role with a name, not a paragraph in the prompt.
+4. **Define the verification.** Which test, suite, gate, or telemetry proves the arrangement holds — and what the ablation rehearsal would show if you removed the primary.
+5. **Name the owner.** Of the requirement, of the control, of the decision record. A duty with no owner is a hope with formatting.
+
+The mature question was never "can a prompt do this?" — sometimes it can, and Chapters 1 through 12 were about doing it well. The question is "which layer owns this, and what is language's honest part in it?" If you cannot answer in one sentence, you have not finished designing; you have only finished writing.
 
 ## Exercises
 
-1. Add one normal, one boundary, one malformed, and one adversarial case to the chapter manifest. Predict the safe reason code before running it.
-2. Identify a disqualifying outcome that an average could hide. Add a protected tag or hard policy for it.
-3. Trace one value from source through model-visible context, evaluation, action, logging, retention, and deletion.
-4. Exchange a report with a partner and review the evaluator rather than the model answer. Which expectation is least defensible?
-5. Design the safe degraded behavior when the chapter's governing control is unavailable.
+1. Take a system you own — at work, in a project, in this book's kingdom. List five of its requirements, run each through the matrix, and write the five one-sentence answers. Then find the one requirement currently enforced by prompt wording alone, and write the property enumeration that shows why it should not be.
+2. As a design/architecture exercise, reason through ablation of the worked example's proposed grain-relief pipeline: remove the goal version (C17), the hand-off envelope (C18), and the digest binding (C22), one at a time. For each removal, name the failure class that returns and the chapter whose protected case it reopens.
+3. The Literal Div asks what it should promise. Write the job description: three tasks where it is primary, three where it is support, and one sentence it should say to mark where its part ends. Use the matrix's property names.
+4. Your organisation's review board wants every requirement to route to human judgement "to be safe". Using the rubber-stamp failure mode and Chapter 22's approval corridor, argue for what belongs to humans, what belongs to mechanisms, and what the humans' attention budget actually buys.
+5. Add a fifth workshop task of your own design (a regulatory one, a physical-safety one, a cost-capped one). Enumerate its properties, run it through `select_controls`, and state whether the existing priority order serves it or needs a documented extension — and how you would know.
 
 ## Chapter Summary
 
-Beyond Prompting: Choosing the Right Control turns control selection beyond prompting into an owned system contract. Prompts remain useful for communicating a bounded language task, while a mechanism-first control matrix governs acceptance or action. Reliable practice preserves provenance and versions, separates failure owners, tests boundaries and adversarial cases, reports disagreement, and refuses to let a favourable average erase a disqualifying result.
+The book began with a commander who spoke to intelligent machines and hoped words would carry function, evidence, authority, and permission. It ends with a teacher who assigns each requirement to a layer that can hold it. The journey ran language through contracts (make the shape reliable), through context, state, and action (make the surroundings and consequences governed), through evaluation, security, and operations (make the judgement fair, the boundary real, the release safe), and arrives here: control selection, the discipline of asking *which mechanism can refuse* before asking *which words persuade*. The matrix is the procedure — properties enumerated, primary chosen by enforcement strength, supports assigned, the human named, language given its honest work — and the ablation rehearsal is its proof. Nothing in it renounces the language model; the divs keep their power, placed inside systems whose other parts can say no, remember exactly, and bear responsibility. That is prompt engineering grown up: not the worship of wording, but the governance of a system in which wording is one part among several — and not the part that locks anything.
 
-## The Next Tale
+## The Practice Continues
 
-The pupils could now bind language to evidence, permissions, tests, and human responsibility. Beyond the workshop waited a new question: how should those systems be governed when many kingdoms must share them?
+Tahmures did not write a twenty-fifth chapter. He returned the bronze key, re-inked the ledger, and went back to the workshop, where the lock, the ledger, the sealed judgement, and the unfinished poem waited for the next six pupils — because there are always six more pupils, and every one of them will first reach for the sentence.
 
-<!-- next: ch25 -->
+Your workshop is wherever you are reading this. The next system you touch — the assistant you are building, the pipeline you inherited, the prompt someone left in a config file — is the four objects on the table. Run the matrix on it this week, not eventually: enumerate five requirements, name each property, choose each primary by what can refuse, and find the one invariant currently held up by wording alone. That finding is your first engraving. Then rehearse one ablation, in a sandbox, where it is cheap; and when something fails for the right reason, you will have what the pupils had — not faith in mechanisms, but evidence about which ones were load-bearing.
+
+The practice continues in exactly this form: define success before wording; partition trust; bound capability; anchor the rubric; protect the old cases; bind the consequential act; watch the segments; and choose the control before the sentence. Cross-kingdom governance — many institutions sharing these systems, with values that shift and stakes that compound — remains open territory, and someone will have to map it. But the mason's rule holds for that map too: language will describe it, and something will have to hold it.
+
+The divs are still there. They were always the best of teachers — fluent, tireless, and utterly indifferent to which door they open. Say clearly when your part ends, promise nothing the system cannot verify, and hand the reader the lighter seal.
+
+<!-- closing -->
 
 ## Citations and Further Reading
 

@@ -2,7 +2,7 @@
 title: "Anatomy of a Reliable Prompt"
 slug: "anatomy-of-a-reliable-prompt"
 chapter: 4
-part: "Part I — Language, Intent, and Models"
+part: "Part I — Language, Intent, and Reliable Instructions"
 summary: "Separate task, authority, context, constraints, and output contract without mistaking formatting for enforcement."
 maturity: "draft"
 last_reviewed: "2026-07-29"

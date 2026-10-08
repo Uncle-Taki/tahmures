@@ -576,9 +576,8 @@ class PhaseFourPolicyEvaluator:
                 "finding_recall": _set_match_rate(
                     _strings(expected.get("findings")), _strings(value.get("findings"))
                 ),
-                "version_attribution": _set_match_rate(
-                    _strings(expected.get("changed_versions")),
-                    _strings(value.get("changed_versions")),
+                "version_attribution": _version_attribution(
+                    expected.get("changed_versions"), value.get("changed_versions")
                 ),
             }
         else:
@@ -622,6 +621,17 @@ class PhaseFourPolicyEvaluator:
             metrics,
             f"expected={expected}; received={value}",
         )
+
+
+def _version_attribution(expected: JSONValue, actual: JSONValue) -> float:
+    """Exact string-set agreement; malformed arrays cannot count as empty sets."""
+    if not isinstance(expected, list) or not isinstance(actual, list):
+        return 0.0
+    if not all(
+        isinstance(item, str) for values in (expected, actual) for item in values
+    ):
+        return 0.0
+    return float(set(expected) == set(actual))
 
 
 def _set_match_rate(expected: list[str], actual: list[str]) -> float:

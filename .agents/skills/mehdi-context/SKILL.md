@@ -1,7 +1,7 @@
-    ---
-    name: mehdi-context
-    description: Load and understand project-specific book context and canonical rules.
-    ---
+---
+name: mehdi-context
+description: Load and understand project-specific book context and canonical rules.
+---
 
 
 Role:
@@ -22,4 +22,3 @@ Extract:
 - quality gates
 
 Never invent missing project rules.
-

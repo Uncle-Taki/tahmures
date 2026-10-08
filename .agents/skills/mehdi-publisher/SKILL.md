@@ -1,7 +1,7 @@
-    ---
-    name: mehdi-publisher
-    description: Prepare final publication packages and derivative content.
-    ---
+---
+name: mehdi-publisher
+description: Prepare final publication packages and derivative content.
+---
 
 
 Prepare:
@@ -12,4 +12,3 @@ Prepare:
 - release checklist
 
 Validate before publishing.
-

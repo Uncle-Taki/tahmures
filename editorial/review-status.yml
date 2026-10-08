@@ -1,6 +1,6 @@
 version: 1
 project: Tahmures
-updated: '2026-08-19'
+updated: '2026-10-02'
 meaning:
   human_reviewed: Human line-by-line review has occurred.
   machine_prechecked: Automated/Codex editorial checks have been applied; this is
@@ -12,25 +12,25 @@ chapters:
       status: human_reviewed
       human_reviewed: true
       machine_prechecked: true
-      review_notes: Calibration corpus from author review.
+      review_notes: Current-revision human signoff 2026-10-02 (frozen-English sha 2f5740d3); historical calibration review predates the English freeze; evidence in .zcode/post-human-review-reconciliation-01-04.md.
   '02':
     persian:
       status: human_reviewed
       human_reviewed: true
       machine_prechecked: true
-      review_notes: Calibration corpus from author review.
+      review_notes: Current-revision human signoff 2026-10-02 (frozen-English sha fc44a38c); historical calibration review predates the English freeze; evidence in .zcode/post-human-review-reconciliation-01-04.md.
   '03':
     persian:
       status: human_reviewed
       human_reviewed: true
       machine_prechecked: true
-      review_notes: Calibration corpus from author review.
+      review_notes: Current-revision human signoff 2026-10-02 (frozen-English sha fde7667e); historical calibration review predates the English freeze; evidence in .zcode/post-human-review-reconciliation-01-04.md.
   '04':
     persian:
       status: human_reviewed
       human_reviewed: true
       machine_prechecked: true
-      review_notes: Calibration corpus from author review.
+      review_notes: Current-revision human signoff 2026-10-02 (frozen-English sha f75fbbaf); historical calibration review predates the English freeze; evidence in .zcode/post-human-review-reconciliation-01-04.md.
   '05':
     persian:
       status: human_reviewed

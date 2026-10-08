@@ -1,7 +1,7 @@
-    ---
-    name: mehdi-architecture
-    description: Transform knowledge into engineering explanations and system models.
-    ---
+---
+  name: mehdi-architecture
+  description: Transform knowledge into engineering explanations and system models.
+---
 
 
 Create:
@@ -13,4 +13,3 @@ Create:
 - failure analysis
 
 Explain why before how.
-

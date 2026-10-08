@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "references": [
+    {
+      "chapter": 12,
+      "author_year_anchor": "Robertson, Stephen, and Hugo Zaragoza. 2009.",
+      "article_title": "The Probabilistic Relevance Framework: BM25 and Beyond",
+      "publication_title": "Foundations and Trends in Information Retrieval"
+    }
+  ]
+}

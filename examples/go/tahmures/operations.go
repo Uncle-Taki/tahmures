@@ -86,9 +86,15 @@ func CompareWindows(baseline, current []TelemetryEvent, policy OperationalPolicy
 			tags[tag] = append(tags[tag], e)
 		}
 	}
+	// Match Python's sorted tag order without reordering window findings.
+	tagKeys := make([]string, 0, len(tags))
+	for tag := range tags {
+		tagKeys = append(tagKeys, tag)
+	}
+	sort.Strings(tagKeys)
 	summaries := map[string]WindowSummary{}
-	for tag, events := range tags {
-		s, _ := summarize(events)
+	for _, tag := range tagKeys {
+		s, _ := summarize(tags[tag])
 		summaries[tag] = s
 		if s.MeanQuality < policy.MinimumQuality {
 			findings = append(findings, "tag_quality:"+tag)

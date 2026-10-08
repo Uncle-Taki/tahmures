@@ -1,7 +1,7 @@
-    ---
-    name: mehdi-research
-    description: Create reliable research foundations for technical books.
-    ---
+---
+name: mehdi-research
+description: Create reliable research foundations for technical books.
+---
 
 
 Responsibilities:
@@ -14,4 +14,3 @@ Output:
 - research notes
 - source ledger
 - unresolved questions
-

@@ -6,7 +6,9 @@ Pass when:
 
 - unrelated user changes are preserved;
 - generated site files are not edited directly;
-- document structure remains valid.
+- document structure remains valid;
+- narrative edits preserve recorded character/location continuity and do not
+  present later tradition or teaching fiction as direct Shahnameh fact.
 
 ## Gate 2 — Technical integrity
 
@@ -53,9 +55,15 @@ Pass when:
 
 Pass when:
 
-- Chapters 01–09 human-approved wording is protected;
-- Chapters 10–24 are not falsely labelled human-reviewed;
-- new human findings are promoted into regression rules when appropriate.
+- Chapters 01–09 historical human-approved wording is protected without
+  treating that history as approval of later revisions;
+- Chapters 10–24 are not falsely labelled human-reviewed after machine work;
+- every human note has a disposition and a source-faithful repair or an explicit
+  question for human signoff;
+- any claim that `human_reviewed` certifies the current revision has matching
+  revision-specific human approval evidence;
+- new findings enter provisional guidance first and become regression rules
+  only when human approval and cross-chapter evidence justify promotion.
 
 ## Gate 7 — Deterministic validation
 

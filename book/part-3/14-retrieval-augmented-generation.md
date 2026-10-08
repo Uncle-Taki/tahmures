@@ -2,10 +2,10 @@
 title: "Retrieval-Augmented Generation"
 slug: "retrieval-augmented-generation"
 chapter: 14
-part: "Part III — Knowledge, Memory, and Action"
+part: "Part III — Context, Memory, Tools, and Agents"
 summary: "Evaluate retrieval, evidence, and citations as distinct components of grounded generation."
 maturity: "draft"
-last_reviewed: "2026-07-30"
+last_reviewed: "2026-09-27"
 narrative_episode: "The Correct Answer from the Wrong Tablet"
 narrative_origin: "original-teaching-fiction"
 learning_objectives:
@@ -64,72 +64,89 @@ Retrieval supplies a model with candidate evidence; it does not certify that the
 
 Retrieval-augmented generation combines an information-retrieval system with generation. A fluent answer can hide missed evidence, irrelevant chunks, stale documents, inaccessible sources, poor chunking, or unsupported citations. End-to-end correctness alone cannot locate the failure.
 
-The practical question is therefore not whether a model can sometimes produce
-a useful result. It is whether the surrounding system can show what information
-and authority were available, which invariant was checked, what changed state,
-and why the outcome should be accepted or stopped.
+The problem is not hypothetical caution; it is the map room. The first answer was right, so every downstream check passed, and nothing in the response named a passage that could be retraced. The failure was real but latent, waiting for the second question. An answer path has stages—corpus, retrieval, filtering, ranking, assembly, generation, citation—and each stage can fail independently while the final answer still looks correct. When evaluation observes only the outcome, one lucky answer certifies the whole path. The engineering problem is to make each arrow of the path measurable, so that a correct answer supported by the wrong evidence is recognised as a failure of retrieval or freshness rather than accepted as a success of the system.
 
 ## Mental Model
 
 Use the pipeline query → authorised candidate corpus → ranking → top-k chunks → context assembly → grounded answer → citation validation. Each arrow has an observable contract. The generator may only cite the retrieved set; a cited source still needs semantic support review.
 
-A mental model is useful only when it assigns ownership. Requirements belong to
-people and product policy. Identity, permission, validity, budgets, and state
-transitions belong to application mechanisms. Language models interpret or
-propose within those boundaries. Evaluators observe outcomes and have their own
-documented limitations.
+The model's diagnostic habit is the evaluator's move from the tale: place a second question beside the first. A single demonstration cannot distinguish grounding from coincidence; a set of known questions with known useful passages can. Recall, precision, and rank position describe the retrieval arrows; citation membership describes the answer's relationship to the retrieved set; abstention behaviour describes the system's honesty when the corpus cannot support a decision. None of these is an end-to-end score. Each belongs to an owner—the corpus, the retriever, the policy, or the generator—and each is measurable before the answer is read.
 
 ## Core Concepts
 
 Recall asks whether relevant evidence was retrieved; precision asks how much retrieved material was relevant. Reciprocal rank rewards an early first relevant result. Chunk identity and document identity must both survive. Scope and validity are filters, not ranking hints. Top-k is a cost and recall decision. Abstention is required when evidence is insufficient.
 
-Treat each concept as a contract with inputs, outputs, failure reasons, and a
-lifecycle. Do not merge absence, invalidity, denial, uncertainty, and
-infrastructure error into one generic failure. Those states require different
-retry, escalation, and user communication.
+Recall at k is the fraction of the relevant documents that appear in the first k results; precision at k is the fraction of the first k results that are relevant. The two pull against each other in a predictable way: returning everything makes recall perfect and precision meaningless, while returning a single lucky document makes precision perfect and recall fragile. Neither number alone describes a retriever; together they describe a point on a curve, and k is the knob that moves along it. Reciprocal rank adds position: one divided by the rank of the first relevant result. It matters because downstream stages are not indifferent to order—the first retrieved chunk occupies the most salient position in the assembled context, and Chapter 12 showed what displacement costs.
+
+Chunk identity and document identity must both survive retrieval. A chunk is the unit retrieved and cited; a document is the unit that carries authority, scope, and validity. When chunk identity is lost, citations become unverifiable—the answer names "the archive" instead of a passage. When document identity is lost, an expired chunk from a superseded survey becomes indistinguishable from a current one, because freshness belongs to the document, not to the text an answer happens to quote.
+
+Scope and validity are filters, not ranking hints. The distinction is one of order and semantics: a record outside the caller's scope or past its validity window is excluded before scoring, whatever its lexical similarity. Ranking a forbidden document first and then suppressing it from display still leaks—through latency, through counts, and through the habits of a pipeline tuned around it. The Archivist barred forbidden and expired tablets before ordering the candidates, and the map room's failure was precisely a validity question decided by repetition instead.
+
+Top-k is a cost and recall decision, not a retrieval quality score. Larger k admits more relevant material and more noise, consumes more of the window Chapter 12 budgets, and pushes some relevant results past the positions where attention is reliable. Smaller k is cheaper and sharper and displaces more. The honest way to choose k is measurement on representative questions, not intuition, and the choice interacts with the assembler's budget from Chapter 13.
+
+Abstention is required when evidence is insufficient. This is a success criterion, not a consolation: the court rewarded a plain admission as carefully as a supported route. Operationally it means the answer path has a terminal state that produces no answer, and that state must be designed—the prompt must permit it, the evaluator must reward it, and the product must be able to present it. A system that cannot decline will fabricate grounding when the corpus runs out, and no citation check will notice, because fabricated answers can cite real documents badly.
+
+Citation closes the loop between answer and evidence. The mechanical half is membership: an answer may cite only identifiers present in the retrieved set, which code can enforce exactly. The semantic half is support: whether the cited passage actually entails the claim. Membership is a contract; support is a judgement, and Chapter 19 is where judgement is engineered. Confusing the two produces the false comfort of a well-cited wrong answer.
 
 ## Prompt Pattern
 
 Ask for an answer using only enumerated chunks, cite chunk IDs beside claims, report conflicts, and return insufficient_evidence when the set cannot support the decision. Enforce citation membership in code.
 
-The prompt communicates the contract to a probabilistic participant. The
-application implements the enforceable parts. Keep trusted configuration
-separate from user, retrieved, remembered, generated, and tool-returned text.
+The prompt's enumerations make the answer checkable. When chunks arrive as a numbered stack with identifiers, a citation is a quotable reference rather than a flourish; when the prompt requires an explicit insufficiency verdict, restraint becomes an observable output instead of an absence. What the application then does with those outputs is not prose: citation membership is a set comparison, and the insufficient_evidence marker is a return value the product must handle. What the prompt cannot do is make retrieved text true, current, or in scope—those properties were settled, or lost, before generation began.
 
 ## Naive Attempt
 
 The naive system searches all text, concatenates the first matches, and asks for an answer with sources. Lexical repetition can outrank current authority. A fabricated or out-of-set citation may look formal enough to pass manual inspection.
 
-A successful demonstration does not cover stale, missing, cross-scope,
-duplicated, contradictory, cancelled, or unauthorised cases. The first test
-suite must contain those cases before wording is optimised.
+Its correctness can be coincidence. The naive system that answered the first route question correctly had no property a second question could rely on: the same ranking rule produced the bridge that no longer existed. A demonstration built from one question measures luck; a corpus of known questions with known useful passages measures behaviour. Until the second question exists, stale evidence, poor ranking, and missing abstention are invisible—not absent.
 
 ## Failure Analysis
 
 Diagnose corpus omission, permission filtering, chunk boundaries, query formulation, ranking, top-k, context assembly, model use, and citation support separately. A wrong answer with perfect recall differs from a right answer reached through stale evidence.
 
-Assign a stable error or decision code at the earliest boundary that can know
-the truth. Preserve enough metadata for diagnosis without retaining unnecessary
-sensitive content. A model-generated explanation is not a substitute for that
-record.
+Stage metrics locate the failing arrow. Recall near zero with a fluent answer indicts retrieval or the corpus, not the model. Perfect recall with an unsupported claim indicts generation or citation discipline. A right answer with a nonzero stale-source rate is not a success but an unexploded failure—the path is invalid, and only coincidence made the outcome acceptable this time. The diagnosis changes the fix: corpus curation, filter policy, ranking signals, k, prompt, or citation checks. Without stage separation, every one of these failures receives the same remedy—rewording the prompt, which owns none of them.
 
 ## Improved Design
 
 The InMemoryRetriever is a deterministic offline boundary: it filters scope and validity, computes normalised term overlap, uses stable tie-breaking, and returns bounded chunks with provenance. validate_citations rejects IDs outside the returned set. Production retrieval can replace the scorer without changing these contracts.
 
-The implementation deliberately stays small and dependency-free. Its purpose is
-to make the boundary executable in both Python and Go. Production systems will
-need durable storage, authentication, concurrency control, maintained parsers,
-and organisation-specific policy.
+The retriever's order of operations is the chapter's argument in miniature. Scope and validity are checked first, before any scoring, so an expired or forbidden chunk cannot influence the ranking. Scoring is term overlap: the number of query terms present in the chunk, divided by the number of query terms. Ties break by chunk identifier, so the same corpus and query always produce the same order. The result is cut at the requested limit and returned with provenance intact. validate_citations extracts bracketed identifiers from the answer text and rejects any that are not in the retrieved set.
+
+The scorer is deliberately sparse and lexical—it matches terms, not meaning. Production systems usually choose among three families: sparse retrieval like this one, which matches exact terms and fails on paraphrase; dense retrieval, which embeds meaning and retrieves similar passages but fails opaquely when similarity is not relevance; and hybrid retrieval, which combines both at the cost of running and governing two systems. The chapter's contracts—filter before rank, stable order, bounded results, citation membership—hold across all three.
 
 ## Worked Example
 
 A policy assistant retrieves current policy P7 and obsolete P2. Filtering removes P2 before scoring. If P7 does not mention the requested exception, the answer abstains rather than filling the gap from model memory. The selection packet records what was searched and returned.
 
-Trace one value from origin through filtering, model-visible representation,
-evaluation, logging, retention, and deletion. This lineage exercise often
-reveals that a convenient field combines sources with different authority or
-lifecycle.
+The second example is small enough to check by hand. A corpus of six chunks, one query, and relevance judgements for the current question:
+
+```text
+query: "safe pass road"    query terms: safe, pass, road
+
+corpus (all chunks in scope; judged for the current question)
+  C1  current survey    "the eastern pass is safe"            relevant
+  C2  road song         "the safe road song"                  not relevant
+  C3  shelter list      "winter shelter inventory"            not relevant
+  C4  old survey        "the safe road through the old pass"  not relevant, expired
+  C5  bridge inventory  "bridge repair inventory"             not relevant
+  C6  closure notice    "the pass road closes in winter"      relevant
+
+term-overlap scores (matched query terms / 3)
+  C1  2/3 = 0.67    C2  2/3 = 0.67    C3  0/3 = 0.00
+  C4  3/3 = 1.00    C5  0/3 = 0.00    C6  2/3 = 0.67
+
+freshness-aware ranking, k = 3   (C4 barred as expired before scoring)
+  C1, C2, C6    recall@3 = 2/2 = 1.00    precision@3 = 2/3 = 0.67    RR = 1/1 = 1.00
+
+validity-ignoring ranking, k = 3 (C4 admitted, ranks first, displaces C6)
+  C4, C1, C2    recall@3 = 1/2 = 0.50    precision@3 = 1/3 = 0.33    RR = 1/2 = 0.50
+```
+
+The old survey matches all three query terms—repetition is its strength, exactly as the copied title outranked the current district name in the tale. When validity is enforced before scoring, the expired chunk is barred and the closure notice survives at rank three: recall is perfect, two of three results are relevant, and the first relevant result leads. When validity is ignored, the stale survey takes rank one and displaces the closure notice from the cut. Recall halves, precision falls to a third, and the first usable evidence arrives second.
+
+Both configurations answer the first question fluently, and only the second question—or the stage metrics—reveals the difference. That is the chapter's evaluation argument in one table: an aggregate outcome score certifies both paths; recall, precision, and reciprocal rank separate them.
+
+One caveat keeps the table honest: relevance judgements belong to the question, not to the documents. The old survey is relevant to a question about the road's history and irrelevant to today's departure, which is why the judgement column says "for the current question" and why the expired chunk is barred rather than demoted. A judgement set frozen without its question, or reused after the world moves, measures the past as fluently as the stale tablet does.
 
 ## Experiment
 
@@ -185,220 +202,50 @@ than copying Python syntax.
 
 Corpus gaps, poisoned or stale records, cross-scope retrieval, chunk boundaries that remove qualifications, duplicate dominance, query drift, low recall hidden by fluent answers, citation membership without claim support, and benchmarks unlike production traffic.
 
-Add every observed production failure to a versioned regression set. Keep the
-failed input, governing policy version, expected safe outcome, and evaluator
-rationale. Remove or redact sensitive payloads without erasing the case shape.
+Three deserve expansion because they survive a casual demo. Stale records persist when validity is a guess rather than a declared property of the document; the fix belongs to corpus policy, not ranking. Chunk boundaries that remove qualifications are silent: a passage reading "the pass is safe—except during flood" can be split so the retrieved half asserts what the document hedged, and every citation check passes because the citation is real. Benchmark rot is slower: golden questions stop representing traffic as the corpus and the world move, and a stable score becomes evidence about the past.
 
 ## Security Considerations
 
 Apply tenant and document permissions before retrieval. Treat chunk text as untrusted data. Prevent retrieved instructions from changing tool authority. Do not reveal inaccessible document IDs through citations or logs.
 
-Assume content can be relevant without being authoritative. Use deterministic
-enforcement for access, mutation, budgets, identity, and irreversible action.
-Human approval must show trusted facts about the proposed consequence.
+Retrieved text is data, and Chapter 21 develops what that costs when the data is hostile. Two boundaries belong here. Corpus access control is enforced before retrieval, so that ranking cannot leak the existence of documents the caller may not read—through scores, ordering, or citation rejects. Provenance integrity protects the source marks themselves: if a chunk can carry a forged survey mark, every downstream citation inherits the forgery, so marks must be assigned by the ingestion path, not by the text being ingested.
 
 ## Operational Considerations
 
 Version corpus snapshots, chunkers, embeddings or scorers, filters, prompts, and evaluators. Monitor source mix, age, no-result rate, citation rate, and labelled retrieval metrics. Reindex after corrections and verify deletion propagation.
 
-Define service behaviour for dependency failure. A skipped check must not be
-interpreted as a passed check. Provide safe terminal outcomes, correlation
-identifiers, and runbooks that do not require editing conversation text.
+Stale-source rate is a service-level signal, not a curiosity: it says what fraction of retrieved material the world has already contradicted, and its trend predicts the second question before a user asks it. Golden questions need a refresh cadence and an owner, because they decay silently—Chapter 20 turns them into a regression suite. Reindexing after corrections must propagate deletions to derived indexes and caches, or a revoked document will keep answering from the index's memory; Chapter 15 gives that propagation its full treatment.
 
 ## Trade-Offs
 
 Larger top-k may increase recall and context noise. Smaller chunks improve targeting but lose relationships; larger chunks preserve context but consume budget. Dense, sparse, and hybrid retrieval have different costs and failure profiles. Choose through representative evaluation.
 
-### Requirements and ownership
+The k decision is first. Every increment of k buys recall at the price of noise, window budget, and displacement of early positions—the weakest relevant result at rank twenty can push better material out of attention. The choice is empirical: measure recall and precision across k on representative questions, and remember that the assembler's budget from Chapter 13, not the retriever, is often the binding constraint.
 
-Begin with the decision the system is allowed to make and the decision it
-must leave to a person or another service. Name the owner of every invariant,
-especially where generated language crosses into stored state or external
-action. A responsibility assigned only to “the AI” cannot be audited. Convert
-it into an application check, a model task, or a human review duty, and state
-what happens when that owner is unavailable. For retrieval-augmented generation, case R01 must make the review observable through recall@k, precision@k, reciprocal rank, stale-source rate, citation validity, supported-answer rate, and appropriate abstention. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
+Freshness filtering against recall is second. Aggressive validity windows remove stale material and, occasionally, still-valid old records—the Archivist refused to equate age with falsehood because sometimes an old tablet remained true. The resolution is per-record-class validity policy: a road survey and a tax code do not decay at the same rate, and a blanket rule trades a known failure for an unmeasured one.
 
-### Inputs and source inventory
+Curation against scale is third. A curated cabinet has precise scope, clean provenance, and poor coverage; an uncurated room has everything and ranks by repetition. Curation is expensive per document and pays in precision and in the security boundaries of the previous section; scale pays in recall. The honest instrument is a coverage audit—questions the corpus should answer but cannot—rather than corpus size.
 
-List every source before designing the model-visible representation.
-Record who may write it, who may read it, how freshness is determined, and
-whether its words can instruct or only inform. Include caches, summaries,
-defaults, and operator overrides; hidden convenience sources often cause the
-most confusing failures. Test absence explicitly, because a missing source
-must not silently become an empty but authoritative value. For retrieval-augmented generation, case R02 must make the review observable through recall@k, precision@k, reciprocal rank, stale-source rate, citation validity, supported-answer rate, and appropriate abstention. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
+Citation strictness against throughput is fourth. Membership checking is cheap and total; semantic support review is expensive and partial. A system that checks only membership will pass well-cited distortions; a system that reviews every claim's support will cost more than the answer is worth. The boundary is deliberate: enforce membership in code now, and route support review to the rubric design of Chapter 19.
 
-### Normal and boundary cases
-
-A happy path should prove the basic contract, not the whole design. Add
-empty collections, exact-budget inputs, expiry at the current instant,
-duplicate identifiers, conflicting current values, and the smallest and
-largest accepted payloads. Boundary cases reveal whether comparisons,
-defaults, and ordering rules agree between implementations. Document which
-boundaries are product choices rather than facts about language models. For retrieval-augmented generation, case R03 must make the review observable through recall@k, precision@k, reciprocal rank, stale-source rate, citation validity, supported-answer rate, and appropriate abstention. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Adversarial cases
-
-Construct inert cases that attempt scope expansion, authority claims,
-identifier confusion, indirect instructions, replay, and resource
-exhaustion. The purpose is to test the application boundary, not to invite
-the model to recognise villainous wording. Vary surface language while
-preserving the same prohibited consequence. A safety rule that works only
-when an attack announces itself is a demonstration, not a control. For retrieval-augmented generation, case R04 must make the review observable through recall@k, precision@k, reciprocal rank, stale-source rate, citation validity, supported-answer rate, and appropriate abstention. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Failure classification
-
-Separate invalid input, denied authority, insufficient evidence,
-exhausted budget, dependency failure, cancellation, evaluator uncertainty,
-and internal error. These outcomes have different retry and escalation
-policies. Assign the reason at the earliest component that knows it, then
-preserve it through later layers. Do not let a friendly generated explanation
-replace the machine-readable cause used by operators and tests. For retrieval-augmented generation, case R05 must make the review observable through recall@k, precision@k, reciprocal rank, stale-source rate, citation validity, supported-answer rate, and appropriate abstention. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Versioning and reproducibility
-
-Pin the prompt, policy, data snapshot, fixture, evaluator, and relevant
-code version in each report. A result without its construction history cannot
-support regression analysis. When a schema or policy changes, replay the old
-cases and classify every changed decision as intended, harmless, or a defect.
-Compatibility must describe observable behaviour, including rejection
-reasons, rather than merely accepting the same file format. For retrieval-augmented generation, case R06 must make the review observable through recall@k, precision@k, reciprocal rank, stale-source rate, citation validity, supported-answer rate, and appropriate abstention. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Privacy and retention
-
-Minimise information before it enters model-visible context, logs, traces,
-or evaluation fixtures. Define retention by data class and purpose instead of
-keeping everything for possible debugging. Deletion must cover derived
-summaries, indexes, caches, and copied artefacts. Operational metadata should
-explain a decision without revealing records that the caller was never
-permitted to know existed. For retrieval-augmented generation, case R07 must make the review observable through recall@k, precision@k, reciprocal rank, stale-source rate, citation validity, supported-answer rate, and appropriate abstention. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Access and authority
-
-Authenticate the caller and source outside generated text. Apply scope
-filtering before ranking or presentation, and recheck authority immediately
-before a consequential effect. A component may pass evidence without passing
-its own permissions. Test forged labels, stale approval, cross-tenant
-identifiers, and a legitimate request delivered through an unauthorised
-route. Default denial needs a usable escalation path rather than a dead end. For retrieval-augmented generation, case R08 must make the review observable through recall@k, precision@k, reciprocal rank, stale-source rate, citation validity, supported-answer rate, and appropriate abstention. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Observability
-
-Trace stable case, run, source, and decision identifiers across component
-boundaries. Record counts and reason codes for selection, exclusion, denial,
-retry, cancellation, and validation, while avoiding raw sensitive payloads.
-Dashboards should expose distributions and rare disqualifying failures, not
-only averages. An operator must be able to locate whether a bad outcome began
-before the model, inside generation, or after it. For retrieval-augmented generation, case R09 must make the review observable through recall@k, precision@k, reciprocal rank, stale-source rate, citation validity, supported-answer rate, and appropriate abstention. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Latency, cost, and budgets
-
-Allocate time, tokens, calls, storage, and money across stages before the
-request begins. Reserve capacity for safe completion, receipts, and cleanup;
-consuming the whole budget on generation can prevent a controlled ending.
-Evaluate degraded paths such as smaller candidate sets or human escalation.
-Optimisation is acceptable only while hard constraints and rare-case safety
-remain visible in the comparison. For retrieval-augmented generation, case R10 must make the review observable through recall@k, precision@k, reciprocal rank, stale-source rate, citation validity, supported-answer rate, and appropriate abstention. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Recovery and reconciliation
-
-Assume a process can fail after an external side effect but before its
-receipt is stored. Define idempotency, retry classes, acknowledgement, and
-reconciliation for that uncertain interval. Some actions can be compensated;
-others require a person to inspect reality. Recovery code must respect current
-goal and authority rather than replaying an old request merely because it
-appears unfinished. For retrieval-augmented generation, case R11 must make the review observable through recall@k, precision@k, reciprocal rank, stale-source rate, citation validity, supported-answer rate, and appropriate abstention. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Human review
-
-Specify what the reviewer sees: trusted identity, source evidence,
-constraints, proposed consequence, uncertainty, and reversible alternatives.
-A raw transcript transfers too much noise and too little verified state.
-Record the reviewer’s decision and rationale without pretending that approval
-proves the model was correct. Measure disagreement and escalation load so
-review does not become an invisible bottleneck. For retrieval-augmented generation, case R12 must make the review observable through recall@k, precision@k, reciprocal rank, stale-source rate, citation validity, supported-answer rate, and appropriate abstention. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Cross-language contract parity
-
-Python and Go need equivalent accepted inputs, normalised outputs,
-ordering, and failure reasons, not line-for-line implementations. Shared
-manifests and fixtures make observable drift visible. Include malformed and
-boundary cases because default JSON behaviour, time comparison, sorting, and
-numeric conversion differ across runtimes. Keep one canonical report shape so
-readers can compare behaviour without translating the result. For retrieval-augmented generation, case R13 must make the review observable through recall@k, precision@k, reciprocal rank, stale-source rate, citation validity, supported-answer rate, and appropriate abstention. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Rollout and rollback
-
-Introduce policy and model changes with shadow reports or a controlled
-cohort. Compare both aggregate metrics and every disqualifying case before
-expanding. A rollback must restore compatible policy, schemas, and data
-assumptions, not only an earlier prompt. Preserve enough previous artefacts
-to reproduce the old decision and define who can halt rollout when a rare
-boundary regresses. For retrieval-augmented generation, case R14 must make the review observable through recall@k, precision@k, reciprocal rank, stale-source rate, citation validity, supported-answer rate, and appropriate abstention. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Incident response
-
-A runbook should let operators pause new work, revoke capability, inspect
-affected versions, identify exposed subjects, and reconcile uncertain side
-effects. Preserve evidence with access controls and avoid copying sensitive
-text into tickets. After containment, convert the incident into synthetic
-regression cases that retain the failure shape. Correct data and derived
-state as well as wording. For retrieval-augmented generation, case R15 must make the review observable through recall@k, precision@k, reciprocal rank, stale-source rate, citation validity, supported-answer rate, and appropriate abstention. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Long-term drift
-
-Traffic, sources, policies, external tools, and model behaviour change at
-different rates. Monitor tagged slices and refusal or escalation patterns so
-a stable average cannot hide a failing subgroup. Schedule replay on frozen
-fixtures and sample current cases for human adjudication. When the environment
-changes, revisit requirements first; prompt tuning cannot preserve a contract
-whose underlying meaning has moved. For retrieval-augmented generation, case R16 must make the review observable through recall@k, precision@k, reciprocal rank, stale-source rate, citation validity, supported-answer rate, and appropriate abstention. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-A final architecture review should replay the same cases through the previous
-version, proposed version, and failure fallbacks. Inspect every changed
-decision, not only averages. Classify differences as intended policy change,
-harmless representation change, or regression, and require an accountable
-owner for each intended change.
-
-### The decision record
-
-Finish the review with a short decision record. State the user need, selected
-design, alternatives rejected, hard invariants, known uncertainty, evidence,
-owners, rollout boundary, rollback trigger, and next review date. Link the
-exact experiment report rather than copying only its headline metric. The
-record should also name what the design does not guarantee. This prevents a
-narrow teaching example from becoming an unsupported production claim.
-
-Revisit the record when a source, policy, model, tool, evaluator, or workload
-changes. A newer component version does not automatically invalidate the
-design, but it does invalidate the assumption that old evidence still
-describes current behaviour. Run the representative and disqualifying cases
-first, then expand only if their paths remain valid. If evidence is missing,
-record that uncertainty instead of filling it with a confident explanation.
-The resulting document is deliberately less elegant than a single clever
-prompt. It is also much more useful during review, incident response, and
-maintenance, because it connects requirements to mechanisms and observed
-outcomes.
+Abstention against coverage is last. A system that declines often is safe and useless; a system that never declines is useful and untrustworthy. The calibration instrument is the set of golden questions with known insufficiency—questions the corpus cannot support, where declining is the passing grade. Without them, abstention tuning is guesswork, and the court's reward for restraint never reaches the system being built.
 
 ## When Prompting Is Not the Answer
 
 Use a database query for exact balances, permissions, and current status. Use a search engine directly when the user needs documents rather than synthesis. Retrieval cannot repair an absent or untrustworthy corpus.
 
-Language remains valuable for interpretation and explanation, but mechanisms
-must own invariants that cannot safely depend on persuasive text.
-
 ## Exercises
 
-1. Add one normal, one boundary, and one adversarial case to the dataset.
-2. Identify the application-owned invariant and implement its deterministic check.
-3. Compare a correct result reached through invalid evidence with a supported result.
-4. Design a rollback or reconciliation path for one partial failure.
-5. Explain which information should be withheld from the model and why.
+1. Given a six-chunk corpus and a query of your choosing, compute recall@k, precision@k, and reciprocal rank by hand for k = 1, 2, and 3, and explain which k you would deploy and why.
+2. Design ten golden questions for a domain you know, including two the corpus cannot support. Define the refresh cadence and the signal that indicates the set has rotted.
+3. Run a stale-source audit: take five answers with citations, trace each cited chunk to its document, and verify the document's validity window still covers today.
+4. Construct a chunk-boundary failure: split a document so a retrieved chunk asserts what the full passage hedged, then write the check that would have caught it.
+5. Contrast a correct answer reached through expired evidence with a supported answer. Write the evaluation segment that distinguishes them, and state which stage owns each failure.
+6. Add a duplicate of the most relevant chunk to the corpus and observe how ranking and citation behaviour change. Explain what the duplicate does not change and why.
 
 ## Chapter Summary
 
-Evaluate retrieval, evidence, and citations as distinct components of grounded generation. Reliable systems separate model capability from application
-authority, evaluate the path as well as the answer, and preserve enough
-provenance and state to explain failure.
+Evaluate retrieval, evidence, and citations as distinct components of grounded generation. This chapter's retriever filters scope and validity before scoring, ranks by declared signals with stable order, and submits to measurement: recall and precision locate retrieval failures, reciprocal rank exposes displacement, stale-source rate exposes freshness failures, and citation membership exposes unsupported answers. Abstention on insufficient evidence is a passing grade. A correct answer reached through an invalid path is a latent failure, and the evaluation contract exists to catch it before the second question does.
 
 ## The Next Tale
 

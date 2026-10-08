@@ -2,7 +2,7 @@
 title: "Designing for Creativity"
 slug: "designing-for-creativity"
 chapter: 11
-part: "Part II — Designing Prompted Interactions"
+part: "Part II — Prompt Design and Controlled Generation"
 summary: "Design creative exploration and accountable acceptance as different stages with human-owned criteria."
 maturity: "draft"
 last_reviewed: "2026-07-29"
@@ -78,10 +78,10 @@ They were encouraged to combine distant references and to state what made each
 candidate different. No candidate was selected there.
 
 In the second room, gardeners, a mason, and a representative of people who
-used the stair reviewed anonymised candidates. They scored feasibility,
-relevance, novelty, and explanation quality. Water flowing uphill without a
-mechanism and any obstruction of the stair were disqualifying, whatever the
-average score.
+used the stair reviewed candidates with their makers hidden. They scored
+feasibility, relevance, novelty, and explanation quality. Water flowing uphill
+without a mechanism and any obstruction of the stair were disqualifying,
+whatever the average score.
 
 Reviewers disagreed about beauty and novelty. The First Scribe preserved their
 individual scores and reasons rather than asking a div to settle the
@@ -126,7 +126,7 @@ Diversification checks whether candidates differ materially. Validation removes
 hard failures. Review applies a rubric and records reasons. Selection is a
 human or policy decision, with revision available when no candidate passes.
 
-The two phases need different prompt behavior. Exploration benefits from
+The two phases need different prompt behaviour. Exploration benefits from
 varied perspectives and candidate count. Acceptance benefits from stable
 criteria, evidence, and independence from candidate self-praise.
 
@@ -427,7 +427,7 @@ process generates more candidates than reviewers can responsibly inspect,
 reduce generation or improve deterministic screening. Reviewer exhaustion
 increases reliance on polished explanations and first impressions.
 
-Finally, be precise in claims. The system may produce candidates reviewers rate
+Be precise in claims. The system may produce candidates reviewers rate
 as more novel relative to a stated set while meeting feasibility thresholds.
 That is defensible. Claiming that a model is objectively creative or has
 invented something never before conceived is usually not. Good evaluation
@@ -527,7 +527,7 @@ Those functions make future creative decisions more honest.
 
 Use engineering analysis for physical feasibility, accessibility standards for
 accessibility, legal review for rights, and user research for audience
-response. Use design tools and prototypes to test behavior. No wording can
+response. Use design tools and prototypes to test behaviour. No wording can
 replace contact with the world in which the artefact must work.
 
 Models can widen search. They cannot certify originality, safety, or human

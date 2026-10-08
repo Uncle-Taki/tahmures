@@ -53,6 +53,13 @@ HEADINGS = [
     "## Citations and Further Reading",
 ]
 
+# D19: the final chapter closes the book. Its closing section replaces the
+# next-tale heading and uses the closing marker instead of a next-chapter hook.
+FINAL_CHAPTER = 24
+NEXT_TALE_HEADING = "## The Next Tale"
+CLOSING_HEADING = "## The Practice Continues"
+CLOSING_MARKER = "<!-- closing -->"
+
 PART_PREFIXES = {
     "part-1": ("Part I", "بخش یک"),
     "part-2": ("Part II", "بخش دو"),
@@ -195,8 +202,15 @@ def validate(path: Path) -> tuple[int, str, str]:
     for key in FRONT_MATTER_KEYS:
         if key not in front_matter:
             raise ValueError(f"{path}: missing front matter key {key}")
+    chapter = re.search(r"^chapter:\s*(\d+)", front_matter, re.MULTILINE)
+    if not chapter:
+        raise ValueError(f"{path}: chapter must be numeric")
+    number = int(chapter.group(1))
+    headings = list(HEADINGS)
+    if number == FINAL_CHAPTER:
+        headings[headings.index(NEXT_TALE_HEADING)] = CLOSING_HEADING
     positions: list[int] = []
-    for heading in HEADINGS:
+    for heading in headings:
         try:
             positions.append(text.index(heading))
         except ValueError as error:
@@ -208,18 +222,24 @@ def validate(path: Path) -> tuple[int, str, str]:
         raise ValueError(f"{path}: narrative has {words} words; expected 400–900")
     if 'narrative_origin: "original-teaching-fiction"' not in front_matter:
         raise ValueError(f"{path}: narrative origin must identify teaching fiction")
-    if "<!-- next: ch" not in text:
-        raise ValueError(f"{path}: missing machine-readable next-tale hook")
+    if number == FINAL_CHAPTER:
+        if CLOSING_MARKER not in text:
+            raise ValueError(f"{path}: final chapter requires the closing marker")
+        if "<!-- next: ch" in text:
+            raise ValueError(f"{path}: final chapter must not contain a next-tale hook")
+    else:
+        if "<!-- next: ch" not in text:
+            raise ValueError(f"{path}: missing machine-readable next-tale hook")
+        if CLOSING_MARKER in text:
+            raise ValueError(
+                f"{path}: closing marker is reserved for the final chapter"
+            )
     if not re.search(r"## Citations and Further Reading\n\n.+", text, re.DOTALL):
         raise ValueError(f"{path}: citations section is empty")
     slug = re.search(r'^slug:\s*"([^"]+)"', front_matter, re.MULTILINE)
     episode = re.search(r'^narrative_episode:\s*"([^"]+)"', front_matter, re.MULTILINE)
     if not slug or not episode:
         raise ValueError(f"{path}: slug and narrative episode must be quoted")
-    chapter = re.search(r"^chapter:\s*(\d+)", front_matter, re.MULTILINE)
-    if not chapter:
-        raise ValueError(f"{path}: chapter must be numeric")
-    number = int(chapter.group(1))
     if 7 <= number <= 24:
         words = prose_words(text)
         if not 3500 <= words <= 5500:

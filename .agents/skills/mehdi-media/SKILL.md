@@ -1,7 +1,7 @@
-    ---
-    name: mehdi-media
-    description: Transform approved content into educational media assets.
-    ---
+---
+name: mehdi-media
+description: Transform approved content into educational media assets.
+---
 
 
 Create:
@@ -12,4 +12,3 @@ Create:
 - continuity requirements
 
 Use modular shots, not one giant generation prompt.
-

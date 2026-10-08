@@ -2,7 +2,7 @@
 title: "Instruction Hierarchy and Conflict"
 slug: "instruction-hierarchy-and-conflict"
 chapter: 5
-part: "Part I — Language, Intent, and Models"
+part: "Part I — Language, Intent, and Reliable Instructions"
 summary: "Authenticate instruction sources, apply explicit precedence, detect conflicts, and escalate decisions the model should not resolve."
 maturity: "draft"
 last_reviewed: "2026-07-29"
@@ -74,8 +74,8 @@ authenticate and the powers each possessed.
 
 A current royal order outranked a provincial one within the same subject. A
 provincial order could fill details the royal order left open, but not reverse
-it. Marginal text in an inventory was data, regardless of its tone. A seal
-whose custody could not be proved granted nothing.
+it. Marginal text in an inventory was evidence, not command, regardless of its
+tone. A seal whose custody could not be proved granted nothing.
 
 The First Scribe drew the hierarchy before testing the messages. The royal
 closure survived. The provincial order was recorded as a conflict and returned

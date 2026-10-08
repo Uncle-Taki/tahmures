@@ -58,7 +58,8 @@ Make targeted edits.
 
 For Chapters 01–09:
 
-- preserve human-approved wording;
+- preserve historically human-approved wording unless a source-faithful targeted
+  correction is required; renewed human signoff is pending for changed text;
 - scan for residual known failure classes;
 - verify citation identity parity;
 - verify protected content;
@@ -77,7 +78,20 @@ For Chapters 10–24:
 
 Recommended batches: 10–12, 13–15, 16–18, 19–21, 22–24.
 
-## Phase G — Terminology promotion
+## Phase G — Persian human review
+
+For each batch with human notes, follow `$mehdi-human-review`:
+
+human notes -> complete reconciliation ledger -> targeted repairs -> validation
+-> supervisory repair acceptance -> explicit human signoff -> separate
+revision-bound review-metadata reconciliation -> next batch.
+
+Historical approval of Chapters 01–09 does not approve later revisions.
+Machine synchronization of Chapters 10–24 does not constitute human review.
+After all chapters have current human signoff, consolidate approved patterns
+and terminology before final bilingual/publication gates.
+
+## Phase H — Terminology promotion
 
 For each candidate:
 
@@ -88,7 +102,7 @@ For each candidate:
 5. update the canonical glossary only when the decision is stable;
 6. add regression coverage where needed.
 
-## Phase H — Visual audit
+## Phase I — Visual audit
 
 Identify concepts that genuinely benefit from diagrams.
 
@@ -97,7 +111,7 @@ Prefer editable Draw.io sources.
 Do not create new figures during a text-fix pass unless the task explicitly includes
 figure creation.
 
-## Phase I — Final gates
+## Phase J — Final gates
 
 Run:
 

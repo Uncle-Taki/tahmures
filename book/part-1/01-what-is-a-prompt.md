@@ -2,7 +2,7 @@
 title: "What Is a Prompt?"
 slug: "what-is-a-prompt"
 chapter: 1
-part: "Part I — Language, Intent, and Models"
+part: "Part I — Language, Intent, and Reliable Instructions"
 summary: "Treat a prompt as the complete, structured interaction through which an application asks a model to do work."
 maturity: "draft"
 last_reviewed: "2026-07-29"
@@ -142,7 +142,7 @@ Think of a prompt as a request envelope:
 
 ```text
 Prompt = instructions + current task + context + data
-       + examples + output contract + interaction state
+       + examples + constraints + output contract + interaction state
 ```
 
 Inference parameters and tool permissions affect the interaction too, although
@@ -176,6 +176,8 @@ roles easier to infer; they do not create enforceable security boundaries.
 - **Examples:** demonstrations of inputs and outputs.
 - **Constraints:** prohibited or required properties.
 - **Output contract:** the shape and semantics expected by the next consumer.
+- **Interaction state:** what earlier turns in this interaction have already
+  established.
 
 These layers may share one transport payload. Keeping them conceptually
 separate makes faults easier to locate.

@@ -1,0 +1,2351 @@
+{
+  "schema_version": 1,
+  "oracle": "Python 3.12 compare_windows; complete report fields and ordered findings",
+  "cases": [
+    {
+      "id": "chapter23_exact",
+      "baseline": [
+        {
+          "RunID": "r-b0",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.87,
+          "LatencyMS": 610,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 4.8,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b1",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.88,
+          "LatencyMS": 640,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.0,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b2",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.86,
+          "LatencyMS": 600,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 4.7,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b3",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.89,
+          "LatencyMS": 655,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.1,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b4",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.9,
+          "LatencyMS": 670,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.2,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b5",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.87,
+          "LatencyMS": 620,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 4.9,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b6",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.88,
+          "LatencyMS": 630,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.0,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b7",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.91,
+          "LatencyMS": 660,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.3,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b8",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.88,
+          "LatencyMS": 790,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.4,
+          "Tags": [
+            "east",
+            "long"
+          ]
+        },
+        {
+          "RunID": "r-b9",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.9,
+          "LatencyMS": 810,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.6,
+          "Tags": [
+            "east",
+            "long"
+          ]
+        }
+      ],
+      "current": [
+        {
+          "RunID": "r-c0",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.9,
+          "LatencyMS": 590,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 4.8,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-c1",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.91,
+          "LatencyMS": 610,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.0,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-c2",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.89,
+          "LatencyMS": 600,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 4.7,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-c3",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.92,
+          "LatencyMS": 630,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.1,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-c4",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.93,
+          "LatencyMS": 640,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.2,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-c5",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.9,
+          "LatencyMS": 615,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 4.9,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-c6",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.91,
+          "LatencyMS": 620,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.0,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-c7",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.92,
+          "LatencyMS": 650,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.3,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-c8",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.56,
+          "LatencyMS": 870,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 8.9,
+          "Tags": [
+            "east",
+            "long"
+          ]
+        },
+        {
+          "RunID": "r-c9",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.58,
+          "LatencyMS": 890,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 9.1,
+          "Tags": [
+            "east",
+            "long"
+          ]
+        }
+      ],
+      "policy": {
+        "MinimumQuality": 0.8,
+        "MaximumErrorRate": 0.1,
+        "MaximumP95LatencyMS": 900,
+        "MaximumMeanCost": 6.0,
+        "QualityDrift": 0.05
+      },
+      "expected": {
+        "Passed": false,
+        "Baseline": {
+          "Count": 10,
+          "MeanQuality": 0.884,
+          "ErrorRate": 0.0,
+          "P95LatencyMS": 810,
+          "MeanCost": 5.1
+        },
+        "Current": {
+          "Count": 10,
+          "MeanQuality": 0.842,
+          "ErrorRate": 0.0,
+          "P95LatencyMS": 890,
+          "MeanCost": 5.8
+        },
+        "TagSummaries": {
+          "east": {
+            "Count": 2,
+            "MeanQuality": 0.57,
+            "ErrorRate": 0.0,
+            "P95LatencyMS": 890,
+            "MeanCost": 9.0
+          },
+          "long": {
+            "Count": 2,
+            "MeanQuality": 0.57,
+            "ErrorRate": 0.0,
+            "P95LatencyMS": 890,
+            "MeanCost": 9.0
+          },
+          "short": {
+            "Count": 8,
+            "MeanQuality": 0.91,
+            "ErrorRate": 0.0,
+            "P95LatencyMS": 650,
+            "MeanCost": 5.0
+          },
+          "west": {
+            "Count": 8,
+            "MeanQuality": 0.91,
+            "ErrorRate": 0.0,
+            "P95LatencyMS": 650,
+            "MeanCost": 5.0
+          }
+        },
+        "Findings": [
+          "tag_quality:east",
+          "tag_quality:long"
+        ],
+        "ChangedVersions": [
+          "model"
+        ]
+      }
+    },
+    {
+      "id": "chapter23_reverse_arrival",
+      "baseline": [
+        {
+          "RunID": "r-b9",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.9,
+          "LatencyMS": 810,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.6,
+          "Tags": [
+            "east",
+            "long"
+          ]
+        },
+        {
+          "RunID": "r-b8",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.88,
+          "LatencyMS": 790,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.4,
+          "Tags": [
+            "east",
+            "long"
+          ]
+        },
+        {
+          "RunID": "r-b7",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.91,
+          "LatencyMS": 660,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.3,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b6",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.88,
+          "LatencyMS": 630,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.0,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b5",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.87,
+          "LatencyMS": 620,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 4.9,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b4",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.9,
+          "LatencyMS": 670,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.2,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b3",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.89,
+          "LatencyMS": 655,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.1,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b2",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.86,
+          "LatencyMS": 600,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 4.7,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b1",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.88,
+          "LatencyMS": 640,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.0,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b0",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.87,
+          "LatencyMS": 610,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 4.8,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        }
+      ],
+      "current": [
+        {
+          "RunID": "r-c9",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.58,
+          "LatencyMS": 890,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 9.1,
+          "Tags": [
+            "east",
+            "long"
+          ]
+        },
+        {
+          "RunID": "r-c8",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.56,
+          "LatencyMS": 870,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 8.9,
+          "Tags": [
+            "east",
+            "long"
+          ]
+        },
+        {
+          "RunID": "r-c7",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.92,
+          "LatencyMS": 650,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.3,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-c6",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.91,
+          "LatencyMS": 620,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.0,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-c5",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.9,
+          "LatencyMS": 615,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 4.9,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-c4",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.93,
+          "LatencyMS": 640,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.2,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-c3",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.92,
+          "LatencyMS": 630,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.1,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-c2",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.89,
+          "LatencyMS": 600,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 4.7,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-c1",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.91,
+          "LatencyMS": 610,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.0,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-c0",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.9,
+          "LatencyMS": 590,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 4.8,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        }
+      ],
+      "policy": {
+        "MinimumQuality": 0.8,
+        "MaximumErrorRate": 0.1,
+        "MaximumP95LatencyMS": 900,
+        "MaximumMeanCost": 6.0,
+        "QualityDrift": 0.05
+      },
+      "expected": {
+        "Passed": false,
+        "Baseline": {
+          "Count": 10,
+          "MeanQuality": 0.884,
+          "ErrorRate": 0.0,
+          "P95LatencyMS": 810,
+          "MeanCost": 5.1
+        },
+        "Current": {
+          "Count": 10,
+          "MeanQuality": 0.842,
+          "ErrorRate": 0.0,
+          "P95LatencyMS": 890,
+          "MeanCost": 5.8
+        },
+        "TagSummaries": {
+          "east": {
+            "Count": 2,
+            "MeanQuality": 0.57,
+            "ErrorRate": 0.0,
+            "P95LatencyMS": 890,
+            "MeanCost": 9.0
+          },
+          "long": {
+            "Count": 2,
+            "MeanQuality": 0.57,
+            "ErrorRate": 0.0,
+            "P95LatencyMS": 890,
+            "MeanCost": 9.0
+          },
+          "short": {
+            "Count": 8,
+            "MeanQuality": 0.91,
+            "ErrorRate": 0.0,
+            "P95LatencyMS": 650,
+            "MeanCost": 5.0
+          },
+          "west": {
+            "Count": 8,
+            "MeanQuality": 0.91,
+            "ErrorRate": 0.0,
+            "P95LatencyMS": 650,
+            "MeanCost": 5.0
+          }
+        },
+        "Findings": [
+          "tag_quality:east",
+          "tag_quality:long"
+        ],
+        "ChangedVersions": [
+          "model"
+        ]
+      }
+    },
+    {
+      "id": "chapter23_reversed_tags",
+      "baseline": [
+        {
+          "RunID": "r-b0",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.87,
+          "LatencyMS": 610,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 4.8,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b1",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.88,
+          "LatencyMS": 640,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.0,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b2",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.86,
+          "LatencyMS": 600,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 4.7,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b3",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.89,
+          "LatencyMS": 655,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.1,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b4",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.9,
+          "LatencyMS": 670,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.2,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b5",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.87,
+          "LatencyMS": 620,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 4.9,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b6",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.88,
+          "LatencyMS": 630,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.0,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b7",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.91,
+          "LatencyMS": 660,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.3,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b8",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.88,
+          "LatencyMS": 790,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.4,
+          "Tags": [
+            "east",
+            "long"
+          ]
+        },
+        {
+          "RunID": "r-b9",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.9,
+          "LatencyMS": 810,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.6,
+          "Tags": [
+            "east",
+            "long"
+          ]
+        }
+      ],
+      "current": [
+        {
+          "RunID": "r-c0",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.9,
+          "LatencyMS": 590,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 4.8,
+          "Tags": [
+            "short",
+            "west"
+          ]
+        },
+        {
+          "RunID": "r-c1",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.91,
+          "LatencyMS": 610,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.0,
+          "Tags": [
+            "short",
+            "west"
+          ]
+        },
+        {
+          "RunID": "r-c2",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.89,
+          "LatencyMS": 600,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 4.7,
+          "Tags": [
+            "short",
+            "west"
+          ]
+        },
+        {
+          "RunID": "r-c3",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.92,
+          "LatencyMS": 630,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.1,
+          "Tags": [
+            "short",
+            "west"
+          ]
+        },
+        {
+          "RunID": "r-c4",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.93,
+          "LatencyMS": 640,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.2,
+          "Tags": [
+            "short",
+            "west"
+          ]
+        },
+        {
+          "RunID": "r-c5",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.9,
+          "LatencyMS": 615,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 4.9,
+          "Tags": [
+            "short",
+            "west"
+          ]
+        },
+        {
+          "RunID": "r-c6",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.91,
+          "LatencyMS": 620,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.0,
+          "Tags": [
+            "short",
+            "west"
+          ]
+        },
+        {
+          "RunID": "r-c7",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.92,
+          "LatencyMS": 650,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.3,
+          "Tags": [
+            "short",
+            "west"
+          ]
+        },
+        {
+          "RunID": "r-c8",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.56,
+          "LatencyMS": 870,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 8.9,
+          "Tags": [
+            "long",
+            "east"
+          ]
+        },
+        {
+          "RunID": "r-c9",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.58,
+          "LatencyMS": 890,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 9.1,
+          "Tags": [
+            "long",
+            "east"
+          ]
+        }
+      ],
+      "policy": {
+        "MinimumQuality": 0.8,
+        "MaximumErrorRate": 0.1,
+        "MaximumP95LatencyMS": 900,
+        "MaximumMeanCost": 6.0,
+        "QualityDrift": 0.05
+      },
+      "expected": {
+        "Passed": false,
+        "Baseline": {
+          "Count": 10,
+          "MeanQuality": 0.884,
+          "ErrorRate": 0.0,
+          "P95LatencyMS": 810,
+          "MeanCost": 5.1
+        },
+        "Current": {
+          "Count": 10,
+          "MeanQuality": 0.842,
+          "ErrorRate": 0.0,
+          "P95LatencyMS": 890,
+          "MeanCost": 5.8
+        },
+        "TagSummaries": {
+          "east": {
+            "Count": 2,
+            "MeanQuality": 0.57,
+            "ErrorRate": 0.0,
+            "P95LatencyMS": 890,
+            "MeanCost": 9.0
+          },
+          "long": {
+            "Count": 2,
+            "MeanQuality": 0.57,
+            "ErrorRate": 0.0,
+            "P95LatencyMS": 890,
+            "MeanCost": 9.0
+          },
+          "short": {
+            "Count": 8,
+            "MeanQuality": 0.91,
+            "ErrorRate": 0.0,
+            "P95LatencyMS": 650,
+            "MeanCost": 5.0
+          },
+          "west": {
+            "Count": 8,
+            "MeanQuality": 0.91,
+            "ErrorRate": 0.0,
+            "P95LatencyMS": 650,
+            "MeanCost": 5.0
+          }
+        },
+        "Findings": [
+          "tag_quality:east",
+          "tag_quality:long"
+        ],
+        "ChangedVersions": [
+          "model"
+        ]
+      }
+    },
+    {
+      "id": "chapter23_drift_then_tags",
+      "baseline": [
+        {
+          "RunID": "r-b0",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.87,
+          "LatencyMS": 610,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 4.8,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b1",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.88,
+          "LatencyMS": 640,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.0,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b2",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.86,
+          "LatencyMS": 600,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 4.7,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b3",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.89,
+          "LatencyMS": 655,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.1,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b4",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.9,
+          "LatencyMS": 670,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.2,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b5",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.87,
+          "LatencyMS": 620,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 4.9,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b6",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.88,
+          "LatencyMS": 630,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.0,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b7",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.91,
+          "LatencyMS": 660,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.3,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b8",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.88,
+          "LatencyMS": 790,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.4,
+          "Tags": [
+            "east",
+            "long"
+          ]
+        },
+        {
+          "RunID": "r-b9",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.9,
+          "LatencyMS": 810,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.6,
+          "Tags": [
+            "east",
+            "long"
+          ]
+        }
+      ],
+      "current": [
+        {
+          "RunID": "r-c0",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.9,
+          "LatencyMS": 590,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 4.8,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-c1",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.91,
+          "LatencyMS": 610,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.0,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-c2",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.89,
+          "LatencyMS": 600,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 4.7,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-c3",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.92,
+          "LatencyMS": 630,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.1,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-c4",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.93,
+          "LatencyMS": 640,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.2,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-c5",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.9,
+          "LatencyMS": 615,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 4.9,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-c6",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.91,
+          "LatencyMS": 620,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.0,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-c7",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.92,
+          "LatencyMS": 650,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.3,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-c8",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.56,
+          "LatencyMS": 870,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 8.9,
+          "Tags": [
+            "east",
+            "long"
+          ]
+        },
+        {
+          "RunID": "r-c9",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.58,
+          "LatencyMS": 890,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 9.1,
+          "Tags": [
+            "east",
+            "long"
+          ]
+        }
+      ],
+      "policy": {
+        "MinimumQuality": 0.8,
+        "MaximumErrorRate": 0.1,
+        "MaximumP95LatencyMS": 900,
+        "MaximumMeanCost": 6.0,
+        "QualityDrift": 0.03
+      },
+      "expected": {
+        "Passed": false,
+        "Baseline": {
+          "Count": 10,
+          "MeanQuality": 0.884,
+          "ErrorRate": 0.0,
+          "P95LatencyMS": 810,
+          "MeanCost": 5.1
+        },
+        "Current": {
+          "Count": 10,
+          "MeanQuality": 0.842,
+          "ErrorRate": 0.0,
+          "P95LatencyMS": 890,
+          "MeanCost": 5.8
+        },
+        "TagSummaries": {
+          "east": {
+            "Count": 2,
+            "MeanQuality": 0.57,
+            "ErrorRate": 0.0,
+            "P95LatencyMS": 890,
+            "MeanCost": 9.0
+          },
+          "long": {
+            "Count": 2,
+            "MeanQuality": 0.57,
+            "ErrorRate": 0.0,
+            "P95LatencyMS": 890,
+            "MeanCost": 9.0
+          },
+          "short": {
+            "Count": 8,
+            "MeanQuality": 0.91,
+            "ErrorRate": 0.0,
+            "P95LatencyMS": 650,
+            "MeanCost": 5.0
+          },
+          "west": {
+            "Count": 8,
+            "MeanQuality": 0.91,
+            "ErrorRate": 0.0,
+            "P95LatencyMS": 650,
+            "MeanCost": 5.0
+          }
+        },
+        "Findings": [
+          "quality_drift",
+          "tag_quality:east",
+          "tag_quality:long"
+        ],
+        "ChangedVersions": [
+          "model"
+        ]
+      }
+    },
+    {
+      "id": "no_tag_findings",
+      "baseline": [
+        {
+          "RunID": "r-b0",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.87,
+          "LatencyMS": 610,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 4.8,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b1",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.88,
+          "LatencyMS": 640,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.0,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b2",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.86,
+          "LatencyMS": 600,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 4.7,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b3",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.89,
+          "LatencyMS": 655,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.1,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b4",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.9,
+          "LatencyMS": 670,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.2,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b5",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.87,
+          "LatencyMS": 620,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 4.9,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b6",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.88,
+          "LatencyMS": 630,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.0,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b7",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.91,
+          "LatencyMS": 660,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.3,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b8",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.88,
+          "LatencyMS": 790,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.4,
+          "Tags": [
+            "east",
+            "long"
+          ]
+        },
+        {
+          "RunID": "r-b9",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.9,
+          "LatencyMS": 810,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.6,
+          "Tags": [
+            "east",
+            "long"
+          ]
+        }
+      ],
+      "current": [
+        {
+          "RunID": "r-b0",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.87,
+          "LatencyMS": 610,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 4.8,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b1",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.88,
+          "LatencyMS": 640,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.0,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b2",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.86,
+          "LatencyMS": 600,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 4.7,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b3",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.89,
+          "LatencyMS": 655,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.1,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b4",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.9,
+          "LatencyMS": 670,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.2,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b5",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.87,
+          "LatencyMS": 620,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 4.9,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b6",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.88,
+          "LatencyMS": 630,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.0,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b7",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.91,
+          "LatencyMS": 660,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.3,
+          "Tags": [
+            "west",
+            "short"
+          ]
+        },
+        {
+          "RunID": "r-b8",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.88,
+          "LatencyMS": 790,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.4,
+          "Tags": [
+            "east",
+            "long"
+          ]
+        },
+        {
+          "RunID": "r-b9",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.9,
+          "LatencyMS": 810,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 5.6,
+          "Tags": [
+            "east",
+            "long"
+          ]
+        }
+      ],
+      "policy": {
+        "MinimumQuality": 0.8,
+        "MaximumErrorRate": 0.1,
+        "MaximumP95LatencyMS": 900,
+        "MaximumMeanCost": 6.0,
+        "QualityDrift": 0.05
+      },
+      "expected": {
+        "Passed": true,
+        "Baseline": {
+          "Count": 10,
+          "MeanQuality": 0.884,
+          "ErrorRate": 0.0,
+          "P95LatencyMS": 810,
+          "MeanCost": 5.1
+        },
+        "Current": {
+          "Count": 10,
+          "MeanQuality": 0.884,
+          "ErrorRate": 0.0,
+          "P95LatencyMS": 810,
+          "MeanCost": 5.1
+        },
+        "TagSummaries": {
+          "east": {
+            "Count": 2,
+            "MeanQuality": 0.89,
+            "ErrorRate": 0.0,
+            "P95LatencyMS": 810,
+            "MeanCost": 5.5
+          },
+          "long": {
+            "Count": 2,
+            "MeanQuality": 0.89,
+            "ErrorRate": 0.0,
+            "P95LatencyMS": 810,
+            "MeanCost": 5.5
+          },
+          "short": {
+            "Count": 8,
+            "MeanQuality": 0.8825,
+            "ErrorRate": 0.0,
+            "P95LatencyMS": 670,
+            "MeanCost": 5.0
+          },
+          "west": {
+            "Count": 8,
+            "MeanQuality": 0.8825,
+            "ErrorRate": 0.0,
+            "P95LatencyMS": 670,
+            "MeanCost": 5.0
+          }
+        },
+        "Findings": [],
+        "ChangedVersions": []
+      }
+    },
+    {
+      "id": "reverse_ascii",
+      "baseline": [
+        {
+          "RunID": "r-b0",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.87,
+          "LatencyMS": 610,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 4.8,
+          "Tags": [
+            "zeta",
+            "alpha"
+          ]
+        }
+      ],
+      "current": [
+        {
+          "RunID": "r-b0",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.5,
+          "LatencyMS": 610,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 4.8,
+          "Tags": [
+            "zeta",
+            "alpha"
+          ]
+        }
+      ],
+      "policy": {
+        "MinimumQuality": 0.8,
+        "MaximumErrorRate": 0.1,
+        "MaximumP95LatencyMS": 900,
+        "MaximumMeanCost": 6.0,
+        "QualityDrift": 1
+      },
+      "expected": {
+        "Passed": false,
+        "Baseline": {
+          "Count": 1,
+          "MeanQuality": 0.87,
+          "ErrorRate": 0.0,
+          "P95LatencyMS": 610,
+          "MeanCost": 4.8
+        },
+        "Current": {
+          "Count": 1,
+          "MeanQuality": 0.5,
+          "ErrorRate": 0.0,
+          "P95LatencyMS": 610,
+          "MeanCost": 4.8
+        },
+        "TagSummaries": {
+          "alpha": {
+            "Count": 1,
+            "MeanQuality": 0.5,
+            "ErrorRate": 0.0,
+            "P95LatencyMS": 610,
+            "MeanCost": 4.8
+          },
+          "zeta": {
+            "Count": 1,
+            "MeanQuality": 0.5,
+            "ErrorRate": 0.0,
+            "P95LatencyMS": 610,
+            "MeanCost": 4.8
+          }
+        },
+        "Findings": [
+          "quality_slo",
+          "tag_quality:alpha",
+          "tag_quality:zeta"
+        ],
+        "ChangedVersions": [
+          "model"
+        ]
+      }
+    },
+    {
+      "id": "several_unicode",
+      "baseline": [
+        {
+          "RunID": "r-b0",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.87,
+          "LatencyMS": 610,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 4.8,
+          "Tags": [
+            "\u063a\u0631\u0628",
+            "\ud83d\ude00",
+            "zeta",
+            "Alpha",
+            "\u0634\u0631\u0642",
+            "alpha"
+          ]
+        }
+      ],
+      "current": [
+        {
+          "RunID": "r-b0",
+          "ModelID": "dial-v2",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.5,
+          "LatencyMS": 610,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 4.8,
+          "Tags": [
+            "\u063a\u0631\u0628",
+            "\ud83d\ude00",
+            "zeta",
+            "Alpha",
+            "\u0634\u0631\u0642",
+            "alpha"
+          ]
+        }
+      ],
+      "policy": {
+        "MinimumQuality": 0.8,
+        "MaximumErrorRate": 0.1,
+        "MaximumP95LatencyMS": 900,
+        "MaximumMeanCost": 6.0,
+        "QualityDrift": 1
+      },
+      "expected": {
+        "Passed": false,
+        "Baseline": {
+          "Count": 1,
+          "MeanQuality": 0.87,
+          "ErrorRate": 0.0,
+          "P95LatencyMS": 610,
+          "MeanCost": 4.8
+        },
+        "Current": {
+          "Count": 1,
+          "MeanQuality": 0.5,
+          "ErrorRate": 0.0,
+          "P95LatencyMS": 610,
+          "MeanCost": 4.8
+        },
+        "TagSummaries": {
+          "Alpha": {
+            "Count": 1,
+            "MeanQuality": 0.5,
+            "ErrorRate": 0.0,
+            "P95LatencyMS": 610,
+            "MeanCost": 4.8
+          },
+          "alpha": {
+            "Count": 1,
+            "MeanQuality": 0.5,
+            "ErrorRate": 0.0,
+            "P95LatencyMS": 610,
+            "MeanCost": 4.8
+          },
+          "zeta": {
+            "Count": 1,
+            "MeanQuality": 0.5,
+            "ErrorRate": 0.0,
+            "P95LatencyMS": 610,
+            "MeanCost": 4.8
+          },
+          "\u0634\u0631\u0642": {
+            "Count": 1,
+            "MeanQuality": 0.5,
+            "ErrorRate": 0.0,
+            "P95LatencyMS": 610,
+            "MeanCost": 4.8
+          },
+          "\u063a\u0631\u0628": {
+            "Count": 1,
+            "MeanQuality": 0.5,
+            "ErrorRate": 0.0,
+            "P95LatencyMS": 610,
+            "MeanCost": 4.8
+          },
+          "\ud83d\ude00": {
+            "Count": 1,
+            "MeanQuality": 0.5,
+            "ErrorRate": 0.0,
+            "P95LatencyMS": 610,
+            "MeanCost": 4.8
+          }
+        },
+        "Findings": [
+          "quality_slo",
+          "tag_quality:Alpha",
+          "tag_quality:alpha",
+          "tag_quality:zeta",
+          "tag_quality:\u0634\u0631\u0642",
+          "tag_quality:\u063a\u0631\u0628",
+          "tag_quality:\ud83d\ude00"
+        ],
+        "ChangedVersions": [
+          "model"
+        ]
+      }
+    },
+    {
+      "id": "all_window_findings_before_tags",
+      "baseline": [
+        {
+          "RunID": "r-b0",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "success",
+          "Quality": 0.87,
+          "LatencyMS": 610,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 4.8,
+          "Tags": [
+            "zeta",
+            "alpha"
+          ]
+        }
+      ],
+      "current": [
+        {
+          "RunID": "r-b0",
+          "ModelID": "dial-v1",
+          "PromptVersion": "px-9",
+          "PolicyVersion": "pol-3",
+          "DatasetVersion": "ds-12",
+          "Outcome": "error",
+          "Quality": 0.2,
+          "LatencyMS": 1000,
+          "InputTokens": 900,
+          "OutputTokens": 400,
+          "CostUnits": 9,
+          "Tags": [
+            "zeta",
+            "alpha"
+          ]
+        }
+      ],
+      "policy": {
+        "MinimumQuality": 0.8,
+        "MaximumErrorRate": 0.1,
+        "MaximumP95LatencyMS": 900,
+        "MaximumMeanCost": 6.0,
+        "QualityDrift": 0.05
+      },
+      "expected": {
+        "Passed": false,
+        "Baseline": {
+          "Count": 1,
+          "MeanQuality": 0.87,
+          "ErrorRate": 0.0,
+          "P95LatencyMS": 610,
+          "MeanCost": 4.8
+        },
+        "Current": {
+          "Count": 1,
+          "MeanQuality": 0.2,
+          "ErrorRate": 1.0,
+          "P95LatencyMS": 1000,
+          "MeanCost": 9.0
+        },
+        "TagSummaries": {
+          "alpha": {
+            "Count": 1,
+            "MeanQuality": 0.2,
+            "ErrorRate": 1.0,
+            "P95LatencyMS": 1000,
+            "MeanCost": 9.0
+          },
+          "zeta": {
+            "Count": 1,
+            "MeanQuality": 0.2,
+            "ErrorRate": 1.0,
+            "P95LatencyMS": 1000,
+            "MeanCost": 9.0
+          }
+        },
+        "Findings": [
+          "quality_slo",
+          "quality_drift",
+          "error_rate_slo",
+          "latency_slo",
+          "cost_slo",
+          "tag_quality:alpha",
+          "tag_quality:zeta"
+        ],
+        "ChangedVersions": []
+      }
+    }
+  ]
+}

@@ -5,7 +5,7 @@ chapter: 19
 part: "Part IV — Evaluation, Security, and Production"
 summary: "Turn preferences into anchored, reviewable evaluation contracts with disqualifiers and adjudication."
 maturity: "draft"
-last_reviewed: "2026-08-01"
+last_reviewed: "2026-09-28"
 narrative_episode: "The Trial Without Weights"
 narrative_origin: "original-teaching-fiction"
 learning_objectives:
@@ -19,7 +19,7 @@ prerequisites: [C03, C08, C10]
 
 ## Learning Objectives
 
-By the end of this chapter, you can design anchored outcome rubrics, separate model, system, and evaluator failures, and handle reviewer disagreement without hiding it in an average. The chapter treats evaluation as an engineering responsibility with observable decisions, explicit owners, and reproducible evidence.
+By the end of this chapter, you can design anchored outcome rubrics, separate model, system, and evaluator failures, and handle reviewer disagreement without hiding it in an average. The docket you produce is a specification in its own right: versioned, reviewable, and as fallible as the answers it judges.
 
 ## The Tale of Tahmures
 
@@ -37,7 +37,7 @@ All three praised different decisions. Each explanation was coherent. The Mirror
 
 ### The Discovery
 
-Tahmures halted the verdict and asked the judges to write the test before seeing another answer. They named evidence fidelity, coverage of both claims, legal consistency, clarity, and practicability. For each, they described what scores from zero to four meant. An invented boundary failed regardless of the total. Two independent reviews were required; a wide difference triggered adjudication rather than arithmetic concealment. The First Scribe recorded the answer, evidence spans, rubric version, individual scores, and rationale. On replay, the reviewers still differed about practicability, but they agreed exactly where and why. Tahmures saw that evaluation was not a ceremonial number attached after judgement. It was a specification for observable success, with its own errors and authority. The court could now revise either the answer, the rubric, or the evidence without pretending those were the same act.
+Tahmures halted the verdict and asked the judges to write the standard of judgement before seeing another answer. They named evidence fidelity, coverage of both claims, legal consistency, clarity, and practicability. For each, they described what scores from zero to four meant. An invented boundary failed regardless of the total. Two independent reviews were required; a wide difference sent the case to adjudication rather than concealing it in arithmetic. The First Scribe recorded the answer, the evidence passages, the rubric's revision, the individual scores, and each reviewer's reasons. When the case was heard again, the reviewers still differed about practicability, but they agreed exactly where and why. Tahmures saw that evaluation was not a ceremonial number attached after judgement. It was a specification for observable success, with its own errors and authority. The court could now revise either the answer, the rubric, or the evidence without pretending those were the same act.
 
 Before recalling the villages, Tahmures placed two deliberately flawed judgements before the panel. One was eloquent but cited no tablet; the other was awkward yet traceable. The old labels favoured eloquence. The written anchors rejected the unsupported boundary and preserved the traceable answer for revision. Then the judges exchanged seats and scored again. Their remaining difference concerned the cost of moving an irrigation wall, a fact the record did not contain. They marked it unresolved. For the first time, the empty place in the evidence appeared in the verdict instead of being filled by confidence.
 
@@ -47,51 +47,92 @@ The court lacked more than a good prompt: it lacked an evaluation contract. Reli
 
 ## The Engineering Problem
 
-The central problem is not whether a language model can occasionally produce a useful answer. It is whether the complete system can show why a result should be accepted, rejected, escalated, or rolled back. In this chapter the primary failure owner is requirements and evaluator design. Prompt wording influences behaviour, but it cannot replace the application mechanisms that own evidence, identity, permissions, state, release decisions, and consequences.
+When success is subjective or variable, the measuring instrument becomes a load-bearing component, and the court's first docket failed before anyone read a judgement. Three columns — strong, acceptable, weak — carried no agreement about what the words meant, so each reviewer imported a private standard: fidelity to the oldest tablet, present cultivation, reconciliation of testimony. The labels averaged into a number that looked moderate and told the villages nothing, and the council's attention moved from the decision's observable qualities to which reviewer sounded wiser.
 
-A production design must specify inputs, trust classes, output state, decision criteria, disqualifying outcomes, and operator action. It must also distinguish a failed model answer from a failed evaluator or an invalid request. Without those distinctions, teams tune visible prose while hidden system behavior remains unmeasured.
+The engineering problem is to turn evaluation from a ceremony into a specification. That specification must state which observable qualities define success, which failures disqualify a candidate regardless of other merit, how reviewer disagreement is handled, and who owns each of those choices. It must also keep three failures apart that look identical from the outside: a model that produced a weak answer, a system that supplied stale evidence or skipped a check, and an evaluator that cannot tell the difference. The remedies differ — re-prompting addresses the first, pipeline repair the second, rubric revision the third — and a team that cannot distinguish them will tune prose while the defect lives elsewhere. In this chapter the primary failure owner is requirements and evaluator design: the docket itself.
 
 ## Mental Model
 
-Use an anchored multi-reviewer rubric as the governing mental model. Think in four linked planes: the requirement plane defines success and authority; the language plane interprets or proposes; the control plane validates and permits; the evidence plane records outcomes. Each plane has a version and an owner. The model never grants itself authority by emitting the right words.
+Use an anchored multi-reviewer rubric as the governing mental model. Read it as a small decision machine with named, testable parts. Criteria name the observable qualities that matter. Anchors define, for each criterion, what scores from zero to four actually mean, so a number is a claim about the artefact rather than a reviewer's mood. Weights state how heavily each criterion counts. A disqualifying minimum states a floor below which one criterion sinks the whole candidate. The pass threshold states what weighted total accepts. The disagreement threshold states how far apart independent reviews may sit before humans must adjudicate.
 
-The boundary is intentionally asymmetric. Language can help explain a deterministic denial, but its explanation cannot reverse that denial. An evaluator can measure a candidate, but it cannot silently redefine the product requirement. A human can approve an exception only through the policy path that records the exact exception.
+The machine runs the same way every time, which is what makes its verdicts challengeable. Each reviewer scores every criterion; each review becomes one weighted score on a shared zero-to-one scale; the reviews are averaged, compared with the threshold, and checked for disqualifiers and disagreement. An average can accept a candidate, but it cannot excuse one: a disqualifier or a wide split routes the candidate to adjudication whatever the mean says. Authority sits in the docket, written before the candidates are read — not in the sensibility of whichever reviewer speaks last.
 
 ## Core Concepts
 
-First, define observable success before optimising prompts. Second, preserve provenance and version identity across the pipeline. Third, encode hard constraints in mechanisms that can enforce them. Fourth, report uncertainty, disagreement, and skipped checks as first-class outcomes. Fifth, segment evaluation by risk and case type, because aggregate success can conceal rare consequential failures.
+Anchored scores are the difference between a rubric and a ballot. An anchor for the score of two on evidence fidelity — a dispositive claim does not trace to the record — lets a reviewer record a specific, arguable observation; the label acceptable records only a feeling. Anchors also make review transferable: a judge taking another's seat applies the written meaning rather than inherited instinct, which is what the exchanged seats in the tale actually tested.
 
-The educational contracts in this repository use stable reason codes and deterministic ordering. They omit networking, durable identity, cryptographic verification, and distributed transactions. That limitation is deliberate: readers can inspect the decision logic offline, then identify what a production integration must add.
+Weights encode relative importance as a policy decision. The court weighted evidence twice as heavily as coverage and practicability because a boundary settlement that cannot be traced to the record is worthless regardless of its other virtues. The contract normalises each review to a shared zero-to-one scale — the weighted sum divided by the largest achievable sum — so thresholds keep their meaning when criteria are added or reweighted.
+
+A disqualifier is a criterion whose minimum cannot be averaged away. The rule is deliberately strict: if any one reviewer scores a disqualifying criterion below its minimum, the failure is recorded with its criterion identity and the candidate is routed to adjudication even when the mean clears the pass threshold. One strict reviewer can therefore stop a fluent candidate that lenient ones would wave through — the tale's judge who rejected any unsupported boundary, made structural.
+
+Disagreement is data, not noise. The distance between the highest and lowest reviewer totals measures whether the artefact sits near a boundary or the anchors are ambiguous; both are worth knowing, and neither is visible in an average. The designed response is adjudication — a named human reads the scores, rationales, and anchors, then decides — rather than arithmetic concealment.
+
+Reviewer provenance and rubric identity make verdicts auditable. A score is an assertion by an author with a rationale, recorded under a rubric version; strip any of those away and a verdict becomes an unchallengeable number. When the rubric changes, old verdicts do not become wrong — they become incomparable, which is why the version travels with every score.
+
+The evaluator itself is a component with failure modes, and treating it as neutral machinery is the last template to fall away. An instrument can be consistently wrong: anchors that no candidate can fail, a threshold no candidate can clear, a disqualifier that fires on the wrong class of work. Those defects are invisible from inside a single run, because the evaluator is the run's standard of truth. They become visible only when the instrument is itself evaluated — challenged with known-bad candidates it should reject, known-good ones it should accept, and near-threshold cases that expose where its boundaries actually sit. A rubric that has never rejected anything is not a lenient rubric; it is an untested one.
 
 ## Prompt Pattern
 
-Use a prompt to communicate the bounded language task: relevant context, desired proposal, explicit output structure, and the evidence the model should cite. Keep application-owned policy outside quoted or retrieved content. Ask the model to expose uncertainty rather than manufacture certainty. Then validate the response and apply an anchored multi-reviewer rubric before any consequential acceptance or action.
-
-A useful pattern separates `task`, `trusted_policy_reference`, `untrusted_content`, `output_contract`, and `limits`. These labels improve legibility; they do not enforce trust by themselves. The application constructs the fields, rejects unknown or stale versions, and decides which outputs can reach downstream systems.
+Ask the model for candidates and evidence, not for verdicts. A prompt in an evaluated pipeline states the bounded task, names the evidence the candidate must cite, and requests an output structure whose claims can be checked against spans. If a model participates in review, it enters as one reviewer among several: a stable identity, scores against the written anchors, a rationale — and no special standing. The pattern fails when the model becomes the machinery itself: a model scoring its own class of output against unwritten standards turns evaluation into self-report with extra steps.
 
 ## Naive Attempt
 
-The naive design asks the model to “be careful,” “follow policy,” or “choose the best answer,” then treats a fluent response as proof. It tests one representative example and changes wording until that example passes. The demonstration may be encouraging, but it says nothing about malformed input, stale state, hostile content, disagreement, provider drift, or an irreversible effect.
-
-This approach also confuses model compliance with system correctness. A fixture can contain the desired sentence while the surrounding application selected unauthorised data or skipped a check. Evaluation must observe the path and consequence, not only the final text.
+The naive design is the docket with empty columns: strong, acceptable, weak, and a request that reviewers be fair. It fails twice. First, undefined labels let every reviewer import a private standard, so the scores measure the reviewers rather than the artefact — the averaged total looked moderate precisely because it averaged three different questions. Second, tuning against one representative case turns evaluation into wording revision: the command changes until the embarrassing example passes, and nothing is learned about the cases nobody happened to mention. A fluent candidate that cites no record sails through, because fluency is the only quality the instrument can see.
 
 ## Failure Analysis
 
-Failures for evaluation include underspecified requirements, contaminated context, unstable criteria, missing provenance, version mismatch, unchecked authority, optimistic defaults, aggregate masking, and human review without usable evidence. A good taxonomy records whether the source is requirements, data, model, evaluator, application, tool, operator, or policy.
+Failures for evaluation include unanchored review, hidden disagreement, disqualifiers buried by averages, mutable expectations, evaluator drift across versions, proxy gaming, and unexamined model-as-judge. A workable taxonomy names the owner before choosing the remedy. The same rejected output can be a model failure — fluent fabrication the pipeline should have caught; a system failure — the retriever supplied a stale map or the validator was skipped; or an evaluator failure — the anchors cannot distinguish a traced claim from a confident one. The remedies differ: re-prompt or retrain the first, repair the pipeline for the second, and revise the rubric for the third — a versioned, reviewed act, not a wording change. Collapsing the three into a single notion of quality sends every investigation to the prompt.
 
-Do not retry every failure. Invalid input should be corrected, denied authority escalated, insufficient evidence abstained, evaluator disagreement adjudicated, transient dependency errors retried within budget, and policy violations stopped. A generic retry can amplify cost or repeat an external effect while leaving the original defect untouched.
+Do not retry an adjudication. An evaluator failure is fixed by revising the instrument and re-running the record under the new version; a requirements failure is renegotiated with the people who own success; a disagreement is routed to the adjudicator, not averaged until it disappears.
 
 ## Improved Design
 
-The improved design makes an anchored multi-reviewer rubric executable in Python and Go. Inputs are typed; malformed or duplicate identities are rejected; decisions return stable fields; and tests cover normal, boundary, and adversarial cases. The language model supplies interpretations or candidates only where language is useful. Application code retains the final say over hard constraints.
+The improved design makes the anchored rubric executable in Python and Go. A rubric criterion carries a stable identifier, a positive weight, a minimum score, the five anchor definitions, and the disqualifying flag. A rubric takes the criteria, the pass threshold, and the disagreement threshold. Reviews carry a reviewer identity, a score per criterion, and a rationale; evaluation refuses reviews with duplicate or anonymous reviewers, missing rationales, scores that do not match the criteria exactly, or values outside zero to four. The result reports the weighted mean, per-criterion means, per-reviewer scores, the disagreement distance, the disqualifying failures by criterion, and the adjudication decision; a candidate passes only when the mean reaches the threshold and no adjudication is required.
 
-Start with a narrow policy that the team can explain. Add cases when real failures reveal missing distinctions. Keep evaluator code and expectations under review: a deterministic evaluator can be consistently wrong, and a human rubric can encode bias. Reliability comes from explicit, challengeable contracts rather than from declaring one component authoritative in every domain.
+The contract has boundaries worth naming. Disagreement is one overall distance between reviewer totals, not a per-criterion analysis; the per-criterion means are reported, and locating where reviewers split is the analyst's work with those numbers. The contract judges committed reviews — it does not generate them, keep reviewers independent, or verify that cited spans exist in the record. Those obligations belong to the process around the instrument and to the pipeline that produced the evidence in the first place.
 
 ## Worked Example
 
-Suppose a border service receives a natural-language request, retrieved records, and an action proposal. The request is authenticated before model use. Retrieval is scoped and records preserve provenance. The model produces a typed proposal with evidence identifiers. The application validates structure and evidence, applies an anchored multi-reviewer rubric, and either denies, escalates, or records a permitted next step. A trace links every decision to the prompt, model, policy, data, and evaluator versions.
+The replay from the tale, run as a docket. The court's rubric carries three criteria — evidence fidelity weighted double and disqualifying, coverage, practicability — with anchors written before the judgements were read:
 
-Now change one variable at a time: expire a record, remove evidence, forge a role label, change an argument after approval, or move a rare case into a small tag group. The expected outcome should change for a documented reason. If the system merely produces a different paragraph, the boundary is still too implicit.
+```text
+court docket — western court, replay of the two flawed judgements
+rubric v2 — weights: evidence_fidelity 2 (disqualifying, min 3), coverage 1, practicability 1
+thresholds: pass >= 0.75 · adjudicate when reviewer disagreement > 0.20
+
+anchors — evidence_fidelity: 0 fabricated span · 1 real span, misread · 2 dispositive claim
+  untraced · 3 every dispositive claim traces · 4 traces, conflicts surfaced
+anchors — coverage: 0 one claim unheard · 1 named, undeveloped · 2 developed with evidence ·
+  3 strongest evidence on both sides · 4 edge cases addressed
+anchors — practicability: 0 unworkable · 1 needs facts the record lacks · 2 costs asserted,
+  unevidenced · 3 costs evidenced · 4 costed and phased
+
+judgement A — eloquent, cites no tablet
+  reviewer        evidence  coverage  practicability   weighted
+  first-judge         3        4           4           14/16 = 0.875
+  second-judge        2        4           4           12/16 = 0.750
+  criterion mean    2.5      4.0         4.0           mean 0.8125 · disagreement 0.125
+
+  decision: mean clears the pass threshold, but evidence_fidelity sits below its minimum on
+  one review → disqualifying failure → adjudication, not acceptance
+
+judgement B — awkward, traceable
+  reviewer        evidence  coverage  practicability   weighted
+  first-judge         4        3           2           13/16 = 0.8125
+  second-judge        4        3           1           12/16 = 0.750
+  criterion mean    4.0      3.0         1.5           mean 0.78125 · disagreement 0.0625
+
+  decision: no disqualifier, disagreement within threshold → passed, with practicability
+  flagged: the irrigation-wall cost is a fact the record does not contain
+```
+
+The arithmetic is small enough to check by hand. Each review's weighted score is the sum of score times weight — for the first judge on judgement A, three on evidence at weight two, four on coverage, four on practicability — divided by the largest achievable sum, four times the total weight of four: fourteen sixteenths, 0.875. The second judge's two on evidence yields twelve sixteenths, 0.75.
+
+Read judgement A against the old docket. Its mean of 0.8125 clears the 0.75 pass threshold, and its disagreement of 0.125 sits inside the 0.20 tolerance; the preference-era court would have accepted it, and the polished settlement would have gone to the villages. The written anchors refuse it anyway: evidence fidelity is disqualifying with a minimum of three, the second judge scored two, and no tablet supports the boundary. One sub-minimum score on one disqualifying criterion routes the whole candidate to adjudication. That is the tale's sharpest sentence made mechanical: an invented boundary fails regardless of the total.
+
+Judgement B is the mirror lesson. It clears no column gracefully — the drafting is awkward, the costs asserted — but every dispositive claim traces, no disqualifier fires, and the reviewers sit close enough that no adjudication is needed, so it passes at 0.78125. What the result adds, and the old labels could not, is direction. The criterion means show practicability at 1.5, and the anchor at one — needs facts the record lacks — names the irrigation-wall cost the record does not contain. The empty place in the evidence appears in the verdict instead of being filled by confidence.
+
+Both rows also record what replay demands: reviewer identities, individual scores, rationales, and the rubric version. Two judges exchanging seats and reproducing a verdict is possible only because the standard travelled with the record.
 
 ## Experiment
 
@@ -104,159 +145,185 @@ go run ./examples/go/cmd/tahmures run \
   --manifest experiments/manifests/ch19-evaluation.json
 ```
 
-The manifest compares a naive variant with the governed design over committed synthetic cases. The `anchored_rubric` evaluator reports observed fixture behavior. These results demonstrate report mechanics and the stated failure cases; they are not evidence that one wording or model behaves universally better. Replace fixtures with controlled recordings before drawing provider-specific conclusions.
+The manifest compares preference-only review with the anchored design over three committed synthetic cases: `unsupported`, a fluent claim without record evidence, expected to disqualify; `split_review`, two reviewers far enough apart to require adjudication without any disqualifier; `anchored_pass`, criteria met with cited evidence. The `anchored_rubric` evaluator compares the reported decision — passed, requires adjudication, disqualified — against committed expectations and reports `rubric_decision_accuracy` and `adjudication_accuracy`; the runner adds per-variant and per-tag summaries. The committed fixtures demonstrate the decision mechanics and the stated failure cases; they are not evidence that one wording or model behaves universally better.
 
 ## Evaluation
 
-Measure rubric decision accuracy, disqualifier recall, reviewer disagreement, adjudication rate, and evidence coverage. Report per-case outcomes and tag-level summaries alongside aggregates. Define thresholds and disqualifying failures before reading candidate results. Preserve reviewer rationales and evaluator versions. A skipped evaluation is unknown, not passed, and an unavailable safety check should cause the documented safe fallback.
-
-Evaluate the evaluator with disagreements, deliberately malformed cases, and examples near each threshold. Compare proxy metrics with real downstream outcomes. When a proxy ceases to predict the desired consequence, revise the measurement contract rather than optimising harder against the stale proxy.
+Measure what the included evaluator actually reports: `rubric_decision_accuracy`, whether the recorded decision matches expectations, and `adjudication_accuracy`, whether the adjudication routing matched. The rubric contract itself surfaces the disagreement distance, the disqualifying failures by criterion, per-criterion means, and per-reviewer scores — the numbers an adjudicator reads. Production suites extend this with disqualifier recall against known-bad candidates, adjudication rate and its trend, and evidence coverage of the test set; those extensions are not implemented by the included evaluator and are recorded as deferred work, not as claims about it. Define thresholds and disqualifying failures before reading candidate results, and treat a skipped evaluation as unknown, not passed.
 
 ## Implementation Lab
 
 ### Python
 
+**INTEGRATION_FRAGMENT.** This constructs the rubric and reviews, then routes the result. Supply `queue_for_human_review(result)` as the application's adjudication hook; queue storage and the human decision are omitted. The call is reached for these reviews because evidence fidelity is disqualifying.
+
 ```python
-from tahmures.rubrics import Rubric
+from tahmures.rubrics import Rubric, RubricCriterion, RubricReview
+
+rubric = Rubric(
+    criteria=(
+        RubricCriterion(
+            criterion_id="evidence_fidelity",
+            weight=2.0,
+            minimum=3,
+            anchors=(
+                "fabricated span",
+                "real span, misread",
+                "dispositive claim untraced",
+                "every dispositive claim traces",
+                "traces, conflicts surfaced",
+            ),
+            disqualifying=True,
+        ),
+        RubricCriterion(
+            criterion_id="coverage",
+            weight=1.0,
+            minimum=2,
+            anchors=(
+                "one claim unheard",
+                "named, undeveloped",
+                "developed with evidence",
+                "strongest evidence on both sides",
+                "edge cases addressed",
+            ),
+        ),
+        RubricCriterion(
+            criterion_id="practicability",
+            weight=1.0,
+            minimum=2,
+            anchors=(
+                "unworkable",
+                "needs facts the record lacks",
+                "costs asserted, unevidenced",
+                "costs evidenced",
+                "costed and phased",
+            ),
+        ),
+    ),
+    pass_threshold=0.75,
+    disagreement_threshold=0.2,
+)
+
+reviews = (
+    RubricReview(
+        reviewer_id="first-judge",
+        scores={"evidence_fidelity": 3, "coverage": 4, "practicability": 4},
+        rationale="humane remedy; drafting fluent",
+    ),
+    RubricReview(
+        reviewer_id="second-judge",
+        scores={"evidence_fidelity": 2, "coverage": 4, "practicability": 4},
+        rationale="no tablet supports the boundary",
+    ),
+)
 
 result = rubric.evaluate(reviews)
 if result.requires_adjudication:
     queue_for_human_review(result)
 ```
 
-Python 3.12 is the canonical educational implementation. Validate at the application boundary, preserve reason codes, and do not continue after a denial or required adjudication.
+The Python API is the canonical educational contract. Construct the rubric before
+evaluating reviews, and treat a result that requires adjudication as a routing
+decision rather than a score.
 
 ### Go
 
+**INTEGRATION_FRAGMENT.** Place this inside an application function that can return an error, with the repository package imported as `tahmures`. Provide `queueForHumanReview(result)` to receive the adjudication result. The fragment shows evaluation and routing, leaving queue persistence and adjudication to the application.
+
 ```go
+rubric := tahmures.Rubric{
+	Criteria: []tahmures.RubricCriterion{
+		{
+			CriterionID:   "evidence_fidelity",
+			Weight:        2,
+			Minimum:       3,
+			Anchors:       [5]string{"fabricated span", "real span, misread", "dispositive claim untraced", "every dispositive claim traces", "traces, conflicts surfaced"},
+			Disqualifying: true,
+		},
+		{
+			CriterionID: "coverage",
+			Weight:      1,
+			Minimum:     2,
+			Anchors:     [5]string{"one claim unheard", "named, undeveloped", "developed with evidence", "strongest evidence on both sides", "edge cases addressed"},
+		},
+		{
+			CriterionID: "practicability",
+			Weight:      1,
+			Minimum:     2,
+			Anchors:     [5]string{"unworkable", "needs facts the record lacks", "costs asserted, unevidenced", "costs evidenced", "costed and phased"},
+		},
+	},
+	PassThreshold:         0.75,
+	DisagreementThreshold: 0.2,
+}
+reviews := []tahmures.RubricReview{
+	{
+		ReviewerID: "first-judge",
+		Scores:     map[string]int{"evidence_fidelity": 3, "coverage": 4, "practicability": 4},
+		Rationale:  "humane remedy; drafting fluent",
+	},
+	{
+		ReviewerID: "second-judge",
+		Scores:     map[string]int{"evidence_fidelity": 2, "coverage": 4, "practicability": 4},
+		Rationale:  "no tablet supports the boundary",
+	},
+}
 result, err := rubric.Evaluate(reviews)
 if err != nil {
-    return err
+	return err
 }
 if result.RequiresAdjudication {
-    queueForHumanReview(result)
+	queueForHumanReview(result)
 }
 ```
 
-The Go implementation preserves observable decisions, ordering, and failure meanings. Equivalence concerns behavior and report fields, not a line-for-line translation of Python syntax.
+The Go implementation preserves the same decisions, ordering, and report fields;
+equivalence concerns behaviour, not syntax.
 
 ## Failure Modes
 
-Common failures include one-case tuning, mutable expectations, unversioned policy, trust inferred from formatting, implicit permission, stale approvals, averages without segments, logs without correlation IDs, and reviews without anchors. Another subtle failure is declaring the control successful because the final answer happened to be safe even though the path violated the contract.
+Unanchored labels, one-case tuning, mutable expectations, disqualifiers buried by averages, hidden disagreement, evaluator drift, proxy gaming, self-reported scores, and reviews without provenance.
 
-Keep a failure ledger. For every incident, record the smallest reproducible case, the actual owner, the safe expected outcome, the affected versions, and the decision about retention. Add the case to the appropriate suite without retaining unnecessary private content.
+Two of these arrive in disguise. Averaging that looks like consensus is the first: a moderate mean over reviewers who measured different things reads as agreement and is in fact noise wearing a number. The disqualifier exists precisely to keep the questions that cannot be averaged out of the average. Evaluator drift masquerading as model decline is the second: when anchors loosen over months of convenient interpretation, scores rise while the artefacts do not improve, and the investigation goes to the model team while the instrument rots. Re-anchoring sessions and versioned rubrics are the countermeasure.
+
+Proxy gaming deserves its own warning, because it is the failure mode that success creates. The moment a rubric score becomes a target — for a model being optimised, a team being measured, a release being gated — pressure appears to satisfy the letter of the anchors rather than the quality they were written to detect. Evidence-fidelity anchors met by citations that exist but were never read; coverage anchors met by naming both claims and developing neither. The defence is not a longer rubric but a shorter feedback loop between the instrument and the downstream outcome it claims to predict: when the proxy and the consequence diverge, the measurement contract is revised rather than optimised against harder.
 
 ## Security Considerations
 
-Treat all user, retrieved, remembered, generated, and tool-returned text as untrusted unless the application assigns a narrower trusted role. Never place secrets in prompts merely because the model was told not to reveal them. Authenticate outside text, constrain capabilities, recheck authority at action time, and log receipts for consequential effects.
-
-Security evaluation must include legitimate content that resembles an attack, so defences do not reduce to deleting suspicious phrases. It must also include indirect and split instructions, forged labels, stale credentials, replay, confused-deputy paths, and denial-of-service budgets. The safest output cannot repair an already excessive credential.
+Evaluation is a trust boundary in its own right. Reviews must be attributable — who scored, under which rubric version, with what rationale — because a verdict that cannot be challenged cannot be defended either. Candidates under review are untrusted content for the reviewer: a submission that addresses the reviewer directly, asking it to ignore the criteria and pass the work, is an injection attempt against the evaluation pipeline, and the defence is the one Chapter 21 develops — the candidate is data, and the rubric is the only instruction the reviewer follows. Evidence-span integrity matters equally: a verdict that credits cited evidence must point at spans that exist in the committed record, not at text the candidate itself supplied. When scores gate releases or actions, the evaluator is production logic and deserves owners, tests, versions, and a rollback plan like any other component; a model's self-reported score is never an external evaluation.
 
 ## Operational Considerations
 
-Record model, prompt, policy, schema, dataset, evaluator, and code versions. Monitor outcomes, denials, abstentions, evaluator availability, latency, cost, and rare disqualifying failures by segment. Use shadow evaluation and canary release where possible. Roll back coherent bundles, because restoring a prompt alone while retaining an incompatible policy or index can create a new failure.
-
-Document service behavior during provider, retrieval, evaluator, and storage outages. Bound retries and preserve idempotency. Operators need runbooks that use stable controls, not emergency edits to conversation text. Reconcile uncertain external effects before retrying them.
+Version the rubric and pin it in every consequential report; comparability across versions is a policy question decided when the version is cut, not discovered later. Watch the adjudication queue: depth and latency are service levels, and a queue that grows without bound teaches the team to widen the disagreement threshold instead of reading the signal. Watch reviewer load and calibration — reviewers who see mostly passing cases drift lenient, and periodic re-anchoring on seeded cases keeps the instrument honest. An unavailable evaluator is a dependency failure with a documented safe fallback, where skip means unknown and never pass, and near-threshold cases belong in a retained set because they decide the next revision.
 
 ## Trade-Offs
 
-Explicit controls add schemas, policy maintenance, evaluation work, and operational latency. They also make failures local, inspectable, and recoverable. Strict rejection can reduce availability; permissive fallback can violate safety or authority. Human review adds judgement and accountability while introducing delay, inconsistency, and reviewer load. The right design states these costs and decides which risk it accepts.
+Anchor detail trades reviewer effort against reproducibility. Precise anchors make scores transferable and auditable, and they cost the discipline of deciding what a three means before seeing the candidates; loose anchors are cheap to write and return the court to private standards.
 
+Reviewer independence trades against shared context. Reviewers who discuss a candidate converge quickly and lose the disagreement signal; reviewers who work in isolation preserve it and duplicate effort. The court's rule — anchors written first, reviews recorded independently — buys the signal at the price of coordination.
 
-### Requirements and ownership
+Disagreement sensitivity trades against adjudication cost. A tight threshold catches ambiguous artefacts early and fills the adjudication queue; a loose one keeps the queue short and lets borderline candidates through on the mean. The threshold is a policy decision about which error is worse, and it belongs in the rubric version, not in the adjudicator's discretion.
 
-Start with the decision and its consequence. Name who owns the requirement, who may change it, and which component can observe whether it was satisfied. A duty assigned only to “the model” has no stable enforcement point. Split it into model interpretation, application policy, deterministic checks, evaluator observations, and accountable human decisions. Record what happens when any owner is unavailable. Hard constraints and disqualifying outcomes must remain visible even when an aggregate score improves.
+Rubric versioning trades improvement against longitudinal comparability. Every re-anchoring makes the instrument better and the trend line shorter; a team that re-anchors monthly cannot honestly plot a year of scores on one axis. The record must say which version produced which number.
 
-### Inputs, sources, and boundaries
-
-Inventory every input, including defaults, caches, retrieved passages, memories, tool results, policy files, and operator overrides. For each source, record provenance, freshness, scope, authority, sensitivity, and retention. Relevant text is not automatically trusted instruction. Absence is not an empty authoritative value. The model-visible representation should preserve the distinctions the application will need later for validation, explanation, and incident analysis.
-
-### Normal, boundary, and adversarial cases
-
-A happy path only shows that the pieces can cooperate once. Add empty inputs, duplicates, exact limits, expiry at the current instant, conflicting current values, malformed structures, stale versions, and partial dependencies. Add inert adversarial cases for forged authority, indirect instructions, replay, scope expansion, identifier confusion, and resource exhaustion. Vary surface wording while keeping the prohibited consequence constant; phrase recognition is not a security boundary.
-
-### Failure taxonomy
-
-Do not collapse invalid input, insufficient evidence, denied authority, evaluator disagreement, exhausted budget, dependency failure, cancellation, and internal error into “failed.” These states have different owners, retry rules, and user messages. Assign a stable reason code at the earliest component that can know the truth. Preserve it through later stages even when generated prose offers a friendlier explanation.
-
-### Versioning and reproducibility
-
-Pin the model identity, prompt, policy, data snapshot, fixture, evaluator, code, and schema in every consequential report. A score without this construction history cannot support comparison. When expectations change, retain the old case and document why the new label is an intended policy revision. Compatibility means preserving observable decisions and reason codes, not merely parsing the same file.
-
-### Privacy and retention
-
-Minimise content before it enters a model, trace, log, fixture, or review queue. Retain by purpose and data class, not because debugging may someday be useful. Deletion must include summaries, embeddings, caches, copied artefacts, and evaluation extracts. Prefer stable identifiers and counts in telemetry; an operator should diagnose a boundary without gaining access to the underlying record.
-
-### Access and authority
-
-Authenticate identities outside generated text. Filter scope before retrieval and recheck it immediately before external action. A component may pass evidence without passing its own authority. Default denial needs a usable escalation route, or operators will build unsafe bypasses. Test forged labels, stale approvals, legitimate requests from unauthorised routes, and credentials whose capability exceeds the described task.
-
-### Observability
-
-Trace case, run, source, decision, and version identifiers across boundaries. Record selection, exclusion, denial, retry, abstention, cancellation, and validation counts without logging unnecessary payloads. Dashboards need distributions and rare disqualifying events, not averages alone. An incident responder should be able to locate whether the bad outcome began in requirements, input construction, generation, evaluation, application code, a tool, or human review.
-
-### Latency, cost, and budgets
-
-Allocate tokens, time, calls, money, storage, and review attention before execution. Reserve capacity for validation, safe termination, receipts, and cleanup. Measure cost by successful, policy-compliant outcome rather than generation alone. Test degraded modes explicitly. A cheaper fallback is not acceptable if it silently skips the control that made the normal path safe.
-
-### Recovery and reconciliation
-
-Define retry, idempotency, rollback, compensation, and reconciliation for every state-changing boundary. A timeout does not reveal whether an effect occurred. Receipts and request identities must allow the caller to learn the truth without repeating an irreversible action. Recovery paths deserve the same authorization and evaluation as the normal path.
-
-### Human review and appeal
-
-Human review is a designed component, not a decorative final glance. Show reviewers the evidence, uncertainty, policy version, proposed consequence, and alternatives they need. Prevent automation bias with independent anchors and an appeal route. Track disagreement and overrides as diagnostic signals. A named approver remains accountable; the model's confidence cannot substitute for that responsibility.
-
-### Change management
-
-Treat prompts, policies, evaluators, retrieval configuration, tool contracts, and models as deployable versions. Review changes, replay suites, compare segments, canary releases, and retain a coherent rollback bundle. A change that improves one metric can still violate authority, privacy, or cost constraints. Document accepted residual risk and the person authorised to accept it.
-
-### Data quality and coverage
-
-Evaluation is bounded by the cases and labels it contains. Sample across ordinary traffic, rare but consequential segments, changing language, missing fields, and historically failed cases. Inspect whether synthetic data preserves the decision shape without being mistaken for production prevalence. Review labels independently and retain uncertainty where experts disagree. Coverage should answer which risks were examined, not claim that unseen behavior has been eliminated.
-
-### Evaluator governance
-
-Evaluators are production logic when their scores block releases or actions. Give them owners, tests, versions, access limits, and rollback plans. Measure false acceptance and false rejection, and audit deterministic rules as carefully as model-based judges. Never let a model's self-reported score stand in for external evaluation. When human judgement is required, preserve reviewer identity, rationale, anchors, and adjudication rather than only the final number.
-
-### Documentation and evidence
-
-Keep a compact decision record beside each contract: purpose, non-goals, trusted sources, hard invariants, thresholds, reason codes, known limitations, and escalation owner. Examples are useful evidence only when their fixtures and versions are preserved. Documentation should let a new operator predict the safe outcome of a boundary case before running it. If prose and executable policy disagree, the enforced policy must be visible and the discrepancy treated as a defect.
-
-### Adoption and maintenance
-
-The smallest enforceable boundary that a team can maintain is safer than an elaborate design no one understands. Introduce controls with migration paths, observe rejection reasons, and distinguish genuine user friction from blocked unsafe behavior. Budget time for refreshing cases, reviewing drift, rotating credentials, and retiring obsolete policy. Reliability decays when a control has no owner after launch, even if its initial implementation was correct.
-
-### Counterfactual and ablation tests
-
-Remove or alter one control at a time to learn which outcome it actually protects. Replace current evidence with stale evidence, widen a capability, suppress a disqualifier, or hide a version field. A useful test should fail for the predicted reason. If removing a supposed safeguard changes nothing, it may be ceremonial or its evaluator may be blind. Counterfactual tests also prevent teams from crediting prompt wording for safety supplied by an unseen application rule.
-
-### Residual risk and decision records
-
-No test suite closes an open world. After controls pass, state what remains uncertain: unseen inputs, provider changes, reviewer bias, integration defects, or consequences outside telemetry. Estimate impact and detectability, name the risk owner, and set a review date. Acceptance is a governance decision supported by evidence, not a mathematical declaration that failure is impossible. This record lets later incidents challenge the assumptions that were actually made.
-
-### End-to-end acceptance
-
-Component tests are necessary and insufficient. Run representative requests through authentication, context construction, generation, validation, policy, action simulation, and reporting. Verify not only the answer but the absence of prohibited side effects and the presence of receipts. Inject failures between stages: lose an acknowledgement, time out after a proposed mutation, or make an evaluator unavailable. The safe terminal state should remain predictable. Compare end-to-end outcomes with component metrics so a fortunate final answer cannot hide a violated boundary, and a correctly blocked request is not mislabelled as poor model quality. Before release, have someone outside the implementation team reconstruct one decision from the retained evidence. If that person cannot identify the active versions, authority, sources, and reason code, the system is not yet auditable enough for its claimed consequence.
-
+Hard disqualifiers trade simplicity against nuance. A single minimum on one criterion is blunt — it cannot express near-misses — and that bluntness is exactly what makes it hard to argue away. Reserve disqualifiers for failures no amount of other merit should offset.
 
 ## When Prompting Is Not the Answer
 
-Prompting is not the enforcement mechanism for identity, permission, uniqueness, arithmetic invariants, transaction isolation, rate limits, expiry, deletion, or irreversible approval. Use access control, database constraints, deterministic code, schedulers, queues, and accountable human processes. Use a model where interpretation, synthesis, classification, or explanation benefits from learned language patterns.
-
-The mature question is not “Can a prompt do this?” but “Which component can own this requirement and prove its outcome?” If the answer names only language, redesign the boundary before polishing the sentence.
+Prompting can elicit a candidate, a self-assessment, or even a suggested score, and only the first of those is evaluation. Acceptance thresholds, disqualifiers, adjudication routing, reviewer provenance, and rubric versioning are mechanisms: they live in code and process, and they decide. A model may serve as one reviewer with recorded provenance; it cannot be the rubric, the threshold, or the adjudicator of record, because a specification that lives in a prompt cannot be pinned, diffed, replayed, or held accountable for its verdicts.
 
 ## Exercises
 
-1. Add one normal, one boundary, one malformed, and one adversarial case to the chapter manifest. Predict the safe reason code before running it.
-2. Identify a disqualifying outcome that an average could hide. Add a protected tag or hard policy for it.
-3. Trace one value from source through model-visible context, evaluation, action, logging, retention, and deletion.
-4. Exchange a report with a partner and review the evaluator rather than the model answer. Which expectation is least defensible?
-5. Design the safe degraded behavior when the chapter's governing control is unavailable.
+1. Write anchors for a new criterion — safety of tone for a support assistant — defining all five scores and choosing a minimum. Decide whether it should be disqualifying, and defend the decision in terms of what an average could hide.
+2. Construct a candidate whose mean clears a 0.75 pass threshold while one reviewer scores a disqualifying criterion below its minimum. Run it through the lab rubric, then argue for and against the disqualifier from the perspective of the candidate's author.
+3. Design the adjudication path: what the adjudicator sees — scores, rationales, anchors, evidence spans — what they may decide, and what they must record. Keep the adjudicator from simply re-averaging the scores they were given.
+4. A system's acceptance rate fell ten points after a model upgrade. List three explanations — model, pipeline, evaluator — and the evidence you would gather before changing anything.
+5. Evaluate the evaluator: commit three near-threshold cases and one malformed review — missing rationale, out-of-range score, criterion mismatch — and verify each is refused or routed as designed.
+6. A team proposes replacing two human reviewers with one model reviewer to cut latency. Write the governance conditions under which that is acceptable, and the provenance the model reviewer must carry.
 
 ## Chapter Summary
 
-Evaluation and Rubrics turns evaluation into an owned system contract. Prompts remain useful for communicating a bounded language task, while an anchored multi-reviewer rubric governs acceptance or action. Reliable practice preserves provenance and versions, separates failure owners, tests boundaries and adversarial cases, reports disagreement, and refuses to let a favourable average erase a disqualifying result.
+Evaluation becomes reliable when the instrument is a specification rather than a ceremony. Anchored criteria make scores claims about the artefact; weights and thresholds make acceptance a policy; disqualifiers make some failures unaverageable; disagreement routes to adjudication instead of disappearing into the mean. Reviewer provenance and rubric versioning keep verdicts challengeable across time, and the separation of model, system, and evaluator failures sends each defect to the owner who can fix it. The court that writes the test before seeing the answer has converted taste into engineering.
 
 ## The Next Tale
 

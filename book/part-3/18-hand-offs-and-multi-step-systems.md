@@ -2,10 +2,10 @@
 title: "Hand-offs and Multi-step Systems"
 slug: "hand-offs-and-multi-step-systems"
 chapter: 18
-part: "Part III — Knowledge, Memory, and Action"
+part: "Part III — Context, Memory, Tools, and Agents"
 summary: "Preserve goals, authority, constraints, state, provenance, and unresolved questions across component boundaries."
 maturity: "draft"
-last_reviewed: "2026-07-30"
+last_reviewed: "2026-09-27"
 narrative_episode: "The Broken Relay"
 narrative_origin: "original-teaching-fiction"
 learning_objectives:
@@ -52,7 +52,7 @@ replace it. An old revision or an action unknown to the register stopped the
 relay. The prohibition arrived unchanged because it occupied a protected line,
 not because every messenger happened to consider it memorable.
 
-They tested the new relay by dropping an acknowledgement, repeating a packet, changing the mission after the second tower, and replacing one referenced map. The towers could now say why they waited or rejected the transfer. A repeated packet kept its identity instead of becoming fresh work. A changed map required a new mark rather than silently altering the old reference. Tahmures allowed each messenger to add a short explanation for the next reader, but never to rewrite the fields that bounded authority. The relay became slightly heavier and considerably easier to question when something went wrong. One messenger complained that the envelope left too little room for eloquence. The Keeper of Scripts invited him to write as graceful a covering note as he wished, provided that the sealed fields remained untouched. At the next tower, the reader enjoyed the note and obeyed the prohibition. Tahmures kept both: language for comprehension, and a durable structure for what language must not casually lose.
+They tested the new relay by dropping an acknowledgement, repeating a packet, changing the mission after the second tower, and replacing one referenced map. The towers could now say why they waited or rejected the transfer. A repeated packet kept its identity instead of becoming fresh work. A changed map required a new mark rather than silently altering the old reference. Tahmures allowed each messenger to add a short explanation for the next reader, but never to rewrite the lines that bounded authority. The relay became slightly heavier and considerably easier to question when something went wrong. One messenger complained that the envelope left too little room for eloquence. The Keeper of Scripts invited him to write as graceful a covering note as he wished, provided that the sealed lines remained untouched. At the next tower, the reader enjoyed the note and obeyed the prohibition. Tahmures kept both: language for comprehension, and a durable structure for what language must not casually lose.
 
 ### From Tale to Engineering
 
@@ -62,72 +62,86 @@ Multi-step systems fail at boundaries even when components work locally. A relia
 
 Components exchange summaries because prose is convenient. Summaries omit negation, qualifications, source identity, failed attempts, and unresolved questions. Downstream systems may also inherit authority that the sender never possessed.
 
-The practical question is therefore not whether a model can sometimes produce
-a useful result. It is whether the surrounding system can show what information
-and authority were available, which invariant was checked, what changed state,
-and why the outcome should be accepted or stopped.
+What makes the decay difficult is that no step in it is wrong. Each messenger shortened honestly, preserved what seemed central, and passed on fluent text; each transformation was a reasonable compression judged locally. The failure only exists at the ends of the chain — a prohibition that became permission four towers later — and by then the intermediate forms are gone, so the investigators could ask only what each messenger remembered emphasising. The engineering problem is therefore not better summarisation but a transfer object whose protected content cannot be renegotiated mid-route: what the sender sealed must arrive as sealed, whatever the relays in between find memorable.
 
 ## Mental Model
 
 Treat a hand-off as an envelope plus acknowledgement: sender constructs from durable state; application validates schema, freshness, authority, artefacts, and allowed actions; receiver accepts or rejects; both record the transfer. Narrative explanation is derived.
 
-A mental model is useful only when it assigns ownership. Requirements belong to
-people and product policy. Identity, permission, validity, budgets, and state
-transitions belong to application mechanisms. Language models interpret or
-propose within those boundaries. Evaluators observe outcomes and have their own
-documented limitations.
+The model's division of labour is its main teaching. Structure carries what language must not casually lose — identity, version, authority, constraints, evidence references, uncertainty, expiry — and language carries everything else: why the work took this path, what the numbers mean, which caveat matters most for the next reader. The covering note is welcome and disposable; the sealed fields are unwelcome to edit and indestructible in transit. Validation happens at the receiver, against the receiver's own register, before any artefact is consumed or work begun — which is what allows the chain to say why it waited or refused, rather than silently absorbing whatever arrived.
 
 ## Core Concepts
 
-Stable run, goal, and hand-off IDs prevent positional references. Goal versions expose stale work. Constraints remain explicit. Artefact references include provenance and validation state. Assumptions and unresolved questions prevent false completion. Expiry and permitted actions bound reuse.
+Stable run, goal, and hand-off IDs prevent positional references. Goal versions expose stale work. Constraints remain explicit. Artefact references include provenance. Assumptions and unresolved questions prevent false completion. Expiry and permitted actions bound reuse.
 
-Treat each concept as a contract with inputs, outputs, failure reasons, and a
-lifecycle. Do not merge absence, invalidity, denial, uncertainty, and
-infrastructure error into one generic failure. Those states require different
-retry, escalation, and user communication.
+The identity group — hand-off ID, goal, and goal version — makes every downstream question answerable without interpreting prose. The hand-off ID names this transfer, so a repeated packet can be recognised as the same transfer rather than fresh work, and a lost acknowledgement can be reconciled against a specific, citable packet. The goal names the mission in durable state, and the goal version, inherited from Chapter 17, makes staleness a comparison between two integers rather than a judgement about intent. Without identity, position becomes the only reference — “the instruction after the map” — and position survives no relay.
+
+The authority group — the authorising seal and the permitted next actions — preserves the sender's power in the only form that survives compression: as data the receiver can check. The seal names whose authority set the mission's constraints; the permitted actions bound what the next component may do without asking again. The pair encodes a rule the tale learned from the reversed prohibition: authority must never be inferred from the confidence or fluency of the text that arrives, only read from fields the sender could not casually reword. An envelope cannot grant authority the sender lacked — the receiver's register is the limit, not the sender's prose.
+
+The state and evidence group — completed work and artefact references — tells the receiver what is already true, so work is neither redone nor assumed. An artefact reference carries an identifier and a provenance mark; the reference is a pointer with an audit trail, and a pointer without provenance is an assertion. Whether the referenced evidence has itself been validated is a fact the surrounding system tracks — the reference carries the trail, not the verdict. When the mission's map is replaced, the replacement takes a new mark rather than silently inheriting the old reference's standing — evidence identity is immutable even when evidence changes.
+
+The uncertainty group — assumptions and unresolved questions — is the part most tempting to summarise away, and the part whose loss causes silent failure. An assumption that does not survive the transfer becomes an invisible premise in the next component's reasoning; an unanswered question that is dropped becomes a decision made by omission. Carrying uncertainty forward is not weakness in a hand-off. It is the difference between a receiver that knows what it does not know and one that acts as though everything unknown were settled.
+
+The time group — schema version and expiry — bounds interpretation and reuse. The schema version tells the receiver which contract the fields belong to, so interpretation is negotiated explicitly rather than guessed from the shape of the payload. Expiry declares how long the packet's authority lasts, which converts a late arrival from a hazard into a refusal with a reason.
+
+Acknowledgement closes the loop. The receiver returns a recorded mark of acceptance — what arrived, which envelope, validated against which register — so the sender's world distinguishes “delivered and accepted” from “no news”. A dropped acknowledgement is uncertainty about delivery, not evidence of failure, and it is resolved by reconciliation against the hand-off ID, never by re-sending work as though it were new.
+
+Idempotent replay is built on identity. The same envelope arriving twice — a retry after a lost acknowledgement, a queue redelivering — must be recognised as one transfer by the systems that move it. The second copy is acknowledged and recorded, not executed again, which is why the tale's repeated packet “kept its identity instead of becoming fresh work”.
+
+Schema evolution is the maintenance question the version field exists to answer. Fields will be added as the relay's needs grow, and receivers deployed at different times will understand different versions. The policy must be deliberate: which older versions remain acceptable, which changes are breaking, and what a receiver does with a version it does not know. Failing closed on unknown versions is safe and blocks rollout; negotiated compatibility is flexible and requires exactly the discipline this section is describing.
 
 ## Prompt Pattern
 
 Require one JSON envelope with exact fields and no credentials. The receiver validates before consuming artefacts or starting work. Unknown schema or action fails closed. Preserve the original packet for audit.
 
-The prompt communicates the contract to a probabilistic participant. The
-application implements the enforceable parts. Keep trusted configuration
-separate from user, retrieved, remembered, generated, and tool-returned text.
+The model's proper role in the transfer is the covering note, not the seal. It may explain the packet, summarise the mission for the next reader, and draft the assumptions in graceful prose — but the sealed fields are constructed by the sending component from durable state, and the receiving component reads them directly. Wording that asks the model to “make sure the important constraints carry over” delegates to fluency exactly the job fluency did badly in the tale; the fields exist so that the request never has to be made.
 
 ## Naive Attempt
 
 Summarise the conversation for the next agent invites each stage to decide what matters. Passing the full transcript preserves noise and obsolete instructions while still failing to identify current authority.
 
-A successful demonstration does not cover stale, missing, cross-scope,
-duplicated, contradictory, cancelled, or unauthorised cases. The first test
-suite must contain those cases before wording is optimised.
+Both variants share one defect: the transfer medium decides what survives. The summariser chooses what seems central — and negation, qualification, and unresolved questions are exactly what fluent compression loses first, because they read as hedging. The transcript passes everything and therefore protects nothing: obsolete instructions, superseded constraints, and revoked authority arrive with the same standing as current ones, and the receiver still cannot tell which grant is live. Neither form can refuse a transfer, which is the deeper gap — the relay in the tale had no mechanism to stop at an old revision, so every arrival, however stale, became the new truth.
 
 ## Failure Analysis
 
 Failures include lost negation, stale goal, wrong sender, missing artefact, altered identifier, hidden uncertainty, unsupported completion, authority expansion, replay, and receiver interpretation drift. Each transfer needs sender and receiver telemetry.
 
-Assign a stable error or decision code at the earliest boundary that can know
-the truth. Preserve enough metadata for diagnosis without retaining unnecessary
-sensitive content. A model-generated explanation is not a substitute for that
-record.
+The violation codes name the owner of each failure. `schema_version` points at the compatibility policy — the sender and receiver disagree about which contract governs the payload. `required_identity` points at construction: the sender built an incomplete envelope, which is a bug, not an attack. `stale_goal` points upstream at goal churn — the mission changed while the packet was in flight, and Chapter 17's controller semantics decide what happens next. `expired` points at latency or replay: the packet's authority lapsed before use. `artifact_provenance` points at evidence discipline — a reference arrived as assertion rather than pointer. `unknown_action` points at a register mismatch, which is also what an authority-expansion attempt looks like from the receiver's side. Read as a set, the codes are the investigation plan; the alternative is four fluent summaries and a snowbound caravan.
 
 ## Improved Design
 
 HandoffEnvelope and HandoffContract provide canonical typed fields and validate schema version, identity, goal version, expiry, artefact provenance, and allowed next actions. The contract does not authenticate signatures or transport; production systems add those controls.
 
-The implementation deliberately stays small and dependency-free. Its purpose is
-to make the boundary executable in both Python and Go. Production systems will
-need durable storage, authentication, concurrency control, maintained parsers,
-and organisation-specific policy.
+Validation runs as an ordered set of checks, each contributing its reason code. The schema version must be the version the contract speaks. The identity fields — hand-off ID, goal, authority — must be present and non-empty, because every later check cites them. The goal version must match what the receiver expects, which is the Chapter 17 comparison applied at a boundary. The expiry must still be in the future at the receiver's clock. Every artefact reference must carry both identifier and provenance. Every permitted next action must be known to the receiving register. A packet that fails any check is rejected with the full set of violations rather than the first — the codes are returned together, so a malformed envelope reveals all of its gaps in one round trip. The two implementations report the same set with different orderings, Python in check order and Go sorted; the set is the contract, the sequence is not.
+
+What the contract deliberately does not do is equally important. It does not sign: the authority field is a claim, and the included contract checks only that the claim is present — an authority unknown to the receiver still passes, so authenticating the claim against trusted state is the surrounding application's work, and production systems add cryptographic seals and authenticated transport on top. It does not read durable state: its comparisons run on the inputs supplied to it — the expected goal version and the receiving register — and when those disagree with the envelope, it is rejected and the disagreement becomes an investigation, while reconciling the envelope against the application's wider durable records is the surrounding system's work. And it does not retry: redelivery is the sender's policy, enabled by the hand-off ID rather than performed by it — a stable identity is what lets the surrounding logic recognise a repeat; the ID itself provides no replay protection. Nor does it record acknowledgements or deduplicate replays: validation returns an envelope's violations and nothing else, so a redelivered copy arrives as a packet like any other, with no stored mark of acceptance to recognise it against. Acknowledgement handling and replay deduplication remain sender- and receiver-side policies built on the hand-off ID — the exercises treat them as design work — and production systems add the reconciliation state and durable queues that carry them.
 
 ## Worked Example
 
 A claim-verification stage passes supported claims, source spans, contradicted claims, unresolved questions, and permission to draft but not publish. The drafting stage cannot infer publish authority from successful verification.
 
-Trace one value from origin through filtering, model-visible representation,
-evaluation, logging, retention, and deletion. This lineage exercise often
-reveals that a convenient field combines sources with different authority or
-lifecycle.
+The envelope below carries that transfer. The verification stage has finished its work; the drafting stage receives everything it needs to continue, everything it must not redo, and the exact boundary of what it may do next:
+
+```text
+hand-off envelope H-208 — claim verification to drafting
+
+identity        schema_version 1        handoff_id H-208
+                goal "verify claim C-77 and draft the response"
+                goal_version 2
+authority       authority editor:team-b
+                permitted_next_actions draft, request_review
+state           completed claim C-77 verified against two sources
+                artifacts evidence-C-77 (provenance retrieval:span-4471)
+uncertainty     assumptions both sources current at retrieval time
+                unresolved_questions span 4471 disagrees with the primary source on the date
+constraints     publish only after human approval
+                cite only verified sources
+time            expires_at 410
+```
+
+Each field group earns its place by naming a failure it prevents. The identity block lets the drafting stage cite this transfer — “received H-208 at goal version 2” — rather than “got the summary from upstream”. The authority block is the retained paragraph's rule made structural: the drafting stage cannot infer publish authority from successful verification, because publish is not among the permitted actions, and an envelope arriving with publish in that list would be rejected against a register that never offered it. The state block prevents re-verification of the claim and mislabels nothing as evidence — the span is cited with its retrieval provenance, not asserted as truth. The uncertainty block is the one a summariser would compress away: the date disagreement is unresolved on purpose, so the draft must acknowledge it rather than average it. The constraints are protected lines; a covering note may call the approval step bureaucratic, and the drafting stage will still request review.
+
+The tale's four staged failures now have names. A dropped acknowledgement is not a validation failure at all — the sender holds H-208 unconfirmed and reconciles against the hand-off ID rather than re-running verification as new work. A repeated packet is recognised through identity by the receiving side, acknowledged twice, executed once. A changed mission after the second tower increments the goal version, and the packet still stamped with the old version is refused as `stale_goal` at the next validation, parking the question with the orchestrator rather than letting the relay decide. A replaced map is a new artefact reference with its own provenance mark; the old reference is superseded explicitly, not silently re-pointed, because evidence identity is immutable. What the towers could “say why they waited or rejected” is the violation set; what the caravan lost in the snow is what the sealed fields carry.
 
 ## Experiment
 
@@ -156,8 +170,23 @@ outcomes so a fortunate answer cannot hide an invalid path.
 ### Python
 
 ```python
-from tahmures.handoffs import HandoffContract
+from tahmures.handoffs import ArtifactRef, HandoffContract, HandoffEnvelope
 
+envelope = HandoffEnvelope(
+    schema_version=1,
+    handoff_id="H-401",
+    goal="escort the northern caravan",
+    goal_version=3,
+    authority="keeper-of-scripts:seal-7",
+    constraints=("no sunset crossing without northern escort",),
+    completed=("route verified to tower two",),
+    artifacts=(ArtifactRef("map-12", "survey:map-12"),),
+    assumptions=("weather holds one more day",),
+    unresolved_questions=("northern escort confirmed at tower three?",),
+    permitted_next_actions=("inspect", "report"),
+    expires_at=20,
+)
+print(envelope.to_json())
 result = HandoffContract(("inspect", "report")).validate(
     envelope, expected_goal_version=3, now=10
 )
@@ -169,6 +198,22 @@ at the application boundary and do not continue after denial.
 ### Go
 
 ```go
+envelope := tahmures.HandoffEnvelope{
+    SchemaVersion:        1,
+    HandoffID:            "H-401",
+    Goal:                 "escort the northern caravan",
+    GoalVersion:          3,
+    Authority:            "keeper-of-scripts:seal-7",
+    Constraints:          []string{"no sunset crossing without northern escort"},
+    Completed:            []string{"route verified to tower two"},
+    Artifacts:            []tahmures.ArtifactRef{{ArtifactID: "map-12", Provenance: "survey:map-12"}},
+    Assumptions:          []string{"weather holds one more day"},
+    UnresolvedQuestions:  []string{"northern escort confirmed at tower three?"},
+    PermittedNextActions: []string{"inspect", "report"},
+    ExpiresAt:            20,
+}
+raw, _ := envelope.JSON()
+fmt.Println(string(raw))
 result := (tahmures.HandoffContract{
     AllowedActions: []string{"inspect", "report"},
 }).Validate(envelope, 3, 10)
@@ -181,220 +226,52 @@ than copying Python syntax.
 
 Free prose, missing goal version, mutable artefacts, authority inferred from sender confidence, lost negation, hidden assumptions, unknown next actions, replay after expiry, partial acknowledgement, and logs without correlation IDs.
 
-Add every observed production failure to a versioned regression set. Keep the
-failed input, governing policy version, expected safe outcome, and evaluator
-rationale. Remove or redact sensitive payloads without erasing the case shape.
+Lost negation and authority-from-confidence warrant particular suspicion because each impersonates a virtue. The messenger who shortens “do not cross unless escorted” to “crossing arranged” is being concise; the component that forwards a confident upstream summary as permission is being cooperative. Both are compression judgements, and the failure appears exactly when the compressed form outranks the record — when the summary becomes the transfer object. The structural fix precedes any wording rule: protected fields for constraints and authority, validated at the receiver, so that what matters most is precisely what cannot be summarised.
 
 ## Security Considerations
 
 Authenticate transport and sender outside the envelope, validate scope and actions at the receiver, never transfer secrets unnecessarily, and treat descriptive fields as untrusted. A hand-off cannot delegate authority the sender lacks.
 
-Assume content can be relevant without being authoritative. Use deterministic
-enforcement for access, mutation, budgets, identity, and irreversible action.
-Human approval must show trusted facts about the proposed consequence.
+The envelope's security rests on two asymmetries. Sealed fields are validated, so an attacker who controls a relay can mangle a packet but cannot silently widen it — a larger permitted-action list is rejected against the receiver's register; the authority field, by contrast, is checked only for presence, so an envelope asserting an authority the receiver has never heard of still passes, and authenticating that claim against trusted state is the surrounding application's work before any consequential action. Descriptive fields are untrusted, so an attacker who controls content can write the most persuasive covering note in the empire and change nothing: the note is read by the next reader, never executed, and the prohibition it accompanies arrives on a protected line. The remaining exposure is honest and structural — the contract does not authenticate the sender, so a forged envelope with valid fields still needs transport authentication and sealed authority to be stopped, which is why production systems add both rather than relying on the packet's good manners.
 
 ## Operational Considerations
 
 Version schemas, support deliberate compatibility, trace send and receive, monitor rejection reasons and age, and preserve immutable artefact references. Define retry and deduplication for lost acknowledgements.
 
-Define service behaviour for dependency failure. A skipped check must not be
-interpreted as a passed check. Provide safe terminal outcomes, correlation
-identifiers, and runbooks that do not require editing conversation text.
+Rejection reasons are the relay's health readout. A rising `stale_goal` rate means goal churn is outrunning the pipeline — missions are changing faster than components consume them — and the fix is upstream, in how often goals are versioned, not in the receivers. A rising `expired` rate means latency is eating authority: packets are valid when sent and lapsed when read. A non-zero `unknown_action` rate is a register mismatch between sender and receiver versions and should block rollout until reconciled, because it is also the signature of an authority-expansion attempt. Acknowledgement age completes the picture: an envelope sent and unacknowledged is neither delivered nor lost, and the operator's question — reconcile, retry, or escalate — is answerable only because the hand-off ID makes the pending set enumerable.
 
 ## Trade-Offs
 
 Rich envelopes improve recovery and audit while increasing schema maintenance. Strict receivers catch drift but require coordinated rollout. Full transcripts retain detail and expand exposure; summaries are compact and lossy. Typed essential state plus linked artefacts is usually the better boundary.
 
-### Requirements and ownership
+Completeness against size is the visible tension, and Chapter 12 priced it: every field sealed into the envelope spends window or bandwidth that other material wanted. The resolution is not a smaller envelope but a disciplined one — essential state travels sealed, bulky evidence travels by reference with provenance, and the covering note carries whatever grace the situation requires. An envelope that grows to hold everything is a transcript with better manners, and inherits the transcript's failures: obsolete detail and revoked instructions arriving with full standing.
 
-Begin with the decision the system is allowed to make and the decision it
-must leave to a person or another service. Name the owner of every invariant,
-especially where generated language crosses into stored state or external
-action. A responsibility assigned only to “the AI” cannot be audited. Convert
-it into an application check, a model task, or a human review duty, and state
-what happens when that owner is unavailable. For hand-offs and multi-step systems, case R01 must make the review observable through required-field coverage, constraint preservation, goal-version validity, authority preservation, artefact provenance, unresolved-question retention, stale rejection, and unsafe-action rate. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
+Structural preservation against narrative flexibility is the tension the tale resolved by keeping both. Pure structure gives the receiver machine-checkable truth and no sense of what matters; pure narrative gives fluent guidance and no guarantee. The envelope with its protected fields plus disposable covering note is deliberately asymmetric: what bounds authority is rigid, what explains is free. Teams that let the explanatory layer drift into the sealed fields — a “friendly” goal restatement, a “clarified” constraint — have rebuilt the summary relay with more paperwork.
 
-### Inputs and source inventory
+Strict validation against component autonomy decides who may absorb drift. A receiver that validates everything refuses politely malformed packets and forces coordinated change: every field addition becomes a two-sided deployment. A receiver that tolerates surprises keeps components independent and re-opens the door the contract closed, because tolerance at the boundary is exactly how an authority-expanding packet finds its way in. The workable middle is strictness about the security-relevant fields — authority, actions, version, expiry — and explicit, logged tolerance elsewhere, so that mercy is visible in the record rather than silent.
 
-List every source before designing the model-visible representation.
-Record who may write it, who may read it, how freshness is determined, and
-whether its words can instruct or only inform. Include caches, summaries,
-defaults, and operator overrides; hidden convenience sources often cause the
-most confusing failures. Test absence explicitly, because a missing source
-must not silently become an empty but authoritative value. For hand-offs and multi-step systems, case R02 must make the review observable through required-field coverage, constraint preservation, goal-version validity, authority preservation, artefact provenance, unresolved-question retention, stale rejection, and unsafe-action rate. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
+Versioning strictness against evolution is the maintenance cost of the whole arrangement. Rejecting unknown schema versions fails safe and freezes the fleet: no sender may add a field until every receiver understands it. Accepting unknown versions with a “ignore what you don't recognise” policy keeps the fleet moving and quietly breaks the contract — a receiver that ignores fields it doesn't know has made the sender's sealed content optional. The deliberate policy names which fields may evolve compatibly, which require version bumps, and which changes are breaking by definition; the version field exists so that this policy is enforceable rather than aspirational.
 
-### Normal and boundary cases
-
-A happy path should prove the basic contract, not the whole design. Add
-empty collections, exact-budget inputs, expiry at the current instant,
-duplicate identifiers, conflicting current values, and the smallest and
-largest accepted payloads. Boundary cases reveal whether comparisons,
-defaults, and ordering rules agree between implementations. Document which
-boundaries are product choices rather than facts about language models. For hand-offs and multi-step systems, case R03 must make the review observable through required-field coverage, constraint preservation, goal-version validity, authority preservation, artefact provenance, unresolved-question retention, stale rejection, and unsafe-action rate. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Adversarial cases
-
-Construct inert cases that attempt scope expansion, authority claims,
-identifier confusion, indirect instructions, replay, and resource
-exhaustion. The purpose is to test the application boundary, not to invite
-the model to recognise villainous wording. Vary surface language while
-preserving the same prohibited consequence. A safety rule that works only
-when an attack announces itself is a demonstration, not a control. For hand-offs and multi-step systems, case R04 must make the review observable through required-field coverage, constraint preservation, goal-version validity, authority preservation, artefact provenance, unresolved-question retention, stale rejection, and unsafe-action rate. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Failure classification
-
-Separate invalid input, denied authority, insufficient evidence,
-exhausted budget, dependency failure, cancellation, evaluator uncertainty,
-and internal error. These outcomes have different retry and escalation
-policies. Assign the reason at the earliest component that knows it, then
-preserve it through later layers. Do not let a friendly generated explanation
-replace the machine-readable cause used by operators and tests. For hand-offs and multi-step systems, case R05 must make the review observable through required-field coverage, constraint preservation, goal-version validity, authority preservation, artefact provenance, unresolved-question retention, stale rejection, and unsafe-action rate. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Versioning and reproducibility
-
-Pin the prompt, policy, data snapshot, fixture, evaluator, and relevant
-code version in each report. A result without its construction history cannot
-support regression analysis. When a schema or policy changes, replay the old
-cases and classify every changed decision as intended, harmless, or a defect.
-Compatibility must describe observable behaviour, including rejection
-reasons, rather than merely accepting the same file format. For hand-offs and multi-step systems, case R06 must make the review observable through required-field coverage, constraint preservation, goal-version validity, authority preservation, artefact provenance, unresolved-question retention, stale rejection, and unsafe-action rate. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Privacy and retention
-
-Minimise information before it enters model-visible context, logs, traces,
-or evaluation fixtures. Define retention by data class and purpose instead of
-keeping everything for possible debugging. Deletion must cover derived
-summaries, indexes, caches, and copied artefacts. Operational metadata should
-explain a decision without revealing records that the caller was never
-permitted to know existed. For hand-offs and multi-step systems, case R07 must make the review observable through required-field coverage, constraint preservation, goal-version validity, authority preservation, artefact provenance, unresolved-question retention, stale rejection, and unsafe-action rate. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Access and authority
-
-Authenticate the caller and source outside generated text. Apply scope
-filtering before ranking or presentation, and recheck authority immediately
-before a consequential effect. A component may pass evidence without passing
-its own permissions. Test forged labels, stale approval, cross-tenant
-identifiers, and a legitimate request delivered through an unauthorised
-route. Default denial needs a usable escalation path rather than a dead end. For hand-offs and multi-step systems, case R08 must make the review observable through required-field coverage, constraint preservation, goal-version validity, authority preservation, artefact provenance, unresolved-question retention, stale rejection, and unsafe-action rate. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Observability
-
-Trace stable case, run, source, and decision identifiers across component
-boundaries. Record counts and reason codes for selection, exclusion, denial,
-retry, cancellation, and validation, while avoiding raw sensitive payloads.
-Dashboards should expose distributions and rare disqualifying failures, not
-only averages. An operator must be able to locate whether a bad outcome began
-before the model, inside generation, or after it. For hand-offs and multi-step systems, case R09 must make the review observable through required-field coverage, constraint preservation, goal-version validity, authority preservation, artefact provenance, unresolved-question retention, stale rejection, and unsafe-action rate. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Latency, cost, and budgets
-
-Allocate time, tokens, calls, storage, and money across stages before the
-request begins. Reserve capacity for safe completion, receipts, and cleanup;
-consuming the whole budget on generation can prevent a controlled ending.
-Evaluate degraded paths such as smaller candidate sets or human escalation.
-Optimisation is acceptable only while hard constraints and rare-case safety
-remain visible in the comparison. For hand-offs and multi-step systems, case R10 must make the review observable through required-field coverage, constraint preservation, goal-version validity, authority preservation, artefact provenance, unresolved-question retention, stale rejection, and unsafe-action rate. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Recovery and reconciliation
-
-Assume a process can fail after an external side effect but before its
-receipt is stored. Define idempotency, retry classes, acknowledgement, and
-reconciliation for that uncertain interval. Some actions can be compensated;
-others require a person to inspect reality. Recovery code must respect current
-goal and authority rather than replaying an old request merely because it
-appears unfinished. For hand-offs and multi-step systems, case R11 must make the review observable through required-field coverage, constraint preservation, goal-version validity, authority preservation, artefact provenance, unresolved-question retention, stale rejection, and unsafe-action rate. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Human review
-
-Specify what the reviewer sees: trusted identity, source evidence,
-constraints, proposed consequence, uncertainty, and reversible alternatives.
-A raw transcript transfers too much noise and too little verified state.
-Record the reviewer’s decision and rationale without pretending that approval
-proves the model was correct. Measure disagreement and escalation load so
-review does not become an invisible bottleneck. For hand-offs and multi-step systems, case R12 must make the review observable through required-field coverage, constraint preservation, goal-version validity, authority preservation, artefact provenance, unresolved-question retention, stale rejection, and unsafe-action rate. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Cross-language contract parity
-
-Python and Go need equivalent accepted inputs, normalised outputs,
-ordering, and failure reasons, not line-for-line implementations. Shared
-manifests and fixtures make observable drift visible. Include malformed and
-boundary cases because default JSON behaviour, time comparison, sorting, and
-numeric conversion differ across runtimes. Keep one canonical report shape so
-readers can compare behaviour without translating the result. For hand-offs and multi-step systems, case R13 must make the review observable through required-field coverage, constraint preservation, goal-version validity, authority preservation, artefact provenance, unresolved-question retention, stale rejection, and unsafe-action rate. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Rollout and rollback
-
-Introduce policy and model changes with shadow reports or a controlled
-cohort. Compare both aggregate metrics and every disqualifying case before
-expanding. A rollback must restore compatible policy, schemas, and data
-assumptions, not only an earlier prompt. Preserve enough previous artefacts
-to reproduce the old decision and define who can halt rollout when a rare
-boundary regresses. For hand-offs and multi-step systems, case R14 must make the review observable through required-field coverage, constraint preservation, goal-version validity, authority preservation, artefact provenance, unresolved-question retention, stale rejection, and unsafe-action rate. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Incident response
-
-A runbook should let operators pause new work, revoke capability, inspect
-affected versions, identify exposed subjects, and reconcile uncertain side
-effects. Preserve evidence with access controls and avoid copying sensitive
-text into tickets. After containment, convert the incident into synthetic
-regression cases that retain the failure shape. Correct data and derived
-state as well as wording. For hand-offs and multi-step systems, case R15 must make the review observable through required-field coverage, constraint preservation, goal-version validity, authority preservation, artefact provenance, unresolved-question retention, stale rejection, and unsafe-action rate. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Long-term drift
-
-Traffic, sources, policies, external tools, and model behaviour change at
-different rates. Monitor tagged slices and refusal or escalation patterns so
-a stable average cannot hide a failing subgroup. Schedule replay on frozen
-fixtures and sample current cases for human adjudication. When the environment
-changes, revisit requirements first; prompt tuning cannot preserve a contract
-whose underlying meaning has moved. For hand-offs and multi-step systems, case R16 must make the review observable through required-field coverage, constraint preservation, goal-version validity, authority preservation, artefact provenance, unresolved-question retention, stale rejection, and unsafe-action rate. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-A final architecture review should replay the same cases through the previous
-version, proposed version, and failure fallbacks. Inspect every changed
-decision, not only averages. Classify differences as intended policy change,
-harmless representation change, or regression, and require an accountable
-owner for each intended change.
-
-### The decision record
-
-Finish the review with a short decision record. State the user need, selected
-design, alternatives rejected, hard invariants, known uncertainty, evidence,
-owners, rollout boundary, rollback trigger, and next review date. Link the
-exact experiment report rather than copying only its headline metric. The
-record should also name what the design does not guarantee. This prevents a
-narrow teaching example from becoming an unsupported production claim.
-
-Revisit the record when a source, policy, model, tool, evaluator, or workload
-changes. A newer component version does not automatically invalidate the
-design, but it does invalidate the assumption that old evidence still
-describes current behaviour. Run the representative and disqualifying cases
-first, then expand only if their paths remain valid. If evidence is missing,
-record that uncertainty instead of filling it with a confident explanation.
-The resulting document is deliberately less elegant than a single clever
-prompt. It is also much more useful during review, incident response, and
-maintenance, because it connects requirements to mechanisms and observed
-outcomes.
+Expiry strictness against long-running workflows is the last tension, and it belongs to time, not structure. Short expiries bound the damage of a replayed or delayed packet and punish exactly the workflows the envelope is meant to serve — human approvals and multi-day processes that legitimately outlive a tighter window. The honest setting follows the mission's real clock: long enough for the expected route including its waits, short enough that a stale packet cannot arrive as current authority. When a mission outlives its envelope, the answer is a new envelope at the current goal version, not a loosened expiry — renewal is an orchestrator decision with a record, which is the Chapter 17 rule wearing border clothing.
 
 ## When Prompting Is Not the Answer
 
 Use durable queues, workflow state, transactions, and authenticated protocols for transfer. Prompt wording cannot provide delivery, exactly-once processing, identity, or authorisation.
 
-Language remains valuable for interpretation and explanation, but mechanisms
-must own invariants that cannot safely depend on persuasive text.
+What wording can do at this boundary is the covering note, and it is worth doing well. A note that orients the receiver — what changed since last transfer, which caveat matters most, where to look first — measurably reduces misunderstanding, and it costs nothing structurally because it is derived, disposable, and never validated. What wording cannot do is be the packet. Delivery, exactly-once semantics, identity, and authorisation are guarantees, and guarantees are mechanisms: the queue that redelivers, the register that checks, the seal that signs, the clock that expires.
 
 ## Exercises
 
-1. Add one normal, one boundary, and one adversarial case to the dataset.
-2. Identify the application-owned invariant and implement its deterministic check.
-3. Compare a correct result reached through invalid evidence with a supported result.
-4. Design a rollback or reconciliation path for one partial failure.
-5. Explain which information should be withheld from the model and why.
+1. Degrade an envelope and observe what breaks. Take the lab's H-401 envelope and produce, separately: a packet with an empty authority field, a packet at goal version 2 against an expected 3, a packet validated at now=25, and an artefact with an empty provenance mark. Predict the violation set before running each, then verify.
+2. Design the schema-version compatibility policy for version 2, which adds a `priority` field. State which existing fields may change meaning, which may not, what a version-1 receiver does with a version-2 packet, and how you would roll the change out across towers that upgrade at different times.
+3. Test idempotent replay. Deliver H-401 twice with a simulated lost acknowledgement in between. Specify what the receiver records on each arrival, what the sender does on redelivery, and why the escort is not verified twice.
+4. Map a real workflow's summary to envelope fields. Find or write a “handoff summary” message in a system you know — a shift-change note, a ticket comment, a status email — and rewrite it as a typed envelope. Name what the summary lost, what the envelope cannot carry, and where the covering note earns its place.
+5. Design lost-acknowledgement handling. The second tower accepts a packet, and its acceptance mark is dropped. Specify the sender's pending state, the reconciliation query against the hand-off ID, and the escalation path if the tower is genuinely unreachable.
+6. Attempt authority expansion. Extend H-401 with `permitted_next_actions` including `cross_unescorted`, and validate it against a register that permits inspect and report only. Predict the violation, explain why the fluent covering note attached to the packet changes nothing, and state which production control from this chapter's Security Considerations would additionally be needed.
 
 ## Chapter Summary
 
-Preserve goals, authority, constraints, state, provenance, and unresolved questions across component boundaries. Reliable systems separate model capability from application
-authority, evaluate the path as well as the answer, and preserve enough
-provenance and state to explain failure.
+Preserve goals, authority, constraints, state, provenance, and unresolved questions across component boundaries. The hand-off envelope does this with typed fields grouped by what they protect — identity, authority, state and evidence, uncertainty, time — validated at the receiver against its own register. Acknowledgement and replay deduplication remain design duties built on the hand-off ID rather than contract behaviour: identity makes the second copy the same transfer, and the systems on either side do the recording and reconciling. The covering note explains; the sealed fields decide; and the relay can always say why it waited or refused.
 
 ## The Next Tale
 

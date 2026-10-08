@@ -2,7 +2,7 @@
 title: "Reusable Prompt Templates"
 slug: "reusable-prompt-templates"
 chapter: 7
-part: "Part II — Designing Prompted Interactions"
+part: "Part II — Prompt Design and Controlled Generation"
 summary: "Treat reusable prompts as validated, versioned application code rather than convenient strings."
 maturity: "draft"
 last_reviewed: "2026-07-29"
@@ -119,7 +119,7 @@ A copied prompt is easy to understand as text. A reusable prompt is different:
 it is a program with inputs. The moment an application inserts a customer
 record, document, date, role, policy, or tool argument, the prompt participates
 in a data flow. Its variables have types, origins, defaults, length limits,
-escaping rules, and failure behavior whether the design states them or not.
+escaping rules, and failure behaviour whether the design states them or not.
 
 Naive reuse usually begins with string replacement. It works for the first
 valid example and quietly establishes dangerous conventions: every value can
@@ -148,7 +148,7 @@ and no external state changes.
 
 There are three contracts around it. The variable contract decides which names
 and value types are accepted. The rendering contract defines escaping,
-delimiter behavior, and unresolved-variable handling. The dispatch contract
+delimiter behaviour, and unresolved-variable handling. The dispatch contract
 belongs to the application and decides whether this rendered artefact may be
 sent, by whom, to which model, with which tools.
 
@@ -253,7 +253,7 @@ rendering with one contract while an application assumes another. Authority
 failures occur when successful rendering automatically triggers a consequential
 operation.
 
-Model behavior can add another failure, but it is downstream. A model may
+Model behaviour can add another failure, but it is downstream. A model may
 misinterpret a perfectly rendered prompt. That possibility does not excuse an
 application from catching deterministic problems first. Conversely, flawless
 input validation does not guarantee the model will follow the prompt. Each
@@ -328,7 +328,7 @@ types, and delimiter-bearing content. Recorded fixtures compare unchecked
 substitution with typed rendering. Expected observations include a higher
 invalid-input rejection rate and no dispatch in the typed variant.
 
-Fixtures are synthetic. They demonstrate evaluator and report behavior, not
+Fixtures are synthetic. They demonstrate evaluator and report behaviour, not
 universal model performance. Replace them with recorded responses from a
 controlled environment before drawing conclusions about a provider.
 
@@ -517,12 +517,12 @@ is more useful than calling prompts “magic words.” Language remains central,
 but dependable reuse comes from the engineering around it.
 
 One small practice makes this lifecycle concrete: keep a changelog entry that
-states the intended behavioral effect, affected variables, evaluation cases,
+states the intended behavioural effect, affected variables, evaluation cases,
 approver, and rollback version. A prose diff explains what changed; the entry
 explains why it was safe to change. Future investigators should not have to
 infer product intent from punctuation.
 The changelog is also a useful index into evaluation reports and incident
-records, joining editorial purpose to observed behavior.
+records, joining editorial purpose to observed behaviour.
 That connection helps reviewers distinguish a deliberate interface revision
 from accidental drift after model, data, or application changes.
 
@@ -551,7 +551,7 @@ model call.
 ## Chapter Summary
 
 Reusable prompts are application code. Their inputs require names, types,
-defaults, domain validation, and error behavior. Rendering should be pure,
+defaults, domain validation, and error behaviour. Rendering should be pure,
 versioned, and observable. It neither proves that a model will behave correctly
 nor grants authority to call one. Separate validation, rendering, dispatch,
 response validation, and consequential action so each can be tested and owned.

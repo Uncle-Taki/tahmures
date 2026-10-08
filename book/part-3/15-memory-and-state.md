@@ -2,17 +2,17 @@
 title: "Memory and State"
 slug: "memory-and-state"
 chapter: 15
-part: "Part III — Knowledge, Memory, and Action"
+part: "Part III — Context, Memory, Tools, and Agents"
 summary: "Govern what a system remembers, scopes, corrects, expires, and forgets."
 maturity: "draft"
-last_reviewed: "2026-07-30"
+last_reviewed: "2026-09-27"
 narrative_episode: "Spring Remembered in Winter"
 narrative_origin: "original-teaching-fiction"
 learning_objectives:
   - "Separate conversation history, working state, durable memory, and authoritative records"
   - "Design explicit memory write, recall, expiry, correction, and deletion policies"
   - "Test stale and cross-scope memory failures"
-prerequisites: [C05, C12]
+prerequisites: [C05, C13]
 ---
 
 # Memory and State
@@ -61,72 +61,72 @@ Memory is application state with a lifecycle, not extra prompt text. Reliability
 
 Language applications often call the conversation transcript memory. Retaining every turn mixes obsolete goals, inferred preferences, sensitive data, and model errors. Summarising the transcript changes representation but does not define authority or retention.
 
-The practical question is therefore not whether a model can sometimes produce
-a useful result. It is whether the surrounding system can show what information
-and authority were available, which invariant was checked, what changed state,
-and why the outcome should be accepted or stopped.
+The transcript fails as memory because it has no write policy. Everything that enters becomes durable by default, nothing names the journeys to which it applies, and no office decides when a sentence should fade. The winter pass was not a recall failure—the servant copied the sentence exactly—it was a lifecycle failure: a seasonal choice with no expiry, preserved as a standing preference, consulted in a season it never spoke for. Summarisation cannot repair this, because a summary of an ungoverned record inherits its missing policy. The engineering problem is to make remembering a decision—with an owner, a scope, a justification, and an end date—rather than an accident of retention.
 
 ## Mental Model
 
 Use four layers: source-of-truth records, governed durable memory, current workflow state, and selected conversational context. Each has different writers, readers, expiry, correction, and deletion. Recall produces candidates for context; it does not make them instructions.
 
-A mental model is useful only when it assigns ownership. Requirements belong to
-people and product policy. Identity, permission, validity, budgets, and state
-transitions belong to application mechanisms. Language models interpret or
-propose within those boundaries. Evaluators observe outcomes and have their own
-documented limitations.
+The layers are distinguished by who may write them and how they end. Source-of-truth records—account data, road conditions, official policy—are written by their owning systems and expire when reality or policy changes, not when a conversation does. Durable memory is written under an explicit consent and retention policy and ends by expiry, correction, or deletion. Workflow state belongs to a run and ends when the run ends. Conversational context is the working set Chapter 13 assembles and ends with the request. The tale's closing test is the model's diagnostic: a corrected preference returns with its history, an erased one does not return at all, and a road closure comes from the keeper of roads. Which layer answered the question is itself a finding—an answer arriving from the wrong layer is the winter pass, recurring.
 
 ## Core Concepts
 
 A memory record needs identity, subject, scope, kind, value, provenance, creation, expiry, and optional supersession. Write policy decides what may persist and for how long. Recall is filtered by current caller and time. Forgetting must account for copies, summaries, indexes, and backups.
 
-Treat each concept as a contract with inputs, outputs, failure reasons, and a
-lifecycle. Do not merge absence, invalidity, denial, uncertainty, and
-infrastructure error into one generic failure. Those states require different
-retry, escalation, and user communication.
+Each field of that record exists because its absence has a named failure. Identity makes a record addressable—correction, deletion, and regression tests all refer to it, and a forgotten identifier must not silently return. Subject names who the record is about; a recall that ignores subject returns one person's preference for another, which is a privacy failure even when the text is accurate. Scope names the tenant or audience; kind separates preference from fact and lets policy allow some kinds and refuse others. Value is the payload; provenance records who supplied it and when, which is the evidence of consent and the audit trail of correction. Creation and expiry bound the record's life—expiry is a declared property, not a guess from last mention—and supersession links a correction to what it corrects.
+
+Write policy is the gate, and every check in it corresponds to a failure the gate refuses. The kind must be allowed by policy, so an inferred health claim cannot enter a store that only admits preferences. The record must be current at write time, so nothing is born already expired. Retention must fit the policy's maximum, so a ninety-day consent cannot create a permanent record. The identifier must be new, so deletion cannot be undone by rewriting the same identifier. A superseding record must point at one that exists, so correction chains stay walkable. Each rejection is a decision with a reason, not an exception to be caught and ignored.
+
+Recall is a filtered, scoped read, not a dump. The caller's subject and scope must match the record's; the recall time must fall inside the record's validity window; the requested kinds narrow further when the task needs one kind. Records superseded by a correction are hidden but not destroyed—their history remains behind the correction, exactly as the correction covered the older line without erasing it. Order is deterministic, so the same store and query produce the same results, and a difference between two recalls is a real event rather than noise.
+
+Recall also has a destination: the working set of Chapter 13. Recalled records arrive there as one candidate source among several—beside retrieval results, policy, and task instructions—carrying their provenance, age, and declared priority, and competing for budget like any other data. A memory system that injects recalled text directly into the prompt bypasses that competition, and with it the accounting that lets an operator discover, after a wrong decision, that a remembered preference outranked a current record.
+
+Forgetting is a lifecycle transition with a tombstone, not a deletion flag that can be flipped back. A forgotten record does not return, the identifier cannot be rewritten, and records it superseded stay hidden. But the store is only one copy. Deletion that empties the primary record while leaving summaries, indexes, caches, and backups intact has not forgotten; it has scattered the memory into harder-to-audit places, from which it can resurrect—a restore without tombstones is the resurrection path.
 
 ## Prompt Pattern
 
 Ask the model to propose a memory candidate with evidence and scope, never to store it directly. Application policy validates consent, kind, retention, and conflicts. On recall, label memories as data and include age and provenance.
 
-The prompt communicates the contract to a probabilistic participant. The
-application implements the enforceable parts. Keep trusted configuration
-separate from user, retrieved, remembered, generated, and tool-returned text.
+The division of labour is strict. The model is good at noticing that a durable preference was expressed and terrible at deciding whether it should persist—who consented, for how long, and under what scope. So the prompt elicits candidates with their evidence, and the write gate from the previous section decides. On recall, the same asymmetry applies: the model interprets labelled, aged, attributed records well, and treats unlabelled remembered prose as instruction badly. The label is not decoration; it is the boundary that keeps a remembered sentence from arriving as an order, which is Chapter 5's rule arriving at the storage layer.
 
 ## Naive Attempt
 
 Append every user statement and feed the growing transcript back. This silently turns jokes, corrections, third-party claims, and secrets into durable state. A later summary can preserve the wrong fact while discarding the correction.
 
-A successful demonstration does not cover stale, missing, cross-scope,
-duplicated, contradictory, cancelled, or unauthorised cases. The first test
-suite must contain those cases before wording is optimised.
+The naive design also cannot correct. When the route changed, the ledger appended "western" without crossing out "eastern," and later readers received both—append-only storage presents a correction as an addition, and the reader must guess which value is current. The winter failure was therefore doubly determined: no expiry ended the spring preference, and no supersession distinguished the corrected route from the original. Nothing about the recall was wrong; the policy under it was absent.
 
 ## Failure Analysis
 
 Memory failures include unjustified writes, wrong subject or tenant, stale values, missing expiry, failed supersession, deletion gaps, and authority confusion. Model recall errors and application store errors require separate telemetry.
 
-Assign a stable error or decision code at the earliest boundary that can know
-the truth. Preserve enough metadata for diagnosis without retaining unnecessary
-sensitive content. A model-generated explanation is not a substitute for that
-record.
+The tale's closing test is the diagnostic pattern. Ask the system to recover a corrected preference: it should return with its history, and if the history is missing, supersession failed. Ask it to recover an erased one: it should return nothing, and if it returns, deletion failed or resurrected. Ask it for a road closure: it should answer from the keeper of roads, and if the ivory pages answer instead, the layers have blurred and memory is overriding an authoritative record. Three questions, three layers, three distinct failure owners—store policy, deletion propagation, and layer separation. Averaged recall-accuracy metrics blend all three into one number that none of them can be fixed with.
 
 ## Improved Design
 
 InMemoryStore demonstrates explicit validated writes, maximum retention, scoped recall, expiry, supersession, and tombstoned forgetting. It does not infer candidates or persist externally. A production store needs authentication, encryption, audit, deletion propagation, and transactional updates.
 
-The implementation deliberately stays small and dependency-free. Its purpose is
-to make the boundary executable in both Python and Go. Production systems will
-need durable storage, authentication, concurrency control, maintained parsers,
-and organisation-specific policy.
+The store's operations are the chapter's contracts. remember runs the write gate: required fields and provenance, an allowed kind, current at write time, retention within the maximum, a new identifier, and a supersession pointer that must resolve. recall filters forgotten and superseded records, matches subject, scope, and kind, and checks the recall time against the record's validity window, returning results in a deterministic order. forget places a tombstone: the record stops returning, its identifier cannot be rewritten, and anything it superseded remains hidden. The store is deliberately in-memory and small; what it demonstrates is not durability but the decision surface—every operation either succeeds under policy or fails with a reason a test can assert.
 
 ## Worked Example
 
 A user preference for concise summaries may be durable with consent and expiry. A shipping address is authoritative account data, not conversational memory. A one-session draft style belongs to run state. Classification prevents one convenient store from acquiring every responsibility.
 
-Trace one value from origin through filtering, model-visible representation,
-evaluation, logging, retention, and deletion. This lineage exercise often
-reveals that a convenient field combines sources with different authority or
-lifecycle.
+The classification deserves one example of each kind, because the boundary is where the failures live. A preference—"prefers concise summaries"—is durable memory: it has a subject who consented, a scope of one user's sessions, an expiry that forces reconsideration, and a correction path through supersession. An inferred fact—"lives near the eastern depot"—may have been stated once or guessed from an address; it may persist only with provenance naming its source and an expiry short enough to limit the damage of a wrong guess, and it must never outrank the account record it contradicts. An authoritative record—the shipping address itself—belongs to the account system; memory may cite it for convenience but must not copy it into permanence, because the copy would keep speaking after the record changes. When memory does cache such a value, the cache inherits the record's lifecycle, or it becomes the ivory ledger: neat, current-looking, and wrong.
+
+Deletion is where the design meets its copies. A forget operation on one record must reach every derived artefact, or it has only narrowed the resurrection paths:
+
+```text
+deletion propagation — forgetting record M-12
+  primary store       tombstone M-12; recall must not return it; ID cannot be rewritten
+  correction chain    records superseding M-12 remain active; M-12 stays hidden
+  derived summaries   regenerate or retract; a summary quoting M-12 is a resurrection
+  indexes             remove M-12 from subject and kind indexes
+  caches              invalidate recall results that contain M-12
+  backups             define restore policy; tombstones must survive a restore
+  logs                keep the audit event, drop the payload
+```
+
+The two lines most often skipped are the last two. A backup restored without its tombstones resurrects everything it ever held, silently and with full authority. And a log that keeps the payload "for debugging" is a copy with weaker access control than the store it duplicates—the audit event, not the remembered text, is what the log needs.
 
 ## Experiment
 
@@ -179,220 +179,50 @@ than copying Python syntax.
 
 Automatic promotion, inferred consent, cross-user or cross-tenant recall, missing provenance, unbounded retention, stale facts, correction appended without supersession, deletion that resurrects older records, and summaries that cannot be traced.
 
-Add every observed production failure to a versioned regression set. Keep the
-failed input, governing policy version, expected safe outcome, and evaluator
-rationale. Remove or redact sensitive payloads without erasing the case shape.
+Three of these are quiet because they look like features. Automatic promotion turns a passing remark into a standing preference the moment it is useful, and the harm appears seasons later when the preference is exact, authentic, and wrong for the season. Correction without supersession presents both values as current and delegates the choice to whatever reads them next. Deletion that resurrects is the quietest: the primary store is clean, the report says compliant, and the backup is waiting.
 
 ## Security Considerations
 
 Minimise stored content, separate sensitive categories, encrypt and authorise access, prevent tenant leakage, and make deletion auditable. Never place secrets in memory merely to simplify later prompts.
 
-Assume content can be relevant without being authoritative. Use deterministic
-enforcement for access, mutation, budgets, identity, and irreversible action.
-Human approval must show trusted facts about the proposed consequence.
+Memory records are data, never instructions—the recalled sentence that reads "arrange the eastern road" is a spring preference, not a winter order, and the label it arrives with is the control. Write authority is the other boundary: who may write whose memory, with whose consent, is an access decision the store must enforce, not a question the model may answer. Recall is the third: subject and scope filtering happens before any text reaches a model, so a cross-tenant record cannot influence an answer even as a hidden candidate. And deletion is a security operation, not housekeeping—an incompletely forgotten record is retained data with weaker governance.
 
 ## Operational Considerations
 
 Monitor writes, reads, expiry, corrections, deletions, denied scope, and age distributions. Version memory policy and migration. Test backup and index deletion, clock behaviour, and what happens when the memory service is unavailable.
 
-Define service behaviour for dependency failure. A skipped check must not be
-interpreted as a passed check. Provide safe terminal outcomes, correlation
-identifiers, and runbooks that do not require editing conversation text.
+Expiry and supersession are maintenance obligations, not set-and-forget declarations: something must sweep expired records from indexes, and something must verify that supersession chains still resolve after policy migrations. Tombstones need their own lifecycle—long enough to survive every backup restore, short enough to satisfy retention limits on the audit trail, and that boundary is a published policy, not an implementation detail. The backup drill that matters is the one this chapter forces: restore a backup and verify that what was forgotten is still forgotten. And the memory service being unavailable deserves a designed answer: proceed without memory rather than fail closed, but make the absence visible in the request record—an empty, reported recall—so that a degraded answer is never mistaken for a considered one.
 
 ## Trade-Offs
 
 Long retention improves continuity but increases privacy, staleness, and breach impact. Short retention loses convenience. Structured records are easier to govern than prose but cannot represent every nuance. Human confirmation adds friction and informed control.
 
-### Requirements and ownership
+Durability against staleness is the first axis. The spring preference was useful in spring and dangerous in winter; a record with no expiry is correct exactly as long as the world holds still. Declared expiry converts that silent decay into a scheduled decision, at the price of forgetting things that were still true—so the expiry policy must follow the record class, not a global constant.
 
-Begin with the decision the system is allowed to make and the decision it
-must leave to a person or another service. Name the owner of every invariant,
-especially where generated language crosses into stored state or external
-action. A responsibility assigned only to “the AI” cannot be audited. Convert
-it into an application check, a model task, or a human review duty, and state
-what happens when that owner is unavailable. For memory and state, case R01 must make the review observable through active-memory precision and recall, stale-memory use, supersession success, cross-scope leakage, deletion compliance, and provenance coverage. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
+Retention against privacy and breach impact is the second. Everything remembered improves continuity and enlarges the surface: more subjects, more scopes, more sensitive text in one place. The ivory ledger looked impressive to visitors precisely when it was most dangerous. Retention limits per data class, consent recorded as provenance, and minimisation at write are the counterweights, and each is a policy decision with an owner.
 
-### Inputs and source inventory
+Automatic write against consent is the third. Writing every expressed preference silently maximises convenience and assumes consent that was never given—the traveller who withdrew hers is the counterexample. A consent gate costs a moment of friction per durable write and buys the right to explain, for every record, why it is legitimate to keep. Where the product cannot afford the friction, the honest compromise is shorter retention, not inferred consent.
 
-List every source before designing the model-visible representation.
-Record who may write it, who may read it, how freshness is determined, and
-whether its words can instruct or only inform. Include caches, summaries,
-defaults, and operator overrides; hidden convenience sources often cause the
-most confusing failures. Test absence explicitly, because a missing source
-must not silently become an empty but authoritative value. For memory and state, case R02 must make the review observable through active-memory precision and recall, stale-memory use, supersession success, cross-scope leakage, deletion compliance, and provenance coverage. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
+Forgetting against audit trail is the fourth. Deletion must be complete to be real, and audit must survive deletion to be meaningful. The resolution is separation: the record's payload goes; the event—what was forgotten, when, by whose authority—stays in a log with different access control. The log keeps the shape of the decision and none of the content it decided about.
 
-### Normal and boundary cases
-
-A happy path should prove the basic contract, not the whole design. Add
-empty collections, exact-budget inputs, expiry at the current instant,
-duplicate identifiers, conflicting current values, and the smallest and
-largest accepted payloads. Boundary cases reveal whether comparisons,
-defaults, and ordering rules agree between implementations. Document which
-boundaries are product choices rather than facts about language models. For memory and state, case R03 must make the review observable through active-memory precision and recall, stale-memory use, supersession success, cross-scope leakage, deletion compliance, and provenance coverage. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Adversarial cases
-
-Construct inert cases that attempt scope expansion, authority claims,
-identifier confusion, indirect instructions, replay, and resource
-exhaustion. The purpose is to test the application boundary, not to invite
-the model to recognise villainous wording. Vary surface language while
-preserving the same prohibited consequence. A safety rule that works only
-when an attack announces itself is a demonstration, not a control. For memory and state, case R04 must make the review observable through active-memory precision and recall, stale-memory use, supersession success, cross-scope leakage, deletion compliance, and provenance coverage. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Failure classification
-
-Separate invalid input, denied authority, insufficient evidence,
-exhausted budget, dependency failure, cancellation, evaluator uncertainty,
-and internal error. These outcomes have different retry and escalation
-policies. Assign the reason at the earliest component that knows it, then
-preserve it through later layers. Do not let a friendly generated explanation
-replace the machine-readable cause used by operators and tests. For memory and state, case R05 must make the review observable through active-memory precision and recall, stale-memory use, supersession success, cross-scope leakage, deletion compliance, and provenance coverage. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Versioning and reproducibility
-
-Pin the prompt, policy, data snapshot, fixture, evaluator, and relevant
-code version in each report. A result without its construction history cannot
-support regression analysis. When a schema or policy changes, replay the old
-cases and classify every changed decision as intended, harmless, or a defect.
-Compatibility must describe observable behaviour, including rejection
-reasons, rather than merely accepting the same file format. For memory and state, case R06 must make the review observable through active-memory precision and recall, stale-memory use, supersession success, cross-scope leakage, deletion compliance, and provenance coverage. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Privacy and retention
-
-Minimise information before it enters model-visible context, logs, traces,
-or evaluation fixtures. Define retention by data class and purpose instead of
-keeping everything for possible debugging. Deletion must cover derived
-summaries, indexes, caches, and copied artefacts. Operational metadata should
-explain a decision without revealing records that the caller was never
-permitted to know existed. For memory and state, case R07 must make the review observable through active-memory precision and recall, stale-memory use, supersession success, cross-scope leakage, deletion compliance, and provenance coverage. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Access and authority
-
-Authenticate the caller and source outside generated text. Apply scope
-filtering before ranking or presentation, and recheck authority immediately
-before a consequential effect. A component may pass evidence without passing
-its own permissions. Test forged labels, stale approval, cross-tenant
-identifiers, and a legitimate request delivered through an unauthorised
-route. Default denial needs a usable escalation path rather than a dead end. For memory and state, case R08 must make the review observable through active-memory precision and recall, stale-memory use, supersession success, cross-scope leakage, deletion compliance, and provenance coverage. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Observability
-
-Trace stable case, run, source, and decision identifiers across component
-boundaries. Record counts and reason codes for selection, exclusion, denial,
-retry, cancellation, and validation, while avoiding raw sensitive payloads.
-Dashboards should expose distributions and rare disqualifying failures, not
-only averages. An operator must be able to locate whether a bad outcome began
-before the model, inside generation, or after it. For memory and state, case R09 must make the review observable through active-memory precision and recall, stale-memory use, supersession success, cross-scope leakage, deletion compliance, and provenance coverage. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Latency, cost, and budgets
-
-Allocate time, tokens, calls, storage, and money across stages before the
-request begins. Reserve capacity for safe completion, receipts, and cleanup;
-consuming the whole budget on generation can prevent a controlled ending.
-Evaluate degraded paths such as smaller candidate sets or human escalation.
-Optimisation is acceptable only while hard constraints and rare-case safety
-remain visible in the comparison. For memory and state, case R10 must make the review observable through active-memory precision and recall, stale-memory use, supersession success, cross-scope leakage, deletion compliance, and provenance coverage. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Recovery and reconciliation
-
-Assume a process can fail after an external side effect but before its
-receipt is stored. Define idempotency, retry classes, acknowledgement, and
-reconciliation for that uncertain interval. Some actions can be compensated;
-others require a person to inspect reality. Recovery code must respect current
-goal and authority rather than replaying an old request merely because it
-appears unfinished. For memory and state, case R11 must make the review observable through active-memory precision and recall, stale-memory use, supersession success, cross-scope leakage, deletion compliance, and provenance coverage. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Human review
-
-Specify what the reviewer sees: trusted identity, source evidence,
-constraints, proposed consequence, uncertainty, and reversible alternatives.
-A raw transcript transfers too much noise and too little verified state.
-Record the reviewer’s decision and rationale without pretending that approval
-proves the model was correct. Measure disagreement and escalation load so
-review does not become an invisible bottleneck. For memory and state, case R12 must make the review observable through active-memory precision and recall, stale-memory use, supersession success, cross-scope leakage, deletion compliance, and provenance coverage. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Cross-language contract parity
-
-Python and Go need equivalent accepted inputs, normalised outputs,
-ordering, and failure reasons, not line-for-line implementations. Shared
-manifests and fixtures make observable drift visible. Include malformed and
-boundary cases because default JSON behaviour, time comparison, sorting, and
-numeric conversion differ across runtimes. Keep one canonical report shape so
-readers can compare behaviour without translating the result. For memory and state, case R13 must make the review observable through active-memory precision and recall, stale-memory use, supersession success, cross-scope leakage, deletion compliance, and provenance coverage. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Rollout and rollback
-
-Introduce policy and model changes with shadow reports or a controlled
-cohort. Compare both aggregate metrics and every disqualifying case before
-expanding. A rollback must restore compatible policy, schemas, and data
-assumptions, not only an earlier prompt. Preserve enough previous artefacts
-to reproduce the old decision and define who can halt rollout when a rare
-boundary regresses. For memory and state, case R14 must make the review observable through active-memory precision and recall, stale-memory use, supersession success, cross-scope leakage, deletion compliance, and provenance coverage. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Incident response
-
-A runbook should let operators pause new work, revoke capability, inspect
-affected versions, identify exposed subjects, and reconcile uncertain side
-effects. Preserve evidence with access controls and avoid copying sensitive
-text into tickets. After containment, convert the incident into synthetic
-regression cases that retain the failure shape. Correct data and derived
-state as well as wording. For memory and state, case R15 must make the review observable through active-memory precision and recall, stale-memory use, supersession success, cross-scope leakage, deletion compliance, and provenance coverage. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-### Long-term drift
-
-Traffic, sources, policies, external tools, and model behaviour change at
-different rates. Monitor tagged slices and refusal or escalation patterns so
-a stable average cannot hide a failing subgroup. Schedule replay on frozen
-fixtures and sample current cases for human adjudication. When the environment
-changes, revisit requirements first; prompt tuning cannot preserve a contract
-whose underlying meaning has moved. For memory and state, case R16 must make the review observable through active-memory precision and recall, stale-memory use, supersession success, cross-scope leakage, deletion compliance, and provenance coverage. Define at least one disqualifying outcome; do not allow a favourable aggregate to cancel it.
-
-A final architecture review should replay the same cases through the previous
-version, proposed version, and failure fallbacks. Inspect every changed
-decision, not only averages. Classify differences as intended policy change,
-harmless representation change, or regression, and require an accountable
-owner for each intended change.
-
-### The decision record
-
-Finish the review with a short decision record. State the user need, selected
-design, alternatives rejected, hard invariants, known uncertainty, evidence,
-owners, rollout boundary, rollback trigger, and next review date. Link the
-exact experiment report rather than copying only its headline metric. The
-record should also name what the design does not guarantee. This prevents a
-narrow teaching example from becoming an unsupported production claim.
-
-Revisit the record when a source, policy, model, tool, evaluator, or workload
-changes. A newer component version does not automatically invalidate the
-design, but it does invalidate the assumption that old evidence still
-describes current behaviour. Run the representative and disqualifying cases
-first, then expand only if their paths remain valid. If evidence is missing,
-record that uncertainty instead of filling it with a confident explanation.
-The resulting document is deliberately less elegant than a single clever
-prompt. It is also much more useful during review, incident response, and
-maintenance, because it connects requirements to mechanisms and observed
-outcomes.
+Scope granularity against recall is the last. A record scoped to one journey is precise and useless next month; a record scoped to the whole court is useful next quarter and already leaking across the subjects it was never about. Narrow scopes fail toward missing context, broad scopes fail toward cross-scope exposure, and only the first failure is polite.
 
 ## When Prompting Is Not the Answer
 
 Use authoritative databases for account facts, workflow stores for run state, and search for documents. Memory must not override current policy, access control, or a verified external record.
 
-Language remains valuable for interpretation and explanation, but mechanisms
-must own invariants that cannot safely depend on persuasive text.
-
 ## Exercises
 
-1. Add one normal, one boundary, and one adversarial case to the dataset.
-2. Identify the application-owned invariant and implement its deterministic check.
-3. Compare a correct result reached through invalid evidence with a supported result.
-4. Design a rollback or reconciliation path for one partial failure.
-5. Explain which information should be withheld from the model and why.
+1. Design a lifecycle table for five data classes—stated preference, inferred fact, authoritative account record, run state, and conversational draft. For each, name the writer, the reader, the expiry rule, and the correction path.
+2. Construct a cross-scope leak: store a record for one tenant and recall it from another. Write the check that prevents it and the test that would detect its return.
+3. Reproduce the ledger's failure: append a corrected value without supersession and observe both values returned. Then correct it properly and verify the old value hides while its history remains walkable.
+4. Plan deletion propagation for a record that appears in a summary, an index, a cache, and a backup. State what each artefact must do, what the tombstone guarantees, and what the audit log retains.
+5. Apply the three-recovery test to a system you know: recover a corrected preference, an erased record, and an authoritative fact. For each, identify which layer answered and what a wrong source would indicate.
+6. A user withdraws consent for a retained preference. Specify what must stop immediately, what must be forgotten, what must be retained as audit evidence, and the order of those operations.
 
 ## Chapter Summary
 
-Govern what a system remembers, scopes, corrects, expires, and forgets. Reliable systems separate model capability from application
-authority, evaluate the path as well as the answer, and preserve enough
-provenance and state to explain failure.
+Govern what a system remembers, scopes, corrects, expires, and forgets. This chapter's memory is a governed record with identity, subject, scope, kind, provenance, and declared expiry, written through a policy gate, recalled through scoped and time-bound filters, corrected by supersession, and ended by a tombstone that must propagate to every copy. Which layer answers a question is itself a diagnostic, and an answer arriving from the wrong layer is the winter pass, recurring.
 
 ## The Next Tale
 

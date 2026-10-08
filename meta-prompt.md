@@ -380,6 +380,13 @@ prerequisites:
 `The Next Tale` must contain a brief narrative hook leading to the next
 chapter. It must not resolve the next conflict.
 
+Exception — the final chapter closes the book. Chapter 24 replaces this
+section with `## The Practice Continues` and the machine marker
+`<!-- closing -->` instead of `<!-- next: ch25 -->`. The closing resolves
+Tahmures's arc, transfers the practice to the reader, gives concrete next
+steps, and must not tease a successor chapter. Chapters 1–23 keep the normal
+next-tale hook contract.
+
 ## Technical Chapter Requirements
 
 For every generated or revised chapter, produce:
@@ -395,7 +402,8 @@ For every generated or revised chapter, produce:
 9. Python and Go examples where implementation is useful
 10. Evaluation criteria
 11. Security and operational implications
-12. A hook for the next episode
+12. A hook for the next episode (the final chapter instead carries the
+    reader-facing closing described above)
 
 Technical prose must:
 
@@ -526,7 +534,8 @@ A chapter cannot be marked complete until all checks pass:
 - [ ] Fiction is not presented as historical tradition
 - [ ] The story advances Tahmures's development
 - [ ] The story respects established continuity
-- [ ] The final hook supports the next chapter
+- [ ] The final hook supports the next chapter (Chapter 24: the closing
+      resolves the arc and transfers the practice to the reader)
 - [ ] The story improves comprehension rather than delaying it
 - [ ] Learning objectives map to explanations, experiments, and exercises
 - [ ] The experiment is reproducible and states its limitations

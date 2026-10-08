@@ -2,7 +2,7 @@
 title: "Requirements Before Wording"
 slug: "requirements-before-wording"
 chapter: 3
-part: "Part I — Language, Intent, and Models"
+part: "Part I — Language, Intent, and Reliable Instructions"
 summary: "Define stakeholders, constraints, trade-offs, and observable success before optimising prompt wording."
 maturity: "draft"
 last_reviewed: "2026-07-29"
@@ -33,8 +33,7 @@ Spring had removed the bridge at Varena as neatly as a thief lifting a bracelet.
 The river now divided grain fields from the market, and five bridge makers
 waited in the Council Chamber with five models.
 
-One was stone, one timber, one rope, one a high arch, and one a clever lattice
-that could be dismantled before a flood.
+One was stone, one timber, one rope, one a high arch, and one of bundled reed.
 
 ### The Request
 
@@ -55,7 +54,7 @@ Tahmures folded his arms. “Consider everything and choose properly.”
 
 By evening the div had written five recommendations. The stone bridge was best
 for endurance, timber for cost, rope for speed, the arch for carts, and the
-lattice for repair. Each answer was correct under a different meaning of
+reed for repair. Each answer was correct under a different meaning of
 *best*. None settled the decision.
 
 The council tried adjectives. They asked for the safest affordable bridge, the
@@ -79,8 +78,9 @@ The First Scribe placed these statements in two columns. In the first were
 conditions that disqualified a design. In the second were preferences that
 could be traded.
 
-Stone failed the cost ceiling. Rope failed the cart requirement. Reed failed
-the flood. Timber met every condition, though it would demand yearly work.
+Stone failed the cost ceiling, and the arch with it. Rope failed the cart
+requirement. Reed failed the flood. Timber met every condition, though it
+would demand yearly work.
 
 “So timber is best,” said Tahmures.
 

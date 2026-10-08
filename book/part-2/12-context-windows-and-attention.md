@@ -2,7 +2,7 @@
 title: "Context Windows and Attention"
 slug: "context-windows-and-attention"
 chapter: 12
-part: "Part II — Designing Prompted Interactions"
+part: "Part II — Prompt Design and Controlled Generation"
 summary: "Budget, select, order, and trace context instead of assuming that everything which fits will be used reliably."
 maturity: "draft"
 last_reviewed: "2026-07-29"
@@ -52,7 +52,7 @@ mostly ceremony.
 
 During a fever outbreak, a medicine caravan reached the northern gate. The
 reader examined the retained panels, found the current toll schedule, and
-ordered the caravan to wait for payment verification. A later note mentioned
+ordered the caravan to wait for proof of payment. A later note mentioned
 medical wagons but only to assign their lane. It did not repeat the exemption.
 
 ### The Unexpected Result
@@ -62,7 +62,7 @@ The caravan waited a day.
 When Tahmures demanded the decree, every panel was produced. Nothing had been
 destroyed. The clerk insisted that the frame had accepted as much as it could.
 The reader had answered from all material visible to it. The early exemption
-was simply outside the assembled context.
+lay outside the panels the reader had been given.
 
 The Archivist tried a different method: include the first and last panels,
 then fill the remaining space. That saved the exemption but omitted a closure
@@ -70,7 +70,7 @@ written in the middle after a bridge collapse. Another clerk compressed old
 panels into a summary and accidentally changed “unless medicine” to “including
 medicine.”
 
-The archive remembered everything. The gate interaction remembered the wrong
+The archive remembered everything. The gate's reading remembered the wrong
 things.
 
 ### The Discovery
@@ -88,7 +88,7 @@ the original passage before action.
 
 The First Scribe tested the new arrangement by placing a decisive sentence at
 the beginning, middle, and end of otherwise similar decrees. The old tail
-method succeeded only at the end. The new selector retained all three because
+method succeeded only at the end. The new method retained all three because
 their priority came from purpose rather than position.
 
 “A large frame is useful,” Tahmures said, “but it is not judgement.”
@@ -490,7 +490,7 @@ may need a source-authority rule or human owner.
 
 Quality analysis can use an oracle context: a curated minimal set known to
 contain sufficient evidence. Compare the production selector with this oracle,
-then compare model behavior on both. If the production context fails but the
+then compare model behaviour on both. If the production context fails but the
 oracle succeeds, improve selection. If both contain the evidence and fail,
 investigate prompting, ordering, or the model. This decomposition prevents
 endless tuning of the wrong layer.

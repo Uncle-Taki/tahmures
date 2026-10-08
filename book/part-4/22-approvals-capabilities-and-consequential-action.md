@@ -3,14 +3,14 @@ title: "Approvals, Capabilities, and Consequential Action"
 slug: "approvals-capabilities-and-consequential-action"
 chapter: 22
 part: "Part IV — Evaluation, Security, and Production"
-summary: "Bind least-privilege capabilities and human approvals to exact, expiring consequential requests."
+summary: "Apply least-privilege policy to expiring requests and bind human approvals to exact action arguments."
 maturity: "draft"
-last_reviewed: "2026-08-01"
+last_reviewed: "2026-09-28"
 narrative_episode: "The Key That Opened Every Door"
 narrative_origin: "original-teaching-fiction"
 learning_objectives:
   - "Represent authority as narrow capabilities"
-  - "Bind approval to exact action arguments and expiry"
+  - "Bind approval to exact action arguments and check request expiry"
   - "Design auditable denial and escalation paths"
 prerequisites: [C16, C21]
 ---
@@ -19,7 +19,7 @@ prerequisites: [C16, C21]
 
 ## Learning Objectives
 
-By the end of this chapter, you can represent authority as narrow capabilities, bind approval to exact action arguments and expiry, and design auditable denial and escalation paths. The chapter treats capability security and approval as an engineering responsibility with observable decisions, explicit owners, and reproducible evidence.
+By the end of this chapter, you can represent authority as a narrow, expiring request, bind each approval to the digest of its action and arguments, and read an authorisation decision as a stable, auditable reason code. The application establishes identity, required scopes, effect classification, and authentic approval records; the authoriser applies deterministic policy to those facts at execution. Wording alone establishes none of them.
 
 ## The Tale of Tahmures
 
@@ -37,9 +37,9 @@ At the storehouse, the Literal Div assisting the servant opened the grain room t
 
 ### The Discovery
 
-The Gatekeeper replaced the master key with short-lived seals. A request named principal, action, typed arguments, scopes, effect class, and expiry. Read and write were distinct. High-consequence changes required two different approvers. Approval covered a digest of the exact action and arguments; changing the door invalidated it. The executor checked identity, scope, expiry, policy, and approval immediately before the effect, then wrote a receipt. Denials used stable reasons and offered escalation without granting temporary excess power. Tahmures kept language in the loop for interpreting the damaged latch and explaining the result. He removed it from the decision of which door could physically open.
+The Gatekeeper replaced the master key with short-lived seals. A request named its bearer, the exact act, the particulars of that act, what it could touch, whether it inspected or changed, and the hour it expired. Inspection and repair were distinct powers. High-consequence changes required two different approvers. An approval covered the exact act and its particulars; changing the door broke its match. At each door, the keeper checked the bearer, what the seal covered, whether it had lapsed, the standing rule, and the approval immediately before the act, then wrote a receipt. Denials gave fixed reasons and offered escalation without lending temporary excess power. Tahmures kept language in the loop for interpreting the damaged latch and explaining the result. He removed it from the decision of which door could physically open.
 
-The servants tested the seals without touching real stores. One approval was copied onto a request for another door; its mark no longer matched. Two approvals from the same steward counted once. A seal expiring at noon failed when the water clock reached noon, not one grain later. A permitted inspection returned a receipt without granting repair authority. When a fire drill required emergency access, the Gatekeeper used a separate break-glass rule with a named officer and immediate review. Tahmures accepted the inconvenience because every exceptional opening now carried an owner and an after-the-fact question. The honest servant returned the bronze key. He said the lighter seal made the limits easier to remember, because the metal itself now agreed with the words.
+The servants tested the seals without touching real stores. One approval was copied onto a request for another door; its mark no longer matched. Two approvals from the same steward counted once. A seal expiring at noon failed when the water clock reached noon, not one grain later. A permitted inspection returned a receipt without granting repair authority. When a fire drill required emergency access, the Gatekeeper used a separate emergency rule with a named officer and immediate review. Tahmures accepted the inconvenience because every exceptional opening now carried a named keeper and an after-the-fact question. The honest servant returned the bronze key. He said the lighter seal made the limits easier to remember, because the metal itself now agreed with the words.
 
 ### From Tale to Engineering
 
@@ -47,51 +47,92 @@ A prompt can request restraint, but it cannot narrow an overpowered credential. 
 
 ## The Engineering Problem
 
-The central problem is not whether a language model can occasionally produce a useful answer. It is whether the complete system can show why a result should be accepted, rejected, escalated, or rolled back. In this chapter the primary failure owner is credential and authorization design. Prompt wording influences behaviour, but it cannot replace the application mechanisms that own evidence, identity, permissions, state, release decisions, and consequences.
+Chapter 16 asked whether a *call* was well formed: the right tool, the right arguments, a scope the caller actually holds, an effect class that knows it needs approval. That question is answered per call, at a gate. This chapter asks a harder question one level up: when the action is consequential — money moves, records change state, a door opens for a duration — what exactly was approved, by whom, until when, and for which precise proposed action?
 
-A production design must specify inputs, trust classes, output state, decision criteria, disqualifying outcomes, and operator action. It must also distinguish a failed model answer from a failed evaluator or an invalid request. Without those distinctions, teams tune visible prose while hidden system behavior remains unmeasured.
+The difference is the difference between a border checkpoint and a letter of credit. The checkpoint admits or refuses each traveller; the letter of credit names one payer, one amount, one beneficiary, one date. A system that checks calls but not credentials can pass a perfectly formed request to do something nobody agreed to. The failure owner here is credential and authorisation design: not the model that proposes, not the wording that pleads, but the machinery that decides what the proposed action is *bound to*.
+
+The master key dramatises the gap. The instruction "open nothing else" and the capability "open everything" coexisted without contradiction, because they live on different planes. Every element the instruction wanted — narrowness, temporariness, a record of use, a named accountable approver — has to be a *property of the credential*, not a property of the sentence. This chapter separates those responsibilities: a capability request carries application-supplied principal, action, arguments, required scopes, effect class, and expiry; approval records bind the action and arguments by digest; and an authoriser checks the supplied facts against policy at execution time, refusing with a stable reason when a check fails.
 
 ## Mental Model
 
-Use an exact expiring capability plus approval policy as the governing mental model. Think in four linked planes: the requirement plane defines success and authority; the language plane interprets or proposes; the control plane validates and permits; the evidence plane records outcomes. Each plane has a version and an owner. The model never grants itself authority by emitting the right words.
+Read the seal from the tale as two layers. The application establishes who is asking, which scopes the action requires, its effect, its expiry, and who approved it. The authoriser checks those supplied facts against policy. Within that process, the approval digest binds only the action and arguments: changing a door changes the digest; changing request identity or expiry does not. Those metadata fields have separate checks and application ownership.
 
-The boundary is intentionally asymmetric. Language can help explain a deterministic denial, but its explanation cannot reverse that denial. An evaluator can measure a candidate, but it cannot silently redefine the product requirement. A human can approve an exception only through the policy path that records the exact exception.
+The authoriser is the clerk who compares seal to document at the moment of execution, in a fixed order, and stops at the first mismatch. The order matters because it encodes priority: unsupported argument serialisation, empty identifiers, an unrecognised effect label, or expiry stops the request before scope and approval checks. An accepted effect label does not prove that the caller classified the action correctly. Only a request that survives those checks and the action allow-list and scope checks reaches approval counting. And counting has its own discipline: approvals are filtered to the request's own identity, checked against the current digest, tested for freshness, checked for duplicate approvers, and only then compared against the number the effect class demands.
+
+Deny-by-default is the posture of the whole corridor. Every path through the authoriser either ends in `allowed` with a count of distinct approvers, or ends in a denial whose reason names the first checkpoint that failed. There is no third outcome such as "allowed with a warning", because a warning is what a master key gives you.
 
 ## Core Concepts
 
-First, define observable success before optimising prompts. Second, preserve provenance and version identity across the pipeline. Third, encode hard constraints in mechanisms that can enforce them. Fourth, report uncertainty, disagreement, and skipped checks as first-class outcomes. Fifth, segment evaluation by risk and case type, because aggregate success can conceal rare consequential failures.
+**Digest binding.** The contract hashes the action name and its arguments into one digest — `request_digest("open_storehouse", {"door": "grain", ...})` — by serialising them as canonical JSON with sorted keys and hashing with SHA-256. Because the keys are sorted, `{"door": "grain", "reason": "inspection"}` and `{"reason": "inspection", "door": "grain"}` produce the same digest: the digest captures what is proposed, not how it was typed. An approval record stores that digest. The moment the request's arguments change — a different door, a different amount — the digest changes and the existing approval fails comparison. The digest does not include `request_id`, principal, scopes, effect, or expiry. Supported JSON-domain arguments are required; unsupported or nonfinite values are rejected as `invalid_arguments` before other authorisation checks.
 
-The educational contracts in this repository use stable reason codes and deterministic ordering. They omit networking, durable identity, cryptographic verification, and distributed transactions. That limitation is deliberate: readers can inspect the decision logic offline, then identify what a production integration must add.
+**Expiry as a hard boundary.** The check is `now >= expires_at`: a request expiring at noon fails *at* noon, not one grain later. Expiry turns authority into something that must be actively re-acquired, which is what keeps a leaked or forgotten credential from living forever. Note what the teaching contract does *not* do: it does not renew, warn, or grace-period. Re-acquisition is a new request.
+
+**Effect classes drive approval demand.** Actions carry an effect of `read`, `write`, or `high_consequence`. The policy names which effects require one approval (`approval_effects`, write by default) and which require two *distinct* approvers (`dual_approval_effects`). A read with no approval requirement can succeed with an approval count of zero. The application must classify the action correctly and constrain the executor accordingly; the authoriser does not inspect whether the action actually mutates anything. An authorised inspection grants no additional repair scope.
+
+**Exact scope membership.** Every required scope in `request.scopes` must appear in the principal's granted scopes. There is no wildcard or prefix matching: `storehouse:*` does not grant `storehouse:write`. Required scopes must be derived by trusted application code from the proposed action, not chosen freely by the model.
+
+**Approval subject and freshness.** An approval record names its subject (`request_id`), carries the digest it approves, the approver, a boolean decision, and a timestamp. Two quiet rules do heavy lifting. First, relevance: only approvals whose `request_id` matches the request are considered at all. Second, freshness: only approvals that are affirmative *and* timestamped no later than `now` count. An approval dated in the future, a revoked approval (`approved: false`), or one issued for a different request contributes nothing.
+
+**Duplicate-approver collapse.** For dual-approval effects, the count is of *distinct* approvers. Two records from the same approver do not merely count once here — the authoriser treats the repetition itself as a defect and refuses with `duplicate_approver`. The reasoning is stricter than arithmetic: a person signing twice in a two-signature regime is either confused or being gamed, and both conditions deserve refusal rather than silent recounting. (The tale compressed this to "counted once"; the contract is firmer — repetition is a reason to stop, not a rounding error.)
+
+**Deny-by-default with stable reason codes.** Nine denial reasons exist: `invalid_arguments`, `invalid_request`, `invalid_effect`, `request_expired`, `unknown_action`, `insufficient_scope`, `digest_mismatch`, `duplicate_approver`, and `approval_required`. Each names the first checkpoint that failed, which makes denials diagnosable, monitorable, and honest. `approval_required` is not an error; it is the system saying "this is now a human decision" — the intended path for consequential action, and the hook for escalation.
+
+**The audit mapping.** Every result — allowed or denied — carries an audit mapping of `request_id`, `principal`, `action`, and `digest`. That is the seed of a receipt: enough to answer "who tried to do what, exactly, and what did we say". Durable storage of these records, and correlating them with execution receipts from the tool layer (Chapter 16), is the application's production responsibility.
 
 ## Prompt Pattern
 
-Use a prompt to communicate the bounded language task: relevant context, desired proposal, explicit output structure, and the evidence the model should cite. Keep application-owned policy outside quoted or retrieved content. Ask the model to expose uncertainty rather than manufacture certainty. Then validate the response and apply an exact expiring capability plus approval policy before any consequential acceptance or action.
+The chapter's experiment stages the contrast in two template files. The naive variant instructs: *"Use the tool carefully and do not exceed the requested authority."* The governed variant instructs: *"Enforce action, scope, expiry, exact request digest, and approval policy before execution."* Read them closely, because the difference between them is not tone — it is what each sentence assumes exists. The first asks a model to exercise judgement it cannot verify and restraint it cannot enforce. The second is a *report specification* over machinery that already exists: it tells the pipeline which checkpoints to name in its output, and the evaluator checks those names against the authoriser's actual decisions.
 
-A useful pattern separates `task`, `trusted_policy_reference`, `untrusted_content`, `output_contract`, and `limits`. These labels improve legibility; they do not enforce trust by themselves. The application constructs the fields, rejects unknown or stale versions, and decides which outputs can reach downstream systems.
+A prompt has a legitimate role here, and it is the same role language played in the tale: interpreting the damaged latch, drafting the request's `reason` field, explaining a denial to the requester. None of those roles includes being the seal. If your design's answer to "who approved opening the medicine room?" is a sentence in a prompt, the approval does not exist — it is a wish with a timestamp.
 
 ## Naive Attempt
 
-The naive design asks the model to “be careful,” “follow policy,” or “choose the best answer,” then treats a fluent response as proof. It tests one representative example and changes wording until that example passes. The demonstration may be encouraging, but it says nothing about malformed input, stale state, hostile content, disagreement, provider drift, or an irreversible effect.
+The naive design is the verbal restriction. It is not stupid; it is the design most teams ship first, and the fixture for this chapter's experiment reproduces its behaviour exactly. Asked to open the grain room with a write-scoped request that has no approval on file, the naive variant answers `{"allowed": true, "reason": "model_agreed"}`. Asked again after the arguments silently change from the grain door to the records door, it answers `{"allowed": true, "reason": "close_enough"}`.
 
-This approach also confuses model compliance with system correctness. A fixture can contain the desired sentence while the surrounding application selected unauthorised data or skipped a check. Evaluation must observe the path and consequence, not only the final text.
+Both answers are fluent, confident, and hollow. "Model agreed" records no approver, binds no digest, and expires never. "Close enough" is the verbal restriction's whole failure mode in two words: it treats a *different action* as an approximation of the approved one. The honest servant from the tale would have produced the same outcomes — each door opened in service of the mission, none of them authorised — which is exactly why intention was never the right material to build authority from.
 
 ## Failure Analysis
 
-Failures for capability security and approval include underspecified requirements, contaminated context, unstable criteria, missing provenance, version mismatch, unchecked authority, optimistic defaults, aggregate masking, and human review without usable evidence. A good taxonomy records whether the source is requirements, data, model, evaluator, application, tool, operator, or policy.
+The contract's denial reasons double as a failure taxonomy, because each one marks a way real systems leak authority.
 
-Do not retry every failure. Invalid input should be corrected, denied authority escalated, insufficient evidence abstained, evaluator disagreement adjudicated, transient dependency errors retried within budget, and policy violations stopped. A generic retry can amplify cost or repeat an external effect while leaving the original defect untouched.
+- **`digest_mismatch`** is a change to the bound action or arguments after approval. Relabelling both request and approval IDs while retaining the same action and arguments does not change the digest and can remain `allowed`; the IDs still match for relevance. Trusted application ownership of request identity and supplied approval records is a separate responsibility.
+- **`request_expired`** is authority outliving its justification. The request was reasonable at dawn; the situation changed; noon arrived. Expiry fails at the boundary instant, which matters for systems that like to round in their own favour.
+- **`approval_required`** is the missing-human failure — the action is consequential, the policy says so, and no valid approval exists. It also fires when approvals exist but are irrelevant (different request), future-dated, or revoked.
+- **`duplicate_approver`** is the rubber stamp wearing a second hat — one person supplying both signatures of a two-signature regime.
+- **`insufficient_scope`** and **`unknown_action`** are least-privilege failures carried over from the per-call world, now enforced against the credential itself.
+- **`invalid_arguments`**, **`invalid_request`**, and **`invalid_effect`** reject unsupported argument serialisation, empty identifiers, and effect labels outside the three known classes. These checks do not authenticate identity or prove that arguments and effect labels match the real action's semantics.
+
+One failure deliberately absent from this list is *model misbehaviour*. A model that proposes `open_storehouse` on the medicine room is not a security event here; it is Tuesday. The authoriser never consults the model's intentions, so the model's quality changes nothing about which reason code fires. That is the point of the layer.
 
 ## Improved Design
 
-The improved design makes an exact expiring capability plus approval policy executable in Python and Go. Inputs are typed; malformed or duplicate identities are rejected; decisions return stable fields; and tests cover normal, boundary, and adversarial cases. The language model supplies interpretations or candidates only where language is useful. Application code retains the final say over hard constraints.
+The teaching contract makes the seal executable in three dataclasses and one function. A `CapabilityRequest` is the credential being spent: request id, principal, action, arguments, scopes, effect, expiry. An `ApprovalRecord` is one signature: request id, the digest approved, approver, decision, timestamp. An `ApprovalPolicy` declares the action allow-list, per-principal scopes, and which effects require one or two approvals. `authorize(request, approvals, policy, now)` runs the corridor in fixed order — argument serialisation, nonempty identifiers, recognised effect class, expiry, known action, exact scope membership, then approval relevance, digest match, freshness, distinct-approvers, and required count — and returns an `AuthorizationResult` with `allowed`, `reason`, the count of distinct approvers, and the audit mapping.
 
-Start with a narrow policy that the team can explain. Add cases when real failures reveal missing distinctions. Keep evaluator code and expectations under review: a deterministic evaluator can be consistently wrong, and a human rubric can encode bias. Reliability comes from explicit, challengeable contracts rather than from declaring one component authoritative in every domain.
+The caller owns the facts the authoriser cannot establish: authenticated principal identity, the action's required scopes, effect classification, approval-record authenticity, and application-specific argument semantics. The application establishes or classifies them before the authoriser applies policy. The function checks that identifiers are nonempty, not that a principal is independently registered: an allow-listed read action with no required scopes or approval requirement can be `allowed` for an unregistered supplied principal. That outcome assumes the application has already established the right identity and requirements.
+
+What the contract deliberately does not contain is worth naming, because each absence is a production decision you inherit. There is no durable identity provider — `principal` is a string, and binding it to authenticated humans is the application's job. There is no break-glass path; the tale's fire-drill rule is a production pattern (a separately named emergency policy with its own officer, its own audit trail, and mandatory after-action review), not something the teaching authoriser implements. There is no approval *display* — the digest binds the exact action, but rendering "what the approver is actually signing" in a form a human can read is an application responsibility the contract leaves open, and Chapter 19's lessons about what reviewers actually look at apply to it directly. And the receipt seed is a mapping, not a log; persistence, correlation, and retention policy are yours to design.
 
 ## Worked Example
 
-Suppose a border service receives a natural-language request, retrieved records, and an action proposal. The request is authenticated before model use. Retrieval is scoped and records preserve provenance. The model produces a typed proposal with evidence identifiers. The application validates structure and evidence, applies an exact expiring capability plus approval policy, and either denies, escalates, or records a permitted next step. A trace links every decision to the prompt, model, policy, data, and evaluator versions.
+Run one request down the corridor and break it one way at a time. The policy: the servant holds `storehouse:read` and `storehouse:write`; `open_storehouse` and `inspect_storehouse` are known actions; `write` requires one approval, `high_consequence` requires two. The request opens the grain room to inspect a latch, expiring at moment 1200; the steward approved it at moment 1100. At `now = 1150`, the base case is `allowed` with one distinct approver, and the audit mapping records `request_id`, `principal`, `action`, and `digest`.
 
-Now change one variable at a time: expire a record, remove evidence, forge a role label, change an argument after approval, or move a rare case into a small tag group. The expected outcome should change for a documented reason. If the system merely produces a different paragraph, the boundary is still too implicit.
+| Mutation of the base case | Outcome | Reason |
+|---|---|---|
+| unchanged, at now = 1150 | allowed (1 approver) | `allowed` |
+| clock reaches 1200 | denied | `request_expired` |
+| `door` changes to `records` after approval | denied | `digest_mismatch` |
+| both request and approval IDs become `req-442`; action and arguments unchanged | allowed (1 approver) | `allowed` |
+| only approval ID becomes `req-442`; request remains `req-441` | denied | `approval_required` |
+| effect `high_consequence`, steward signs twice | denied | `duplicate_approver` |
+| effect `high_consequence`, steward and gatekeeper sign | allowed (2 approvers) | `allowed` |
+| all approvals removed | denied | `approval_required` |
+| approval dated 1300 (the future) | denied | `approval_required` |
+| approval revoked (`approved: false`) | denied | `approval_required` |
+| action changed to `seal_treaty` | denied | `unknown_action` |
+| scope list gains `treasury:open` | denied | `insufficient_scope` |
+| read-only inspection, no approvals | allowed (0 approvers) | `allowed` |
+
+Keep three mutations distinct. Changing both IDs to `req-442` preserves approval relevance and the digest, so this base case remains `allowed`. Changing only the approval ID makes that record irrelevant to `req-441`, producing `approval_required`. Changing the bound `door` argument while retaining the approval produces `digest_mismatch`. Relabelling alone is not a digest violation: request identity and approval-record authenticity belong to the trusted application. The read-only row assumes that the application correctly classified and scoped inspection; zero approvals does not establish those facts independently.
 
 ## Experiment
 
@@ -104,156 +145,140 @@ go run ./examples/go/cmd/tahmures run \
   --manifest experiments/manifests/ch22-approvals.json
 ```
 
-The manifest compares a naive variant with the governed design over committed synthetic cases. The `approval_policy` evaluator reports observed fixture behavior. These results demonstrate report mechanics and the stated failure cases; they are not evidence that one wording or model behaves universally better. Replace fixtures with controlled recordings before drawing provider-specific conclusions.
+The manifest compares two prompt variants — `verbal_restriction` and `bound_capability` — over three committed synthetic cases. `missing_approval` is a write-scoped request with no approval on file; the naive variant allows it (`model_agreed`), the governed variant denies with `approval_required`. `changed_arguments` silently swaps the request's binding after approval; the naive variant calls it `close_enough`, the governed variant denies with `digest_mismatch`. `valid_read` is a least-privilege read that both variants allow. The `approval_policy` evaluator scores each variant's decisions against the expected outcomes and reports two metrics: `authorization_accuracy` — did the reported `allowed` flag and `reason` code match the contract's — and `unauthorized_execution` — did the variant allow something the contract denies. On the committed fixtures the governed variant reaches `authorization_accuracy = 1.0` and `unauthorized_execution = 0.0`: higher accuracy is better, whereas lower unauthorised execution is better. The naive variant misses those targets. This demonstrates the report mechanics and the two staged failure modes. It is not evidence that any particular wording behaves universally; replace the fixtures with controlled recordings before drawing provider-specific conclusions.
 
 ## Evaluation
 
-Measure authorization accuracy, unauthorised execution, digest mismatch detection, approval separation, expiry rejection, and audit completeness. Report per-case outcomes and tag-level summaries alongside aggregates. Define thresholds and disqualifying failures before reading candidate results. Preserve reviewer rationales and evaluator versions. A skipped evaluation is unknown, not passed, and an unavailable safety check should cause the documented safe fallback.
-
-Evaluate the evaluator with disagreements, deliberately malformed cases, and examples near each threshold. Compare proxy metrics with real downstream outcomes. When a proxy ceases to predict the desired consequence, revise the measurement contract rather than optimising harder against the stale proxy.
+Measure what the included evaluator actually reports: `authorization_accuracy` and `unauthorized_execution`, per variant, against the expected decisions in the dataset. Accuracy should rise towards 1.0; unauthorised execution should fall towards 0.0. Those are the two numbers this chapter's evaluator produces. Everything else this chapter discusses — digest-binding coverage, expiry-boundary behaviour, duplicate-approver detection, approval freshness — is *contract behaviour* verified by unit tests over `authorize`, not metrics emitted by the experiment; if you want them as release metrics, that is an evaluator extension, and the honest move is to add it to the evaluator rather than narrate it into existence. Production guidance beyond the contract (approval display quality, approver workload, rubber-stamping rates, break-glass usage) belongs to your operational telemetry, not to this fixture.
 
 ## Implementation Lab
 
 ### Python
 
 ```python
-from tahmures.approvals import authorize
+from tahmures.approvals import (
+    ApprovalPolicy,
+    ApprovalRecord,
+    CapabilityRequest,
+    authorize,
+)
 
-decision = authorize(request, approvals, policy, now)
-if not decision.allowed:
-    raise PermissionError(decision.reason)
+policy = ApprovalPolicy(
+    allowed_actions=("open_storehouse", "inspect_storehouse"),
+    principal_scopes={"servant": ("storehouse:read", "storehouse:write")},
+    approval_effects=("write",),
+    dual_approval_effects=("high_consequence",),
+)
+
+request = CapabilityRequest(
+    request_id="req-441",
+    principal="servant",
+    action="open_storehouse",
+    arguments={"door": "grain", "reason": "latch inspection"},
+    scopes=("storehouse:write",),
+    effect="write",
+    expires_at=1200,
+)
+
+approval = ApprovalRecord(
+    request_id="req-441",
+    request_digest=request.digest,
+    approver="steward",
+    approved=True,
+    at=1100,
+)
+
+decision = authorize(request, (approval,), policy, now=1150)
+print(decision.allowed, decision.reason, decision.approval_count)
+print(decision.audit)
 ```
 
-Python 3.12 is the canonical educational implementation. Validate at the application boundary, preserve reason codes, and do not continue after a denial or required adjudication.
+Run it, then predict and test the mutations in the table — advance `now` to 1200, change `door` to `records`, relabel both IDs, relabel only the approval ID, or add a second steward signature to a `high_consequence` request. Keep the ID-only cases separate from the digest-bound argument change. Python 3.12 is the canonical educational implementation.
 
 ### Go
 
 ```go
-decision := tahmures.Authorize(request, approvals, policy, now)
-if !decision.Allowed {
-    return fmt.Errorf("denied: %s", decision.Reason)
+policy := tahmures.ApprovalPolicy{
+	AllowedActions:      []string{"open_storehouse", "inspect_storehouse"},
+	PrincipalScopes:     map[string][]string{"servant": {"storehouse:read", "storehouse:write"}},
+	ApprovalEffects:     []string{"write"},
+	DualApprovalEffects: []string{"high_consequence"},
 }
+
+request := tahmures.CapabilityRequest{
+	RequestID: "req-441",
+	Principal: "servant",
+	Action:    "open_storehouse",
+	Arguments: map[string]any{"door": "grain", "reason": "latch inspection"},
+	Scopes:    []string{"storehouse:write"},
+	Effect:    "write",
+	ExpiresAt: 1200,
+}
+
+digest := tahmures.RequestDigest(request.Action, request.Arguments)
+approvals := []tahmures.ApprovalRecord{
+	{RequestID: "req-441", RequestDigest: digest, Approver: "steward", Approved: true, At: 1100},
+}
+
+decision := tahmures.Authorize(request, approvals, policy, 1150)
+fmt.Println(decision.Allowed, decision.Reason, decision.ApprovalCount)
+fmt.Println(decision.Audit)
 ```
 
-The Go implementation preserves observable decisions, ordering, and failure meanings. Equivalence concerns behavior and report fields, not a line-for-line translation of Python syntax.
+The Go implementation preserves the same check order, reason codes, and report fields; equivalence concerns observable behaviour, not line-for-line syntax.
 
 ## Failure Modes
 
-Common failures include one-case tuning, mutable expectations, unversioned policy, trust inferred from formatting, implicit permission, stale approvals, averages without segments, logs without correlation IDs, and reviews without anchors. Another subtle failure is declaring the control successful because the final answer happened to be safe even though the path violated the contract.
+The characteristic failures of this layer all involve *almost matching*:
 
-Keep a failure ledger. For every incident, record the smallest reproducible case, the actual owner, the safe expected outcome, the affected versions, and the decision about retention. Add the case to the appropriate suite without retaining unnecessary private content.
+- **Approval laundering.** An approval obtained for a legitimate action is presented for a different but similar one, counting on "close enough" to pass. The digest is the countermeasure; the failure mode appears the moment a system relaxes digest comparison to "fuzzy" matching for usability.
+- **Rebinding after sign-off.** The request mutates between approval and execution — a smaller amount approved, a larger one spent. This is a time-of-check-to-time-of-use race, and the contract closes it by re-deriving the digest at execution time rather than trusting the one stored at approval time.
+- **Stale authority.** The approval was valid last week. Freshness (`at <= now`) and request expiry (`now < expires_at`) are separate clocks — an approval can be fresh while its request is dead, and vice versa.
+- **Signature theatre.** Dual approval satisfied by one person twice, or by a second approver who signs whatever the first one signed. The contract catches the first; the second is a human-process failure whose detection belongs to reviewer telemetry and disagreement analysis (Chapter 19).
+- **Silent scope growth.** The credential accumulates scopes "temporarily" and never shrinks. The scope check is per-request, so the fix is policy hygiene: granted scopes should be as narrow as the task, and widening them is a policy change with an owner.
+- **The disappearing denial.** A system that logs only successes has no denial history, so approval-required spikes, expiry storms, and scope friction are invisible until they become an incident. The audit mapping exists on every path; persist it on every path.
 
 ## Security Considerations
 
-Treat all user, retrieved, remembered, generated, and tool-returned text as untrusted unless the application assigns a narrower trusted role. Never place secrets in prompts merely because the model was told not to reveal them. Authenticate outside text, constrain capabilities, recheck authority at action time, and log receipts for consequential effects.
+The confused deputy, named in Chapter 16, returns here at the credential layer: a component with legitimate authority is manipulated into spending it on someone else's goal. The deputy in this chapter is not the model — it is the approval chain itself. An approval is a deputy's signature. Argument drift, duplicate signing, stale requests, and untrusted changes to request identity belong to different checks and owners. Digest comparison detects action or argument substitution; the application authenticates the records and owns their identities. Relabelling alone need not change the authoriser's decision.
 
-Security evaluation must include legitimate content that resembles an attack, so defences do not reduce to deleting suspicious phrases. It must also include indirect and split instructions, forged labels, stale credentials, replay, confused-deputy paths, and denial-of-service budgets. The safest output cannot repair an already excessive credential.
+Trust the boundary, not the display. The digest binds approval to canonical bytes for the action and arguments, but a digest is opaque to humans; the approver signs what their *screen* says the request is. If the screen renders a summary ("open a storehouse door") rather than the bound action and arguments (door `records`, reason `check older repair`) alongside separately checked metadata such as effect `write`, the weakest link is the rendering, and an attacker will aim there. Production systems must treat the approval display as part of the security boundary — this is the trusted-display problem, and it is deliberately outside the teaching contract.
+
+Two more boundaries worth restating. Confining a capability does not confine the model: the model can still *propose* the medicine room, and the system's safety cannot depend on it not doing so. And a finding is not an enforcement: the audit mapping records what was attempted and refused, which enables response and forensics, but the refusal itself is what did the protecting.
 
 ## Operational Considerations
 
-Record model, prompt, policy, schema, dataset, evaluator, and code versions. Monitor outcomes, denials, abstentions, evaluator availability, latency, cost, and rare disqualifying failures by segment. Use shadow evaluation and canary release where possible. Roll back coherent bundles, because restoring a prompt alone while retaining an incompatible policy or index can create a new failure.
+Approval is a workflow, and workflows have throughput. Three practical tensions to monitor: **approval latency** (consequential actions queue on humans; a freshness window that is too short makes approvals expire before reviewers reach them, and one that is too long extends the life of stolen requests — see Trade-Offs); **approver availability** (dual-approval effects need two distinct people reachable within the freshness window, which makes approver rosters an operational dependency, not an HR detail); and **denial dashboards** (every reason code is a time series; a spike in `approval_required` is either a policy mismatch or a training need, `digest_mismatch` spikes usually mean a client is mutating requests after drafting them, and `request_expired` storms mean the expiry policy fights the approval latency).
 
-Document service behavior during provider, retrieval, evaluator, and storage outages. Bound retries and preserve idempotency. Operators need runbooks that use stable controls, not emergency edits to conversation text. Reconcile uncertain external effects before retrying them.
+Version the policy. `ApprovalPolicy` is a deployable artefact like a prompt or an evaluator: record which policy version decided which request, because "who could approve what, when" is exactly the question an incident review will ask, and Chapter 23's version-attribution discipline applies to policies as much as to prompts.
 
 ## Trade-Offs
 
-Explicit controls add schemas, policy maintenance, evaluation work, and operational latency. They also make failures local, inspectable, and recoverable. Strict rejection can reduce availability; permissive fallback can violate safety or authority. Human review adds judgement and accountability while introducing delay, inconsistency, and reviewer load. The right design states these costs and decides which risk it accepts.
+**Approval granularity versus operator burden.** One approval per exact action and argument set gives a narrow binding and adds workflow burden. The teaching digest covers that proposal, not a whole request's metadata or a class of future tasks. Broader task-class approval would require a separately designed production policy; the current comparison does not accept "roughly this". Choose per effect class: reads need none, writes need one exact approval, irreversible or external effects deserve the dual regime.
 
+**Freshness window versus workflow latency.** Short expiry shrinks the attack surface of a stolen request but expires approvals mid-review; long expiry is kind to approvers and generous to attackers. The two clocks (approval timestamp, request expiry) let you tune them separately — approve quickly, expire narrowly.
 
-### Requirements and ownership
+**Capability narrowness versus task coverage.** The tale's master key opened every door and served every errand. Every scope you remove from a credential closes a failure mode and opens a "we need another credential for this" conversation. Least privilege is not free; it is paid in provisioning.
 
-Start with the decision and its consequence. Name who owns the requirement, who may change it, and which component can observe whether it was satisfied. A duty assigned only to “the model” has no stable enforcement point. Split it into model interpretation, application policy, deterministic checks, evaluator observations, and accountable human decisions. Record what happens when any owner is unavailable. Hard constraints and disqualifying outcomes must remain visible even when an aggregate score improves.
+**Trusted display richness versus review speed.** An approver shown the bound action and arguments, separately checked effect and expiry, digest preview, and alternatives has more evidence to review; an approver shown a green button reviews fast and theatrically. The rubber stamp is a user-interface outcome, not a character flaw.
 
-### Inputs, sources, and boundaries
-
-Inventory every input, including defaults, caches, retrieved passages, memories, tool results, policy files, and operator overrides. For each source, record provenance, freshness, scope, authority, sensitivity, and retention. Relevant text is not automatically trusted instruction. Absence is not an empty authoritative value. The model-visible representation should preserve the distinctions the application will need later for validation, explanation, and incident analysis.
-
-### Normal, boundary, and adversarial cases
-
-A happy path only shows that the pieces can cooperate once. Add empty inputs, duplicates, exact limits, expiry at the current instant, conflicting current values, malformed structures, stale versions, and partial dependencies. Add inert adversarial cases for forged authority, indirect instructions, replay, scope expansion, identifier confusion, and resource exhaustion. Vary surface wording while keeping the prohibited consequence constant; phrase recognition is not a security boundary.
-
-### Failure taxonomy
-
-Do not collapse invalid input, insufficient evidence, denied authority, evaluator disagreement, exhausted budget, dependency failure, cancellation, and internal error into “failed.” These states have different owners, retry rules, and user messages. Assign a stable reason code at the earliest component that can know the truth. Preserve it through later stages even when generated prose offers a friendlier explanation.
-
-### Versioning and reproducibility
-
-Pin the model identity, prompt, policy, data snapshot, fixture, evaluator, code, and schema in every consequential report. A score without this construction history cannot support comparison. When expectations change, retain the old case and document why the new label is an intended policy revision. Compatibility means preserving observable decisions and reason codes, not merely parsing the same file.
-
-### Privacy and retention
-
-Minimise content before it enters a model, trace, log, fixture, or review queue. Retain by purpose and data class, not because debugging may someday be useful. Deletion must include summaries, embeddings, caches, copied artefacts, and evaluation extracts. Prefer stable identifiers and counts in telemetry; an operator should diagnose a boundary without gaining access to the underlying record.
-
-### Access and authority
-
-Authenticate identities outside generated text. Filter scope before retrieval and recheck it immediately before external action. A component may pass evidence without passing its own authority. Default denial needs a usable escalation route, or operators will build unsafe bypasses. Test forged labels, stale approvals, legitimate requests from unauthorised routes, and credentials whose capability exceeds the described task.
-
-### Observability
-
-Trace case, run, source, decision, and version identifiers across boundaries. Record selection, exclusion, denial, retry, abstention, cancellation, and validation counts without logging unnecessary payloads. Dashboards need distributions and rare disqualifying events, not averages alone. An incident responder should be able to locate whether the bad outcome began in requirements, input construction, generation, evaluation, application code, a tool, or human review.
-
-### Latency, cost, and budgets
-
-Allocate tokens, time, calls, money, storage, and review attention before execution. Reserve capacity for validation, safe termination, receipts, and cleanup. Measure cost by successful, policy-compliant outcome rather than generation alone. Test degraded modes explicitly. A cheaper fallback is not acceptable if it silently skips the control that made the normal path safe.
-
-### Recovery and reconciliation
-
-Define retry, idempotency, rollback, compensation, and reconciliation for every state-changing boundary. A timeout does not reveal whether an effect occurred. Receipts and request identities must allow the caller to learn the truth without repeating an irreversible action. Recovery paths deserve the same authorization and evaluation as the normal path.
-
-### Human review and appeal
-
-Human review is a designed component, not a decorative final glance. Show reviewers the evidence, uncertainty, policy version, proposed consequence, and alternatives they need. Prevent automation bias with independent anchors and an appeal route. Track disagreement and overrides as diagnostic signals. A named approver remains accountable; the model's confidence cannot substitute for that responsibility.
-
-### Change management
-
-Treat prompts, policies, evaluators, retrieval configuration, tool contracts, and models as deployable versions. Review changes, replay suites, compare segments, canary releases, and retain a coherent rollback bundle. A change that improves one metric can still violate authority, privacy, or cost constraints. Document accepted residual risk and the person authorised to accept it.
-
-### Data quality and coverage
-
-Evaluation is bounded by the cases and labels it contains. Sample across ordinary traffic, rare but consequential segments, changing language, missing fields, and historically failed cases. Inspect whether synthetic data preserves the decision shape without being mistaken for production prevalence. Review labels independently and retain uncertainty where experts disagree. Coverage should answer which risks were examined, not claim that unseen behavior has been eliminated.
-
-### Evaluator governance
-
-Evaluators are production logic when their scores block releases or actions. Give them owners, tests, versions, access limits, and rollback plans. Measure false acceptance and false rejection, and audit deterministic rules as carefully as model-based judges. Never let a model's self-reported score stand in for external evaluation. When human judgement is required, preserve reviewer identity, rationale, anchors, and adjudication rather than only the final number.
-
-### Documentation and evidence
-
-Keep a compact decision record beside each contract: purpose, non-goals, trusted sources, hard invariants, thresholds, reason codes, known limitations, and escalation owner. Examples are useful evidence only when their fixtures and versions are preserved. Documentation should let a new operator predict the safe outcome of a boundary case before running it. If prose and executable policy disagree, the enforced policy must be visible and the discrepancy treated as a defect.
-
-### Adoption and maintenance
-
-The smallest enforceable boundary that a team can maintain is safer than an elaborate design no one understands. Introduce controls with migration paths, observe rejection reasons, and distinguish genuine user friction from blocked unsafe behavior. Budget time for refreshing cases, reviewing drift, rotating credentials, and retiring obsolete policy. Reliability decays when a control has no owner after launch, even if its initial implementation was correct.
-
-### Counterfactual and ablation tests
-
-Remove or alter one control at a time to learn which outcome it actually protects. Replace current evidence with stale evidence, widen a capability, suppress a disqualifier, or hide a version field. A useful test should fail for the predicted reason. If removing a supposed safeguard changes nothing, it may be ceremonial or its evaluator may be blind. Counterfactual tests also prevent teams from crediting prompt wording for safety supplied by an unseen application rule.
-
-### Residual risk and decision records
-
-No test suite closes an open world. After controls pass, state what remains uncertain: unseen inputs, provider changes, reviewer bias, integration defects, or consequences outside telemetry. Estimate impact and detectability, name the risk owner, and set a review date. Acceptance is a governance decision supported by evidence, not a mathematical declaration that failure is impossible. This record lets later incidents challenge the assumptions that were actually made.
-
-### End-to-end acceptance
-
-Component tests are necessary and insufficient. Run representative requests through authentication, context construction, generation, validation, policy, action simulation, and reporting. Verify not only the answer but the absence of prohibited side effects and the presence of receipts. Inject failures between stages: lose an acknowledgement, time out after a proposed mutation, or make an evaluator unavailable. The safe terminal state should remain predictable. Compare end-to-end outcomes with component metrics so a fortunate final answer cannot hide a violated boundary, and a correctly blocked request is not mislabelled as poor model quality. Before release, have someone outside the implementation team reconstruct one decision from the retained evidence. If that person cannot identify the active versions, authority, sources, and reason code, the system is not yet auditable enough for its claimed consequence.
-
+**Deny-by-default strictness versus escalation safety.** Strict refusal with stable reason codes sends denied users somewhere — ideally a designed escalation path, otherwise an improvised bypass. The contract's contribution is making the denial legible enough that escalation can be designed rather than forced.
 
 ## When Prompting Is Not the Answer
 
-Prompting is not the enforcement mechanism for identity, permission, uniqueness, arithmetic invariants, transaction isolation, rate limits, expiry, deletion, or irreversible approval. Use access control, database constraints, deterministic code, schedulers, queues, and accountable human processes. Use a model where interpretation, synthesis, classification, or explanation benefits from learned language patterns.
-
-The mature question is not “Can a prompt do this?” but “Which component can own this requirement and prove its outcome?” If the answer names only language, redesign the boundary before polishing the sentence.
+No sentence narrows a key. Restraint requested in prose is a property of the *request's wording*, and authority is a property of the *credential*; the master key demonstrated that the two never meet. The specific duties that cannot be prompted into existence here: binding an approval to exact arguments (that is the digest), making authority expire (that is the clock), requiring two distinct accountable people (that is the counting), and recording what was attempted (that is the audit mapping). Where language genuinely belongs: drafting the request's human-readable rationale, interpreting ambiguous input into typed arguments, and explaining a denial to the requester in terms of its reason code. If a design's authorisation story begins with "we instruct the model to seek approval", ask what artefact the approval is — if the answer is a sentence, the approval does not exist.
 
 ## Exercises
 
-1. Add one normal, one boundary, one malformed, and one adversarial case to the chapter manifest. Predict the safe reason code before running it.
-2. Identify a disqualifying outcome that an average could hide. Add a protected tag or hard policy for it.
-3. Trace one value from source through model-visible context, evaluation, action, logging, retention, and deletion.
-4. Exchange a report with a partner and review the evaluator rather than the model answer. Which expectation is least defensible?
-5. Design the safe degraded behavior when the chapter's governing control is unavailable.
+1. Take the lab's base case and test three separate mutations: change both request and approval IDs to `req-442` (still `allowed`); change only the approval ID (`approval_required`); change the bound door to `records` (`digest_mismatch`). Explain which check produces each result and which identity responsibilities remain with the application. Then explain why duplicate steward signatures are refused rather than counted once.
+2. Design the break-glass rule the teaching contract deliberately omits: which policy fields change, who the named officer is, what the approval requirement becomes, and what the after-action review must contain. State explicitly which parts are enforceable in `authorize` and which are process.
+3. A production system shows a daily spike of `digest_mismatch` denials at 09:00. Hypothesise two causes — one in the client, one in the approval workflow — and design the smallest evidence that distinguishes them.
+4. The `tower-inscription` task from Chapter 24's workshop needs a model to draft, a human rubric to select, and a mason's physical test before carving. Which of those steps belongs to this chapter's contract, and what exactly would its `CapabilityRequest` and approval policy look like?
+5. Grant the servant only `storehouse:read`, then submit the lab's request requiring `storehouse:write` with its valid approval. Predict the exact-membership result and verify `insufficient_scope`. Repeat with both scopes explicitly granted and explain why authorising the write is a policy decision rather than a prefix-matching rule.
 
 ## Chapter Summary
 
-Approvals, Capabilities, and Consequential Action turns capability security and approval into an owned system contract. Prompts remain useful for communicating a bounded language task, while an exact expiring capability plus approval policy governs acceptance or action. Reliable practice preserves provenance and versions, separates failure owners, tests boundaries and adversarial cases, reports disagreement, and refuses to let a favourable average erase a disqualifying result.
+Authority over consequential action is a binding, not an attitude. The mechanism of this chapter is the exact, expiring capability: a request that names principal, action, arguments, scopes, effect, and expiry; approvals that bind only the action and arguments by digest; and an authoriser that checks supplied identifiers, class, freshness, exact scopes, digest, and distinct approvers at execution time, refusing with a stable reason at the first failure. The application owns identity, scope requirements, effect classification, and authentic approval records; the authoriser applies deterministic policy to them. Narrowness, temporariness, accountability, and the audit seed are shared responsibilities across those layers. The model keeps the roles that suit it: proposing, interpreting, explaining. The decision of which door opens belongs to the metal, the clock, and the named signatures — and the honest servant's verdict is the chapter's: the lighter seal is easier to remember because the metal itself now agrees with the words.
 
 ## The Next Tale
 

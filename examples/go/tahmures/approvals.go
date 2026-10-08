@@ -3,7 +3,6 @@ package tahmures
 import (
 	"crypto/sha256"
 	"encoding/hex"
-	"encoding/json"
 )
 
 type CapabilityRequest struct {
@@ -30,16 +29,33 @@ type AuthorizationResult struct {
 	Audit         map[string]string
 }
 
+// RequestDigest retains the teaching API; invalid inputs panic explicitly.
+// Use CheckedRequestDigest when serialization failure must be handled.
 func RequestDigest(action string, arguments map[string]any) string {
-	encoded, _ := json.Marshal(map[string]any{"action": action, "arguments": arguments})
+	digest, err := CheckedRequestDigest(action, arguments)
+	if err != nil {
+		panic(err)
+	}
+	return digest
+}
+
+// CheckedRequestDigest binds only action and JSON-domain arguments.
+func CheckedRequestDigest(action string, arguments map[string]any) (string, error) {
+	encoded, err := canonicalApprovalJSON(action, arguments)
+	if err != nil {
+		return "", approvalArgumentsError{err}
+	}
 	sum := sha256.Sum256(encoded)
-	return hex.EncodeToString(sum[:])
+	return hex.EncodeToString(sum[:]), nil
 }
 func Authorize(request CapabilityRequest, approvals []ApprovalRecord, policy ApprovalPolicy, now int) AuthorizationResult {
-	digest := RequestDigest(request.Action, request.Arguments)
+	digest, err := CheckedRequestDigest(request.Action, request.Arguments)
 	audit := map[string]string{"request_id": request.RequestID, "principal": request.Principal, "action": request.Action, "digest": digest}
 	reject := func(reason string, count int) AuthorizationResult {
 		return AuthorizationResult{false, reason, count, audit}
+	}
+	if err != nil {
+		return reject("invalid_arguments", 0)
 	}
 	if request.RequestID == "" || request.Principal == "" || request.Action == "" {
 		return reject("invalid_request", 0)
@@ -59,20 +75,23 @@ func Authorize(request CapabilityRequest, approvals []ApprovalRecord, policy App
 			return reject("insufficient_scope", 0)
 		}
 	}
-	approvers := map[string]bool{}
+	// Python checks every relevant digest before counting eligible approvals.
 	for _, approval := range approvals {
-		if approval.RequestID != request.RequestID {
-			continue
-		}
-		if approval.RequestDigest != digest {
+		if approval.RequestID == request.RequestID && approval.RequestDigest != digest {
 			return reject("digest_mismatch", 0)
 		}
-		if approval.Approved && approval.At <= now {
-			if approvers[approval.Approver] {
-				return reject("duplicate_approver", len(approvers))
-			}
+	}
+	approvers := map[string]bool{}
+	approvedCount := 0
+	for _, approval := range approvals {
+		if approval.RequestID == request.RequestID && approval.Approved && approval.At <= now {
+			approvedCount++
 			approvers[approval.Approver] = true
 		}
+	}
+	// Report the complete distinct-approver count, including later records.
+	if len(approvers) != approvedCount {
+		return reject("duplicate_approver", len(approvers))
 	}
 	approvalEffects := policy.ApprovalEffects
 	if approvalEffects == nil {

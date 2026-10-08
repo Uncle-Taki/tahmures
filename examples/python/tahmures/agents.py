@@ -50,6 +50,8 @@ class RunController:
     def apply(self, state: AgentRunState, event: AgentEvent) -> AgentRunState:
         if state.status != "running":
             raise ValueError("terminal agent states are immutable")
+        if event.token_cost < 0 or event.tool_calls < 0:
+            raise ValueError("agent resource increments must be nonnegative")
         if event.kind == "cancel":
             return replace(state, status="cancelled", reason="cancelled")
         if event.goal_version != state.goal_version:
@@ -60,13 +62,22 @@ class RunController:
             return replace(state, status="completed", reason="completed")
         if event.kind != "step":
             raise ValueError("unsupported agent event")
-        steps = state.steps + 1
-        tools = state.tool_calls + event.tool_calls
-        tokens = state.tokens + event.token_cost
-        if steps > self.limits.max_steps:
+        # Check remaining budgets before charging; rejected steps retain usage.
+        if state.steps >= self.limits.max_steps:
             return replace(state, status="failed", reason="step_budget")
-        if tools > self.limits.max_tool_calls:
+        if (
+            state.tool_calls > self.limits.max_tool_calls
+            or event.tool_calls > self.limits.max_tool_calls - state.tool_calls
+        ):
             return replace(state, status="failed", reason="tool_budget")
-        if tokens > self.limits.max_tokens:
+        if (
+            state.tokens > self.limits.max_tokens
+            or event.token_cost > self.limits.max_tokens - state.tokens
+        ):
             return replace(state, status="failed", reason="token_budget")
-        return replace(state, steps=steps, tool_calls=tools, tokens=tokens)
+        return replace(
+            state,
+            steps=state.steps + 1,
+            tool_calls=state.tool_calls + event.tool_calls,
+            tokens=state.tokens + event.token_cost,
+        )

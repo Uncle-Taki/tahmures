@@ -2,7 +2,7 @@
 title: "یادگیری از مثال‌ها"
 slug: "learning-from-examples"
 chapter: 6
-part: "بخش یک — زبان، نیت و مدل‌ها"
+part: "بخش یک — زبان، نیت و دستورهای قابل‌اعتماد"
 summary: "مثال‌ها را دیتاستی کوچک بدانید که باید انتخاب، label‌گذاری، مرتب و ارزیابی شود؛ نه جایگزینی برای نیازمندی‌ها."
 maturity: "draft"
 last_reviewed: "2026-07-29"
@@ -15,7 +15,7 @@ learning_objectives:
 prerequisites: [C03]
 language: "fa"
 translation_of: "part-1/06-learning-from-examples.md"
-source_sha256: "04415972202212384c7b87dc6c3f65ddf06597bfb0255e4306a13e0d20f1fd90"
+source_sha256: "2c0a5620ce46393069ffd813cc65759b1f5d05c2ea48df3a6e09bdb27c67cbe2"
 translation_status: "draft"
 last_translated: "2026-07-30"
 ---
@@ -58,7 +58,7 @@ last_translated: "2026-07-30"
 
 ### نتیجهٔ غیرمنتظره
 
-پنجمین دادخواست غیرمعمول از بیوه‌ای بود که انبارش سوخته بود. شاهدهای او کامل،
+دادخواست پنجم غیرمعمول بود: از بیوه‌ای می‌آمد که انبارش سوخته بود. شاهدهای او کامل،
 تاریخ‌دار، گواهی‌شده و اصیل بودند. دیو آن را در سینی بازبینی گذاشت.
 
 تهمورث پرسید: «چه چیزی کم است؟»

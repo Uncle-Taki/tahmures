@@ -1,0 +1,5034 @@
+{
+  "schema_version": 1,
+  "integer_encoding": "Decimal strings; MaxInt/MinInt symbols use the host signed-int width, with offsets. No float conversion.",
+  "oracle": "Unchanged canonical Python for valid events; D26 adds negative-increment validation after terminal immutability. Invalid Go limits must match Python constructor rejection.",
+  "precedence": [
+    "positive limits",
+    "terminal immutability",
+    "nonnegative resource increments",
+    "cancel",
+    "stale_goal",
+    "deadline",
+    "complete",
+    "event kind",
+    "step_budget",
+    "tool_budget",
+    "token_budget"
+  ],
+  "cases": [
+    {
+      "id": "normal_step",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "2",
+          "tool_calls": "2",
+          "tokens": "50",
+          "reason": "existing"
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "chapter17_exact_lab",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "2",
+        "max_tokens": "1000",
+        "deadline": "20"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "1",
+        "status": "running",
+        "steps": "0",
+        "tool_calls": "0",
+        "tokens": "0",
+        "reason": ""
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "1",
+        "token_cost": "50",
+        "tool_calls": "0",
+        "at": "1"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "1",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "0",
+          "tokens": "50",
+          "reason": ""
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "unicode_goal",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "\u0628\u0627\u0632\u0631\u0633\u06cc \u06af\u0646\u062f\u0645",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "\u0628\u0627\u0632\u0631\u0633\u06cc \u06af\u0646\u062f\u0645",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "2",
+          "tool_calls": "2",
+          "tokens": "50",
+          "reason": "existing"
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "zero_resource_step",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "0",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "2",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "exact_all_budgets",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "3",
+        "tool_calls": "2",
+        "tokens": "80",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "4",
+          "tool_calls": "3",
+          "tokens": "100",
+          "reason": "existing"
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "step_budget",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "4",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "failed",
+          "steps": "4",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "step_budget"
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "tool_budget",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "3",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "failed",
+          "steps": "1",
+          "tool_calls": "3",
+          "tokens": "30",
+          "reason": "tool_budget"
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "token_budget",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "90",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "failed",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "90",
+          "reason": "token_budget"
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "all_budgets_step_first",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "4",
+        "tool_calls": "3",
+        "tokens": "100",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "failed",
+          "steps": "4",
+          "tool_calls": "3",
+          "tokens": "100",
+          "reason": "step_budget"
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "tool_before_token",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "3",
+        "tokens": "100",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "failed",
+          "steps": "1",
+          "tool_calls": "3",
+          "tokens": "100",
+          "reason": "tool_budget"
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "state_already_over_budget",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "4",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "failed",
+          "steps": "1",
+          "tool_calls": "4",
+          "tokens": "30",
+          "reason": "tool_budget"
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "tokens_already_over_budget",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "101",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "failed",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "101",
+          "reason": "token_budget"
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "cancel",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "cancel",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "cancelled",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "cancelled"
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "cancel_stale_late_overbudget",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "cancel",
+        "goal_version": "1",
+        "token_cost": "MaxInt",
+        "tool_calls": "MaxInt",
+        "at": "11"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "cancelled",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "cancelled"
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "stale",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "1",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "waiting",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "stale_goal"
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "stale_before_deadline",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "1",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "11"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "waiting",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "stale_goal"
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "deadline_equal",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "10"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "2",
+          "tool_calls": "2",
+          "tokens": "50",
+          "reason": "existing"
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "deadline_exceeded",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "11"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "failed",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "deadline"
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "complete_without_evidence",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "complete",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "completed",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "completed"
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "complete_at_deadline",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "complete",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "10"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "completed",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "completed"
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "complete_stale",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "complete",
+        "goal_version": "1",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "waiting",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "stale_goal"
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "complete_late",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "complete",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "11"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "failed",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "deadline"
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "complete_ignores_positive_costs",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "complete",
+        "goal_version": "2",
+        "token_cost": "MaxInt",
+        "tool_calls": "MaxInt",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "completed",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "completed"
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "unsupported",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "unknown",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "unsupported agent event"
+      }
+    },
+    {
+      "id": "unsupported_stale_preserved",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "unknown",
+        "goal_version": "1",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "waiting",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "stale_goal"
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "unsupported_late_preserved",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "unknown",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "11"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "failed",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "deadline"
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "cancel_over_existing_budgets",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "5",
+        "tool_calls": "4",
+        "tokens": "101",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "cancel",
+        "goal_version": "1",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "11"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "cancelled",
+          "steps": "5",
+          "tool_calls": "4",
+          "tokens": "101",
+          "reason": "cancelled"
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "complete_over_existing_budgets",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "5",
+        "tool_calls": "4",
+        "tokens": "101",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "complete",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "completed",
+          "steps": "5",
+          "tool_calls": "4",
+          "tokens": "101",
+          "reason": "completed"
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "negative_tokens_step",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "-1",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent resource increments must be nonnegative"
+      }
+    },
+    {
+      "id": "negative_tools_step",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "-1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent resource increments must be nonnegative"
+      }
+    },
+    {
+      "id": "negative_both_step",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "-1",
+        "tool_calls": "-1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent resource increments must be nonnegative"
+      }
+    },
+    {
+      "id": "negative_min_int_step",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "MinInt",
+        "tool_calls": "MinInt",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent resource increments must be nonnegative"
+      }
+    },
+    {
+      "id": "negative_tokens_cancel",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "cancel",
+        "goal_version": "2",
+        "token_cost": "-1",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent resource increments must be nonnegative"
+      }
+    },
+    {
+      "id": "negative_tools_cancel",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "cancel",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "-1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent resource increments must be nonnegative"
+      }
+    },
+    {
+      "id": "negative_both_cancel",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "cancel",
+        "goal_version": "2",
+        "token_cost": "-1",
+        "tool_calls": "-1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent resource increments must be nonnegative"
+      }
+    },
+    {
+      "id": "negative_min_int_cancel",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "cancel",
+        "goal_version": "2",
+        "token_cost": "MinInt",
+        "tool_calls": "MinInt",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent resource increments must be nonnegative"
+      }
+    },
+    {
+      "id": "negative_tokens_complete",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "complete",
+        "goal_version": "2",
+        "token_cost": "-1",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent resource increments must be nonnegative"
+      }
+    },
+    {
+      "id": "negative_tools_complete",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "complete",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "-1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent resource increments must be nonnegative"
+      }
+    },
+    {
+      "id": "negative_both_complete",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "complete",
+        "goal_version": "2",
+        "token_cost": "-1",
+        "tool_calls": "-1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent resource increments must be nonnegative"
+      }
+    },
+    {
+      "id": "negative_min_int_complete",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "complete",
+        "goal_version": "2",
+        "token_cost": "MinInt",
+        "tool_calls": "MinInt",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent resource increments must be nonnegative"
+      }
+    },
+    {
+      "id": "negative_tokens_stale",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "1",
+        "token_cost": "-1",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent resource increments must be nonnegative"
+      }
+    },
+    {
+      "id": "negative_tools_stale",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "1",
+        "token_cost": "20",
+        "tool_calls": "-1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent resource increments must be nonnegative"
+      }
+    },
+    {
+      "id": "negative_both_stale",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "1",
+        "token_cost": "-1",
+        "tool_calls": "-1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent resource increments must be nonnegative"
+      }
+    },
+    {
+      "id": "negative_min_int_stale",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "1",
+        "token_cost": "MinInt",
+        "tool_calls": "MinInt",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent resource increments must be nonnegative"
+      }
+    },
+    {
+      "id": "negative_tokens_late",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "-1",
+        "tool_calls": "1",
+        "at": "11"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent resource increments must be nonnegative"
+      }
+    },
+    {
+      "id": "negative_tools_late",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "-1",
+        "at": "11"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent resource increments must be nonnegative"
+      }
+    },
+    {
+      "id": "negative_both_late",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "-1",
+        "tool_calls": "-1",
+        "at": "11"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent resource increments must be nonnegative"
+      }
+    },
+    {
+      "id": "negative_min_int_late",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "MinInt",
+        "tool_calls": "MinInt",
+        "at": "11"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent resource increments must be nonnegative"
+      }
+    },
+    {
+      "id": "negative_tokens_unsupported",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "unknown",
+        "goal_version": "2",
+        "token_cost": "-1",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent resource increments must be nonnegative"
+      }
+    },
+    {
+      "id": "negative_tools_unsupported",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "unknown",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "-1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent resource increments must be nonnegative"
+      }
+    },
+    {
+      "id": "negative_both_unsupported",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "unknown",
+        "goal_version": "2",
+        "token_cost": "-1",
+        "tool_calls": "-1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent resource increments must be nonnegative"
+      }
+    },
+    {
+      "id": "negative_min_int_unsupported",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "unknown",
+        "goal_version": "2",
+        "token_cost": "MinInt",
+        "tool_calls": "MinInt",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent resource increments must be nonnegative"
+      }
+    },
+    {
+      "id": "immutable_cancelled_step",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "cancelled",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "cancelled",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "terminal agent states are immutable"
+      }
+    },
+    {
+      "id": "immutable_cancelled_cancel",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "cancelled",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "cancel",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "cancelled",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "terminal agent states are immutable"
+      }
+    },
+    {
+      "id": "immutable_cancelled_complete",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "cancelled",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "complete",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "cancelled",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "terminal agent states are immutable"
+      }
+    },
+    {
+      "id": "immutable_cancelled_negative",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "cancelled",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "cancel",
+        "goal_version": "2",
+        "token_cost": "-1",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "cancelled",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "terminal agent states are immutable"
+      }
+    },
+    {
+      "id": "immutable_completed_step",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "completed",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "completed",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "terminal agent states are immutable"
+      }
+    },
+    {
+      "id": "immutable_completed_cancel",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "completed",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "cancel",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "completed",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "terminal agent states are immutable"
+      }
+    },
+    {
+      "id": "immutable_completed_complete",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "completed",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "complete",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "completed",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "terminal agent states are immutable"
+      }
+    },
+    {
+      "id": "immutable_completed_negative",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "completed",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "cancel",
+        "goal_version": "2",
+        "token_cost": "-1",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "completed",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "terminal agent states are immutable"
+      }
+    },
+    {
+      "id": "immutable_failed_step",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "failed",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "failed",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "terminal agent states are immutable"
+      }
+    },
+    {
+      "id": "immutable_failed_cancel",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "failed",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "cancel",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "failed",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "terminal agent states are immutable"
+      }
+    },
+    {
+      "id": "immutable_failed_complete",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "failed",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "complete",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "failed",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "terminal agent states are immutable"
+      }
+    },
+    {
+      "id": "immutable_failed_negative",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "failed",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "cancel",
+        "goal_version": "2",
+        "token_cost": "-1",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "failed",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "terminal agent states are immutable"
+      }
+    },
+    {
+      "id": "immutable_waiting_step",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "waiting",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "waiting",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "terminal agent states are immutable"
+      }
+    },
+    {
+      "id": "immutable_waiting_cancel",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "waiting",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "cancel",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "waiting",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "terminal agent states are immutable"
+      }
+    },
+    {
+      "id": "immutable_waiting_complete",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "waiting",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "complete",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "waiting",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "terminal agent states are immutable"
+      }
+    },
+    {
+      "id": "immutable_waiting_negative",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "waiting",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "cancel",
+        "goal_version": "2",
+        "token_cost": "-1",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "waiting",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "terminal agent states are immutable"
+      }
+    },
+    {
+      "id": "immutable_unknown_step",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "unknown",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "unknown",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "terminal agent states are immutable"
+      }
+    },
+    {
+      "id": "immutable_unknown_cancel",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "unknown",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "cancel",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "unknown",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "terminal agent states are immutable"
+      }
+    },
+    {
+      "id": "immutable_unknown_complete",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "unknown",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "complete",
+        "goal_version": "2",
+        "token_cost": "20",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "unknown",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "terminal agent states are immutable"
+      }
+    },
+    {
+      "id": "immutable_unknown_negative",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "unknown",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "cancel",
+        "goal_version": "2",
+        "token_cost": "-1",
+        "tool_calls": "1",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "unknown",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "terminal agent states are immutable"
+      }
+    },
+    {
+      "id": "invalid_max_steps_0_step",
+      "limits": {
+        "max_steps": "0",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "0",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_max_steps_0_cancel",
+      "limits": {
+        "max_steps": "0",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "cancel",
+        "goal_version": "2",
+        "token_cost": "0",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_max_steps_0_complete",
+      "limits": {
+        "max_steps": "0",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "complete",
+        "goal_version": "2",
+        "token_cost": "0",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_max_steps_0_stale",
+      "limits": {
+        "max_steps": "0",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "1",
+        "token_cost": "0",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_max_steps_0_terminal",
+      "limits": {
+        "max_steps": "0",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "completed",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "cancel",
+        "goal_version": "2",
+        "token_cost": "-1",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "completed",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_max_steps_-1_step",
+      "limits": {
+        "max_steps": "-1",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "0",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_max_steps_-1_cancel",
+      "limits": {
+        "max_steps": "-1",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "cancel",
+        "goal_version": "2",
+        "token_cost": "0",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_max_steps_-1_complete",
+      "limits": {
+        "max_steps": "-1",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "complete",
+        "goal_version": "2",
+        "token_cost": "0",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_max_steps_-1_stale",
+      "limits": {
+        "max_steps": "-1",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "1",
+        "token_cost": "0",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_max_steps_-1_terminal",
+      "limits": {
+        "max_steps": "-1",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "completed",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "cancel",
+        "goal_version": "2",
+        "token_cost": "-1",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "completed",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_max_tool_calls_0_step",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "0",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "0",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_max_tool_calls_0_cancel",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "0",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "cancel",
+        "goal_version": "2",
+        "token_cost": "0",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_max_tool_calls_0_complete",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "0",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "complete",
+        "goal_version": "2",
+        "token_cost": "0",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_max_tool_calls_0_stale",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "0",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "1",
+        "token_cost": "0",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_max_tool_calls_0_terminal",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "0",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "completed",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "cancel",
+        "goal_version": "2",
+        "token_cost": "-1",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "completed",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_max_tool_calls_-1_step",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "-1",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "0",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_max_tool_calls_-1_cancel",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "-1",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "cancel",
+        "goal_version": "2",
+        "token_cost": "0",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_max_tool_calls_-1_complete",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "-1",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "complete",
+        "goal_version": "2",
+        "token_cost": "0",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_max_tool_calls_-1_stale",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "-1",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "1",
+        "token_cost": "0",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_max_tool_calls_-1_terminal",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "-1",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "completed",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "cancel",
+        "goal_version": "2",
+        "token_cost": "-1",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "completed",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_max_tokens_0_step",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "0",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "0",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_max_tokens_0_cancel",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "0",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "cancel",
+        "goal_version": "2",
+        "token_cost": "0",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_max_tokens_0_complete",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "0",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "complete",
+        "goal_version": "2",
+        "token_cost": "0",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_max_tokens_0_stale",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "0",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "1",
+        "token_cost": "0",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_max_tokens_0_terminal",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "0",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "completed",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "cancel",
+        "goal_version": "2",
+        "token_cost": "-1",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "completed",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_max_tokens_-1_step",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "-1",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "0",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_max_tokens_-1_cancel",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "-1",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "cancel",
+        "goal_version": "2",
+        "token_cost": "0",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_max_tokens_-1_complete",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "-1",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "complete",
+        "goal_version": "2",
+        "token_cost": "0",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_max_tokens_-1_stale",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "-1",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "1",
+        "token_cost": "0",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_max_tokens_-1_terminal",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "-1",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "completed",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "cancel",
+        "goal_version": "2",
+        "token_cost": "-1",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "completed",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_deadline_0_step",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "0"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "0",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_deadline_0_cancel",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "0"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "cancel",
+        "goal_version": "2",
+        "token_cost": "0",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_deadline_0_complete",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "0"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "complete",
+        "goal_version": "2",
+        "token_cost": "0",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_deadline_0_stale",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "0"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "1",
+        "token_cost": "0",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_deadline_0_terminal",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "0"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "completed",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "cancel",
+        "goal_version": "2",
+        "token_cost": "-1",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "completed",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_deadline_-1_step",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "-1"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "0",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_deadline_-1_cancel",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "-1"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "cancel",
+        "goal_version": "2",
+        "token_cost": "0",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_deadline_-1_complete",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "-1"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "complete",
+        "goal_version": "2",
+        "token_cost": "0",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_deadline_-1_stale",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "-1"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "1",
+        "token_cost": "0",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "invalid_deadline_-1_terminal",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "-1"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "completed",
+        "steps": "1",
+        "tool_calls": "1",
+        "tokens": "30",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "cancel",
+        "goal_version": "2",
+        "token_cost": "-1",
+        "tool_calls": "0",
+        "at": "2"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "completed",
+          "steps": "1",
+          "tool_calls": "1",
+          "tokens": "30",
+          "reason": "existing"
+        },
+        "error": "agent limits must be positive"
+      }
+    },
+    {
+      "id": "maxint_exact_all",
+      "limits": {
+        "max_steps": "MaxInt",
+        "max_tool_calls": "MaxInt",
+        "max_tokens": "MaxInt",
+        "deadline": "MaxInt"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "MaxInt-1",
+        "tool_calls": "MaxInt-1",
+        "tokens": "MaxInt-1",
+        "reason": ""
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "1",
+        "tool_calls": "1",
+        "at": "MaxInt"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "MaxInt",
+          "tool_calls": "MaxInt",
+          "tokens": "MaxInt",
+          "reason": ""
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "maxint_step_overflow",
+      "limits": {
+        "max_steps": "MaxInt",
+        "max_tool_calls": "MaxInt",
+        "max_tokens": "MaxInt",
+        "deadline": "MaxInt"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "MaxInt",
+        "tool_calls": "7",
+        "tokens": "8",
+        "reason": ""
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "MaxInt",
+        "tool_calls": "MaxInt",
+        "at": "1"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "failed",
+          "steps": "MaxInt",
+          "tool_calls": "7",
+          "tokens": "8",
+          "reason": "step_budget"
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "maxint_tool_overflow",
+      "limits": {
+        "max_steps": "MaxInt",
+        "max_tool_calls": "MaxInt",
+        "max_tokens": "MaxInt",
+        "deadline": "MaxInt"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "MaxInt-1",
+        "tokens": "8",
+        "reason": ""
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "MaxInt",
+        "tool_calls": "2",
+        "at": "1"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "failed",
+          "steps": "1",
+          "tool_calls": "MaxInt-1",
+          "tokens": "8",
+          "reason": "tool_budget"
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "maxint_token_overflow",
+      "limits": {
+        "max_steps": "MaxInt",
+        "max_tool_calls": "MaxInt",
+        "max_tokens": "MaxInt",
+        "deadline": "MaxInt"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "7",
+        "tokens": "MaxInt-1",
+        "reason": ""
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "2",
+        "tool_calls": "0",
+        "at": "1"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "failed",
+          "steps": "1",
+          "tool_calls": "7",
+          "tokens": "MaxInt-1",
+          "reason": "token_budget"
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "maxint_token_increment",
+      "limits": {
+        "max_steps": "MaxInt",
+        "max_tool_calls": "MaxInt",
+        "max_tokens": "MaxInt",
+        "deadline": "MaxInt"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "0",
+        "tool_calls": "0",
+        "tokens": "1",
+        "reason": ""
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "MaxInt",
+        "tool_calls": "0",
+        "at": "1"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "failed",
+          "steps": "0",
+          "tool_calls": "0",
+          "tokens": "1",
+          "reason": "token_budget"
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "maxint_tool_increment",
+      "limits": {
+        "max_steps": "MaxInt",
+        "max_tool_calls": "MaxInt",
+        "max_tokens": "MaxInt",
+        "deadline": "MaxInt"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "0",
+        "tool_calls": "1",
+        "tokens": "0",
+        "reason": ""
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "0",
+        "tool_calls": "MaxInt",
+        "at": "1"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "failed",
+          "steps": "0",
+          "tool_calls": "1",
+          "tokens": "0",
+          "reason": "tool_budget"
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "maxint_exact_increment",
+      "limits": {
+        "max_steps": "MaxInt",
+        "max_tool_calls": "MaxInt",
+        "max_tokens": "MaxInt",
+        "deadline": "MaxInt"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "0",
+        "tool_calls": "0",
+        "tokens": "0",
+        "reason": ""
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "MaxInt",
+        "tool_calls": "MaxInt",
+        "at": "MaxInt"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "MaxInt",
+          "tokens": "MaxInt",
+          "reason": ""
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "minint_imported_counters_no_new_policy",
+      "limits": {
+        "max_steps": "MaxInt",
+        "max_tool_calls": "MaxInt",
+        "max_tokens": "MaxInt",
+        "deadline": "MaxInt"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "MinInt",
+        "tool_calls": "MinInt",
+        "tokens": "MinInt",
+        "reason": ""
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "MaxInt",
+        "tool_calls": "MaxInt",
+        "at": "1"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "MinInt+1",
+          "tool_calls": "-1",
+          "tokens": "-1",
+          "reason": ""
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "negative_imported_counters_with_maxint_limit",
+      "limits": {
+        "max_steps": "MaxInt",
+        "max_tool_calls": "MaxInt",
+        "max_tokens": "MaxInt",
+        "deadline": "MaxInt"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "0",
+        "tool_calls": "-1",
+        "tokens": "-1",
+        "reason": ""
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "MaxInt",
+        "tool_calls": "MaxInt",
+        "at": "1"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "running",
+          "steps": "1",
+          "tool_calls": "MaxInt-1",
+          "tokens": "MaxInt-1",
+          "reason": ""
+        },
+        "error": ""
+      }
+    },
+    {
+      "id": "negative_imported_counter_budget",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "1",
+        "tool_calls": "-1",
+        "tokens": "-1",
+        "reason": "existing"
+      },
+      "event": {
+        "kind": "step",
+        "goal_version": "2",
+        "token_cost": "102",
+        "tool_calls": "5",
+        "at": "1"
+      },
+      "expected": {
+        "state": {
+          "goal": "inspect",
+          "goal_version": "2",
+          "status": "failed",
+          "steps": "1",
+          "tool_calls": "-1",
+          "tokens": "-1",
+          "reason": "tool_budget"
+        },
+        "error": ""
+      }
+    }
+  ],
+  "traces": [
+    {
+      "id": "chapter17_run_a",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "2",
+        "max_tokens": "1000",
+        "deadline": "20"
+      },
+      "state": {
+        "goal": "escort",
+        "goal_version": "1",
+        "status": "running",
+        "steps": "0",
+        "tool_calls": "0",
+        "tokens": "0",
+        "reason": ""
+      },
+      "entries": [
+        {
+          "event": {
+            "kind": "step",
+            "goal_version": "1",
+            "token_cost": "50",
+            "tool_calls": "0",
+            "at": "1"
+          },
+          "expected": {
+            "state": {
+              "goal": "escort",
+              "goal_version": "1",
+              "status": "running",
+              "steps": "1",
+              "tool_calls": "0",
+              "tokens": "50",
+              "reason": ""
+            },
+            "error": ""
+          }
+        },
+        {
+          "event": {
+            "kind": "cancel",
+            "goal_version": "1",
+            "token_cost": "0",
+            "tool_calls": "0",
+            "at": "2"
+          },
+          "expected": {
+            "state": {
+              "goal": "escort",
+              "goal_version": "1",
+              "status": "cancelled",
+              "steps": "1",
+              "tool_calls": "0",
+              "tokens": "50",
+              "reason": "cancelled"
+            },
+            "error": ""
+          }
+        },
+        {
+          "event": {
+            "kind": "step",
+            "goal_version": "1",
+            "token_cost": "50",
+            "tool_calls": "0",
+            "at": "3"
+          },
+          "expected": {
+            "state": {
+              "goal": "escort",
+              "goal_version": "1",
+              "status": "cancelled",
+              "steps": "1",
+              "tool_calls": "0",
+              "tokens": "50",
+              "reason": "cancelled"
+            },
+            "error": "terminal agent states are immutable"
+          }
+        }
+      ]
+    },
+    {
+      "id": "chapter17_run_b_stale",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "escort",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "0",
+        "tool_calls": "0",
+        "tokens": "0",
+        "reason": ""
+      },
+      "entries": [
+        {
+          "event": {
+            "kind": "step",
+            "goal_version": "1",
+            "token_cost": "40",
+            "tool_calls": "0",
+            "at": "2"
+          },
+          "expected": {
+            "state": {
+              "goal": "escort",
+              "goal_version": "2",
+              "status": "waiting",
+              "steps": "0",
+              "tool_calls": "0",
+              "tokens": "0",
+              "reason": "stale_goal"
+            },
+            "error": ""
+          }
+        },
+        {
+          "event": {
+            "kind": "step",
+            "goal_version": "1",
+            "token_cost": "0",
+            "tool_calls": "0",
+            "at": "3"
+          },
+          "expected": {
+            "state": {
+              "goal": "escort",
+              "goal_version": "2",
+              "status": "waiting",
+              "steps": "0",
+              "tool_calls": "0",
+              "tokens": "0",
+              "reason": "stale_goal"
+            },
+            "error": "terminal agent states are immutable"
+          }
+        }
+      ]
+    },
+    {
+      "id": "chapter17_run_c_budget",
+      "limits": {
+        "max_steps": "2",
+        "max_tool_calls": "2",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "escort",
+        "goal_version": "1",
+        "status": "running",
+        "steps": "0",
+        "tool_calls": "0",
+        "tokens": "0",
+        "reason": ""
+      },
+      "entries": [
+        {
+          "event": {
+            "kind": "step",
+            "goal_version": "1",
+            "token_cost": "30",
+            "tool_calls": "0",
+            "at": "1"
+          },
+          "expected": {
+            "state": {
+              "goal": "escort",
+              "goal_version": "1",
+              "status": "running",
+              "steps": "1",
+              "tool_calls": "0",
+              "tokens": "30",
+              "reason": ""
+            },
+            "error": ""
+          }
+        },
+        {
+          "event": {
+            "kind": "step",
+            "goal_version": "1",
+            "token_cost": "40",
+            "tool_calls": "1",
+            "at": "2"
+          },
+          "expected": {
+            "state": {
+              "goal": "escort",
+              "goal_version": "1",
+              "status": "running",
+              "steps": "2",
+              "tool_calls": "1",
+              "tokens": "70",
+              "reason": ""
+            },
+            "error": ""
+          }
+        },
+        {
+          "event": {
+            "kind": "step",
+            "goal_version": "1",
+            "token_cost": "40",
+            "tool_calls": "1",
+            "at": "3"
+          },
+          "expected": {
+            "state": {
+              "goal": "escort",
+              "goal_version": "1",
+              "status": "failed",
+              "steps": "2",
+              "tool_calls": "1",
+              "tokens": "70",
+              "reason": "step_budget"
+            },
+            "error": ""
+          }
+        },
+        {
+          "event": {
+            "kind": "complete",
+            "goal_version": "1",
+            "token_cost": "0",
+            "tool_calls": "0",
+            "at": "4"
+          },
+          "expected": {
+            "state": {
+              "goal": "escort",
+              "goal_version": "1",
+              "status": "failed",
+              "steps": "2",
+              "tool_calls": "1",
+              "tokens": "70",
+              "reason": "step_budget"
+            },
+            "error": "terminal agent states are immutable"
+          }
+        }
+      ]
+    },
+    {
+      "id": "negative_rejected_then_complete",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "0",
+        "tool_calls": "0",
+        "tokens": "0",
+        "reason": ""
+      },
+      "entries": [
+        {
+          "event": {
+            "kind": "step",
+            "goal_version": "2",
+            "token_cost": "-1",
+            "tool_calls": "0",
+            "at": "1"
+          },
+          "expected": {
+            "state": {
+              "goal": "inspect",
+              "goal_version": "2",
+              "status": "running",
+              "steps": "0",
+              "tool_calls": "0",
+              "tokens": "0",
+              "reason": ""
+            },
+            "error": "agent resource increments must be nonnegative"
+          }
+        },
+        {
+          "event": {
+            "kind": "complete",
+            "goal_version": "2",
+            "token_cost": "0",
+            "tool_calls": "0",
+            "at": "2"
+          },
+          "expected": {
+            "state": {
+              "goal": "inspect",
+              "goal_version": "2",
+              "status": "completed",
+              "steps": "0",
+              "tool_calls": "0",
+              "tokens": "0",
+              "reason": "completed"
+            },
+            "error": ""
+          }
+        },
+        {
+          "event": {
+            "kind": "cancel",
+            "goal_version": "2",
+            "token_cost": "-1",
+            "tool_calls": "0",
+            "at": "3"
+          },
+          "expected": {
+            "state": {
+              "goal": "inspect",
+              "goal_version": "2",
+              "status": "completed",
+              "steps": "0",
+              "tool_calls": "0",
+              "tokens": "0",
+              "reason": "completed"
+            },
+            "error": "terminal agent states are immutable"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tool_budget_preserves_previous_usage",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "0",
+        "tool_calls": "0",
+        "tokens": "0",
+        "reason": ""
+      },
+      "entries": [
+        {
+          "event": {
+            "kind": "step",
+            "goal_version": "2",
+            "token_cost": "10",
+            "tool_calls": "3",
+            "at": "1"
+          },
+          "expected": {
+            "state": {
+              "goal": "inspect",
+              "goal_version": "2",
+              "status": "running",
+              "steps": "1",
+              "tool_calls": "3",
+              "tokens": "10",
+              "reason": ""
+            },
+            "error": ""
+          }
+        },
+        {
+          "event": {
+            "kind": "step",
+            "goal_version": "2",
+            "token_cost": "20",
+            "tool_calls": "1",
+            "at": "2"
+          },
+          "expected": {
+            "state": {
+              "goal": "inspect",
+              "goal_version": "2",
+              "status": "failed",
+              "steps": "1",
+              "tool_calls": "3",
+              "tokens": "10",
+              "reason": "tool_budget"
+            },
+            "error": ""
+          }
+        },
+        {
+          "event": {
+            "kind": "cancel",
+            "goal_version": "2",
+            "token_cost": "0",
+            "tool_calls": "0",
+            "at": "3"
+          },
+          "expected": {
+            "state": {
+              "goal": "inspect",
+              "goal_version": "2",
+              "status": "failed",
+              "steps": "1",
+              "tool_calls": "3",
+              "tokens": "10",
+              "reason": "tool_budget"
+            },
+            "error": "terminal agent states are immutable"
+          }
+        }
+      ]
+    },
+    {
+      "id": "token_budget_preserves_previous_usage",
+      "limits": {
+        "max_steps": "4",
+        "max_tool_calls": "3",
+        "max_tokens": "100",
+        "deadline": "10"
+      },
+      "state": {
+        "goal": "inspect",
+        "goal_version": "2",
+        "status": "running",
+        "steps": "0",
+        "tool_calls": "0",
+        "tokens": "0",
+        "reason": ""
+      },
+      "entries": [
+        {
+          "event": {
+            "kind": "step",
+            "goal_version": "2",
+            "token_cost": "100",
+            "tool_calls": "0",
+            "at": "1"
+          },
+          "expected": {
+            "state": {
+              "goal": "inspect",
+              "goal_version": "2",
+              "status": "running",
+              "steps": "1",
+              "tool_calls": "0",
+              "tokens": "100",
+              "reason": ""
+            },
+            "error": ""
+          }
+        },
+        {
+          "event": {
+            "kind": "step",
+            "goal_version": "2",
+            "token_cost": "1",
+            "tool_calls": "0",
+            "at": "2"
+          },
+          "expected": {
+            "state": {
+              "goal": "inspect",
+              "goal_version": "2",
+              "status": "failed",
+              "steps": "1",
+              "tool_calls": "0",
+              "tokens": "100",
+              "reason": "token_budget"
+            },
+            "error": ""
+          }
+        },
+        {
+          "event": {
+            "kind": "complete",
+            "goal_version": "2",
+            "token_cost": "0",
+            "tool_calls": "0",
+            "at": "3"
+          },
+          "expected": {
+            "state": {
+              "goal": "inspect",
+              "goal_version": "2",
+              "status": "failed",
+              "steps": "1",
+              "tool_calls": "0",
+              "tokens": "100",
+              "reason": "token_budget"
+            },
+            "error": "terminal agent states are immutable"
+          }
+        }
+      ]
+    }
+  ]
+}

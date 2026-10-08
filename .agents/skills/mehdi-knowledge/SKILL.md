@@ -1,7 +1,7 @@
-    ---
-    name: mehdi-knowledge
-    description: Create reusable knowledge atoms and maintain technical knowledge.
-    ---
+---
+name: mehdi-knowledge
+description: Create reusable knowledge atoms and maintain technical knowledge.
+---
 
 
 Create knowledge units containing:
@@ -15,4 +15,3 @@ Create knowledge units containing:
 - sources
 
 Knowledge is the reusable foundation for chapters, courses, and media.
-

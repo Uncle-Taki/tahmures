@@ -1,7 +1,7 @@
-    ---
-    name: mehdi-narrative
-    description: Create educational fictional narratives around technical concepts.
-    ---
+---
+name: mehdi-narrative
+description: Create educational fictional narratives around technical concepts.
+---
 
 
 Create:
@@ -17,4 +17,3 @@ Every analogy requires:
 - metaphor boundary
 
 Maintain continuity using project documents.
-

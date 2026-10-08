@@ -2,7 +2,7 @@
 title: "قالب‌های بازاستفاده‌پذیر پرامپت"
 slug: "reusable-prompt-templates"
 chapter: 7
-part: "بخش دو — طراحی تعامل‌های مبتنی بر پرامپت"
+part: "بخش دو — طراحی پرامپت و تولید کنترل‌شده"
 summary: "پرامپت‌های بازاستفاده‌پذیر را کد برنامه اعتبارسنجی‌شده و versionدار بدانید، نه string‌هایی صرفاً راحت."
 maturity: "draft"
 last_reviewed: "2026-07-29"
@@ -15,7 +15,7 @@ learning_objectives:
 prerequisites: [C04]
 language: "fa"
 translation_of: "part-2/07-reusable-prompt-templates.md"
-source_sha256: "a0b2061a7b136428d226a3431e0e9ed34e38bf6ec3e7126b2594de0ae2bcb103"
+source_sha256: "7386a26c28544286e9a57923a309b7f4e65d4ac3bccab329290c4c34802f5489"
 translation_status: "draft"
 last_translated: "2026-07-30"
 ---

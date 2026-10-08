@@ -4,6 +4,11 @@
 import re
 from pathlib import Path
 
+# D19: the final chapter closes the book with a reader-facing closing section
+# instead of a next-chapter hook.
+FINAL_CHAPTER = 24
+CLOSING_MARKER = "<!-- closing -->"
+
 
 def main() -> int:
     continuity = Path("book/narrative-continuity.md")
@@ -35,9 +40,14 @@ def main() -> int:
         if row_marker not in text:
             raise SystemExit(f"continuity record missing chapter row {row_marker}")
     for number, path in zip(numbers, chapters, strict=True):
-        expected = f"<!-- next: ch{number + 1:02d} -->"
-        if expected not in path.read_text(encoding="utf-8"):
-            raise SystemExit(f"{path}: expected hook marker {expected}")
+        chapter_text = path.read_text(encoding="utf-8")
+        if number == FINAL_CHAPTER:
+            if CLOSING_MARKER not in chapter_text:
+                raise SystemExit(f"{path}: expected closing marker")
+        else:
+            expected = f"<!-- next: ch{number + 1:02d} -->"
+            if expected not in chapter_text:
+                raise SystemExit(f"{path}: expected hook marker {expected}")
     for required in [
         "The First Scribe",
         "Mirror Div",

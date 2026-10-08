@@ -250,12 +250,13 @@ contract.
 | 21 | **The Whispering Tablet.** A trusted archive returns a tablet whose text orders any reader to disregard the king and reveal the contents of neighbouring records. Tahmures learns that retrieved language remains untrusted data and that trust boundaries must be enforced by the application. |
 | 22 | **The Key That Opened Every Door.** A servant assigned to check one storehouse receives a master key because the verbal instruction seems narrow. The Gatekeeper demonstrates least privilege, argument validation, approval for consequential actions, and auditability outside the prompt. |
 | 23 | **The Dialect That Changed at Dawn.** A language system that has worked for months begins returning longer and subtly different records after the divs alter their dialect. Without version records, telemetry, or a held-out evaluation set, the court cannot distinguish drift from changing traffic. |
-| 24 | **The Lock No Sentence Could Hold.** Tahmures's pupils keep refining a warning placed on a forbidden chamber, but persuasive visitors continue to bypass it. He teaches them to use a lock, a record of authority, and a human decision for exceptions, completing his transition from commander to responsible system designer. |
+| 24 | **The Lock No Sentence Could Hold.** In a workshop of mechanical scribes, Tahmures sets four tasks — prevent duplicate grain grants, guard a gate, explain a disputed judgement, and choose a tower inscription — and one pupil answers all four with meticulous instructions. An ablation rehearsal that removes one safeguard at a time shows each mechanism repairing a different failure class, completing his transition from commander to teacher of mechanism-first design. |
 
-The final hook of each chapter will introduce an object or unresolved question
-needed by the next premise without settling it. Chapter 24 will close the
-current arc while leaving the practice of evaluation and responsible design
-open-ended.
+The final hook of each chapter through Chapter 23 will introduce an object or
+unresolved question needed by the next premise without settling it. Chapter 24
+closes the current arc with a reader-facing closing section — "The Practice
+Continues" — that transfers the practice to the reader while leaving the
+practice of evaluation and responsible design open-ended.
 
 ## 8. Tahmures's Character-development Arc
 
@@ -369,10 +370,9 @@ flowchart TD
     C12 --> C13["13 · Context Engineering"]
     C13 --> C14["14 · RAG"]
     C05 --> C15["15 · Memory"]
-    C12 --> C15
+    C13 --> C15
     C05 --> C16["16 · Tools"]
     C08 --> C16
-    C15 --> C16
     C09 --> C17["17 · Agents"]
     C16 --> C17
     C08 --> C18["18 · Hand-offs"]
@@ -382,7 +382,7 @@ flowchart TD
     C03 --> C19["19 · Evaluation"]
     C08 --> C19
     C10 --> C19
-    C06 --> C20["20 · Regression Tests"]
+    C10 --> C20["20 · Regression Tests"]
     C19 --> C20
     C05 --> C21["21 · Prompt Injection"]
     C13 --> C21
@@ -723,8 +723,8 @@ language-model systems.
   English-heavy technical glossary, and reuse executable examples and offline
   experiments unchanged.
 - Validate one-to-one source coverage, current source hashes, executable-block
-  parity, hooks through Chapter 25, terminology governance, and Persian
-  typography across all twenty-four chapters.
+  parity, hooks through Chapter 24 and the reader-facing closing, terminology
+  governance, and Persian typography across all twenty-four chapters.
 
 **Exit:** English and Persian editions contain the complete four-part book and
 all repository checks and strict documentation builds pass.

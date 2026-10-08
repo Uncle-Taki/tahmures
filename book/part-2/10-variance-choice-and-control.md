@@ -2,7 +2,7 @@
 title: "Variance, Choice, and Control"
 slug: "variance-choice-and-control"
 chapter: 10
-part: "Part II — Designing Prompted Interactions"
+part: "Part II — Prompt Design and Controlled Generation"
 summary: "Separate response variation from error and generated candidates from application-owned selection."
 maturity: "draft"
 last_reviewed: "2026-07-29"
@@ -23,7 +23,7 @@ prerequisites: [C03, C06]
 You will distinguish legitimate variation from incorrectness, expose hidden
 assumptions behind multiple answers, and design generate-then-select systems in
 which the application—not generated prose—owns the final policy. You will
-measure diversity, modal behavior, constraint satisfaction, and selection
+measure diversity, modal behaviour, constraint satisfaction, and selection
 stability.
 
 ## The Tale of Tahmures
@@ -69,14 +69,14 @@ plans met hard constraints, and which acceptable plan the kingdom preferred.
 
 ### The Discovery
 
-The First Scribe gave the divs a generation table. They could propose
+The First Scribe gave the divs a table for proposals. They could propose
 candidates and state assumptions, but not declare a winner. A separate board
-listed allowed plan IDs, hard constraints, and a deterministic ordering:
-survival threshold first, water use second, expected yield third, stable ID as
-the final tie-break.
+listed the plans allowed, the hard constraints, and a fixed order of decision:
+a survival floor first, water use second, expected yield third, and the plan's
+fixed name as the final tie-break.
 
 Plans depending on the closed canal were removed. Arithmetic was recalculated
-by clerks. If two plans remained equivalent under the policy, the report said
+by clerks. If two plans remained equivalent under the rules, the report said
 so rather than inventing a distinction. Tahmures retained the alternatives for
 review.
 
@@ -138,7 +138,7 @@ Temperature and related sampling parameters influence distribution but do not
 create a universal “creativity dial.” Provider implementations differ, and
 determinism may not be guaranteed even with a fixed seed and low temperature.
 Record all supported parameters and model identity, then measure observed
-behavior.
+behaviour.
 
 Repeated trials reveal a response distribution. `unique_response_count` is the
 number of distinct recorded texts. `unique_response_ratio` divides that count
@@ -258,7 +258,7 @@ matters.
 Report diversity by variant, case, and semantic label. Pair it with constraint
 satisfaction and task quality. Measure selection stability only where a stable
 preference exists. For equivalent choices, evaluate correct tie or escalation
-behavior.
+behaviour.
 
 Use confidence intervals when trials are numerous enough; do not overinterpret
 three synthetic recordings. Regression tests should include repeated trials
@@ -487,7 +487,7 @@ sample, quality metric, selector owner, and escalation condition. This table
 turns vague demands for “more deterministic AI” into testable engineering
 requirements.
 
-The table should distinguish offline evaluation from online behavior. Offline
+The table should distinguish offline evaluation from online behaviour. Offline
 trials are controlled and repeatable; online inputs, retrieval, and external
 state shift. A policy that is stable on fixtures can still vary appropriately
 when a price, permission, or user goal changes. Log those causal inputs so
@@ -521,9 +521,8 @@ and rejected alternatives, before it becomes policy.
 Where legal or organisational accountability applies, retain the responsible
 human or policy owner. A stable automated selector does not become an
 accountable person through repetition.
-Its consistency is evidence about implementation behavior, not moral or legal
+Its consistency is evidence about implementation behaviour, not moral or legal
 legitimacy.
-Exactly.
 
 ## When Prompting Is Not the Answer
 

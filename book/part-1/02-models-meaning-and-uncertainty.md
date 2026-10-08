@@ -2,7 +2,7 @@
 title: "Models, Meaning, and Uncertainty"
 slug: "models-meaning-and-uncertainty"
 chapter: 2
-part: "Part I — Language, Intent, and Models"
+part: "Part I — Language, Intent, and Reliable Instructions"
 summary: "Separate fluent completion from supported knowledge, and design evidence and abstention into the task."
 maturity: "draft"
 last_reviewed: "2026-07-29"
@@ -346,9 +346,9 @@ authority boundary.
 ## The Next Tale
 
 The two governors accept that the missing payment cannot be recovered from
-polish. They do not accept the same bridge. Each submits a design and calls it
-the best, leaving Tahmures to discover that the council has not decided what
-“best” means.
+polish. They do not accept the same bridge, and the five makers who arrive to
+rebuild it each call a different design the best, leaving Tahmures to
+discover that the council has not decided what “best” means.
 
 <!-- next: ch03 -->
 

@@ -1,0 +1,44 @@
+version: 1
+policy: >-
+  F01 Persian strict-parity policy. A faithful Persian translation of a frozen
+  English tale may legitimately fall below the 400-word narrative floor because
+  Persian expression requires fewer words, not because content was omitted.
+  Each exception below was recorded only after a whole-tale parity review
+  removed every unsupported Persian-only addition and restored every missing
+  frozen-English event. The recorded Persian word count is pinned exactly: any
+  later change to a listed tale invalidates its exception until the record is
+  re-reviewed and updated in a visible diff. The English 400-word floor and the
+  Persian upper bound remain enforced without exception.
+exceptions:
+  '10':
+    persian_tale_word_count: 359
+    frozen_english_tale_word_count: 422
+    reason: >-
+      Faithful Persian rendering of the frozen English tale of the
+      Many-Voiced Council requires fewer words than English. Two unsupported
+      Persian-only episodes (an order-reversal/named-hiding test and a
+      closing stability reflection) were removed; no English event is
+      missing.
+    parity_reviewed: true
+    no_unsupported_addition: true
+  '11':
+    persian_tale_word_count: 363
+    frozen_english_tale_word_count: 425
+    reason: >-
+      Faithful Persian rendering of the frozen English tale of the upper
+      garden requires fewer words than English. Two unsupported Persian-only
+      episodes (tracing a water jar on the map and retaining rejected
+      tablets) were removed; no English event is missing.
+    parity_reviewed: true
+    no_unsupported_addition: true
+  '12':
+    persian_tale_word_count: 366
+    frozen_english_tale_word_count: 426
+    reason: >-
+      Faithful Persian rendering of the frozen English tale of the border
+      decree requires fewer words than English. Three unsupported
+      Persian-only episodes (a ten-fold duplicated note, the gatekeeper's
+      question about excluded passages, and a closing remark on recorded
+      frame-space failure) were removed; no English event is missing.
+    parity_reviewed: true
+    no_unsupported_addition: true

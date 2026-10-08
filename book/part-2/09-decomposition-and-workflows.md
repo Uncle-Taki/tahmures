@@ -2,7 +2,7 @@
 title: "Decomposition and Workflows"
 slug: "decomposition-and-workflows"
 chapter: 9
-part: "Part II — Designing Prompted Interactions"
+part: "Part II — Prompt Design and Controlled Generation"
 summary: "Split complex work by observable responsibility, explicit dependencies, checkpoints, and terminal states."
 maturity: "draft"
 last_reviewed: "2026-07-29"
@@ -77,17 +77,17 @@ red cord.
 
 “A position with evidence, not merely a place that resembles a camp.”
 
-They added an output to every board. *Locate* produced coordinates, observed
-signs, source, and uncertainty. *Assess* produced headcount and needs or a
-declared inability to assess. *Route* accepted current weather and the verified
-position. Before supply, a checkpoint required a human to review any uncertain
-location or changing pass. Report became terminal only after delivery evidence
-or an explicit failed outcome.
+They gave every board a required product. *Locate* produced a position marked
+on the map, observed signs, source, and uncertainty. *Assess* produced headcount
+and needs or a declared inability to assess. *Route* began from the current
+weather and the attested position. Before supply, a checkpoint required a
+human to review any uncertain location or changing pass. Report became final
+only after delivery evidence or an explicit failed outcome.
 
 Tahmures objected that messages to court would cost time. The Scribe agreed.
-Not every board needed royal approval. Some checks could be local and
-deterministic. Only uncertainty beyond a threshold or a changed high-risk fact
-crossed the red cord.
+Not every board needed royal approval. Some checks could be local and settled
+by fixed rule. Only uncertainty beyond an agreed limit, or a changed high-risk
+fact, crossed the red cord.
 
 The new plan did not promise success. It promised that a false assumption
 would have a name, a record, and a place where work could stop.
@@ -198,7 +198,7 @@ dependencies, incompatible hand-offs, stale state, duplicate side effects,
 unbounded retries, orphaned runs, and ambiguous terminal states.
 
 The failure owner may be requirements, plan generation, orchestrator code,
-tool behavior, external state, or human approval. Logs should make these
+tool behaviour, external state, or human approval. Logs should make these
 distinctions visible. “Agent failed” is rarely a sufficient diagnosis.
 
 Parallel steps add race conditions. Two individually valid actions may conflict
@@ -360,7 +360,7 @@ team cannot distinguish “not attempted” from “possibly completed,” retri
 duplicate action.
 
 Review the step boundary against ownership. Two activities belong in separate
-steps when they have different permissions, retry behavior, evidence, or
+steps when they have different permissions, retry behaviour, evidence, or
 approvers. They need not be separate merely because they use different prompt
 paragraphs. Conversely, a single “research and publish” step hides a critical
 permission change even if one model can perform both. Split at the boundary
@@ -429,7 +429,7 @@ Test workflows with deterministic fakes before involving models. Inject each
 failure, restart the runner between state writes, deliver duplicate callbacks,
 cancel during every step, and change external state before approval completes.
 Then add recorded model fixtures for the language nodes. This separation keeps
-orchestration bugs from being misdiagnosed as prompt behavior.
+orchestration bugs from being misdiagnosed as prompt behaviour.
 
 The final review asks whether the workflow is needed. If a database query and a
 single approved update solve the problem, five language stages add risk
@@ -450,7 +450,7 @@ review. Check remaining budget before a step starts and reserve enough for
 required cleanup or reporting. A Wandering Div that spends the final allowance
 on another planning attempt can leave no capacity to record a safe failure.
 
-Deadline behavior needs a state, not an exception lost in logs. Decide whether
+Deadline behaviour needs a state, not an exception lost in logs. Decide whether
 running work is cancelled, allowed to finish without starting downstream
 action, or escalated. Propagate cancellation to tools that support it and
 ignore late callbacks using run and attempt identity. A late successful result

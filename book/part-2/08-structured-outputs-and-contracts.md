@@ -2,7 +2,7 @@
 title: "Structured Outputs and Contracts"
 slug: "structured-outputs-and-contracts"
 chapter: 8
-part: "Part II — Designing Prompted Interactions"
+part: "Part II — Prompt Design and Controlled Generation"
 summary: "Turn generated text into an explicitly validated interface without confusing valid syntax with correct meaning."
 maturity: "draft"
 last_reviewed: "2026-07-29"
@@ -56,20 +56,21 @@ person interpreting them.
 
 ### The Unexpected Result
 
-The Archivist’s import machine rejected twenty-two entries. A clerk repaired
-six by hand. The remaining two entered the archive—but one placed “nine” in
-the field reserved for the tablet’s mark, and the other called an expired
+The Archivist’s receiving machine rejected twenty-two entries. Of the eight the
+machine accepted, a clerk repaired six by hand. The remaining two entered the
+archive—but one placed “nine” in
+the space reserved for the tablet’s mark, and the other called an expired
 order current. They were valid lines in the catalogue and wrong records.
 
-The workshop master proposed teaching the import machine all thirty styles.
+The workshop master proposed teaching the receiving machine all thirty styles.
 The Keeper of Scripts asked what would happen with the thirty-first.
 
 Tahmures instead ordered every scribe to use four labels. The next batch looked
-uniform, but some returned `measure: "twelve"` while others returned
-`measure: 12`. One added a fifth field containing an apology. A damaged tablet
-produced `measure: null`; a clerk replaced it with zero so the import would
-continue. The catalogue became easier to parse and easier to corrupt
-consistently.
+uniform, but some wrote the measure as the word *twelve* where others wrote
+the numeral *12*. One added a fifth label containing an apology. A damaged
+tablet left its measure blank; a clerk replaced the blank with zero so the
+machine would continue. The catalogue became easier to read and easier to
+corrupt consistently.
 
 ### The Discovery
 
@@ -82,11 +83,11 @@ At the fourth, the source had to justify the value.
 “A line may pass one gate and fail the next,” she said.
 
 They wrote an allowed set for record kinds and status, decided whether absence
-meant unknown rather than zero, and rejected unrecognised fields. Damaged
-records went to a review basket with their source marks. The import machine no
-longer repaired meaning merely to preserve motion.
+meant unknown rather than zero, and rejected unrecognised labels. Damaged
+records went to a review basket with their source marks. The receiving machine
+no longer repaired meaning merely to preserve motion.
 
-The thirty scribes did not become identical. They became callers of one
+The thirty scribes did not become identical. They became parties to one
 contract, and their disagreements became visible failures instead of
 incompatible catalogues.
 
@@ -142,7 +143,7 @@ remain strings even when composed of digits. Integers and general numbers are
 not interchangeable where fractional values are invalid.
 
 Enumerations make closed decisions observable. A status such as
-`current|expired|unknown` is safer than free prose when application behavior
+`current|expired|unknown` is safer than free prose when application behaviour
 depends on it. Include `unknown` or an escalation state when the domain
 requires it; forcing every case into positive or negative can manufacture
 certainty.
@@ -413,7 +414,7 @@ point is to assign them an owner and run them after structural validation.
 Build a corpus of malformed and deceptive responses. Include fenced JSON,
 leading commentary, duplicate keys, extreme nesting, huge strings, unusual
 Unicode, extra fields that resemble instructions, and correct structure with
-incorrect evidence IDs. Parser behavior around duplicate keys varies; if the
+incorrect evidence IDs. Parser behaviour around duplicate keys varies; if the
 domain cares, define and enforce a policy before normal deserialization loses
 the duplicate information.
 
@@ -447,7 +448,7 @@ raw output can assist diagnosis but creates privacy and injection risks; apply
 redaction, access controls, and retention limits. Metrics should not include
 high-cardinality sensitive values as labels.
 
-Finally, review downstream authority. A valid object describing
+Review downstream authority. A valid object describing
 `{"action":"open_gate"}` is a proposal. The action name must resolve through an
 allow list, its arguments require validation, and the current caller needs
 permission. High-impact actions may require confirmation using a representation
@@ -482,7 +483,7 @@ include numeric boundaries rather than only small friendly values.
 
 Dates and times are strings at the JSON layer. Define format, timezone, and
 whether an interval endpoint is inclusive. Validate impossible calendar dates
-and daylight-saving behavior with a maintained time library. A model can emit a
+and daylight-saving behaviour with a maintained time library. A model can emit a
 perfectly formatted date that never occurred or is unsupported by the source;
 format validity and evidence remain distinct.
 

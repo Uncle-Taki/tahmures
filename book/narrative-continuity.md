@@ -385,10 +385,10 @@ schema, code, storage, access control, and human judgement own distinct duties.
 | 18 | The Broken Relay | Reconstructed message chain; provincial towers | Repeated fluent summaries erase a prohibition | Hand-offs and multi-step systems | Inter-component contract and transfer state | Preserves language for explanation while protecting essential state structurally | Validates versioned envelopes, artefacts, actions, and acknowledgements | Reliable transfer exposes disagreement among evaluators |
 | 19 | The Trial Without Weights | Annotated court docket; western court | Reviewers use incompatible meanings of quality | Anchored rubrics and adjudication | Requirements and evaluator design | Treats evaluation as a challengeable specification | Adds anchors, disqualifiers, independent reviews, and evidence | A local fix breaks older cases |
 | 20 | The Command That Won One Trial | Regression ledger; Hall of Scripts | One repaired case hides older regressions | Versioned regression testing | Release process | Treats prompt revision as a system release | Protects tagged cases and records intended trade-offs | A retrieved tablet addresses its reader |
-| 21 | The Whispering Tablet | Archive incident; forbidden-manuscript chamber | Retrieved data attempts to enlarge authority | Prompt injection and trust boundaries | Context assembly and application boundary | Assigns authority by source and consequence | Partitions trusted instructions, data, and rejected sources | A legitimate master key is too broad |
+| 21 | The Whispering Tablet | Archive incident; forbidden-manuscript chamber | Retrieved data attempts to enlarge authority | Prompt injection and trust boundaries | Context assembly and application boundary | Assigns authority by source; leaves consequences to the capability boundary | Partitions trusted instructions, data, and rejected sources | A legitimate master key is too broad |
 | 22 | The Key That Opened Every Door | Storehouse witness statements | Narrow words accompany an overbroad credential | Capabilities and exact approval | Credential and authorisation design | Moves restraint into keys, expiry, scopes, and receipts | Binds approval to an exact digest and requires separation | Stable commands begin behaving differently |
 | 23 | The Dialect That Changed at Dawn | Seven-day operations log; translation tower | A rare border failure disappears in healthy averages | Production drift and operations | Observability and release operations | Treats reliability as continuing segmented measurement | Versions every dimension, canaries, alerts, and rollback | Which duties should never depend on language? |
-| 24 | The Lock No Sentence Could Hold | Teaching demonstration; mechanical-scribe workshop | One instruction is asked to enforce unrelated invariants | Beyond prompting and control selection | Architecture and human governance | Becomes a teacher who assigns each requirement to a capable owner | Uses language within schemas, code, access controls, storage, and judgement | Cross-kingdom governance remains for Chapter 25 |
+| 24 | The Lock No Sentence Could Hold | Teaching demonstration; mechanical-scribe workshop | One instruction is asked to enforce unrelated invariants | Beyond prompting and control selection | Architecture and human governance | Becomes a teacher who assigns each requirement to a capable owner | Uses language within schemas, code, access controls, storage, and judgement | The practice continues with the reader |
 
 ## Novelty Matrix
 
@@ -414,7 +414,7 @@ schema, code, storage, access control, and human judgement own distinct duties.
 | 18 | Reconstructed relay mystery | Provincial towers | Hand-off contract | Caravan enters a closed pass without escort | Typed envelope and acknowledgement trials |
 | 19 | Annotated court docket | Western court | Requirements/evaluator | Unsupported boundary nearly becomes judgement | Anchored review and adjudication |
 | 20 | Regression ledger | Hall of Scripts | Release process | Old safety obligations silently fail | Protected replay suite and release gate |
-| 21 | Archive security incident | Forbidden-manuscript chamber | Trust boundary | Storehouse locations are disclosed | Source-owned partition and effect validation |
+| 21 | Archive security incident | Forbidden-manuscript chamber | Trust boundary | Storehouse locations are disclosed | Source-owned partition and provenance retention |
 | 22 | Witness reconstruction | Northern storehouse | Credential boundary | Private records scatter and rooms remain open | Exact capabilities, approvals, and receipts |
 | 23 | Seven-day operations log | Translation tower | Observability | Rare border negations fail under a green average | Segmented telemetry, canary, and bundle rollback |
 | 24 | Teaching demonstration | Mechanical-scribe workshop | Architecture/governance | Language promises fail four different controls | Mechanism-first ownership and ablation |
@@ -444,7 +444,7 @@ schema, code, storage, access control, and human judgement own distinct duties.
 21. Trust partition → the overbroad master key
 22. Exact approvals → version-attributed behaviour change
 23. Operational drift → duties that should not rely on language
-24. Mechanism-first teaching → cross-kingdom governance in Chapter 25
+24. Mechanism-first teaching → the practice continues with the reader
 
 ## Change Log
 

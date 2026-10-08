@@ -2,7 +2,7 @@
 title: "Learning from Examples"
 slug: "learning-from-examples"
 chapter: 6
-part: "Part I — Language, Intent, and Models"
+part: "Part I — Language, Intent, and Reliable Instructions"
 summary: "Select, label, order, and evaluate examples as a small dataset rather than a substitute for requirements."
 maturity: "draft"
 last_reviewed: "2026-07-29"
@@ -53,7 +53,8 @@ without a long decree.
 
 ### The Unexpected Result
 
-The fifth unusual petition came from a widow whose storehouse had burned. Her
+The fifth petition was unusual: it came from a widow whose storehouse had
+burned. Her
 evidence was complete, dated, witnessed, and authentic. The div placed it in
 review.
 

@@ -8,6 +8,8 @@ import re
 import unicodedata
 from pathlib import Path
 
+import yaml
+
 CHAPTER_TITLES = {
     1: "پرامپت چیست؟",
     2: "مدل‌ها، معنا و عدم‌قطعیت",
@@ -109,7 +111,29 @@ HEADINGS = (
     "## روایت بعدی",
     "## منابع و مطالعهٔ بیشتر",
 )
+# D19: the final chapter closes the book. Its Persian closing section replaces
+# the next-tale heading and uses the closing marker instead of a next-chapter
+# hook (English heading: "## The Practice Continues").
+FINAL_CHAPTER = 24
+FA_NEXT_TALE_HEADING = "## روایت بعدی"
+FA_CLOSING_HEADING = "## تمرین ادامه دارد"
+CLOSING_MARKER = "<!-- closing -->"
 EXECUTABLE_FENCES = {"python", "go", "bash", "json"}
+# F01 Persian strict-parity policy: a faithful Persian tale may legitimately
+# fall below the English 400-word narrative floor because Persian expression
+# needs fewer words. Such chapters need an explicit, reviewed exception record
+# in editorial/fa-review/tale-length-exceptions.yml. The record pins the
+# reviewed Persian word count exactly and the frozen English word count, so a
+# later edit that changes tale length invalidates the exception until the
+# record is re-reviewed. The English floor in scripts/validate_chapters.py is
+# unchanged, the Persian upper bound is unchanged, and every other check in
+# this validator still applies to excepted chapters.
+NARRATIVE_MIN_WORDS = 400
+NARRATIVE_MAX_WORDS = 900
+TALE_LENGTH_EXCEPTIONS_PATH = Path("editorial/fa-review/tale-length-exceptions.yml")
+ENGLISH_NARRATIVE_START = "### The Setting"
+ENGLISH_NARRATIVE_END = "### From Tale to Engineering"
+ENGLISH_WORD_PATTERN = re.compile(r"\b[\w’'-]+\b")
 WORD_PATTERN = re.compile(r"[^\W_]+(?:\u200c[^\W_]+)*", re.UNICODE)
 FENCE_PATTERN = re.compile(r"^```([^\n]*)\n(.*?)^```\s*$", re.MULTILINE | re.DOTALL)
 HTTP_PATTERN = re.compile(r"https?://[^)\s]+")
@@ -157,6 +181,66 @@ def _field(front_matter: str, name: str) -> str:
 
 def _words(text: str) -> int:
     return len(WORD_PATTERN.findall(text))
+
+
+def _tale_length_exceptions(root: Path) -> dict[str, dict]:
+    """Load reviewed below-floor Persian tale-length exception records.
+
+    ``root`` is the repository root, derived positionally from the
+    translation path (``book/fa/part-N/<file>.md`` lives three levels below
+    the repository root). Paths outside that layout simply find no
+    exceptions file.
+    """
+    path = root / TALE_LENGTH_EXCEPTIONS_PATH
+    if not path.exists():
+        return {}
+    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    exceptions = data.get("exceptions")
+    if not isinstance(exceptions, dict) or not exceptions:
+        raise ValueError(f"{path}: missing exceptions mapping")
+    for key, record in exceptions.items():
+        if not isinstance(record, dict):
+            raise ValueError(f"{path}: exception {key} must be a mapping")
+        for field in ("persian_tale_word_count", "frozen_english_tale_word_count"):
+            value = record.get(field)
+            if not isinstance(value, int) or isinstance(value, bool) or value <= 0:
+                raise ValueError(
+                    f"{path}: exception {key} needs positive integer {field}"
+                )
+        if not isinstance(record.get("reason"), str) or not record["reason"].strip():
+            raise ValueError(f"{path}: exception {key} needs a non-empty reason")
+        if record.get("parity_reviewed") is not True:
+            raise ValueError(
+                f"{path}: exception {key} must record parity_reviewed: true"
+            )
+        if record.get("no_unsupported_addition") is not True:
+            raise ValueError(
+                f"{path}: exception {key} must record no_unsupported_addition: true"
+            )
+    return {str(key): record for key, record in exceptions.items()}
+
+
+def _validate_tale_length_exception(
+    translation: Path, source_text: str, narrative_count: int, exception: dict
+) -> None:
+    if narrative_count != exception["persian_tale_word_count"]:
+        raise ValueError(
+            f"{translation}: narrative has {narrative_count} words; reviewed "
+            f"exception records {exception['persian_tale_word_count']}; re-review "
+            f"the tale and update {TALE_LENGTH_EXCEPTIONS_PATH}"
+        )
+    english_narrative = source_text[
+        source_text.index(ENGLISH_NARRATIVE_START) : source_text.index(
+            ENGLISH_NARRATIVE_END
+        )
+    ]
+    english_count = len(ENGLISH_WORD_PATTERN.findall(english_narrative))
+    if english_count != exception["frozen_english_tale_word_count"]:
+        raise ValueError(
+            f"{translation}: frozen English tale has {english_count} words; "
+            f"exception records {exception['frozen_english_tale_word_count']}; "
+            f"re-review and update {TALE_LENGTH_EXCEPTIONS_PATH}"
+        )
 
 
 def _body_without_code(text: str) -> str:
@@ -272,7 +356,10 @@ def validate_pair(source: Path, translation: Path) -> tuple[str, str]:
         raise ValueError(f"{translation}: source_sha256 is stale")
 
     positions = []
-    for heading in HEADINGS:
+    headings = list(HEADINGS)
+    if chapter == FINAL_CHAPTER:
+        headings[headings.index(FA_NEXT_TALE_HEADING)] = FA_CLOSING_HEADING
+    for heading in headings:
         try:
             positions.append(text.index(heading))
         except ValueError as error:
@@ -284,9 +371,24 @@ def validate_pair(source: Path, translation: Path) -> tuple[str, str]:
 
     narrative = text[text.index("### صحنه") : text.index("### از روایت تا مهندسی")]
     narrative_count = _words(narrative)
-    if not 400 <= narrative_count <= 900:
+    exception = _tale_length_exceptions(translation.parents[3]).get(str(chapter))
+    if narrative_count > NARRATIVE_MAX_WORDS:
         raise ValueError(
             f"{translation}: narrative has {narrative_count} words; expected 400–900"
+        )
+    if narrative_count >= NARRATIVE_MIN_WORDS:
+        if exception is not None:
+            raise ValueError(
+                f"{translation}: stale tale-length exception; narrative has "
+                f"{narrative_count} words and no longer needs it"
+            )
+    elif exception is None:
+        raise ValueError(
+            f"{translation}: narrative has {narrative_count} words; expected 400–900"
+        )
+    else:
+        _validate_tale_length_exception(
+            translation, source_text, narrative_count, exception
         )
     clean_translation = _body_without_code(text)
     clean_source = _body_without_code(source_text)
@@ -321,9 +423,21 @@ def validate_pair(source: Path, translation: Path) -> tuple[str, str]:
     translation_urls = set(HTTP_PATTERN.findall(text))
     if not source_urls <= translation_urls:
         raise ValueError(f"{translation}: source citation URLs were removed")
-    expected_hook = f"<!-- next: ch{chapter + 1:02d} -->"
-    if expected_hook not in text:
-        raise ValueError(f"{translation}: expected hook {expected_hook}")
+    if chapter == FINAL_CHAPTER:
+        if CLOSING_MARKER not in text:
+            raise ValueError(f"{translation}: expected closing marker")
+        if "<!-- next: ch" in text:
+            raise ValueError(
+                f"{translation}: final chapter must not contain a next hook"
+            )
+    else:
+        expected_hook = f"<!-- next: ch{chapter + 1:02d} -->"
+        if expected_hook not in text:
+            raise ValueError(f"{translation}: expected hook {expected_hook}")
+        if CLOSING_MARKER in text:
+            raise ValueError(
+                f"{translation}: closing marker is reserved for the final chapter"
+            )
     return slug, episode
 
 
