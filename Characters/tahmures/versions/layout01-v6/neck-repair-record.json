@@ -1,0 +1,135 @@
+{
+  "repair": "CL-NECK-01",
+  "base": "layout01-v5",
+  "component": "head/hair_back.png",
+  "bbox": [
+    458,
+    320,
+    614,
+    384
+  ],
+  "contours_master_coordinates": {
+    "left": [
+      [
+        458,
+        320
+      ],
+      [
+        458,
+        340
+      ],
+      [
+        460,
+        353
+      ],
+      [
+        464,
+        365
+      ],
+      [
+        470,
+        374
+      ],
+      [
+        477,
+        380
+      ],
+      [
+        484,
+        382
+      ],
+      [
+        491,
+        380
+      ],
+      [
+        497,
+        374
+      ],
+      [
+        500,
+        366
+      ],
+      [
+        499,
+        354
+      ],
+      [
+        496,
+        342
+      ],
+      [
+        491,
+        330
+      ],
+      [
+        487,
+        320
+      ]
+    ],
+    "right": [
+      [
+        612,
+        320
+      ],
+      [
+        612,
+        340
+      ],
+      [
+        610,
+        353
+      ],
+      [
+        606,
+        365
+      ],
+      [
+        600,
+        374
+      ],
+      [
+        593,
+        380
+      ],
+      [
+        586,
+        382
+      ],
+      [
+        579,
+        380
+      ],
+      [
+        573,
+        374
+      ],
+      [
+        570,
+        366
+      ],
+      [
+        571,
+        354
+      ],
+      [
+        574,
+        342
+      ],
+      [
+        579,
+        330
+      ],
+      [
+        583,
+        320
+      ]
+    ]
+  },
+  "method": "8x supersampled manually traced continuous tapered exterior hair locks; alpha=max(v5 alpha, contour alpha)",
+  "changed_alpha_pixels": 4497,
+  "changed_or_recoloured_pixels": 4507,
+  "added_alpha_sum": 916597,
+  "removed_alpha_pixels": 0,
+  "provenance": "All contour-support RGB and alpha are reconstructed; pre-existing source/reconstructed partition remains retained elsewhere."
+}

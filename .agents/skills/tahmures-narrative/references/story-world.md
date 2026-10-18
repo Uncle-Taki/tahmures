@@ -46,9 +46,12 @@ for dependent references. Localize the function and setting; never use a blind
 phrase substitution. A later approved English rename creates Persian
 synchronization and potentially renewed human-review work.
 
-Persian spelling of the protagonist's name: the fa edition currently uses
-«تهمورث». The human reviewer prefers «طهمورث» for future narrative work
-(recorded 2026-10-02; classification `FUTURE_TERMINOLOGY_PREFERENCE`). Do
-not retro-edit approved chapters; apply the preferred spelling only in new
-narrative work or through a scoped, both-edition narrative revision with
-continuity review.
+Persian spelling of the protagonist's name: «طهمورث» is the human-approved
+form (preference recorded 2026-10-02; scoped authorization 2026-10-10).
+Persian Chapters 01–04 use «طهمورث» in prose and tale headings («روایت
+طهمورث»), and the translation validator enforces that heading per chapter
+range. Chapters 05–24 and `book/fa/translation-glossary.md` keep «تهمورث»
+pending a separate book-wide terminology decision; the scoped alignment is
+not a glossary promotion. New narrative work uses «طهمورث». Any later
+extension to Chapters 05–24 needs its own scoped, both-edition revision
+with continuity review.

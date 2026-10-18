@@ -1,0 +1,73 @@
+{
+  "mouthless": {
+    "holes": 0,
+    "deficits": 0,
+    "order": [
+      "hair_back",
+      "head_base",
+      "ear_right",
+      "ear_left",
+      "beard",
+      "nose",
+      "eye_right",
+      "eye_left",
+      "eyebrow_right",
+      "eyebrow_left",
+      "moustache",
+      "diadem_gold"
+    ],
+    "rgb_diff_gt3_total": 2371,
+    "rgb_diff_gt3_escaping_intended_zone": 0
+  },
+  "neutral": {
+    "holes": 0,
+    "deficits": 0,
+    "order": [
+      "hair_back",
+      "head_base",
+      "ear_right",
+      "ear_left",
+      "beard",
+      "lower_face_neutral",
+      "nose",
+      "eye_right",
+      "eye_left",
+      "eyebrow_right",
+      "eyebrow_left",
+      "moustache",
+      "diadem_gold"
+    ],
+    "rgb_diff_gt3_total": 283,
+    "rgb_diff_gt3_escaping_intended_zone": 0
+  },
+  "open_test": {
+    "holes": 0,
+    "deficits": 0,
+    "order": [
+      "hair_back",
+      "head_base",
+      "ear_right",
+      "ear_left",
+      "beard",
+      "lower_face_open_test",
+      "nose",
+      "eye_right",
+      "eye_left",
+      "eyebrow_right",
+      "eyebrow_left",
+      "moustache",
+      "diadem_gold"
+    ],
+    "rgb_diff_gt3_total": 342,
+    "rgb_diff_gt3_escaping_intended_zone": 0
+  },
+  "b_vs_c": {
+    "differing_px": 59,
+    "outside_patch_footprint": 0,
+    "inside_opening": 59
+  },
+  "r1_01": {
+    "warm_px_crescent_bbox_530_230_542_237": 0,
+    "warm_px_over_mouthless_receiver": 0
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "changes": {
+    "head_base": 1281,
+    "hair_back": 296,
+    "diadem_gold": 0,
+    "ear_left": 0,
+    "ear_right": 0,
+    "eye_left": 0,
+    "eye_right": 0,
+    "eyebrow_left": 0,
+    "eyebrow_right": 0,
+    "nose": 0,
+    "beard": 2315,
+    "moustache": 2666,
+    "lower_face_neutral": 1527,
+    "lower_face_open_test": 1527
+  },
+  "coverage": {
+    "mouthless": {
+      "new_fully_transparent_interior": 0,
+      "alpha_below_250_where_source_opaque": 0
+    },
+    "neutral": {
+      "new_fully_transparent_interior": 0,
+      "alpha_below_250_where_source_opaque": 0
+    },
+    "open_test": {
+      "new_fully_transparent_interior": 0,
+      "alpha_below_250_where_source_opaque": 0
+    }
+  }
+}

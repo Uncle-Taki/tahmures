@@ -1,0 +1,139 @@
+{
+  "character_id": "akvan_div",
+  "source_file": "Characters/Akvan Div.png",
+  "source_sha256": "dea44985d6cb717aba472319dae4b99d1680a629dc432ed32cd9bcbb9875c0b5",
+  "canvas": [
+    1086,
+    1448
+  ],
+  "skeleton_type": "humanoid_horned_keeper",
+  "technical_readiness_state": "candidate_partition_needs_anatomical_review",
+  "segmentation_method": "provisional_disjoint_search_windows_not_anatomical_segmentation",
+  "supported_states": [
+    "neutral",
+    "idle"
+  ],
+  "unsupported_states": [
+    "blink",
+    "gaze_left",
+    "gaze_right",
+    "gesture_small"
+  ],
+  "movement_scope": "whole_rig_translation_only_until_seams_reviewed",
+  "human_approved": false,
+  "draw_order_bottom_to_top": [
+    {
+      "component_id": "head_and_headwear",
+      "pivot_canvas": [
+        563,
+        344
+      ],
+      "tight_alpha_bbox": [
+        413,
+        16,
+        642,
+        326
+      ],
+      "local_motion_approved": false,
+      "opaque_pixels": 28895,
+      "sha256": "36a575612f77273dbe68ca0bfd138efdbba2dda30598fc5484ea561cf453c3b9"
+    },
+    {
+      "component_id": "eyes_and_brows",
+      "pivot_canvas": [
+        563,
+        171
+      ],
+      "tight_alpha_bbox": [
+        468,
+        100,
+        641,
+        242
+      ],
+      "local_motion_approved": false,
+      "opaque_pixels": 22103,
+      "sha256": "5b1d63d3aabf8b88049dddaa84bfa1022d38709030e1cdef0aae0177b1178fb9"
+    },
+    {
+      "component_id": "torso_and_garment_core",
+      "pivot_canvas": [
+        563,
+        369
+      ],
+      "tight_alpha_bbox": [
+        341,
+        807,
+        729,
+        1034
+      ],
+      "local_motion_approved": false,
+      "opaque_pixels": 18468,
+      "sha256": "a66cc75305834ab315a3161721012e6a8f2e95132c7b9fe811d535f240b2282c"
+    },
+    {
+      "component_id": "arm_viewer_left",
+      "pivot_canvas": [
+        448,
+        404
+      ],
+      "tight_alpha_bbox": [
+        335,
+        421,
+        523,
+        1033
+      ],
+      "local_motion_approved": false,
+      "opaque_pixels": 43146,
+      "sha256": "b713c653cf2cb600d7f6025cfe3786aa0fbc7e4bedc36cd5a3f437b8c0356ed9"
+    },
+    {
+      "component_id": "arm_viewer_right",
+      "pivot_canvas": [
+        678,
+        404
+      ],
+      "tight_alpha_bbox": [
+        603,
+        464,
+        791,
+        1033
+      ],
+      "local_motion_approved": false,
+      "opaque_pixels": 24319,
+      "sha256": "4bfe1b308bbdf6beaf2b130350e846f64ef002a702229189473949d15d723ed1"
+    },
+    {
+      "component_id": "held_prop_and_occlusion_zone",
+      "pivot_canvas": [
+        563,
+        552
+      ],
+      "tight_alpha_bbox": [
+        383,
+        326,
+        783,
+        807
+      ],
+      "local_motion_approved": false,
+      "opaque_pixels": 159590,
+      "sha256": "d533b2c14b16dbf0c9bf36b8cdbbb42583b778951fa5fa2815f319e7f30a77c8"
+    },
+    {
+      "component_id": "lower_garment_legs_feet",
+      "pivot_canvas": [
+        563,
+        1414
+      ],
+      "tight_alpha_bbox": [
+        338,
+        1034,
+        748,
+        1429
+      ],
+      "local_motion_approved": false,
+      "opaque_pixels": 121714,
+      "sha256": "3c82c887650badb7408205051f6eeb09e24830bc71519153c75f1f50a9443d30"
+    }
+  ],
+  "sockets": []
+}

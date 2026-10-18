@@ -26,9 +26,21 @@ across kingdoms, institutions, and changing public values remains open.
 experimental partner. Respects the Keeper of Scripts for structural questions,
 the Archivist for provenance, and the Gatekeeper for refusing unsafe action.
 
+**Chapters 01–04 naming (approved mapping, 2026-10-10):** The protagonist
+remains Tahmures. Persian Chapters 01–04 use طهمورث in prose and the four
+tale headings («روایت طهمورث», scoped spelling alignment, 2026-10-10;
+enforced by the chapter-aware translation validator); other chapters keep
+تهمورث until their own batch. No source event is claimed for these
+episodes.
+
 ### The First Scribe
 
 **Role:** Records prompts, predictions, variants, outcomes, and corrections.
+
+**Chapters 01–04 name (approved mapping, 2026-10-10):** Shahrasp. The role is
+the project's adaptation; the source tradition names Shahrasp a counselor of
+Tahmures, not a scribe. Later chapters keep the role label until their own
+batch. English keeps he/him.
 
 **Knowledge:** By Chapter 24, records template versions, contract violations,
 workflow attempts, response distributions, human rubric evidence, context
@@ -59,6 +71,10 @@ communicate a boundary but cannot enforce authority.
 
 **Previous appearances:** Chapters 1, 4, 7, 8, and 18.
 
+**Chapters 01–04 name (approved mapping, 2026-10-10):** Akvan Div (a
+deliberate later-cycle chronology shift; project fiction). The Chapter 01
+closing hook names her opening the torn treaty. English keeps she/her.
+
 ### The Archivist
 
 **Role:** Preserves context, provenance, and the reasons behind past decisions.
@@ -71,6 +87,10 @@ Archivist learns that exhaustive preservation does not create a useful working
 set. In Chapter 14, she separates candidate retrieval from supported answers.
 In Chapter 15, she helps distinguish durable memory from authoritative state.
 
+**Chapters 01–04 name (approved mapping, 2026-10-10):** Soroush (project
+fiction; the yazata identity is not retold). The Chapter 03 closing hook also
+names her. English keeps she/her.
+
 ### The Gatekeeper
 
 **Role:** Controls consequential action and challenges language-only safety.
@@ -82,6 +102,12 @@ authority. Same-level conflicts require escalation.
 Chapter 5, as the owner of the divided key ring in Chapter 16, and as the owner
 of trust partitions and exact approvals in Chapters 21–22.
 
+**Chapters 01–04 name (approved mapping, 2026-10-10):** Arash. The mapping
+extends the same function to the Chapter 01 present/northern captain, the
+Chapter 01 illustrative Gatekeeper, the Chapter 03 captain, and the Chapter 04
+Gatekeeper, rendered as one figure (project fiction; no archer motif, no
+source event). Later chapters keep the role label until their own batch.
+
 ### The Messenger
 
 **Role:** Carries context and exposes what changes across recipients.
@@ -91,6 +117,12 @@ message, contributing to the frontier alarm.
 
 **Previous appearances:** Chapters 1 and 18. The Chapter 18 relay reveals how
 individually reasonable summaries can lose constraints and negation.
+
+**Chapters 01–04 name (approved mapping, 2026-10-10):** Simurgh in Chapter 1
+only (project fiction; the live tale gives no bird description, and the name's
+bird identity is not asserted in prose). Distinct from the Chapter 1 courier
+(Chapar, an occupational role). Chapter 18 keeps the role label until its own
+batch.
 
 ### Mirror Div
 
@@ -102,6 +134,11 @@ interaction requires it.
 
 **Previous appearances:** Chapter 2.
 
+**Chapters 01–04 name (approved mapping, 2026-10-10):** Div-e Sefid (a
+deliberate later-cycle chronology shift; project fiction, not malice). The
+Chapter 01 closing hook names it writing the missing promises. English keeps
+it for this figure.
+
 ### Literal Div
 
 **Role:** Follows surface wording while exposing missing role and authority
@@ -111,6 +148,12 @@ structure.
 portrayed as malicious.
 
 **Previous appearances:** Chapters 1, 4, and 13.
+
+**Chapters 01–04 name (approved mapping, 2026-10-10):** the Black Div — a
+personal identity adapted from a figure the source describes without a name
+(project fiction; never attributed to Ferdowsi as a named character). Chapter
+13's "Literal Div" is the same figure and keeps the role label until its own
+batch. English uses he/him in these chapters.
 
 ### Wandering Div
 
@@ -130,6 +173,132 @@ continues after the goal changes, showing that persistence is not authority.
 owns constraint checks and selection.
 
 **Previous appearances:** Chapter 10.
+
+### Jamshid
+
+**Role (Chapters 01–04, approved mapping 2026-10-10):** Eastern governor and
+claimant in Chapter 2; treasurer and cost-ceiling owner in Chapter 3; author
+of the expired irrigation letter in Chapter 4, where the tale names him only
+as a former governor.
+
+**Knowledge:** A competing claim is not established by confidence or status;
+"best" means "under the requirements we have now written"; an instruction's
+authority expires with its conditions even when its words survive.
+
+**Chapter 04 life status (owner clarification, 2026-10-10):** unspecified.
+The tales neither state nor imply whether Jamshid is alive or dead in
+Chapter 04; his letter is an old record whose trigger condition has expired,
+nothing more. (An earlier draft of this batch stated he was dead by Chapter
+04; the owner clarified that his status stays unspecified and that wording
+was removed.) In the source tradition he is Tahmures's successor; that
+relationship is not asserted inside these stories.
+
+**Previous appearances:** Chapters 2, 3, and 4 (as governor, treasurer, and
+former governor respectively).
+
+### Budhasaf
+
+**Role (Chapters 01–04, approved mapping 2026-10-10):** Western governor in
+Chapter 2; presents the competing treaty claim (accuses the Mirror Div).
+
+**Knowledge:** Two confident, status-bearing claimants with the same missing
+evidence produce a dispute, not a fact.
+
+**Source caution:** Project-fiction character; the separate mythic identity is
+unverified. Must not be merged with Shahrasp or with the scholarly Būdasb
+name-form hypothesis.
+
+**Previous appearances:** Chapter 2 only.
+
+### Arzhang Div
+
+**Role (Chapters 01–04, approved mapping 2026-10-10):** The div who serves
+the council in Chapter 3; offers candidate designs and exposes trade-offs,
+but cannot decide what "best" means for the council.
+
+**Knowledge:** Requirements precede wording; each of five recommendations
+can be correct under a different meaning of *best* without settling the
+decision. Stakeholders own the criteria and the bronze balance.
+
+**Source caution:** Later-cycle source figure (dossier: a named div of
+Mazandaran associated with Rostam's labors; verse citation pending); his
+appearance in Tahmures's council is a deliberate owner-approved chronology
+shift and project fiction. Distinct from the Many-Voiced Council of
+Chapter 10, whose lesson is variance, not requirements.
+
+**Previous appearances:** Chapter 3 only.
+
+### Keyumars
+
+**Role (Chapters 01–04, approved mapping 2026-10-10):** The builder on the
+bridge council in Chapter 3; the deceased king whose awaited return anchors
+the expired letter in Chapter 4.
+
+**Knowledge:** Operational constraints (repair time) belong in requirements;
+age, prestige, or royal origin does not make an instruction current.
+
+**Locked chronology (owner decision, 2026-10-10):** alive as the Chapter 03
+builder; Chapter 04 opens six years after his death, so the Chapter 03 → 04
+gap is more than six years and the Chapter 03 closing hook signals the
+intervening years ("Years later… yearly repairs"). No cause or exact date of
+death is stated. In the source tradition Keyumars precedes Tahmures; the
+builder/king roles here are project fiction.
+
+**Locked relationship (owner decision, 2026-10-10):** In this project's
+fiction, Keyumars is Tahmures's grandfather — `TIER_C_PROJECT_FICTION`,
+an owner-authorized adaptation, not a *Shahnameh* genealogy claim. Source
+genealogy, kept distinct: the supplied dossier makes Keyumars Hushang's
+grandfather (Keyumars → Siamak → Hushang) and the live canon reference makes
+Tahmures Hushang's son, so read literally those links place Keyumars as
+Tahmures's great-grandfather. The direct grandfather relationship is a
+deliberate project-fiction compression of that chain; the Chapter 01–04
+tales do not state it on-page, and no tale edit is required or made for it.
+
+**Previous appearances:** Chapters 3 and 4 (living builder; posthumous
+king).
+
+### Nariman
+
+**Role (Chapters 01–04, approved mapping 2026-10-10):** Flood-affected council
+member in Chapter 3 — a farmer whose fields the flood cut off, not the holder
+of a river-keeping office.
+
+**Knowledge:** States the failure he cannot accept (the crossing must survive
+the spring current); one legitimate need constrains the solution without
+owning the council's decision.
+
+**Previous appearances:** Chapter 3 only.
+
+### Sam
+
+**Role (Chapters 01–04, approved mapping 2026-10-10):** Orchard keeper in
+Chapter 4; bears the visible cost when the outdated record is acted on.
+
+**Knowledge:** His wasted labor and the dry village fields are consequences of
+missing expiry semantics; his concern does not make old text current.
+
+**Previous appearances:** Chapter 4 only.
+
+### Garshasp
+
+**Role (Chapters 01–04, approved mapping 2026-10-10):** A remembered captain
+from Tahmures's father's court, offstage in Chapter 1; known only through the
+Keeper's handwriting attribution. The father remains unnamed in the story.
+
+**Knowledge:** A familiar name (or handwriting) does not establish the source
+or authority of a command; attribution by resemblance is a hypothesis.
+
+**Previous appearances:** Chapter 1 (offstage).
+
+### Chapar
+
+**Role (Chapters 01–04, approved mapping 2026-10-10):** The courier who brings
+the found tablet to the Hall of Scripts in Chapter 1. "Chapar" is a Persian
+occupational word, not a mythic person's name and not a new named character.
+
+**Knowledge:** Carries a record; delivery alone does not determine its
+intended recipient, purpose, or authority. Distinct from the Messenger
+(Simurgh), who carries the tablet from the hall to the captain.
 
 ## Recurring Locations
 
@@ -368,7 +537,7 @@ schema, code, storage, access control, and human judgement own distinct duties.
 | 01 | The Three Readings | Third person; Hall of Scripts | One sentence becomes record, message, and task | Prompt roles and interface boundary | Missing speaker, recipient, situation, and requested result | Stops assuming grammar establishes function | Labels interaction elements and tests roles | A torn treaty invites unsupported completion |
 | 02 | The Mirror and the Missing Treaty | Recovered fragments; archive and council | Plausible missing clauses are treated as fact | Grounding, evidence, abstention | Missing evidence plus answer-seeking request | Accepts “insufficient evidence” as useful | Separates written, inferred, and unknown | Governors disagree about the “best” bridge |
 | 03 | The Bridge of Five Virtues | Council debate | Five correct meanings of “best” cannot decide | Requirements and acceptance criteria | Stakeholder requirements were never agreed | Inspects human values before prompt wording | Hard constraints, preferences, and bronze balance | Old records are requested to justify decisions |
-| 04 | The Letter Inside the Ledger | Archive incident | Historical command is applied as current | Prompt anatomy and instruction/data separation | Context packaging plus action boundary | Preserves evidence without granting authority | Labels data, adds current seals, tests decoys | Current seals may still conflict or be forged |
+| 04 | The Letter Inside the Ledger | Archive incident, years after the bridge council (Chapter 04 opens six years after Keyumars's death) | Historical command is applied as current | Prompt anatomy and instruction/data separation | Context packaging plus action boundary | Preserves evidence without granting authority | Labels data, adds current seals, tests decoys | Current seals may still conflict or be forged |
 | 05 | Seals Above Seals | Gate hearing and transcript | Royal, provincial, marginal, and forged orders compete | Hierarchy, authentication, escalation | Unresolved application policy | Accepts that some conflicts must escalate | Deterministic precedence and source checks | The Scribe asks whether examples can teach policy |
 | 06 | Four Examples and a Fifth | Experiment log; petition baskets | Merchant-only examples fail other petitioners | Few-shot selection and subgroup evaluation | Biased examples and aggregate evaluation | Becomes an early experimenter with held-out cases | States rule, diversifies examples, measures classes | A reusable decree has unchecked variables |
 | 07 | The Decree with Empty Seals | Royal incident report; decree workshop | Swapped values remain grammatical and dispatch | Typed prompt templates | Application validation and coupled dispatch | Treats prompt reuse as application code | Validates variables and separates render from send | Correct decrees create incompatible catalogues |
@@ -454,3 +623,7 @@ schema, code, storage, access control, and human judgement own distinct duties.
 | 2026-07-29 | Added Chapters 7–12, Part II cast, objects, forms, failure owners, and hooks | Six-chapter Part II pilot approved |
 | 2026-07-30 | Added Chapters 13–18, Part III system boundaries, artefacts, failure owners, and hooks | Six-chapter Part III pilot approved |
 | 2026-08-01 | Added Chapters 19–24, Part IV evaluation, security, operations, and control selection | Six-chapter Part IV pilot and book-wide editorial revision approved |
+| 2026-10-10 | Applied the approved Chapters 01–04 cast mapping to both editions' tale sections and closing hooks (Shahrasp, Akvan Div, Black Div, Div-e Sefid, Arzhang Div, Soroush, Simurgh, Arash, Garshasp, Jamshid, Budhasaf, Keyumars, Nariman, Sam, Chapar); added the new cast entries; locked the Keyumars chronology (Ch03 → Ch04 gap over six years; Ch04 opens six years after Keyumars's death); Nariman reframed as flood-affected council member; Persian prose in these chapters now uses طهمورث | Owner-approved character-narrative refactor (GLM implementation, pending GPT and human review) |
+| 2026-10-10 | Correction 01: recorded Jamshid's Chapter 04 life status as unspecified per owner clarification (removed the draft "dead by Chapter 04" wording from his entry and both Chapter 04 tales); corrected the Persian Chapter 03 Nariman sentence to drop the unsupported "from the market" detail | GPT review findings and owner clarification (pending GPT recheck and human signoff) |
+| 2026-10-10 | Spelling alignment: the four Persian Chapters 01–04 tale headings changed from «روایت تهمورث» to «روایت طهمورث» (prose already used طهمورث); the translation validator now enforces the tale heading per chapter range (01–04 طهمورث, 05–24 تهمورث) | Owner-authorized scoped Persian spelling decision (pending GPT recheck and human signoff); Chapters 05–24 and the translation glossary keep تهمورث pending a separate book-wide terminology decision |
+| 2026-10-10 | Record correction 02: added the owner-locked project-fiction relationship — Keyumars as Tahmures's grandfather — to the Keyumars entry as `TIER_C_PROJECT_FICTION`, with the source genealogy (Keyumars → Siamak → Hushang → Tahmures, i.e. great-grandfather read literally) kept distinct and unaltered; no tale text changed | Claude final-review finding B1 (bounded record fix, pending GPT recheck and human signoff); the relationship is an owner-authorized adaptation, not an on-page fact or a source claim |

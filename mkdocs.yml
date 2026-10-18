@@ -43,6 +43,7 @@ extra:
       lang: fa
 
 markdown_extensions:
+  abbr: {}
   admonition: {}
   attr_list: {}
   footnotes: {}
@@ -53,11 +54,18 @@ markdown_extensions:
   pymdownx.highlight:
     anchor_linenums: true
   pymdownx.inlinehilite: {}
+  pymdownx.snippets:
+    base_path: !relative $config_dir
+    auto_append:
+      - includes/en-character-abbreviations.md
   pymdownx.superfences:
     custom_fences:
       - name: mermaid
         class: mermaid
         format: !!python/name:pymdownx.superfences.fence_code_format
+
+watch:
+  - includes
 
 nav:
   - Home: index.md

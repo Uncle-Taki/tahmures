@@ -1,0 +1,15 @@
+{
+  "status": "PLANNING_ONLY_NOT_IMPLEMENTED",
+  "human_approved": false,
+  "proposed_simurgh_form": null,
+  "source": "/home/mehdi/Project/leela/tahmures/Characters/tahmures/prototypes/godot-chapter-01-01",
+  "writes_to_chapter_project": false,
+  "next_steps": [
+    "Review anatomical component boundaries and resolve occluded surfaces",
+    "Owner selects Simurgh form and reviews the actual motion gallery",
+    "Implement reusable CharacterRig instances, not cutout path substitution",
+    "Adapt StageKit positioning/scaling to source-canvas coordinates",
+    "Repair HUD layout; test reset/seek and EN/FA captions",
+    "Render both complete 173-second timelines and probe actual streams"
+  ]
+}

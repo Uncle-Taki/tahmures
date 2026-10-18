@@ -36,14 +36,14 @@ By the end of this chapter, you will be able to:
 The Hall of Scripts had thirty doors and no two handles alike. Messages arrived
 there from every province: clay impressed at the border, leather folded into
 bronze tubes, bark marked by charcoal, and silk carrying characters so fine
-that the First Scribe read them through a polished crystal.
+that Shahrasp, the First Scribe, read them through a polished crystal.
 
-One wet morning a courier brought a tablet found beside the northern river. It
-said only:
+One wet morning a chapar — a courier of the relay roads — brought a tablet found
+beside the northern river. It said only:
 
 *Count the watchfires beyond the water before moonrise.*
 
-The seal had dissolved. The courier did not know who had carried it or whom it
+The seal had dissolved. The chapar did not know who had carried it or whom it
 was meant to reach.
 
 ### The Request
@@ -51,22 +51,23 @@ was meant to reach.
 Tahmures set the tablet on a cedar stand. “Tell me what this is,” he said to
 three servants of the hall.
 
-The Keeper of Scripts examined the marks. The Messenger checked the tablet's
-weight and the remains of its cord. The Literal Div read the sentence twice,
-then left without speaking.
+Akvan Div, the Keeper of Scripts, examined the marks. Simurgh, the Messenger,
+checked the tablet's weight and the remains of its cord. The Black Div — the
+Literal Div, as the hall called him — read the sentence twice, then left without
+speaking.
 
 Tahmures expected three descriptions of the same object.
 
 ### The Unexpected Result
 
-The Keeper entered it in the catalogue under *Military Records: Northern
-Frontier*. “It is an old command,” she explained. “The hand resembles a captain
-who served your father.”
+Akvan Div entered it in the catalogue under *Military Records: Northern
+Frontier*. “It is an old command,” she explained. “The hand resembles Garshasp,
+a captain who served your father.”
 
-The Messenger wrapped it in oilcloth. “It is an urgent message,” he said. “I
-will take it to the present captain.”
+Simurgh wrapped it in oilcloth. “It is an urgent message,” he said. “I
+will take it to Arash, the present captain.”
 
-The Literal Div returned at dusk, soaked to the waist. “There are eleven
+The Black Div returned at dusk, soaked to the waist. “There are eleven
 watchfires,” he reported.
 
 “You crossed the river?”
@@ -78,20 +79,20 @@ watchfires,” he reported.
 “The tablet asked for a count.”
 
 The eleven fires proved to be charcoal burners camped outside the frontier.
-Meanwhile, the Messenger's arrival caused the northern captain to send riders
-into the hills. By midnight, three villages believed an invasion had begun.
+Meanwhile, Simurgh's arrival caused Arash to send riders into the hills. By
+midnight, three villages believed an invasion had begun.
 Nothing written on the tablet was false, yet the hall had turned one line into
 a record, a message, and a current command.
 
 ### The Discovery
 
-Tahmures first ordered the First Scribe to make the instruction longer. The
+Tahmures first ordered Shahrasp to make the instruction longer. The
 scribe sharpened his reed.
 
 “Write: Examine this tablet carefully, consider every word, and tell me exactly
 what it means.”
 
-The Keeper raised an eyebrow. “That still leaves *means* to carry a large
+Akvan Div raised an eyebrow. “That still leaves *means* to carry a large
 burden.”
 
 Tahmures stopped the reed. He placed four empty labels on the table: *speaker*,
@@ -103,12 +104,12 @@ was missing. Once written on a separate sealed card, that request no longer
 competed with the words being examined.
 
 They tested the method on other records. “Close the western gate” was a current
-task when sent by the Gatekeeper to the watch, evidence when quoted in a trial,
-and mere ink when used by an apprentice practising letters. A question could
+task when sent by Arash, the Gatekeeper, to the watch, evidence when quoted in a
+trial, and mere ink when used by an apprentice practising letters. A question could
 be a request for an answer, an example of punctuation, or a sentence to
 translate. Grammar suggested a role; it did not establish one.
 
-The First Scribe added a new line to the experiment ledger:
+Shahrasp added a new line to the experiment ledger:
 
 *Before judging the answer, record what each piece of language is doing here.*
 
@@ -379,8 +380,8 @@ validation, and enforcement.
 
 ## The Next Tale
 
-While cataloguing the river tablet, the Keeper of Scripts opens a treaty whose
-middle has been eaten away by damp. The Mirror Div says the missing promises
+While cataloguing the river tablet, Akvan Div opens a treaty whose middle has
+been eaten away by damp. Div-e Sefid, the Mirror Div, says the missing promises
 are obvious—and writes them before anyone asks how it knows.
 
 <!-- next: ch02 -->

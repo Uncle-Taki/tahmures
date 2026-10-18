@@ -1,0 +1,813 @@
+{
+  "schema_version": 1,
+  "phase": "LAYOUT01_FACIAL_STATE_PROTOTYPE_01",
+  "status": "PROTOTYPE_CANDIDATE",
+  "human_approved": false,
+  "character_id": "tahmures",
+  "display_name_fa": "طهمورث",
+  "canvas": [
+    1086,
+    1448
+  ],
+  "source": {
+    "manifest_path": "Characters/tahmures/versions/layout01-v7/manifest.json",
+    "manifest_sha256": "b7539646b960fc9313c907effabb1f5de84ca816678fc0a0d1224c5f46ee1cd4",
+    "index_sha256": "3b2ad23048da5ba009069f6c0ca86f78e6694927e151ac3e7b5e84393f4347bc",
+    "approval": "Characters/tahmures/workflow/approvals/layout01-v7-human-approval.json"
+  },
+  "new_assets": [
+    {
+      "id": "eye_left_closed",
+      "path": "assets/eye_left_closed.png",
+      "sha256": "9121114fba923738388c9176f68706aee6f714092247d98586619be560f85255",
+      "mask_path": "masks/eye_left_closed.png",
+      "alpha_bbox": [
+        551,
+        131,
+        609,
+        191
+      ],
+      "pivot": {
+        "x": 579,
+        "y": 160
+      },
+      "status": "PROTOTYPE_RECONSTRUCTION_NOT_HUMAN_APPROVED",
+      "method": "Local skin underdraw plus supersampled closed eyelid arc; all new artwork reconstructed",
+      "provenance": {
+        "source_pixel_mask": "provenance/eye_left_closed__source.png",
+        "reconstructed_pixel_mask": "provenance/eye_left_closed__reconstructed.png"
+      },
+      "recipe": {
+        "skin_sample_count": 1041,
+        "skin_plane_coefficients": [
+          [
+            247.9365994236303,
+            178.14505283381442,
+            116.2747358309322
+          ],
+          [
+            -0.8190908221263322,
+            -1.1252377900028447,
+            -1.1332742842712442
+          ],
+          [
+            -0.32030831994978615,
+            -0.5268806505972555,
+            -0.36182072367191337
+          ]
+        ],
+        "eyelid_bezier_control_points": [
+          [
+            562,
+            160
+          ],
+          [
+            571,
+            166
+          ],
+          [
+            587,
+            166
+          ],
+          [
+            596,
+            160
+          ]
+        ],
+        "stroke_width_px": 2.25
+      }
+    },
+    {
+      "id": "eye_right_closed",
+      "path": "assets/eye_right_closed.png",
+      "sha256": "1961f58b9fb27575a9583e160c2f7b506702c40c69e16ed75ca1d1afae6ade55",
+      "mask_path": "masks/eye_right_closed.png",
+      "alpha_bbox": [
+        475,
+        131,
+        535,
+        191
+      ],
+      "pivot": {
+        "x": 505,
+        "y": 160
+      },
+      "status": "PROTOTYPE_RECONSTRUCTION_NOT_HUMAN_APPROVED",
+      "method": "Local skin underdraw plus supersampled closed eyelid arc; all new artwork reconstructed",
+      "provenance": {
+        "source_pixel_mask": "provenance/eye_right_closed__source.png",
+        "reconstructed_pixel_mask": "provenance/eye_right_closed__reconstructed.png"
+      },
+      "recipe": {
+        "skin_sample_count": 1220,
+        "skin_plane_coefficients": [
+          [
+            248.66639344262708,
+            179.468852459014,
+            116.08934426229456
+          ],
+          [
+            -0.44711399225871995,
+            -0.5096136487683357,
+            -0.7853635031863986
+          ],
+          [
+            0.21929318541544587,
+            -0.30872461991149014,
+            -0.5745618940735002
+          ]
+        ],
+        "eyelid_bezier_control_points": [
+          [
+            488,
+            160
+          ],
+          [
+            497,
+            166
+          ],
+          [
+            513,
+            166
+          ],
+          [
+            522,
+            160
+          ]
+        ],
+        "stroke_width_px": 2.25
+      }
+    },
+    {
+      "id": "thinking_brow_underlay",
+      "path": "assets/thinking_brow_underlay.png",
+      "sha256": "aa6b46f99cc302ca4f296052a8728ea44bd4d74781ba84ee2e6acd0cce90d238",
+      "mask_path": "masks/thinking_brow_underlay.png",
+      "alpha_bbox": [
+        552,
+        106,
+        613,
+        138
+      ],
+      "pivot": {
+        "x": 579,
+        "y": 116
+      },
+      "status": "PROTOTYPE_RECONSTRUCTION_NOT_HUMAN_APPROVED",
+      "method": "Local reconstructed skin beneath original eyebrow footprint for one-pixel upward shift",
+      "provenance": {
+        "source_pixel_mask": "provenance/thinking_brow_underlay__source.png",
+        "reconstructed_pixel_mask": "provenance/thinking_brow_underlay__reconstructed.png"
+      },
+      "recipe": {
+        "skin_sample_count": 825,
+        "skin_plane_coefficients": [
+          [
+            247.88969696969644,
+            178.89696969697002,
+            116.47878787878761
+          ],
+          [
+            -1.1197154163863037,
+            -0.6766871953277379,
+            -0.08343706369512356
+          ],
+          [
+            0.11324383656763691,
+            -0.047041117487490715,
+            1.6093327780049287
+          ]
+        ]
+      }
+    }
+  ],
+  "render_order": [
+    "hair_back",
+    "head_base",
+    "ear_right",
+    "ear_left",
+    "beard",
+    "lower_face_neutral",
+    "nose",
+    "eye_right",
+    "eye_left",
+    "eyebrow_right",
+    "eyebrow_left",
+    "moustache",
+    "diadem_gold"
+  ],
+  "states": {
+    "neutral": {
+      "group": "puppet_core_neutral"
+    },
+    "blink_closed": {
+      "group": "puppet_core_neutral",
+      "replace": {
+        "eye_left": "eye_left_closed",
+        "eye_right": "eye_right_closed"
+      }
+    },
+    "thinking": {
+      "group": "puppet_core_neutral",
+      "auxiliary_after_head_base": "thinking_brow_underlay",
+      "move": {
+        "sprite": "eyebrow_left",
+        "dx": 0,
+        "dy": -1
+      }
+    },
+    "open_test": {
+      "group": "puppet_core_open_test"
+    },
+    "mouthless": {
+      "group": "puppet_core"
+    }
+  },
+  "timeline": [
+    {
+      "frame": 0,
+      "start_ms": 0,
+      "duration_ms": 80,
+      "state": "neutral"
+    },
+    {
+      "frame": 1,
+      "start_ms": 80,
+      "duration_ms": 90,
+      "state": "neutral"
+    },
+    {
+      "frame": 2,
+      "start_ms": 170,
+      "duration_ms": 80,
+      "state": "neutral"
+    },
+    {
+      "frame": 3,
+      "start_ms": 250,
+      "duration_ms": 80,
+      "state": "neutral"
+    },
+    {
+      "frame": 4,
+      "start_ms": 330,
+      "duration_ms": 90,
+      "state": "neutral"
+    },
+    {
+      "frame": 5,
+      "start_ms": 420,
+      "duration_ms": 80,
+      "state": "neutral"
+    },
+    {
+      "frame": 6,
+      "start_ms": 500,
+      "duration_ms": 80,
+      "state": "neutral"
+    },
+    {
+      "frame": 7,
+      "start_ms": 580,
+      "duration_ms": 90,
+      "state": "neutral"
+    },
+    {
+      "frame": 8,
+      "start_ms": 670,
+      "duration_ms": 80,
+      "state": "neutral"
+    },
+    {
+      "frame": 9,
+      "start_ms": 750,
+      "duration_ms": 80,
+      "state": "neutral"
+    },
+    {
+      "frame": 10,
+      "start_ms": 830,
+      "duration_ms": 90,
+      "state": "neutral"
+    },
+    {
+      "frame": 11,
+      "start_ms": 920,
+      "duration_ms": 80,
+      "state": "neutral"
+    },
+    {
+      "frame": 12,
+      "start_ms": 1000,
+      "duration_ms": 80,
+      "state": "neutral"
+    },
+    {
+      "frame": 13,
+      "start_ms": 1080,
+      "duration_ms": 90,
+      "state": "neutral"
+    },
+    {
+      "frame": 14,
+      "start_ms": 1170,
+      "duration_ms": 80,
+      "state": "neutral"
+    },
+    {
+      "frame": 15,
+      "start_ms": 1250,
+      "duration_ms": 80,
+      "state": "neutral"
+    },
+    {
+      "frame": 16,
+      "start_ms": 1330,
+      "duration_ms": 90,
+      "state": "neutral"
+    },
+    {
+      "frame": 17,
+      "start_ms": 1420,
+      "duration_ms": 80,
+      "state": "neutral"
+    },
+    {
+      "frame": 18,
+      "start_ms": 1500,
+      "duration_ms": 80,
+      "state": "blink_closed"
+    },
+    {
+      "frame": 19,
+      "start_ms": 1580,
+      "duration_ms": 90,
+      "state": "blink_closed"
+    },
+    {
+      "frame": 20,
+      "start_ms": 1670,
+      "duration_ms": 80,
+      "state": "blink_closed"
+    },
+    {
+      "frame": 21,
+      "start_ms": 1750,
+      "duration_ms": 80,
+      "state": "neutral"
+    },
+    {
+      "frame": 22,
+      "start_ms": 1830,
+      "duration_ms": 90,
+      "state": "neutral"
+    },
+    {
+      "frame": 23,
+      "start_ms": 1920,
+      "duration_ms": 80,
+      "state": "neutral"
+    },
+    {
+      "frame": 24,
+      "start_ms": 2000,
+      "duration_ms": 80,
+      "state": "neutral"
+    },
+    {
+      "frame": 25,
+      "start_ms": 2080,
+      "duration_ms": 90,
+      "state": "neutral"
+    },
+    {
+      "frame": 26,
+      "start_ms": 2170,
+      "duration_ms": 80,
+      "state": "neutral"
+    },
+    {
+      "frame": 27,
+      "start_ms": 2250,
+      "duration_ms": 80,
+      "state": "thinking"
+    },
+    {
+      "frame": 28,
+      "start_ms": 2330,
+      "duration_ms": 90,
+      "state": "thinking"
+    },
+    {
+      "frame": 29,
+      "start_ms": 2420,
+      "duration_ms": 80,
+      "state": "thinking"
+    },
+    {
+      "frame": 30,
+      "start_ms": 2500,
+      "duration_ms": 80,
+      "state": "thinking"
+    },
+    {
+      "frame": 31,
+      "start_ms": 2580,
+      "duration_ms": 90,
+      "state": "thinking"
+    },
+    {
+      "frame": 32,
+      "start_ms": 2670,
+      "duration_ms": 80,
+      "state": "thinking"
+    },
+    {
+      "frame": 33,
+      "start_ms": 2750,
+      "duration_ms": 80,
+      "state": "thinking"
+    },
+    {
+      "frame": 34,
+      "start_ms": 2830,
+      "duration_ms": 90,
+      "state": "thinking"
+    },
+    {
+      "frame": 35,
+      "start_ms": 2920,
+      "duration_ms": 80,
+      "state": "thinking"
+    },
+    {
+      "frame": 36,
+      "start_ms": 3000,
+      "duration_ms": 80,
+      "state": "thinking"
+    },
+    {
+      "frame": 37,
+      "start_ms": 3080,
+      "duration_ms": 90,
+      "state": "thinking"
+    },
+    {
+      "frame": 38,
+      "start_ms": 3170,
+      "duration_ms": 80,
+      "state": "thinking"
+    },
+    {
+      "frame": 39,
+      "start_ms": 3250,
+      "duration_ms": 80,
+      "state": "thinking"
+    },
+    {
+      "frame": 40,
+      "start_ms": 3330,
+      "duration_ms": 90,
+      "state": "thinking"
+    },
+    {
+      "frame": 41,
+      "start_ms": 3420,
+      "duration_ms": 80,
+      "state": "thinking"
+    },
+    {
+      "frame": 42,
+      "start_ms": 3500,
+      "duration_ms": 80,
+      "state": "thinking"
+    },
+    {
+      "frame": 43,
+      "start_ms": 3580,
+      "duration_ms": 90,
+      "state": "thinking"
+    },
+    {
+      "frame": 44,
+      "start_ms": 3670,
+      "duration_ms": 80,
+      "state": "thinking"
+    },
+    {
+      "frame": 45,
+      "start_ms": 3750,
+      "duration_ms": 80,
+      "state": "thinking"
+    },
+    {
+      "frame": 46,
+      "start_ms": 3830,
+      "duration_ms": 90,
+      "state": "thinking"
+    },
+    {
+      "frame": 47,
+      "start_ms": 3920,
+      "duration_ms": 80,
+      "state": "thinking"
+    },
+    {
+      "frame": 48,
+      "start_ms": 4000,
+      "duration_ms": 80,
+      "state": "thinking"
+    },
+    {
+      "frame": 49,
+      "start_ms": 4080,
+      "duration_ms": 90,
+      "state": "thinking"
+    },
+    {
+      "frame": 50,
+      "start_ms": 4170,
+      "duration_ms": 80,
+      "state": "thinking"
+    },
+    {
+      "frame": 51,
+      "start_ms": 4250,
+      "duration_ms": 80,
+      "state": "neutral"
+    },
+    {
+      "frame": 52,
+      "start_ms": 4330,
+      "duration_ms": 90,
+      "state": "neutral"
+    },
+    {
+      "frame": 53,
+      "start_ms": 4420,
+      "duration_ms": 80,
+      "state": "neutral"
+    },
+    {
+      "frame": 54,
+      "start_ms": 4500,
+      "duration_ms": 80,
+      "state": "blink_closed"
+    },
+    {
+      "frame": 55,
+      "start_ms": 4580,
+      "duration_ms": 90,
+      "state": "blink_closed"
+    },
+    {
+      "frame": 56,
+      "start_ms": 4670,
+      "duration_ms": 80,
+      "state": "blink_closed"
+    },
+    {
+      "frame": 57,
+      "start_ms": 4750,
+      "duration_ms": 80,
+      "state": "neutral"
+    },
+    {
+      "frame": 58,
+      "start_ms": 4830,
+      "duration_ms": 90,
+      "state": "neutral"
+    },
+    {
+      "frame": 59,
+      "start_ms": 4920,
+      "duration_ms": 80,
+      "state": "neutral"
+    },
+    {
+      "frame": 60,
+      "start_ms": 5000,
+      "duration_ms": 80,
+      "state": "open_test"
+    },
+    {
+      "frame": 61,
+      "start_ms": 5080,
+      "duration_ms": 90,
+      "state": "open_test"
+    },
+    {
+      "frame": 62,
+      "start_ms": 5170,
+      "duration_ms": 80,
+      "state": "open_test"
+    },
+    {
+      "frame": 63,
+      "start_ms": 5250,
+      "duration_ms": 80,
+      "state": "open_test"
+    },
+    {
+      "frame": 64,
+      "start_ms": 5330,
+      "duration_ms": 90,
+      "state": "open_test"
+    },
+    {
+      "frame": 65,
+      "start_ms": 5420,
+      "duration_ms": 80,
+      "state": "open_test"
+    },
+    {
+      "frame": 66,
+      "start_ms": 5500,
+      "duration_ms": 80,
+      "state": "open_test"
+    },
+    {
+      "frame": 67,
+      "start_ms": 5580,
+      "duration_ms": 90,
+      "state": "open_test"
+    },
+    {
+      "frame": 68,
+      "start_ms": 5670,
+      "duration_ms": 80,
+      "state": "open_test"
+    },
+    {
+      "frame": 69,
+      "start_ms": 5750,
+      "duration_ms": 80,
+      "state": "open_test"
+    },
+    {
+      "frame": 70,
+      "start_ms": 5830,
+      "duration_ms": 90,
+      "state": "open_test"
+    },
+    {
+      "frame": 71,
+      "start_ms": 5920,
+      "duration_ms": 80,
+      "state": "open_test"
+    },
+    {
+      "frame": 72,
+      "start_ms": 6000,
+      "duration_ms": 80,
+      "state": "neutral"
+    },
+    {
+      "frame": 73,
+      "start_ms": 6080,
+      "duration_ms": 90,
+      "state": "neutral"
+    },
+    {
+      "frame": 74,
+      "start_ms": 6170,
+      "duration_ms": 80,
+      "state": "neutral"
+    },
+    {
+      "frame": 75,
+      "start_ms": 6250,
+      "duration_ms": 80,
+      "state": "mouthless"
+    },
+    {
+      "frame": 76,
+      "start_ms": 6330,
+      "duration_ms": 90,
+      "state": "mouthless"
+    },
+    {
+      "frame": 77,
+      "start_ms": 6420,
+      "duration_ms": 80,
+      "state": "mouthless"
+    },
+    {
+      "frame": 78,
+      "start_ms": 6500,
+      "duration_ms": 80,
+      "state": "mouthless"
+    },
+    {
+      "frame": 79,
+      "start_ms": 6580,
+      "duration_ms": 90,
+      "state": "mouthless"
+    },
+    {
+      "frame": 80,
+      "start_ms": 6670,
+      "duration_ms": 80,
+      "state": "mouthless"
+    },
+    {
+      "frame": 81,
+      "start_ms": 6750,
+      "duration_ms": 80,
+      "state": "mouthless"
+    },
+    {
+      "frame": 82,
+      "start_ms": 6830,
+      "duration_ms": 90,
+      "state": "mouthless"
+    },
+    {
+      "frame": 83,
+      "start_ms": 6920,
+      "duration_ms": 80,
+      "state": "mouthless"
+    },
+    {
+      "frame": 84,
+      "start_ms": 7000,
+      "duration_ms": 80,
+      "state": "mouthless"
+    },
+    {
+      "frame": 85,
+      "start_ms": 7080,
+      "duration_ms": 90,
+      "state": "mouthless"
+    },
+    {
+      "frame": 86,
+      "start_ms": 7170,
+      "duration_ms": 80,
+      "state": "mouthless"
+    },
+    {
+      "frame": 87,
+      "start_ms": 7250,
+      "duration_ms": 80,
+      "state": "neutral"
+    },
+    {
+      "frame": 88,
+      "start_ms": 7330,
+      "duration_ms": 90,
+      "state": "neutral"
+    },
+    {
+      "frame": 89,
+      "start_ms": 7420,
+      "duration_ms": 80,
+      "state": "neutral"
+    },
+    {
+      "frame": 90,
+      "start_ms": 7500,
+      "duration_ms": 80,
+      "state": "neutral"
+    },
+    {
+      "frame": 91,
+      "start_ms": 7580,
+      "duration_ms": 90,
+      "state": "neutral"
+    },
+    {
+      "frame": 92,
+      "start_ms": 7670,
+      "duration_ms": 80,
+      "state": "neutral"
+    },
+    {
+      "frame": 93,
+      "start_ms": 7750,
+      "duration_ms": 80,
+      "state": "neutral"
+    },
+    {
+      "frame": 94,
+      "start_ms": 7830,
+      "duration_ms": 90,
+      "state": "neutral"
+    },
+    {
+      "frame": 95,
+      "start_ms": 7920,
+      "duration_ms": 80,
+      "state": "neutral"
+    }
+  ],
+  "duration_ms": 8000,
+  "fps_target": 12,
+  "limits": [
+    "front view only",
+    "closed eyelids are reconstructed prototype art",
+    "one-pixel brow shift only",
+    "existing small-open patch is not a speech viseme",
+    "no combined expression transforms, body, Godot, TTS or lip sync"
+  ]
+}

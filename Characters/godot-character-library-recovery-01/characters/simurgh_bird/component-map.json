@@ -1,0 +1,171 @@
+{
+  "character_id": "simurgh_bird",
+  "source_file": "Characters/simurgh - bird.png",
+  "source_sha256": "cc9a3ea2078784db7db1a1d4e48db948f691af776971e2e0d783af591181cb6b",
+  "canvas": [
+    1086,
+    1448
+  ],
+  "skeleton_type": "avian_messenger_variant (crest/head/beak, body/breast, wing_near_left, wing_far_right, tail_plumes, leg_left_talon, leg_right_talon, scroll_tube_prop)",
+  "technical_readiness_state": "candidate_partition_needs_anatomical_review",
+  "segmentation_method": "provisional_disjoint_search_windows_not_anatomical_segmentation",
+  "supported_states": [
+    "neutral",
+    "idle"
+  ],
+  "unsupported_states": [
+    "blink",
+    "gaze_left",
+    "gaze_right",
+    "gesture_small"
+  ],
+  "movement_scope": "whole_rig_translation_only_until_seams_reviewed",
+  "human_approved": false,
+  "draw_order_bottom_to_top": [
+    {
+      "component_id": "crest_and_head",
+      "pivot_canvas": [
+        545,
+        225
+      ],
+      "tight_alpha_bbox": [
+        362,
+        25,
+        716,
+        260
+      ],
+      "local_motion_approved": false,
+      "opaque_pixels": 46829,
+      "sha256": "1957cf8bbf323d0c7d6163a18a34621f0a21c1bc7f50a144150ce6f88518946f"
+    },
+    {
+      "component_id": "eye_and_brow",
+      "pivot_canvas": [
+        555,
+        150
+      ],
+      "tight_alpha_bbox": [
+        500,
+        115,
+        605,
+        185
+      ],
+      "local_motion_approved": false,
+      "opaque_pixels": 7350,
+      "sha256": "c6fe4f1eee14343aea5941507e3e300799352783d84fc9a67b23bcb66860c4ee"
+    },
+    {
+      "component_id": "neck_and_breast",
+      "pivot_canvas": [
+        550,
+        560
+      ],
+      "tight_alpha_bbox": [
+        422,
+        260,
+        829,
+        1340
+      ],
+      "local_motion_approved": false,
+      "opaque_pixels": 42815,
+      "sha256": "d09802c7f5c542e3cb3310007617aed1e8cab7ed0b3bbd0e6d0efed51f3300d7"
+    },
+    {
+      "component_id": "scroll_cylinder_prop",
+      "pivot_canvas": [
+        560,
+        445
+      ],
+      "tight_alpha_bbox": [
+        422,
+        275,
+        710,
+        535
+      ],
+      "local_motion_approved": false,
+      "opaque_pixels": 27638,
+      "sha256": "131887cfea7233df881a3dbafed4de5ba31a159027c81bd3a925fbaf5432a351"
+    },
+    {
+      "component_id": "wing_near_left",
+      "pivot_canvas": [
+        435,
+        340
+      ],
+      "tight_alpha_bbox": [
+        310,
+        285,
+        520,
+        720
+      ],
+      "local_motion_approved": false,
+      "opaque_pixels": 53977,
+      "sha256": "a409672359e99ae5d52e066d2cf934cea2f42304b254f03e494fed019638237b"
+    },
+    {
+      "component_id": "wing_far_right",
+      "pivot_canvas": [
+        670,
+        345
+      ],
+      "tight_alpha_bbox": [
+        620,
+        290,
+        770,
+        921
+      ],
+      "local_motion_approved": false,
+      "opaque_pixels": 56754,
+      "sha256": "ed76b532c1a9297676a705d0812118875052ff813bfa75064111d8afdc4390eb"
+    },
+    {
+      "component_id": "tail_plumes",
+      "pivot_canvas": [
+        430,
+        780
+      ],
+      "tight_alpha_bbox": [
+        79,
+        720,
+        755,
+        1315
+      ],
+      "local_motion_approved": false,
+      "opaque_pixels": 173057,
+      "sha256": "781fb5f3d78cfc22fd2a14c5ba2ec9f104f9cf0183571b21c8c1a480fb94ccc0"
+    },
+    {
+      "component_id": "leg_left_talon",
+      "pivot_canvas": [
+        445,
+        960
+      ],
+      "tight_alpha_bbox": [
+        320,
+        930,
+        545,
+        1393
+      ],
+      "local_motion_approved": false,
+      "opaque_pixels": 87458,
+      "sha256": "04575ceaa77ef02011ace66615c46efef96526cda760a3b55059c1c54e64a8f2"
+    },
+    {
+      "component_id": "leg_right_talon",
+      "pivot_canvas": [
+        585,
+        960
+      ],
+      "tight_alpha_bbox": [
+        545,
+        930,
+        775,
+        1372
+      ],
+      "local_motion_approved": false,
+      "opaque_pixels": 60463,
+      "sha256": "ec9fac9207876488f27d7cc4ad54368a94b7a11076bd0afc9cde1ba2f214b628"
+    }
+  ],
+  "sockets": []
+}

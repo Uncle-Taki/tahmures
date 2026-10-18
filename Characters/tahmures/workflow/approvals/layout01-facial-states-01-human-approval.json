@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-09",
+  "authority": "HUMAN_OWNER",
+  "actual_response": "this is the result of Claude. judge them and consider i approved the results",
+  "approval_interpretation": "Explicit approval of the reviewed facial-state prototype following the accepted independent Claude review.",
+  "candidate": "Characters/tahmures/prototypes/layout01-facial-states-01",
+  "manifest_sha256": "b081e9190f5ddf1e8eff643863b1bbee5ab7b4a176179a26703b1c4ad32e4ba4",
+  "file_index_sha256": "6135d7b65239919ebb2834913aa20b93d391d16d40f2a35c4a499e337b1cea21",
+  "indexed_artifact_count": 128,
+  "independent_review": "Characters/tahmures/workflow/layout01-facial-states-01/reports/claude/final-review-01.md",
+  "independent_review_token": "CLAUDE_FACIAL_STATE_PROTOTYPE_01_ACCEPTED",
+  "approved_scope": "Front-view facial-state prototype including reconstructed closed-eyelid surfaces, the one-pixel thinking brow test, and the reviewed neutral, open-test, and mouthless states, for continued prototype/Godot integration work.",
+  "not_approved": [
+    "permanent canonical character identity or production asset promotion",
+    "unreviewed poses, expressions, combined transforms, or head rotation",
+    "body, torso, arm, or pointing artwork",
+    "speech-viseme or lip-sync quality",
+    "audio pronunciation or narration performance",
+    "final video, publication, or release"
+  ]
+}

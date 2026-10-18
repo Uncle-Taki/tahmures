@@ -1,0 +1,566 @@
+{
+  "archive_repo_path": "Characters/tahmures/tahmures_sprites_layout01_v2.zip",
+  "archive_sha256": "8dbe2832fe4b7728a954ae8c94ac4ca5ec5864584d7dfbbd8efd19be8e72e1f0",
+  "zip_crc_valid": true,
+  "duplicate_members": false,
+  "unsafe_paths": false,
+  "members": [
+    {
+      "path": "extraction_report.md",
+      "bytes": 3686,
+      "sha256": "4006f7b5fc84ca35d223c700515efb25661f4325f99ef28016c342aeb47d453d"
+    },
+    {
+      "path": "validation_results.json",
+      "bytes": 653,
+      "sha256": "266784bb70b1784c90e3c82f1311d35e9cea54f3e47b69b45fe3f0acb2afd61f"
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 11250,
+      "sha256": "d47b9ed1081e4f19c2c99a35ca0e915d16f94116bd15fd95d299a4eee3ec9ff6"
+    },
+    {
+      "path": "mouths/neutral_mouth.png",
+      "bytes": 11943,
+      "sha256": "a2e996fadd36d8ad972f629641553e7846fa26787c3d874214a3d78bd6cf9f6f",
+      "mode": "RGBA",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alpha_bbox": [
+        501,
+        229,
+        580,
+        268
+      ]
+    },
+    {
+      "path": "previews/layout01_original_vs_reconstruction.png",
+      "bytes": 186322,
+      "sha256": "30412ac207848ad5a4d0d76da8016e7a3226e429d43a7ec7359294995c29a253",
+      "mode": "RGB",
+      "dimensions": [
+        1230,
+        490
+      ]
+    },
+    {
+      "path": "previews/layout01_mouthless_head.png",
+      "bytes": 116663,
+      "sha256": "537b94ba61bb16d83826e07668cc4ec89285b098a94281a21f8559d8671ce898",
+      "mode": "RGBA",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alpha_bbox": [
+        389,
+        16,
+        686,
+        374
+      ]
+    },
+    {
+      "path": "previews/layout01_component_QA.png",
+      "bytes": 357057,
+      "sha256": "fbe0d3016a10199cc6cf31df5b6015a439f15cb61e17c92237df6b23dec74800",
+      "mode": "RGB",
+      "dimensions": [
+        1320,
+        1090
+      ]
+    },
+    {
+      "path": "previews/layout01_source_head.png",
+      "bytes": 137432,
+      "sha256": "d29d0552fda3f43a51a080873f32cf388a33ff4b08e2919d430db60b8a688ca9",
+      "mode": "RGBA",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alpha_bbox": [
+        389,
+        15,
+        687,
+        375
+      ]
+    },
+    {
+      "path": "previews/layout01_difference_map.png",
+      "bytes": 9502,
+      "sha256": "ab8d06c061890fa415b808d6bb1efd55193d5638e385260ea64552c2435018af",
+      "mode": "RGBA",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alpha_bbox": null
+    },
+    {
+      "path": "previews/layout01_reconstructed_head.png",
+      "bytes": 137432,
+      "sha256": "d29d0552fda3f43a51a080873f32cf388a33ff4b08e2919d430db60b8a688ca9",
+      "mode": "RGBA",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alpha_bbox": [
+        389,
+        15,
+        687,
+        375
+      ]
+    },
+    {
+      "path": "previews/default_pose_beard_source.png",
+      "bytes": 18851,
+      "sha256": "26b02e48bdcae48d5fab145510d09ca2ec127fa5a84bf9a9cad30a750fed363c",
+      "mode": "RGBA",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alpha_bbox": [
+        464,
+        218,
+        609,
+        319
+      ]
+    },
+    {
+      "path": "previews/layout01_editable_assembly_with_seams.png",
+      "bytes": 120802,
+      "sha256": "b7d486d772b6738105a14f9ea18b8c4c511047c7d386006c6c102b8f90d736a1",
+      "mode": "RGBA",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alpha_bbox": [
+        389,
+        16,
+        686,
+        374
+      ]
+    },
+    {
+      "path": "previews/default_pose_head_surface_source.png",
+      "bytes": 47217,
+      "sha256": "7155fb11598656e071fe1c9f9121b704cf5105e00bdf5f327ba0bd99c09b7583",
+      "mode": "RGBA",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alpha_bbox": [
+        436,
+        15,
+        687,
+        375
+      ]
+    },
+    {
+      "path": "masks/neutral_mouth.png",
+      "bytes": 1913,
+      "sha256": "4ec050445bcf23cd7c7a545caf421a19c1e950ce87c1a9a846ef2f503f9baee5",
+      "mode": "L",
+      "dimensions": [
+        1086,
+        1448
+      ]
+    },
+    {
+      "path": "masks/eye_left.png",
+      "bytes": 1900,
+      "sha256": "547df5bdfb2ed2a3843641a319fd3a1da587f283d54008b9118420edb34801d6",
+      "mode": "L",
+      "dimensions": [
+        1086,
+        1448
+      ]
+    },
+    {
+      "path": "masks/visible_head_domain.png",
+      "bytes": 3620,
+      "sha256": "5897638fd033055055f392c461b018b2681bc47b44f88d75fb5a7e2b9ddfb4c1",
+      "mode": "L",
+      "dimensions": [
+        1086,
+        1448
+      ]
+    },
+    {
+      "path": "masks/diadem_gold.png",
+      "bytes": 2310,
+      "sha256": "50c2c2b4220c69440ad01af1dd8cba036d7399650e57440613b3f25c7008debe",
+      "mode": "L",
+      "dimensions": [
+        1086,
+        1448
+      ]
+    },
+    {
+      "path": "masks/reconstructed_beard_underdraw.png",
+      "bytes": 1913,
+      "sha256": "4ec050445bcf23cd7c7a545caf421a19c1e950ce87c1a9a846ef2f503f9baee5",
+      "mode": "L",
+      "dimensions": [
+        1086,
+        1448
+      ]
+    },
+    {
+      "path": "masks/ear_right.png",
+      "bytes": 1883,
+      "sha256": "d70f83430e3f0970c95f83cb357c75bb662aac3867d84fb5d194dfbb1d73832e",
+      "mode": "L",
+      "dimensions": [
+        1086,
+        1448
+      ]
+    },
+    {
+      "path": "masks/nose.png",
+      "bytes": 1859,
+      "sha256": "f8a7658faafaa5908f245e00f8fe5da42854afa2f09429193092bb4fd89e3e99",
+      "mode": "L",
+      "dimensions": [
+        1086,
+        1448
+      ]
+    },
+    {
+      "path": "masks/eyebrow_right.png",
+      "bytes": 1758,
+      "sha256": "7d7f20a2e94bfb565e248d833de9cd815f9d59da2482ce9d1db1a4d3a525da11",
+      "mode": "L",
+      "dimensions": [
+        1086,
+        1448
+      ]
+    },
+    {
+      "path": "masks/hair_back.png",
+      "bytes": 4281,
+      "sha256": "3151c160ef24bf1c28b3162db2c4d6cddbd357136295e7c8ed6ce9497d9c9a69",
+      "mode": "L",
+      "dimensions": [
+        1086,
+        1448
+      ]
+    },
+    {
+      "path": "masks/eyebrow_left.png",
+      "bytes": 1777,
+      "sha256": "84885f22814c155501d7a3ced0a12330539f01f2da6047c2729fc670727c7ffa",
+      "mode": "L",
+      "dimensions": [
+        1086,
+        1448
+      ]
+    },
+    {
+      "path": "masks/ear_left.png",
+      "bytes": 1873,
+      "sha256": "a4f4a64d7ccd1c1bdfd4ee5486895fb09f324d80ffe8057eb830d3c5a019c3e2",
+      "mode": "L",
+      "dimensions": [
+        1086,
+        1448
+      ]
+    },
+    {
+      "path": "masks/beard.png",
+      "bytes": 2288,
+      "sha256": "f2a197220a400a438e49afc0c13e82a7b6da88d58255edc8b42327e2abca1116",
+      "mode": "L",
+      "dimensions": [
+        1086,
+        1448
+      ]
+    },
+    {
+      "path": "masks/head_base_visible_original.png",
+      "bytes": 4207,
+      "sha256": "a86a14f8b2439f1ad31027bd35f839497551fe6c030c2e53f02dff9a9d0d3ba0",
+      "mode": "L",
+      "dimensions": [
+        1086,
+        1448
+      ]
+    },
+    {
+      "path": "masks/eye_right.png",
+      "bytes": 1902,
+      "sha256": "c3eef6414c34ef06221c1a51052c6c5bc6a61db45c6da3c7bf3b02b3b3fa3d21",
+      "mode": "L",
+      "dimensions": [
+        1086,
+        1448
+      ]
+    },
+    {
+      "path": "masks/moustache.png",
+      "bytes": 1924,
+      "sha256": "83edcd9a6f9aa61d6d606b7790932bcb8beb48f0a2d750a3c884271169b88966",
+      "mode": "L",
+      "dimensions": [
+        1086,
+        1448
+      ]
+    },
+    {
+      "path": "masks/head_base.png",
+      "bytes": 2620,
+      "sha256": "9408e931abd98ef4cd2b4d78b412c4757ff1babcba976dd42111a9756271a8fa",
+      "mode": "L",
+      "dimensions": [
+        1086,
+        1448
+      ]
+    },
+    {
+      "path": "source/REJECTED_layout01_v1_evidence.zip",
+      "bytes": 4760632,
+      "sha256": "1a854c5cf40ad9aba041b6d2ff5d78a38c5742a3c179ad4a0e990447a302cb78"
+    },
+    {
+      "path": "source/approved_master.png",
+      "bytes": 859685,
+      "sha256": "3eedfaa5a41965c45a137a74a9137c6e59304a0604f877a81c98870c64dba2e5",
+      "mode": "RGBA",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alpha_bbox": [
+        0,
+        13,
+        1068,
+        1432
+      ]
+    },
+    {
+      "path": "face/eye_left.png",
+      "bytes": 11580,
+      "sha256": "9d9058a8210f4451c842a083ecb1a08d73a684c51001bd991af123ddf4620ab6",
+      "mode": "RGBA",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alpha_bbox": [
+        554,
+        135,
+        605,
+        187
+      ]
+    },
+    {
+      "path": "face/ear_right.png",
+      "bytes": 10521,
+      "sha256": "8b568b29e672e6298a156f4f82c9e2a54f4b48e177d985fa802a293cc8513e40",
+      "mode": "RGBA",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alpha_bbox": [
+        431,
+        165,
+        464,
+        223
+      ]
+    },
+    {
+      "path": "face/nose.png",
+      "bytes": 7599,
+      "sha256": "51e631d045df9964cf33dcc8cb87a96061900d304874cc638ac45a048320dac0",
+      "mode": "RGBA",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alpha_bbox": [
+        534,
+        136,
+        566,
+        221
+      ]
+    },
+    {
+      "path": "face/neutral_face_without_mouth.png",
+      "bytes": 116663,
+      "sha256": "537b94ba61bb16d83826e07668cc4ec89285b098a94281a21f8559d8671ce898",
+      "mode": "RGBA",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alpha_bbox": [
+        389,
+        16,
+        686,
+        374
+      ]
+    },
+    {
+      "path": "face/eyebrow_right.png",
+      "bytes": 8303,
+      "sha256": "f32bc31c08d9de377cef44b731317c12103a701c1966f5788ffb0b96ad35a757",
+      "mode": "RGBA",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alpha_bbox": [
+        476,
+        110,
+        532,
+        131
+      ]
+    },
+    {
+      "path": "face/eyebrow_left.png",
+      "bytes": 8388,
+      "sha256": "b3cd909abdacf5f13425ea8c32c7db3e1dcae2e60d0f5c60eba06878c0210021",
+      "mode": "RGBA",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alpha_bbox": [
+        556,
+        110,
+        609,
+        134
+      ]
+    },
+    {
+      "path": "face/ear_left.png",
+      "bytes": 9984,
+      "sha256": "1bfe3f41aa047e0fe5c570eb0808f427ca9a6f34d1624f8e25d0a7efd35733a0",
+      "mode": "RGBA",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alpha_bbox": [
+        617,
+        165,
+        647,
+        220
+      ]
+    },
+    {
+      "path": "face/beard.png",
+      "bytes": 19732,
+      "sha256": "5e62d4b94784910144aa9dc3f1fc12e43aead371c3c68b39ae7ca453b85eb998",
+      "mode": "RGBA",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alpha_bbox": [
+        464,
+        218,
+        609,
+        319
+      ]
+    },
+    {
+      "path": "face/eye_right.png",
+      "bytes": 11724,
+      "sha256": "08d981713c6874d33a5f36d311f5ec5414b04b81350c366fe03cee2ecb8becab",
+      "mode": "RGBA",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alpha_bbox": [
+        479,
+        135,
+        531,
+        187
+      ]
+    },
+    {
+      "path": "face/moustache.png",
+      "bytes": 10660,
+      "sha256": "5227a0c4351ff7c5b9b24f50fdd7bc856fe270d7cc44ad2bf9db78efa26473ff",
+      "mode": "RGBA",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alpha_bbox": [
+        485,
+        209,
+        597,
+        239
+      ]
+    },
+    {
+      "path": "head/diadem_gold.png",
+      "bytes": 25374,
+      "sha256": "152a35199541d9f7bc157195849e1a0e0636a9c1033a7c034630f0cb279f3558",
+      "mode": "RGBA",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alpha_bbox": [
+        432,
+        41,
+        642,
+        120
+      ]
+    },
+    {
+      "path": "head/hair_back.png",
+      "bytes": 54423,
+      "sha256": "106c4298e1e719d3b0dc3809f13f39c1399d3349d1e8ec20d51ba201b1b2fdeb",
+      "mode": "RGBA",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alpha_bbox": [
+        389,
+        16,
+        686,
+        334
+      ]
+    },
+    {
+      "path": "head/head_base.png",
+      "bytes": 26762,
+      "sha256": "871ca3518367fe4bfccde09c59c295694168605260b8bfe17a91cfce6050df7e",
+      "mode": "RGBA",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "alpha_bbox": [
+        465,
+        94,
+        617,
+        374
+      ]
+    },
+    {
+      "path": "previews/layout01_mouthless_face_inspection.png",
+      "bytes": 261821,
+      "sha256": "cec18f87da83269844ac4707a4dfdf76e3c2d1c3046acc05593604d4b57dee73",
+      "mode": "RGB",
+      "dimensions": [
+        722,
+        756
+      ]
+    }
+  ]
+}

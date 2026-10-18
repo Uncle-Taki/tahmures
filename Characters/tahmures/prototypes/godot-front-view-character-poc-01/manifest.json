@@ -1,0 +1,394 @@
+{
+  "schema_version": 1,
+  "phase": "GODOT_FRONT_VIEW_CHARACTER_POC_01",
+  "stage": "A_PROJECT_BOOTSTRAP_AND_VISUAL_RIG",
+  "generated_by": "GLM (primary implementer) under owner instruction 2026-10-09; layout revision 01 on 2026-10-10 for the HUD/safe-layout correction from reports/codex/verification-01.md",
+  "character_id": "tahmures",
+  "display_name_fa": "طهمورث",
+  "date": "2026-10-10",
+  "toolchain": {
+    "godot": "4.7.2.stable.official.ed1daf0bf",
+    "ffmpeg": "6.1.1-3ubuntu5",
+    "ffprobe": "6.1.1-3ubuntu5",
+    "espeak_ng": "1.51 (auditioned and REJECTED by the owner for narration; not used for any deliverable audio)",
+    "renderer": "gl_compatibility",
+    "python_for_generators": "/usr/bin/python3 (stdlib only; book venv untouched)"
+  },
+  "approved_inputs": {
+    "package": "Characters/tahmures/prototypes/layout01-facial-states-01",
+    "manifest_sha256": "b081e9190f5ddf1e8eff643863b1bbee5ab7b4a176179a26703b1c4ad32e4ba4",
+    "files_sha256_json_sha256": "6135d7b65239919ebb2834913aa20b93d391d16d40f2a35c4a499e337b1cea21",
+    "human_approval": "Characters/tahmures/workflow/approvals/layout01-facial-states-01-human-approval.json",
+    "v7_source_package": "Characters/tahmures/versions/layout01-v7",
+    "v7_manifest_sha256": "b7539646b960fc9313c907effabb1f5de84ca816678fc0a0d1224c5f46ee1cd4",
+    "v7_index_sha256": "3b2ad23048da5ba009069f6c0ca86f78e6694927e151ac3e7b5e84393f4347bc",
+    "copied_components": {
+      "beard.png": {
+        "origin_path": "Characters/tahmures/versions/layout01-v7/face/beard.png",
+        "sha256": "9acfccfb432ee10803cfc1bc47bc6adf028f8c2edd24e65f026fe5b9c30b636e"
+      },
+      "diadem_gold.png": {
+        "origin_path": "Characters/tahmures/versions/layout01-v7/head/diadem_gold.png",
+        "sha256": "452683dfcb4f8e09e8bb6f00df7aef3699a36bc93622fb8ccb2304088cb6724c"
+      },
+      "ear_left.png": {
+        "origin_path": "Characters/tahmures/versions/layout01-v7/face/ear_left.png",
+        "sha256": "1bfe3f41aa047e0fe5c570eb0808f427ca9a6f34d1624f8e25d0a7efd35733a0"
+      },
+      "ear_right.png": {
+        "origin_path": "Characters/tahmures/versions/layout01-v7/face/ear_right.png",
+        "sha256": "8b568b29e672e6298a156f4f82c9e2a54f4b48e177d985fa802a293cc8513e40"
+      },
+      "eye_left.png": {
+        "origin_path": "Characters/tahmures/versions/layout01-v7/face/eye_left.png",
+        "sha256": "9d9058a8210f4451c842a083ecb1a08d73a684c51001bd991af123ddf4620ab6"
+      },
+      "eye_left_closed.png": {
+        "origin_path": "Characters/tahmures/prototypes/layout01-facial-states-01/assets/eye_left_closed.png",
+        "sha256": "9121114fba923738388c9176f68706aee6f714092247d98586619be560f85255"
+      },
+      "eye_right.png": {
+        "origin_path": "Characters/tahmures/versions/layout01-v7/face/eye_right.png",
+        "sha256": "08d981713c6874d33a5f36d311f5ec5414b04b81350c366fe03cee2ecb8becab"
+      },
+      "eye_right_closed.png": {
+        "origin_path": "Characters/tahmures/prototypes/layout01-facial-states-01/assets/eye_right_closed.png",
+        "sha256": "1961f58b9fb27575a9583e160c2f7b506702c40c69e16ed75ca1d1afae6ade55"
+      },
+      "eyebrow_left.png": {
+        "origin_path": "Characters/tahmures/versions/layout01-v7/face/eyebrow_left.png",
+        "sha256": "b3cd909abdacf5f13425ea8c32c7db3e1dcae2e60d0f5c60eba06878c0210021"
+      },
+      "eyebrow_right.png": {
+        "origin_path": "Characters/tahmures/versions/layout01-v7/face/eyebrow_right.png",
+        "sha256": "f32bc31c08d9de377cef44b731317c12103a701c1966f5788ffb0b96ad35a757"
+      },
+      "hair_back.png": {
+        "origin_path": "Characters/tahmures/versions/layout01-v7/head/hair_back.png",
+        "sha256": "2c6ca92b17b20bff8c36b27e7f3a90dad1c690bb345ed56934d2ebffd3c410d2"
+      },
+      "head_base.png": {
+        "origin_path": "Characters/tahmures/versions/layout01-v7/head/head_base.png",
+        "sha256": "754fb445b5e27fe962b1d55af82992b5f14fae94035a7a4b23cde8b8121390b9"
+      },
+      "lower_face_neutral.png": {
+        "origin_path": "Characters/tahmures/versions/layout01-v7/mouths/lower_face_neutral.png",
+        "sha256": "a9189e8a79f228c998597d5d4c88d82a38f582e46d44d639ae1c8382d8a07ee5"
+      },
+      "lower_face_open_test.png": {
+        "origin_path": "Characters/tahmures/versions/layout01-v7/mouths/lower_face_open_test.png",
+        "sha256": "ddc9c082cbc95af5208cf97a3b615626e50dd82b6ea547d5614fa5b5f57fcee6"
+      },
+      "moustache.png": {
+        "origin_path": "Characters/tahmures/versions/layout01-v7/face/moustache.png",
+        "sha256": "ef26dbc275d58f6352e7a65a796e4ae7f155fa91701e65f32c2ee1628cfa8c2c"
+      },
+      "nose.png": {
+        "origin_path": "Characters/tahmures/versions/layout01-v7/face/nose.png",
+        "sha256": "51e631d045df9964cf33dcc8cb87a96061900d304874cc638ac45a048320dac0"
+      },
+      "thinking_brow_underlay.png": {
+        "origin_path": "Characters/tahmures/prototypes/layout01-facial-states-01/assets/thinking_brow_underlay.png",
+        "sha256": "aa6b46f99cc302ca4f296052a8728ea44bd4d74781ba84ee2e6acd0cce90d238"
+      }
+    },
+    "copy_verification": "all 17 files byte-identical to their origin packages (verified at copy time and re-verified by scripts/check_integrity.py)"
+  },
+  "scene": {
+    "main_scene": "res://scenes/main.tscn",
+    "project_file": "project.godot",
+    "viewport": [
+      1280,
+      720
+    ],
+    "source_canvas": [
+      1086,
+      1448
+    ],
+    "screen_mapping": "screen = world + (80, 30); camera at (560, 330), zoom 1.0",
+    "head_alignment": "all approved-head sprites unrotated/unscaled at one shared position (Head node at canvas centre (543, 724)); texture_filter=nearest; canvas coordinates equal world coordinates",
+    "draw_order_neutral_bottom_to_top": [
+      "hair_back",
+      "head_base",
+      "ear_right",
+      "ear_left",
+      "beard",
+      "lower_face_neutral",
+      "nose",
+      "eye_right",
+      "eye_left",
+      "eyebrow_right",
+      "eyebrow_left",
+      "moustache",
+      "diadem_gold"
+    ],
+    "state_mechanics": {
+      "blink": "eye_right/eye_left replaced in place by eye_right_closed/eye_left_closed",
+      "thinking": "thinking_brow_underlay inserted directly above head_base; eyebrow_left shifted up by exactly 1 source pixel (approved limit)",
+      "open_test": "lower_face_neutral swapped for lower_face_open_test at the same z slot"
+    },
+    "pivots": {
+      "Head": "(543, 724) canvas centre, children at local (0,0)",
+      "Torso": "(540, 310) neck anchor; breathing scales about this point",
+      "ShoulderR": "(432, 430), rest rotation +6 deg",
+      "ShoulderL": "(648, 430), rest rotation -6 deg, point rotation -80 deg",
+      "ElbowL/R": "local (0, 95) below shoulder",
+      "HandL/R": "local (0, 85) below elbow",
+      "PointTarget": "(960, 350)"
+    },
+    "hud_safe_layout": {
+      "revision": "stage-A layout revision 01 (2026-10-10): HUD/character overlap corrected per workflow godot-front-view-character-poc-01/reports/codex/verification-01.md; character rig, camera, approved art, timeline events and beat times unchanged",
+      "zones": {
+        "character_core_rect": [
+          465,
+          46,
+          775,
+          720
+        ],
+        "raised_arm_sweep": "circle centre (728, 460), radius 240 px",
+        "point_mark_rect": [
+          1005,
+          350,
+          1075,
+          410
+        ],
+        "header_top_left": "title/subtitle/version/fa-name/language lines, x 16-1264, y 4-102",
+        "control_column_bottom_left": "state caption + compact state label, time, hint, progress bar with tick labels below the bar, x 16-430, y 540-700",
+        "torso_callout_rect": [
+          110,
+          448,
+          430,
+          492
+        ],
+        "arm_callout_rect": [
+          975,
+          584,
+          1264,
+          648
+        ],
+        "mark_label_rect": [
+          1104,
+          402,
+          1240,
+          424
+        ]
+      },
+      "on_screen_state_labels": [
+        "IDLE",
+        "BLINK",
+        "THINKING",
+        "POINT",
+        "POINT + OPEN TEST",
+        "RETURN"
+      ],
+      "static_checks": "scripts/check_integrity.py: fixed UI rects stay inside the viewport, avoid the character/arm-sweep/mark zones, and are pairwise disjoint",
+      "pixel_checks": "scripts/verify_render.py hud_layout: head/diadem clearance bands and torso band are text-free; state label, both placeholder callouts, and the gold mark label (pointing beat only) are present"
+    }
+  },
+  "timeline": {
+    "id": "preview/preview_master",
+    "animation_library": "preview",
+    "animation": "preview_master",
+    "length_seconds": 18.0,
+    "fps_for_render": 30,
+    "loop": "linear auto-loop; R key replays immediately",
+    "events": [
+      {
+        "t": 0.0,
+        "event": "idle neutral + torso breathing (3.0 s period, 1.2% scale)"
+      },
+      {
+        "t": 2.5,
+        "event": "blink: approved closed-eyelid state"
+      },
+      {
+        "t": 2.85,
+        "event": "blink ends"
+      },
+      {
+        "t": 5.0,
+        "event": "thinking: approved brow state (underlay + 1 px brow raise)"
+      },
+      {
+        "t": 8.0,
+        "event": "thinking ends"
+      },
+      {
+        "t": 9.0,
+        "event": "point raise: temporary arm shoulder -6 deg -> -80 deg (0.8 s smoothstep), elbow staggered 9.2-10.0, hand 9.4-10.2"
+      },
+      {
+        "t": 9.8,
+        "event": "point target mark fades in (full at 10.4)"
+      },
+      {
+        "t": 10.8,
+        "event": "approved small-open mouth state (NOT speech / lip-sync)"
+      },
+      {
+        "t": 12.2,
+        "event": "mouth returns to neutral"
+      },
+      {
+        "t": 13.0,
+        "event": "arm returns (13.0-13.8); mark fades out (13.4-14.0)"
+      },
+      {
+        "t": 14.0,
+        "event": "neutral idle to end of loop"
+      }
+    ],
+    "language_hook": "-- --language=en|fa user argument or tahmures/language project setting; visual timeline identical for both languages; no audio in stage A"
+  },
+  "temporary_assets": {
+    "status": "TEMPORARY PROTOTYPE PLACEHOLDER — NOT APPROVED CHARACTER ART",
+    "in_canonical_registry": false,
+    "generator": "scripts/generate_temporary_body.py (deterministic, stdlib only, no image/AI generation)",
+    "files": [
+      "torso.png",
+      "upper_arm.png",
+      "forearm.png",
+      "hand_point.png",
+      "point_target.png"
+    ],
+    "scene_labels": [
+      "TORSO — TEMPORARY PROTOTYPE PLACEHOLDER / NOT APPROVED CHARACTER ART",
+      "ARM + HAND — TEMPORARY PROTOTYPE PLACEHOLDER / NOT APPROVED CHARACTER ART"
+    ],
+    "node_group": "temporary_placeholder",
+    "replacement_notes": "assets/temporary-body/README.md"
+  },
+  "audio": {
+    "stage_a_state": "no audio files exist; eSpeak rejected by the owner and not used; no fake/silent/placeholder speech",
+    "expected_stage_b_inputs": [
+      "audio/en/narration.wav",
+      "audio/en/narration.txt",
+      "audio/en/subtitles.vtt",
+      "audio/fa/narration.wav",
+      "audio/fa/narration.txt",
+      "audio/fa/subtitles.vtt"
+    ]
+  },
+  "render": {
+    "file": "renders/stage-a-preview.avi",
+    "route": "Godot Movie Maker (--write-movie, --fixed-fps 30, --quit-after 540)",
+    "video": "mjpeg 1280x720 30fps 540 frames, duration 18.0 s",
+    "audio_track": "engine-recorded silent stereo PCM (48 kHz, measured -91 dB floor) captured by Movie Maker from the empty master bus; NOT narration and not a speech placeholder",
+    "extracted_frames": "renders/frames/ (6 key beats)",
+    "verification": "renders/verification.json (produced by scripts/verify_render.py: head fidelity, beat visibility, state discrimination, and stage-A layout revision hud_layout pixel checks)"
+  },
+  "approval_boundaries": {
+    "approved": "continued prototype use of the reviewed front-view facial-state head components (neutral, blink, thinking brow, small-open mouth states)",
+    "not_approved": [
+      "permanent body, torso, arm, hand, or pointing art",
+      "new expressions, combined transforms, or head rotation",
+      "speech-viseme or lip-sync claims",
+      "voice, narration performance, or audio pronunciation",
+      "final video, bilingual export, publication, or release"
+    ],
+    "owner_decisions_pending": [
+      "visible GUI inspection of the stage-A preview",
+      "voice input selection (human recordings or separately authorized bounded local audition) before stage B"
+    ]
+  },
+  "project_files": {
+    ".gitignore": "1918bfa17c6e9cb91ea6a3e611ed61cf19c4eb3bf2081032de30124ab5b1d4f2",
+    "assets/approved-head/README.md": "f04e0b16a9e1631f105b20bf17e31adf2e691e29ca351e6af75ddbad24b63184",
+    "assets/approved-head/beard.png": "9acfccfb432ee10803cfc1bc47bc6adf028f8c2edd24e65f026fe5b9c30b636e",
+    "assets/approved-head/beard.png.import": "8cd1ce1fa4022051c8db5df6b596b2cbdca0f8efb258bd69c197a3ce422d5a53",
+    "assets/approved-head/diadem_gold.png": "452683dfcb4f8e09e8bb6f00df7aef3699a36bc93622fb8ccb2304088cb6724c",
+    "assets/approved-head/diadem_gold.png.import": "96fa00188e7029197f461eb9776511c53b6fded20f477171bb1d1d970330162f",
+    "assets/approved-head/ear_left.png": "1bfe3f41aa047e0fe5c570eb0808f427ca9a6f34d1624f8e25d0a7efd35733a0",
+    "assets/approved-head/ear_left.png.import": "725eef63309244f594ff0a315061807cc0ca7b46251e560488543d091e4908e5",
+    "assets/approved-head/ear_right.png": "8b568b29e672e6298a156f4f82c9e2a54f4b48e177d985fa802a293cc8513e40",
+    "assets/approved-head/ear_right.png.import": "30170c046445c2f201fad701c0f8c4602d6804fbe19092f1fde96daa4102e29e",
+    "assets/approved-head/eye_left.png": "9d9058a8210f4451c842a083ecb1a08d73a684c51001bd991af123ddf4620ab6",
+    "assets/approved-head/eye_left.png.import": "642186e12acf472644f9976fdff1b0d19ad38d08f37d6be82e3444830712744d",
+    "assets/approved-head/eye_left_closed.png": "9121114fba923738388c9176f68706aee6f714092247d98586619be560f85255",
+    "assets/approved-head/eye_left_closed.png.import": "fcc5fc84c3ccab577737dc5294c918078c78a8e68902c6d94a26739c81b85699",
+    "assets/approved-head/eye_right.png": "08d981713c6874d33a5f36d311f5ec5414b04b81350c366fe03cee2ecb8becab",
+    "assets/approved-head/eye_right.png.import": "84e182ed498784108b7a14a64355104a01d48a6d55625a4a67e3fa3b0004830e",
+    "assets/approved-head/eye_right_closed.png": "1961f58b9fb27575a9583e160c2f7b506702c40c69e16ed75ca1d1afae6ade55",
+    "assets/approved-head/eye_right_closed.png.import": "181a68891aca0988f1e2798d196e80daef51084008292c6fdbc79efd5cff1384",
+    "assets/approved-head/eyebrow_left.png": "b3cd909abdacf5f13425ea8c32c7db3e1dcae2e60d0f5c60eba06878c0210021",
+    "assets/approved-head/eyebrow_left.png.import": "698a576f1f160ae03d1121a152543e92e8ca9a6dbaa1cbd68b92bfc62b274d9d",
+    "assets/approved-head/eyebrow_right.png": "f32bc31c08d9de377cef44b731317c12103a701c1966f5788ffb0b96ad35a757",
+    "assets/approved-head/eyebrow_right.png.import": "975620a56eb064c1879db225b8d53c31a92b080aaf3686572a96f6b6fc708d82",
+    "assets/approved-head/hair_back.png": "2c6ca92b17b20bff8c36b27e7f3a90dad1c690bb345ed56934d2ebffd3c410d2",
+    "assets/approved-head/hair_back.png.import": "1f41bcaafc13ec4ff86383584b4d7b36245e44d746c2570112a7af3232040ac3",
+    "assets/approved-head/head_base.png": "754fb445b5e27fe962b1d55af82992b5f14fae94035a7a4b23cde8b8121390b9",
+    "assets/approved-head/head_base.png.import": "49b888c96c29951a34f75904510d2b9494c68a612a28b3ec38e312d3443252a1",
+    "assets/approved-head/lower_face_neutral.png": "a9189e8a79f228c998597d5d4c88d82a38f582e46d44d639ae1c8382d8a07ee5",
+    "assets/approved-head/lower_face_neutral.png.import": "a514031d4ec0634d60565aba982e0637121baae30488a23d52bc22653e41c05d",
+    "assets/approved-head/lower_face_open_test.png": "ddc9c082cbc95af5208cf97a3b615626e50dd82b6ea547d5614fa5b5f57fcee6",
+    "assets/approved-head/lower_face_open_test.png.import": "7f813a748be82f827ecd81e34fd20507d45d01d2621928f0f8b65661e1da4826",
+    "assets/approved-head/moustache.png": "ef26dbc275d58f6352e7a65a796e4ae7f155fa91701e65f32c2ee1628cfa8c2c",
+    "assets/approved-head/moustache.png.import": "cc1b9c9e3c6306ffeb7da79ea973b795e1a8b8425e877f5e99ad0b8d7dcbb500",
+    "assets/approved-head/nose.png": "51e631d045df9964cf33dcc8cb87a96061900d304874cc638ac45a048320dac0",
+    "assets/approved-head/nose.png.import": "940eba8309e1753c211851ddc5184e040f16d1d7325827f1e7675b4491ef5482",
+    "assets/approved-head/thinking_brow_underlay.png": "aa6b46f99cc302ca4f296052a8728ea44bd4d74781ba84ee2e6acd0cce90d238",
+    "assets/approved-head/thinking_brow_underlay.png.import": "28e9f35a8143a9c1ba38d1b6293187bf9e2c51f8645322ad8de8cea85437579c",
+    "assets/temporary-body/README.md": "2ec426bdc7864380eaaac659ce03d945332a69ae96087c694693c73919ed705e",
+    "assets/temporary-body/forearm.png": "452f31dc9d8157fd8c0923ec1a8d8ee2d1a195df5b78e94458d9453eeda73f02",
+    "assets/temporary-body/forearm.png.import": "3ad6fd6daba45f70365a61d98ec312604605067f6334d5006b51fb3e72233ed3",
+    "assets/temporary-body/hand_point.png": "2bbd9b466fe94cb8b70d2e9c4876bd230a5fb6514f61974d1a4c6000c1f22816",
+    "assets/temporary-body/hand_point.png.import": "8e26a0aae997624d5b98695d846f94b126375a04562c85439defcc6ffedefb8d",
+    "assets/temporary-body/placeholders.json": "d748748d5711c09a2ca0ccaf78f3880ceb674d78b9051d20ac1298a1e8a65c52",
+    "assets/temporary-body/point_target.png": "8ba6ca6958c4804fc938ceefaaebe2b8054480db33ceab3f9550c064399ab46f",
+    "assets/temporary-body/point_target.png.import": "742524829e29691a981a83d78d6e7f01b41318c7ceb639b764765ef45a0d790a",
+    "assets/temporary-body/torso.png": "7e16596b08384cd383e551512d2d6abb3cbdb9c226f56af73bb35b079923ce83",
+    "assets/temporary-body/torso.png.import": "031720478096ec1498f7f280dcf944038378396e8b835301f436bee7e89f8adc",
+    "assets/temporary-body/upper_arm.png": "1b69cd8f5669b03ef5a0b6f9dcc4f0e411eea5ab699a23ecdadda7f409da6b0e",
+    "assets/temporary-body/upper_arm.png.import": "5583cb4ce01288569db98518c95d85a28d96abc01e4e1385e36e19683d5316e8",
+    "audio/en/README.md": "cab010d3c842315908cef1bcdc101f0290225616b967656ef40527014f2f8351",
+    "audio/fa/README.md": "8100eace938388f6b429d4b05c470c68c1b152325dbba01ebef68748b52736b7",
+    "project.godot": "102c254ff4d1293f61e5e092d65b2d90e0a554c5bc1d57774cebd646171b4833",
+    "renders/frames/t1.0s-idle-neutral.png": "c9c09e542cf7bbebe4d3f987821c00fcf01783f11aaf9892222fd85e9655d37f",
+    "renders/frames/t1.0s-idle-neutral.png.import": "57e0fb6ae8b79d22bc5e1800384ec880abcf2ed42095f5d01c9e4a84daf5d4fb",
+    "renders/frames/t10.6s-point-hold.png": "7a70c2c613981d0cc4f5de60c22eed5f3d564c6f0af6110611771e9b58c231de",
+    "renders/frames/t10.6s-point-hold.png.import": "f755104059130872c32aae4d23be5b7d8c4f56bf79df9dbd9d4cc266d6c3bfef",
+    "renders/frames/t11.0s-point-open-mouth.png": "9c17f41b94e32a4722839aa29413df8799e6577137fa0cfbcabd39cf6e1c5952",
+    "renders/frames/t11.0s-point-open-mouth.png.import": "bb406a168ecadaf53eb3f4b0cde6a9dc500dac13d7301c5fecb698b5da43fa06",
+    "renders/frames/t15.0s-return-neutral.png": "ca99a637b5ab9bc6ad86fb5cdcd1e7d4bf9da1796d5bfd0d94f1243031c2bdc9",
+    "renders/frames/t15.0s-return-neutral.png.import": "ff49a7f0c42925d5a762fe6d195a961b1d5cbff7749ae3d70054d2fb36ae8d67",
+    "renders/frames/t2.65s-blink-closed.png": "93af9c5e645ff26eee3ebad43cf492a2a19050fdea4ace1500112c6138466441",
+    "renders/frames/t2.65s-blink-closed.png.import": "df2e12b0a05fa71bc00ac03771e3b4e41874aed681e2145fbd4c1434a52e03a2",
+    "renders/frames/t6.5s-thinking.png": "6c32f0ecabb4349e5d3ed04a09193858cbe39cb48313bd75ee712b68245c6ca9",
+    "renders/frames/t6.5s-thinking.png.import": "7f2e0aa21c6651094b6df4908ea254f7e43e9f1fe789b2fb59ccf037124a9d4c",
+    "renders/stage-a-preview.avi": "91bcb60405d0b3a85a0537cf01430962dc218807d4bb40aa82dacc4b25ed8b87",
+    "renders/stage-b0/README.md": "9cc0a0b3d081cae2ba6c00fc06ee6f606442d98a1e1de3aad06e24b2a526d8d1",
+    "renders/verification.json": "019cbc37ebfbe701e66903427e62bdfc0a3445224754e270ae6957666e4387e7",
+    "scenes/main.tscn": "ed393adc6f05382a862a0c30e59a83251a1eca55c1cf6c4426cc2b8f8efbfa51",
+    "scripts/audio_subtitle_pipeline.gd": "7079722d5a733f599c1ec75f3f8360a006b1703f8d8712fad9193a638782b2f7",
+    "scripts/audio_subtitle_pipeline.gd.uid": "57f904d7708ca0b456de728f8187a06e86fe0d771fd99f62e9207bf26047dcfd",
+    "scripts/check_integrity.py": "accf6cb9bddaf53d68d8770a445d5003390be28dc5d66a94cdb022fa6287967d",
+    "scripts/generate_temporary_body.py": "8d5ad06937c85bf154680616bd7f85781ff90b8fcdb378de11acb862aade67e4",
+    "scripts/main.gd": "b7c083d1164ecfb314e68c4008bb4de5ccad32fa5ae7670c1c04da701c53d376",
+    "scripts/main.gd.uid": "ecfd92dfd7f73e88f031bf3a46b704af2488d005f29f45b7824f527f78e4b230",
+    "scripts/tests/audio_subtitle_pipeline_test.gd": "5024c6b90b78e8a894605ba6574f2f86f95721afbc338e209d08c968dcd160c3",
+    "scripts/tests/fixtures/en-caption.vtt": "7fef2afbf0b706a30eb23bb1baf90845ca37c46415e182f2f098bdf7593aaf06",
+    "scripts/tests/fixtures/fa-caption.vtt": "5f69f1634fb12b81d561eabb95e372c2b8e26c32eadbb7b8075e3bbb7dc75c00",
+    "scripts/verify_render.py": "9ba2f7455811c3e0d7704f2056cd471deabca677d4ebd74e5d23860b551886c3"
+  },
+  "stage_b0_interface": {
+    "status": "CODEX_BOUNDED_REPAIRS_COMPLETE_CLAUDE_FINAL_RECHECK_PENDING",
+    "scope": "input-path selection, WAV metadata validation, WebVTT validation, opt-in caption layout test",
+    "playback": "disabled; NarrationPlayer has null stream and autoplay false; no audio files were added",
+    "mouth_motion": "unchanged; no speech motion or lip-sync claim",
+    "caption_fixtures": "test-only English and Persian WebVTT; not owner-approved narration",
+    "persian_render_evidence": "BLOCKED_IN_CODEX_WORKSPACE_NO_USABLE_X11_WAYLAND; Claude recheck may create derived AVI/PNG outside the project solely as inspection evidence.",
+    "next_gate": "Claude read-only final check; owner supplies and approves real EN/FA inputs before Stage B1",
+    "validator_findings_addressed": [
+      "PCM16 nBlockAlign must equal channels * 2",
+      "WebVTT exact signature boundary and mandatory header/cue blank separator"
+    ],
+    "focused_test_assertions": 30
+  },
+  "current_execution_model": {
+    "primary_implementer": "GPT-Codex",
+    "technical_validator": "GPT-Codex",
+    "final_independent_check": "Claude via a saved read-only prompt",
+    "human_authority": "voice, wording, pronunciation, and subjective visual approval",
+    "basis": "Owner instruction 2026-10-10 after GLM reached its usage limit"
+  }
+}

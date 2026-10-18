@@ -1,0 +1,17 @@
+{
+  "source_sha256_matches": true,
+  "all_sprite_files_exist": true,
+  "all_masks_exist": true,
+  "masks_match_exported_sprite_alpha": true,
+  "all_sprite_rgba_full_canvas": true,
+  "all_sprite_alpha_nonempty_and_has_transparency": true,
+  "sprite_bbox_metadata_valid": true,
+  "all_pivots_in_canvas": true,
+  "original_source_feature_ownership_exclusive": true,
+  "mouth_patch_is_not_rectangle": true,
+  "preview_only_source_pose_layers_match_exactly": true,
+  "riggable_editable_layers_match_exactly": false,
+  "preview_files_exist": true,
+  "source_art_eyebrow_nose_and_hair_manually_art_directed": false,
+  "rig_rotation_gap_free_confirmed": false
+}

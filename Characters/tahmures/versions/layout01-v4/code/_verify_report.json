@@ -1,0 +1,73 @@
+{
+  "zip_sha256_unchanged": true,
+  "master_sha256_unchanged": true,
+  "domain_copy_verbatim": true,
+  "v3_tree_unchanged": true,
+  "v3_tree_mismatched_files": 0,
+  "masks_equal_exact_alpha": true,
+  "bboxes_match_manifest": true,
+  "pivots_in_canvas": true,
+  "eye_brow_pivots_match_v2": true,
+  "provenance_partition_and_source_claims": true,
+  "recompose_puppet_core_byte_equal_preview": true,
+  "recompose_puppet_core_independent_max_channel_diff": 1,
+  "recompose_puppet_core_sprite_count": 12,
+  "recompose_puppet_core_neutral_byte_equal_preview": true,
+  "recompose_puppet_core_neutral_independent_max_channel_diff": 1,
+  "recompose_puppet_core_neutral_sprite_count": 13,
+  "recompose_puppet_core_open_test_byte_equal_preview": true,
+  "recompose_puppet_core_open_test_independent_max_channel_diff": 1,
+  "recompose_puppet_core_open_test_sprite_count": 13,
+  "B_and_C_truly_differ": true,
+  "B_C_diff_confined_to_P": true,
+  "B_C_diff_equals_opening": true,
+  "B_C_diff_px": 59,
+  "fidelity_A_gt3_px": 2371,
+  "fidelity_A_escaping_intended_zone": 0,
+  "fidelity_B_gt3_px": 283,
+  "fidelity_B_escaping_intended_zone": 0,
+  "fidelity_C_gt3_px": 342,
+  "fidelity_C_escaping_intended_zone": 0,
+  "coverage_puppet_core": {
+    "holes": 0,
+    "deficits": 0
+  },
+  "coverage_puppet_core_neutral": {
+    "holes": 0,
+    "deficits": 0
+  },
+  "coverage_puppet_core_open_test": {
+    "holes": 0,
+    "deficits": 0
+  },
+  "outer_boundary_alpha_raised_px": 0,
+  "no_banned_duplicate_components": true,
+  "stress_samples_present": true,
+  "stress_all_passed": true,
+  "r1_02_vacated_strip_identity_all_offsets": true,
+  "r1_02_vacated_strip_mismatched_px": {
+    "lower_face_neutral_d(1,0)": 0,
+    "lower_face_neutral_d(-1,0)": 0,
+    "lower_face_neutral_d(0,1)": 0,
+    "lower_face_neutral_d(0,-1)": 0,
+    "lower_face_open_test_d(1,0)": 0,
+    "lower_face_open_test_d(-1,0)": 0,
+    "lower_face_open_test_d(0,1)": 0,
+    "lower_face_open_test_d(0,-1)": 0
+  },
+  "r1_before_after_recounts": {
+    "r1_01_warm_crescent_v3": 6,
+    "r1_01_warm_crescent_v4": 0,
+    "r1_01_warm_over_clone_zone_v4": 0,
+    "r1_02_head_base_dark_in_codex_bbox_v3": 1234,
+    "r1_02_head_base_dark_in_codex_bbox_v4": 87,
+    "r1_02_beard_dark_in_codex_bbox_v3": 818,
+    "r1_02_beard_dark_in_codex_bbox_v4": 818,
+    "r1_02_head_base_dark_exact_moustache_color_v4": 87,
+    "r1_04_head_base_garment_v3": 265,
+    "r1_04_head_base_garment_v4": 0,
+    "r1_04_hair_back_garment_v3": 6,
+    "r1_04_hair_back_garment_v4": 0
+  },
+  "all_passed": true
+}

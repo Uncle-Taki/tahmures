@@ -1,0 +1,139 @@
+{
+  "character_id": "garshasp",
+  "source_file": "Characters/garshasp.png",
+  "source_sha256": "19c57419274c5da0be086219cd86f53eab4980fa84f5eedec125a0b32e39f73e",
+  "canvas": [
+    1086,
+    1448
+  ],
+  "skeleton_type": "humanoid_elder_captain",
+  "technical_readiness_state": "candidate_partition_needs_anatomical_review",
+  "segmentation_method": "provisional_disjoint_search_windows_not_anatomical_segmentation",
+  "supported_states": [
+    "neutral",
+    "idle"
+  ],
+  "unsupported_states": [
+    "blink",
+    "gaze_left",
+    "gaze_right",
+    "gesture_small"
+  ],
+  "movement_scope": "whole_rig_translation_only_until_seams_reviewed",
+  "human_approved": false,
+  "draw_order_bottom_to_top": [
+    {
+      "component_id": "head_and_headwear",
+      "pivot_canvas": [
+        544,
+        343
+      ],
+      "tight_alpha_bbox": [
+        384,
+        16,
+        704,
+        325
+      ],
+      "local_motion_approved": false,
+      "opaque_pixels": 33164,
+      "sha256": "e8222617a34adf3caea6b25cafb08a00ca259f46544a3b8caff222699c9eac38"
+    },
+    {
+      "component_id": "eyes_and_brows",
+      "pivot_canvas": [
+        544,
+        170
+      ],
+      "tight_alpha_bbox": [
+        449,
+        100,
+        618,
+        241
+      ],
+      "local_motion_approved": false,
+      "opaque_pixels": 21215,
+      "sha256": "549a1997dcbdb0fef2450739c2657a35e084dcecc747260bcbb45f06f3a7cfe2"
+    },
+    {
+      "component_id": "torso_and_garment_core",
+      "pivot_canvas": [
+        544,
+        368
+      ],
+      "tight_alpha_bbox": [
+        222,
+        277,
+        868,
+        1031
+      ],
+      "local_motion_approved": false,
+      "opaque_pixels": 22989,
+      "sha256": "4ed84082f5b4b970955425947d25a8a0014bb81ce5b3de53aa290790606a2c0f"
+    },
+    {
+      "component_id": "arm_viewer_left",
+      "pivot_canvas": [
+        429,
+        403
+      ],
+      "tight_alpha_bbox": [
+        217,
+        358,
+        504,
+        1030
+      ],
+      "local_motion_approved": false,
+      "opaque_pixels": 116763,
+      "sha256": "ad18a1082e0159064acd2856176e5c79e234459b2387e04dd7ed7bab2cab6d9b"
+    },
+    {
+      "component_id": "arm_viewer_right",
+      "pivot_canvas": [
+        659,
+        403
+      ],
+      "tight_alpha_bbox": [
+        584,
+        477,
+        868,
+        1030
+      ],
+      "local_motion_approved": false,
+      "opaque_pixels": 74377,
+      "sha256": "cb2d142cefadd048ac1baf945d4b42a0e13aaada27dca056a13af71bddef12d4"
+    },
+    {
+      "component_id": "held_prop_and_occlusion_zone",
+      "pivot_canvas": [
+        544,
+        551
+      ],
+      "tight_alpha_bbox": [
+        364,
+        325,
+        764,
+        805
+      ],
+      "local_motion_approved": false,
+      "opaque_pixels": 188478,
+      "sha256": "79382587d5084ab40e2fbe08a71e913356cec0843684356793807ee7588b2412"
+    },
+    {
+      "component_id": "lower_garment_legs_feet",
+      "pivot_canvas": [
+        544,
+        1410
+      ],
+      "tight_alpha_bbox": [
+        218,
+        1031,
+        872,
+        1425
+      ],
+      "local_motion_approved": false,
+      "opaque_pixels": 137621,
+      "sha256": "c1aacf8d9ab3193731cdac4d4577cc6d02b232a5c0f135a05813914e3cd2d923"
+    }
+  ],
+  "sockets": []
+}

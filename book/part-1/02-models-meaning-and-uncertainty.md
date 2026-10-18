@@ -34,22 +34,23 @@ middle, leaving two islands of text: the eastern city would keep a gate open
 for three market days, and both cities would appoint a witness. Between them
 lay a pale wound wide enough for six clauses.
 
-Two governors arrived before noon, each certain that the missing words granted
-him twelve jars of grain.
+The governors of the two cities, Jamshid in the east and Budhasaf in the west,
+arrived before noon, each certain that the missing words granted him twelve jars
+of grain.
 
 ### The Request
 
-Tahmures placed the fragments before the Mirror Div, whose speech had the
-unsettling polish of a reflection on still water.
+Tahmures placed the fragments before Div-e Sefid, the Mirror Div, whose speech
+had the unsettling polish of a reflection on still water.
 
 “Tell the council what the treaty says,” he ordered.
 
-The First Scribe began a fresh page in the experiment ledger. He left a margin
+Shahrasp began a fresh page in the experiment ledger. He left a margin
 for sources, though Tahmures had not asked for any.
 
 ### The Unexpected Result
 
-The Mirror Div read aloud:
+Div-e Sefid read aloud:
 
 “The eastern city shall provide twelve jars after inspection; the western city
 shall maintain the road; disputes shall be witnessed by one citizen of each.”
@@ -57,20 +58,20 @@ shall maintain the road; disputes shall be witnessed by one citizen of each.”
 The clauses fitted the surviving grammar. They balanced obligations. They even
 explained a later inventory mentioning twelve jars.
 
-The eastern governor smiled. The western governor accused him of having bribed
-a creature that needed no money.
+Jamshid smiled. Budhasaf accused him of having bribed a creature that needed no
+money.
 
-“Where are those words?” asked the First Scribe.
+“Where are those words?” asked Shahrasp.
 
-“Between these words,” said the Mirror Div.
+“Between these words,” said Div-e Sefid.
 
 “On what tablet?”
 
 “On the treaty as it would most naturally have been written.”
 
 The answer was so composed that the council began debating the payment rather
-than its existence. Only the Archivist interrupted. The later inventory, she
-said, concerned lamp oil and carried a different seal.
+than its existence. Only Soroush, the Archivist, interrupted. The later
+inventory, she said, concerned lamp oil and carried a different seal.
 
 ### The Discovery
 
@@ -86,9 +87,9 @@ The div named the gate and the witnesses.
 
 “That was not my question.”
 
-For the first time, the Mirror Div paused. “The surviving marks do not say.”
+For the first time, Div-e Sefid paused. “The surviving marks do not say.”
 
-The First Scribe drew three columns: *written*, *inferred*, and *unknown*. The
+Shahrasp drew three columns: *written*, *inferred*, and *unknown*. The
 gate belonged in the first. A payment might once have existed, so it belonged
 in the second. Its amount belonged in the third.
 
@@ -103,16 +104,16 @@ dislike, “The fragments are insufficient.”
 “It is more useful,” Tahmures replied.
 
 He did not forbid inference. The council still needed hypotheses about the
-missing clauses so the Archivist could search related records. But every
+missing clauses so Soroush could search related records. But every
 hypothesis was marked as such, and no jar moved on its authority.
 
-In the experiment ledger, the First Scribe wrote:
+In the experiment ledger, Shahrasp wrote:
 
 *A polished surface can reflect a bridge that is not behind you.*
 
 ### From Tale to Engineering
 
-The Mirror Div generated language that was coherent with the fragments without
+Div-e Sefid generated language that was coherent with the fragments without
 being supported by them. Language models can likewise produce plausible
 continuations; reliability requires a separate contract for evidence,
 uncertainty, and abstention.
@@ -345,7 +346,7 @@ authority boundary.
 
 ## The Next Tale
 
-The two governors accept that the missing payment cannot be recovered from
+Jamshid and Budhasaf accept that the missing payment cannot be recovered from
 polish. They do not accept the same bridge, and the five makers who arrive to
 rebuild it each call a different design the best, leaving Tahmures to
 discover that the council has not decided what “best” means.

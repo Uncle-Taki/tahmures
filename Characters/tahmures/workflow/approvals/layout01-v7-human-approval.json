@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-09",
+  "authority": "HUMAN_OWNER",
+  "actual_response": "yes, continue.",
+  "question_context": "Do you approve v7 for the next front-view facial-state prototype?",
+  "candidate": "Characters/tahmures/versions/layout01-v7",
+  "manifest_sha256": "b7539646b960fc9313c907effabb1f5de84ca816678fc0a0d1224c5f46ee1cd4",
+  "file_index_sha256": "3b2ad23048da5ba009069f6c0ca86f78e6694927e151ac3e7b5e84393f4347bc",
+  "indexed_artifact_count": 146,
+  "scope": "Approved repaired front-view Layout 01 head as input to LAYOUT01_FACIAL_STATE_PROTOTYPE_01",
+  "not_approved": [
+    "arbitrary rotation/perspective",
+    "body/arm art",
+    "Godot integration",
+    "speech-viseme library",
+    "audio/video production",
+    "publication"
+  ],
+  "claude_report": "Characters/tahmures/workflow/layout01-mouthless-repair/reports/claude/final-review-03.md"
+}

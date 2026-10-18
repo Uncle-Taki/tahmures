@@ -1,0 +1,32 @@
+; Engine configuration file.
+; GODOT_FRONT_VIEW_CHARACTER_POC_01 — stage A visual rig.
+;
+; Pinned toolchain: Godot 4.7.2.stable.official.ed1daf0bf (observed on
+; this workstation, see manifest.json). Renderer: GL Compatibility so
+; the project also runs on modest GPUs and inside the Movie Maker
+; render route used for evidence.
+
+config_version=5
+
+[application]
+
+config/name="Tahmures — Godot Front-View Character POC 01 (Stage A)"
+run/main_scene="res://scenes/main.tscn"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+
+[tahmures]
+
+; Language hook for the future narration stage. The visual timeline is
+; identical for both languages. Override at launch with a user
+; argument: godot --path <project> -- --language=fa
+language="en"

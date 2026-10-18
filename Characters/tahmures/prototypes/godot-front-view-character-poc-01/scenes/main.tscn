@@ -1,0 +1,456 @@
+[gd_scene load_steps=35 format=3]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_main"]
+[ext_resource type="Texture2D" path="res://assets/approved-head/hair_back.png" id="2_hair_back"]
+[ext_resource type="Texture2D" path="res://assets/approved-head/head_base.png" id="3_head_base"]
+[ext_resource type="Texture2D" path="res://assets/approved-head/thinking_brow_underlay.png" id="4_thinking_brow_underlay"]
+[ext_resource type="Texture2D" path="res://assets/approved-head/ear_right.png" id="5_ear_right"]
+[ext_resource type="Texture2D" path="res://assets/approved-head/ear_left.png" id="6_ear_left"]
+[ext_resource type="Texture2D" path="res://assets/approved-head/beard.png" id="7_beard"]
+[ext_resource type="Texture2D" path="res://assets/approved-head/lower_face_neutral.png" id="8_lower_face_neutral"]
+[ext_resource type="Texture2D" path="res://assets/approved-head/lower_face_open_test.png" id="9_lower_face_open_test"]
+[ext_resource type="Texture2D" path="res://assets/approved-head/nose.png" id="10_nose"]
+[ext_resource type="Texture2D" path="res://assets/approved-head/eye_right.png" id="11_eye_right"]
+[ext_resource type="Texture2D" path="res://assets/approved-head/eye_left.png" id="12_eye_left"]
+[ext_resource type="Texture2D" path="res://assets/approved-head/eye_right_closed.png" id="13_eye_right_closed"]
+[ext_resource type="Texture2D" path="res://assets/approved-head/eye_left_closed.png" id="14_eye_left_closed"]
+[ext_resource type="Texture2D" path="res://assets/approved-head/eyebrow_right.png" id="15_eyebrow_right"]
+[ext_resource type="Texture2D" path="res://assets/approved-head/eyebrow_left.png" id="16_eyebrow_left"]
+[ext_resource type="Texture2D" path="res://assets/approved-head/moustache.png" id="17_moustache"]
+[ext_resource type="Texture2D" path="res://assets/approved-head/diadem_gold.png" id="18_diadem_gold"]
+[ext_resource type="Texture2D" path="res://assets/temporary-body/torso.png" id="19_torso"]
+[ext_resource type="Texture2D" path="res://assets/temporary-body/upper_arm.png" id="20_upper_arm"]
+[ext_resource type="Texture2D" path="res://assets/temporary-body/forearm.png" id="21_forearm"]
+[ext_resource type="Texture2D" path="res://assets/temporary-body/hand_point.png" id="22_hand_point"]
+[ext_resource type="Texture2D" path="res://assets/temporary-body/point_target.png" id="23_point_target"]
+
+[sub_resource type="SystemFont" id="SystemFont_fa"]
+font_names = PackedStringArray("Noto Naskh Arabic", "Noto Kufi Arabic", "Vazirmatn", "FreeSerif", "DejaVu Sans")
+[sub_resource type="LabelSettings" id="LS_title"]
+font_size = 19
+font_color = Color(0.909804, 0.917647, 0.941176, 1)
+outline_size = 4
+outline_color = Color(0, 0, 0, 0.65)
+shadow_size = 1
+shadow_color = Color(0, 0, 0, 0.4)
+[sub_resource type="LabelSettings" id="LS_sub"]
+font_size = 14
+font_color = Color(0.603922, 0.639216, 0.721569, 1)
+outline_size = 3
+outline_color = Color(0, 0, 0, 0.65)
+shadow_size = 1
+shadow_color = Color(0, 0, 0, 0.4)
+[sub_resource type="LabelSettings" id="LS_small"]
+font_size = 13
+font_color = Color(0.603922, 0.639216, 0.721569, 1)
+outline_size = 3
+outline_color = Color(0, 0, 0, 0.65)
+shadow_size = 1
+shadow_color = Color(0, 0, 0, 0.4)
+[sub_resource type="LabelSettings" id="LS_time"]
+font_size = 16
+font_color = Color(0.909804, 0.917647, 0.941176, 1)
+outline_size = 3
+outline_color = Color(0, 0, 0, 0.65)
+shadow_size = 1
+shadow_color = Color(0, 0, 0, 0.4)
+[sub_resource type="LabelSettings" id="LS_state"]
+font_size = 30
+font_color = Color(0.909804, 0.917647, 0.941176, 1)
+outline_size = 5
+outline_color = Color(0, 0, 0, 0.65)
+shadow_size = 1
+shadow_color = Color(0, 0, 0, 0.4)
+[sub_resource type="LabelSettings" id="LS_world"]
+font_size = 13
+font_color = Color(0.94902, 0.956863, 0.972549, 1)
+outline_size = 4
+outline_color = Color(0, 0, 0, 0.65)
+shadow_size = 1
+shadow_color = Color(0, 0, 0, 0.4)
+[sub_resource type="LabelSettings" id="LS_mark"]
+font_size = 13
+font_color = Color(0.909804, 0.721569, 0.294118, 1)
+outline_size = 3
+outline_color = Color(0, 0, 0, 0.65)
+shadow_size = 1
+shadow_color = Color(0, 0, 0, 0.4)
+[sub_resource type="LabelSettings" id="LS_fa"]
+font_size = 24
+font_color = Color(0.909804, 0.721569, 0.294118, 1)
+font = SubResource("SystemFont_fa")
+outline_size = 4
+outline_color = Color(0, 0, 0, 0.65)
+[sub_resource type="Animation" id="Animation_master"]
+resource_name = "preview_master"
+length = 18
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("World/Rig/Torso:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5, 15, 15.5, 16, 16.5, 17, 17.5, 18),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1.003), Vector2(1, 1.009), Vector2(1, 1.012), Vector2(1, 1.009), Vector2(1, 1.003), Vector2(1, 1), Vector2(1, 1.003), Vector2(1, 1.009), Vector2(1, 1.012), Vector2(1, 1.009), Vector2(1, 1.003), Vector2(1, 1), Vector2(1, 1.003), Vector2(1, 1.009), Vector2(1, 1.012), Vector2(1, 1.009), Vector2(1, 1.003), Vector2(1, 1), Vector2(1, 1.003), Vector2(1, 1.009), Vector2(1, 1.012), Vector2(1, 1.009), Vector2(1, 1.003), Vector2(1, 1), Vector2(1, 1.003), Vector2(1, 1.009), Vector2(1, 1.012), Vector2(1, 1.009), Vector2(1, 1.003), Vector2(1, 1), Vector2(1, 1.003), Vector2(1, 1.009), Vector2(1, 1.012), Vector2(1, 1.009), Vector2(1, 1.003), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("World/Rig/Head/eye_left:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.5, 2.85),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("World/Rig/Head/eye_right:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.5, 2.85),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("World/Rig/Head/eye_left_closed:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.5, 2.85),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("World/Rig/Head/eye_right_closed:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2.5, 2.85),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("World/Rig/Head/thinking_brow_underlay:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 5, 8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("World/Rig/Head/eyebrow_left:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 5, 8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Vector2(0, 0), Vector2(0, -1), Vector2(0, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("World/Rig/Head/lower_face_neutral:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 10.8, 12.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("World/Rig/Head/lower_face_open_test:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 10.8, 12.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("World/Rig/ShoulderL:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 9, 9.2, 9.4, 9.6, 9.8, 13, 13.2, 13.4, 13.6, 13.8, 18),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.10472, -0.10472, -0.306523, -0.750492, -1.19446, -1.396263, -1.396263, -1.19446, -0.750492, -0.306523, -0.10472, -0.10472]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("World/Rig/ShoulderL/ElbowL:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 9.2, 9.4, 9.6, 9.8, 10, 13, 13.2, 13.4, 13.6, 13.8, 18),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.174533, 0.174533, 0.06545, -0.174533, -0.414516, -0.523599, -0.523599, -0.414516, -0.174533, 0.06545, 0.174533, 0.174533]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("World/Rig/ShoulderL/ElbowL/HandL:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 9.4, 9.6, 9.8, 10, 10.2, 13, 13.2, 13.4, 13.6, 13.8, 18),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0, 0, -0.021817, -0.069813, -0.11781, -0.139626, -0.139626, -0.11781, -0.069813, -0.021817, 0, 0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("World/PointTarget:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 9.8, 10.4, 13.4, 14, 18),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0)]
+}
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_preview"]
+_data = {
+&"preview_master": SubResource("Animation_master")
+}
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_main")
+[node name="BackgroundLayer" type="CanvasLayer" parent="."]
+layer = -100
+[node name="Background" type="ColorRect" parent="BackgroundLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.090196, 0.101961, 0.133333, 1)
+[node name="World" type="Node2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="World"]
+position = Vector2(560, 330)
+[node name="PointTarget" type="Node2D" parent="World" groups=["temporary_placeholder"]]
+position = Vector2(960, 350)
+modulate = Color(1, 1, 1, 0)
+[node name="TargetRing" type="Sprite2D" parent="World/PointTarget" groups=["temporary_placeholder"]]
+texture = ExtResource("23_point_target")
+[node name="TargetLabel" type="Label" parent="World/PointTarget" groups=["temporary_placeholder"]]
+offset_left = 64.0
+offset_top = 22.0
+offset_right = 200.0
+offset_bottom = 44.0
+text = "MARK (scene prop)"
+label_settings = SubResource("LS_mark")
+[node name="Rig" type="Node2D" parent="World"]
+[node name="Torso" type="Node2D" parent="World/Rig" groups=["temporary_placeholder"]]
+position = Vector2(540, 310)
+[node name="TorsoSprite" type="Sprite2D" parent="World/Rig/Torso" groups=["temporary_placeholder"]]
+texture = ExtResource("19_torso")
+offset = Vector2(0, 170)
+[node name="ShoulderR" type="Node2D" parent="World/Rig" groups=["temporary_placeholder"]]
+position = Vector2(432, 430)
+rotation = 0.10472
+[node name="UpperArmR" type="Sprite2D" parent="World/Rig/ShoulderR" groups=["temporary_placeholder"]]
+texture = ExtResource("20_upper_arm")
+offset = Vector2(0, -47.5)
+[node name="ElbowR" type="Node2D" parent="World/Rig/ShoulderR" groups=["temporary_placeholder"]]
+position = Vector2(0, 95)
+rotation = -0.174533
+[node name="ForearmR" type="Sprite2D" parent="World/Rig/ShoulderR/ElbowR" groups=["temporary_placeholder"]]
+texture = ExtResource("21_forearm")
+offset = Vector2(0, -42.5)
+[node name="HandR" type="Node2D" parent="World/Rig/ShoulderR/ElbowR" groups=["temporary_placeholder"]]
+position = Vector2(0, 85)
+[node name="HandSpriteR" type="Sprite2D" parent="World/Rig/ShoulderR/ElbowR/HandR" groups=["temporary_placeholder"]]
+texture = ExtResource("22_hand_point")
+offset = Vector2(0, -25)
+[node name="ShoulderL" type="Node2D" parent="World/Rig" groups=["temporary_placeholder"]]
+position = Vector2(648, 430)
+rotation = -0.10472
+[node name="UpperArmL" type="Sprite2D" parent="World/Rig/ShoulderL" groups=["temporary_placeholder"]]
+texture = ExtResource("20_upper_arm")
+offset = Vector2(0, -47.5)
+[node name="ElbowL" type="Node2D" parent="World/Rig/ShoulderL" groups=["temporary_placeholder"]]
+position = Vector2(0, 95)
+rotation = 0.174533
+[node name="ForearmL" type="Sprite2D" parent="World/Rig/ShoulderL/ElbowL" groups=["temporary_placeholder"]]
+texture = ExtResource("21_forearm")
+offset = Vector2(0, -42.5)
+[node name="HandL" type="Node2D" parent="World/Rig/ShoulderL/ElbowL" groups=["temporary_placeholder"]]
+position = Vector2(0, 85)
+[node name="HandSpriteL" type="Sprite2D" parent="World/Rig/ShoulderL/ElbowL/HandL" groups=["temporary_placeholder"]]
+texture = ExtResource("22_hand_point")
+offset = Vector2(0, -25)
+[node name="Head" type="Node2D" parent="World/Rig"]
+position = Vector2(543, 724)
+texture_filter = 1
+[node name="hair_back" type="Sprite2D" parent="World/Rig/Head" groups=["approved_head_component"]]
+texture = ExtResource("2_hair_back")
+[node name="head_base" type="Sprite2D" parent="World/Rig/Head" groups=["approved_head_component"]]
+texture = ExtResource("3_head_base")
+[node name="thinking_brow_underlay" type="Sprite2D" parent="World/Rig/Head" groups=["approved_head_component"]]
+texture = ExtResource("4_thinking_brow_underlay")
+visible = false
+[node name="ear_right" type="Sprite2D" parent="World/Rig/Head" groups=["approved_head_component"]]
+texture = ExtResource("5_ear_right")
+[node name="ear_left" type="Sprite2D" parent="World/Rig/Head" groups=["approved_head_component"]]
+texture = ExtResource("6_ear_left")
+[node name="beard" type="Sprite2D" parent="World/Rig/Head" groups=["approved_head_component"]]
+texture = ExtResource("7_beard")
+[node name="lower_face_neutral" type="Sprite2D" parent="World/Rig/Head" groups=["approved_head_component"]]
+texture = ExtResource("8_lower_face_neutral")
+[node name="lower_face_open_test" type="Sprite2D" parent="World/Rig/Head" groups=["approved_head_component"]]
+texture = ExtResource("9_lower_face_open_test")
+visible = false
+[node name="nose" type="Sprite2D" parent="World/Rig/Head" groups=["approved_head_component"]]
+texture = ExtResource("10_nose")
+[node name="eye_right" type="Sprite2D" parent="World/Rig/Head" groups=["approved_head_component"]]
+texture = ExtResource("11_eye_right")
+[node name="eye_left" type="Sprite2D" parent="World/Rig/Head" groups=["approved_head_component"]]
+texture = ExtResource("12_eye_left")
+[node name="eye_right_closed" type="Sprite2D" parent="World/Rig/Head" groups=["approved_head_component"]]
+texture = ExtResource("13_eye_right_closed")
+visible = false
+[node name="eye_left_closed" type="Sprite2D" parent="World/Rig/Head" groups=["approved_head_component"]]
+texture = ExtResource("14_eye_left_closed")
+visible = false
+[node name="eyebrow_right" type="Sprite2D" parent="World/Rig/Head" groups=["approved_head_component"]]
+texture = ExtResource("15_eyebrow_right")
+[node name="eyebrow_left" type="Sprite2D" parent="World/Rig/Head" groups=["approved_head_component"]]
+texture = ExtResource("16_eyebrow_left")
+[node name="moustache" type="Sprite2D" parent="World/Rig/Head" groups=["approved_head_component"]]
+texture = ExtResource("17_moustache")
+[node name="diadem_gold" type="Sprite2D" parent="World/Rig/Head" groups=["approved_head_component"]]
+texture = ExtResource("18_diadem_gold")
+[node name="LabelTorsoNote" type="Label" parent="World/Rig"]
+offset_left = 30.0
+offset_top = 418.0
+offset_right = 350.0
+offset_bottom = 462.0
+modulate = Color(1, 1, 1, 0.8)
+text = "TORSO — TEMPORARY PROTOTYPE PLACEHOLDER\nNOT APPROVED CHARACTER ART"
+horizontal_alignment = 2
+label_settings = SubResource("LS_world")
+[node name="LabelArmNote" type="Label" parent="World/Rig"]
+offset_left = 895.0
+offset_top = 554.0
+offset_right = 1184.0
+offset_bottom = 618.0
+modulate = Color(1, 1, 1, 0.8)
+text = "ARM + HAND —\nTEMPORARY PROTOTYPE PLACEHOLDER\nNOT APPROVED CHARACTER ART"
+label_settings = SubResource("LS_world")
+[node name="HUD" type="CanvasLayer" parent="."]
+layer = 100
+[node name="Title" type="Label" parent="HUD"]
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 760.0
+offset_bottom = 26.0
+text = "TAHMURES — FRONT-VIEW CHARACTER POC 01 · STAGE A"
+label_settings = SubResource("LS_title")
+[node name="Subtitle" type="Label" parent="HUD"]
+offset_left = 16.0
+offset_top = 26.0
+offset_right = 460.0
+offset_bottom = 44.0
+text = "approved facial-state head + TEMPORARY body stand-ins"
+label_settings = SubResource("LS_sub")
+[node name="FaNameLabel" type="Label" parent="HUD"]
+offset_left = 16.0
+offset_top = 50.0
+offset_right = 210.0
+offset_bottom = 82.0
+text = "طهمورث"
+label_settings = SubResource("LS_fa")
+[node name="LanguageLine" type="Label" parent="HUD"]
+offset_left = 16.0
+offset_top = 86.0
+offset_right = 430.0
+offset_bottom = 102.0
+label_settings = SubResource("LS_small")
+[node name="VersionLine" type="Label" parent="HUD"]
+offset_left = 760.0
+offset_top = 6.0
+offset_right = 1264.0
+offset_bottom = 24.0
+text = "Godot 4.7.2 · GL Compatibility · 1280x720 · 30 fps"
+horizontal_alignment = 2
+label_settings = SubResource("LS_small")
+[node name="StateCaption" type="Label" parent="HUD"]
+offset_left = 16.0
+offset_top = 540.0
+offset_right = 220.0
+offset_bottom = 556.0
+text = "CURRENT STATE"
+label_settings = SubResource("LS_small")
+[node name="StateLabel" type="Label" parent="HUD"]
+offset_left = 16.0
+offset_top = 558.0
+offset_right = 430.0
+offset_bottom = 600.0
+label_settings = SubResource("LS_state")
+[node name="TimeLabel" type="Label" parent="HUD"]
+offset_left = 16.0
+offset_top = 606.0
+offset_right = 300.0
+offset_bottom = 626.0
+label_settings = SubResource("LS_time")
+[node name="HintLabel" type="Label" parent="HUD"]
+offset_left = 16.0
+offset_top = 630.0
+offset_right = 430.0
+offset_bottom = 646.0
+text = "R = replay · open-test mouth is NOT speech"
+label_settings = SubResource("LS_small")
+[node name="BarTrack" type="ColorRect" parent="HUD"]
+offset_left = 16.0
+offset_top = 662.0
+offset_right = 426.0
+offset_bottom = 674.0
+color = Color(0.164706, 0.188235, 0.25098, 1)
+[node name="BarFill" type="ColorRect" parent="HUD"]
+offset_left = 16.0
+offset_top = 662.0
+offset_right = 16.0
+offset_bottom = 674.0
+color = Color(0.909804, 0.721569, 0.294118, 1)
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"preview": SubResource("AnimationLibrary_preview")
+}
+
+[node name="NarrationPlayer" type="AudioStreamPlayer" parent="."]
+autoplay = false
+stream = null

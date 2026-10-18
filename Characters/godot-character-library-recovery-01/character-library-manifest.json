@@ -1,0 +1,2192 @@
+{
+  "schema": "tahmures-character-library-recovery/1",
+  "date": "2026-10-18",
+  "workspace_target": "Characters/godot-character-library-recovery-01",
+  "status": "LOCAL_CANDIDATES_BUILT_ANATOMICAL_REVIEW_REQUIRED",
+  "human_approved": false,
+  "simurgh_scene_form_selected": null,
+  "simurgh_variants_prepared": [
+    "simurgh_human",
+    "simurgh_bird"
+  ],
+  "tahmures_frozen_approvals_verified": {
+    "approved_master_sha256": "3eedfaa5a41965c45a137a74a9137c6e59304a0604f877a81c98870c64dba2e5",
+    "layout01_v7_manifest_sha256": "b7539646b960fc9313c907effabb1f5de84ca816678fc0a0d1224c5f46ee1cd4",
+    "layout01_v7_index_sha256": "3b2ad23048da5ba009069f6c0ca86f78e6694927e151ac3e7b5e84393f4347bc",
+    "layout01_facial_states_01_manifest_sha256": "b081e9190f5ddf1e8eff643863b1bbee5ab7b4a176179a26703b1c4ad32e4ba4",
+    "layout01_facial_states_01_index_sha256": "6135d7b65239919ebb2834913aa20b93d391d16d40f2a35c4a499e337b1cea21"
+  },
+  "glm_candidate_defects_diagnosed": [
+    {
+      "id": "DEFECT-1-STANDIN-SILHOUETTES",
+      "location": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/make_standins.py & scripts/stage/scene_ch01_s*.gd",
+      "finding": "Named cast (Akvan Div, Black Div, Simurgh, Shahrasp, Chapar, Arash) were rendered as 360x480 geometric circle/trapezoid silhouettes in res://assets/standins/ instead of the 9 owner-supplied illustrated character PNGs.",
+      "received_proposed_remediation_unverified": "Withdrawn stand-in allowance; replace all named-character references with explicit CharacterRig scenes backed by prepared layered assets; fail hard if a character resource is missing."
+    },
+    {
+      "id": "DEFECT-2-TAHMURES-RIG-BROW-DIVERGENCE",
+      "location": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/tahmures_rig.gd lines 149-151",
+      "finding": "set_state('thinking') shifts BOTH _brow_l and _brow_r by Vector2(0, -1), whereas the accepted POC and facial-states approval move ONLY eyebrow_left by (0, -1) over thinking_brow_underlay (which only covers x=552..613, y=106..138).",
+      "received_proposed_remediation_unverified": "Repaired in recovery tahmures_rig.gd: only _brow_l.position = lift; _brow_r.position remains Vector2.ZERO."
+    },
+    {
+      "id": "DEFECT-3-HUD-SCENE-TIME-COLLISION",
+      "location": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/main.gd lines 138-139 & renders/frames/frame-t3.png",
+      "finding": "In frame-t3.png, _hud_scene at Vector2(16, 52) ('CH01-S01 · beat STORY_PROBLEM') collides with _hud_time at Vector2(430, 52) ('003.02 / 173.00'), rendering 'STORY_PRO003.02'.",
+      "received_proposed_remediation_unverified": "Repaired in recovery main.gd: moved _hud_time to Vector2(560, 52) and _hud_lang to Vector2(740, 52) with disjoint rect bounds checked by integrity validator."
+    },
+    {
+      "id": "DEFECT-4-INCOMPLETE-MOVIE-RENDERS",
+      "location": "Characters/tahmures/prototypes/godot-chapter-01-01/renders/ch01-en.avi (156.47s) & ch01-fa.avi (18.00s)",
+      "finding": "Neither movie matches the declared 173.0s (5190 frames at 30 fps) chapter plan; ch01-fa.avi ran with the old 18-second POC quit-after count (540 frames), and ch01-en.avi truncated at ~4694 frames.",
+      "received_proposed_remediation_unverified": "Enforce --fixed-fps 30 --quit-after 5190 for full 173.0s chapter exports only AFTER Phase B character approval gate."
+    }
+  ],
+  "characters": [
+    {
+      "character_id": "tahmures",
+      "name_en": "Tahmures",
+      "name_fa": "طهمورث",
+      "source_file": "Characters/tahmures/versions/layout01-v2/source/approved_master.png",
+      "sha256": "3eedfaa5a41965c45a137a74a9137c6e59304a0604f877a81c98870c64dba2e5",
+      "bytes": 859685,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "source_mode": "RGBA",
+      "in_chapter_01_scenes": true,
+      "role_in_chapter_01": "Protagonist / King (S03, S05, S07, S10)",
+      "orientation": "front-view upright (anatomical left = viewer right)",
+      "skeleton_type": "humanoid_layered_head_plus_body",
+      "held_props": [
+        "gold_medallion_on_cord (worn on chest)"
+      ],
+      "occlusion_and_reconstruction_notes": [
+        "Beard and hair_back occlude upper neck/collar junction (repaired in approved layout01-v7)",
+        "Blue/gold outer robe sleeves cover forearm cuffs; hands hang clear of torso silhouette"
+      ],
+      "technical_readiness_state": "candidate_partition_needs_anatomical_review",
+      "components": [
+        {
+          "component_id": "approved_head_package",
+          "search_window": [
+            389,
+            15,
+            687,
+            384
+          ],
+          "pivot_canvas": [
+            543,
+            315
+          ],
+          "godot_node_path": "root/Torso/Head",
+          "description": "17 byte-exact human-approved layers from layout01-v7 + layout01-facial-states-01 (neutral, blink, 1px left-brow thinking, open_test)",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              389,
+              15,
+              687,
+              687
+            ],
+            "opaque_pixels": 84562
+          }
+        },
+        {
+          "component_id": "neck_and_medallion_chest",
+          "search_window": [
+            440,
+            310,
+            645,
+            580
+          ],
+          "pivot_canvas": [
+            540,
+            330
+          ],
+          "godot_node_path": "root/Torso",
+          "description": "Cream inner tunic collar and gold sun medallion on cord",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              440,
+              310,
+              645,
+              645
+            ],
+            "opaque_pixels": 54324
+          }
+        },
+        {
+          "component_id": "outer_robe_and_sash",
+          "search_window": [
+            285,
+            310,
+            795,
+            1295
+          ],
+          "pivot_canvas": [
+            540,
+            340
+          ],
+          "godot_node_path": "root/Torso/Robe",
+          "description": "Royal blue robe with gold lotus border, cream skirt, and crimson waist sash",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              285,
+              310,
+              795,
+              795
+            ],
+            "opaque_pixels": 419498
+          }
+        },
+        {
+          "component_id": "arm_right_viewer_left",
+          "search_window": [
+            190,
+            340,
+            415,
+            965
+          ],
+          "pivot_canvas": [
+            375,
+            395
+          ],
+          "godot_node_path": "root/Torso/ShoulderR",
+          "description": "Anatomical-right flared sleeve and open hand (clear of torso below y=680)",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              208,
+              352,
+              415,
+              415
+            ],
+            "opaque_pixels": 75740
+          }
+        },
+        {
+          "component_id": "arm_left_viewer_right",
+          "search_window": [
+            665,
+            340,
+            890,
+            965
+          ],
+          "pivot_canvas": [
+            705,
+            395
+          ],
+          "godot_node_path": "root/Torso/ShoulderL",
+          "description": "Anatomical-left flared sleeve and open hand (clear of torso below y=680)",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              665,
+              350,
+              876,
+              876
+            ],
+            "opaque_pixels": 78176
+          }
+        },
+        {
+          "component_id": "feet_and_boots",
+          "search_window": [
+            285,
+            1280,
+            795,
+            1425
+          ],
+          "pivot_canvas": [
+            540,
+            1350
+          ],
+          "godot_node_path": "root/Feet",
+          "description": "Ankles and dark brown shoes at ground plane y=1421",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              315,
+              1280,
+              769,
+              769
+            ],
+            "opaque_pixels": 34095
+          }
+        }
+      ],
+      "received_measurement_claims": {
+        "foreground_bbox": [
+          208,
+          15,
+          876,
+          876
+        ],
+        "foreground_pixels": 543539,
+        "interior_pale_pixels_preserved": 3519,
+        "background_corner_rgb": [
+          0,
+          0,
+          0
+        ]
+      },
+      "component_definitions_status": "received_search_windows_not_verified_anatomy"
+    },
+    {
+      "character_id": "akvan_div",
+      "name_en": "Akvan Div",
+      "name_fa": "اکوان دیو",
+      "source_file": "Characters/Akvan Div.png",
+      "sha256": "dea44985d6cb717aba472319dae4b99d1680a629dc432ed32cd9bcbb9875c0b5",
+      "bytes": 1402564,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "source_mode": "RGB",
+      "in_chapter_01_scenes": true,
+      "role_in_chapter_01": "Keeper of Scripts (S02 intake, S03 examine, S04a catalogue, S07c warning)",
+      "orientation": "three-quarter right-facing body, front-three-quarter head turned toward viewer",
+      "skeleton_type": "humanoid_horned_keeper",
+      "held_props": [
+        "three_stacked_clay_tablets (held against mid-chest by both hands)"
+      ],
+      "occlusion_and_reconstruction_notes": [
+        "Three stacked clay tablets occlude central dark-teal inner dress and orange sash between y=430..575, x=540..790",
+        "Left and right fingers wrap onto the bottom/front faces of the tablet stack (separating tablets requires either keeping hands+tablets as a coupled prop-hold assembly or reconstructing hidden palm/robe underlap)"
+      ],
+      "technical_readiness_state": "candidate_partition_needs_anatomical_review",
+      "components": [
+        {
+          "component_id": "head_and_headwear",
+          "search_window": [
+            403,
+            16,
+            723,
+            369
+          ],
+          "pivot_canvas": [
+            563,
+            344
+          ],
+          "godot_node_path": "root/Torso/Head",
+          "description": "Head, hair/beard/horns/headband, ears, and facial features",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              403,
+              16,
+              655,
+              369
+            ],
+            "opaque_pixels": 61274
+          }
+        },
+        {
+          "component_id": "eyes_and_brows",
+          "search_window": [
+            468,
+            100,
+            658,
+            242
+          ],
+          "pivot_canvas": [
+            563,
+            171
+          ],
+          "godot_node_path": "root/Torso/Head/Eyes",
+          "description": "Open eyes and eyebrows (source pixels); closed-eyelid blink patch requires local skin plane reconstruction",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              468,
+              100,
+              641,
+              242
+            ],
+            "opaque_pixels": 22103
+          }
+        },
+        {
+          "component_id": "torso_and_garment_core",
+          "search_window": [
+            373,
+            349,
+            753,
+            1232
+          ],
+          "pivot_canvas": [
+            563,
+            369
+          ],
+          "godot_node_path": "root/Torso",
+          "description": "Core tunic/robe, cloak, belt/sash, and chest region",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              373,
+              349,
+              753,
+              1232
+            ],
+            "opaque_pixels": 298722
+          }
+        },
+        {
+          "component_id": "arm_viewer_left",
+          "search_window": [
+            335,
+            359,
+            523,
+            1033
+          ],
+          "pivot_canvas": [
+            448,
+            404
+          ],
+          "godot_node_path": "root/Torso/ArmViewerLeft",
+          "description": "Viewer-left (anatomical-right) upper/lower arm, sleeve, and hand",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              335,
+              359,
+              523,
+              1033
+            ],
+            "opaque_pixels": 103593
+          }
+        },
+        {
+          "component_id": "arm_viewer_right",
+          "search_window": [
+            603,
+            359,
+            791,
+            1033
+          ],
+          "pivot_canvas": [
+            678,
+            404
+          ],
+          "godot_node_path": "root/Torso/ArmViewerRight",
+          "description": "Viewer-right (anatomical-left) upper/lower arm, sleeve, and hand",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              603,
+              359,
+              791,
+              1033
+            ],
+            "opaque_pixels": 79506
+          }
+        },
+        {
+          "component_id": "held_prop_and_occlusion_zone",
+          "search_window": [
+            383,
+            326,
+            783,
+            807
+          ],
+          "pivot_canvas": [
+            563,
+            552
+          ],
+          "godot_node_path": "root/Torso/PropSocket",
+          "description": "Held prop / equipment attachment zone (coupled with hand in source pose where occluded)",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              383,
+              326,
+              783,
+              807
+            ],
+            "opaque_pixels": 159590
+          }
+        },
+        {
+          "component_id": "lower_garment_legs_feet",
+          "search_window": [
+            335,
+            1034,
+            791,
+            1429
+          ],
+          "pivot_canvas": [
+            563,
+            1414
+          ],
+          "godot_node_path": "root/LegsFeet",
+          "description": "Lower robe hem, trousers, leg wraps, and boots/shoes at ground contact",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              338,
+              1034,
+              748,
+              1429
+            ],
+            "opaque_pixels": 121714
+          }
+        }
+      ],
+      "received_measurement_claims": {
+        "foreground_bbox": [
+          335,
+          16,
+          791,
+          1429
+        ],
+        "foreground_pixels": 418235,
+        "interior_pale_pixels_preserved": 2509,
+        "background_corner_rgb": [
+          225,
+          221,
+          213
+        ]
+      },
+      "component_definitions_status": "received_search_windows_not_verified_anatomy"
+    },
+    {
+      "character_id": "black_div",
+      "name_en": "Black Div",
+      "name_fa": "دیو سیاه",
+      "source_file": "Characters/Black Div.png",
+      "sha256": "c0684b97c9557fc991606efaefe393f8bd4db7024dce32e71c69f6cd52cd56c8",
+      "bytes": 1567419,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "source_mode": "RGB",
+      "in_chapter_01_scenes": true,
+      "role_in_chapter_01": "Literal Div (S03 examine, S04c exit, S05 soaked dusk report)",
+      "orientation": "front-view upright (broad build, horned, friendly earnest expression)",
+      "skeleton_type": "humanoid_horned_broad",
+      "held_props": [
+        "clay_tablet_in_cream_cloth (cradled at chest by both hands)"
+      ],
+      "occlusion_and_reconstruction_notes": [
+        "Large clay tablet and cream wrapping cloth occlude central dark tunic and cloak lapels across x=385..698, y=428..705",
+        "Both broad grey hands grip the cloth folds around the tablet edges (coupled cradle assembly in source pose; full chest underdraw required if arms drop to sides)"
+      ],
+      "technical_readiness_state": "candidate_partition_needs_anatomical_review",
+      "components": [
+        {
+          "component_id": "head_and_headwear",
+          "search_window": [
+            372,
+            24,
+            692,
+            374
+          ],
+          "pivot_canvas": [
+            532,
+            349
+          ],
+          "godot_node_path": "root/Torso/Head",
+          "description": "Head, hair/beard/horns/headband, ears, and facial features",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              372,
+              24,
+              692,
+              374
+            ],
+            "opaque_pixels": 92165
+          }
+        },
+        {
+          "component_id": "eyes_and_brows",
+          "search_window": [
+            437,
+            108,
+            627,
+            248
+          ],
+          "pivot_canvas": [
+            532,
+            178
+          ],
+          "godot_node_path": "root/Torso/Head/Eyes",
+          "description": "Open eyes and eyebrows (source pixels); closed-eyelid blink patch requires local skin plane reconstruction",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              437,
+              108,
+              627,
+              248
+            ],
+            "opaque_pixels": 26550
+          }
+        },
+        {
+          "component_id": "torso_and_garment_core",
+          "search_window": [
+            342,
+            354,
+            722,
+            1230
+          ],
+          "pivot_canvas": [
+            532,
+            374
+          ],
+          "godot_node_path": "root/Torso",
+          "description": "Core tunic/robe, cloak, belt/sash, and chest region",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              342,
+              354,
+              722,
+              1230
+            ],
+            "opaque_pixels": 332236
+          }
+        },
+        {
+          "component_id": "arm_viewer_left",
+          "search_window": [
+            169,
+            364,
+            492,
+            1033
+          ],
+          "pivot_canvas": [
+            417,
+            409
+          ],
+          "godot_node_path": "root/Torso/ArmViewerLeft",
+          "description": "Viewer-left (anatomical-right) upper/lower arm, sleeve, and hand",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              169,
+              364,
+              492,
+              1033
+            ],
+            "opaque_pixels": 190274
+          }
+        },
+        {
+          "component_id": "arm_viewer_right",
+          "search_window": [
+            572,
+            364,
+            895,
+            1033
+          ],
+          "pivot_canvas": [
+            647,
+            409
+          ],
+          "godot_node_path": "root/Torso/ArmViewerRight",
+          "description": "Viewer-right (anatomical-left) upper/lower arm, sleeve, and hand",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              572,
+              364,
+              895,
+              1033
+            ],
+            "opaque_pixels": 180610
+          }
+        },
+        {
+          "component_id": "held_prop_and_occlusion_zone",
+          "search_window": [
+            352,
+            332,
+            752,
+            809
+          ],
+          "pivot_canvas": [
+            532,
+            556
+          ],
+          "godot_node_path": "root/Torso/PropSocket",
+          "description": "Held prop / equipment attachment zone (coupled with hand in source pose where occluded)",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              352,
+              332,
+              752,
+              809
+            ],
+            "opaque_pixels": 190800
+          }
+        },
+        {
+          "component_id": "lower_garment_legs_feet",
+          "search_window": [
+            169,
+            1034,
+            895,
+            1426
+          ],
+          "pivot_canvas": [
+            532,
+            1411
+          ],
+          "godot_node_path": "root/LegsFeet",
+          "description": "Lower robe hem, trousers, leg wraps, and boots/shoes at ground contact",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              233,
+              1034,
+              831,
+              1426
+            ],
+            "opaque_pixels": 153224
+          }
+        }
+      ],
+      "received_measurement_claims": {
+        "foreground_bbox": [
+          169,
+          24,
+          895,
+          1426
+        ],
+        "foreground_pixels": 678530,
+        "interior_pale_pixels_preserved": 1341,
+        "background_corner_rgb": [
+          224,
+          220,
+          212
+        ]
+      },
+      "component_definitions_status": "received_search_windows_not_verified_anatomy"
+    },
+    {
+      "character_id": "div_e_sefid",
+      "name_en": "Div-e Sefid",
+      "name_fa": "دیو سپید",
+      "source_file": "Characters/Div-e Sefid.png",
+      "sha256": "b0d03af2d49d410a58a101af004f5195c6cd20db2a6aca63440b84c373564ed3",
+      "bytes": 1696825,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "source_mode": "RGB",
+      "in_chapter_01_scenes": false,
+      "role_in_chapter_01": "Library rig only — Mirror Div (outside 11-scene Chapter 01 adaptation; Chapter 02 actor)",
+      "orientation": "front-three-quarter left-facing, pale horned figure in white/grey robes",
+      "skeleton_type": "humanoid_horned_mirror_div",
+      "held_props": [
+        "hand_mirror_right_hand (raised clear of torso)",
+        "torn_parchment_left_hand (held over left chest/sleeve)"
+      ],
+      "occlusion_and_reconstruction_notes": [
+        "Raised hand mirror is largely in clear background space (x=210..335, y=165..450), overlapping only wrist/sleeve tip",
+        "Left-hand parchment fragment + fingers occlude white robe lapel/chest at x=520..650, y=380..520",
+        "Long silver hair waves behind shoulders and upper back (separable as hair_back vs head_base)"
+      ],
+      "technical_readiness_state": "candidate_partition_needs_anatomical_review",
+      "components": [
+        {
+          "component_id": "head_and_headwear",
+          "search_window": [
+            350,
+            12,
+            670,
+            367
+          ],
+          "pivot_canvas": [
+            510,
+            342
+          ],
+          "godot_node_path": "root/Torso/Head",
+          "description": "Head, hair/beard/horns/headband, ears, and facial features",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              350,
+              12,
+              670,
+              367
+            ],
+            "opaque_pixels": 72033
+          }
+        },
+        {
+          "component_id": "eyes_and_brows",
+          "search_window": [
+            415,
+            97,
+            605,
+            239
+          ],
+          "pivot_canvas": [
+            510,
+            168
+          ],
+          "godot_node_path": "root/Torso/Head/Eyes",
+          "description": "Open eyes and eyebrows (source pixels); closed-eyelid blink patch requires local skin plane reconstruction",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              415,
+              97,
+              605,
+              239
+            ],
+            "opaque_pixels": 24288
+          }
+        },
+        {
+          "component_id": "torso_and_garment_core",
+          "search_window": [
+            320,
+            347,
+            700,
+            1235
+          ],
+          "pivot_canvas": [
+            510,
+            367
+          ],
+          "godot_node_path": "root/Torso",
+          "description": "Core tunic/robe, cloak, belt/sash, and chest region",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              320,
+              347,
+              700,
+              1235
+            ],
+            "opaque_pixels": 313207
+          }
+        },
+        {
+          "component_id": "arm_viewer_left",
+          "search_window": [
+            228,
+            357,
+            470,
+            1035
+          ],
+          "pivot_canvas": [
+            395,
+            402
+          ],
+          "godot_node_path": "root/Torso/ArmViewerLeft",
+          "description": "Viewer-left (anatomical-right) upper/lower arm, sleeve, and hand",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              271,
+              357,
+              470,
+              1035
+            ],
+            "opaque_pixels": 93799
+          }
+        },
+        {
+          "component_id": "arm_viewer_right",
+          "search_window": [
+            550,
+            357,
+            793,
+            1035
+          ],
+          "pivot_canvas": [
+            625,
+            402
+          ],
+          "godot_node_path": "root/Torso/ArmViewerRight",
+          "description": "Viewer-right (anatomical-left) upper/lower arm, sleeve, and hand",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              550,
+              357,
+              793,
+              1035
+            ],
+            "opaque_pixels": 125659
+          }
+        },
+        {
+          "component_id": "held_prop_and_occlusion_zone",
+          "search_window": [
+            330,
+            324,
+            730,
+            807
+          ],
+          "pivot_canvas": [
+            510,
+            551
+          ],
+          "godot_node_path": "root/Torso/PropSocket",
+          "description": "Held prop / equipment attachment zone (coupled with hand in source pose where occluded)",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              330,
+              324,
+              730,
+              807
+            ],
+            "opaque_pixels": 177922
+          }
+        },
+        {
+          "component_id": "lower_garment_legs_feet",
+          "search_window": [
+            228,
+            1036,
+            793,
+            1433
+          ],
+          "pivot_canvas": [
+            510,
+            1418
+          ],
+          "godot_node_path": "root/LegsFeet",
+          "description": "Lower robe hem, trousers, leg wraps, and boots/shoes at ground contact",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              316,
+              1036,
+              790,
+              1433
+            ],
+            "opaque_pixels": 117794
+          }
+        }
+      ],
+      "received_measurement_claims": {
+        "foreground_bbox": [
+          228,
+          12,
+          793,
+          1433
+        ],
+        "foreground_pixels": 481126,
+        "interior_pale_pixels_preserved": 239398,
+        "background_corner_rgb": [
+          227,
+          225,
+          218
+        ]
+      },
+      "component_definitions_status": "received_search_windows_not_verified_anatomy"
+    },
+    {
+      "character_id": "shahrasp",
+      "name_en": "Shahrasp",
+      "name_fa": "شهراسپ",
+      "source_file": "Characters/Shahrasp.png",
+      "sha256": "4c4c5ac10764e4725afbb2074a2ac267c7b0047ce99b6110784a147e7474474b",
+      "bytes": 1563152,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "source_mode": "RGB",
+      "in_chapter_01_scenes": true,
+      "role_in_chapter_01": "First Scribe (S01 background crystal reading, S07a-d reed sharpening/stop, S11 ledger)",
+      "orientation": "front-view upright, head tilted slightly right, olive headband and scribe robe",
+      "skeleton_type": "humanoid_scribe",
+      "held_props": [
+        "reed_pen_right_hand (poised near right shoulder)",
+        "bound_ledger_book_left_hand (held against left chest/waist)"
+      ],
+      "occlusion_and_reconstruction_notes": [
+        "Right hand + reed pen (x=310..435, y=295..445) partially overlap right olive shoulder/collar",
+        "Leather-bound ledger book + left hand (x=475..640, y=425..665) occlude left olive robe lapel, cream tunic, and brown sash",
+        "Headband tail hangs clear on viewer-left (x=415..460, y=150..275) — separable for subtle secondary motion"
+      ],
+      "technical_readiness_state": "candidate_partition_needs_anatomical_review",
+      "components": [
+        {
+          "component_id": "head_and_headwear",
+          "search_window": [
+            373,
+            17,
+            693,
+            368
+          ],
+          "pivot_canvas": [
+            533,
+            343
+          ],
+          "godot_node_path": "root/Torso/Head",
+          "description": "Head, hair/beard/horns/headband, ears, and facial features",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              373,
+              17,
+              693,
+              368
+            ],
+            "opaque_pixels": 62943
+          }
+        },
+        {
+          "component_id": "eyes_and_brows",
+          "search_window": [
+            438,
+            101,
+            628,
+            242
+          ],
+          "pivot_canvas": [
+            533,
+            171
+          ],
+          "godot_node_path": "root/Torso/Head/Eyes",
+          "description": "Open eyes and eyebrows (source pixels); closed-eyelid blink patch requires local skin plane reconstruction",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              438,
+              101,
+              628,
+              242
+            ],
+            "opaque_pixels": 23221
+          }
+        },
+        {
+          "component_id": "torso_and_garment_core",
+          "search_window": [
+            343,
+            348,
+            723,
+            1228
+          ],
+          "pivot_canvas": [
+            533,
+            368
+          ],
+          "godot_node_path": "root/Torso",
+          "description": "Core tunic/robe, cloak, belt/sash, and chest region",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              343,
+              348,
+              723,
+              1228
+            ],
+            "opaque_pixels": 314095
+          }
+        },
+        {
+          "component_id": "arm_viewer_left",
+          "search_window": [
+            266,
+            358,
+            493,
+            1030
+          ],
+          "pivot_canvas": [
+            418,
+            403
+          ],
+          "godot_node_path": "root/Torso/ArmViewerLeft",
+          "description": "Viewer-left (anatomical-right) upper/lower arm, sleeve, and hand",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              266,
+              358,
+              493,
+              1030
+            ],
+            "opaque_pixels": 102494
+          }
+        },
+        {
+          "component_id": "arm_viewer_right",
+          "search_window": [
+            573,
+            358,
+            801,
+            1030
+          ],
+          "pivot_canvas": [
+            648,
+            403
+          ],
+          "godot_node_path": "root/Torso/ArmViewerRight",
+          "description": "Viewer-right (anatomical-left) upper/lower arm, sleeve, and hand",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              573,
+              358,
+              801,
+              1030
+            ],
+            "opaque_pixels": 107123
+          }
+        },
+        {
+          "component_id": "held_prop_and_occlusion_zone",
+          "search_window": [
+            353,
+            326,
+            753,
+            804
+          ],
+          "pivot_canvas": [
+            533,
+            551
+          ],
+          "godot_node_path": "root/Torso/PropSocket",
+          "description": "Held prop / equipment attachment zone (coupled with hand in source pose where occluded)",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              353,
+              326,
+              753,
+              804
+            ],
+            "opaque_pixels": 176605
+          }
+        },
+        {
+          "component_id": "lower_garment_legs_feet",
+          "search_window": [
+            266,
+            1031,
+            801,
+            1424
+          ],
+          "pivot_canvas": [
+            533,
+            1409
+          ],
+          "godot_node_path": "root/LegsFeet",
+          "description": "Lower robe hem, trousers, leg wraps, and boots/shoes at ground contact",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              338,
+              1031,
+              763,
+              1424
+            ],
+            "opaque_pixels": 126735
+          }
+        }
+      ],
+      "received_measurement_claims": {
+        "foreground_bbox": [
+          266,
+          17,
+          801,
+          1424
+        ],
+        "foreground_pixels": 451170,
+        "interior_pale_pixels_preserved": 6969,
+        "background_corner_rgb": [
+          228,
+          227,
+          222
+        ]
+      },
+      "component_definitions_status": "received_search_windows_not_verified_anatomy"
+    },
+    {
+      "character_id": "chapar",
+      "name_en": "Chapar",
+      "name_fa": "چاپار",
+      "source_file": "Characters/chapar.png",
+      "sha256": "abe7349f22e751879d227b03f5e30689726d8b5016ad588121ce66eb2dd5e270",
+      "bytes": 1578991,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "source_mode": "RGB",
+      "in_chapter_01_scenes": true,
+      "role_in_chapter_01": "Incoming relay-road courier, distinct from Simurgh (S02 brings river tablet)",
+      "orientation": "front-view walking stride, weathered brown cloak, cap, bronze message tube & leather satchel",
+      "skeleton_type": "humanoid_courier",
+      "held_props": [
+        "crossbody_satchel_and_bronze_tube (strapped across torso; right hand grips strap at chest)"
+      ],
+      "occlusion_and_reconstruction_notes": [
+        "Right forearm and hand (x=325..590, y=420..605) cross in front of cream tunic to grip the leather diagonal strap",
+        "Bronze scroll tube (x=280..410, y=580..805) and leather satchel (x=295..410, y=795..975) overlap inner cloak and right hip",
+        "Left arm/hand (x=660..780, y=480..895) hangs relatively clear against inner cloak lining"
+      ],
+      "technical_readiness_state": "candidate_partition_needs_anatomical_review",
+      "components": [
+        {
+          "component_id": "head_and_headwear",
+          "search_window": [
+            392,
+            14,
+            712,
+            363
+          ],
+          "pivot_canvas": [
+            552,
+            338
+          ],
+          "godot_node_path": "root/Torso/Head",
+          "description": "Head, hair/beard/horns/headband, ears, and facial features",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              392,
+              14,
+              700,
+              363
+            ],
+            "opaque_pixels": 62985
+          }
+        },
+        {
+          "component_id": "eyes_and_brows",
+          "search_window": [
+            457,
+            97,
+            647,
+            237
+          ],
+          "pivot_canvas": [
+            552,
+            167
+          ],
+          "godot_node_path": "root/Torso/Head/Eyes",
+          "description": "Open eyes and eyebrows (source pixels); closed-eyelid blink patch requires local skin plane reconstruction",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              457,
+              97,
+              647,
+              237
+            ],
+            "opaque_pixels": 25030
+          }
+        },
+        {
+          "component_id": "torso_and_garment_core",
+          "search_window": [
+            362,
+            343,
+            742,
+            1215
+          ],
+          "pivot_canvas": [
+            552,
+            363
+          ],
+          "godot_node_path": "root/Torso",
+          "description": "Core tunic/robe, cloak, belt/sash, and chest region",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              362,
+              343,
+              742,
+              1215
+            ],
+            "opaque_pixels": 307813
+          }
+        },
+        {
+          "component_id": "arm_viewer_left",
+          "search_window": [
+            208,
+            353,
+            512,
+            1019
+          ],
+          "pivot_canvas": [
+            437,
+            398
+          ],
+          "godot_node_path": "root/Torso/ArmViewerLeft",
+          "description": "Viewer-left (anatomical-right) upper/lower arm, sleeve, and hand",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              208,
+              353,
+              512,
+              1019
+            ],
+            "opaque_pixels": 156149
+          }
+        },
+        {
+          "component_id": "arm_viewer_right",
+          "search_window": [
+            592,
+            353,
+            896,
+            1019
+          ],
+          "pivot_canvas": [
+            667,
+            398
+          ],
+          "godot_node_path": "root/Torso/ArmViewerRight",
+          "description": "Viewer-right (anatomical-left) upper/lower arm, sleeve, and hand",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              592,
+              353,
+              890,
+              1019
+            ],
+            "opaque_pixels": 138667
+          }
+        },
+        {
+          "component_id": "held_prop_and_occlusion_zone",
+          "search_window": [
+            372,
+            321,
+            772,
+            795
+          ],
+          "pivot_canvas": [
+            552,
+            544
+          ],
+          "godot_node_path": "root/Torso/PropSocket",
+          "description": "Held prop / equipment attachment zone (coupled with hand in source pose where occluded)",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              372,
+              321,
+              772,
+              795
+            ],
+            "opaque_pixels": 177310
+          }
+        },
+        {
+          "component_id": "lower_garment_legs_feet",
+          "search_window": [
+            208,
+            1020,
+            896,
+            1410
+          ],
+          "pivot_canvas": [
+            552,
+            1395
+          ],
+          "godot_node_path": "root/LegsFeet",
+          "description": "Lower robe hem, trousers, leg wraps, and boots/shoes at ground contact",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              246,
+              1020,
+              896,
+              1410
+            ],
+            "opaque_pixels": 97306
+          }
+        }
+      ],
+      "received_measurement_claims": {
+        "foreground_bbox": [
+          208,
+          14,
+          896,
+          1410
+        ],
+        "foreground_pixels": 506372,
+        "interior_pale_pixels_preserved": 2235,
+        "background_corner_rgb": [
+          225,
+          222,
+          214
+        ]
+      },
+      "component_definitions_status": "received_search_windows_not_verified_anatomy"
+    },
+    {
+      "character_id": "arash",
+      "name_en": "Arash",
+      "name_fa": "آرش",
+      "source_file": "Characters/arash.png",
+      "sha256": "07a57d4138037a2abafc0e709e4878deafe176c08093f6c6dafae4190e3a428d",
+      "bytes": 1713438,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "source_mode": "RGB",
+      "in_chapter_01_scenes": true,
+      "role_in_chapter_01": "Northern Captain & illustrative Gatekeeper (S06 receives packet & dispatches riders; S08a Gatekeeper vignette)",
+      "orientation": "front-view upright, studded leather brigandine, grey scarf/headband, hip keys, back bow/quiver (appearance only; no archery in story)",
+      "skeleton_type": "humanoid_captain_gatekeeper",
+      "held_props": [
+        "key_ring_on_belt (hanging at anatomical-left hip)",
+        "bow_and_quiver_on_back (protruding behind anatomical-left shoulder)"
+      ],
+      "occlusion_and_reconstruction_notes": [
+        "Both arms (viewer-left x=240..385, y=350..885; viewer-right x=635..780, y=355..885) hang completely clear of the torso silhouette — cleanest arm separation in the roster",
+        "Bow and quiver protrude behind upper-right silhouette (x=575..720, y=18..365) and can be separated as a back-equipment layer",
+        "Key ring at belt (x=530..600, y=645..830) sits over the brown brigandine skirt"
+      ],
+      "technical_readiness_state": "candidate_partition_needs_anatomical_review",
+      "components": [
+        {
+          "component_id": "head_and_headwear",
+          "search_window": [
+            390,
+            21,
+            710,
+            371
+          ],
+          "pivot_canvas": [
+            550,
+            346
+          ],
+          "godot_node_path": "root/Torso/Head",
+          "description": "Head, hair/beard/horns/headband, ears, and facial features",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              390,
+              21,
+              710,
+              371
+            ],
+            "opaque_pixels": 82795
+          }
+        },
+        {
+          "component_id": "eyes_and_brows",
+          "search_window": [
+            455,
+            105,
+            645,
+            245
+          ],
+          "pivot_canvas": [
+            550,
+            175
+          ],
+          "godot_node_path": "root/Torso/Head/Eyes",
+          "description": "Open eyes and eyebrows (source pixels); closed-eyelid blink patch requires local skin plane reconstruction",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              455,
+              105,
+              645,
+              245
+            ],
+            "opaque_pixels": 24025
+          }
+        },
+        {
+          "component_id": "torso_and_garment_core",
+          "search_window": [
+            360,
+            351,
+            740,
+            1228
+          ],
+          "pivot_canvas": [
+            550,
+            371
+          ],
+          "godot_node_path": "root/Torso",
+          "description": "Core tunic/robe, cloak, belt/sash, and chest region",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              360,
+              351,
+              740,
+              1228
+            ],
+            "opaque_pixels": 281426
+          }
+        },
+        {
+          "component_id": "arm_viewer_left",
+          "search_window": [
+            262,
+            361,
+            510,
+            1031
+          ],
+          "pivot_canvas": [
+            435,
+            406
+          ],
+          "godot_node_path": "root/Torso/ArmViewerLeft",
+          "description": "Viewer-left (anatomical-right) upper/lower arm, sleeve, and hand",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              262,
+              361,
+              510,
+              1031
+            ],
+            "opaque_pixels": 120438
+          }
+        },
+        {
+          "component_id": "arm_viewer_right",
+          "search_window": [
+            590,
+            361,
+            839,
+            1031
+          ],
+          "pivot_canvas": [
+            665,
+            406
+          ],
+          "godot_node_path": "root/Torso/ArmViewerRight",
+          "description": "Viewer-right (anatomical-left) upper/lower arm, sleeve, and hand",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              590,
+              361,
+              830,
+              1031
+            ],
+            "opaque_pixels": 123113
+          }
+        },
+        {
+          "component_id": "held_prop_and_occlusion_zone",
+          "search_window": [
+            370,
+            329,
+            770,
+            806
+          ],
+          "pivot_canvas": [
+            550,
+            554
+          ],
+          "godot_node_path": "root/Torso/PropSocket",
+          "description": "Held prop / equipment attachment zone (coupled with hand in source pose where occluded)",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              370,
+              329,
+              770,
+              806
+            ],
+            "opaque_pixels": 174210
+          }
+        },
+        {
+          "component_id": "lower_garment_legs_feet",
+          "search_window": [
+            262,
+            1032,
+            839,
+            1424
+          ],
+          "pivot_canvas": [
+            550,
+            1409
+          ],
+          "godot_node_path": "root/LegsFeet",
+          "description": "Lower robe hem, trousers, leg wraps, and boots/shoes at ground contact",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              337,
+              1032,
+              839,
+              1424
+            ],
+            "opaque_pixels": 86866
+          }
+        }
+      ],
+      "received_measurement_claims": {
+        "foreground_bbox": [
+          262,
+          21,
+          839,
+          1424
+        ],
+        "foreground_pixels": 474658,
+        "interior_pale_pixels_preserved": 43917,
+        "background_corner_rgb": [
+          232,
+          233,
+          227
+        ]
+      },
+      "component_definitions_status": "received_search_windows_not_verified_anatomy"
+    },
+    {
+      "character_id": "garshasp",
+      "name_en": "Garshasp",
+      "name_fa": "گرشاسپ",
+      "source_file": "Characters/garshasp.png",
+      "sha256": "19c57419274c5da0be086219cd86f53eab4980fa84f5eedec125a0b32e39f73e",
+      "bytes": 1363816,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "source_mode": "RGB",
+      "in_chapter_01_scenes": false,
+      "role_in_chapter_01": "Library rig only — remembered captain of prior court (remains strictly OFFSTAGE in Chapter 01; named in D-S04-1)",
+      "orientation": "front-view upright, grey-streaked hair/beard, dark cloak with gold clasp, blue tunic, held clay tablet",
+      "skeleton_type": "humanoid_elder_captain",
+      "held_props": [
+        "clay_tablet_right_hand (held vertically against right chest)"
+      ],
+      "occlusion_and_reconstruction_notes": [
+        "Right forearm/hand and vertical clay tablet (x=285..485, y=405..645) occlude right chest of blue tunic and inner cloak edge",
+        "Left hand (x=660..735, y=690..895) emerges below dark cloak fold",
+        "Heavy dark cloak wraps both shoulders and frames full body silhouette"
+      ],
+      "technical_readiness_state": "candidate_partition_needs_anatomical_review",
+      "components": [
+        {
+          "component_id": "head_and_headwear",
+          "search_window": [
+            384,
+            16,
+            704,
+            368
+          ],
+          "pivot_canvas": [
+            544,
+            343
+          ],
+          "godot_node_path": "root/Torso/Head",
+          "description": "Head, hair/beard/horns/headband, ears, and facial features",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              384,
+              16,
+              704,
+              368
+            ],
+            "opaque_pixels": 68139
+          }
+        },
+        {
+          "component_id": "eyes_and_brows",
+          "search_window": [
+            449,
+            100,
+            639,
+            241
+          ],
+          "pivot_canvas": [
+            544,
+            170
+          ],
+          "godot_node_path": "root/Torso/Head/Eyes",
+          "description": "Open eyes and eyebrows (source pixels); closed-eyelid blink patch requires local skin plane reconstruction",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              449,
+              100,
+              618,
+              241
+            ],
+            "opaque_pixels": 21215
+          }
+        },
+        {
+          "component_id": "torso_and_garment_core",
+          "search_window": [
+            354,
+            348,
+            734,
+            1228
+          ],
+          "pivot_canvas": [
+            544,
+            368
+          ],
+          "godot_node_path": "root/Torso",
+          "description": "Core tunic/robe, cloak, belt/sash, and chest region",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              354,
+              348,
+              734,
+              1228
+            ],
+            "opaque_pixels": 326290
+          }
+        },
+        {
+          "component_id": "arm_viewer_left",
+          "search_window": [
+            217,
+            358,
+            504,
+            1030
+          ],
+          "pivot_canvas": [
+            429,
+            403
+          ],
+          "godot_node_path": "root/Torso/ArmViewerLeft",
+          "description": "Viewer-left (anatomical-right) upper/lower arm, sleeve, and hand",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              217,
+              358,
+              504,
+              1030
+            ],
+            "opaque_pixels": 179343
+          }
+        },
+        {
+          "component_id": "arm_viewer_right",
+          "search_window": [
+            584,
+            358,
+            872,
+            1030
+          ],
+          "pivot_canvas": [
+            659,
+            403
+          ],
+          "godot_node_path": "root/Torso/ArmViewerRight",
+          "description": "Viewer-right (anatomical-left) upper/lower arm, sleeve, and hand",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              584,
+              358,
+              868,
+              1030
+            ],
+            "opaque_pixels": 152785
+          }
+        },
+        {
+          "component_id": "held_prop_and_occlusion_zone",
+          "search_window": [
+            364,
+            325,
+            764,
+            805
+          ],
+          "pivot_canvas": [
+            544,
+            551
+          ],
+          "godot_node_path": "root/Torso/PropSocket",
+          "description": "Held prop / equipment attachment zone (coupled with hand in source pose where occluded)",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              364,
+              325,
+              764,
+              805
+            ],
+            "opaque_pixels": 188478
+          }
+        },
+        {
+          "component_id": "lower_garment_legs_feet",
+          "search_window": [
+            217,
+            1031,
+            872,
+            1425
+          ],
+          "pivot_canvas": [
+            544,
+            1410
+          ],
+          "godot_node_path": "root/LegsFeet",
+          "description": "Lower robe hem, trousers, leg wraps, and boots/shoes at ground contact",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              218,
+              1031,
+              872,
+              1425
+            ],
+            "opaque_pixels": 137621
+          }
+        }
+      ],
+      "received_measurement_claims": {
+        "foreground_bbox": [
+          217,
+          16,
+          872,
+          1425
+        ],
+        "foreground_pixels": 594607,
+        "interior_pale_pixels_preserved": 1484,
+        "background_corner_rgb": [
+          225,
+          222,
+          212
+        ]
+      },
+      "component_definitions_status": "received_search_windows_not_verified_anatomy"
+    },
+    {
+      "character_id": "simurgh_human",
+      "name_en": "Simurgh (Human Variant)",
+      "name_fa": "سیمرغ (گونهٔ انسانی)",
+      "source_file": "Characters/simurgh - human.png",
+      "sha256": "6dc71d5b103804422bc116533da7613ec3bcc7f524903c315d44ab18cf240faa",
+      "bytes": 1414897,
+      "dimensions": [
+        1087,
+        1447
+      ],
+      "source_mode": "RGB",
+      "in_chapter_01_scenes": true,
+      "role_in_chapter_01": "Messenger — candidate variant A (S03 examine, S04b wrap oilcloth, S06a deliver packet to Arash, S10 carry second message)",
+      "orientation": "front-three-quarter upright (1087x1447 canvas), teal coat with leaf motif, sealed packet at chest, side satchel",
+      "skeleton_type": "humanoid_messenger_variant",
+      "held_props": [
+        "sealed_packet_right_hand (held at chest)",
+        "leather_satchel_on_left_hip (strapped across chest)"
+      ],
+      "occlusion_and_reconstruction_notes": [
+        "Right forearm/hand and sealed packet (x=305..565, y=410..630) occlude central teal coat lapel and crossbody strap",
+        "Left arm/hand (x=625..730, y=580..885) hangs clear of coat skirt",
+        "Side satchel (x=310..405, y=600..800) tucks behind right elbow/waist"
+      ],
+      "technical_readiness_state": "candidate_partition_needs_anatomical_review",
+      "components": [
+        {
+          "component_id": "head_and_headwear",
+          "search_window": [
+            371,
+            19,
+            691,
+            370
+          ],
+          "pivot_canvas": [
+            531,
+            345
+          ],
+          "godot_node_path": "root/Torso/Head",
+          "description": "Head, hair/beard/horns/headband, ears, and facial features",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              371,
+              19,
+              691,
+              370
+            ],
+            "opaque_pixels": 65546
+          }
+        },
+        {
+          "component_id": "eyes_and_brows",
+          "search_window": [
+            436,
+            103,
+            626,
+            243
+          ],
+          "pivot_canvas": [
+            531,
+            173
+          ],
+          "godot_node_path": "root/Torso/Head/Eyes",
+          "description": "Open eyes and eyebrows (source pixels); closed-eyelid blink patch requires local skin plane reconstruction",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              438,
+              103,
+              626,
+              243
+            ],
+            "opaque_pixels": 22615
+          }
+        },
+        {
+          "component_id": "torso_and_garment_core",
+          "search_window": [
+            341,
+            350,
+            721,
+            1228
+          ],
+          "pivot_canvas": [
+            531,
+            370
+          ],
+          "godot_node_path": "root/Torso",
+          "description": "Core tunic/robe, cloak, belt/sash, and chest region",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              341,
+              350,
+              721,
+              1228
+            ],
+            "opaque_pixels": 299772
+          }
+        },
+        {
+          "component_id": "arm_viewer_left",
+          "search_window": [
+            263,
+            360,
+            491,
+            1030
+          ],
+          "pivot_canvas": [
+            416,
+            405
+          ],
+          "godot_node_path": "root/Torso/ArmViewerLeft",
+          "description": "Viewer-left (anatomical-right) upper/lower arm, sleeve, and hand",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              263,
+              360,
+              491,
+              1030
+            ],
+            "opaque_pixels": 107082
+          }
+        },
+        {
+          "component_id": "arm_viewer_right",
+          "search_window": [
+            571,
+            360,
+            799,
+            1030
+          ],
+          "pivot_canvas": [
+            646,
+            405
+          ],
+          "godot_node_path": "root/Torso/ArmViewerRight",
+          "description": "Viewer-right (anatomical-left) upper/lower arm, sleeve, and hand",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              571,
+              360,
+              789,
+              1030
+            ],
+            "opaque_pixels": 117957
+          }
+        },
+        {
+          "component_id": "held_prop_and_occlusion_zone",
+          "search_window": [
+            351,
+            328,
+            751,
+            805
+          ],
+          "pivot_canvas": [
+            531,
+            552
+          ],
+          "godot_node_path": "root/Torso/PropSocket",
+          "description": "Held prop / equipment attachment zone (coupled with hand in source pose where occluded)",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              351,
+              328,
+              751,
+              805
+            ],
+            "opaque_pixels": 181847
+          }
+        },
+        {
+          "component_id": "lower_garment_legs_feet",
+          "search_window": [
+            263,
+            1031,
+            799,
+            1424
+          ],
+          "pivot_canvas": [
+            531,
+            1409
+          ],
+          "godot_node_path": "root/LegsFeet",
+          "description": "Lower robe hem, trousers, leg wraps, and boots/shoes at ground contact",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              316,
+              1031,
+              799,
+              1424
+            ],
+            "opaque_pixels": 86577
+          }
+        }
+      ],
+      "received_measurement_claims": {
+        "foreground_bbox": [
+          263,
+          19,
+          799,
+          1424
+        ],
+        "foreground_pixels": 429464,
+        "interior_pale_pixels_preserved": 2224,
+        "background_corner_rgb": [
+          225,
+          222,
+          214
+        ]
+      },
+      "component_definitions_status": "received_search_windows_not_verified_anatomy"
+    },
+    {
+      "character_id": "simurgh_bird",
+      "name_en": "Simurgh (Bird Variant)",
+      "name_fa": "سیمرغ (گونهٔ پرنده)",
+      "source_file": "Characters/simurgh - bird.png",
+      "sha256": "cc9a3ea2078784db7db1a1d4e48db948f691af776971e2e0d783af591181cb6b",
+      "bytes": 1614602,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "source_mode": "RGB",
+      "in_chapter_01_scenes": true,
+      "role_in_chapter_01": "Messenger — candidate variant B (same story role as simurgh_human; no transformation or second role)",
+      "orientation": "three-quarter profile standing avian (head facing viewer-right, plumage teal/gold, scroll cylinder strapped across breast)",
+      "skeleton_type": "avian_messenger_variant (crest/head/beak, body/breast, wing_near_left, wing_far_right, tail_plumes, leg_left_talon, leg_right_talon, scroll_tube_prop)",
+      "held_props": [
+        "strapped_scroll_cylinder (diagonally across teal/gold breast plumage)"
+      ],
+      "occlusion_and_reconstruction_notes": [
+        "Scroll cylinder and braided cord (x=425..705, y=405..765) cross over breast feathers and near-wing shoulder",
+        "Long gold-tipped tail plumes (x=72..750, y=825..1315) pass behind both yellow avian legs/talons",
+        "Near wing (x=250..500, y=410..1085) overlaps body flank and upper tail base"
+      ],
+      "technical_readiness_state": "candidate_partition_needs_anatomical_review",
+      "components": [
+        {
+          "component_id": "crest_and_head",
+          "search_window": [
+            330,
+            15,
+            720,
+            320
+          ],
+          "pivot_canvas": [
+            545,
+            225
+          ],
+          "godot_node_path": "root/Body/Neck",
+          "description": "Avian head, golden crest plumes, eye, and curved beak; supports gaze/blink and slight head tilt (±4 deg)",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              362,
+              25,
+              716,
+              320
+            ],
+            "opaque_pixels": 67853
+          }
+        },
+        {
+          "component_id": "eye_and_brow",
+          "search_window": [
+            500,
+            115,
+            605,
+            185
+          ],
+          "pivot_canvas": [
+            555,
+            150
+          ],
+          "godot_node_path": "root/Body/Neck/Head",
+          "description": "Avian amber eye and brow ridge; blink closed-lid surface requires candidate reconstruction",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              500,
+              115,
+              605,
+              185
+            ],
+            "opaque_pixels": 7350
+          }
+        },
+        {
+          "component_id": "neck_and_breast",
+          "search_window": [
+            400,
+            260,
+            720,
+            860
+          ],
+          "pivot_canvas": [
+            550,
+            560
+          ],
+          "godot_node_path": "root/Body",
+          "description": "Teal and gold layered breast/body core",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              400,
+              260,
+              720,
+              860
+            ],
+            "opaque_pixels": 174874
+          }
+        },
+        {
+          "component_id": "scroll_cylinder_prop",
+          "search_window": [
+            420,
+            275,
+            710,
+            535
+          ],
+          "pivot_canvas": [
+            560,
+            445
+          ],
+          "godot_node_path": "root/Body/PropSocket",
+          "description": "Strapped brown scroll cylinder + braided shoulder cord; occludes breast feathers underneath",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              420,
+              275,
+              710,
+              535
+            ],
+            "opaque_pixels": 63611
+          }
+        },
+        {
+          "component_id": "wing_near_left",
+          "search_window": [
+            250,
+            285,
+            520,
+            995
+          ],
+          "pivot_canvas": [
+            435,
+            340
+          ],
+          "godot_node_path": "root/Body/WingNear",
+          "description": "Foreground right-side/near wing with gold-tipped primary feathers",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              250,
+              285,
+              520,
+              995
+            ],
+            "opaque_pixels": 122943
+          }
+        },
+        {
+          "component_id": "wing_far_right",
+          "search_window": [
+            620,
+            290,
+            770,
+            960
+          ],
+          "pivot_canvas": [
+            670,
+            345
+          ],
+          "godot_node_path": "root/Body/WingFar",
+          "description": "Background far wing silhouette",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              620,
+              290,
+              770,
+              960
+            ],
+            "opaque_pixels": 88779
+          }
+        },
+        {
+          "component_id": "tail_plumes",
+          "search_window": [
+            70,
+            720,
+            755,
+            1320
+          ],
+          "pivot_canvas": [
+            430,
+            780
+          ],
+          "godot_node_path": "root/Body/Tail",
+          "description": "Long sweeping teal/gold tail feathers behind legs",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              79,
+              720,
+              755,
+              1320
+            ],
+            "opaque_pixels": 312549
+          }
+        },
+        {
+          "component_id": "leg_left_talon",
+          "search_window": [
+            320,
+            930,
+            550,
+            1415
+          ],
+          "pivot_canvas": [
+            445,
+            960
+          ],
+          "godot_node_path": "root/Body/LegL",
+          "description": "Viewer-left avian leg and four-talon foot",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              320,
+              930,
+              550,
+              1393
+            ],
+            "opaque_pixels": 89330
+          }
+        },
+        {
+          "component_id": "leg_right_talon",
+          "search_window": [
+            545,
+            930,
+            775,
+            1380
+          ],
+          "pivot_canvas": [
+            585,
+            960
+          ],
+          "godot_node_path": "root/Body/LegR",
+          "description": "Viewer-right avian leg and four-talon foot",
+          "received_measurement_claims": {
+            "tight_alpha_bbox": [
+              545,
+              930,
+              775,
+              1372
+            ],
+            "opaque_pixels": 60463
+          }
+        }
+      ],
+      "received_measurement_claims": {
+        "foreground_bbox": [
+          79,
+          25,
+          829,
+          1393
+        ],
+        "foreground_pixels": 556341,
+        "interior_pale_pixels_preserved": 9184,
+        "background_corner_rgb": [
+          222,
+          218,
+          210
+        ]
+      },
+      "component_definitions_status": "received_search_windows_not_verified_anatomy"
+    }
+  ]
+}

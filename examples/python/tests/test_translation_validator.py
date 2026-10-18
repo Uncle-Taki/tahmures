@@ -1,3 +1,4 @@
+import hashlib
 import re
 from pathlib import Path
 
@@ -12,6 +13,25 @@ SOURCE = Path("book/part-1/01-what-is-a-prompt.md")
 TRANSLATION = Path("book/fa/part-1/01-what-is-a-prompt.md")
 SOURCE_10 = Path("book/part-2/10-variance-choice-and-control.md")
 TRANSLATION_10 = Path("book/fa/part-2/10-variance-choice-and-control.md")
+
+
+def _part_one_pair(name: str) -> tuple[Path, Path]:
+    return Path(f"book/part-1/{name}"), Path(f"book/fa/part-1/{name}")
+
+
+# Scoped owner decision (2026-10-10): Persian Chapters 01–04 spell the
+# protagonist's name طهمورث; Chapters 05–24 keep تهمورث pending a separate
+# book-wide terminology decision.
+CHAPTERS_01_04 = tuple(
+    _part_one_pair(name)
+    for name in (
+        "01-what-is-a-prompt.md",
+        "02-models-meaning-and-uncertainty.md",
+        "03-requirements-before-wording.md",
+        "04-anatomy-of-a-reliable-prompt.md",
+    )
+)
+SOURCE_5, TRANSLATION_5 = _part_one_pair("05-instruction-hierarchy-and-conflict.md")
 
 
 @pytest.mark.parametrize("chapter", range(1, 25))
@@ -62,6 +82,76 @@ def test_stale_source_hash_is_rejected(tmp_path: Path) -> None:
     )
     with pytest.raises(ValueError, match="source_sha256 is stale"):
         validate_pair(SOURCE, changed)
+
+
+def _with_current_source_hash(source: Path, translation: Path, tmp_path: Path) -> Path:
+    """Copy a Persian chapter to tmp_path with the current English hash.
+
+    The committed Chapters 01–04 hashes are intentionally stale until the
+    refactored English sources are accepted, so heading-contract tests must
+    pin the current hash instead of relying on the front matter.
+    """
+    current_hash = hashlib.sha256(source.read_bytes()).hexdigest()
+    changed = tmp_path / translation.name
+    changed.write_text(
+        re.sub(
+            r'^source_sha256: "[0-9a-f]{64}"$',
+            f'source_sha256: "{current_hash}"',
+            translation.read_text(encoding="utf-8"),
+            count=1,
+            flags=re.MULTILINE,
+        ),
+        encoding="utf-8",
+    )
+    return changed
+
+
+@pytest.mark.parametrize(("source", "translation"), CHAPTERS_01_04)
+def test_tahmures_spelling_tale_heading_is_accepted_in_chapters_01_04(
+    tmp_path: Path, source: Path, translation: Path
+) -> None:
+    changed = _with_current_source_hash(source, translation, tmp_path)
+    slug, episode = validate_pair(source, changed)
+    assert slug
+    assert episode
+
+
+@pytest.mark.parametrize(("source", "translation"), CHAPTERS_01_04)
+def test_tehmures_spelling_tale_heading_is_rejected_in_chapters_01_04(
+    tmp_path: Path, source: Path, translation: Path
+) -> None:
+    changed = _with_current_source_hash(source, translation, tmp_path)
+    changed.write_text(
+        changed.read_text(encoding="utf-8").replace(
+            "## روایت طهمورث", "## روایت تهمورث", 1
+        ),
+        encoding="utf-8",
+    )
+    with pytest.raises(ValueError, match="missing heading ## روایت طهمورث"):
+        validate_pair(source, changed)
+
+
+def test_tehmures_spelling_tale_heading_is_accepted_in_later_chapters(
+    tmp_path: Path,
+) -> None:
+    changed = _with_current_source_hash(SOURCE_5, TRANSLATION_5, tmp_path)
+    slug, episode = validate_pair(SOURCE_5, changed)
+    assert slug
+    assert episode
+
+
+def test_tahmures_spelling_tale_heading_is_rejected_in_later_chapters(
+    tmp_path: Path,
+) -> None:
+    changed = _with_current_source_hash(SOURCE_5, TRANSLATION_5, tmp_path)
+    changed.write_text(
+        changed.read_text(encoding="utf-8").replace(
+            "## روایت تهمورث", "## روایت طهمورث", 1
+        ),
+        encoding="utf-8",
+    )
+    with pytest.raises(ValueError, match="missing heading ## روایت تهمورث"):
+        validate_pair(SOURCE_5, changed)
 
 
 def test_changed_executable_fence_is_rejected(tmp_path: Path) -> None:

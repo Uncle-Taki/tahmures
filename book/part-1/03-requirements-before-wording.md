@@ -37,28 +37,29 @@ One was stone, one timber, one rope, one a high arch, and one of bundled reed.
 
 ### The Request
 
-“Choose the best bridge,” Tahmures told the council's div.
+“Choose the best bridge,” Tahmures told Arzhang Div, the div who served the
+council.
 
-The div circled the models. “The stone arch.”
+Arzhang Div circled the models. “The stone arch.”
 
-The treasurer struck the table. “It costs more than the province collects in
-two years.”
+The treasurer, Jamshid, struck the table. “It costs more than the province
+collects in two years.”
 
-“Then the rope bridge,” said the div.
+“Then the rope bridge,” said Arzhang Div.
 
-The captain laughed. “A supply cart cannot cross it.”
+The captain, Arash, laughed. “A supply cart cannot cross it.”
 
 Tahmures folded his arms. “Consider everything and choose properly.”
 
 ### The Unexpected Result
 
-By evening the div had written five recommendations. The stone bridge was best
-for endurance, timber for cost, rope for speed, the arch for carts, and the
-reed for repair. Each answer was correct under a different meaning of
+By evening Arzhang Div had written five recommendations. The stone bridge was
+best for endurance, timber for cost, rope for speed, the arch for carts, and
+the reed for repair. Each answer was correct under a different meaning of
 *best*. None settled the decision.
 
 The council tried adjectives. They asked for the safest affordable bridge, the
-strongest practical bridge, and the wisest design. The div responded with
+strongest practical bridge, and the wisest design. Arzhang Div responded with
 increasing elegance and unchanged disagreement.
 
 Meanwhile, farmers ferried grain in bowls. One boat overturned. No one drowned,
@@ -69,12 +70,13 @@ but a season's seed disappeared downstream.
 Tahmures ordered the five advisers to stop discussing bridges and name the
 failure they could not accept.
 
-The captain required supply carts. The flood keeper required survival through
-the spring current. The treasurer imposed a cost ceiling of eighty silver
-marks. The villagers needed pedestrians to cross within twenty days. The
-builder could repair timber in two days but stone only in ten.
+Arash required supply carts. Nariman, whose fields the flood had cut off,
+required survival through the spring current. Jamshid imposed a cost ceiling
+of eighty silver marks. The villagers needed pedestrians to cross within
+twenty days. Keyumars, the builder, could repair timber in two days but stone
+only in ten.
 
-The First Scribe placed these statements in two columns. In the first were
+Shahrasp placed these statements in two columns. In the first were
 conditions that disqualified a design. In the second were preferences that
 could be traded.
 
@@ -84,13 +86,13 @@ would demand yearly work.
 
 “So timber is best,” said Tahmures.
 
-“Under the requirements we have now written,” corrected the treasurer.
+“Under the requirements we have now written,” corrected Jamshid.
 
 Tahmures accepted the correction. They hung small bronze weights from a
 balance—cost, speed, endurance, repair—and recorded whose judgement each weight
-represented. The div could explain designs and expose trade-offs. The balance
-made the council's values inspectable; it did not pretend they came from the
-div.
+represented. Arzhang Div could explain designs and expose trade-offs. The
+balance made the council's values inspectable; it did not pretend they came
+from the div.
 
 The next request was shorter than the first day's revisions. It named the hard
 conditions, asked for surviving candidates, and required the cost of each
@@ -266,9 +268,10 @@ preferences, and choose evidence and metrics before looking at outputs.
 
 ## The Next Tale
 
-To justify the bridge decision, the council asks the Archivist for past water
-and construction orders. One old letter arrives written as a command—and the
-bundle gives no sign that its authority has expired.
+Years later, to justify the bridge decision and its yearly repairs, the council
+asks Soroush, the Archivist, for past water and construction orders. One old
+letter arrives written as a command—and the bundle gives no sign that its
+authority has expired.
 
 <!-- next: ch04 -->
 

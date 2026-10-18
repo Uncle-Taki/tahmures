@@ -1,0 +1,168 @@
+{
+  "media_candidate_checks_passed": true,
+  "repository_gate_passed": false,
+  "anatomical_art_approved": false,
+  "human_approved": false,
+  "godot_viewport_capture_executed": true,
+  "checks": [
+    {
+      "name": "python-regressions",
+      "command": [
+        "/usr/bin/python3",
+        "/home/mehdi/Project/leela/tahmures/Characters/godot-character-library-recovery-01/scripts/tests/test_library_contract.py"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "pass": true,
+      "log": "evidence/python-regressions.log"
+    },
+    {
+      "name": "reject-missing-repo",
+      "command": [
+        "/usr/bin/python3",
+        "/home/mehdi/Project/leela/tahmures/Characters/godot-character-library-recovery-01/scripts/validate_character_library.py",
+        "--repo-root",
+        "/definitely-missing-tahmures"
+      ],
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "pass": true,
+      "log": "evidence/reject-missing-repo.log"
+    },
+    {
+      "name": "validate",
+      "command": [
+        "/usr/bin/python3",
+        "/home/mehdi/Project/leela/tahmures/Characters/godot-character-library-recovery-01/scripts/validate_character_library.py"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "pass": true,
+      "log": "evidence/validate.log"
+    },
+    {
+      "name": "godot-import",
+      "command": [
+        "rtk",
+        "proxy",
+        "godot",
+        "--headless",
+        "--path",
+        "/home/mehdi/Project/leela/tahmures/Characters/godot-character-library-recovery-01",
+        "--import"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "pass": true,
+      "log": "evidence/godot-import.log"
+    },
+    {
+      "name": "rig-regressions",
+      "command": [
+        "rtk",
+        "proxy",
+        "godot",
+        "--headless",
+        "--path",
+        "/home/mehdi/Project/leela/tahmures/Characters/godot-character-library-recovery-01",
+        "--script",
+        "scripts/tests/rig_contract_test.gd",
+        "--quit-after",
+        "20"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "pass": true,
+      "log": "evidence/rig-regressions.log"
+    },
+    {
+      "name": "reject-missing-character",
+      "command": [
+        "rtk",
+        "proxy",
+        "godot",
+        "--headless",
+        "--path",
+        "/home/mehdi/Project/leela/tahmures/Characters/godot-character-library-recovery-01",
+        "--script",
+        "scripts/tests/rig_contract_test.gd",
+        "--quit-after",
+        "20",
+        "--",
+        "--missing-resource"
+      ],
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "pass": true,
+      "log": "evidence/reject-missing-character.log"
+    },
+    {
+      "name": "gallery-smoke",
+      "command": [
+        "rtk",
+        "proxy",
+        "godot",
+        "--headless",
+        "--path",
+        "/home/mehdi/Project/leela/tahmures/Characters/godot-character-library-recovery-01",
+        "--quit-after",
+        "10"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "pass": true,
+      "log": "evidence/gallery-smoke.log"
+    },
+    {
+      "name": "reject-malformed-character",
+      "command": [
+        "rtk",
+        "proxy",
+        "godot",
+        "--headless",
+        "--path",
+        "/home/mehdi/Project/leela/tahmures/Characters/godot-character-library-recovery-01",
+        "--script",
+        "scripts/tests/rig_contract_test.gd",
+        "--quit-after",
+        "20",
+        "--",
+        "--malformed-resource"
+      ],
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "pass": true,
+      "log": "evidence/reject-malformed-character.log"
+    },
+    {
+      "name": "viewport-captures",
+      "command": [
+        "rtk",
+        "proxy",
+        "godot",
+        "--path",
+        "/home/mehdi/Project/leela/tahmures/Characters/godot-character-library-recovery-01",
+        "--script",
+        "scripts/tests/render_review.gd"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "pass": true,
+      "log": "evidence/viewport-captures.log"
+    },
+    {
+      "name": "repository-check",
+      "command": [
+        "rtk",
+        "proxy",
+        "make",
+        "check",
+        "PYTHON=.venv/bin/python"
+      ],
+      "exit_code": 2,
+      "expected_exit_code": 0,
+      "pass": false,
+      "log": "evidence/repository-check.log"
+    }
+  ]
+}

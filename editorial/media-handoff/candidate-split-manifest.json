@@ -1,0 +1,586 @@
+{
+  "original_archive": "incorrect-glm-candidate.zip",
+  "original_archive_sha256": "e3d2deeb2c6b77aa8a971828fab75477aa68637fce0449fbb6cf62856dc7e11e",
+  "movie": "Characters/tahmures/prototypes/godot-chapter-01-01/renders/ch01-en.avi",
+  "movie_bytes": 292134274,
+  "movie_sha256": "2913e49b5576a7715d1322e09efa82f4016651beed4ac93c7ad8eff887bdc977",
+  "chunks": [
+    {
+      "path": "_reassembly/ch01-en.avi.part-001",
+      "bytes": 97378092,
+      "sha256": "e680485927ebedea72cb434551e871cbc661eaf15418b115d95836a507dd70da"
+    },
+    {
+      "path": "_reassembly/ch01-en.avi.part-002",
+      "bytes": 97378092,
+      "sha256": "f7170d9e2c98ea304f4e413efba03a1a34cca1da03711670e18241e727aacccb"
+    },
+    {
+      "path": "_reassembly/ch01-en.avi.part-003",
+      "bytes": 97378090,
+      "sha256": "4afd21da2fae76d86149cdf2a82b5e91274357104408182e005aa1c4cb4db6cf"
+    }
+  ],
+  "original_files": [
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/approved-head/beard.png",
+      "sha256": "9acfccfb432ee10803cfc1bc47bc6adf028f8c2edd24e65f026fe5b9c30b636e"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/approved-head/beard.png.import",
+      "sha256": "8ff511c85d069d84f145c3944622294ed6faf9a00d0c83513c7ceee9e0b88975"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/approved-head/diadem_gold.png",
+      "sha256": "452683dfcb4f8e09e8bb6f00df7aef3699a36bc93622fb8ccb2304088cb6724c"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/approved-head/diadem_gold.png.import",
+      "sha256": "b0a77cabbf618458f34aca4084f73c713cf4dd9df2a80977b956d9c42b26783f"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/approved-head/ear_left.png",
+      "sha256": "1bfe3f41aa047e0fe5c570eb0808f427ca9a6f34d1624f8e25d0a7efd35733a0"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/approved-head/ear_left.png.import",
+      "sha256": "d8f51bcf67e815eb77502649e884d6c4c96cdcac7b1a567dcb27235b300976bf"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/approved-head/ear_right.png",
+      "sha256": "8b568b29e672e6298a156f4f82c9e2a54f4b48e177d985fa802a293cc8513e40"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/approved-head/ear_right.png.import",
+      "sha256": "98f281f2554bdea222d3079a8ff57494b9cb4d09014ff9608d3e1e9f53b19b70"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/approved-head/eye_left.png",
+      "sha256": "9d9058a8210f4451c842a083ecb1a08d73a684c51001bd991af123ddf4620ab6"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/approved-head/eye_left.png.import",
+      "sha256": "75233e8714e9446f143d7e56f10d7cfd40040fa506fc26f6a312a861d3b70c87"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/approved-head/eye_left_closed.png",
+      "sha256": "9121114fba923738388c9176f68706aee6f714092247d98586619be560f85255"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/approved-head/eye_left_closed.png.import",
+      "sha256": "a97c5567271f15cf4d502d825344802820fd27eee50c7831290a7c55b41d8435"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/approved-head/eye_right.png",
+      "sha256": "08d981713c6874d33a5f36d311f5ec5414b04b81350c366fe03cee2ecb8becab"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/approved-head/eye_right.png.import",
+      "sha256": "847b9906ffb31b6d005928655a652ffe585f373a94233860e748d5883168cef9"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/approved-head/eye_right_closed.png",
+      "sha256": "1961f58b9fb27575a9583e160c2f7b506702c40c69e16ed75ca1d1afae6ade55"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/approved-head/eye_right_closed.png.import",
+      "sha256": "e092b1df77db2ebf6b843b01b1b4fc579e0616da983ea5e54437e401b1150baa"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/approved-head/eyebrow_left.png",
+      "sha256": "b3cd909abdacf5f13425ea8c32c7db3e1dcae2e60d0f5c60eba06878c0210021"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/approved-head/eyebrow_left.png.import",
+      "sha256": "d60e01d022b9edf46eb33b1cee9906ca47453cf1a735c2a5b67973134cf577da"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/approved-head/eyebrow_right.png",
+      "sha256": "f32bc31c08d9de377cef44b731317c12103a701c1966f5788ffb0b96ad35a757"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/approved-head/eyebrow_right.png.import",
+      "sha256": "c0f8b3e646365c6c8620cbf0e472b0cef6e20472842de171db53fe7af0e610f3"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/approved-head/hair_back.png",
+      "sha256": "2c6ca92b17b20bff8c36b27e7f3a90dad1c690bb345ed56934d2ebffd3c410d2"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/approved-head/hair_back.png.import",
+      "sha256": "e569b439f75d18ec36e54fc71f1b998e23b0192b5b27063f16f93869b5b32724"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/approved-head/head_base.png",
+      "sha256": "754fb445b5e27fe962b1d55af82992b5f14fae94035a7a4b23cde8b8121390b9"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/approved-head/head_base.png.import",
+      "sha256": "d98a6f2e8591fc019dffe552001b743cfdafe0869049d274a2ef5997d08f960a"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/approved-head/lower_face_neutral.png",
+      "sha256": "a9189e8a79f228c998597d5d4c88d82a38f582e46d44d639ae1c8382d8a07ee5"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/approved-head/lower_face_neutral.png.import",
+      "sha256": "c8b4aa17b7d344b1a121507466cb69b73d81747accb858dbc51b514559e43376"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/approved-head/lower_face_open_test.png",
+      "sha256": "ddc9c082cbc95af5208cf97a3b615626e50dd82b6ea547d5614fa5b5f57fcee6"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/approved-head/lower_face_open_test.png.import",
+      "sha256": "02ef95724eabd9cbfd22ef59573ac87d3af69a94b61984c24acc7ccae509acf7"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/approved-head/moustache.png",
+      "sha256": "ef26dbc275d58f6352e7a65a796e4ae7f155fa91701e65f32c2ee1628cfa8c2c"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/approved-head/moustache.png.import",
+      "sha256": "dc7149a8aa7b851e05b1ae9847a4727c4611f415858c1a1b4b4ef490f9d26e7c"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/approved-head/nose.png",
+      "sha256": "51e631d045df9964cf33dcc8cb87a96061900d304874cc638ac45a048320dac0"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/approved-head/nose.png.import",
+      "sha256": "cfe4d1ac8b20306d1b7a82e5c850f41a9b350068163b83ce2b95ae5b03820c2c"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/approved-head/thinking_brow_underlay.png",
+      "sha256": "aa6b46f99cc302ca4f296052a8728ea44bd4d74781ba84ee2e6acd0cce90d238"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/approved-head/thinking_brow_underlay.png.import",
+      "sha256": "b317308f1305a167c4624d2a666e0680aefb520286c03fb4efacac23956006ec"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/asset-map.json",
+      "sha256": "06f98401a20e8c9587d4a06335d0ffb33c98cb3a6ab1921b19317afbc55e8473"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/akvan_div.png",
+      "sha256": "ac3624ad03c31e7fd5ac2cc55a770fe4d1b2ba0bade342616ea6e6c00e619e82"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/akvan_div.png.import",
+      "sha256": "c8dde0535e3a80eac9de5b23ce46941d772c66d6bc7fd3bed87440b02fd34a84"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/apprentice.png",
+      "sha256": "09e1addc139b8f3915b187a801bf30262d495d7f567194f9d44724f3c7e04fd7"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/apprentice.png.import",
+      "sha256": "8719ae62959ab72248b5942e444d2dfb1a0854fde0bb58bb9fc40748b1126bd0"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/arash.png",
+      "sha256": "b5bc601df128ce5e3129d421dbeeec37406505bd72d2b464cd269c36e3ca9a32"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/arash.png.import",
+      "sha256": "39623bd65f8e4e2c13e780a757bfe1333b936d04c374f4bd72c439f4877dcae0"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/black_div.png",
+      "sha256": "27d9ce9daf639b8e801db32b68de5d03866b3de3d7a753327302884a0b3e2ad2"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/black_div.png.import",
+      "sha256": "b6d9f27632fe1ef6b00c2afe8679e234f8f7d8804990e9414238720d8f2d150b"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/chapar.png",
+      "sha256": "5d7349245f31b79099003e8e178e5d8896a6d8dab69b4f19e1d4840edb4691b2"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/chapar.png.import",
+      "sha256": "68639293ac2d90e2b57e2ef3725bafaa2d894d378cebdf03ed8742eaa89a34ea"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/charcoal_burner.png",
+      "sha256": "bdc2be736830183d3e0b0491c07166fc44c72ef1554d2b039b454dd27787f2e0"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/charcoal_burner.png.import",
+      "sha256": "60311b6be47d057c1295c2b2a8d8a796ad34936572331ef1662cb5c2435a33b6"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/courier_rider.png",
+      "sha256": "482eb11d882fe4effc0181cda337ed1de1f9983f1dc3f84bfc3fbbb6cbbd4cd1"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/courier_rider.png.import",
+      "sha256": "71a8ca23bdbdd7da387a008c722b49265b3d2bf01de41bc6f94937c5089dfe4e"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/fire.png",
+      "sha256": "c1d51cf2e0fc763ef6a6f355f37d4b20e7132c2252a0693209bc265e7db71606"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/fire.png.import",
+      "sha256": "3968c60dc259089233444e897a920cdc66c424eb3466b1aaa3e038d3c270287e"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/label_clay.png",
+      "sha256": "a99d0a034b23af6abbd54f008cc58971c27183a8e7324d60106c60a13489c718"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/label_clay.png.import",
+      "sha256": "b6375248e0d7d4302d99a81e883118bb0de12bdf11a6448c7151bc3871840524"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/lamp.png",
+      "sha256": "6a8d501effa34f18793e2650b4f419a84621a0831aa36a5152532d79d0ecbf6c"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/lamp.png.import",
+      "sha256": "71fdaf7409a08d8f210072930aee9a1518acbe65c854dece503f389ad156e576"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/ledger.png",
+      "sha256": "a876270d60cf45aeb712ef00fa4f0683cb9634b93729e77dfb148da41abe4dc5"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/ledger.png.import",
+      "sha256": "7c69e33da11323b4bb509412c97a20c812cb116130359eb35817c34503d2505b"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/oilcloth_packet.png",
+      "sha256": "6b50c3695463f6d4fb3671156b5f16df034a05dc369fac1c6a25debb7c64cfb3"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/oilcloth_packet.png.import",
+      "sha256": "ca892223a1299779d8fd6fce7bd0ed037d851564d8966d9ee32f8069a385f29b"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/reed_pen.png",
+      "sha256": "0bb06e45ce783e6a7e52e46f72a434ba73c921580e590b7a1e88b2918031f56c"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/reed_pen.png.import",
+      "sha256": "b2ecdb8575b2edc89198d7aecc1e21b3e0c7003cf9d70ddda507ada6d3463d31"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/seal_lapis.png",
+      "sha256": "b9b9349ffb4c969f80ff4c71f02b0dcf6d1494dfd749619dc0947b33b4c441b1"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/seal_lapis.png.import",
+      "sha256": "6c3fd971028e5f3570daca3a714bd5f8aad99c5317075604503d2ba4fa100a97"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/series_mark.png",
+      "sha256": "5b5dfa78b922d01e6f19b6949131201f7a666381c3f86a55cf93e801741676f9"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/series_mark.png.import",
+      "sha256": "2442a85614f0b49733cfa88ece0a9704e141028ce9ab79b5e294a52d7e17fdfb"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/shahrasp.png",
+      "sha256": "fcb164089e2c3f098a7c5e62c31d515f63498c116629bc5b22fd7204f9b110c4"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/shahrasp.png.import",
+      "sha256": "c88e8641691c4f6a5d6efcf2ee54707e280bd04995d195e46c2c436ec220ade1"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/simurgh.png",
+      "sha256": "4de34d2eeb178b2953d990360a5fcae51fa9023e0fbfdf70d698bf1b055a7dc5"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/simurgh.png.import",
+      "sha256": "8c47a4d40eb4652bf11ce3e3f00f062954eb6b36d6087abbf556893bda549bc9"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/tablet.png",
+      "sha256": "ed97fd3f9582acf667c017ca83c350692c38e90eb5d9d51e2101c222cd3ed32c"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/tablet.png.import",
+      "sha256": "dff5623e8016eb6e216c12e3b04ec932a2024054961d8325ec67ac35fde7b5c2"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/tablet_sealed_card.png",
+      "sha256": "6e80719813e9ccb2bfa18b8868e861c98ed85a392e91b38e1a2b39899afbd677"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/tablet_sealed_card.png.import",
+      "sha256": "7f00baf143651e27ecbd6a275bdaf46ca7eb950536eab5e00ac508caf9296feb"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/villager.png",
+      "sha256": "3516d97e4e1d6f4ec89608d0598ce5b342d6fb89f4f9d551637fbb80adc4e66d"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/standins/villager.png.import",
+      "sha256": "ae47a21c11f61136fcc8fbf673ae656de07e103d5ca705b727af9bf1e26c8738"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/temporary-body/forearm.png",
+      "sha256": "452f31dc9d8157fd8c0923ec1a8d8ee2d1a195df5b78e94458d9453eeda73f02"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/temporary-body/forearm.png.import",
+      "sha256": "209222d7a955c289bc82162f616d42739af1d3739c5cf842385cb3f3dc5c7ea7"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/temporary-body/hand_point.png",
+      "sha256": "2bbd9b466fe94cb8b70d2e9c4876bd230a5fb6514f61974d1a4c6000c1f22816"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/temporary-body/hand_point.png.import",
+      "sha256": "eef6bc56382d72337a5838c9ff1d5535b3e731821f2984c09f402fd28ebd5d41"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/temporary-body/placeholders.json",
+      "sha256": "d748748d5711c09a2ca0ccaf78f3880ceb674d78b9051d20ac1298a1e8a65c52"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/temporary-body/point_target.png",
+      "sha256": "8ba6ca6958c4804fc938ceefaaebe2b8054480db33ceab3f9550c064399ab46f"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/temporary-body/point_target.png.import",
+      "sha256": "ab9426bd122ba02ad049d0e93f754868ee10f2f1b0c888d66ddb0ff4998f4b6a"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/temporary-body/torso.png",
+      "sha256": "7e16596b08384cd383e551512d2d6abb3cbdb9c226f56af73bb35b079923ce83"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/temporary-body/torso.png.import",
+      "sha256": "6580e6515f2d40b4b1239734622d7d76fc1f9a9b903046afd060fb3972bf902a"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/temporary-body/upper_arm.png",
+      "sha256": "1b69cd8f5669b03ef5a0b6f9dcc4f0e411eea5ab699a23ecdadda7f409da6b0e"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/assets/temporary-body/upper_arm.png.import",
+      "sha256": "f1c2066c3896ef1aa16658ba217fda4929d4da52b0ab7e926838fd2d750c1f08"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/audio/en/README.md",
+      "sha256": "cd222e40237772ee5964566e9cd5cf952758b3f87871dfe5d36bb730d584f8fc"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/audio/fa/README.md",
+      "sha256": "efc9c5487b3cd9e9630d5b67a5fb50fcee1f6b50668be529012dc82b1e688d2d"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/data/captions-en.vtt",
+      "sha256": "853d4366c14c21cb5c0e04fd33eff759d376808cd427c0f7da53026d85435e6a"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/data/captions-fa.vtt",
+      "sha256": "a71498e9a0f083528fb0c09107784d5f28bea10784eb7e75924b57d4b9389598"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/data/chapter-cues.json",
+      "sha256": "5caa09d3b9b4acbe455cec61bad2261f490535ccd5b3003b41d054c2dc280543"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/planning/baseline-protected.sha256",
+      "sha256": "e9a208f72b8a77c8f6b2ed96f42ce63cc6af33976e1812fde2fea8b757a89be8"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/planning/review-findings.md",
+      "sha256": "075195af14df86eaca3ea6d722dba67c974be8ce7e33bfeb152f6268f98b3913"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/project.godot",
+      "sha256": "22dfbae0fb24b7dd9426ff837c1288338ba46567a034d471e9f0f41fc352615e"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/renders/ch01-en.avi",
+      "sha256": "2913e49b5576a7715d1322e09efa82f4016651beed4ac93c7ad8eff887bdc977"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/renders/ch01-fa.avi",
+      "sha256": "46160fb32c6f432477d25c5974b2d36e8855b5310b2fd1a6516fd870b9f089ad"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/renders/frames/frame-t3.png",
+      "sha256": "c1da69d82fce6a9353627bdb336de456b0a2917095a174ae4ffa4584b78c2f15"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scenes/main.tscn",
+      "sha256": "b3f1a8a9d6ff1132744165fa13ac02a3e8cd035d287ccccdb7b7239413405ad3"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/caption_layer.gd",
+      "sha256": "9b1ebad16b559c231c5fbaca17b9586395bb0e79d7fccc5f387b5f91fe9acd89"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/caption_layer.gd.uid",
+      "sha256": "c57d74a871eb835c711f2757480b2f9c2ab4ff43079f5d4ef5549ef85b47ca03"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/generate_temporary_body.py",
+      "sha256": "8d5ad06937c85bf154680616bd7f85781ff90b8fcdb378de11acb862aade67e4"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/main.gd",
+      "sha256": "2917d9ad47b7aeeff3fbce4062bfb4ff76ccf93ca18daed0f2d255721055b21d"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/main.gd.uid",
+      "sha256": "b46e93079df960cc7fad5e03f83a9d2b361b9d3ab304e99ed8d354b1a563443e"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/make_captions.py",
+      "sha256": "3479908f8011092c219b1814ba6a76abef423c40b305e57ff66cc9b23ee471c7"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/make_standins.py",
+      "sha256": "db25b48602c6543fe75ead6889d5363d09259b53775b2a0e5d88f45db39abc9b"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/ost_layer.gd",
+      "sha256": "e6a1916a20eecd19b72bb30a6e5420e4de441f25fdf26e833a2eaff3a6acdf9a"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/ost_layer.gd.uid",
+      "sha256": "4fb8a6207746c34e6e3a97cc41d5a09d303763ba88a1b2611e8577ff38cec69e"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/scene_base.gd",
+      "sha256": "ba91473baa1807c6a0180fc060751eedcb6b6542068fef68894b8144d95070bc"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/scene_base.gd.uid",
+      "sha256": "c20e2eb7f9acf1b90df1d63d08f3472305df1378e2acb74a5d0b5a3d40b3e177"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/stage/scene_ch01_s01.gd",
+      "sha256": "fdb4fabb32b26c24b35307b3fce4c6d9fc767fbad2c81477b64076105eff58db"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/stage/scene_ch01_s01.gd.uid",
+      "sha256": "64b234d785ab2f1aa8c992ba8eb14f74a5edd63af08e910ac9106565f35193e4"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/stage/scene_ch01_s02.gd",
+      "sha256": "938a4e5c392294ae25f834afef1f994c68580521d83cc4b22e33638f8dd4b420"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/stage/scene_ch01_s02.gd.uid",
+      "sha256": "456b7f4b581ab19bb85da27631453d21f1fb14e63616572d9117cfd51170d2e5"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/stage/scene_ch01_s03.gd",
+      "sha256": "d14798131be5a98a1840d7bb1b8ae168808257df8c5f2538572108899b0e8150"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/stage/scene_ch01_s03.gd.uid",
+      "sha256": "b4b2e4a3c2c1fec708d5071ea79d182dcdafab066f0719b64006ec43fbe48bd6"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/stage/scene_ch01_s04.gd",
+      "sha256": "51bad920bafa4eb49ac592d6c66d5cafd2a19051589e4581153c0d6bc514c334"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/stage/scene_ch01_s04.gd.uid",
+      "sha256": "616ae34511c7d36e038c89c33dd2d9a71a71de4bf15e4c51bd88553662b414fb"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/stage/scene_ch01_s05.gd",
+      "sha256": "ad6cc7b7ce9038f052ac3c006f692da94fc970c9fad5234b849ecbb75286d74a"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/stage/scene_ch01_s05.gd.uid",
+      "sha256": "368d396323cebe481a1b25d33ba9f0179841bd5c7668c2574f11305f2daead11"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/stage/scene_ch01_s06.gd",
+      "sha256": "83ddade790fd8526a94647c70e37baa958873cbcceedb2722a084c15e9f5a289"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/stage/scene_ch01_s06.gd.uid",
+      "sha256": "cce08f01728c86a5b7d78d62d81797fc4af43b53284a82da065bc2bea820dca4"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/stage/scene_ch01_s07.gd",
+      "sha256": "c032bc30f98d2d4d68c714ec3313fce31bc73c114874f2c05f37176e7e5f7ae6"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/stage/scene_ch01_s07.gd.uid",
+      "sha256": "4e61060a455cec6ae2ce0c6e2ac4e11b283854132a03715e6e4ed1a267dc0d10"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/stage/scene_ch01_s08.gd",
+      "sha256": "d88de3bbffd60bbe7821faa7038a1be5f2596452ec589eb85fe292e3ed062f44"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/stage/scene_ch01_s08.gd.uid",
+      "sha256": "d5f3547c1989bc41a60fbd54f058b0a4ab5b60c1aaf67876f7aee505569a4450"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/stage/scene_ch01_s09.gd",
+      "sha256": "c6339a1c1c3849367c1b3d1b2f6187b66990cc9c85c8c23f99537f77c3100586"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/stage/scene_ch01_s09.gd.uid",
+      "sha256": "7425c429c6cc913664fedde2e964687f554df3b035327aab1e748ef759e732aa"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/stage/scene_ch01_s10.gd",
+      "sha256": "40b9c6ff8179ff45dc39bec362715551f6cc25ab2c67b4334f2b7c58eebfdd24"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/stage/scene_ch01_s10.gd.uid",
+      "sha256": "d4eea46a3de6f9499a9a9e4c3053b6a19c2de29a99f59f2eb0c1dafc6688be79"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/stage/scene_ch01_s11.gd",
+      "sha256": "8d9deb2a277776abbe6644404a88202ee84b7782a5a75cad5b6ff35f84c13bcd"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/stage/scene_ch01_s11.gd.uid",
+      "sha256": "ba80fb12e79bada660411cdac646603096ffd8cc41e082c73800cf8f7b829368"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/stage_kit.gd",
+      "sha256": "a50fa1dab994dadf0b1e37b2ea1669791e6005f1f6ca1cfabcee08ecbc0ffa0c"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/stage_kit.gd.uid",
+      "sha256": "d4b804b9545c217bce857db09c84b696fdd5ed28a68d61832ab1ccf9f114494b"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/tahmures_rig.gd",
+      "sha256": "7bee490192033852ef3fee198809c22a7d830a8f4c3156493da6887080b0bd73"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/tahmures_rig.gd.uid",
+      "sha256": "b79ef569ea9de5e753972068059522bf7ac372c01276b998708cac6f29a35a7c"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/tests/check_standins.py",
+      "sha256": "c970b41fd3bb0beb0fec9ef2525d5ab5ec945594b2daa2c3eb4fc1e76649f806"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/tests/timeline_test.gd",
+      "sha256": "cf83dd36baa3b9f5ac741ccdccd407711cf7b3155333f0904b6f1971e0f40798"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/tests/timeline_test.gd.uid",
+      "sha256": "795205be2f746660fa5767edc1bab8d3110a006b5c0f4a09421d8f1ddc405ce3"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/timeline.gd",
+      "sha256": "26cf9cd6b9a3c0724df2fde5b7fa1b869d4b873fee803010b68e9ae5b3ce10af"
+    },
+    {
+      "path": "Characters/tahmures/prototypes/godot-chapter-01-01/scripts/timeline.gd.uid",
+      "sha256": "4fe77962d1de0e0ab1810282046e1bcbf1a3333a55398530d853ae96cd036810"
+    }
+  ]
+}

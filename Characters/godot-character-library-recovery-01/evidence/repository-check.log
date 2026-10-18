@@ -1,0 +1,382 @@
+.venv/bin/python -m ruff check examples/python scripts
+All checks passed!
+.venv/bin/python -m ruff format --check examples/python scripts
+50 files already formatted
+test -z "$(gofmt -l examples/go)"
+.venv/bin/python -m pytest
+........................................................................ [  9%]
+........................................................................ [ 18%]
+........................................................................ [ 27%]
+........................................................................ [ 36%]
+........................................................................ [ 45%]
+........................................................................ [ 54%]
+........................................................................ [ 63%]
+........................................................................ [ 72%]
+.....F.................................................................. [ 81%]
+............................FFFF.................................F...... [ 90%]
+.F....F................................................................. [ 99%]
+.....                                                                    [100%]
+=================================== FAILURES ===================================
+____________ test_persian_non_final_chapter_rejects_closing_marker _____________
+
+tmp_path = PosixPath('/tmp/pytest-of-mehdi/pytest-2/test_persian_non_final_chapter0')
+
+    def test_persian_non_final_chapter_rejects_closing_marker(tmp_path: Path) -> None:
+        text = FA_FIRST.read_text(encoding="utf-8").replace(
+            "<!-- next: ch02 -->", "<!-- next: ch02 -->\n\n<!-- closing -->"
+        )
+>       with pytest.raises(
+            ValueError, match="closing marker is reserved for the final chapter"
+        ):
+E       AssertionError: Regex pattern did not match.
+E         Expected regex: 'closing marker is reserved for the final chapter'
+E         Actual message: '/tmp/pytest-of-mehdi/pytest-2/test_persian_non_final_chapter0/01-what-is-a-prompt.md: source_sha256 is stale'
+
+examples/python/tests/test_final_chapter_closure.py:80: AssertionError
+_________________ test_committed_persian_translation_passes[1] _________________
+
+chapter = 1
+
+    @pytest.mark.parametrize("chapter", range(1, 25))
+    def test_committed_persian_translation_passes(chapter: int) -> None:
+        part = (
+            "part-1"
+            if chapter <= 6
+            else "part-2"
+            if chapter <= 12
+            else "part-3"
+            if chapter <= 18
+            else "part-4"
+        )
+        source = next(Path(f"book/{part}").glob(f"{chapter:02d}-*.md"))
+        translation = Path("book/fa") / part / source.name
+>       slug, episode = validate_pair(source, translation)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+examples/python/tests/test_translation_validator.py:50: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+source = PosixPath('book/part-1/01-what-is-a-prompt.md')
+translation = PosixPath('book/fa/part-1/01-what-is-a-prompt.md')
+
+    def validate_pair(source: Path, translation: Path) -> tuple[str, str]:
+        source_text = source.read_text(encoding="utf-8")
+        text = translation.read_text(encoding="utf-8")
+        if unicodedata.normalize("NFC", text) != text:
+            raise ValueError(f"{translation}: text is not NFC-normalised")
+        if any(character in text for character in ("ي", "ك")):
+            raise ValueError(f"{translation}: contains Arabic yeh or kaf")
+        validate_persian_terminology(text, translation)
+        if not text.startswith("---\n") or text.count("---\n") < 2:
+            raise ValueError(f"{translation}: missing YAML front matter")
+        front_matter = text.split("---\n", 2)[1]
+        for key in FRONT_MATTER_KEYS:
+            if key not in front_matter:
+                raise ValueError(f"{translation}: missing front matter key {key}")
+    
+        chapter_match = re.search(r"^chapter:\s*(\d+)", front_matter, re.MULTILINE)
+        if not chapter_match:
+            raise ValueError(f"{translation}: chapter must be numeric")
+        chapter = int(chapter_match.group(1))
+        if chapter not in CHAPTER_TITLES:
+            raise ValueError(f"{translation}: unexpected Persian chapter {chapter}")
+        title = _field(front_matter, "title")
+        episode = _field(front_matter, "narrative_episode")
+        slug = _field(front_matter, "slug")
+        if title != CHAPTER_TITLES[chapter]:
+            raise ValueError(f"{translation}: incorrect Persian chapter title")
+        if episode != EPISODE_TITLES[chapter]:
+            raise ValueError(f"{translation}: incorrect Persian episode title")
+        if _field(front_matter, "narrative_origin") != "original-teaching-fiction":
+            raise ValueError(f"{translation}: incorrect narrative origin")
+        if _field(front_matter, "language") != "fa":
+            raise ValueError(f"{translation}: language must be fa")
+        part_name = source.parent.name
+        if part_name not in {"part-1", "part-2", "part-3", "part-4"}:
+            raise ValueError(f"{source}: source must belong to part-1 through part-4")
+        expected_source = f"{part_name}/{source.name}"
+        if _field(front_matter, "translation_of") != expected_source:
+            raise ValueError(f"{translation}: translation_of must be {expected_source}")
+        source_hash = hashlib.sha256(source.read_bytes()).hexdigest()
+        if _field(front_matter, "source_sha256") != source_hash:
+>           raise ValueError(f"{translation}: source_sha256 is stale")
+E           ValueError: book/fa/part-1/01-what-is-a-prompt.md: source_sha256 is stale
+
+scripts/validate_translations.py:363: ValueError
+_________________ test_committed_persian_translation_passes[2] _________________
+
+chapter = 2
+
+    @pytest.mark.parametrize("chapter", range(1, 25))
+    def test_committed_persian_translation_passes(chapter: int) -> None:
+        part = (
+            "part-1"
+            if chapter <= 6
+            else "part-2"
+            if chapter <= 12
+            else "part-3"
+            if chapter <= 18
+            else "part-4"
+        )
+        source = next(Path(f"book/{part}").glob(f"{chapter:02d}-*.md"))
+        translation = Path("book/fa") / part / source.name
+>       slug, episode = validate_pair(source, translation)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+examples/python/tests/test_translation_validator.py:50: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+source = PosixPath('book/part-1/02-models-meaning-and-uncertainty.md')
+translation = PosixPath('book/fa/part-1/02-models-meaning-and-uncertainty.md')
+
+    def validate_pair(source: Path, translation: Path) -> tuple[str, str]:
+        source_text = source.read_text(encoding="utf-8")
+        text = translation.read_text(encoding="utf-8")
+        if unicodedata.normalize("NFC", text) != text:
+            raise ValueError(f"{translation}: text is not NFC-normalised")
+        if any(character in text for character in ("ي", "ك")):
+            raise ValueError(f"{translation}: contains Arabic yeh or kaf")
+        validate_persian_terminology(text, translation)
+        if not text.startswith("---\n") or text.count("---\n") < 2:
+            raise ValueError(f"{translation}: missing YAML front matter")
+        front_matter = text.split("---\n", 2)[1]
+        for key in FRONT_MATTER_KEYS:
+            if key not in front_matter:
+                raise ValueError(f"{translation}: missing front matter key {key}")
+    
+        chapter_match = re.search(r"^chapter:\s*(\d+)", front_matter, re.MULTILINE)
+        if not chapter_match:
+            raise ValueError(f"{translation}: chapter must be numeric")
+        chapter = int(chapter_match.group(1))
+        if chapter not in CHAPTER_TITLES:
+            raise ValueError(f"{translation}: unexpected Persian chapter {chapter}")
+        title = _field(front_matter, "title")
+        episode = _field(front_matter, "narrative_episode")
+        slug = _field(front_matter, "slug")
+        if title != CHAPTER_TITLES[chapter]:
+            raise ValueError(f"{translation}: incorrect Persian chapter title")
+        if episode != EPISODE_TITLES[chapter]:
+            raise ValueError(f"{translation}: incorrect Persian episode title")
+        if _field(front_matter, "narrative_origin") != "original-teaching-fiction":
+            raise ValueError(f"{translation}: incorrect narrative origin")
+        if _field(front_matter, "language") != "fa":
+            raise ValueError(f"{translation}: language must be fa")
+        part_name = source.parent.name
+        if part_name not in {"part-1", "part-2", "part-3", "part-4"}:
+            raise ValueError(f"{source}: source must belong to part-1 through part-4")
+        expected_source = f"{part_name}/{source.name}"
+        if _field(front_matter, "translation_of") != expected_source:
+            raise ValueError(f"{translation}: translation_of must be {expected_source}")
+        source_hash = hashlib.sha256(source.read_bytes()).hexdigest()
+        if _field(front_matter, "source_sha256") != source_hash:
+>           raise ValueError(f"{translation}: source_sha256 is stale")
+E           ValueError: book/fa/part-1/02-models-meaning-and-uncertainty.md: source_sha256 is stale
+
+scripts/validate_translations.py:363: ValueError
+_________________ test_committed_persian_translation_passes[3] _________________
+
+chapter = 3
+
+    @pytest.mark.parametrize("chapter", range(1, 25))
+    def test_committed_persian_translation_passes(chapter: int) -> None:
+        part = (
+            "part-1"
+            if chapter <= 6
+            else "part-2"
+            if chapter <= 12
+            else "part-3"
+            if chapter <= 18
+            else "part-4"
+        )
+        source = next(Path(f"book/{part}").glob(f"{chapter:02d}-*.md"))
+        translation = Path("book/fa") / part / source.name
+>       slug, episode = validate_pair(source, translation)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+examples/python/tests/test_translation_validator.py:50: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+source = PosixPath('book/part-1/03-requirements-before-wording.md')
+translation = PosixPath('book/fa/part-1/03-requirements-before-wording.md')
+
+    def validate_pair(source: Path, translation: Path) -> tuple[str, str]:
+        source_text = source.read_text(encoding="utf-8")
+        text = translation.read_text(encoding="utf-8")
+        if unicodedata.normalize("NFC", text) != text:
+            raise ValueError(f"{translation}: text is not NFC-normalised")
+        if any(character in text for character in ("ي", "ك")):
+            raise ValueError(f"{translation}: contains Arabic yeh or kaf")
+        validate_persian_terminology(text, translation)
+        if not text.startswith("---\n") or text.count("---\n") < 2:
+            raise ValueError(f"{translation}: missing YAML front matter")
+        front_matter = text.split("---\n", 2)[1]
+        for key in FRONT_MATTER_KEYS:
+            if key not in front_matter:
+                raise ValueError(f"{translation}: missing front matter key {key}")
+    
+        chapter_match = re.search(r"^chapter:\s*(\d+)", front_matter, re.MULTILINE)
+        if not chapter_match:
+            raise ValueError(f"{translation}: chapter must be numeric")
+        chapter = int(chapter_match.group(1))
+        if chapter not in CHAPTER_TITLES:
+            raise ValueError(f"{translation}: unexpected Persian chapter {chapter}")
+        title = _field(front_matter, "title")
+        episode = _field(front_matter, "narrative_episode")
+        slug = _field(front_matter, "slug")
+        if title != CHAPTER_TITLES[chapter]:
+            raise ValueError(f"{translation}: incorrect Persian chapter title")
+        if episode != EPISODE_TITLES[chapter]:
+            raise ValueError(f"{translation}: incorrect Persian episode title")
+        if _field(front_matter, "narrative_origin") != "original-teaching-fiction":
+            raise ValueError(f"{translation}: incorrect narrative origin")
+        if _field(front_matter, "language") != "fa":
+            raise ValueError(f"{translation}: language must be fa")
+        part_name = source.parent.name
+        if part_name not in {"part-1", "part-2", "part-3", "part-4"}:
+            raise ValueError(f"{source}: source must belong to part-1 through part-4")
+        expected_source = f"{part_name}/{source.name}"
+        if _field(front_matter, "translation_of") != expected_source:
+            raise ValueError(f"{translation}: translation_of must be {expected_source}")
+        source_hash = hashlib.sha256(source.read_bytes()).hexdigest()
+        if _field(front_matter, "source_sha256") != source_hash:
+>           raise ValueError(f"{translation}: source_sha256 is stale")
+E           ValueError: book/fa/part-1/03-requirements-before-wording.md: source_sha256 is stale
+
+scripts/validate_translations.py:363: ValueError
+_________________ test_committed_persian_translation_passes[4] _________________
+
+chapter = 4
+
+    @pytest.mark.parametrize("chapter", range(1, 25))
+    def test_committed_persian_translation_passes(chapter: int) -> None:
+        part = (
+            "part-1"
+            if chapter <= 6
+            else "part-2"
+            if chapter <= 12
+            else "part-3"
+            if chapter <= 18
+            else "part-4"
+        )
+        source = next(Path(f"book/{part}").glob(f"{chapter:02d}-*.md"))
+        translation = Path("book/fa") / part / source.name
+>       slug, episode = validate_pair(source, translation)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+examples/python/tests/test_translation_validator.py:50: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+source = PosixPath('book/part-1/04-anatomy-of-a-reliable-prompt.md')
+translation = PosixPath('book/fa/part-1/04-anatomy-of-a-reliable-prompt.md')
+
+    def validate_pair(source: Path, translation: Path) -> tuple[str, str]:
+        source_text = source.read_text(encoding="utf-8")
+        text = translation.read_text(encoding="utf-8")
+        if unicodedata.normalize("NFC", text) != text:
+            raise ValueError(f"{translation}: text is not NFC-normalised")
+        if any(character in text for character in ("ي", "ك")):
+            raise ValueError(f"{translation}: contains Arabic yeh or kaf")
+        validate_persian_terminology(text, translation)
+        if not text.startswith("---\n") or text.count("---\n") < 2:
+            raise ValueError(f"{translation}: missing YAML front matter")
+        front_matter = text.split("---\n", 2)[1]
+        for key in FRONT_MATTER_KEYS:
+            if key not in front_matter:
+                raise ValueError(f"{translation}: missing front matter key {key}")
+    
+        chapter_match = re.search(r"^chapter:\s*(\d+)", front_matter, re.MULTILINE)
+        if not chapter_match:
+            raise ValueError(f"{translation}: chapter must be numeric")
+        chapter = int(chapter_match.group(1))
+        if chapter not in CHAPTER_TITLES:
+            raise ValueError(f"{translation}: unexpected Persian chapter {chapter}")
+        title = _field(front_matter, "title")
+        episode = _field(front_matter, "narrative_episode")
+        slug = _field(front_matter, "slug")
+        if title != CHAPTER_TITLES[chapter]:
+            raise ValueError(f"{translation}: incorrect Persian chapter title")
+        if episode != EPISODE_TITLES[chapter]:
+            raise ValueError(f"{translation}: incorrect Persian episode title")
+        if _field(front_matter, "narrative_origin") != "original-teaching-fiction":
+            raise ValueError(f"{translation}: incorrect narrative origin")
+        if _field(front_matter, "language") != "fa":
+            raise ValueError(f"{translation}: language must be fa")
+        part_name = source.parent.name
+        if part_name not in {"part-1", "part-2", "part-3", "part-4"}:
+            raise ValueError(f"{source}: source must belong to part-1 through part-4")
+        expected_source = f"{part_name}/{source.name}"
+        if _field(front_matter, "translation_of") != expected_source:
+            raise ValueError(f"{translation}: translation_of must be {expected_source}")
+        source_hash = hashlib.sha256(source.read_bytes()).hexdigest()
+        if _field(front_matter, "source_sha256") != source_hash:
+>           raise ValueError(f"{translation}: source_sha256 is stale")
+E           ValueError: book/fa/part-1/04-anatomy-of-a-reliable-prompt.md: source_sha256 is stale
+
+scripts/validate_translations.py:363: ValueError
+__________________ test_changed_executable_fence_is_rejected ___________________
+
+tmp_path = PosixPath('/tmp/pytest-of-mehdi/pytest-2/test_changed_executable_fence_0')
+
+    def test_changed_executable_fence_is_rejected(tmp_path: Path) -> None:
+        changed = tmp_path / TRANSLATION.name
+        changed.write_text(
+            TRANSLATION.read_text(encoding="utf-8").replace(
+                "response = client.generate(request)",
+                "response = other_client.generate(request)",
+                1,
+            ),
+            encoding="utf-8",
+        )
+>       with pytest.raises(ValueError, match="executable python fence"):
+E       AssertionError: Regex pattern did not match.
+E         Expected regex: 'executable python fence'
+E         Actual message: '/tmp/pytest-of-mehdi/pytest-2/test_changed_executable_fence_0/01-what-is-a-prompt.md: source_sha256 is stale'
+
+examples/python/tests/test_translation_validator.py:167: AssertionError
+____________ test_persian_tale_below_floor_without_exception_fails _____________
+
+tmp_path = PosixPath('/tmp/pytest-of-mehdi/pytest-2/test_persian_tale_below_floor_0')
+
+    def test_persian_tale_below_floor_without_exception_fails(tmp_path: Path) -> None:
+        changed = tmp_path / TRANSLATION.name
+        changed.write_text(
+            _tale_text(TRANSLATION.read_text(encoding="utf-8")), encoding="utf-8"
+        )
+>       with pytest.raises(ValueError, match="expected 400–900"):
+E       AssertionError: Regex pattern did not match.
+E         Expected regex: 'expected 400–900'
+E         Actual message: '/tmp/pytest-of-mehdi/pytest-2/test_persian_tale_below_floor_0/01-what-is-a-prompt.md: source_sha256 is stale'
+
+examples/python/tests/test_translation_validator.py:290: AssertionError
+_________________ test_stale_tale_length_exception_is_rejected _________________
+
+tmp_path = PosixPath('/tmp/pytest-of-mehdi/pytest-2/test_stale_tale_length_excepti0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x76f92d1c0500>
+
+    def test_stale_tale_length_exception_is_rejected(
+        tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        changed = tmp_path / TRANSLATION.name
+        changed.write_text(TRANSLATION.read_text(encoding="utf-8"), encoding="utf-8")
+        monkeypatch.setattr(
+            translation_validator,
+            "_tale_length_exceptions",
+            lambda root: {"1": _chapter_10_exception()},
+        )
+>       with pytest.raises(ValueError, match="stale tale-length exception"):
+E       AssertionError: Regex pattern did not match.
+E         Expected regex: 'stale tale-length exception'
+E         Actual message: '/tmp/pytest-of-mehdi/pytest-2/test_stale_tale_length_excepti0/01-what-is-a-prompt.md: source_sha256 is stale'
+
+examples/python/tests/test_translation_validator.py:372: AssertionError
+=========================== short test summary info ============================
+FAILED examples/python/tests/test_final_chapter_closure.py::test_persian_non_final_chapter_rejects_closing_marker
+FAILED examples/python/tests/test_translation_validator.py::test_committed_persian_translation_passes[1]
+FAILED examples/python/tests/test_translation_validator.py::test_committed_persian_translation_passes[2]
+FAILED examples/python/tests/test_translation_validator.py::test_committed_persian_translation_passes[3]
+FAILED examples/python/tests/test_translation_validator.py::test_committed_persian_translation_passes[4]
+FAILED examples/python/tests/test_translation_validator.py::test_changed_executable_fence_is_rejected
+FAILED examples/python/tests/test_translation_validator.py::test_persian_tale_below_floor_without_exception_fails
+FAILED examples/python/tests/test_translation_validator.py::test_stale_tale_length_exception_is_rejected
+8 failed, 789 passed in 4.85s
+make: *** [Makefile:21: test-python] Error 1

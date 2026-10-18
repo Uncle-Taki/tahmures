@@ -1,0 +1,156 @@
+{
+  "head_base": {
+    "visible": 29106,
+    "source": 21513,
+    "reconstructed": 7593,
+    "bbox": [
+      431,
+      90,
+      647,
+      375
+    ]
+  },
+  "hair_back": {
+    "visible": 31514,
+    "source": 31508,
+    "reconstructed": 6,
+    "bbox": [
+      389,
+      15,
+      687,
+      375
+    ]
+  },
+  "diadem_gold": {
+    "visible": 7241,
+    "source": 7241,
+    "reconstructed": 0,
+    "bbox": [
+      432,
+      41,
+      647,
+      123
+    ]
+  },
+  "ear_left": {
+    "visible": 1170,
+    "source": 1170,
+    "reconstructed": 0,
+    "bbox": [
+      617,
+      165,
+      647,
+      220
+    ]
+  },
+  "ear_right": {
+    "visible": 1344,
+    "source": 1344,
+    "reconstructed": 0,
+    "bbox": [
+      431,
+      165,
+      464,
+      223
+    ]
+  },
+  "eye_left": {
+    "visible": 2067,
+    "source": 2067,
+    "reconstructed": 0,
+    "bbox": [
+      554,
+      135,
+      605,
+      187
+    ]
+  },
+  "eye_right": {
+    "visible": 2098,
+    "source": 2098,
+    "reconstructed": 0,
+    "bbox": [
+      479,
+      135,
+      531,
+      187
+    ]
+  },
+  "eyebrow_left": {
+    "visible": 710,
+    "source": 710,
+    "reconstructed": 0,
+    "bbox": [
+      556,
+      110,
+      609,
+      134
+    ]
+  },
+  "eyebrow_right": {
+    "visible": 727,
+    "source": 727,
+    "reconstructed": 0,
+    "bbox": [
+      476,
+      110,
+      532,
+      131
+    ]
+  },
+  "nose": {
+    "visible": 320,
+    "source": 320,
+    "reconstructed": 0,
+    "bbox": [
+      534,
+      136,
+      566,
+      221
+    ]
+  },
+  "beard": {
+    "visible": 10830,
+    "source": 7869,
+    "reconstructed": 2961,
+    "bbox": [
+      464,
+      218,
+      609,
+      326
+    ]
+  },
+  "moustache": {
+    "visible": 1818,
+    "source": 1465,
+    "reconstructed": 353,
+    "bbox": [
+      485,
+      209,
+      597,
+      239
+    ]
+  },
+  "lower_face_neutral": {
+    "visible": 3217,
+    "source": 2881,
+    "reconstructed": 336,
+    "bbox": [
+      497,
+      226,
+      584,
+      273
+    ]
+  },
+  "lower_face_open_test": {
+    "visible": 3217,
+    "source": 2822,
+    "reconstructed": 395,
+    "bbox": [
+      497,
+      226,
+      584,
+      273
+    ]
+  }
+}

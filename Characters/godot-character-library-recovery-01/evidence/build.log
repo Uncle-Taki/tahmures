@@ -1,0 +1,11 @@
+[BUILT] tahmures       | 6 layers | recomposition exact = True
+[BUILT] akvan_div      | 7 layers | recomposition exact = True
+[BUILT] black_div      | 7 layers | recomposition exact = True
+[BUILT] div_e_sefid    | 7 layers | recomposition exact = True
+[BUILT] shahrasp       | 7 layers | recomposition exact = True
+[BUILT] chapar         | 7 layers | recomposition exact = True
+[BUILT] arash          | 7 layers | recomposition exact = True
+[BUILT] garshasp       | 7 layers | recomposition exact = True
+[BUILT] simurgh_human  | 7 layers | recomposition exact = True
+[BUILT] simurgh_bird   | 9 layers | recomposition exact = True
+ALL 10 CANDIDATE PARTITIONS BUILT. ANATOMICAL CUTS AND MOTION STILL REQUIRE REVIEW.

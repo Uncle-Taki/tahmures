@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "versions": [
+    {
+      "id": "layout01-master",
+      "type": "visual_source",
+      "repo_path": "Characters/tahmures/versions/layout01-v2/source/approved_master.png",
+      "sha256": "3eedfaa5a41965c45a137a74a9137c6e59304a0604f877a81c98870c64dba2e5",
+      "status": "OWNER_SELECTED_SOURCE_FOR_THIS_REPAIR",
+      "approval_evidence": "2026-10-08 owner request; not repaired-puppet approval"
+    },
+    {
+      "id": "layout01-v1",
+      "type": "historical_rejected_package",
+      "repo_path": "Characters/tahmures/versions/layout01-v2/source/REJECTED_layout01_v1_evidence.zip",
+      "status": "REJECTED_EVIDENCE_ONLY"
+    },
+    {
+      "id": "layout01-v2",
+      "type": "editable_head",
+      "repo_path": "Characters/tahmures/versions/layout01-v2",
+      "status": "REJECTED_EDITABLE_PUPPET",
+      "original_pose_preview": "PREVIEW_ONLY_NOT_RIG_EVIDENCE"
+    },
+    {
+      "id": "layout01-v3",
+      "type": "editable_head_candidate",
+      "repo_path": "Characters/tahmures/versions/layout01-v3",
+      "status": "CODEX_REVISION_REQUIRED",
+      "human_approved": false,
+      "manifest_sha256": "57e1e5f8daeb88c2f2092f0e72224cecf571e1320fd9e9a657643ffb1bc36ced",
+      "file_index_sha256": "8124164263b08a5ca3d92dfcc9cfcbbbaa3d10949e41cb230081674009200456",
+      "review": "Characters/tahmures/workflow/layout01-mouthless-repair/reports/codex/verification-01/review.md"
+    },
+    {
+      "id": "layout01-v4",
+      "type": "editable_head_candidate",
+      "repo_path": "Characters/tahmures/versions/layout01-v4",
+      "status": "CODEX_REVISION_REQUIRED",
+      "human_approved": false,
+      "manifest_sha256": "a83ea94b639407da685f1e2de7a570a3daa7a2c5c70f7007c7fe49eeab3d13d0",
+      "file_index_sha256": "1bfe5b5f9d0dbc4a35f81c5ce922cca95ae4daa3f24b01e1f428810e1be1fd08",
+      "review": "Characters/tahmures/workflow/layout01-mouthless-repair/reports/codex/verification-02/review.md"
+    },
+    {
+      "id": "layout01-v5",
+      "type": "editable_head_candidate",
+      "repo_path": "Characters/tahmures/versions/layout01-v5",
+      "status": "CLAUDE_NECK_REVISION_REQUIRED",
+      "human_approved": false,
+      "manifest_sha256": "e4d6b58271d9baf35747b155970341790c77ae14cc11f7c6a44b422b2893fb45",
+      "file_index_sha256": "256dc1dd3f756c6e72171dd65a026a37144a600e862ff984ddd0704ed2ccf1b7",
+      "review": "Characters/tahmures/workflow/layout01-mouthless-repair/reports/codex/completion-03/review.md",
+      "implementation_owner": "CODEX_AFTER_PARTIAL_GLM_REVISION_2",
+      "independent_review": {
+        "report": "Characters/tahmures/workflow/layout01-mouthless-repair/reports/claude/final-review-02.md",
+        "report_sha256": "1f34855472d1edd8b0089ce2fc8b2904f8d82eabb71ba62941ea28d4f7518823",
+        "verdict": "CLAUDE_LAYOUT01_REVISION_REQUIRED",
+        "visual_verified": true,
+        "closed_findings": [
+          "R2-01",
+          "R2-02"
+        ],
+        "open_findings": [
+          "CL-NECK-01"
+        ],
+        "human_approved": false
+      }
+    },
+    {
+      "id": "layout01-v6",
+      "type": "editable_head_candidate",
+      "repo_path": "Characters/tahmures/versions/layout01-v6",
+      "status": "RECEIVED_CLAUDE_IMPLEMENTATION_PRESERVED",
+      "human_approved": false,
+      "scope": "Claude neck-silhouette finding only",
+      "implementation_owner": "CLAUDE",
+      "implementation_report": "Characters/tahmures/workflow/layout01-mouthless-repair/reports/glm/implementation-claude-neck-01.md",
+      "manifest_sha256": "ac574324a3c3f8f5037c70c49188a6608f771fe6a6138061cbedf85ba7c9a8ce",
+      "file_index_sha256": "52ba68c21e9bc13f656cc63e50c99471032a5bc20459356310c065ef1121b430"
+    },
+    {
+      "id": "layout01-v7",
+      "type": "editable_head_review_candidate",
+      "repo_path": "Characters/tahmures/versions/layout01-v7",
+      "status": "HUMAN_APPROVED_FROZEN_FRONT_VIEW_INPUT",
+      "human_approved": true,
+      "artwork_source": "layout01-v6; exported PNGs byte-identical",
+      "implementation_owner": "CODEX_PACKAGE_CORRECTION_AND_VERIFICATION",
+      "manifest_sha256": "b7539646b960fc9313c907effabb1f5de84ca816678fc0a0d1224c5f46ee1cd4",
+      "file_index_sha256": "3b2ad23048da5ba009069f6c0ca86f78e6694927e151ac3e7b5e84393f4347bc",
+      "review": "Characters/tahmures/workflow/layout01-mouthless-repair/reports/codex/verification-04/review.md",
+      "independent_review": {
+        "report": "Characters/tahmures/workflow/layout01-mouthless-repair/reports/claude/final-review-03.md",
+        "report_sha256": "b0353bcec142832078d54da6ce83adacc11a1058f40b0b26c49c3fc68c9446fc",
+        "verdict": "CLAUDE_LAYOUT01_ACCEPTED",
+        "fresh_session": true,
+        "visual_verified": true
+      },
+      "approval_evidence": "Characters/tahmures/workflow/approvals/layout01-v7-human-approval.json",
+      "approved_scope": "Approved repaired front-view Layout 01 head as input to LAYOUT01_FACIAL_STATE_PROTOTYPE_01"
+    }
+  ],
+  "approved_production_asset_versions": [
+    "layout01-v7"
+  ],
+  "prototypes": [
+    {
+      "id": "layout01-facial-states-01",
+      "repo_path": "Characters/tahmures/prototypes/layout01-facial-states-01",
+      "status": "HUMAN_APPROVED_FOR_FRONT_VIEW_PROTOTYPE",
+      "human_approved": true,
+      "input": "layout01-v7",
+      "source_approval": "Characters/tahmures/workflow/approvals/layout01-v7-human-approval.json",
+      "manifest_sha256": "b081e9190f5ddf1e8eff643863b1bbee5ab7b4a176179a26703b1c4ad32e4ba4",
+      "index_sha256": "6135d7b65239919ebb2834913aa20b93d391d16d40f2a35c4a499e337b1cea21",
+      "new_reconstructed_surfaces": 3,
+      "approved_original_artwork_changed": false,
+      "approval_evidence": "Characters/tahmures/workflow/approvals/layout01-facial-states-01-human-approval.json",
+      "independent_review": "Characters/tahmures/workflow/layout01-facial-states-01/reports/claude/final-review-01.md",
+      "approval_scope": "Continued prototype/Godot integration using reviewed facial-state art; not canonical production promotion"
+    }
+  ]
+}

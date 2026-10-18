@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-08",
+  "approval_evidence": "Owner task: accepted visual source remains original Tahmures master inside supplied ZIP; extracted components not approved",
+  "archive_repo_path": "Characters/tahmures/tahmures_sprites_layout01_v2.zip",
+  "archive_sha256": "8dbe2832fe4b7728a954ae8c94ac4ca5ec5864584d7dfbbd8efd19be8e72e1f0",
+  "master_repo_path": "Characters/tahmures/versions/layout01-v2/source/approved_master.png",
+  "master_archive_member": "source/approved_master.png",
+  "master_sha256": "3eedfaa5a41965c45a137a74a9137c6e59304a0604f877a81c98870c64dba2e5",
+  "canvas": [
+    1086,
+    1448
+  ],
+  "imported_files": {
+    "Characters/tahmures/tahmures_sprites_layout01_v2.zip": "8dbe2832fe4b7728a954ae8c94ac4ca5ec5864584d7dfbbd8efd19be8e72e1f0",
+    "Characters/tahmures/extraction_report.md": "4006f7b5fc84ca35d223c700515efb25661f4325f99ef28016c342aeb47d453d",
+    "Characters/tahmures/layout01_component_QA.png": "fbe0d3016a10199cc6cf31df5b6015a439f15cb61e17c92237df6b23dec74800",
+    "Characters/tahmures/layout01_editable_assembly_with_seams.png": "b7d486d772b6738105a14f9ea18b8c4c511047c7d386006c6c102b8f90d736a1",
+    "Characters/tahmures/layout01_original_vs_reconstruction.png": "30412ac207848ad5a4d0d76da8016e7a3226e429d43a7ec7359294995c29a253",
+    "Characters/tahmures/neutral_face_without_mouth.png": "537b94ba61bb16d83826e07668cc4ec89285b098a94281a21f8559d8671ce898"
+  },
+  "baseline_member_hashes_record": "package-inventory.json",
+  "protected_repository_snapshot": "protected-tracked-files.json",
+  "protected_media_sources": {
+    ".zcode/media-01-04/media-continuity-bible.md": "fcb59a3b7315e4ea5679e01f8277980c28161f5248270f8f5e70322a1a1caa5a",
+    ".zcode/media-01-04/ch01-video-blueprint.md": "e99e290c09e1dae8c408aa2809c671849c0e551af002470aec9743200827f937",
+    ".zcode/media-01-04/ch02-video-blueprint.md": "850421d748e9e55c01704d8be24e0739e9da78a2b85acf1b9eeec12c4534b208",
+    ".zcode/media-01-04/ch03-video-blueprint.md": "0279c99081044fad737be2915f28204c46c3d16d6cffbb2564580c672cdc418a",
+    ".zcode/media-01-04/ch04-video-blueprint.md": "841c15e5ee500f6d8dda8b9cae0a41972ef7d6c2dc0f4b59d376c74c5ec97dcd"
+  }
+}

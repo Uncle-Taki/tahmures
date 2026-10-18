@@ -10,3 +10,45 @@ coverage.xml
 .DS_Store
 .zcode/
 .~lock.*
+
+# Godot's generated editor/import cache. Keep source .import and .uid files.
+.godot/
+
+# Received Gemini copies; the maintained project is under Characters/.
+/godot-character-library-recovery-01/
+/godot-character-library-recovery-01.zip
+/character-library-manifest.json
+
+# Local upload archives and duplicated exchange trees, not project sources.
+/editorial/media-handoff/*.zip
+/editorial/media-handoff/ai-studio-exchange/
+/editorial/media-handoff/gemini-web-upload-*/
+/Characters/**/*.zip
+
+# Rejected chapter movie exports. Keep its salvageable scripts/resources.
+# The accepted POC's stage-a-preview.avi remains visible: integrity checks need it.
+/Characters/tahmures/prototypes/godot-chapter-01-01/renders/*.avi
+
+# Loose duplicates of files preserved in versions/layout01-v2/.
+/Characters/tahmures/extraction_report.md
+/Characters/tahmures/layout01_component_QA.png
+/Characters/tahmures/layout01_editable_assembly_with_seams.png
+/Characters/tahmures/layout01_original_vs_reconstruction.png
+/Characters/tahmures/neutral_face_without_mouth.png
+
+# Local workflow command logs. Retain indexed version packages and active evidence.
+/Characters/tahmures/workflow/**/*.log
+
+# Preserve final approval evidence otherwise hidden by the generic reports/ rule.
+!/Characters/tahmures/workflow/layout01-mouthless-repair/reports/
+/Characters/tahmures/workflow/layout01-mouthless-repair/reports/*
+!/Characters/tahmures/workflow/layout01-mouthless-repair/reports/claude/
+/Characters/tahmures/workflow/layout01-mouthless-repair/reports/claude/*
+!/Characters/tahmures/workflow/layout01-mouthless-repair/reports/claude/final-review-03.md
+!/Characters/tahmures/workflow/layout01-facial-states-01/reports/
+/Characters/tahmures/workflow/layout01-facial-states-01/reports/*
+!/Characters/tahmures/workflow/layout01-facial-states-01/reports/claude/
+/Characters/tahmures/workflow/layout01-facial-states-01/reports/claude/*
+!/Characters/tahmures/workflow/layout01-facial-states-01/reports/claude/final-review-01.md
+!/Characters/tahmures/workflow/godot-front-view-character-poc-01/reports/
+!/Characters/tahmures/workflow/godot-front-view-character-poc-01/reports/**

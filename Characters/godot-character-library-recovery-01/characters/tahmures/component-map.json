@@ -1,0 +1,118 @@
+{
+  "character_id": "tahmures",
+  "source_file": "Characters/tahmures/versions/layout01-v2/source/approved_master.png",
+  "source_sha256": "3eedfaa5a41965c45a137a74a9137c6e59304a0604f877a81c98870c64dba2e5",
+  "canvas": [
+    1086,
+    1448
+  ],
+  "skeleton_type": "humanoid_layered_head_plus_body",
+  "technical_readiness_state": "candidate_partition_needs_anatomical_review",
+  "segmentation_method": "provisional_disjoint_search_windows_not_anatomical_segmentation",
+  "supported_states": [
+    "neutral",
+    "idle"
+  ],
+  "unsupported_states": [
+    "blink",
+    "gaze_left",
+    "gaze_right",
+    "gesture_small"
+  ],
+  "movement_scope": "whole_rig_translation_only_until_seams_reviewed",
+  "human_approved": false,
+  "draw_order_bottom_to_top": [
+    {
+      "component_id": "approved_head_package",
+      "pivot_canvas": [
+        543,
+        315
+      ],
+      "tight_alpha_bbox": [
+        389,
+        15,
+        687,
+        310
+      ],
+      "local_motion_approved": false,
+      "opaque_pixels": 65656,
+      "sha256": "5eacecc88370477511b257f46ac8bbf92ffb30d55c44e7d312d64d529d057c9a"
+    },
+    {
+      "component_id": "neck_and_medallion_chest",
+      "pivot_canvas": [
+        540,
+        330
+      ],
+      "tight_alpha_bbox": null,
+      "local_motion_approved": false,
+      "opaque_pixels": 0,
+      "sha256": "dd3ec632e9c88100c66362346cfd11cae9066a5be956c53851c86a6d389da74f"
+    },
+    {
+      "component_id": "outer_robe_and_sash",
+      "pivot_canvas": [
+        540,
+        340
+      ],
+      "tight_alpha_bbox": [
+        311,
+        310,
+        770,
+        1428
+      ],
+      "local_motion_approved": false,
+      "opaque_pixels": 289872,
+      "sha256": "efddbb664eeae2be247c6ebe18a4b5e96c0377d40088d1665d0d9f71e0202434"
+    },
+    {
+      "component_id": "arm_right_viewer_left",
+      "pivot_canvas": [
+        375,
+        395
+      ],
+      "tight_alpha_bbox": [
+        208,
+        352,
+        415,
+        965
+      ],
+      "local_motion_approved": false,
+      "opaque_pixels": 75740,
+      "sha256": "8b57d2acabcdea6cf3672dbdbbbdd328d5af59911917f0f2c4efcfa8a20e5a8d"
+    },
+    {
+      "component_id": "arm_left_viewer_right",
+      "pivot_canvas": [
+        705,
+        395
+      ],
+      "tight_alpha_bbox": [
+        665,
+        350,
+        876,
+        965
+      ],
+      "local_motion_approved": false,
+      "opaque_pixels": 78176,
+      "sha256": "e39a2b179a1a439cd4c6bcb9daeef3576e6670bfffd9b91795cf088b25a63533"
+    },
+    {
+      "component_id": "feet_and_boots",
+      "pivot_canvas": [
+        540,
+        1350
+      ],
+      "tight_alpha_bbox": [
+        315,
+        1280,
+        769,
+        1425
+      ],
+      "local_motion_approved": false,
+      "opaque_pixels": 34095,
+      "sha256": "2145f0c9f35d6baa1f9f6385464afad401ccac27a020c6e7d43d84a4be226bcb"
+    }
+  ],
+  "sockets": []
+}

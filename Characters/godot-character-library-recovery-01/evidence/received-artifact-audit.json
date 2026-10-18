@@ -1,0 +1,19 @@
+{
+  "received_zip_sha256": "82a8668230eca97cd250d2a95069c1e44fb3b9ca7036fbb7e15ae493212ec395",
+  "python_sources": [
+    {
+      "path": "Characters/godot-character-library-recovery-01/scripts/build_character_library.py",
+      "received_compile_result": "unterminated string literal (detected at line 190), line 190"
+    },
+    {
+      "path": "Characters/godot-character-library-recovery-01/scripts/stage_recovery_patch.py",
+      "received_compile_result": "compiles"
+    },
+    {
+      "path": "Characters/godot-character-library-recovery-01/scripts/validate_character_library.py",
+      "received_compile_result": "unterminated string literal (detected at line 90), line 90"
+    }
+  ],
+  "received_archive_entries": 10,
+  "modified_received_zip": false
+}

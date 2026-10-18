@@ -1,0 +1,18 @@
+{
+  "pass": true,
+  "human_approved": false,
+  "scope": "technical_source_pose_candidate_only",
+  "checks": [
+    "source_hashes_frozen_indexes_approval_bindings_and_17_head_copies",
+    "source_cutout_layers_masks_provenance_scene:tahmures",
+    "source_cutout_layers_masks_provenance_scene:akvan_div",
+    "source_cutout_layers_masks_provenance_scene:black_div",
+    "source_cutout_layers_masks_provenance_scene:div_e_sefid",
+    "source_cutout_layers_masks_provenance_scene:shahrasp",
+    "source_cutout_layers_masks_provenance_scene:chapar",
+    "source_cutout_layers_masks_provenance_scene:arash",
+    "source_cutout_layers_masks_provenance_scene:garshasp",
+    "source_cutout_layers_masks_provenance_scene:simurgh_human",
+    "source_cutout_layers_masks_provenance_scene:simurgh_bird"
+  ]
+}

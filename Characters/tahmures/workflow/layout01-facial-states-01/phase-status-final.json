@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "phase": "LAYOUT01_FACIAL_STATE_PROTOTYPE_01",
+  "state": "HUMAN_APPROVED_PROTOTYPE",
+  "candidate": "Characters/tahmures/prototypes/layout01-facial-states-01",
+  "manifest_sha256": "b081e9190f5ddf1e8eff643863b1bbee5ab7b4a176179a26703b1c4ad32e4ba4",
+  "file_index_sha256": "6135d7b65239919ebb2834913aa20b93d391d16d40f2a35c4a499e337b1cea21",
+  "codex_technical_acceptance": {
+    "accepted": true,
+    "focused_checks_passed": 51,
+    "evidence": "Characters/tahmures/workflow/layout01-facial-states-01/codex-review.md"
+  },
+  "claude_independent_acceptance": {
+    "accepted": true,
+    "token": "CLAUDE_FACIAL_STATE_PROTOTYPE_01_ACCEPTED",
+    "evidence": "Characters/tahmures/workflow/layout01-facial-states-01/reports/claude/final-review-01.md",
+    "image_access": true,
+    "visual_findings": "No concrete geometry, ghosting, identity, scope, source-preservation, provenance, or transition-sample blocker found."
+  },
+  "human_visual_approval": {
+    "accepted": true,
+    "evidence": "Characters/tahmures/workflow/approvals/layout01-facial-states-01-human-approval.json",
+    "scope": "Reviewed front-view facial-state prototype only"
+  },
+  "production_asset_promotion": false,
+  "next_phase": "GODOT_FRONT_VIEW_CHARACTER_POC_01",
+  "next_phase_released": false,
+  "release_note": "Prototype approval is recorded. The separate Godot/audio phase requires a concrete tooling preflight and bounded implementation plan."
+}

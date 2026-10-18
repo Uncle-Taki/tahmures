@@ -1,0 +1,640 @@
+{
+  "schema_version": "3.0.0",
+  "version": "layout01-v6",
+  "revision": "Bounded CL-NECK-01 exterior neck/hair contour repair from immutable layout01-v5; mouth and facial work retained byte-identically.",
+  "character_id": "tahmures",
+  "display_name_fa": "\u0637\u0647\u0645\u0648\u0631\u062b",
+  "status": "CANDIDATE",
+  "human_approved": false,
+  "source_master_repo_path": "Characters/tahmures/versions/layout01-v2/source/approved_master.png",
+  "source_image_sha256": "3eedfaa5a41965c45a137a74a9137c6e59304a0604f877a81c98870c64dba2e5",
+  "canvas": [
+    1086,
+    1448
+  ],
+  "coordinate_convention": "top-left origin; +x right, +y down; character-perspective left/right",
+  "mouth_architecture": "B_LOCAL_LOWER_FACE_PATCH",
+  "mouth_anchor": {
+    "x": 540,
+    "y": 241
+  },
+  "coverage_domain_path": "masks/visible_head_domain.png",
+  "sprites": [
+    {
+      "id": "head_base",
+      "role": "rig_component",
+      "path": "head/head_base.png",
+      "mask_path": "masks/head_base.png",
+      "sha256": "754fb445b5e27fe962b1d55af82992b5f14fae94035a7a4b23cde8b8121390b9",
+      "mask_sha256": "8a95cd358e75dca416041495ffab90113e7140f4bcf2cbfaef6a044f38fd7e40",
+      "alpha_bounding_rect": [
+        431,
+        90,
+        647,
+        375
+      ],
+      "pivot": {
+        "x": 540,
+        "y": 315
+      },
+      "parent": null,
+      "provenance": {
+        "source_pixel_mask": "provenance/head_base__source.png",
+        "reconstructed_pixel_mask": "provenance/head_base__reconstructed.png",
+        "reconstruction_method": "Retains v4 feature underdraw; damaged local neck wedge rebuilt as smooth hair continuation matching adjacent brown palette. Source alpha and neck silhouette retained.",
+        "alpha_edge_modifications": "See exact exported alpha mask; source alpha retained except local supersampled mouth interface/overlap. All increased or changed alpha is reconstructed."
+      }
+    },
+    {
+      "id": "hair_back",
+      "role": "rig_component",
+      "path": "head/hair_back.png",
+      "mask_path": "masks/hair_back.png",
+      "sha256": "2c6ca92b17b20bff8c36b27e7f3a90dad1c690bb345ed56934d2ebffd3c410d2",
+      "mask_sha256": "3fbcac59df7904cf8e4a4bf68e5dd343a48dfc93edf10049f6e527e792033de3",
+      "alpha_bounding_rect": [
+        389,
+        15,
+        687,
+        384
+      ],
+      "pivot": {
+        "x": 540,
+        "y": 265
+      },
+      "parent": "head_base",
+      "provenance": {
+        "source_pixel_mask": "provenance/hair_back__source.png",
+        "reconstructed_pixel_mask": "provenance/hair_back__reconstructed.png",
+        "reconstruction_method": "CL-NECK-01: manually traced 8x-supersampled tapered lower exterior hair locks; all added or recoloured RGB/alpha is reconstructed, not extracted source pixels.",
+        "alpha_edge_modifications": "Only x=458\u2013613,y=320\u2013383 lower exterior hair: alpha=max(v5 alpha, traced antialiased contour); no alpha removed. See neck-repair-record.json."
+      }
+    },
+    {
+      "id": "diadem_gold",
+      "role": "rig_component",
+      "path": "head/diadem_gold.png",
+      "mask_path": "masks/diadem_gold.png",
+      "sha256": "452683dfcb4f8e09e8bb6f00df7aef3699a36bc93622fb8ccb2304088cb6724c",
+      "mask_sha256": "66ec7ceb113742b33634f0358fb5f1270a9963559259fc219897e153e96964f3",
+      "alpha_bounding_rect": [
+        432,
+        41,
+        647,
+        123
+      ],
+      "pivot": {
+        "x": 530,
+        "y": 80
+      },
+      "parent": "head_base",
+      "provenance": {
+        "source_pixel_mask": "provenance/diadem_gold__source.png",
+        "reconstructed_pixel_mask": "provenance/diadem_gold__reconstructed.png",
+        "reconstruction_method": "",
+        "alpha_edge_modifications": "none; alpha equals master alpha"
+      }
+    },
+    {
+      "id": "ear_left",
+      "role": "rig_component",
+      "path": "face/ear_left.png",
+      "mask_path": "masks/ear_left.png",
+      "sha256": "1bfe3f41aa047e0fe5c570eb0808f427ca9a6f34d1624f8e25d0a7efd35733a0",
+      "mask_sha256": "335dd44b28040a2e56b362e93093ccb7a4d0d9208fc261881676577668835019",
+      "alpha_bounding_rect": [
+        617,
+        165,
+        647,
+        220
+      ],
+      "pivot": {
+        "x": 632,
+        "y": 188
+      },
+      "parent": "head_base",
+      "provenance": {
+        "source_pixel_mask": "provenance/ear_left__source.png",
+        "reconstructed_pixel_mask": "provenance/ear_left__reconstructed.png",
+        "reconstruction_method": "",
+        "alpha_edge_modifications": "none; alpha equals master alpha"
+      }
+    },
+    {
+      "id": "ear_right",
+      "role": "rig_component",
+      "path": "face/ear_right.png",
+      "mask_path": "masks/ear_right.png",
+      "sha256": "8b568b29e672e6298a156f4f82c9e2a54f4b48e177d985fa802a293cc8513e40",
+      "mask_sha256": "05add8d37e28e53c6ec32768297f5f6622a271427e4d2689ee4bc62fccd777b0",
+      "alpha_bounding_rect": [
+        431,
+        165,
+        464,
+        223
+      ],
+      "pivot": {
+        "x": 450,
+        "y": 188
+      },
+      "parent": "head_base",
+      "provenance": {
+        "source_pixel_mask": "provenance/ear_right__source.png",
+        "reconstructed_pixel_mask": "provenance/ear_right__reconstructed.png",
+        "reconstruction_method": "",
+        "alpha_edge_modifications": "none; alpha equals master alpha"
+      }
+    },
+    {
+      "id": "eye_left",
+      "role": "rig_component",
+      "path": "face/eye_left.png",
+      "mask_path": "masks/eye_left.png",
+      "sha256": "9d9058a8210f4451c842a083ecb1a08d73a684c51001bd991af123ddf4620ab6",
+      "mask_sha256": "194b38a194c077f4005e6cfde0256dcd6d424a8e3180826b05b2ccf69fb96303",
+      "alpha_bounding_rect": [
+        554,
+        135,
+        605,
+        187
+      ],
+      "pivot": {
+        "x": 579,
+        "y": 160
+      },
+      "parent": "head_base",
+      "provenance": {
+        "source_pixel_mask": "provenance/eye_left__source.png",
+        "reconstructed_pixel_mask": "provenance/eye_left__reconstructed.png",
+        "reconstruction_method": "",
+        "alpha_edge_modifications": "none; alpha equals master alpha"
+      }
+    },
+    {
+      "id": "eye_right",
+      "role": "rig_component",
+      "path": "face/eye_right.png",
+      "mask_path": "masks/eye_right.png",
+      "sha256": "08d981713c6874d33a5f36d311f5ec5414b04b81350c366fe03cee2ecb8becab",
+      "mask_sha256": "2e9f646f385e883e6fe167d17e0c29143e99a1ba3760e95bb7fba0de9d1b8916",
+      "alpha_bounding_rect": [
+        479,
+        135,
+        531,
+        187
+      ],
+      "pivot": {
+        "x": 505,
+        "y": 160
+      },
+      "parent": "head_base",
+      "provenance": {
+        "source_pixel_mask": "provenance/eye_right__source.png",
+        "reconstructed_pixel_mask": "provenance/eye_right__reconstructed.png",
+        "reconstruction_method": "",
+        "alpha_edge_modifications": "none; alpha equals master alpha"
+      }
+    },
+    {
+      "id": "eyebrow_left",
+      "role": "rig_component",
+      "path": "face/eyebrow_left.png",
+      "mask_path": "masks/eyebrow_left.png",
+      "sha256": "b3cd909abdacf5f13425ea8c32c7db3e1dcae2e60d0f5c60eba06878c0210021",
+      "mask_sha256": "b5876f24e86d128e06be239cdb397f098e0caddd937c695f32b3989c7927ea76",
+      "alpha_bounding_rect": [
+        556,
+        110,
+        609,
+        134
+      ],
+      "pivot": {
+        "x": 579,
+        "y": 116
+      },
+      "parent": "head_base",
+      "provenance": {
+        "source_pixel_mask": "provenance/eyebrow_left__source.png",
+        "reconstructed_pixel_mask": "provenance/eyebrow_left__reconstructed.png",
+        "reconstruction_method": "",
+        "alpha_edge_modifications": "none; alpha equals master alpha"
+      }
+    },
+    {
+      "id": "eyebrow_right",
+      "role": "rig_component",
+      "path": "face/eyebrow_right.png",
+      "mask_path": "masks/eyebrow_right.png",
+      "sha256": "f32bc31c08d9de377cef44b731317c12103a701c1966f5788ffb0b96ad35a757",
+      "mask_sha256": "21efeb4e1bee1ab9a2876306050dfa77797c8bd8f3ae43c6265b8e16f3ff981a",
+      "alpha_bounding_rect": [
+        476,
+        110,
+        532,
+        131
+      ],
+      "pivot": {
+        "x": 501,
+        "y": 116
+      },
+      "parent": "head_base",
+      "provenance": {
+        "source_pixel_mask": "provenance/eyebrow_right__source.png",
+        "reconstructed_pixel_mask": "provenance/eyebrow_right__reconstructed.png",
+        "reconstruction_method": "",
+        "alpha_edge_modifications": "none; alpha equals master alpha"
+      }
+    },
+    {
+      "id": "nose",
+      "role": "rig_component",
+      "path": "face/nose.png",
+      "mask_path": "masks/nose.png",
+      "sha256": "51e631d045df9964cf33dcc8cb87a96061900d304874cc638ac45a048320dac0",
+      "mask_sha256": "4ce480f80c5626d016cfa609c3e02d1cebc3c5e96383c74412d027d3b643c0ed",
+      "alpha_bounding_rect": [
+        534,
+        136,
+        566,
+        221
+      ],
+      "pivot": {
+        "x": 548,
+        "y": 186
+      },
+      "parent": "head_base",
+      "provenance": {
+        "source_pixel_mask": "provenance/nose__source.png",
+        "reconstructed_pixel_mask": "provenance/nose__reconstructed.png",
+        "reconstruction_method": "",
+        "alpha_edge_modifications": "none; alpha equals master alpha"
+      }
+    },
+    {
+      "id": "beard",
+      "role": "rig_component",
+      "path": "face/beard.png",
+      "mask_path": "masks/beard.png",
+      "sha256": "9acfccfb432ee10803cfc1bc47bc6adf028f8c2edd24e65f026fe5b9c30b636e",
+      "mask_sha256": "26be2ac3263b7689c6fd4f5d15483d863cc11e0d5c7534bf9c71808c55a51470",
+      "alpha_bounding_rect": [
+        464,
+        218,
+        609,
+        326
+      ],
+      "pivot": {
+        "x": 538,
+        "y": 240
+      },
+      "parent": "head_base",
+      "provenance": {
+        "source_pixel_mask": "provenance/beard__source.png",
+        "reconstructed_pixel_mask": "provenance/beard__reconstructed.png",
+        "reconstruction_method": "Retains v4 receiver/underdraw; local brown continuation removes detached mouth-like ink in the moustache overlap. All previous reconstruction ownership retained.",
+        "alpha_edge_modifications": "See exact exported alpha mask; source alpha retained except local supersampled mouth interface/overlap. All increased or changed alpha is reconstructed."
+      }
+    },
+    {
+      "id": "moustache",
+      "role": "rig_component",
+      "path": "face/moustache.png",
+      "mask_path": "masks/moustache.png",
+      "sha256": "ef26dbc275d58f6352e7a65a796e4ae7f155fa91701e65f32c2ee1628cfa8c2c",
+      "mask_sha256": "f9161b57d1d90a0cfa2bf74b5595b3b749e7dbe4990c696befd82ad933a449b0",
+      "alpha_bounding_rect": [
+        482,
+        209,
+        599,
+        237
+      ],
+      "pivot": {
+        "x": 540,
+        "y": 217
+      },
+      "parent": "head_base",
+      "provenance": {
+        "source_pixel_mask": "provenance/moustache__source.png",
+        "reconstructed_pixel_mask": "provenance/moustache__reconstructed.png",
+        "reconstruction_method": "Codex R2 completion: manually traced smooth southern contour, supersampled matte and opaque interior brown surface; original upper outline retained. RGB/alpha modifications are reconstructed, not source pixels.",
+        "alpha_edge_modifications": "See exact exported alpha mask; source alpha retained except local supersampled mouth interface/overlap. All increased or changed alpha is reconstructed."
+      }
+    },
+    {
+      "id": "lower_face_neutral",
+      "role": "rig_component",
+      "path": "mouths/lower_face_neutral.png",
+      "mask_path": "masks/lower_face_neutral.png",
+      "sha256": "a9189e8a79f228c998597d5d4c88d82a38f582e46d44d639ae1c8382d8a07ee5",
+      "mask_sha256": "0880c5c463d5056cfea8a599298f63babe3709356a86584e192e00a73c200ccc",
+      "alpha_bounding_rect": [
+        497,
+        216,
+        584,
+        273
+      ],
+      "pivot": {
+        "x": 540,
+        "y": 241
+      },
+      "parent": "beard",
+      "provenance": {
+        "source_pixel_mask": "provenance/lower_face_neutral__source.png",
+        "reconstructed_pixel_mask": "provenance/lower_face_neutral__reconstructed.png",
+        "reconstruction_method": "Retains v4 lower-lip/skin/beard source relationship with expanded irregular upper overlap and deliberate smooth hidden skin field; no mottled moustache-ink diffusion.",
+        "alpha_edge_modifications": "See exact exported alpha mask; source alpha retained except local supersampled mouth interface/overlap. All increased or changed alpha is reconstructed."
+      }
+    },
+    {
+      "id": "lower_face_open_test",
+      "role": "rig_component",
+      "path": "mouths/lower_face_open_test.png",
+      "mask_path": "masks/lower_face_open_test.png",
+      "sha256": "ddc9c082cbc95af5208cf97a3b615626e50dd82b6ea547d5614fa5b5f57fcee6",
+      "mask_sha256": "0880c5c463d5056cfea8a599298f63babe3709356a86584e192e00a73c200ccc",
+      "alpha_bounding_rect": [
+        497,
+        216,
+        584,
+        273
+      ],
+      "pivot": {
+        "x": 540,
+        "y": 241
+      },
+      "parent": "beard",
+      "provenance": {
+        "source_pixel_mask": "provenance/lower_face_open_test__source.png",
+        "reconstructed_pixel_mask": "provenance/lower_face_open_test__reconstructed.png",
+        "reconstruction_method": "Same revised shared patch as neutral with the accepted 59-pixel lip-line opening retained from v4; no new expression state.",
+        "alpha_edge_modifications": "See exact exported alpha mask; source alpha retained except local supersampled mouth interface/overlap. All increased or changed alpha is reconstructed."
+      }
+    }
+  ],
+  "render_groups": {
+    "puppet_core": {
+      "type": "rig_composition",
+      "layer_order": [
+        "hair_back",
+        "head_base",
+        "ear_right",
+        "ear_left",
+        "beard",
+        "nose",
+        "eye_right",
+        "eye_left",
+        "eyebrow_right",
+        "eyebrow_left",
+        "moustache",
+        "diadem_gold"
+      ],
+      "preview": "previews/mouthless.png"
+    },
+    "puppet_core_neutral": {
+      "type": "rig_composition",
+      "layer_order": [
+        "hair_back",
+        "head_base",
+        "ear_right",
+        "ear_left",
+        "beard",
+        "lower_face_neutral",
+        "nose",
+        "eye_right",
+        "eye_left",
+        "eyebrow_right",
+        "eyebrow_left",
+        "moustache",
+        "diadem_gold"
+      ],
+      "preview": "previews/neutral.png"
+    },
+    "puppet_core_open_test": {
+      "type": "rig_composition",
+      "layer_order": [
+        "hair_back",
+        "head_base",
+        "ear_right",
+        "ear_left",
+        "beard",
+        "lower_face_open_test",
+        "nose",
+        "eye_right",
+        "eye_left",
+        "eyebrow_right",
+        "eyebrow_left",
+        "moustache",
+        "diadem_gold"
+      ],
+      "preview": "previews/open_test.png"
+    }
+  },
+  "previews": {
+    "mouthless": "previews/mouthless.png",
+    "neutral": "previews/neutral.png",
+    "open_test": "previews/open_test.png"
+  },
+  "preview_only_assets": [],
+  "supported_motion_envelope": {
+    "view": "front",
+    "description": "Actual declared micro-offset tests. Coverage and compositor equality do not substitute for visual inspection of seam artwork.",
+    "lower_face_patch_offsets_px": [
+      {
+        "x": 0,
+        "y": 0
+      },
+      {
+        "x": 2,
+        "y": 0
+      },
+      {
+        "x": -2,
+        "y": 0
+      },
+      {
+        "x": 0,
+        "y": 2
+      },
+      {
+        "x": 0,
+        "y": -2
+      }
+    ],
+    "moustache_offsets_px": [
+      {
+        "x": 1,
+        "y": 0
+      },
+      {
+        "x": -1,
+        "y": 0
+      },
+      {
+        "x": 0,
+        "y": 1
+      },
+      {
+        "x": 0,
+        "y": -1
+      }
+    ],
+    "patch_states_tested": [
+      "lower_face_neutral",
+      "lower_face_open_test"
+    ],
+    "sample_count": 18,
+    "stress_evidence": "stress-tests.json and previews/stress/",
+    "claims": "Limited front-view micro-offset envelope only. No perspective turn, rotation, viseme library, or unrestricted gap-free animation is claimed. Whole-head rigidity is not evidence that local facial joints are safe."
+  },
+  "repair_regions": {
+    "CL-NECK-01": {
+      "repair": "CL-NECK-01",
+      "base": "layout01-v5",
+      "component": "head/hair_back.png",
+      "bbox": [
+        458,
+        320,
+        614,
+        384
+      ],
+      "contours_master_coordinates": {
+        "left": [
+          [
+            458,
+            320
+          ],
+          [
+            458,
+            340
+          ],
+          [
+            460,
+            353
+          ],
+          [
+            464,
+            365
+          ],
+          [
+            470,
+            374
+          ],
+          [
+            477,
+            380
+          ],
+          [
+            484,
+            382
+          ],
+          [
+            491,
+            380
+          ],
+          [
+            497,
+            374
+          ],
+          [
+            500,
+            366
+          ],
+          [
+            499,
+            354
+          ],
+          [
+            496,
+            342
+          ],
+          [
+            491,
+            330
+          ],
+          [
+            487,
+            320
+          ]
+        ],
+        "right": [
+          [
+            612,
+            320
+          ],
+          [
+            612,
+            340
+          ],
+          [
+            610,
+            353
+          ],
+          [
+            606,
+            365
+          ],
+          [
+            600,
+            374
+          ],
+          [
+            593,
+            380
+          ],
+          [
+            586,
+            382
+          ],
+          [
+            579,
+            380
+          ],
+          [
+            573,
+            374
+          ],
+          [
+            570,
+            366
+          ],
+          [
+            571,
+            354
+          ],
+          [
+            574,
+            342
+          ],
+          [
+            579,
+            330
+          ],
+          [
+            583,
+            320
+          ]
+        ]
+      },
+      "method": "8x supersampled manually traced continuous tapered exterior hair locks; alpha=max(v5 alpha, contour alpha)",
+      "changed_alpha_pixels": 4497,
+      "changed_or_recoloured_pixels": 4507,
+      "added_alpha_sum": 916597,
+      "removed_alpha_pixels": 0,
+      "provenance": "All contour-support RGB and alpha are reconstructed; pre-existing source/reconstructed partition remains retained elsewhere."
+    },
+    "unchanged_from_v5": "All exported sprites except hair_back; head_base and visible_head_domain retained byte-identically."
+  },
+  "known_limitations": [
+    "CANDIDATE; no Claude acceptance or human visual approval.",
+    "CL-NECK-01 repairs only the bounded lower exterior hair contour; no body or garment is supplied.",
+    "Front-view only. Tested patch \u00b12px XY and moustache \u00b11px XY; no arbitrary rotation or perspective.",
+    "The lip opening is a restrained technical test, not a production speech viseme.",
+    "No Godot, body/arms, speech/audio or video asset in this phase."
+  ],
+  "toolchain": {
+    "python": "system /usr/bin/python3 (book .venv has no Pillow)",
+    "pillow": "10.2.0",
+    "numpy": "1.26.4",
+    "editable_code": "code/"
+  }
+}

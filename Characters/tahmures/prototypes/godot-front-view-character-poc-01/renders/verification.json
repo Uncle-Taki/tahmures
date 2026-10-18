@@ -1,0 +1,251 @@
+{
+  "screen_mapping": "screen = world + (80, 30)",
+  "background_rgb": [
+    23,
+    26,
+    34
+  ],
+  "results": {
+    "head_match_neutral_t=1.00": {
+      "mean_abs_diff": 4.871,
+      "max_abs_diff": 82
+    },
+    "head_match_blink_t=2.65": {
+      "mean_abs_diff": 4.725,
+      "max_abs_diff": 82
+    },
+    "head_match_thinking_t=6.50": {
+      "mean_abs_diff": 4.879,
+      "max_abs_diff": 82
+    },
+    "head_match_open_t=11.00": {
+      "mean_abs_diff": 4.232,
+      "max_abs_diff": 82
+    },
+    "head_match_neutral_t=15.00": {
+      "mean_abs_diff": 4.877,
+      "max_abs_diff": 82
+    },
+    "blink_eyes_diff": {
+      "mean_abs_diff": 53.729,
+      "max_abs_diff": 255,
+      "changed_pixel_fraction": 0.6459
+    },
+    "baseline_eyes_diff": {
+      "mean_abs_diff": 0.0,
+      "max_abs_diff": 0,
+      "changed_pixel_fraction": 0.0
+    },
+    "thinking_brow_diff": {
+      "mean_abs_diff": 6.244,
+      "max_abs_diff": 174,
+      "changed_pixel_fraction": 0.1012
+    },
+    "baseline_brow_diff": {
+      "mean_abs_diff": 0.0,
+      "max_abs_diff": 0,
+      "changed_pixel_fraction": 0.0
+    },
+    "open_mouth_diff": {
+      "mean_abs_diff": 0.939,
+      "max_abs_diff": 116,
+      "changed_pixel_fraction": 0.0121
+    },
+    "baseline_mouth_diff": {
+      "mean_abs_diff": 0.0,
+      "max_abs_diff": 0,
+      "changed_pixel_fraction": 0.0
+    },
+    "arm_raised_diff": {
+      "mean_abs_diff": 4.75,
+      "max_abs_diff": 232,
+      "changed_pixel_fraction": 0.061
+    },
+    "baseline_arm_diff": {
+      "mean_abs_diff": 0.071,
+      "max_abs_diff": 29,
+      "changed_pixel_fraction": 0.0004
+    },
+    "mark_ring_gold_fraction_t11.0": 1.0,
+    "mark_ring_gold_fraction_t1.0": 0.0,
+    "blink_frame_eye": {
+      "blink": {
+        "mean_abs_diff": 3.78,
+        "max_abs_diff": 54
+      },
+      "neutral": {
+        "mean_abs_diff": 38.719,
+        "max_abs_diff": 255
+      }
+    },
+    "thinking_frame_brow": {
+      "thinking": {
+        "mean_abs_diff": 5.987,
+        "max_abs_diff": 82
+      },
+      "neutral": {
+        "mean_abs_diff": 11.846,
+        "max_abs_diff": 182
+      }
+    },
+    "open_frame_mouth": {
+      "open": {
+        "mean_abs_diff": 6.458,
+        "max_abs_diff": 69
+      },
+      "neutral": {
+        "mean_abs_diff": 7.2,
+        "max_abs_diff": 122
+      }
+    },
+    "hud_layout": {
+      "checks": {
+        "language_band_left_of_head": {
+          "region": [
+            465,
+            80,
+            508,
+            112
+          ],
+          "expectation": "<= 0",
+          "counts": {
+            "t1.0": 0,
+            "t2.65": 0,
+            "t6.5": 0,
+            "t10.6": 0,
+            "t11.0": 0,
+            "t15.0": 0
+          },
+          "pass": true
+        },
+        "language_band_right_of_head": {
+          "region": [
+            730,
+            80,
+            1280,
+            112
+          ],
+          "expectation": "<= 0",
+          "counts": {
+            "t1.0": 0,
+            "t2.65": 0,
+            "t6.5": 0,
+            "t10.6": 0,
+            "t11.0": 0,
+            "t15.0": 0
+          },
+          "pass": true
+        },
+        "header_band_above_diadem": {
+          "region": [
+            560,
+            30,
+            680,
+            46
+          ],
+          "expectation": "<= 0",
+          "counts": {
+            "t1.0": 0,
+            "t2.65": 0,
+            "t6.5": 0,
+            "t10.6": 0,
+            "t11.0": 0,
+            "t15.0": 0
+          },
+          "pass": true
+        },
+        "torso_band_free_of_hud_text": {
+          "region": [
+            465,
+            560,
+            770,
+            668
+          ],
+          "expectation": "<= 0",
+          "counts": {
+            "t1.0": 0,
+            "t2.65": 0,
+            "t6.5": 0,
+            "t10.6": 0,
+            "t11.0": 0,
+            "t15.0": 0
+          },
+          "pass": true
+        },
+        "state_label_visible": {
+          "region": [
+            16,
+            556,
+            430,
+            602
+          ],
+          "expectation": ">= 100",
+          "counts": {
+            "t1.0": 446,
+            "t2.65": 605,
+            "t6.5": 942,
+            "t10.6": 576,
+            "t11.0": 1580,
+            "t15.0": 446
+          },
+          "pass": true
+        },
+        "torso_callout_visible": {
+          "region": [
+            0,
+            440,
+            465,
+            500
+          ],
+          "expectation": ">= 1000",
+          "counts": {
+            "t1.0": 4367,
+            "t2.65": 4367,
+            "t6.5": 4367,
+            "t10.6": 4367,
+            "t11.0": 4367,
+            "t15.0": 4367
+          },
+          "pass": true
+        },
+        "arm_callout_visible": {
+          "region": [
+            900,
+            570,
+            1280,
+            660
+          ],
+          "expectation": ">= 1000",
+          "counts": {
+            "t1.0": 4551,
+            "t2.65": 4551,
+            "t6.5": 4551,
+            "t10.6": 4551,
+            "t11.0": 4551,
+            "t15.0": 4551
+          },
+          "pass": true
+        }
+      },
+      "mark_label_gold_beside_ring": {
+        "region": [
+          1090,
+          395,
+          1280,
+          430
+        ],
+        "expectation": ">= 50 at t10.6/t11.0, <= 10 otherwise",
+        "counts": {
+          "t1.0": 0,
+          "t2.65": 0,
+          "t6.5": 0,
+          "t10.6": 130,
+          "t11.0": 130,
+          "t15.0": 0
+        },
+        "pass": true
+      },
+      "pass": true
+    }
+  }
+}

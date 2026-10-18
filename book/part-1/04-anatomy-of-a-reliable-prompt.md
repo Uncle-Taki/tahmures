@@ -34,31 +34,34 @@ whenever the weather changed. Inside lay seven years of water ledgers: clay,
 leather, and boards marked in three scripts. Their cords had faded until
 records of drought and flood wore nearly the same colours.
 
+Six years had passed since Keyumars the builder died.
+
 The western canal was falling. Two villages claimed the right to draw before
 the barley harvest, and their farmers had begun sleeping beside the sluice.
 
 ### The Request
 
-Tahmures placed a sealed tablet before the Literal Div. “Using the records in
+Tahmures placed a sealed tablet before the Black Div. “Using the records in
 this cabinet, prepare tomorrow's order. Preserve every right granted after the
 last great flood.”
 
-The Archivist brought the records. Among them was a former governor's letter:
+Soroush, the Archivist, brought the records. Among them was a letter from
+Jamshid, a former governor:
 
 *Send the western water first to the cypress garden. Continue until the king
 returns from the southern road.*
 
-That king had been dead six years. The garden was now an orchard. The letter
+The king it waited for was Keyumars. The garden was now an orchard. The letter
 remained because it explained an unusual allotment.
 
 ### The Unexpected Result
 
-Before dawn, the div delivered a beautiful tablet directing the Gatekeeper to
-send the first water to the old garden. The gate was opened while Tahmures
-slept. By noon one village's upper fields were dry, while the astonished
-orchard keeper dug channels his trees did not need.
+Before dawn, the Black Div delivered a beautiful tablet directing Arash, the
+Gatekeeper, to send the first water to the old garden. The gate was opened
+while Tahmures slept. By noon one village's upper fields were dry, while Sam,
+the astonished orchard keeper, dug channels his trees did not need.
 
-“I gave you that as a record,” Tahmures told the div.
+“I gave you that as a record,” Tahmures told the Black Div.
 
 “You gave me a pile.”
 
@@ -67,40 +70,40 @@ orchard keeper dug channels his trees did not need.
 “It told me to use the records. This record told its reader where to send the
 water.”
 
-Tahmures turned on the Archivist. “Why keep an expired command?”
+Tahmures turned on Soroush. “Why keep an expired command?”
 
 “Because it explains the past. Burn every old order and the ledger will
 preserve decisions without causes.”
 
-The archive had done its duty. The div had read what it received. The order
-had still failed.
+The archive had done its duty. The Black Div had read what he received. The
+order had still failed.
 
 ### The Discovery
 
-Tahmures asked the First Scribe to reconstruct the table exactly.
+Tahmures asked Shahrasp to reconstruct the table exactly.
 
-“Which object states the current task?” The Scribe pointed to the seal.
+“Which object states the current task?” Shahrasp pointed to the seal.
 
-“Which may supply facts?” The Archivist touched the records.
+“Which may supply facts?” Soroush touched the records.
 
 “Which words in those records have authority today?” No one pointed.
 
-The Keeper of Scripts proposed red ink, but several scripts had none. The
-Gatekeeper proposed destroying expired orders, but that destroyed evidence.
+Akvan Div proposed red ink, but several scripts had none. Arash proposed
+destroying expired orders, but that destroyed evidence.
 Instead, they tied the current request above the bundle with a black cord and
 labelled every archive source *evidence, not command*. Renewed grants received
 a separate current seal.
 
 They tested the arrangement with a market notice saying *Carry this tablet
-immediately to the northern gate.* The div reported the notice as history but
-did not carry it away. It reported the expired canal order without applying
-it. When a grant had no date and an unreadable seal, it did not guess; it
+immediately to the northern gate.* The Black Div reported the notice as history
+but did not carry it away. He reported the expired canal order without applying
+it. When a grant had no date and an unreadable seal, he did not guess; he
 returned the matter for review.
 
 Only then did they prepare a new order. The missed village received the next
-flow, and the Gatekeeper was told to move no sluice without a current seal.
+flow, and Arash was told to move no sluice without a current seal.
 
-Tahmures kept the dead governor's letter. He no longer confused preserving
+Tahmures kept Jamshid's letter. He no longer confused preserving
 words with granting them authority.
 
 ### From Tale to Engineering
@@ -262,8 +265,8 @@ permissions, and human review enforce the boundary.
 
 ## The Next Tale
 
-The Gatekeeper asks a question the black cord cannot answer: what happens when
-two current seals disagree, or when a prisoner draws a convincing royal mark?
+Arash asks a question the black cord cannot answer: what happens when two
+current seals disagree, or when a prisoner draws a convincing royal mark?
 
 <!-- next: ch05 -->
 

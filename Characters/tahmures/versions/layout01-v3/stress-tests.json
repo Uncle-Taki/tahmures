@@ -1,0 +1,366 @@
+{
+  "purpose": "Front-view micro-offset stress evidence for the Model-B lower-face patch and static moustache foreground.",
+  "envelope": {
+    "lower_face_patch_offsets_px": [
+      {
+        "x": 0,
+        "y": 0
+      },
+      {
+        "x": 2,
+        "y": 0
+      },
+      {
+        "x": -2,
+        "y": 0
+      },
+      {
+        "x": 0,
+        "y": 2
+      },
+      {
+        "x": 0,
+        "y": -2
+      }
+    ],
+    "moustache_offsets_px": [
+      {
+        "x": 1,
+        "y": 0
+      },
+      {
+        "x": -1,
+        "y": 0
+      },
+      {
+        "x": 0,
+        "y": 1
+      },
+      {
+        "x": 0,
+        "y": -1
+      }
+    ],
+    "patch_states": [
+      "lower_face_neutral",
+      "lower_face_open_test"
+    ],
+    "receiver": "static mouthless beard receiver (cloned beard texture inside mouth-content region M)",
+    "sample_count": 18
+  },
+  "coverage_rule": "Inside the one-pixel eroded immutable visible-head domain: zero new fully transparent pixels where the master is visible; zero alpha<250 where master alpha is >=250. Intrinsic antialiasing preserved; boundary pixels are not forced opaque.",
+  "confinement_rule": "Composition changes vs the same-state (0,0) base must stay inside the union of the moved sprite's original and shifted footprint.",
+  "claims": "Limited front-view micro-offset envelope only. No perspective turn, rotation, viseme library, or unrestricted gap-free animation is claimed. Whole-head rigidity is not evidence that local facial joints are safe.",
+  "samples": [
+    {
+      "name": "patch-neutral-dx0-dy0",
+      "render_group": "puppet_core_neutral",
+      "moved_sprite": "lower_face_neutral",
+      "offset_px": {
+        "x": 0,
+        "y": 0
+      },
+      "coverage": {
+        "new_fully_transparent_interior": 0,
+        "alpha_below_250_where_source_opaque": 0
+      },
+      "changed_px_vs_base_state": 0,
+      "changes_confined_to_moved_footprint": true,
+      "path": "previews/stress/patch-neutral-dx0-dy0.png",
+      "byte_identical_to_preview": true
+    },
+    {
+      "name": "patch-neutral-dx2-dy0",
+      "render_group": "puppet_core_neutral",
+      "moved_sprite": "lower_face_neutral",
+      "offset_px": {
+        "x": 2,
+        "y": 0
+      },
+      "coverage": {
+        "new_fully_transparent_interior": 0,
+        "alpha_below_250_where_source_opaque": 0
+      },
+      "changed_px_vs_base_state": 2853,
+      "changes_confined_to_moved_footprint": true,
+      "path": "previews/stress/patch-neutral-dx2-dy0.png",
+      "revealed_receiver_px": 0,
+      "revealed_receiver_all_dark": true
+    },
+    {
+      "name": "patch-neutral-dx-2-dy0",
+      "render_group": "puppet_core_neutral",
+      "moved_sprite": "lower_face_neutral",
+      "offset_px": {
+        "x": -2,
+        "y": 0
+      },
+      "coverage": {
+        "new_fully_transparent_interior": 0,
+        "alpha_below_250_where_source_opaque": 0
+      },
+      "changed_px_vs_base_state": 2863,
+      "changes_confined_to_moved_footprint": true,
+      "path": "previews/stress/patch-neutral-dx-2-dy0.png",
+      "revealed_receiver_px": 0,
+      "revealed_receiver_all_dark": true
+    },
+    {
+      "name": "patch-neutral-dx0-dy2",
+      "render_group": "puppet_core_neutral",
+      "moved_sprite": "lower_face_neutral",
+      "offset_px": {
+        "x": 0,
+        "y": 2
+      },
+      "coverage": {
+        "new_fully_transparent_interior": 0,
+        "alpha_below_250_where_source_opaque": 0
+      },
+      "changed_px_vs_base_state": 2933,
+      "changes_confined_to_moved_footprint": true,
+      "path": "previews/stress/patch-neutral-dx0-dy2.png",
+      "revealed_receiver_px": 0,
+      "revealed_receiver_all_dark": true
+    },
+    {
+      "name": "patch-neutral-dx0-dy-2",
+      "render_group": "puppet_core_neutral",
+      "moved_sprite": "lower_face_neutral",
+      "offset_px": {
+        "x": 0,
+        "y": -2
+      },
+      "coverage": {
+        "new_fully_transparent_interior": 0,
+        "alpha_below_250_where_source_opaque": 0
+      },
+      "changed_px_vs_base_state": 2786,
+      "changes_confined_to_moved_footprint": true,
+      "path": "previews/stress/patch-neutral-dx0-dy-2.png",
+      "revealed_receiver_px": 0,
+      "revealed_receiver_all_dark": true
+    },
+    {
+      "name": "patch-open_test-dx0-dy0",
+      "render_group": "puppet_core_open_test",
+      "moved_sprite": "lower_face_open_test",
+      "offset_px": {
+        "x": 0,
+        "y": 0
+      },
+      "coverage": {
+        "new_fully_transparent_interior": 0,
+        "alpha_below_250_where_source_opaque": 0
+      },
+      "changed_px_vs_base_state": 0,
+      "changes_confined_to_moved_footprint": true,
+      "path": "previews/stress/patch-open_test-dx0-dy0.png",
+      "byte_identical_to_preview": true
+    },
+    {
+      "name": "patch-open_test-dx2-dy0",
+      "render_group": "puppet_core_open_test",
+      "moved_sprite": "lower_face_open_test",
+      "offset_px": {
+        "x": 2,
+        "y": 0
+      },
+      "coverage": {
+        "new_fully_transparent_interior": 0,
+        "alpha_below_250_where_source_opaque": 0
+      },
+      "changed_px_vs_base_state": 2849,
+      "changes_confined_to_moved_footprint": true,
+      "path": "previews/stress/patch-open_test-dx2-dy0.png",
+      "revealed_receiver_px": 0,
+      "revealed_receiver_all_dark": true
+    },
+    {
+      "name": "patch-open_test-dx-2-dy0",
+      "render_group": "puppet_core_open_test",
+      "moved_sprite": "lower_face_open_test",
+      "offset_px": {
+        "x": -2,
+        "y": 0
+      },
+      "coverage": {
+        "new_fully_transparent_interior": 0,
+        "alpha_below_250_where_source_opaque": 0
+      },
+      "changed_px_vs_base_state": 2859,
+      "changes_confined_to_moved_footprint": true,
+      "path": "previews/stress/patch-open_test-dx-2-dy0.png",
+      "revealed_receiver_px": 0,
+      "revealed_receiver_all_dark": true
+    },
+    {
+      "name": "patch-open_test-dx0-dy2",
+      "render_group": "puppet_core_open_test",
+      "moved_sprite": "lower_face_open_test",
+      "offset_px": {
+        "x": 0,
+        "y": 2
+      },
+      "coverage": {
+        "new_fully_transparent_interior": 0,
+        "alpha_below_250_where_source_opaque": 0
+      },
+      "changed_px_vs_base_state": 2929,
+      "changes_confined_to_moved_footprint": true,
+      "path": "previews/stress/patch-open_test-dx0-dy2.png",
+      "revealed_receiver_px": 0,
+      "revealed_receiver_all_dark": true
+    },
+    {
+      "name": "patch-open_test-dx0-dy-2",
+      "render_group": "puppet_core_open_test",
+      "moved_sprite": "lower_face_open_test",
+      "offset_px": {
+        "x": 0,
+        "y": -2
+      },
+      "coverage": {
+        "new_fully_transparent_interior": 0,
+        "alpha_below_250_where_source_opaque": 0
+      },
+      "changed_px_vs_base_state": 2782,
+      "changes_confined_to_moved_footprint": true,
+      "path": "previews/stress/patch-open_test-dx0-dy-2.png",
+      "revealed_receiver_px": 0,
+      "revealed_receiver_all_dark": true
+    },
+    {
+      "name": "moustache-over-neutral-dx1-dy0",
+      "render_group": "puppet_core_neutral",
+      "moved_sprite": "moustache",
+      "offset_px": {
+        "x": 1,
+        "y": 0
+      },
+      "coverage": {
+        "new_fully_transparent_interior": 0,
+        "alpha_below_250_where_source_opaque": 0
+      },
+      "changed_px_vs_base_state": 1608,
+      "changes_confined_to_moved_footprint": true,
+      "path": "previews/stress/moustache-over-neutral-dx1-dy0.png"
+    },
+    {
+      "name": "moustache-over-neutral-dx-1-dy0",
+      "render_group": "puppet_core_neutral",
+      "moved_sprite": "moustache",
+      "offset_px": {
+        "x": -1,
+        "y": 0
+      },
+      "coverage": {
+        "new_fully_transparent_interior": 0,
+        "alpha_below_250_where_source_opaque": 0
+      },
+      "changed_px_vs_base_state": 1615,
+      "changes_confined_to_moved_footprint": true,
+      "path": "previews/stress/moustache-over-neutral-dx-1-dy0.png"
+    },
+    {
+      "name": "moustache-over-neutral-dx0-dy1",
+      "render_group": "puppet_core_neutral",
+      "moved_sprite": "moustache",
+      "offset_px": {
+        "x": 0,
+        "y": 1
+      },
+      "coverage": {
+        "new_fully_transparent_interior": 0,
+        "alpha_below_250_where_source_opaque": 0
+      },
+      "changed_px_vs_base_state": 1682,
+      "changes_confined_to_moved_footprint": true,
+      "path": "previews/stress/moustache-over-neutral-dx0-dy1.png"
+    },
+    {
+      "name": "moustache-over-neutral-dx0-dy-1",
+      "render_group": "puppet_core_neutral",
+      "moved_sprite": "moustache",
+      "offset_px": {
+        "x": 0,
+        "y": -1
+      },
+      "coverage": {
+        "new_fully_transparent_interior": 0,
+        "alpha_below_250_where_source_opaque": 0
+      },
+      "changed_px_vs_base_state": 1604,
+      "changes_confined_to_moved_footprint": true,
+      "path": "previews/stress/moustache-over-neutral-dx0-dy-1.png"
+    },
+    {
+      "name": "moustache-over-open_test-dx1-dy0",
+      "render_group": "puppet_core_open_test",
+      "moved_sprite": "moustache",
+      "offset_px": {
+        "x": 1,
+        "y": 0
+      },
+      "coverage": {
+        "new_fully_transparent_interior": 0,
+        "alpha_below_250_where_source_opaque": 0
+      },
+      "changed_px_vs_base_state": 1608,
+      "changes_confined_to_moved_footprint": true,
+      "path": "previews/stress/moustache-over-open_test-dx1-dy0.png"
+    },
+    {
+      "name": "moustache-over-open_test-dx-1-dy0",
+      "render_group": "puppet_core_open_test",
+      "moved_sprite": "moustache",
+      "offset_px": {
+        "x": -1,
+        "y": 0
+      },
+      "coverage": {
+        "new_fully_transparent_interior": 0,
+        "alpha_below_250_where_source_opaque": 0
+      },
+      "changed_px_vs_base_state": 1615,
+      "changes_confined_to_moved_footprint": true,
+      "path": "previews/stress/moustache-over-open_test-dx-1-dy0.png"
+    },
+    {
+      "name": "moustache-over-open_test-dx0-dy1",
+      "render_group": "puppet_core_open_test",
+      "moved_sprite": "moustache",
+      "offset_px": {
+        "x": 0,
+        "y": 1
+      },
+      "coverage": {
+        "new_fully_transparent_interior": 0,
+        "alpha_below_250_where_source_opaque": 0
+      },
+      "changed_px_vs_base_state": 1682,
+      "changes_confined_to_moved_footprint": true,
+      "path": "previews/stress/moustache-over-open_test-dx0-dy1.png"
+    },
+    {
+      "name": "moustache-over-open_test-dx0-dy-1",
+      "render_group": "puppet_core_open_test",
+      "moved_sprite": "moustache",
+      "offset_px": {
+        "x": 0,
+        "y": -1
+      },
+      "coverage": {
+        "new_fully_transparent_interior": 0,
+        "alpha_below_250_where_source_opaque": 0
+      },
+      "changed_px_vs_base_state": 1604,
+      "changes_confined_to_moved_footprint": true,
+      "path": "previews/stress/moustache-over-open_test-dx0-dy-1.png"
+    }
+  ],
+  "all_coverage_pass": true,
+  "all_confined": true,
+  "all_receiver_dark": true,
+  "all_passed": true
+}

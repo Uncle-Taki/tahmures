@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-10",
+  "phase": "GODOT_FRONT_VIEW_CHARACTER_POC_01",
+  "status": "STAGE_A_ACCEPTED_STAGE_B0_ACCEPTED_STAGE_B1_OWNER_INPUT_REQUIRED",
+  "checked_executables": {
+    "godot": true,
+    "godot4": false,
+    "ffmpeg": true,
+    "ffprobe": true,
+    "espeak-ng": true,
+    "espeak": false,
+    "piper": false
+  },
+  "observed_versions": {
+    "godot": "4.7.2.stable.official.ed1daf0bf",
+    "ffmpeg": "6.1.1-3ubuntu5",
+    "espeak-ng": "1.51"
+  },
+  "owner_voice_quality_decision": {
+    "espeak_english": "REJECTED_FOR_NARRATION_QUALITY",
+    "espeak_persian": "REJECTED_FOR_NARRATION_QUALITY",
+    "deliverable_use_authorized": false
+  },
+  "target_project": "Characters/tahmures/prototypes/godot-front-view-character-poc-01",
+  "target_project_exists": true,
+  "project_godot_exists": true,
+  "installation_performed_by_this_codex_session": false,
+  "external_provider_called": false,
+  "next_action": "COLLECT_OWNER_STAGE_B1_AUDIO_BUNDLE_AND_MOUTH_MOTION_CHOICE",
+  "audio_stage_prerequisite": "Stage B0 scaffolding may proceed without recordings. Actual audio integration requires human-recorded EN/FA narration WAVs, owner-confirmed verbatim transcript files, and an explicit decision about use of the existing open-test mouth state; eSpeak remains rejected.",
+  "display_backend": {
+    "x11": false,
+    "wayland": false,
+    "godot_headless_movie_render": "failed_dummy_renderer",
+    "persian_visual_render_verified": false
+  },
+  "implementation_model": "GPT-Codex implements and validates; Claude checks near-final artifacts read-only; human owns voice and subjective approval.",
+  "resolved_validator_findings": [
+    "PCM16 nBlockAlign exact validation and regression tests",
+    "WebVTT signature boundary and mandatory header/cue separator validation and regression tests"
+  ],
+  "persian_visual_render_status": "PASS: Claude inspected actual Godot fixture frame; does not approve narration or final subtitle wording/layout.",
+  "claude_final_report": "Characters/tahmures/workflow/godot-front-view-character-poc-01/reports/claude/stage-b0-final-check-02.md",
+  "claude_acceptance_token": "GODOT_STAGE_B0_ACCEPTED_FOR_OWNER_INPUTS"
+}

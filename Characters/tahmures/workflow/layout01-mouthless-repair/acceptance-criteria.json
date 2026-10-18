@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "phase": "CHARACTER_LAYOUT01_MOUTHLESS_REPAIR",
+  "codex_technical_acceptance_requires": "All L01 checks PASS with evidence; machine results do not replace visual QA",
+  "criteria": [
+    {
+      "id": "L01-01",
+      "name": "Input source and immutable baseline hashes",
+      "evidence_type": "MACHINE",
+      "required_evidence": "ZIP/master/member hashes preserved",
+      "initial_state": "NOT_VERIFIED_FOR_REPAIR"
+    },
+    {
+      "id": "L01-02",
+      "name": "Bounded scope",
+      "evidence_type": "MACHINE",
+      "required_evidence": "Only versioned candidate and GLM report change; tracked source snapshot unchanged",
+      "initial_state": "NOT_VERIFIED_FOR_REPAIR"
+    },
+    {
+      "id": "L01-03",
+      "name": "Real independently assembled puppet",
+      "evidence_type": "MACHINE_AND_VISUAL",
+      "required_evidence": "Manifest-only assembly; no preview source underlays or disguised copies",
+      "initial_state": "NOT_VERIFIED_FOR_REPAIR"
+    },
+    {
+      "id": "L01-04",
+      "name": "Mouthless lower-face quality",
+      "evidence_type": "VISUAL",
+      "required_evidence": "No residual smile/lips, natural receiver, no rectangular concealment",
+      "initial_state": "NOT_VERIFIED_FOR_REPAIR"
+    },
+    {
+      "id": "L01-05",
+      "name": "Beard and moustache composition",
+      "evidence_type": "VISUAL",
+      "required_evidence": "Clean skin/beard seam, no skin holes, stable outer jaw, correct moustache",
+      "initial_state": "NOT_VERIFIED_FOR_REPAIR"
+    },
+    {
+      "id": "L01-06",
+      "name": "Forehead/hair/diadem intersection",
+      "evidence_type": "VISUAL",
+      "required_evidence": "Continuous coverage, original contour retained, no hard colour seam",
+      "initial_state": "NOT_VERIFIED_FOR_REPAIR"
+    },
+    {
+      "id": "L01-07",
+      "name": "Cheek/neck connection",
+      "evidence_type": "VISUAL",
+      "required_evidence": "Smooth joins, no jagged truncation or silhouette breaks",
+      "initial_state": "NOT_VERIFIED_FOR_REPAIR"
+    },
+    {
+      "id": "L01-08",
+      "name": "Interior coverage",
+      "evidence_type": "MACHINE",
+      "required_evidence": "Zero new transparent pixels where master visible; zero alpha-below-250 deficits where master alpha>=250; immutable one-pixel eroded domain",
+      "initial_state": "NOT_VERIFIED_FOR_REPAIR"
+    },
+    {
+      "id": "L01-09",
+      "name": "Identity and source resemblance",
+      "evidence_type": "VISUAL",
+      "required_evidence": "Source face/hair/diadem/palette preserved; neutral resembles master",
+      "initial_state": "NOT_VERIFIED_FOR_REPAIR"
+    },
+    {
+      "id": "L01-10",
+      "name": "Exact exported-alpha masks",
+      "evidence_type": "MACHINE",
+      "required_evidence": "L masks equal exported alpha; selections/provenance separate",
+      "initial_state": "NOT_VERIFIED_FOR_REPAIR"
+    },
+    {
+      "id": "L01-11",
+      "name": "Honest reconstruction provenance",
+      "evidence_type": "MACHINE_AND_VISUAL",
+      "required_evidence": "Disjoint source/reconstructed masks within each sprite; exact source RGB claims",
+      "initial_state": "NOT_VERIFIED_FOR_REPAIR"
+    },
+    {
+      "id": "L01-12",
+      "name": "Feature alignment",
+      "evidence_type": "MACHINE_AND_VISUAL",
+      "required_evidence": "Original eye/brow pivots and shape relationships preserved",
+      "initial_state": "NOT_VERIFIED_FOR_REPAIR"
+    },
+    {
+      "id": "L01-13",
+      "name": "Neutral mouth state",
+      "evidence_type": "MACHINE_AND_VISUAL",
+      "required_evidence": "Actual single-patch composition, no duplicate contour or smile",
+      "initial_state": "NOT_VERIFIED_FOR_REPAIR"
+    },
+    {
+      "id": "L01-14",
+      "name": "Small-open test state",
+      "evidence_type": "MACHINE_AND_VISUAL",
+      "required_evidence": "Actual alternate patch, coherent beard and skin, no changed jaw identity",
+      "initial_state": "NOT_VERIFIED_FOR_REPAIR"
+    },
+    {
+      "id": "L01-15",
+      "name": "No duplicated features or edge artifacts",
+      "evidence_type": "VISUAL",
+      "required_evidence": "Inspect source scale and 2–4x on light/dark/checker backgrounds",
+      "initial_state": "NOT_VERIFIED_FOR_REPAIR"
+    },
+    {
+      "id": "L01-16",
+      "name": "Conservative local-motion stress",
+      "evidence_type": "MACHINE_AND_VISUAL",
+      "required_evidence": "Both patches ±2px XY and moustache ±1px XY remain covered/coherent; no general rig claim",
+      "initial_state": "NOT_VERIFIED_FOR_REPAIR"
+    },
+    {
+      "id": "L01-17",
+      "name": "All manifests, pivots, files and paths valid",
+      "evidence_type": "MACHINE",
+      "required_evidence": "Unique IDs, group order, bounds, parents, hashes, previews from actual layers",
+      "initial_state": "NOT_VERIFIED_FOR_REPAIR"
+    },
+    {
+      "id": "L01-18",
+      "name": "Required tests and repository gate healthy",
+      "evidence_type": "MACHINE",
+      "required_evidence": "Independent structural result, stress report, git diff check, make check",
+      "initial_state": "NOT_VERIFIED_FOR_REPAIR"
+    }
+  ],
+  "later_release_gates": [
+    {
+      "id": "CLAUDE_FINAL_PHASE_REVIEW",
+      "state": "NOT_REQUESTED",
+      "requires": "Actual independent review report tied to final file hashes"
+    },
+    {
+      "id": "HUMAN_VISUAL_APPROVAL",
+      "state": "NOT_REQUESTED",
+      "requires": "Explicit owner approval tied to final candidate hashes"
+    }
+  ]
+}

@@ -1,0 +1,1488 @@
+{
+  "gate": "supervisor_structural_checker",
+  "artistic_approval": false,
+  "pass": true,
+  "commands": [
+    {
+      "command": "rtk proxy python3 Characters/tahmures/workflow/tools/validate_submission.py --candidate Characters/tahmures/versions/layout01-v3 --baseline Characters/tahmures/versions/layout01-v2",
+      "role": "literal task command (resolves to the book .venv interpreter)",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr_tail": "  File \"/home/mehdi/Project/leela/tahmures/Characters/tahmures/workflow/tools/validate_submission.py\", line 14, in <module>\n    from PIL import Image, ImageChops, ImageFilter\nModuleNotFoundError: No module named 'PIL'",
+      "outcome": "FAILED: the book .venv has no Pillow (ModuleNotFoundError: No module named 'PIL'). Reported to Codex as a tooling contract discrepancy; no environment or checker change was made."
+    },
+    {
+      "command": "rtk proxy /usr/bin/python3 Characters/tahmures/workflow/tools/validate_submission.py --candidate Characters/tahmures/versions/layout01-v3 --baseline Characters/tahmures/versions/layout01-v2",
+      "role": "executed run \u2014 system interpreter with Pillow 10.2.0 and numpy 1.26.4",
+      "exit_code": 0,
+      "stdout": "{\n  \"gate\": \"structural_only\",\n  \"artistic_approval\": false,\n  \"pass\": true,\n  \"checks\": [\n    {\n      \"check\": \"source_binding\",\n      \"pass\": true,\n      \"evidence\": \"3eedfaa5a41965c45a137a74a9137c6e59304a0604f877a81c98870c64dba2e5\"\n    },\n    {\n      \"check\": \"source_reference_path\",\n      \"pass\": true,\n      \"evidence\": \"Characters/tahmures/versions/layout01-v2/source/approved_master.png\"\n    },\n    {\n      \"check\": \"canvas\",\n      \"pass\": true,\n      \"evidence\": [\n        1086,\n        1448\n      ]\n    },\n    {\n      \"check\": \"mouth_anchor\",\n      \"pass\": true,\n      \"evidence\": {\n        \"x\": 540,\n        \"y\": 241\n      }\n    },\n    {\n      \"check\": \"architecture\",\n      \"pass\": true,\n      \"evidence\": \"B_LOCAL_LOWER_FACE_PATCH\"\n    },\n    {\n      \"check\": \"unapproved_candidate\",\n      \"pass\": true,\n      \"evidence\": {\n        \"status\": \"CANDIDATE\",\n        \"human_approved\": false\n      }\n    },\n    {\n      \"check\": \"ids_unique_and_complete\",\n      \"pass\": true,\n      \"evidence\": [\n        \"head_base\",\n        \"hair_back\",\n        \"diadem_gold\",\n        \"ear_left\",\n        \"ear_right\",\n        \"eye_left\",\n        \"eye_right\",\n        \"eyebrow_left\",\n        \"eyebrow_right\",\n        \"nose\",\n        \"beard\",\n        \"moustache\",\n        \"lower_face_neutral\",\n        \"lower_face_open_test\"\n      ]\n    },\n    {\n      \"check\": \"parents_resolve_without_cycles\",\n      \"pass\": true,\n      \"evidence\": []\n    },\n    {\n      \"check\": \"head_base:rgba_canvas\",\n      \"pass\": true,\n      \"evidence\": {\n        \"mode\": \"RGBA\",\n        \"size\": [\n          1086,\n          1448\n        ]\n      }\n    },\n    {\n      \"check\": \"head_base:mask_canvas\",\n      \"pass\": true,\n      \"evidence\": {\n        \"mode\": \"L\",\n        \"size\": [\n          1086,\n          1448\n        ]\n      }\n    },\n    {\n      \"check\": \"head_base:mask_exact_alpha\",\n      \"pass\": true,\n      \"evidence\": \"mask_path is exported-alpha mask; selection/provenance masks are separate\"\n    },\n    {\n      \"check\": \"head_base:bbox\",\n      \"pass\": true,\n      \"evidence\": {\n        \"actual\": [\n          431,\n          90,\n          647,\n          375\n        ],\n        \"declared\": [\n          431,\n          90,\n          647,\n          375\n        ]\n      }\n    },\n    {\n      \"check\": \"head_base:pivot\",\n      \"pass\": true,\n      \"evidence\": {\n        \"x\": 540,\n        \"y\": 315\n      }\n    },\n    {\n      \"check\": \"head_base:file_hashes\",\n      \"pass\": true,\n      \"evidence\": \"/home/mehdi/Project/leela/tahmures/Characters/tahmures/versions/layout01-v3/head/head_base.png\"\n    },\n    {\n      \"check\": \"head_base:not_preview_underlay\",\n      \"pass\": true,\n      \"evidence\": \"head/head_base.png\"\n    },\n    {\n      \"check\": \"head_base:provenance_canvas\",\n      \"pass\": true,\n      \"evidence\": \"both ownership masks use original canvas\"\n    },\n    {\n      \"check\": \"head_base:provenance_partition\",\n      \"pass\": true,\n      \"evidence\": \"binary masks disjoint within this sprite and cover every visible pixel\"\n    },\n    {\n      \"check\": \"head_base:source_pixel_claim\",\n      \"pass\": true,\n      \"evidence\": \"claimed source pixels have exact source RGB; extraction may only reduce alpha\"\n    },\n    {\n      \"check\": \"head_base:reconstruction_description\",\n      \"pass\": true,\n      \"evidence\": \"Feature underdraw: solid interiors (alpha>=252) of the eye/eyebrow/nose footprints (5922 px) inpainted by Laplacian diffusion from the surrounding master skin so the features can be moved in a later phase; soft feature edges keep master RGB. Skin/neck silhouette follows the master inside the immutable head domain (repairs the v2 rectangular cheek cuts and neck gaps).\"\n    },\n    {\n      \"check\": \"hair_back:rgba_canvas\",\n      \"pass\": true,\n      \"evidence\": {\n        \"mode\": \"RGBA\",\n        \"size\": [\n          1086,\n          1448\n        ]\n      }\n    },\n    {\n      \"check\": \"hair_back:mask_canvas\",\n      \"pass\": true,\n      \"evidence\": {\n        \"mode\": \"L\",\n        \"size\": [\n          1086,\n          1448\n        ]\n      }\n    },\n    {\n      \"check\": \"hair_back:mask_exact_alpha\",\n      \"pass\": true,\n      \"evidence\": \"mask_path is exported-alpha mask; selection/provenance masks are separate\"\n    },\n    {\n      \"check\": \"hair_back:bbox\",\n      \"pass\": true,\n      \"evidence\": {\n        \"actual\": [\n          389,\n          15,\n          687,\n          375\n        ],\n        \"declared\": [\n          389,\n          15,\n          687,\n          375\n        ]\n      }\n    },\n    {\n      \"check\": \"hair_back:pivot\",\n      \"pass\": true,\n      \"evidence\": {\n        \"x\": 540,\n        \"y\": 265\n      }\n    },\n    {\n      \"check\": \"hair_back:file_hashes\",\n      \"pass\": true,\n      \"evidence\": \"/home/mehdi/Project/leela/tahmures/Characters/tahmures/versions/layout01-v3/head/hair_back.png\"\n    },\n    {\n      \"check\": \"hair_back:not_preview_underlay\",\n      \"pass\": true,\n      \"evidence\": \"head/hair_back.png\"\n    },\n    {\n      \"check\": \"hair_back:provenance_canvas\",\n      \"pass\": true,\n      \"evidence\": \"both ownership masks use original canvas\"\n    },\n    {\n      \"check\": \"hair_back:provenance_partition\",\n      \"pass\": true,\n      \"evidence\": \"binary masks disjoint within this sprite and cover every visible pixel\"\n    },\n    {\n      \"check\": \"hair_back:source_pixel_claim\",\n      \"pass\": true,\n      \"evidence\": \"claimed source pixels have exact source RGB; extraction may only reduce alpha\"\n    },\n    {\n      \"check\": \"hair_back:reconstruction_description\",\n      \"pass\": true,\n      \"evidence\": \"\"\n    },\n    {\n      \"check\": \"diadem_gold:rgba_canvas\",\n      \"pass\": true,\n      \"evidence\": {\n        \"mode\": \"RGBA\",\n        \"size\": [\n          1086,\n          1448\n        ]\n      }\n    },\n    {\n      \"check\": \"diadem_gold:mask_canvas\",\n      \"pass\": true,\n      \"evidence\": {\n        \"mode\": \"L\",\n        \"size\": [\n          1086,\n          1448\n        ]\n      }\n    },\n    {\n      \"check\": \"diadem_gold:mask_exact_alpha\",\n      \"pass\": true,\n      \"evidence\": \"mask_path is exported-alpha mask; selection/provenance masks are separate\"\n    },\n    {\n      \"check\": \"diadem_gold:bbox\",\n      \"pass\": true,\n      \"evidence\": {\n        \"actual\": [\n          432,\n          41,\n          647,\n          123\n        ],\n        \"declared\": [\n          432,\n          41,\n          647,\n          123\n        ]\n      }\n    },\n    {\n      \"check\": \"diadem_gold:pivot\",\n      \"pass\": true,\n      \"evidence\": {\n        \"x\": 530,\n        \"y\": 80\n      }\n    },\n    {\n      \"check\": \"diadem_gold:file_hashes\",\n      \"pass\": true,\n      \"evidence\": \"/home/mehdi/Project/leela/tahmures/Characters/tahmures/versions/layout01-v3/head/diadem_gold.png\"\n    },\n    {\n      \"check\": \"diadem_gold:not_preview_underlay\",\n      \"pass\": true,\n      \"evidence\": \"head/diadem_gold.png\"\n    },\n    {\n      \"check\": \"diadem_gold:provenance_canvas\",\n      \"pass\": true,\n      \"evidence\": \"both ownership masks use original canvas\"\n    },\n    {\n      \"check\": \"diadem_gold:provenance_partition\",\n      \"pass\": true,\n      \"evidence\": \"binary masks disjoint within this sprite and cover every visible pixel\"\n    },\n    {\n      \"check\": \"diadem_gold:source_pixel_claim\",\n      \"pass\": true,\n      \"evidence\": \"claimed source pixels have exact source RGB; extraction may only reduce alpha\"\n    },\n    {\n      \"check\": \"diadem_gold:reconstruction_description\",\n      \"pass\": true,\n      \"evidence\": \"\"\n    },\n    {\n      \"check\": \"ear_left:rgba_canvas\",\n      \"pass\": true,\n      \"evidence\": {\n        \"mode\": \"RGBA\",\n        \"size\": [\n          1086,\n          1448\n        ]\n      }\n    },\n    {\n      \"check\": \"ear_left:mask_canvas\",\n      \"pass\": true,\n      \"evidence\": {\n        \"mode\": \"L\",\n        \"size\": [\n          1086,\n          1448\n        ]\n      }\n    },\n    {\n      \"check\": \"ear_left:mask_exact_alpha\",\n      \"pass\": true,\n      \"evidence\": \"mask_path is exported-alpha mask; selection/provenance masks are separate\"\n    },\n    {\n      \"check\": \"ear_left:bbox\",\n      \"pass\": true,\n      \"evidence\": {\n        \"actual\": [\n          617,\n          165,\n          647,\n          220\n        ],\n        \"declared\": [\n          617,\n          165,\n          647,\n          220\n        ]\n      }\n    },\n    {\n      \"check\": \"ear_left:pivot\",\n      \"pass\": true,\n      \"evidence\": {\n        \"x\": 632,\n        \"y\": 188\n      }\n    },\n    {\n      \"check\": \"ear_left:file_hashes\",\n      \"pass\": true,\n      \"evidence\": \"/home/mehdi/Project/leela/tahmures/Characters/tahmures/versions/layout01-v3/face/ear_left.png\"\n    },\n    {\n      \"check\": \"ear_left:not_preview_underlay\",\n      \"pass\": true,\n      \"evidence\": \"face/ear_left.png\"\n    },\n    {\n      \"check\": \"ear_left:provenance_canvas\",\n      \"pass\": true,\n      \"evidence\": \"both ownership masks use original canvas\"\n    },\n    {\n      \"check\": \"ear_left:provenance_partition\",\n      \"pass\": true,\n      \"evidence\": \"binary masks disjoint within this sprite and cover every visible pixel\"\n    },\n    {\n      \"check\": \"ear_left:source_pixel_claim\",\n      \"pass\": true,\n      \"evidence\": \"claimed source pixels have exact source RGB; extraction may only reduce alpha\"\n    },\n    {\n      \"check\": \"ear_left:reconstruction_description\",\n      \"pass\": true,\n      \"evidence\": \"\"\n    },\n    {\n      \"check\": \"ear_right:rgba_canvas\",\n      \"pass\": true,\n      \"evidence\": {\n        \"mode\": \"RGBA\",\n        \"size\": [\n          1086,\n          1448\n        ]\n      }\n    },\n    {\n      \"check\": \"ear_right:mask_canvas\",\n      \"pass\": true,\n      \"evidence\": {\n        \"mode\": \"L\",\n        \"size\": [\n          1086,\n          1448\n        ]\n      }\n    },\n    {\n      \"check\": \"ear_right:mask_exact_alpha\",\n      \"pass\": true,\n      \"evidence\": \"mask_path is exported-alpha mask; selection/provenance masks are separate\"\n    },\n    {\n      \"check\": \"ear_right:bbox\",\n      \"pass\": true,\n      \"evidence\": {\n        \"actual\": [\n          431,\n          165,\n          464,\n          223\n        ],\n        \"declared\": [\n          431,\n          165,\n          464,\n          223\n        ]\n      }\n    },\n    {\n      \"check\": \"ear_right:pivot\",\n      \"pass\": true,\n      \"evidence\": {\n        \"x\": 450,\n        \"y\": 188\n      }\n    },\n    {\n      \"check\": \"ear_right:file_hashes\",\n      \"pass\": true,\n      \"evidence\": \"/home/mehdi/Project/leela/tahmures/Characters/tahmures/versions/layout01-v3/face/ear_right.png\"\n    },\n    {\n      \"check\": \"ear_right:not_preview_underlay\",\n      \"pass\": true,\n      \"evidence\": \"face/ear_right.png\"\n    },\n    {\n      \"check\": \"ear_right:provenance_canvas\",\n      \"pass\": true,\n      \"evidence\": \"both ownership masks use original canvas\"\n    },\n    {\n      \"check\": \"ear_right:provenance_partition\",\n      \"pass\": true,\n      \"evidence\": \"binary masks disjoint within this sprite and cover every visible pixel\"\n    },\n    {\n      \"check\": \"ear_right:source_pixel_claim\",\n      \"pass\": true,\n      \"evidence\": \"claimed source pixels have exact source RGB; extraction may only reduce alpha\"\n    },\n    {\n      \"check\": \"ear_right:reconstruction_description\",\n      \"pass\": true,\n      \"evidence\": \"\"\n    },\n    {\n      \"check\": \"eye_left:rgba_canvas\",\n      \"pass\": true,\n      \"evidence\": {\n        \"mode\": \"RGBA\",\n        \"size\": [\n          1086,\n          1448\n        ]\n      }\n    },\n    {\n      \"check\": \"eye_left:mask_canvas\",\n      \"pass\": true,\n      \"evidence\": {\n        \"mode\": \"L\",\n        \"size\": [\n          1086,\n          1448\n        ]\n      }\n    },\n    {\n      \"check\": \"eye_left:mask_exact_alpha\",\n      \"pass\": true,\n      \"evidence\": \"mask_path is exported-alpha mask; selection/provenance masks are separate\"\n    },\n    {\n      \"check\": \"eye_left:bbox\",\n      \"pass\": true,\n      \"evidence\": {\n        \"actual\": [\n          554,\n          135,\n          605,\n          187\n        ],\n        \"declared\": [\n          554,\n          135,\n          605,\n          187\n        ]\n      }\n    },\n    {\n      \"check\": \"eye_left:pivot\",\n      \"pass\": true,\n      \"evidence\": {\n        \"x\": 579,\n        \"y\": 160\n      }\n    },\n    {\n      \"check\": \"eye_left:file_hashes\",\n      \"pass\": true,\n      \"evidence\": \"/home/mehdi/Project/leela/tahmures/Characters/tahmures/versions/layout01-v3/face/eye_left.png\"\n    },\n    {\n      \"check\": \"eye_left:not_preview_underlay\",\n      \"pass\": true,\n      \"evidence\": \"face/eye_left.png\"\n    },\n    {\n      \"check\": \"eye_left:provenance_canvas\",\n      \"pass\": true,\n      \"evidence\": \"both ownership masks use original canvas\"\n    },\n    {\n      \"check\": \"eye_left:provenance_partition\",\n      \"pass\": true,\n      \"evidence\": \"binary masks disjoint within this sprite and cover every visible pixel\"\n    },\n    {\n      \"check\": \"eye_left:source_pixel_claim\",\n      \"pass\": true,\n      \"evidence\": \"claimed source pixels have exact source RGB; extraction may only reduce alpha\"\n    },\n    {\n      \"check\": \"eye_left:reconstruction_description\",\n      \"pass\": true,\n      \"evidence\": \"\"\n    },\n    {\n      \"check\": \"eye_right:rgba_canvas\",\n      \"pass\": true,\n      \"evidence\": {\n        \"mode\": \"RGBA\",\n        \"size\": [\n          1086,\n          1448\n        ]\n      }\n    },\n    {\n      \"check\": \"eye_right:mask_canvas\",\n      \"pass\": true,\n      \"evidence\": {\n        \"mode\": \"L\",\n        \"size\": [\n          1086,\n          1448\n        ]\n      }\n    },\n    {\n      \"check\": \"eye_right:mask_exact_alpha\",\n      \"pass\": true,\n      \"evidence\": \"mask_path is exported-alpha mask; selection/provenance masks are separate\"\n    },\n    {\n      \"check\": \"eye_right:bbox\",\n      \"pass\": true,\n      \"evidence\": {\n        \"actual\": [\n          479,\n          135,\n          531,\n          187\n        ],\n        \"declared\": [\n          479,\n          135,\n          531,\n          187\n        ]\n      }\n    },\n    {\n      \"check\": \"eye_right:pivot\",\n      \"pass\": true,\n      \"evidence\": {\n        \"x\": 505,\n        \"y\": 160\n      }\n    },\n    {\n      \"check\": \"eye_right:file_hashes\",\n      \"pass\": true,\n      \"evidence\": \"/home/mehdi/Project/leela/tahmures/Characters/tahmures/versions/layout01-v3/face/eye_right.png\"\n    },\n    {\n      \"check\": \"eye_right:not_preview_underlay\",\n      \"pass\": true,\n      \"evidence\": \"face/eye_right.png\"\n    },\n    {\n      \"check\": \"eye_right:provenance_canvas\",\n      \"pass\": true,\n      \"evidence\": \"both ownership masks use original canvas\"\n    },\n    {\n      \"check\": \"eye_right:provenance_partition\",\n      \"pass\": true,\n      \"evidence\": \"binary masks disjoint within this sprite and cover every visible pixel\"\n    },\n    {\n      \"check\": \"eye_right:source_pixel_claim\",\n      \"pass\": true,\n      \"evidence\": \"claimed source pixels have exact source RGB; extraction may only reduce alpha\"\n    },\n    {\n      \"check\": \"eye_right:reconstruction_description\",\n      \"pass\": true,\n      \"evidence\": \"\"\n    },\n    {\n      \"check\": \"eyebrow_left:rgba_canvas\",\n      \"pass\": true,\n      \"evidence\": {\n        \"mode\": \"RGBA\",\n        \"size\": [\n          1086,\n          1448\n        ]\n      }\n    },\n    {\n      \"check\": \"eyebrow_left:mask_canvas\",\n      \"pass\": true,\n      \"evidence\": {\n        \"mode\": \"L\",\n        \"size\": [\n          1086,\n          1448\n        ]\n      }\n    },\n    {\n      \"check\": \"eyebrow_left:mask_exact_alpha\",\n      \"pass\": true,\n      \"evidence\": \"mask_path is exported-alpha mask; selection/provenance masks are separate\"\n    },\n    {\n      \"check\": \"eyebrow_left:bbox\",\n      \"pass\": true,\n      \"evidence\": {\n        \"actual\": [\n          556,\n          110,\n          609,\n          134\n        ],\n        \"declared\": [\n          556,\n          110,\n          609,\n          134\n        ]\n      }\n    },\n    {\n      \"check\": \"eyebrow_left:pivot\",\n      \"pass\": true,\n      \"evidence\": {\n        \"x\": 579,\n        \"y\": 116\n      }\n    },\n    {\n      \"check\": \"eyebrow_left:file_hashes\",\n      \"pass\": true,\n      \"evidence\": \"/home/mehdi/Project/leela/tahmures/Characters/tahmures/versions/layout01-v3/face/eyebrow_left.png\"\n    },\n    {\n      \"check\": \"eyebrow_left:not_preview_underlay\",\n      \"pass\": true,\n      \"evidence\": \"face/eyebrow_left.png\"\n    },\n    {\n      \"check\": \"eyebrow_left:provenance_canvas\",\n      \"pass\": true,\n      \"evidence\": \"both ownership masks use original canvas\"\n    },\n    {\n      \"check\": \"eyebrow_left:provenance_partition\",\n      \"pass\": true,\n      \"evidence\": \"binary masks disjoint within this sprite and cover every visible pixel\"\n    },\n    {\n      \"check\": \"eyebrow_left:source_pixel_claim\",\n      \"pass\": true,\n      \"evidence\": \"claimed source pixels have exact source RGB; extraction may only reduce alpha\"\n    },\n    {\n      \"check\": \"eyebrow_left:reconstruction_description\",\n      \"pass\": true,\n      \"evidence\": \"\"\n    },\n    {\n      \"check\": \"eyebrow_right:rgba_canvas\",\n      \"pass\": true,\n      \"evidence\": {\n        \"mode\": \"RGBA\",\n        \"size\": [\n          1086,\n          1448\n        ]\n      }\n    },\n    {\n      \"check\": \"eyebrow_right:mask_canvas\",\n      \"pass\": true,\n      \"evidence\": {\n        \"mode\": \"L\",\n        \"size\": [\n          1086,\n          1448\n        ]\n      }\n    },\n    {\n      \"check\": \"eyebrow_right:mask_exact_alpha\",\n      \"pass\": true,\n      \"evidence\": \"mask_path is exported-alpha mask; selection/provenance masks are separate\"\n    },\n    {\n      \"check\": \"eyebrow_right:bbox\",\n      \"pass\": true,\n      \"evidence\": {\n        \"actual\": [\n          476,\n          110,\n          532,\n          131\n        ],\n        \"declared\": [\n          476,\n          110,\n          532,\n          131\n        ]\n      }\n    },\n    {\n      \"check\": \"eyebrow_right:pivot\",\n      \"pass\": true,\n      \"evidence\": {\n        \"x\": 501,\n        \"y\": 116\n      }\n    },\n    {\n      \"check\": \"eyebrow_right:file_hashes\",\n      \"pass\": true,\n      \"evidence\": \"/home/mehdi/Project/leela/tahmures/Characters/tahmures/versions/layout01-v3/face/eyebrow_right.png\"\n    },\n    {\n      \"check\": \"eyebrow_right:not_preview_underlay\",\n      \"pass\": true,\n      \"evidence\": \"face/eyebrow_right.png\"\n    },\n    {\n      \"check\": \"eyebrow_right:provenance_canvas\",\n      \"pass\": true,\n      \"evidence\": \"both ownership masks use original canvas\"\n    },\n    {\n      \"check\": \"eyebrow_right:provenance_partition\",\n      \"pass\": true,\n      \"evidence\": \"binary masks disjoint within this sprite and cover every visible pixel\"\n    },\n    {\n      \"check\": \"eyebrow_right:source_pixel_claim\",\n      \"pass\": true,\n      \"evidence\": \"claimed source pixels have exact source RGB; extraction may only reduce alpha\"\n    },\n    {\n      \"check\": \"eyebrow_right:reconstruction_description\",\n      \"pass\": true,\n      \"evidence\": \"\"\n    },\n    {\n      \"check\": \"nose:rgba_canvas\",\n      \"pass\": true,\n      \"evidence\": {\n        \"mode\": \"RGBA\",\n        \"size\": [\n          1086,\n          1448\n        ]\n      }\n    },\n    {\n      \"check\": \"nose:mask_canvas\",\n      \"pass\": true,\n      \"evidence\": {\n        \"mode\": \"L\",\n        \"size\": [\n          1086,\n          1448\n        ]\n      }\n    },\n    {\n      \"check\": \"nose:mask_exact_alpha\",\n      \"pass\": true,\n      \"evidence\": \"mask_path is exported-alpha mask; selection/provenance masks are separate\"\n    },\n    {\n      \"check\": \"nose:bbox\",\n      \"pass\": true,\n      \"evidence\": {\n        \"actual\": [\n          534,\n          136,\n          566,\n          221\n        ],\n        \"declared\": [\n          534,\n          136,\n          566,\n          221\n        ]\n      }\n    },\n    {\n      \"check\": \"nose:pivot\",\n      \"pass\": true,\n      \"evidence\": {\n        \"x\": 548,\n        \"y\": 186\n      }\n    },\n    {\n      \"check\": \"nose:file_hashes\",\n      \"pass\": true,\n      \"evidence\": \"/home/mehdi/Project/leela/tahmures/Characters/tahmures/versions/layout01-v3/face/nose.png\"\n    },\n    {\n      \"check\": \"nose:not_preview_underlay\",\n      \"pass\": true,\n      \"evidence\": \"face/nose.png\"\n    },\n    {\n      \"check\": \"nose:provenance_canvas\",\n      \"pass\": true,\n      \"evidence\": \"both ownership masks use original canvas\"\n    },\n    {\n      \"check\": \"nose:provenance_partition\",\n      \"pass\": true,\n      \"evidence\": \"binary masks disjoint within this sprite and cover every visible pixel\"\n    },\n    {\n      \"check\": \"nose:source_pixel_claim\",\n      \"pass\": true,\n      \"evidence\": \"claimed source pixels have exact source RGB; extraction may only reduce alpha\"\n    },\n    {\n      \"check\": \"nose:reconstruction_description\",\n      \"pass\": true,\n      \"evidence\": \"\"\n    },\n    {\n      \"check\": \"beard:rgba_canvas\",\n      \"pass\": true,\n      \"evidence\": {\n        \"mode\": \"RGBA\",\n        \"size\": [\n          1086,\n          1448\n        ]\n      }\n    },\n    {\n      \"check\": \"beard:mask_canvas\",\n      \"pass\": true,\n      \"evidence\": {\n        \"mode\": \"L\",\n        \"size\": [\n          1086,\n          1448\n        ]\n      }\n    },\n    {\n      \"check\": \"beard:mask_exact_alpha\",\n      \"pass\": true,\n      \"evidence\": \"mask_path is exported-alpha mask; selection/provenance masks are separate\"\n    },\n    {\n      \"check\": \"beard:bbox\",\n      \"pass\": true,\n      \"evidence\": {\n        \"actual\": [\n          464,\n          218,\n          609,\n          326\n        ],\n        \"declared\": [\n          464,\n          218,\n          609,\n          326\n        ]\n      }\n    },\n    {\n      \"check\": \"beard:pivot\",\n      \"pass\": true,\n      \"evidence\": {\n        \"x\": 538,\n        \"y\": 240\n      }\n    },\n    {\n      \"check\": \"beard:file_hashes\",\n      \"pass\": true,\n      \"evidence\": \"/home/mehdi/Project/leela/tahmures/Characters/tahmures/versions/layout01-v3/face/beard.png\"\n    },\n    {\n      \"check\": \"beard:not_preview_underlay\",\n      \"pass\": true,\n      \"evidence\": \"face/beard.png\"\n    },\n    {\n      \"check\": \"beard:provenance_canvas\",\n      \"pass\": true,\n      \"evidence\": \"both ownership masks use original canvas\"\n    },\n    {\n      \"check\": \"beard:provenance_partition\",\n      \"pass\": true,\n      \"evidence\": \"binary masks disjoint within this sprite and cover every visible pixel\"\n    },\n    {\n      \"check\": \"beard:source_pixel_claim\",\n      \"pass\": true,\n      \"evidence\": \"claimed source pixels have exact source RGB; extraction may only reduce alpha\"\n    },\n    {\n      \"check\": \"beard:reconstruction_description\",\n      \"pass\": true,\n      \"evidence\": \"Mouthless receiver: the mouth-content region M (2616 px, bbox x500-580 y228-269) is filled with beard texture tiled from the verified all-dark master block y270-293 x494-604; all other beard pixels are master pixels retained from v2 plus 304 recovered previously-uncovered pixels.\"\n    },\n    {\n      \"check\": \"moustache:rgba_canvas\",\n      \"pass\": true,\n      \"evidence\": {\n        \"mode\": \"RGBA\",\n        \"size\": [\n          1086,\n          1448\n        ]\n      }\n    },\n    {\n      \"check\": \"moustache:mask_canvas\",\n      \"pass\": true,\n      \"evidence\": {\n        \"mode\": \"L\",\n        \"size\": [\n          1086,\n          1448\n        ]\n      }\n    },\n    {\n      \"check\": \"moustache:mask_exact_alpha\",\n      \"pass\": true,\n      \"evidence\": \"mask_path is exported-alpha mask; selection/provenance masks are separate\"\n    },\n    {\n      \"check\": \"moustache:bbox\",\n      \"pass\": true,\n      \"evidence\": {\n        \"actual\": [\n          485,\n          209,\n          597,\n          239\n        ],\n        \"declared\": [\n          485,\n          209,\n          597,\n          239\n        ]\n      }\n    },\n    {\n      \"check\": \"moustache:pivot\",\n      \"pass\": true,\n      \"evidence\": {\n        \"x\": 540,\n        \"y\": 217\n      }\n    },\n    {\n      \"check\": \"moustache:file_hashes\",\n      \"pass\": true,\n      \"evidence\": \"/home/mehdi/Project/leela/tahmures/Characters/tahmures/versions/layout01-v3/face/moustache.png\"\n    },\n    {\n      \"check\": \"moustache:not_preview_underlay\",\n      \"pass\": true,\n      \"evidence\": \"face/moustache.png\"\n    },\n    {\n      \"check\": \"moustache:provenance_canvas\",\n      \"pass\": true,\n      \"evidence\": \"both ownership masks use original canvas\"\n    },\n    {\n      \"check\": \"moustache:provenance_partition\",\n      \"pass\": true,\n      \"evidence\": \"binary masks disjoint within this sprite and cover every visible pixel\"\n    },\n    {\n      \"check\": \"moustache:source_pixel_claim\",\n      \"pass\": true,\n      \"evidence\": \"claimed source pixels have exact source RGB; extraction may only reduce alpha\"\n    },\n    {\n      \"check\": \"moustache:reconstruction_description\",\n      \"pass\": true,\n      \"evidence\": \"\"\n    },\n    {\n      \"check\": \"lower_face_neutral:rgba_canvas\",\n      \"pass\": true,\n      \"evidence\": {\n        \"mode\": \"RGBA\",\n        \"size\": [\n          1086,\n          1448\n        ]\n      }\n    },\n    {\n      \"check\": \"lower_face_neutral:mask_canvas\",\n      \"pass\": true,\n      \"evidence\": {\n        \"mode\": \"L\",\n        \"size\": [\n          1086,\n          1448\n        ]\n      }\n    },\n    {\n      \"check\": \"lower_face_neutral:mask_exact_alpha\",\n      \"pass\": true,\n      \"evidence\": \"mask_path is exported-alpha mask; selection/provenance masks are separate\"\n    },\n    {\n      \"check\": \"lower_face_neutral:bbox\",\n      \"pass\": true,\n      \"evidence\": {\n        \"actual\": [\n          497,\n          226,\n          584,\n          273\n        ],\n        \"declared\": [\n          497,\n          226,\n          584,\n          273\n        ]\n      }\n    },\n    {\n      \"check\": \"lower_face_neutral:pivot\",\n      \"pass\": true,\n      \"evidence\": {\n        \"x\": 540,\n        \"y\": 241\n      }\n    },\n    {\n      \"check\": \"lower_face_neutral:file_hashes\",\n      \"pass\": true,\n      \"evidence\": \"/home/mehdi/Project/leela/tahmures/Characters/tahmures/versions/layout01-v3/mouths/lower_face_neutral.png\"\n    },\n    {\n      \"check\": \"lower_face_neutral:not_preview_underlay\",\n      \"pass\": true,\n      \"evidence\": \"mouths/lower_face_neutral.png\"\n    },\n    {\n      \"check\": \"lower_face_neutral:provenance_canvas\",\n      \"pass\": true,\n      \"evidence\": \"both ownership masks use original canvas\"\n    },\n    {\n      \"check\": \"lower_face_neutral:provenance_partition\",\n      \"pass\": true,\n      \"evidence\": \"binary masks disjoint within this sprite and cover every visible pixel\"\n    },\n    {\n      \"check\": \"lower_face_neutral:source_pixel_claim\",\n      \"pass\": true,\n      \"evidence\": \"claimed source pixels have exact source RGB; extraction may only reduce alpha\"\n    },\n    {\n      \"check\": \"lower_face_neutral:reconstruction_description\",\n      \"pass\": true,\n      \"evidence\": \"\"\n    },\n    {\n      \"check\": \"lower_face_open_test:rgba_canvas\",\n      \"pass\": true,\n      \"evidence\": {\n        \"mode\": \"RGBA\",\n        \"size\": [\n          1086,\n          1448\n        ]\n      }\n    },\n    {\n      \"check\": \"lower_face_open_test:mask_canvas\",\n      \"pass\": true,\n      \"evidence\": {\n        \"mode\": \"L\",\n        \"size\": [\n          1086,\n          1448\n        ]\n      }\n    },\n    {\n      \"check\": \"lower_face_open_test:mask_exact_alpha\",\n      \"pass\": true,\n      \"evidence\": \"mask_path is exported-alpha mask; selection/provenance masks are separate\"\n    },\n    {\n      \"check\": \"lower_face_open_test:bbox\",\n      \"pass\": true,\n      \"evidence\": {\n        \"actual\": [\n          497,\n          226,\n          584,\n          273\n        ],\n        \"declared\": [\n          497,\n          226,\n          584,\n          273\n        ]\n      }\n    },\n    {\n      \"check\": \"lower_face_open_test:pivot\",\n      \"pass\": true,\n      \"evidence\": {\n        \"x\": 540,\n        \"y\": 241\n      }\n    },\n    {\n      \"check\": \"lower_face_open_test:file_hashes\",\n      \"pass\": true,\n      \"evidence\": \"/home/mehdi/Project/leela/tahmures/Characters/tahmures/versions/layout01-v3/mouths/lower_face_open_test.png\"\n    },\n    {\n      \"check\": \"lower_face_open_test:not_preview_underlay\",\n      \"pass\": true,\n      \"evidence\": \"mouths/lower_face_open_test.png\"\n    },\n    {\n      \"check\": \"lower_face_open_test:provenance_canvas\",\n      \"pass\": true,\n      \"evidence\": \"both ownership masks use original canvas\"\n    },\n    {\n      \"check\": \"lower_face_open_test:provenance_partition\",\n      \"pass\": true,\n      \"evidence\": \"binary masks disjoint within this sprite and cover every visible pixel\"\n    },\n    {\n      \"check\": \"lower_face_open_test:source_pixel_claim\",\n      \"pass\": true,\n      \"evidence\": \"claimed source pixels have exact source RGB; extraction may only reduce alpha\"\n    },\n    {\n      \"check\": \"lower_face_open_test:reconstruction_description\",\n      \"pass\": true,\n      \"evidence\": \"Small opening (80 px, x531-553 y253-258) synthesized from the master palette: interior rows are 45% master mouth-line colour + 55% master mouth-interior sample; the bottom edge row is 75% line + 25% below-line sample.\"\n    },\n    {\n      \"check\": \"groups_present\",\n      \"pass\": true,\n      \"evidence\": [\n        \"puppet_core\",\n        \"puppet_core_neutral\",\n        \"puppet_core_open_test\"\n      ]\n    },\n    {\n      \"check\": \"domain_not_shrunk\",\n      \"pass\": true,\n      \"evidence\": \"immutable v2 visible_head_domain must be copied verbatim\"\n    },\n    {\n      \"check\": \"puppet_core:resolves\",\n      \"pass\": true,\n      \"evidence\": [\n        \"hair_back\",\n        \"head_base\",\n        \"ear_right\",\n        \"ear_left\",\n        \"beard\",\n        \"nose\",\n        \"eye_right\",\n        \"eye_left\",\n        \"eyebrow_right\",\n        \"eyebrow_left\",\n        \"moustache\",\n        \"diadem_gold\"\n      ]\n    },\n    {\n      \"check\": \"puppet_core:single_patch\",\n      \"pass\": true,\n      \"evidence\": []\n    },\n    {\n      \"check\": \"puppet_core:moustache_foreground\",\n      \"pass\": true,\n      \"evidence\": [\n        \"hair_back\",\n        \"head_base\",\n        \"ear_right\",\n        \"ear_left\",\n        \"beard\",\n        \"nose\",\n        \"eye_right\",\n        \"eye_left\",\n        \"eyebrow_right\",\n        \"eyebrow_left\",\n        \"moustache\",\n        \"diadem_gold\"\n      ]\n    },\n    {\n      \"check\": \"puppet_core:interior_coverage\",\n      \"pass\": true,\n      \"evidence\": {\n        \"new_fully_transparent\": 0,\n        \"alpha_below_250_where_source_opaque\": 0\n      }\n    },\n    {\n      \"check\": \"puppet_core:preview_is_actual_assembly\",\n      \"pass\": true,\n      \"evidence\": \"unadorned RGBA full-canvas assembly\"\n    },\n    {\n      \"check\": \"puppet_core_neutral:resolves\",\n      \"pass\": true,\n      \"evidence\": [\n        \"hair_back\",\n        \"head_base\",\n        \"ear_right\",\n        \"ear_left\",\n        \"beard\",\n        \"lower_face_neutral\",\n        \"nose\",\n        \"eye_right\",\n        \"eye_left\",\n        \"eyebrow_right\",\n        \"eyebrow_left\",\n        \"moustache\",\n        \"diadem_gold\"\n      ]\n    },\n    {\n      \"check\": \"puppet_core_neutral:single_patch\",\n      \"pass\": true,\n      \"evidence\": [\n        \"lower_face_neutral\"\n      ]\n    },\n    {\n      \"check\": \"puppet_core_neutral:moustache_foreground\",\n      \"pass\": true,\n      \"evidence\": [\n        \"hair_back\",\n        \"head_base\",\n        \"ear_right\",\n        \"ear_left\",\n        \"beard\",\n        \"lower_face_neutral\",\n        \"nose\",\n        \"eye_right\",\n        \"eye_left\",\n        \"eyebrow_right\",\n        \"eyebrow_left\",\n        \"moustache\",\n        \"diadem_gold\"\n      ]\n    },\n    {\n      \"check\": \"puppet_core_neutral:interior_coverage\",\n      \"pass\": true,\n      \"evidence\": {\n        \"new_fully_transparent\": 0,\n        \"alpha_below_250_where_source_opaque\": 0\n      }\n    },\n    {\n      \"check\": \"puppet_core_neutral:preview_is_actual_assembly\",\n      \"pass\": true,\n      \"evidence\": \"unadorned RGBA full-canvas assembly\"\n    },\n    {\n      \"check\": \"puppet_core_open_test:resolves\",\n      \"pass\": true,\n      \"evidence\": [\n        \"hair_back\",\n        \"head_base\",\n        \"ear_right\",\n        \"ear_left\",\n        \"beard\",\n        \"lower_face_open_test\",\n        \"nose\",\n        \"eye_right\",\n        \"eye_left\",\n        \"eyebrow_right\",\n        \"eyebrow_left\",\n        \"moustache\",\n        \"diadem_gold\"\n      ]\n    },\n    {\n      \"check\": \"puppet_core_open_test:single_patch\",\n      \"pass\": true,\n      \"evidence\": [\n        \"lower_face_open_test\"\n      ]\n    },\n    {\n      \"check\": \"puppet_core_open_test:moustache_foreground\",\n      \"pass\": true,\n      \"evidence\": [\n        \"hair_back\",\n        \"head_base\",\n        \"ear_right\",\n        \"ear_left\",\n        \"beard\",\n        \"lower_face_open_test\",\n        \"nose\",\n        \"eye_right\",\n        \"eye_left\",\n        \"eyebrow_right\",\n        \"eyebrow_left\",\n        \"moustache\",\n        \"diadem_gold\"\n      ]\n    },\n    {\n      \"check\": \"puppet_core_open_test:interior_coverage\",\n      \"pass\": true,\n      \"evidence\": {\n        \"new_fully_transparent\": 0,\n        \"alpha_below_250_where_source_opaque\": 0\n      }\n    },\n    {\n      \"check\": \"puppet_core_open_test:preview_is_actual_assembly\",\n      \"pass\": true,\n      \"evidence\": \"unadorned RGBA full-canvas assembly\"\n    },\n    {\n      \"check\": \"mouth_states_really_differ\",\n      \"pass\": true,\n      \"evidence\": \"not two aliases of one image\"\n    },\n    {\n      \"check\": \"file_index_complete_and_current\",\n      \"pass\": true,\n      \"evidence\": {\n        \"hash_errors\": [],\n        \"unindexed\": [],\n        \"missing\": []\n      }\n    },\n    {\n      \"check\": \"eye_left:alignment_preserved\",\n      \"pass\": true,\n      \"evidence\": {\n        \"x\": 579,\n        \"y\": 160\n      }\n    },\n    {\n      \"check\": \"eye_right:alignment_preserved\",\n      \"pass\": true,\n      \"evidence\": {\n        \"x\": 505,\n        \"y\": 160\n      }\n    },\n    {\n      \"check\": \"eyebrow_left:alignment_preserved\",\n      \"pass\": true,\n      \"evidence\": {\n        \"x\": 579,\n        \"y\": 116\n      }\n    },\n    {\n      \"check\": \"eyebrow_right:alignment_preserved\",\n      \"pass\": true,\n      \"evidence\": {\n        \"x\": 501,\n        \"y\": 116\n      }\n    }\n  ]\n}\n",
+      "parsed": {
+        "gate": "structural_only",
+        "artistic_approval": false,
+        "pass": true,
+        "checks": [
+          {
+            "check": "source_binding",
+            "pass": true,
+            "evidence": "3eedfaa5a41965c45a137a74a9137c6e59304a0604f877a81c98870c64dba2e5"
+          },
+          {
+            "check": "source_reference_path",
+            "pass": true,
+            "evidence": "Characters/tahmures/versions/layout01-v2/source/approved_master.png"
+          },
+          {
+            "check": "canvas",
+            "pass": true,
+            "evidence": [
+              1086,
+              1448
+            ]
+          },
+          {
+            "check": "mouth_anchor",
+            "pass": true,
+            "evidence": {
+              "x": 540,
+              "y": 241
+            }
+          },
+          {
+            "check": "architecture",
+            "pass": true,
+            "evidence": "B_LOCAL_LOWER_FACE_PATCH"
+          },
+          {
+            "check": "unapproved_candidate",
+            "pass": true,
+            "evidence": {
+              "status": "CANDIDATE",
+              "human_approved": false
+            }
+          },
+          {
+            "check": "ids_unique_and_complete",
+            "pass": true,
+            "evidence": [
+              "head_base",
+              "hair_back",
+              "diadem_gold",
+              "ear_left",
+              "ear_right",
+              "eye_left",
+              "eye_right",
+              "eyebrow_left",
+              "eyebrow_right",
+              "nose",
+              "beard",
+              "moustache",
+              "lower_face_neutral",
+              "lower_face_open_test"
+            ]
+          },
+          {
+            "check": "parents_resolve_without_cycles",
+            "pass": true,
+            "evidence": []
+          },
+          {
+            "check": "head_base:rgba_canvas",
+            "pass": true,
+            "evidence": {
+              "mode": "RGBA",
+              "size": [
+                1086,
+                1448
+              ]
+            }
+          },
+          {
+            "check": "head_base:mask_canvas",
+            "pass": true,
+            "evidence": {
+              "mode": "L",
+              "size": [
+                1086,
+                1448
+              ]
+            }
+          },
+          {
+            "check": "head_base:mask_exact_alpha",
+            "pass": true,
+            "evidence": "mask_path is exported-alpha mask; selection/provenance masks are separate"
+          },
+          {
+            "check": "head_base:bbox",
+            "pass": true,
+            "evidence": {
+              "actual": [
+                431,
+                90,
+                647,
+                375
+              ],
+              "declared": [
+                431,
+                90,
+                647,
+                375
+              ]
+            }
+          },
+          {
+            "check": "head_base:pivot",
+            "pass": true,
+            "evidence": {
+              "x": 540,
+              "y": 315
+            }
+          },
+          {
+            "check": "head_base:file_hashes",
+            "pass": true,
+            "evidence": "/home/mehdi/Project/leela/tahmures/Characters/tahmures/versions/layout01-v3/head/head_base.png"
+          },
+          {
+            "check": "head_base:not_preview_underlay",
+            "pass": true,
+            "evidence": "head/head_base.png"
+          },
+          {
+            "check": "head_base:provenance_canvas",
+            "pass": true,
+            "evidence": "both ownership masks use original canvas"
+          },
+          {
+            "check": "head_base:provenance_partition",
+            "pass": true,
+            "evidence": "binary masks disjoint within this sprite and cover every visible pixel"
+          },
+          {
+            "check": "head_base:source_pixel_claim",
+            "pass": true,
+            "evidence": "claimed source pixels have exact source RGB; extraction may only reduce alpha"
+          },
+          {
+            "check": "head_base:reconstruction_description",
+            "pass": true,
+            "evidence": "Feature underdraw: solid interiors (alpha>=252) of the eye/eyebrow/nose footprints (5922 px) inpainted by Laplacian diffusion from the surrounding master skin so the features can be moved in a later phase; soft feature edges keep master RGB. Skin/neck silhouette follows the master inside the immutable head domain (repairs the v2 rectangular cheek cuts and neck gaps)."
+          },
+          {
+            "check": "hair_back:rgba_canvas",
+            "pass": true,
+            "evidence": {
+              "mode": "RGBA",
+              "size": [
+                1086,
+                1448
+              ]
+            }
+          },
+          {
+            "check": "hair_back:mask_canvas",
+            "pass": true,
+            "evidence": {
+              "mode": "L",
+              "size": [
+                1086,
+                1448
+              ]
+            }
+          },
+          {
+            "check": "hair_back:mask_exact_alpha",
+            "pass": true,
+            "evidence": "mask_path is exported-alpha mask; selection/provenance masks are separate"
+          },
+          {
+            "check": "hair_back:bbox",
+            "pass": true,
+            "evidence": {
+              "actual": [
+                389,
+                15,
+                687,
+                375
+              ],
+              "declared": [
+                389,
+                15,
+                687,
+                375
+              ]
+            }
+          },
+          {
+            "check": "hair_back:pivot",
+            "pass": true,
+            "evidence": {
+              "x": 540,
+              "y": 265
+            }
+          },
+          {
+            "check": "hair_back:file_hashes",
+            "pass": true,
+            "evidence": "/home/mehdi/Project/leela/tahmures/Characters/tahmures/versions/layout01-v3/head/hair_back.png"
+          },
+          {
+            "check": "hair_back:not_preview_underlay",
+            "pass": true,
+            "evidence": "head/hair_back.png"
+          },
+          {
+            "check": "hair_back:provenance_canvas",
+            "pass": true,
+            "evidence": "both ownership masks use original canvas"
+          },
+          {
+            "check": "hair_back:provenance_partition",
+            "pass": true,
+            "evidence": "binary masks disjoint within this sprite and cover every visible pixel"
+          },
+          {
+            "check": "hair_back:source_pixel_claim",
+            "pass": true,
+            "evidence": "claimed source pixels have exact source RGB; extraction may only reduce alpha"
+          },
+          {
+            "check": "hair_back:reconstruction_description",
+            "pass": true,
+            "evidence": ""
+          },
+          {
+            "check": "diadem_gold:rgba_canvas",
+            "pass": true,
+            "evidence": {
+              "mode": "RGBA",
+              "size": [
+                1086,
+                1448
+              ]
+            }
+          },
+          {
+            "check": "diadem_gold:mask_canvas",
+            "pass": true,
+            "evidence": {
+              "mode": "L",
+              "size": [
+                1086,
+                1448
+              ]
+            }
+          },
+          {
+            "check": "diadem_gold:mask_exact_alpha",
+            "pass": true,
+            "evidence": "mask_path is exported-alpha mask; selection/provenance masks are separate"
+          },
+          {
+            "check": "diadem_gold:bbox",
+            "pass": true,
+            "evidence": {
+              "actual": [
+                432,
+                41,
+                647,
+                123
+              ],
+              "declared": [
+                432,
+                41,
+                647,
+                123
+              ]
+            }
+          },
+          {
+            "check": "diadem_gold:pivot",
+            "pass": true,
+            "evidence": {
+              "x": 530,
+              "y": 80
+            }
+          },
+          {
+            "check": "diadem_gold:file_hashes",
+            "pass": true,
+            "evidence": "/home/mehdi/Project/leela/tahmures/Characters/tahmures/versions/layout01-v3/head/diadem_gold.png"
+          },
+          {
+            "check": "diadem_gold:not_preview_underlay",
+            "pass": true,
+            "evidence": "head/diadem_gold.png"
+          },
+          {
+            "check": "diadem_gold:provenance_canvas",
+            "pass": true,
+            "evidence": "both ownership masks use original canvas"
+          },
+          {
+            "check": "diadem_gold:provenance_partition",
+            "pass": true,
+            "evidence": "binary masks disjoint within this sprite and cover every visible pixel"
+          },
+          {
+            "check": "diadem_gold:source_pixel_claim",
+            "pass": true,
+            "evidence": "claimed source pixels have exact source RGB; extraction may only reduce alpha"
+          },
+          {
+            "check": "diadem_gold:reconstruction_description",
+            "pass": true,
+            "evidence": ""
+          },
+          {
+            "check": "ear_left:rgba_canvas",
+            "pass": true,
+            "evidence": {
+              "mode": "RGBA",
+              "size": [
+                1086,
+                1448
+              ]
+            }
+          },
+          {
+            "check": "ear_left:mask_canvas",
+            "pass": true,
+            "evidence": {
+              "mode": "L",
+              "size": [
+                1086,
+                1448
+              ]
+            }
+          },
+          {
+            "check": "ear_left:mask_exact_alpha",
+            "pass": true,
+            "evidence": "mask_path is exported-alpha mask; selection/provenance masks are separate"
+          },
+          {
+            "check": "ear_left:bbox",
+            "pass": true,
+            "evidence": {
+              "actual": [
+                617,
+                165,
+                647,
+                220
+              ],
+              "declared": [
+                617,
+                165,
+                647,
+                220
+              ]
+            }
+          },
+          {
+            "check": "ear_left:pivot",
+            "pass": true,
+            "evidence": {
+              "x": 632,
+              "y": 188
+            }
+          },
+          {
+            "check": "ear_left:file_hashes",
+            "pass": true,
+            "evidence": "/home/mehdi/Project/leela/tahmures/Characters/tahmures/versions/layout01-v3/face/ear_left.png"
+          },
+          {
+            "check": "ear_left:not_preview_underlay",
+            "pass": true,
+            "evidence": "face/ear_left.png"
+          },
+          {
+            "check": "ear_left:provenance_canvas",
+            "pass": true,
+            "evidence": "both ownership masks use original canvas"
+          },
+          {
+            "check": "ear_left:provenance_partition",
+            "pass": true,
+            "evidence": "binary masks disjoint within this sprite and cover every visible pixel"
+          },
+          {
+            "check": "ear_left:source_pixel_claim",
+            "pass": true,
+            "evidence": "claimed source pixels have exact source RGB; extraction may only reduce alpha"
+          },
+          {
+            "check": "ear_left:reconstruction_description",
+            "pass": true,
+            "evidence": ""
+          },
+          {
+            "check": "ear_right:rgba_canvas",
+            "pass": true,
+            "evidence": {
+              "mode": "RGBA",
+              "size": [
+                1086,
+                1448
+              ]
+            }
+          },
+          {
+            "check": "ear_right:mask_canvas",
+            "pass": true,
+            "evidence": {
+              "mode": "L",
+              "size": [
+                1086,
+                1448
+              ]
+            }
+          },
+          {
+            "check": "ear_right:mask_exact_alpha",
+            "pass": true,
+            "evidence": "mask_path is exported-alpha mask; selection/provenance masks are separate"
+          },
+          {
+            "check": "ear_right:bbox",
+            "pass": true,
+            "evidence": {
+              "actual": [
+                431,
+                165,
+                464,
+                223
+              ],
+              "declared": [
+                431,
+                165,
+                464,
+                223
+              ]
+            }
+          },
+          {
+            "check": "ear_right:pivot",
+            "pass": true,
+            "evidence": {
+              "x": 450,
+              "y": 188
+            }
+          },
+          {
+            "check": "ear_right:file_hashes",
+            "pass": true,
+            "evidence": "/home/mehdi/Project/leela/tahmures/Characters/tahmures/versions/layout01-v3/face/ear_right.png"
+          },
+          {
+            "check": "ear_right:not_preview_underlay",
+            "pass": true,
+            "evidence": "face/ear_right.png"
+          },
+          {
+            "check": "ear_right:provenance_canvas",
+            "pass": true,
+            "evidence": "both ownership masks use original canvas"
+          },
+          {
+            "check": "ear_right:provenance_partition",
+            "pass": true,
+            "evidence": "binary masks disjoint within this sprite and cover every visible pixel"
+          },
+          {
+            "check": "ear_right:source_pixel_claim",
+            "pass": true,
+            "evidence": "claimed source pixels have exact source RGB; extraction may only reduce alpha"
+          },
+          {
+            "check": "ear_right:reconstruction_description",
+            "pass": true,
+            "evidence": ""
+          },
+          {
+            "check": "eye_left:rgba_canvas",
+            "pass": true,
+            "evidence": {
+              "mode": "RGBA",
+              "size": [
+                1086,
+                1448
+              ]
+            }
+          },
+          {
+            "check": "eye_left:mask_canvas",
+            "pass": true,
+            "evidence": {
+              "mode": "L",
+              "size": [
+                1086,
+                1448
+              ]
+            }
+          },
+          {
+            "check": "eye_left:mask_exact_alpha",
+            "pass": true,
+            "evidence": "mask_path is exported-alpha mask; selection/provenance masks are separate"
+          },
+          {
+            "check": "eye_left:bbox",
+            "pass": true,
+            "evidence": {
+              "actual": [
+                554,
+                135,
+                605,
+                187
+              ],
+              "declared": [
+                554,
+                135,
+                605,
+                187
+              ]
+            }
+          },
+          {
+            "check": "eye_left:pivot",
+            "pass": true,
+            "evidence": {
+              "x": 579,
+              "y": 160
+            }
+          },
+          {
+            "check": "eye_left:file_hashes",
+            "pass": true,
+            "evidence": "/home/mehdi/Project/leela/tahmures/Characters/tahmures/versions/layout01-v3/face/eye_left.png"
+          },
+          {
+            "check": "eye_left:not_preview_underlay",
+            "pass": true,
+            "evidence": "face/eye_left.png"
+          },
+          {
+            "check": "eye_left:provenance_canvas",
+            "pass": true,
+            "evidence": "both ownership masks use original canvas"
+          },
+          {
+            "check": "eye_left:provenance_partition",
+            "pass": true,
+            "evidence": "binary masks disjoint within this sprite and cover every visible pixel"
+          },
+          {
+            "check": "eye_left:source_pixel_claim",
+            "pass": true,
+            "evidence": "claimed source pixels have exact source RGB; extraction may only reduce alpha"
+          },
+          {
+            "check": "eye_left:reconstruction_description",
+            "pass": true,
+            "evidence": ""
+          },
+          {
+            "check": "eye_right:rgba_canvas",
+            "pass": true,
+            "evidence": {
+              "mode": "RGBA",
+              "size": [
+                1086,
+                1448
+              ]
+            }
+          },
+          {
+            "check": "eye_right:mask_canvas",
+            "pass": true,
+            "evidence": {
+              "mode": "L",
+              "size": [
+                1086,
+                1448
+              ]
+            }
+          },
+          {
+            "check": "eye_right:mask_exact_alpha",
+            "pass": true,
+            "evidence": "mask_path is exported-alpha mask; selection/provenance masks are separate"
+          },
+          {
+            "check": "eye_right:bbox",
+            "pass": true,
+            "evidence": {
+              "actual": [
+                479,
+                135,
+                531,
+                187
+              ],
+              "declared": [
+                479,
+                135,
+                531,
+                187
+              ]
+            }
+          },
+          {
+            "check": "eye_right:pivot",
+            "pass": true,
+            "evidence": {
+              "x": 505,
+              "y": 160
+            }
+          },
+          {
+            "check": "eye_right:file_hashes",
+            "pass": true,
+            "evidence": "/home/mehdi/Project/leela/tahmures/Characters/tahmures/versions/layout01-v3/face/eye_right.png"
+          },
+          {
+            "check": "eye_right:not_preview_underlay",
+            "pass": true,
+            "evidence": "face/eye_right.png"
+          },
+          {
+            "check": "eye_right:provenance_canvas",
+            "pass": true,
+            "evidence": "both ownership masks use original canvas"
+          },
+          {
+            "check": "eye_right:provenance_partition",
+            "pass": true,
+            "evidence": "binary masks disjoint within this sprite and cover every visible pixel"
+          },
+          {
+            "check": "eye_right:source_pixel_claim",
+            "pass": true,
+            "evidence": "claimed source pixels have exact source RGB; extraction may only reduce alpha"
+          },
+          {
+            "check": "eye_right:reconstruction_description",
+            "pass": true,
+            "evidence": ""
+          },
+          {
+            "check": "eyebrow_left:rgba_canvas",
+            "pass": true,
+            "evidence": {
+              "mode": "RGBA",
+              "size": [
+                1086,
+                1448
+              ]
+            }
+          },
+          {
+            "check": "eyebrow_left:mask_canvas",
+            "pass": true,
+            "evidence": {
+              "mode": "L",
+              "size": [
+                1086,
+                1448
+              ]
+            }
+          },
+          {
+            "check": "eyebrow_left:mask_exact_alpha",
+            "pass": true,
+            "evidence": "mask_path is exported-alpha mask; selection/provenance masks are separate"
+          },
+          {
+            "check": "eyebrow_left:bbox",
+            "pass": true,
+            "evidence": {
+              "actual": [
+                556,
+                110,
+                609,
+                134
+              ],
+              "declared": [
+                556,
+                110,
+                609,
+                134
+              ]
+            }
+          },
+          {
+            "check": "eyebrow_left:pivot",
+            "pass": true,
+            "evidence": {
+              "x": 579,
+              "y": 116
+            }
+          },
+          {
+            "check": "eyebrow_left:file_hashes",
+            "pass": true,
+            "evidence": "/home/mehdi/Project/leela/tahmures/Characters/tahmures/versions/layout01-v3/face/eyebrow_left.png"
+          },
+          {
+            "check": "eyebrow_left:not_preview_underlay",
+            "pass": true,
+            "evidence": "face/eyebrow_left.png"
+          },
+          {
+            "check": "eyebrow_left:provenance_canvas",
+            "pass": true,
+            "evidence": "both ownership masks use original canvas"
+          },
+          {
+            "check": "eyebrow_left:provenance_partition",
+            "pass": true,
+            "evidence": "binary masks disjoint within this sprite and cover every visible pixel"
+          },
+          {
+            "check": "eyebrow_left:source_pixel_claim",
+            "pass": true,
+            "evidence": "claimed source pixels have exact source RGB; extraction may only reduce alpha"
+          },
+          {
+            "check": "eyebrow_left:reconstruction_description",
+            "pass": true,
+            "evidence": ""
+          },
+          {
+            "check": "eyebrow_right:rgba_canvas",
+            "pass": true,
+            "evidence": {
+              "mode": "RGBA",
+              "size": [
+                1086,
+                1448
+              ]
+            }
+          },
+          {
+            "check": "eyebrow_right:mask_canvas",
+            "pass": true,
+            "evidence": {
+              "mode": "L",
+              "size": [
+                1086,
+                1448
+              ]
+            }
+          },
+          {
+            "check": "eyebrow_right:mask_exact_alpha",
+            "pass": true,
+            "evidence": "mask_path is exported-alpha mask; selection/provenance masks are separate"
+          },
+          {
+            "check": "eyebrow_right:bbox",
+            "pass": true,
+            "evidence": {
+              "actual": [
+                476,
+                110,
+                532,
+                131
+              ],
+              "declared": [
+                476,
+                110,
+                532,
+                131
+              ]
+            }
+          },
+          {
+            "check": "eyebrow_right:pivot",
+            "pass": true,
+            "evidence": {
+              "x": 501,
+              "y": 116
+            }
+          },
+          {
+            "check": "eyebrow_right:file_hashes",
+            "pass": true,
+            "evidence": "/home/mehdi/Project/leela/tahmures/Characters/tahmures/versions/layout01-v3/face/eyebrow_right.png"
+          },
+          {
+            "check": "eyebrow_right:not_preview_underlay",
+            "pass": true,
+            "evidence": "face/eyebrow_right.png"
+          },
+          {
+            "check": "eyebrow_right:provenance_canvas",
+            "pass": true,
+            "evidence": "both ownership masks use original canvas"
+          },
+          {
+            "check": "eyebrow_right:provenance_partition",
+            "pass": true,
+            "evidence": "binary masks disjoint within this sprite and cover every visible pixel"
+          },
+          {
+            "check": "eyebrow_right:source_pixel_claim",
+            "pass": true,
+            "evidence": "claimed source pixels have exact source RGB; extraction may only reduce alpha"
+          },
+          {
+            "check": "eyebrow_right:reconstruction_description",
+            "pass": true,
+            "evidence": ""
+          },
+          {
+            "check": "nose:rgba_canvas",
+            "pass": true,
+            "evidence": {
+              "mode": "RGBA",
+              "size": [
+                1086,
+                1448
+              ]
+            }
+          },
+          {
+            "check": "nose:mask_canvas",
+            "pass": true,
+            "evidence": {
+              "mode": "L",
+              "size": [
+                1086,
+                1448
+              ]
+            }
+          },
+          {
+            "check": "nose:mask_exact_alpha",
+            "pass": true,
+            "evidence": "mask_path is exported-alpha mask; selection/provenance masks are separate"
+          },
+          {
+            "check": "nose:bbox",
+            "pass": true,
+            "evidence": {
+              "actual": [
+                534,
+                136,
+                566,
+                221
+              ],
+              "declared": [
+                534,
+                136,
+                566,
+                221
+              ]
+            }
+          },
+          {
+            "check": "nose:pivot",
+            "pass": true,
+            "evidence": {
+              "x": 548,
+              "y": 186
+            }
+          },
+          {
+            "check": "nose:file_hashes",
+            "pass": true,
+            "evidence": "/home/mehdi/Project/leela/tahmures/Characters/tahmures/versions/layout01-v3/face/nose.png"
+          },
+          {
+            "check": "nose:not_preview_underlay",
+            "pass": true,
+            "evidence": "face/nose.png"
+          },
+          {
+            "check": "nose:provenance_canvas",
+            "pass": true,
+            "evidence": "both ownership masks use original canvas"
+          },
+          {
+            "check": "nose:provenance_partition",
+            "pass": true,
+            "evidence": "binary masks disjoint within this sprite and cover every visible pixel"
+          },
+          {
+            "check": "nose:source_pixel_claim",
+            "pass": true,
+            "evidence": "claimed source pixels have exact source RGB; extraction may only reduce alpha"
+          },
+          {
+            "check": "nose:reconstruction_description",
+            "pass": true,
+            "evidence": ""
+          },
+          {
+            "check": "beard:rgba_canvas",
+            "pass": true,
+            "evidence": {
+              "mode": "RGBA",
+              "size": [
+                1086,
+                1448
+              ]
+            }
+          },
+          {
+            "check": "beard:mask_canvas",
+            "pass": true,
+            "evidence": {
+              "mode": "L",
+              "size": [
+                1086,
+                1448
+              ]
+            }
+          },
+          {
+            "check": "beard:mask_exact_alpha",
+            "pass": true,
+            "evidence": "mask_path is exported-alpha mask; selection/provenance masks are separate"
+          },
+          {
+            "check": "beard:bbox",
+            "pass": true,
+            "evidence": {
+              "actual": [
+                464,
+                218,
+                609,
+                326
+              ],
+              "declared": [
+                464,
+                218,
+                609,
+                326
+              ]
+            }
+          },
+          {
+            "check": "beard:pivot",
+            "pass": true,
+            "evidence": {
+              "x": 538,
+              "y": 240
+            }
+          },
+          {
+            "check": "beard:file_hashes",
+            "pass": true,
+            "evidence": "/home/mehdi/Project/leela/tahmures/Characters/tahmures/versions/layout01-v3/face/beard.png"
+          },
+          {
+            "check": "beard:not_preview_underlay",
+            "pass": true,
+            "evidence": "face/beard.png"
+          },
+          {
+            "check": "beard:provenance_canvas",
+            "pass": true,
+            "evidence": "both ownership masks use original canvas"
+          },
+          {
+            "check": "beard:provenance_partition",
+            "pass": true,
+            "evidence": "binary masks disjoint within this sprite and cover every visible pixel"
+          },
+          {
+            "check": "beard:source_pixel_claim",
+            "pass": true,
+            "evidence": "claimed source pixels have exact source RGB; extraction may only reduce alpha"
+          },
+          {
+            "check": "beard:reconstruction_description",
+            "pass": true,
+            "evidence": "Mouthless receiver: the mouth-content region M (2616 px, bbox x500-580 y228-269) is filled with beard texture tiled from the verified all-dark master block y270-293 x494-604; all other beard pixels are master pixels retained from v2 plus 304 recovered previously-uncovered pixels."
+          },
+          {
+            "check": "moustache:rgba_canvas",
+            "pass": true,
+            "evidence": {
+              "mode": "RGBA",
+              "size": [
+                1086,
+                1448
+              ]
+            }
+          },
+          {
+            "check": "moustache:mask_canvas",
+            "pass": true,
+            "evidence": {
+              "mode": "L",
+              "size": [
+                1086,
+                1448
+              ]
+            }
+          },
+          {
+            "check": "moustache:mask_exact_alpha",
+            "pass": true,
+            "evidence": "mask_path is exported-alpha mask; selection/provenance masks are separate"
+          },
+          {
+            "check": "moustache:bbox",
+            "pass": true,
+            "evidence": {
+              "actual": [
+                485,
+                209,
+                597,
+                239
+              ],
+              "declared": [
+                485,
+                209,
+                597,
+                239
+              ]
+            }
+          },
+          {
+            "check": "moustache:pivot",
+            "pass": true,
+            "evidence": {
+              "x": 540,
+              "y": 217
+            }
+          },
+          {
+            "check": "moustache:file_hashes",
+            "pass": true,
+            "evidence": "/home/mehdi/Project/leela/tahmures/Characters/tahmures/versions/layout01-v3/face/moustache.png"
+          },
+          {
+            "check": "moustache:not_preview_underlay",
+            "pass": true,
+            "evidence": "face/moustache.png"
+          },
+          {
+            "check": "moustache:provenance_canvas",
+            "pass": true,
+            "evidence": "both ownership masks use original canvas"
+          },
+          {
+            "check": "moustache:provenance_partition",
+            "pass": true,
+            "evidence": "binary masks disjoint within this sprite and cover every visible pixel"
+          },
+          {
+            "check": "moustache:source_pixel_claim",
+            "pass": true,
+            "evidence": "claimed source pixels have exact source RGB; extraction may only reduce alpha"
+          },
+          {
+            "check": "moustache:reconstruction_description",
+            "pass": true,
+            "evidence": ""
+          },
+          {
+            "check": "lower_face_neutral:rgba_canvas",
+            "pass": true,
+            "evidence": {
+              "mode": "RGBA",
+              "size": [
+                1086,
+                1448
+              ]
+            }
+          },
+          {
+            "check": "lower_face_neutral:mask_canvas",
+            "pass": true,
+            "evidence": {
+              "mode": "L",
+              "size": [
+                1086,
+                1448
+              ]
+            }
+          },
+          {
+            "check": "lower_face_neutral:mask_exact_alpha",
+            "pass": true,
+            "evidence": "mask_path is exported-alpha mask; selection/provenance masks are separate"
+          },
+          {
+            "check": "lower_face_neutral:bbox",
+            "pass": true,
+            "evidence": {
+              "actual": [
+                497,
+                226,
+                584,
+                273
+              ],
+              "declared": [
+                497,
+                226,
+                584,
+                273
+              ]
+            }
+          },
+          {
+            "check": "lower_face_neutral:pivot",
+            "pass": true,
+            "evidence": {
+              "x": 540,
+              "y": 241
+            }
+          },
+          {
+            "check": "lower_face_neutral:file_hashes",
+            "pass": true,
+            "evidence": "/home/mehdi/Project/leela/tahmures/Characters/tahmures/versions/layout01-v3/mouths/lower_face_neutral.png"
+          },
+          {
+            "check": "lower_face_neutral:not_preview_underlay",
+            "pass": true,
+            "evidence": "mouths/lower_face_neutral.png"
+          },
+          {
+            "check": "lower_face_neutral:provenance_canvas",
+            "pass": true,
+            "evidence": "both ownership masks use original canvas"
+          },
+          {
+            "check": "lower_face_neutral:provenance_partition",
+            "pass": true,
+            "evidence": "binary masks disjoint within this sprite and cover every visible pixel"
+          },
+          {
+            "check": "lower_face_neutral:source_pixel_claim",
+            "pass": true,
+            "evidence": "claimed source pixels have exact source RGB; extraction may only reduce alpha"
+          },
+          {
+            "check": "lower_face_neutral:reconstruction_description",
+            "pass": true,
+            "evidence": ""
+          },
+          {
+            "check": "lower_face_open_test:rgba_canvas",
+            "pass": true,
+            "evidence": {
+              "mode": "RGBA",
+              "size": [
+                1086,
+                1448
+              ]
+            }
+          },
+          {
+            "check": "lower_face_open_test:mask_canvas",
+            "pass": true,
+            "evidence": {
+              "mode": "L",
+              "size": [
+                1086,
+                1448
+              ]
+            }
+          },
+          {
+            "check": "lower_face_open_test:mask_exact_alpha",
+            "pass": true,
+            "evidence": "mask_path is exported-alpha mask; selection/provenance masks are separate"
+          },
+          {
+            "check": "lower_face_open_test:bbox",
+            "pass": true,
+            "evidence": {
+              "actual": [
+                497,
+                226,
+                584,
+                273
+              ],
+              "declared": [
+                497,
+                226,
+                584,
+                273
+              ]
+            }
+          },
+          {
+            "check": "lower_face_open_test:pivot",
+            "pass": true,
+            "evidence": {
+              "x": 540,
+              "y": 241
+            }
+          },
+          {
+            "check": "lower_face_open_test:file_hashes",
+            "pass": true,
+            "evidence": "/home/mehdi/Project/leela/tahmures/Characters/tahmures/versions/layout01-v3/mouths/lower_face_open_test.png"
+          },
+          {
+            "check": "lower_face_open_test:not_preview_underlay",
+            "pass": true,
+            "evidence": "mouths/lower_face_open_test.png"
+          },
+          {
+            "check": "lower_face_open_test:provenance_canvas",
+            "pass": true,
+            "evidence": "both ownership masks use original canvas"
+          },
+          {
+            "check": "lower_face_open_test:provenance_partition",
+            "pass": true,
+            "evidence": "binary masks disjoint within this sprite and cover every visible pixel"
+          },
+          {
+            "check": "lower_face_open_test:source_pixel_claim",
+            "pass": true,
+            "evidence": "claimed source pixels have exact source RGB; extraction may only reduce alpha"
+          },
+          {
+            "check": "lower_face_open_test:reconstruction_description",
+            "pass": true,
+            "evidence": "Small opening (80 px, x531-553 y253-258) synthesized from the master palette: interior rows are 45% master mouth-line colour + 55% master mouth-interior sample; the bottom edge row is 75% line + 25% below-line sample."
+          },
+          {
+            "check": "groups_present",
+            "pass": true,
+            "evidence": [
+              "puppet_core",
+              "puppet_core_neutral",
+              "puppet_core_open_test"
+            ]
+          },
+          {
+            "check": "domain_not_shrunk",
+            "pass": true,
+            "evidence": "immutable v2 visible_head_domain must be copied verbatim"
+          },
+          {
+            "check": "puppet_core:resolves",
+            "pass": true,
+            "evidence": [
+              "hair_back",
+              "head_base",
+              "ear_right",
+              "ear_left",
+              "beard",
+              "nose",
+              "eye_right",
+              "eye_left",
+              "eyebrow_right",
+              "eyebrow_left",
+              "moustache",
+              "diadem_gold"
+            ]
+          },
+          {
+            "check": "puppet_core:single_patch",
+            "pass": true,
+            "evidence": []
+          },
+          {
+            "check": "puppet_core:moustache_foreground",
+            "pass": true,
+            "evidence": [
+              "hair_back",
+              "head_base",
+              "ear_right",
+              "ear_left",
+              "beard",
+              "nose",
+              "eye_right",
+              "eye_left",
+              "eyebrow_right",
+              "eyebrow_left",
+              "moustache",
+              "diadem_gold"
+            ]
+          },
+          {
+            "check": "puppet_core:interior_coverage",
+            "pass": true,
+            "evidence": {
+              "new_fully_transparent": 0,
+              "alpha_below_250_where_source_opaque": 0
+            }
+          },
+          {
+            "check": "puppet_core:preview_is_actual_assembly",
+            "pass": true,
+            "evidence": "unadorned RGBA full-canvas assembly"
+          },
+          {
+            "check": "puppet_core_neutral:resolves",
+            "pass": true,
+            "evidence": [
+              "hair_back",
+              "head_base",
+              "ear_right",
+              "ear_left",
+              "beard",
+              "lower_face_neutral",
+              "nose",
+              "eye_right",
+              "eye_left",
+              "eyebrow_right",
+              "eyebrow_left",
+              "moustache",
+              "diadem_gold"
+            ]
+          },
+          {
+            "check": "puppet_core_neutral:single_patch",
+            "pass": true,
+            "evidence": [
+              "lower_face_neutral"
+            ]
+          },
+          {
+            "check": "puppet_core_neutral:moustache_foreground",
+            "pass": true,
+            "evidence": [
+              "hair_back",
+              "head_base",
+              "ear_right",
+              "ear_left",
+              "beard",
+              "lower_face_neutral",
+              "nose",
+              "eye_right",
+              "eye_left",
+              "eyebrow_right",
+              "eyebrow_left",
+              "moustache",
+              "diadem_gold"
+            ]
+          },
+          {
+            "check": "puppet_core_neutral:interior_coverage",
+            "pass": true,
+            "evidence": {
+              "new_fully_transparent": 0,
+              "alpha_below_250_where_source_opaque": 0
+            }
+          },
+          {
+            "check": "puppet_core_neutral:preview_is_actual_assembly",
+            "pass": true,
+            "evidence": "unadorned RGBA full-canvas assembly"
+          },
+          {
+            "check": "puppet_core_open_test:resolves",
+            "pass": true,
+            "evidence": [
+              "hair_back",
+              "head_base",
+              "ear_right",
+              "ear_left",
+              "beard",
+              "lower_face_open_test",
+              "nose",
+              "eye_right",
+              "eye_left",
+              "eyebrow_right",
+              "eyebrow_left",
+              "moustache",
+              "diadem_gold"
+            ]
+          },
+          {
+            "check": "puppet_core_open_test:single_patch",
+            "pass": true,
+            "evidence": [
+              "lower_face_open_test"
+            ]
+          },
+          {
+            "check": "puppet_core_open_test:moustache_foreground",
+            "pass": true,
+            "evidence": [
+              "hair_back",
+              "head_base",
+              "ear_right",
+              "ear_left",
+              "beard",
+              "lower_face_open_test",
+              "nose",
+              "eye_right",
+              "eye_left",
+              "eyebrow_right",
+              "eyebrow_left",
+              "moustache",
+              "diadem_gold"
+            ]
+          },
+          {
+            "check": "puppet_core_open_test:interior_coverage",
+            "pass": true,
+            "evidence": {
+              "new_fully_transparent": 0,
+              "alpha_below_250_where_source_opaque": 0
+            }
+          },
+          {
+            "check": "puppet_core_open_test:preview_is_actual_assembly",
+            "pass": true,
+            "evidence": "unadorned RGBA full-canvas assembly"
+          },
+          {
+            "check": "mouth_states_really_differ",
+            "pass": true,
+            "evidence": "not two aliases of one image"
+          },
+          {
+            "check": "file_index_complete_and_current",
+            "pass": true,
+            "evidence": {
+              "hash_errors": [],
+              "unindexed": [],
+              "missing": []
+            }
+          },
+          {
+            "check": "eye_left:alignment_preserved",
+            "pass": true,
+            "evidence": {
+              "x": 579,
+              "y": 160
+            }
+          },
+          {
+            "check": "eye_right:alignment_preserved",
+            "pass": true,
+            "evidence": {
+              "x": 505,
+              "y": 160
+            }
+          },
+          {
+            "check": "eyebrow_left:alignment_preserved",
+            "pass": true,
+            "evidence": {
+              "x": 579,
+              "y": 116
+            }
+          },
+          {
+            "check": "eyebrow_right:alignment_preserved",
+            "pass": true,
+            "evidence": {
+              "x": 501,
+              "y": 116
+            }
+          }
+        ]
+      },
+      "outcome": "PASS (185 structural checks)"
+    }
+  ],
+  "working_directory": "/home/mehdi/Project/leela/tahmures",
+  "note": "The supervisor checker is read-only and unmodified. The candidate hash index covers every file under the candidate root except files-sha256.json itself, including this file.",
+  "fixed_point_verified": true
+}

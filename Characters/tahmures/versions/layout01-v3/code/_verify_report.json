@@ -1,0 +1,39 @@
+{
+  "zip_sha256_unchanged": true,
+  "master_sha256_unchanged": true,
+  "domain_copy_verbatim": true,
+  "masks_equal_exact_alpha": true,
+  "bboxes_match_manifest": true,
+  "pivots_in_canvas": true,
+  "provenance_partition_and_source_claims": true,
+  "recompose_puppet_core_byte_equal_preview": true,
+  "recompose_puppet_core_independent_max_channel_diff": 1,
+  "recompose_puppet_core_sprite_count": 12,
+  "recompose_puppet_core_neutral_byte_equal_preview": true,
+  "recompose_puppet_core_neutral_independent_max_channel_diff": 1,
+  "recompose_puppet_core_neutral_sprite_count": 13,
+  "recompose_puppet_core_open_test_byte_equal_preview": true,
+  "recompose_puppet_core_open_test_independent_max_channel_diff": 1,
+  "recompose_puppet_core_open_test_sprite_count": 13,
+  "B_and_C_truly_differ": true,
+  "B_C_diff_confined_to_P": true,
+  "B_C_diff_px": 80,
+  "B_pixel_faithful_gt3_px": 0,
+  "coverage_puppet_core": {
+    "holes": 0,
+    "deficits": 0
+  },
+  "coverage_puppet_core_neutral": {
+    "holes": 0,
+    "deficits": 0
+  },
+  "coverage_puppet_core_open_test": {
+    "holes": 0,
+    "deficits": 0
+  },
+  "outer_boundary_alpha_raised_px": 0,
+  "no_banned_duplicate_components": true,
+  "stress_samples_present": true,
+  "stress_all_passed": true,
+  "all_passed": true
+}

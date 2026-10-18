@@ -80,9 +80,16 @@ FRONT_MATTER_KEYS = (
     "translation_status:",
     "last_translated:",
 )
+# Scoped spelling decision (owner, 2026-10-10): Persian Chapters 01–04
+# spell the protagonist's name طهمورث in the tale heading and prose;
+# Chapters 05–24 keep تهمورث pending a separate book-wide terminology
+# decision, so the tale-heading contract is chapter-aware.
+TAHMURES_SPELLING_CHAPTERS = frozenset({1, 2, 3, 4})
+FA_TALE_HEADING = "## روایت تهمورث"
+FA_TALE_HEADING_CH01_04 = "## روایت طهمورث"
 HEADINGS = (
     "## اهداف یادگیری",
-    "## روایت تهمورث",
+    FA_TALE_HEADING,
     "### صحنه",
     "### درخواست",
     "### نتیجهٔ غیرمنتظره",
@@ -357,6 +364,8 @@ def validate_pair(source: Path, translation: Path) -> tuple[str, str]:
 
     positions = []
     headings = list(HEADINGS)
+    if chapter in TAHMURES_SPELLING_CHAPTERS:
+        headings[headings.index(FA_TALE_HEADING)] = FA_TALE_HEADING_CH01_04
     if chapter == FINAL_CHAPTER:
         headings[headings.index(FA_NEXT_TALE_HEADING)] = FA_CLOSING_HEADING
     for heading in headings:
