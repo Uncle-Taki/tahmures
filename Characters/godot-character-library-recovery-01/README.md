@@ -3,9 +3,17 @@
 Canonical working directory: `Characters/godot-character-library-recovery-01/`
 inside `/home/mehdi/Project/leela/tahmures`.
 
-The root-level ZIP, nested `godot-character-library-recovery-01/Characters/...`
-directory and root-level manifest are received Gemini artifacts. They are
-preserved as evidence, not maintained working copies. Edit this directory only.
+The primary collaboration source is the owner's private GitHub repository,
+branch **main**. Use `editorial/media-handoff/README.md` and
+`editorial/media-handoff/ai-studio-start-here.md` for Google AI Studio import.
+The fixed media baseline and protected-file hashes are recorded in
+`editorial/media-handoff/ai-studio-baseline.json`; a newer imported handoff
+revision is expected after these instructions are pushed.
+
+Ignored received ZIPs, nested extractions and the root-level received manifest
+may exist on the workstation as historical evidence. They are not required in
+GitHub and must not be requested to run the tracked project. Edit this canonical
+working directory only.
 
 ## What actually works
 
@@ -86,5 +94,6 @@ The full repository check currently has the pre-existing eight stale-Persian-has
 failures (789 passing tests). This candidate does not refresh manuscript hashes,
 alter review state, weaken validators or imply the full gate passed.
 
-Next: `editorial/media-handoff/ai-studio-roadmap.md` and
-`editorial/media-handoff/ai-studio-task-01.md`.
+Next: import the private repository branch **main**, paste
+`editorial/media-handoff/ai-studio-start-here.md`, and implement task 01 only.
+Use the roadmap and return template for the Codex acceptance loop.

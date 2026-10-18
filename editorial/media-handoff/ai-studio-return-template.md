@@ -1,8 +1,13 @@
 # Implementation return (complete with actual evidence)
 
-- Task ID and baseline EXCHANGE-MANIFEST SHA-256:
+- Task ID:
+- Repository URL (private; owner-supplied), imported branch and actual revision:
+- Fixed media baseline commit and ai-studio-baseline.json SHA-256:
+- Baseline ancestry checked, or unavailable Git-history capability stated:
+- Protected input and non-target output hash verification results:
 - Tool/environment and exact access available:
-- Result archive/patch/review branch (actual attached file or verified URL):
+- Result changed files/patch (actual attachment), or separately authorized result branch/commit:
+- Sync performed? If yes, actual destination, owner instruction and result revision:
 - Changed paths, with a short reason for each:
 - Preserved source/approval hashes checked, and how:
 - Anatomical masks/part ownership changed:

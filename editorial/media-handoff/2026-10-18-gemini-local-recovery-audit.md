@@ -58,4 +58,10 @@ and a selected local source snapshot are prepared under `editorial/media-handoff
 Codex remains the local acceptance checker; the owner retains art/voice decisions.
 No GitHub remote is configured and no commit, push, cloud call or deployment was
 performed. The historical Gemini upload ZIPs were not refreshed by this new task;
-the new `ai-studio-exchange.zip` is the next-phase baseline.
+the `ai-studio-exchange.zip` was prepared as that inspection's transfer baseline.
+
+Later owner update: the project has now been pushed to a private GitHub repository.
+The current handoff is [repository-based](README.md), on branch **main**.
+`ai-studio-baseline.json` records the committed media baseline and protected bytes.
+The statements above describe the earlier inspection; they do not deny the
+owner's later push. Old ZIP packs are optional history, not current prerequisites.

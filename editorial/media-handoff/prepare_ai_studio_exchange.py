@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prepare a local reviewed media snapshot. Does not create Git history or upload."""
+"""Optional offline fallback; the primary AI Studio handoff uses private GitHub."""
 
 import hashlib
 import json
@@ -62,6 +62,9 @@ def main():
         ".agents/skills/mehdi-media/SKILL.md",
         ".agents/skills/tahmures-narrative/SKILL.md",
         ".agents/skills/tahmures-narrative/references/story-world.md",
+        "editorial/media-handoff/README.md",
+        "editorial/media-handoff/ai-studio-start-here.md",
+        "editorial/media-handoff/ai-studio-baseline.json",
         "editorial/media-handoff/ai-studio-roadmap.md",
         "editorial/media-handoff/ai-studio-task-01.md",
         "editorial/media-handoff/ai-studio-return-template.md",
@@ -90,9 +93,11 @@ def main():
     records.append(
         {"path": "RTK.md", "bytes": rtk.stat().st_size, "sha256": digest(rtk)}
     )
-    readme = """# AI Studio media exchange baseline
+    readme = """# Optional AI Studio offline fallback
 
-Start with editorial/media-handoff/ai-studio-task-01.md and ai-studio-roadmap.md.
+The primary workflow uses the owner's private GitHub repository, branch main.
+Start with editorial/media-handoff/README.md and ai-studio-start-here.md.
+This archive is optional transfer backup, not the repository authority.
 AGENTS.md references the workstation RTK.md path; its exact companion is RTK.md
 at this snapshot root. No project_context.md exists in the source checkout;
 use the canonical charter/continuity instead of inventing a context document.
@@ -104,8 +109,9 @@ only on the original workstation. Do not run make check here and claim parity.
 Approved packages are input bytes; historical full rebuild inputs are not all
 included. Do not rebuild or alter them for this Akvan-only task.
 
-No GitHub repository has been created or pushed. Import an explicitly authorized
-private exchange/review branch, or return actual changed files/patches locally.
+The owner reports the project is already pushed to a private GitHub repository.
+Import the intended repository/branch; record its actual revision. Use this
+fallback only when repository import is unavailable and record that choice.
 No giant upload archives, rejected movie exports, raw chat logs or editor caches
 are included. Keep the original PNGs, approval records and indexed bytes intact.
 """

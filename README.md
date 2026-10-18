@@ -78,6 +78,14 @@ no network calls and require no model-provider credentials.
 The editorial rules live in `meta-prompt.md`; the approved direction and
 delivery phases live in `book/project-charter.md`.
 
+## Character work with Google AI Studio
+
+For the private-repository workflow on branch `main`, start with the
+[AI Studio handoff](editorial/media-handoff/README.md). It contains the starting
+prompt, phase roadmap, protected-input baseline and task return contract.
+Codex reviews actual implementation files and local Godot results before the
+next phase proceeds.
+
 ## Licences
 
 Book prose and other content are licensed under CC BY 4.0. Source code is

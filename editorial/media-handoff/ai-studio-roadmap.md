@@ -4,7 +4,8 @@ Prepared 2026-10-18. This is a task roadmap, subordinate to `AGENTS.md`,
 `meta-prompt.md`, the project charter, narrative continuity and existing scoped
 approval records. It does not replace `workflow/phase-status.json` or grant art,
 voice, manuscript or release approval. Earlier upload packs remain historical
-handoffs; use the new local recovery baseline for this workflow.
+handoffs. The owner has pushed the project to a private GitHub repository;
+use the repository workflow below as the primary handoff.
 
 ## Roles and the working loop
 
@@ -17,8 +18,10 @@ The agent cannot approve its own work or impersonate a Codex/owner review.
 
 Use this loop for every task:
 
-1. Codex supplies the exact baseline hash manifest, task, allowed paths and tests.
-2. Owner imports that baseline into AI Studio and pastes the task prompt.
+1. Codex supplies the repository baseline, protected-file hashes, task, allowed
+   paths and tests in `ai-studio-baseline.json`.
+2. Owner imports the private repository and branch `main` into AI Studio and
+   pastes `ai-studio-start-here.md`. Record the actual imported revision.
 3. AI Studio makes one bounded change and returns a patch/export or review branch.
 4. Owner brings the actual files/export/branch to this chat, with its response.
 5. Codex checks changed paths and hashes, applies into a separate candidate where
@@ -31,10 +34,16 @@ responses as received evidence; never treat a `[file-tag: ...]` as a local file.
 
 ## Current baseline and failed-command repairs
 
-The received package is preserved in `godot-character-library-recovery-01.zip`
-at the repository root. The maintained local candidate is
-`Characters/godot-character-library-recovery-01/`. A second nested extraction and
-the root manifest are historical received copies, not active edit targets.
+The maintained candidate is `Characters/godot-character-library-recovery-01/`.
+All 306 distinct required source/approval/index/head inputs were verified as tracked at
+media baseline `e2f29bf431f1fffea4902e1276d2a5f6e6fb2660` on branch `main`.
+Repository: `https://github.com/Uncle-Taki/tahmures`. The configured SSH remote is
+`git@github.com:Uncle-Taki/tahmures.git`. SSH access was checked; repository
+visibility is private as reported by the owner.
+
+Ignored received ZIPs, duplicate extractions and transfer trees may exist on the
+workstation. They are not required in the imported repository and must not be
+requested or reconstructed as prerequisites.
 
 The original builder and validator had unterminated newline string literals.
 Those commands now execute. Transparent background RGB is normalized for exact
@@ -80,53 +89,74 @@ previews; it does not establish a Godot runtime in the Build environment.
 Use its code-editing capabilities for this existing Godot/Python project.
 Do not ask it to regenerate the project as React or invent a successful Godot run.
 
-1. Open Build mode. Use **Add files (+) → Import from GitHub** if an approved
-   exchange repository/branch exists; otherwise use accessible source files and
-   ask for a real patch/export, not a web scaffold. Verify available import
-   features in your account before assuming any ZIP can be unpacked.
-2. Paste `ai-studio-task-01.md` and provide `ai-studio-exchange.zip` or the matching
-   reviewed source snapshot. Ask it to list actual readable files first.
-3. If a GitHub-connected workspace is used, inspect **Settings → GitHub** for its
-   repository and branch before syncing. Never sync directly to the book's main
-   branch. If safe branch isolation is unavailable, download ZIP/patch results
-   and return them here for local review instead.
-4. Ask for command outputs only for commands actually run. If Pillow, NumPy or
-   Godot are unavailable there, return code, masks/contour data and exact local
-   commands; Codex runs them on the workstation. Do not install new dependencies,
-   add provider calls or use generated imagery to fill missing surfaces without scope.
-5. Return files plus `ai-studio-return-template.md`. Preserve the baseline identity
-   and separate technical checks, art acceptance and full repository status.
+1. Use `https://github.com/Uncle-Taki/tahmures` in AI Studio after the
+   repository update is pushed. Use **Add files (+) → Import from GitHub**
+   and grant the interface access to the intended private repository if needed.
+2. Select branch **main** where branch selection is available. Verify the imported
+   files and branch in the interface; do not silently accept another branch.
+   If the interface cannot select/retain main, use its branch/ref import option
+   if provided, or return file patches without syncing. Never claim isolation
+   merely because a prompt mentions a branch.
+3. Paste `ai-studio-start-here.md`. The agent must read this roadmap, the baseline
+   manifest, task 01 and return template before editing. No Drive links, five-part
+   ZIP upload or `EXCHANGE-MANIFEST.json` is required for this primary workflow.
+4. Record the actual imported revision separately from the fixed media baseline.
+   A newer commit containing these handoff documents is expected after you push
+   them. Compare protected file hashes; do not force AI Studio back to the older
+   commit and lose the new instructions. If Git history is exposed, verify the
+   media baseline is an ancestor. If it is not exposed, report that limit and
+   verify accessible file bytes instead.
+5. Ask for command outputs only for commands actually run. If Pillow, NumPy,
+   RTK or Godot is unavailable, state the missing executable and return actual
+   code/masks/contour data with exact workstation commands. Do not install new
+   dependencies or claim a web/Android preview validated the Godot project.
+6. Return the changed files/patch and `ai-studio-return-template.md`. If the owner
+   separately instructs GitHub sync, verify its actual target branch first and
+   record result commit(s). This handoff authorizes implementation, not automatic
+   commits, pushes, merges or deployment. Codex reviews actual results locally
+   before any next phase is assigned.
 
-## GitHub preparation (not performed by this handoff)
+## Repository baseline and review contract
 
-The current repository has no configured Git remote. No remote, repository,
-commit, branch, push, PR or deployment has been created by this work.
-Your request to consider GitHub is a planning request; a destination and explicit
-publishing instruction are still needed before external writes.
+- Repository: `https://github.com/Uncle-Taki/tahmures`.
+- Working/import branch: **main**, the branch already present in this checkout.
+- Fixed media baseline: `e2f29bf431f1fffea4902e1276d2a5f6e6fb2660`.
+- Exact baseline tree and required input/non-target output SHA-256 values:
+  `editorial/media-handoff/ai-studio-baseline.json`.
+- Import the published handoff revision. It differs from the fixed media
+  baseline because it includes the newer workflow instructions.
 
-Recommended exchange: a **private media workbench** or an isolated review branch
-such as `codex/character-recovery`, with Codex reviewing every returned diff.
-Do not publish the whole dirty book checkout or force an exception to the
-owner's final-files-only publication policy. A temporary candidate exchange is a
-separate explicit owner decision. Source publication and final book release are
-distinct actions.
+The existing private repository is the collaboration source. There is no need
+for another repository, a new exchange project or a separate upload archive.
+The remote is configured as `origin` at
+`git@github.com:Uncle-Taki/tahmures.git`. The owner authorized completing the
+repository update. This authorizes the current handoff publication; future
+AI Studio commits, pushes, merges and deployments still need their own instruction.
 
-`prepare_ai_studio_exchange.py` builds a reviewable local snapshot and manifest.
-It includes the maintained candidate, original source references, required
-approval/index dependencies, selected canonical context and these task documents.
-It excludes `.git`, editor caches, raw chat transcripts, old received duplicate
-trees, giant upload ZIPs and movie renders. This is a selected snapshot, not a
-full checkout. It can run the media candidate checks, not the entire book gate.
+Keep `.gitignore` in force: transfer ZIPs, duplicate trees, Godot caches, rejected
+movies and disposable logs stay local. Preserve tracked sources, Godot metadata,
+required frozen dependencies and selected approval evidence. Do not restore
+ignored content simply to match an old upload inventory or use `git add -f`.
+A missing required tracked file must be reported by its exact path.
 
-Before a future push, Codex will review the exact staged path list against the
-snapshot manifest, identify any missing rebuild dependency, and confirm the
-target private repository/branch. No `git add .` across this working tree.
-Once you authorize the destination, a concrete minimal candidate can be published
-without exposing unrelated manuscript edits or replacing historical approvals.
+For task 01, the source/approval inputs and other nine characters' output hashes
+are protected. The baseline file is review evidence and is outside AI Studio's
+edit scope. Do not rewrite that baseline to make an accidental change disappear.
+Codex compares changed paths and hashes, runs focused checks, captures actual
+Godot output, inspects the anatomy, and reports technical acceptance/rework.
+The owner still decides new art, occlusion reconstruction and performance.
+
+The earlier `ai-studio-exchange.zip` and `prepare_ai_studio_exchange.py` are
+optional offline fallbacks. Their old snapshots are not the authority for a newer
+repository revision. A fallback export needs its own manifest and actual source
+revision; never mix it silently with a GitHub import. The current repository is
+complete enough to run the media checks on a suitable local workstation. The
+book gate remains a separate check with its recorded editorial baseline failures.
 
 ## Next action
 
-Use `ai-studio-task-01.md`: repair **Akvan only**, return real changed files.
+Import the updated repository branch **main**, and paste
+`ai-studio-start-here.md`. Task 01 repairs **Akvan only** and returns real changed files.
 Bring its export/patch and response back here. Codex will inspect isolated head,
 face, torso, arms and coupled tablet-hold masks and run the next local acceptance
 pass before expanding the operation to the rest of the library.

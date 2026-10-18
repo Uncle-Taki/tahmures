@@ -4,7 +4,10 @@ You implement one bounded change. Codex is the engineering director and final
 technical checker; the owner approves actual artistic results. Do not advance
 phases or certify your own work as accepted.
 
-Read `AGENTS.md`, `editorial/media-handoff/ai-studio-roadmap.md`, and
+Use `https://github.com/Uncle-Taki/tahmures` on branch **main**.
+Read `AGENTS.md`,
+`editorial/media-handoff/ai-studio-baseline.json`,
+`editorial/media-handoff/ai-studio-roadmap.md`, and
 `Characters/godot-character-library-recovery-01/README.md`. Preserve all existing
 repository rules. The runtime remains Python/Godot. Do not create a React app,
 add provider calls, install dependencies, deploy or change the book.
@@ -13,14 +16,19 @@ add provider calls, install dependencies, deploy or change the book.
 
 List actual readable source files and baseline hashes. Identify whether you
 can edit files, export binary masks, run Python with Pillow/NumPy, and execute
-Godot. A GitHub import or ZIP filename alone is not execution evidence. If your
+Godot. Record the imported repository, branch and actual revision. A GitHub
+import alone is not execution evidence. If your
 environment cannot perform a step, return actual code/contour data and the exact
 local command for Codex; do not invent output artifacts or test results.
 
-The exchange snapshot is selected media context, not a full book checkout.
-`EXCHANGE-MANIFEST.json` identifies all input bytes. A downloaded archive/patch
-is required as the result, along with the completed return template. Prose or
-Canvas references alone are insufficient.
+The primary input is the tracked repository, not a ZIP or Drive upload.
+`ai-studio-baseline.json` identifies the fixed media baseline and protected bytes.
+A newer imported handoff commit may add these instructions; verify the protected
+input and non-target hashes rather than reverting to the old baseline. Do not
+request ignored upload archives, duplicate extractions, movie renders or
+`EXCHANGE-MANIFEST.json`. Do not edit the baseline manifest. Return actual changed
+files/patches and the completed return template; if separately authorized to sync,
+provide the actual result commit. Prose or Canvas references alone are insufficient.
 
 ## Problem
 
@@ -32,7 +40,8 @@ fragments. Exact neutral recomposition does not make those valid anatomical cuts
 Source identity: `Characters/Akvan Div.png`, SHA-256
 `dea44985d6cb717aba472319dae4b99d1680a629dc432ed32cd9bcbb9875c0b5`.
 Inspect its original, derived cutout, actual local Godot capture, component map
-and `characters/akvan_div/qa/component-sheet.png` before changing anything.
+and `Characters/godot-character-library-recovery-01/characters/akvan_div/qa/component-sheet.png`
+before changing anything.
 
 ## Allowed changes and required implementation
 

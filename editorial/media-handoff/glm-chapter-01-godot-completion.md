@@ -1,5 +1,9 @@
 # GLM prompt — complete the Chapter 01 Godot scene
 
+> Historical handoff. Current workflow: existing private GitHub repository, branch **main**.
+> Start with [AI Studio handoff](README.md) and [starting prompt](ai-studio-start-here.md).
+> The Drive/ZIP transfer instructions below are retained for history.
+
 > Superseded by the owner's character-first recovery instruction. Do not execute
 > this older scene-first task or its permission to substitute named-character
 > stand-ins. Use [the revised local Gemini handoff](gemini-local-continuation.md)

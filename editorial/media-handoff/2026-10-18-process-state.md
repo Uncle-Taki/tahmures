@@ -1,5 +1,9 @@
 # Tahmures process state — 2026-10-18
 
+> Later owner update: the project is pushed to a private GitHub repository.
+> Current handoff: [AI Studio repository workflow](README.md), branch **main**.
+> The phase observations below remain a dated inspection, not a new approval.
+
 ## Current owner priority: prepare the supplied character set first
 
 The owner rejected GLM's new chapter candidate because its named characters are

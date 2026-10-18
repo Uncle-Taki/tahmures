@@ -1,5 +1,9 @@
 # Gemini recovery prompt — website/app
 
+> Historical handoff. Current workflow: existing private GitHub repository, branch **main**.
+> Start with [AI Studio handoff](README.md) and [starting prompt](ai-studio-start-here.md).
+> The Drive/ZIP transfer instructions below are retained for history.
+
 Updated 2026-10-18. Replaces the earlier Tahmures-only scene-refactor prompt.
 
 ## Owner setup: five ZIPs in Google Drive
