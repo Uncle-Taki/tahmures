@@ -18,3 +18,8 @@
 - Full repository `make check PYTHON=.venv/bin/python` passed on a source-hash-checked book/code snapshot with Python 3.12 and Go 1.26.11. Media checks remain separate.
 - Full-sequence rendering and hosted exact-version review are in progress; no artistic or room-gate approval is claimed.
 
+
+## Stage 3 — recovery and delivery
+- Hosted export rejected authored object IDs; a third submission delegates ID assignment to the fixed exporter.
+- Recovered interrupted local frame ranges without discarding completed renders.
+- Full movie verification and hosted result are recorded in RESULT.md.
