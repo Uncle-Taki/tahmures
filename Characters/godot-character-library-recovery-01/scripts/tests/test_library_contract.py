@@ -38,6 +38,38 @@ class LibraryContracts(unittest.TestCase):
         rgba, _ = builder.remove_bg_border_flood(arr)
         self.assertEqual(rgba[1, 1].tolist(), [20, 30, 40, 127])
 
+    def test_transparent_black_border_does_not_erase_connected_beard(self):
+        arr = np.zeros((5, 5, 4), dtype=np.uint8)
+        arr[1:4, 1:4] = [7, 4, 3, 253]
+        arr[2, 2] = [0, 0, 0, 255]
+        arr[0, 0] = [80, 90, 100, 0]
+        before = arr.copy()
+        rgba, foreground = builder.remove_bg_border_flood(arr)
+        self.assertTrue(np.array_equal(arr, before))
+        self.assertEqual(int(foreground.sum()), 9)
+        self.assertTrue(np.array_equal(rgba[1:4, 1:4], arr[1:4, 1:4]))
+        self.assertEqual(rgba[0, 0].tolist(), [0, 0, 0, 0])
+
+    def test_rgba_boundary_colours_remain_visible(self):
+        arr = np.full((2, 2, 4), 255, dtype=np.uint8)
+        rgba, foreground = builder.remove_bg_border_flood(arr)
+        self.assertTrue(foreground.all())
+        self.assertTrue(np.array_equal(rgba, arr))
+
+    def test_tahmures_visible_source_pixels_and_alpha_are_preserved(self):
+        from PIL import Image
+
+        source = np.array(
+            Image.open(
+                REPO
+                / "Characters/tahmures/versions/layout01-v2/source/approved_master.png"
+            )
+        )
+        rgba, foreground = builder.remove_bg_border_flood(source)
+        visible = source[:, :, 3] > 0
+        self.assertTrue(np.array_equal(foreground, visible))
+        self.assertTrue(np.array_equal(rgba[visible], source[visible]))
+
     def test_missing_repo_fails(self):
         with self.assertRaises(FileNotFoundError):
             verify_inputs(

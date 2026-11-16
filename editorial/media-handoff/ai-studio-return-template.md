@@ -14,7 +14,9 @@
 - Occluded surfaces, coupled props and unsupported motions:
 - Commands actually run, exit codes and attached raw logs:
 - Commands not run and why:
-- Actual source-vs-layer, mask/component and runtime preview files:
+- Actual source-vs-layer, mask/component or environment layout/source-art composite files:
+- For environment tasks: stable set/view IDs, lighting, ground/occlusion/caption region checks:
+- Actual runtime preview files (if rendered):
 - Remaining technical failures or visual defects:
 - Requested Codex checks:
 - Owner art/performance decisions still needed:

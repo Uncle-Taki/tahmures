@@ -1,0 +1,38 @@
+{
+  "episode_id": "RW01",
+  "status": "exact language text for LOCAL overlays; not generated lettering",
+  "overlays": [
+    {
+      "id": "RW01-S01-B003",
+      "type": "overlay",
+      "speaker": null,
+      "fa": "پیش از برآمدن خورشید، آتش‌های دیده‌بانی آن‌سوی آب را بشمار.",
+      "en": "Before sunrise, count the watchfires beyond the water.",
+      "scene": "S01"
+    },
+    {
+      "id": "RW01-S10-B003",
+      "type": "overlay",
+      "speaker": null,
+      "fa": "پرامپت = دستورها + کارِ جاری + context (بافتِ مرتبط) + داده + مثال‌ها + محدودیت‌ها + قرارداد خروجی + وضعیتِ تعامل",
+      "en": "Prompt = instructions + current task + context + data + examples + constraints + output contract + interaction state",
+      "scene": "S10"
+    },
+    {
+      "id": "RW01-S10-B006",
+      "type": "overlay",
+      "speaker": null,
+      "fa": "۱. چه کسی این جزء را ساخته است؟\n۲. باید چه اختیاری داشته باشد؟\n۳. چه نقشی بازی می‌کند؟\n۴. کدام مصرف‌کننده نتیجه را به‌کار می‌برد؟\n۵. چه نتیجهٔ مشاهده‌پذیری موفقیت به‌شمار می‌آید؟",
+      "en": "1. Who assembled this element?\n2. What authority should it have?\n3. What role does it play?\n4. Which consumer uses the result?\n5. What observable result counts as success?",
+      "scene": "S10"
+    },
+    {
+      "id": "RW01-S10-B009",
+      "type": "overlay",
+      "speaker": null,
+      "fa": "پیش از داوری دربارهٔ پاسخ، ثبت کن هر قطعهٔ زبان در این‌جا چه کاری انجام می‌دهد.",
+      "en": "Before judging the answer, record what each piece of language is doing here.",
+      "scene": "S10"
+    }
+  ]
+}

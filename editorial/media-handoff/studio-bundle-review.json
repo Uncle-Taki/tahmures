@@ -1,0 +1,1485 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-20",
+  "input": "tahmures_complete_studio_bundle.json",
+  "input_sha256": "e3c320a70288fdaeb4661ed5c524f1ef6236535f0162dfeffa5b36f07d210109",
+  "input_modified": false,
+  "verdict": "SPECIFICATION_ONLY_NOT_ACCEPTED_AS_IMPLEMENTATION_OR_CERTIFICATION",
+  "counts": {
+    "characters": 10,
+    "layers_claimed": 72,
+    "unique_texture_references": 288,
+    "missing_texture_references": 4,
+    "bbox_mismatches": 56,
+    "pixel_count_mismatches": 67,
+    "canvas_mismatches": 1,
+    "source_hash_mismatches": 3,
+    "scenes": 11,
+    "dialogue_cues": 34,
+    "osts": 18,
+    "timeline_seconds": 173
+  },
+  "source_identity_checks": [
+    {
+      "character": "tahmures",
+      "path": "Characters/tahmures/versions/layout01-v2/source/approved_master.png",
+      "exists": true,
+      "claimed_sha256": "3eedfaa5a41965c45a137a74a9137c6e59304a0604f877a81c98870c64dba2e5",
+      "actual_sha256": "3eedfaa5a41965c45a137a74a9137c6e59304a0604f877a81c98870c64dba2e5",
+      "sha256_matches": true
+    },
+    {
+      "character": "akvan_div",
+      "path": "Characters/Akvan Div.png",
+      "exists": true,
+      "claimed_sha256": "dea44985d6cb717aba472319dae4b99d1680a629dc432ed32cd9bcbb9875c0b5",
+      "actual_sha256": "dea44985d6cb717aba472319dae4b99d1680a629dc432ed32cd9bcbb9875c0b5",
+      "sha256_matches": true
+    },
+    {
+      "character": "black_div",
+      "path": "Characters/Black Div.png",
+      "exists": true,
+      "claimed_sha256": "c0684b97c9557fc991606efaefe393f8bd4db7024dce32e71c69f6cd52cd56c8",
+      "actual_sha256": "c0684b97c9557fc991606efaefe393f8bd4db7024dce32e71c69f6cd52cd56c8",
+      "sha256_matches": true
+    },
+    {
+      "character": "div_e_sefid",
+      "path": "Characters/Div-e Sefid.png",
+      "exists": true,
+      "claimed_sha256": "b0d03af2d49d410a58a101af004f5195c6cd20db2a6aca63440b84c373564ed3",
+      "actual_sha256": "b0d03af2d49d410a58a101af004f5195c6cd20db2a6aca63440b84c373564ed3",
+      "sha256_matches": true
+    },
+    {
+      "character": "shahrasp",
+      "path": "Characters/Shahrasp.png",
+      "exists": true,
+      "claimed_sha256": "4c4c5ac10764e4725afbb2074a2ac267c7b0047ce99b6110784a147e7474474b",
+      "actual_sha256": "4c4c5ac10764e4725afbb2074a2ac267c7b0047ce99b6110784a147e7474474b",
+      "sha256_matches": true
+    },
+    {
+      "character": "chapar",
+      "path": "Characters/chapar.png",
+      "exists": true,
+      "claimed_sha256": "abe7349f22e751879d227b03f5e30689726d8b5016ad588121ce66eb2dd5e270",
+      "actual_sha256": "abe7349f22e751879d227b03f5e30689726d8b5016ad588121ce66eb2dd5e270",
+      "sha256_matches": true
+    },
+    {
+      "character": "arash",
+      "path": "Characters/arash.png",
+      "exists": true,
+      "claimed_sha256": "07a57d4138037a2abafc0e709e4878deafe176c08093f6c6dafae4190e3a428d",
+      "actual_sha256": "07a57d4138037a2abafc0e709e4878deafe176c08093f6c6dafae4190e3a428d",
+      "sha256_matches": true
+    },
+    {
+      "character": "garshasp",
+      "path": "Characters/garshasp.png",
+      "exists": true,
+      "claimed_sha256": "ee8ce2bf1cbce516e872d829676aaaeebdbd25244bbd9061bf2f07279313838f",
+      "actual_sha256": "19c57419274c5da0be086219cd86f53eab4980fa84f5eedec125a0b32e39f73e",
+      "sha256_matches": false
+    },
+    {
+      "character": "simurgh_human",
+      "path": "Characters/simurgh - human.png",
+      "exists": true,
+      "claimed_sha256": "0c115712c448bb66cba7f09328fe398c8a1e2f9d1502fa6277b9ecaa12d7b875",
+      "actual_sha256": "6dc71d5b103804422bc116533da7613ec3bcc7f524903c315d44ab18cf240faa",
+      "sha256_matches": false
+    },
+    {
+      "character": "simurgh_bird",
+      "path": "Characters/simurgh - bird.png",
+      "exists": true,
+      "claimed_sha256": "721da7d1b3e8e7a68ea69cb7e1be486a43d9282303cff9c2f689fbf794c4897f",
+      "actual_sha256": "cc9a3ea2078784db7db1a1d4e48db948f691af776971e2e0d783af591181cb6b",
+      "sha256_matches": false
+    }
+  ],
+  "missing_assets": [
+    {
+      "character": "tahmures",
+      "component": "eyes_and_brows",
+      "kind": "layer_png",
+      "path": "/Characters/godot-character-library-recovery-01/characters/tahmures/layers/eyes_and_brows.png"
+    },
+    {
+      "character": "tahmures",
+      "component": "eyes_and_brows",
+      "kind": "mask_png",
+      "path": "/Characters/godot-character-library-recovery-01/characters/tahmures/masks/eyes_and_brows.png"
+    },
+    {
+      "character": "tahmures",
+      "component": "eyes_and_brows",
+      "kind": "provenance_source",
+      "path": "/Characters/godot-character-library-recovery-01/characters/tahmures/provenance/eyes_and_brows__source.png"
+    },
+    {
+      "character": "tahmures",
+      "component": "eyes_and_brows",
+      "kind": "provenance_reconstructed",
+      "path": "/Characters/godot-character-library-recovery-01/characters/tahmures/provenance/eyes_and_brows__reconstructed.png"
+    }
+  ],
+  "bbox_mismatches": [
+    {
+      "character": "tahmures",
+      "component": "approved_head_package",
+      "claimed": [
+        389,
+        15,
+        687,
+        687
+      ],
+      "actual": [
+        389,
+        15,
+        687,
+        310
+      ]
+    },
+    {
+      "character": "tahmures",
+      "component": "neck_and_medallion_chest",
+      "claimed": [
+        440,
+        310,
+        645,
+        645
+      ],
+      "actual": null
+    },
+    {
+      "character": "tahmures",
+      "component": "outer_robe_and_sash",
+      "claimed": [
+        285,
+        310,
+        795,
+        795
+      ],
+      "actual": [
+        311,
+        310,
+        770,
+        1428
+      ]
+    },
+    {
+      "character": "tahmures",
+      "component": "arm_right_viewer_left",
+      "claimed": [
+        208,
+        352,
+        415,
+        415
+      ],
+      "actual": [
+        208,
+        352,
+        415,
+        965
+      ]
+    },
+    {
+      "character": "tahmures",
+      "component": "arm_left_viewer_right",
+      "claimed": [
+        665,
+        350,
+        876,
+        876
+      ],
+      "actual": [
+        665,
+        350,
+        876,
+        965
+      ]
+    },
+    {
+      "character": "tahmures",
+      "component": "feet_and_boots",
+      "claimed": [
+        315,
+        1280,
+        769,
+        769
+      ],
+      "actual": [
+        315,
+        1280,
+        769,
+        1425
+      ]
+    },
+    {
+      "character": "akvan_div",
+      "component": "torso_and_garment_core",
+      "claimed": [
+        470,
+        344,
+        746,
+        1034
+      ],
+      "actual": [
+        341,
+        807,
+        729,
+        1034
+      ]
+    },
+    {
+      "character": "akvan_div",
+      "component": "arm_viewer_left",
+      "claimed": [
+        335,
+        344,
+        470,
+        1034
+      ],
+      "actual": [
+        335,
+        421,
+        523,
+        1033
+      ]
+    },
+    {
+      "character": "akvan_div",
+      "component": "arm_viewer_right",
+      "claimed": [
+        746,
+        432,
+        791,
+        607
+      ],
+      "actual": [
+        603,
+        464,
+        791,
+        1033
+      ]
+    },
+    {
+      "character": "akvan_div",
+      "component": "held_prop_and_occlusion_zone",
+      "claimed": [
+        470,
+        405,
+        786,
+        746
+      ],
+      "actual": [
+        383,
+        326,
+        783,
+        807
+      ]
+    },
+    {
+      "character": "akvan_div",
+      "component": "head_and_headwear",
+      "claimed": [
+        389,
+        16,
+        646,
+        344
+      ],
+      "actual": [
+        413,
+        16,
+        642,
+        326
+      ]
+    },
+    {
+      "character": "akvan_div",
+      "component": "eyes_and_brows",
+      "claimed": [
+        508,
+        148,
+        623,
+        205
+      ],
+      "actual": [
+        468,
+        100,
+        641,
+        242
+      ]
+    },
+    {
+      "character": "black_div",
+      "component": "head_and_headwear",
+      "claimed": [
+        372,
+        24,
+        692,
+        374
+      ],
+      "actual": [
+        372,
+        24,
+        692,
+        332
+      ]
+    },
+    {
+      "character": "black_div",
+      "component": "torso_and_garment_core",
+      "claimed": [
+        342,
+        354,
+        722,
+        1230
+      ],
+      "actual": [
+        241,
+        237,
+        820,
+        1034
+      ]
+    },
+    {
+      "character": "black_div",
+      "component": "lower_garment_legs_feet",
+      "claimed": [
+        169,
+        1034,
+        895,
+        1426
+      ],
+      "actual": [
+        233,
+        1034,
+        831,
+        1426
+      ]
+    },
+    {
+      "character": "div_e_sefid",
+      "component": "head_and_headwear",
+      "claimed": [
+        350,
+        12,
+        670,
+        367
+      ],
+      "actual": [
+        350,
+        12,
+        670,
+        324
+      ]
+    },
+    {
+      "character": "div_e_sefid",
+      "component": "torso_and_garment_core",
+      "claimed": [
+        320,
+        347,
+        700,
+        1235
+      ],
+      "actual": [
+        228,
+        169,
+        744,
+        1036
+      ]
+    },
+    {
+      "character": "div_e_sefid",
+      "component": "arm_viewer_left",
+      "claimed": [
+        228,
+        357,
+        470,
+        1035
+      ],
+      "actual": [
+        271,
+        357,
+        470,
+        1035
+      ]
+    },
+    {
+      "character": "div_e_sefid",
+      "component": "lower_garment_legs_feet",
+      "claimed": [
+        228,
+        1036,
+        793,
+        1433
+      ],
+      "actual": [
+        316,
+        1036,
+        790,
+        1433
+      ]
+    },
+    {
+      "character": "shahrasp",
+      "component": "head_and_headwear",
+      "claimed": [
+        373,
+        17,
+        693,
+        368
+      ],
+      "actual": [
+        373,
+        17,
+        678,
+        326
+      ]
+    },
+    {
+      "character": "shahrasp",
+      "component": "torso_and_garment_core",
+      "claimed": [
+        343,
+        348,
+        723,
+        1228
+      ],
+      "actual": [
+        336,
+        291,
+        718,
+        1031
+      ]
+    },
+    {
+      "character": "shahrasp",
+      "component": "arm_viewer_right",
+      "claimed": [
+        573,
+        358,
+        801,
+        1030
+      ],
+      "actual": [
+        573,
+        461,
+        801,
+        1030
+      ]
+    },
+    {
+      "character": "shahrasp",
+      "component": "lower_garment_legs_feet",
+      "claimed": [
+        266,
+        1031,
+        801,
+        1424
+      ],
+      "actual": [
+        338,
+        1031,
+        763,
+        1424
+      ]
+    },
+    {
+      "character": "chapar",
+      "component": "head_and_headwear",
+      "claimed": [
+        392,
+        14,
+        712,
+        363
+      ],
+      "actual": [
+        399,
+        14,
+        664,
+        321
+      ]
+    },
+    {
+      "character": "chapar",
+      "component": "torso_and_garment_core",
+      "claimed": [
+        362,
+        343,
+        742,
+        1215
+      ],
+      "actual": [
+        252,
+        349,
+        889,
+        1020
+      ]
+    },
+    {
+      "character": "chapar",
+      "component": "arm_viewer_right",
+      "claimed": [
+        592,
+        353,
+        896,
+        1019
+      ],
+      "actual": [
+        592,
+        599,
+        890,
+        1019
+      ]
+    },
+    {
+      "character": "chapar",
+      "component": "lower_garment_legs_feet",
+      "claimed": [
+        208,
+        1020,
+        896,
+        1410
+      ],
+      "actual": [
+        246,
+        1020,
+        896,
+        1410
+      ]
+    },
+    {
+      "character": "arash",
+      "component": "head_and_headwear",
+      "claimed": [
+        390,
+        21,
+        710,
+        371
+      ],
+      "actual": [
+        390,
+        21,
+        710,
+        329
+      ]
+    },
+    {
+      "character": "arash",
+      "component": "torso_and_garment_core",
+      "claimed": [
+        360,
+        351,
+        740,
+        1227
+      ],
+      "actual": [
+        349,
+        21,
+        777,
+        1032
+      ]
+    },
+    {
+      "character": "arash",
+      "component": "arm_viewer_left",
+      "claimed": [
+        205,
+        361,
+        510,
+        1030
+      ],
+      "actual": [
+        262,
+        361,
+        510,
+        1031
+      ]
+    },
+    {
+      "character": "arash",
+      "component": "arm_viewer_right",
+      "claimed": [
+        590,
+        361,
+        895,
+        1030
+      ],
+      "actual": [
+        590,
+        434,
+        830,
+        1031
+      ]
+    },
+    {
+      "character": "arash",
+      "component": "held_prop_and_occlusion_zone",
+      "claimed": [
+        370,
+        328,
+        770,
+        804
+      ],
+      "actual": [
+        370,
+        329,
+        770,
+        806
+      ]
+    },
+    {
+      "character": "arash",
+      "component": "lower_garment_legs_feet",
+      "claimed": [
+        205,
+        1031,
+        895,
+        1423
+      ],
+      "actual": [
+        337,
+        1032,
+        839,
+        1424
+      ]
+    },
+    {
+      "character": "garshasp",
+      "component": "head_and_headwear",
+      "claimed": [
+        385,
+        18,
+        705,
+        368
+      ],
+      "actual": [
+        384,
+        16,
+        704,
+        325
+      ]
+    },
+    {
+      "character": "garshasp",
+      "component": "eyes_and_brows",
+      "claimed": [
+        450,
+        102,
+        640,
+        242
+      ],
+      "actual": [
+        449,
+        100,
+        618,
+        241
+      ]
+    },
+    {
+      "character": "garshasp",
+      "component": "torso_and_garment_core",
+      "claimed": [
+        355,
+        348,
+        735,
+        1225
+      ],
+      "actual": [
+        222,
+        277,
+        868,
+        1031
+      ]
+    },
+    {
+      "character": "garshasp",
+      "component": "arm_viewer_left",
+      "claimed": [
+        200,
+        358,
+        505,
+        1025
+      ],
+      "actual": [
+        217,
+        358,
+        504,
+        1030
+      ]
+    },
+    {
+      "character": "garshasp",
+      "component": "arm_viewer_right",
+      "claimed": [
+        585,
+        358,
+        890,
+        1025
+      ],
+      "actual": [
+        584,
+        477,
+        868,
+        1030
+      ]
+    },
+    {
+      "character": "garshasp",
+      "component": "held_prop_and_occlusion_zone",
+      "claimed": [
+        365,
+        325,
+        765,
+        800
+      ],
+      "actual": [
+        364,
+        325,
+        764,
+        805
+      ]
+    },
+    {
+      "character": "garshasp",
+      "component": "lower_garment_legs_feet",
+      "claimed": [
+        200,
+        1025,
+        890,
+        1420
+      ],
+      "actual": [
+        218,
+        1031,
+        872,
+        1425
+      ]
+    },
+    {
+      "character": "simurgh_human",
+      "component": "head_and_headwear",
+      "claimed": [
+        380,
+        15,
+        700,
+        365
+      ],
+      "actual": [
+        371,
+        19,
+        688,
+        328
+      ]
+    },
+    {
+      "character": "simurgh_human",
+      "component": "eyes_and_brows",
+      "claimed": [
+        445,
+        99,
+        635,
+        239
+      ],
+      "actual": [
+        438,
+        103,
+        626,
+        243
+      ]
+    },
+    {
+      "character": "simurgh_human",
+      "component": "torso_and_garment_core",
+      "claimed": [
+        350,
+        345,
+        730,
+        1220
+      ],
+      "actual": [
+        329,
+        303,
+        701,
+        1031
+      ]
+    },
+    {
+      "character": "simurgh_human",
+      "component": "arm_viewer_left",
+      "claimed": [
+        195,
+        355,
+        500,
+        1020
+      ],
+      "actual": [
+        263,
+        360,
+        491,
+        1030
+      ]
+    },
+    {
+      "character": "simurgh_human",
+      "component": "arm_viewer_right",
+      "claimed": [
+        580,
+        355,
+        885,
+        1020
+      ],
+      "actual": [
+        571,
+        517,
+        789,
+        1030
+      ]
+    },
+    {
+      "character": "simurgh_human",
+      "component": "held_prop_and_occlusion_zone",
+      "claimed": [
+        360,
+        322,
+        760,
+        796
+      ],
+      "actual": [
+        351,
+        328,
+        751,
+        805
+      ]
+    },
+    {
+      "character": "simurgh_human",
+      "component": "lower_garment_legs_feet",
+      "claimed": [
+        195,
+        1022,
+        885,
+        1415
+      ],
+      "actual": [
+        316,
+        1031,
+        799,
+        1424
+      ]
+    },
+    {
+      "character": "simurgh_bird",
+      "component": "crest_and_head",
+      "claimed": [
+        350,
+        20,
+        680,
+        320
+      ],
+      "actual": [
+        362,
+        25,
+        716,
+        260
+      ]
+    },
+    {
+      "character": "simurgh_bird",
+      "component": "eye_and_brow",
+      "claimed": [
+        420,
+        90,
+        580,
+        200
+      ],
+      "actual": [
+        500,
+        115,
+        605,
+        185
+      ]
+    },
+    {
+      "character": "simurgh_bird",
+      "component": "neck_and_breast",
+      "claimed": [
+        320,
+        280,
+        720,
+        700
+      ],
+      "actual": [
+        422,
+        260,
+        829,
+        1340
+      ]
+    },
+    {
+      "character": "simurgh_bird",
+      "component": "wing_near_left",
+      "claimed": [
+        80,
+        300,
+        450,
+        1100
+      ],
+      "actual": [
+        310,
+        285,
+        520,
+        720
+      ]
+    },
+    {
+      "character": "simurgh_bird",
+      "component": "wing_far_right",
+      "claimed": [
+        600,
+        300,
+        1020,
+        1100
+      ],
+      "actual": [
+        620,
+        290,
+        770,
+        921
+      ]
+    },
+    {
+      "character": "simurgh_bird",
+      "component": "tail_plumes",
+      "claimed": [
+        300,
+        750,
+        780,
+        1400
+      ],
+      "actual": [
+        79,
+        720,
+        755,
+        1315
+      ]
+    },
+    {
+      "character": "simurgh_bird",
+      "component": "leg_left_talon",
+      "claimed": [
+        320,
+        930,
+        546,
+        1359
+      ],
+      "actual": [
+        320,
+        930,
+        545,
+        1393
+      ]
+    },
+    {
+      "character": "simurgh_bird",
+      "component": "leg_right_talon",
+      "claimed": [
+        546,
+        930,
+        776,
+        1339
+      ],
+      "actual": [
+        545,
+        930,
+        775,
+        1372
+      ]
+    },
+    {
+      "character": "simurgh_bird",
+      "component": "scroll_cylinder_prop",
+      "claimed": [
+        400,
+        820,
+        680,
+        1050
+      ],
+      "actual": [
+        422,
+        275,
+        710,
+        535
+      ]
+    }
+  ],
+  "pixel_count_mismatches": [
+    {
+      "character": "tahmures",
+      "component": "approved_head_package",
+      "claimed": 84562,
+      "actual": 65656
+    },
+    {
+      "character": "tahmures",
+      "component": "neck_and_medallion_chest",
+      "claimed": 54324,
+      "actual": 0
+    },
+    {
+      "character": "tahmures",
+      "component": "outer_robe_and_sash",
+      "claimed": 419498,
+      "actual": 289872
+    },
+    {
+      "character": "akvan_div",
+      "component": "torso_and_garment_core",
+      "claimed": 124979,
+      "actual": 18468
+    },
+    {
+      "character": "akvan_div",
+      "component": "arm_viewer_left",
+      "claimed": 69200,
+      "actual": 43146
+    },
+    {
+      "character": "akvan_div",
+      "component": "arm_viewer_right",
+      "claimed": 1533,
+      "actual": 24319
+    },
+    {
+      "character": "akvan_div",
+      "component": "held_prop_and_occlusion_zone",
+      "claimed": 45560,
+      "actual": 159590
+    },
+    {
+      "character": "akvan_div",
+      "component": "head_and_headwear",
+      "claimed": 51458,
+      "actual": 28895
+    },
+    {
+      "character": "akvan_div",
+      "component": "eyes_and_brows",
+      "claimed": 3791,
+      "actual": 22103
+    },
+    {
+      "character": "black_div",
+      "component": "head_and_headwear",
+      "claimed": 0,
+      "actual": 52175
+    },
+    {
+      "character": "black_div",
+      "component": "eyes_and_brows",
+      "claimed": 0,
+      "actual": 26550
+    },
+    {
+      "character": "black_div",
+      "component": "torso_and_garment_core",
+      "claimed": 0,
+      "actual": 27297
+    },
+    {
+      "character": "black_div",
+      "component": "arm_viewer_left",
+      "claimed": 0,
+      "actual": 127974
+    },
+    {
+      "character": "black_div",
+      "component": "arm_viewer_right",
+      "claimed": 0,
+      "actual": 100510
+    },
+    {
+      "character": "black_div",
+      "component": "held_prop_and_occlusion_zone",
+      "claimed": 0,
+      "actual": 190800
+    },
+    {
+      "character": "black_div",
+      "component": "lower_garment_legs_feet",
+      "claimed": 0,
+      "actual": 153224
+    },
+    {
+      "character": "div_e_sefid",
+      "component": "head_and_headwear",
+      "claimed": 0,
+      "actual": 35647
+    },
+    {
+      "character": "div_e_sefid",
+      "component": "eyes_and_brows",
+      "claimed": 0,
+      "actual": 24288
+    },
+    {
+      "character": "div_e_sefid",
+      "component": "torso_and_garment_core",
+      "claimed": 0,
+      "actual": 36927
+    },
+    {
+      "character": "div_e_sefid",
+      "component": "arm_viewer_left",
+      "claimed": 0,
+      "actual": 39475
+    },
+    {
+      "character": "div_e_sefid",
+      "component": "arm_viewer_right",
+      "claimed": 0,
+      "actual": 49073
+    },
+    {
+      "character": "div_e_sefid",
+      "component": "held_prop_and_occlusion_zone",
+      "claimed": 0,
+      "actual": 177922
+    },
+    {
+      "character": "div_e_sefid",
+      "component": "lower_garment_legs_feet",
+      "claimed": 0,
+      "actual": 117794
+    },
+    {
+      "character": "shahrasp",
+      "component": "head_and_headwear",
+      "claimed": 0,
+      "actual": 26410
+    },
+    {
+      "character": "shahrasp",
+      "component": "eyes_and_brows",
+      "claimed": 0,
+      "actual": 23221
+    },
+    {
+      "character": "shahrasp",
+      "component": "torso_and_garment_core",
+      "claimed": 0,
+      "actual": 18973
+    },
+    {
+      "character": "shahrasp",
+      "component": "arm_viewer_left",
+      "claimed": 0,
+      "actual": 44508
+    },
+    {
+      "character": "shahrasp",
+      "component": "arm_viewer_right",
+      "claimed": 0,
+      "actual": 34718
+    },
+    {
+      "character": "shahrasp",
+      "component": "held_prop_and_occlusion_zone",
+      "claimed": 0,
+      "actual": 176605
+    },
+    {
+      "character": "shahrasp",
+      "component": "lower_garment_legs_feet",
+      "claimed": 0,
+      "actual": 126735
+    },
+    {
+      "character": "chapar",
+      "component": "head_and_headwear",
+      "claimed": 0,
+      "actual": 25803
+    },
+    {
+      "character": "chapar",
+      "component": "eyes_and_brows",
+      "claimed": 0,
+      "actual": 25030
+    },
+    {
+      "character": "chapar",
+      "component": "torso_and_garment_core",
+      "claimed": 0,
+      "actual": 18563
+    },
+    {
+      "character": "chapar",
+      "component": "arm_viewer_left",
+      "claimed": 0,
+      "actual": 94269
+    },
+    {
+      "character": "chapar",
+      "component": "arm_viewer_right",
+      "claimed": 0,
+      "actual": 68091
+    },
+    {
+      "character": "chapar",
+      "component": "held_prop_and_occlusion_zone",
+      "claimed": 0,
+      "actual": 177310
+    },
+    {
+      "character": "chapar",
+      "component": "lower_garment_legs_feet",
+      "claimed": 0,
+      "actual": 97306
+    },
+    {
+      "character": "arash",
+      "component": "head_and_headwear",
+      "claimed": 0,
+      "actual": 45330
+    },
+    {
+      "character": "arash",
+      "component": "eyes_and_brows",
+      "claimed": 0,
+      "actual": 24025
+    },
+    {
+      "character": "arash",
+      "component": "torso_and_garment_core",
+      "claimed": 0,
+      "actual": 27254
+    },
+    {
+      "character": "arash",
+      "component": "arm_viewer_left",
+      "claimed": 0,
+      "actual": 64139
+    },
+    {
+      "character": "arash",
+      "component": "arm_viewer_right",
+      "claimed": 0,
+      "actual": 52834
+    },
+    {
+      "character": "arash",
+      "component": "held_prop_and_occlusion_zone",
+      "claimed": 0,
+      "actual": 174210
+    },
+    {
+      "character": "arash",
+      "component": "lower_garment_legs_feet",
+      "claimed": 0,
+      "actual": 86866
+    },
+    {
+      "character": "garshasp",
+      "component": "head_and_headwear",
+      "claimed": 0,
+      "actual": 33164
+    },
+    {
+      "character": "garshasp",
+      "component": "eyes_and_brows",
+      "claimed": 0,
+      "actual": 21215
+    },
+    {
+      "character": "garshasp",
+      "component": "torso_and_garment_core",
+      "claimed": 0,
+      "actual": 22989
+    },
+    {
+      "character": "garshasp",
+      "component": "arm_viewer_left",
+      "claimed": 0,
+      "actual": 116763
+    },
+    {
+      "character": "garshasp",
+      "component": "arm_viewer_right",
+      "claimed": 0,
+      "actual": 74377
+    },
+    {
+      "character": "garshasp",
+      "component": "held_prop_and_occlusion_zone",
+      "claimed": 0,
+      "actual": 188478
+    },
+    {
+      "character": "garshasp",
+      "component": "lower_garment_legs_feet",
+      "claimed": 0,
+      "actual": 137621
+    },
+    {
+      "character": "simurgh_human",
+      "component": "head_and_headwear",
+      "claimed": 0,
+      "actual": 29494
+    },
+    {
+      "character": "simurgh_human",
+      "component": "eyes_and_brows",
+      "claimed": 0,
+      "actual": 22615
+    },
+    {
+      "character": "simurgh_human",
+      "component": "torso_and_garment_core",
+      "claimed": 0,
+      "actual": 18983
+    },
+    {
+      "character": "simurgh_human",
+      "component": "arm_viewer_left",
+      "claimed": 0,
+      "actual": 46353
+    },
+    {
+      "character": "simurgh_human",
+      "component": "arm_viewer_right",
+      "claimed": 0,
+      "actual": 43595
+    },
+    {
+      "character": "simurgh_human",
+      "component": "held_prop_and_occlusion_zone",
+      "claimed": 0,
+      "actual": 181847
+    },
+    {
+      "character": "simurgh_human",
+      "component": "lower_garment_legs_feet",
+      "claimed": 0,
+      "actual": 86577
+    },
+    {
+      "character": "simurgh_bird",
+      "component": "crest_and_head",
+      "claimed": 0,
+      "actual": 46829
+    },
+    {
+      "character": "simurgh_bird",
+      "component": "eye_and_brow",
+      "claimed": 0,
+      "actual": 7350
+    },
+    {
+      "character": "simurgh_bird",
+      "component": "neck_and_breast",
+      "claimed": 0,
+      "actual": 42815
+    },
+    {
+      "character": "simurgh_bird",
+      "component": "wing_near_left",
+      "claimed": 0,
+      "actual": 53977
+    },
+    {
+      "character": "simurgh_bird",
+      "component": "wing_far_right",
+      "claimed": 0,
+      "actual": 56754
+    },
+    {
+      "character": "simurgh_bird",
+      "component": "tail_plumes",
+      "claimed": 0,
+      "actual": 173057
+    },
+    {
+      "character": "simurgh_bird",
+      "component": "leg_left_talon",
+      "claimed": 0,
+      "actual": 87458
+    },
+    {
+      "character": "simurgh_bird",
+      "component": "leg_right_talon",
+      "claimed": 0,
+      "actual": 60463
+    },
+    {
+      "character": "simurgh_bird",
+      "component": "scroll_cylinder_prop",
+      "claimed": 0,
+      "actual": 27638
+    }
+  ],
+  "canvas_mismatches": [
+    {
+      "character": "simurgh_human",
+      "claimed": {
+        "width": 1086,
+        "height": 1448
+      },
+      "actual": [
+        1087,
+        1447
+      ],
+      "root_canvas_claim": [
+        1086,
+        1448
+      ]
+    }
+  ],
+  "timeline_errors": [],
+  "claimed_runtime_paths": [
+    {
+      "reference": "res://scenes/chapters/chapter_01_animatic.tscn",
+      "exists_in_active_project": false
+    },
+    {
+      "reference": "res://scenes/chapters/chapter_01_director.gd",
+      "exists_in_active_project": false
+    }
+  ],
+  "changed_protected_non_target_outputs": [],
+  "changed_protected_inputs": [],
+  "claims_not_established_by_this_json": [
+    "organic contours and exact recomposition of newly extracted assets",
+    "safe joint overlaps and independent prop decoupling",
+    "blink/thinking/alert/talking on all ten rigs",
+    "Godot/Unity/Spine/PixiJS compatibility",
+    "100 percent certification or owner approval",
+    "complete scene rendering, background assets, audio and fonts"
+  ],
+  "semantic_blockers": [
+    {
+      "path": "chapter_01_animatic.programmatic_osts[9]",
+      "finding": "Requested Result: Count contradicts classify object/name missing context; seal_icon implies unsupported authority."
+    },
+    {
+      "path": "license",
+      "finding": "Proprietary export label conflicts with repository content/code licences; do not adopt it."
+    },
+    {
+      "path": "head_inspection_registry.tahmures",
+      "finding": "Anatomical-left/viewer-right names and receiver-underlay draw order must follow the accepted rig, not this registry's zIndex order; open_test is not phoneme approval."
+    },
+    {
+      "path": "character_rigs",
+      "finding": "All-ten certification exceeds the Akvan-only assignment and contradicts candidate readiness labels; no new contour files or execution evidence are delivered here."
+    }
+  ],
+  "human_approved": false,
+  "runtime_import_authorized_by_report": false
+}

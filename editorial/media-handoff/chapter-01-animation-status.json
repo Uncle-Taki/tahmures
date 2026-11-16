@@ -1,0 +1,551 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-10-24",
+  "scope": "Chapter 01 media production tracker; not manuscript or approval authority",
+  "implementer": "Codex local; external helpers optional",
+  "workflow": "chapter-01-animation-workflow.md",
+  "chapter_complete": false,
+  "owner_final_approval": false,
+  "next_task": "Characters/animations/chapter-01-candidate-01/production/visual-r02/review-packet.md",
+  "verified_existing": {
+    "background_candidate_images": 25,
+    "blank_programmatic_stages": 2,
+    "background_evidence": "Characters/environments/chapter-01-candidate-01/validation.json",
+    "character_scope": "source-pose candidates; anatomical motion incomplete",
+    "beard_alpha_repair": "verified source-pixel restoration; not new art approval",
+    "beard_evidence": "editorial/media-handoff/2026-10-20-tahmures-beard-repair.md",
+    "s01_silent_proof": "r03 wide artwork accepted; separate r04 limited forearm reading motion verified in EN/FA (720 actual frames); new motion/cleanup owner review pending"
+  },
+  "timing": {
+    "seconds": 197.5,
+    "fps": 30,
+    "frames": 5925,
+    "resolution": [
+      1280,
+      720
+    ],
+    "status": "assembled_silent_visual_candidate; audio deferred by owner; not final spoken timing",
+    "original_board_seconds": 173,
+    "scene_extensions": {
+      "S03": 6.5,
+      "S04": 10,
+      "S11": 8
+    },
+    "current_timeline": "Characters/animations/chapter-01-candidate-01/production/visual-r02/assembly-04/timeline.json"
+  },
+  "phases": [
+    {
+      "id": 1,
+      "name": "Storyboard and performance specification",
+      "status": "static_board_prepared_and_technically_checked_open_risks",
+      "evidence": "Characters/animations/chapter-01-candidate-01/planning/board-validation.json",
+      "owner_approved": false,
+      "shot_count": 34,
+      "revision": "board-r02-human-and-qwen-repairs",
+      "review_reconciliation": "Characters/animations/chapter-01-candidate-01/planning/review-reconciliation.md"
+    },
+    {
+      "id": 2,
+      "name": "S01 minimum assets and rendered proof",
+      "status": "r03_art_owner_accepted_r04_wide_motion_machine_verified_owner_motion_review_pending",
+      "specification": "Characters/animations/chapter-01-candidate-01/planning/s01-proof-specification.md",
+      "manifest": "Characters/animations/chapter-01-candidate-01/revisions/s01-r04/manifest.json",
+      "evidence": "Characters/animations/chapter-01-candidate-01/renders/s01-r04/en/verification.json",
+      "review_report": "Characters/animations/chapter-01-candidate-01/revisions/s01-r04/README.md",
+      "review_page": "Characters/animations/chapter-01-candidate-01/s01-review.html",
+      "actual_frames_per_language": 360,
+      "languages": [
+        "en",
+        "fa"
+      ],
+      "owner_approved": false,
+      "revision": "s01-r04-wide-reading-motion",
+      "reading_action_animated": true,
+      "hand_closeup_removed": true,
+      "evidence_fa": "Characters/animations/chapter-01-candidate-01/renders/s01-r04/fa/verification.json",
+      "active_shot_override": "Characters/animations/chapter-01-candidate-01/revisions/s01-r04/shot-override.json",
+      "superseded_revision": "r02 technical proof rejected by owner for art",
+      "art_owner_accepted": true,
+      "art_acceptance_evidence": "editorial/media-handoff/chapter-01-owner-acceptance.json",
+      "performance_owner_accepted": false,
+      "motion_candidate_manifest": "Characters/animations/chapter-01-candidate-01/revisions/s01-r04/manifest.json",
+      "accepted_art_revision": "s01-r03-owner-art-rejection-repair",
+      "external_review_reconciliation": "Characters/animations/chapter-01-candidate-01/revisions/s01-r04/review-followup/reconciliation.md",
+      "review_followup_evidence": "Characters/animations/chapter-01-candidate-01/revisions/s01-r04/review-followup/verification.json",
+      "received_review": "editorial/media-handoff/qwen-chapter-01-s01-r04-review.md",
+      "review_outcome": "Technical results reproduced; no confirmed repair trigger; visible playback quality and owner motion acceptance pending"
+    },
+    {
+      "id": 3,
+      "name": "Remaining shot-specific assets and rigs",
+      "status": "all_eleven_limited_visual_candidates_delivered_owner_art_and_motion_review_pending",
+      "current_unit": "whole_chapter_visual_review",
+      "evidence": "Characters/animations/chapter-01-candidate-01/revisions/s05-r01/evidence/final-recheck-01.json",
+      "review_page": "Characters/animations/chapter-01-candidate-01/revisions/s05-r01/index.html",
+      "owner_approved": false,
+      "scene_performance_implemented": true,
+      "approval_request": "Characters/animations/chapter-01-candidate-01/revisions/s05-r01/approval-request.json",
+      "art_owner_accepted": false,
+      "performance_scope": "limited scene-specific actions; not complete anatomical rigs"
+    },
+    {
+      "id": 4,
+      "name": "All scene blocks and silent animatic",
+      "status": "all_eleven_scenes_assembled_in_bilingual_silent_visual_candidate",
+      "implemented_scene_candidates": [
+        "CH01-S01",
+        "CH01-S02",
+        "CH01-S03",
+        "CH01-S04",
+        "CH01-S05",
+        "CH01-S06",
+        "CH01-S07",
+        "CH01-S08",
+        "CH01-S09",
+        "CH01-S10",
+        "CH01-S11"
+      ],
+      "owner_approved": false,
+      "staging_only_scene_candidates": [],
+      "evidence": "Characters/animations/chapter-01-candidate-01/production/visual-r02/assembly-02/timeline.json"
+    },
+    {
+      "id": 5,
+      "name": "Bilingual voice, timing and polish",
+      "status": "audio_deferred_by_explicit_owner_choice_2026-10-22"
+    },
+    {
+      "id": 6,
+      "name": "Final exports and quality checks",
+      "status": "bilingual_visual_exports_and_technical_checks_pass; audio_and_final_acceptance_pending"
+    },
+    {
+      "id": 7,
+      "name": "Package, repository gate and acceptance",
+      "status": "repository_gate_passes; concrete_visual_package_ready_for_owner_review"
+    }
+  ],
+  "owner_choices": [
+    {
+      "choice": "Simurgh form for Chapter 01",
+      "status": "owner_selected_human_inside_rooms_bird_outside_2026-10-21",
+      "blocks": "Earlier exterior human appearances require separate candidate revisions",
+      "evidence": "Characters/animations/chapter-01-candidate-01/revisions/s10-r01/owner-form-selection.json"
+    },
+    {
+      "choice": "Voice approach and performances for EN and FA",
+      "status": "unresolved",
+      "blocks": "final audio and timing lock"
+    },
+    {
+      "choice": "Actual candidate art/performance selections",
+      "status": "pending_concrete_review",
+      "blocks": "final promotion"
+    },
+    {
+      "choice": "S02 r02 held-pose Chapar likeness, hand contact and tablet design/style",
+      "status": "accepted_2026-10-21",
+      "blocks": "none for accepted r02 held-art scope",
+      "review_page": "Characters/animations/chapter-01-candidate-01/revisions/s02-r02/index.html",
+      "request": "Characters/animations/chapter-01-candidate-01/revisions/s02-r02/approval-request.json",
+      "acceptance_evidence": "editorial/media-handoff/chapter-01-s02-owner-acceptance.json"
+    },
+    {
+      "choice": "S05 wet empty-handed Black Div body and dusk dialogue staging",
+      "status": "pending_concrete_review",
+      "blocks": "dependent new facial performance/art promotion",
+      "review_page": "Characters/animations/chapter-01-candidate-01/revisions/s05-r01/index.html",
+      "request": "Characters/animations/chapter-01-candidate-01/revisions/s05-r01/approval-request.json"
+    },
+    {
+      "choice": "S10 new art and limited silent motion",
+      "status": "pending_concrete_review",
+      "review_page": "Characters/animations/chapter-01-candidate-01/revisions/s10-r01/index.html"
+    }
+  ],
+  "release_gate": {
+    "last_full_make_check": {
+      "date": "2026-10-22",
+      "exit": 0,
+      "passed_tests": 797,
+      "failed_tests": 0,
+      "later_targets_reached": true,
+      "log": "Characters/animations/chapter-01-candidate-01/production/visual-r01/make-check.log"
+    },
+    "blocker": "No current repository gate failure; owner visual signoff and deferred audio remain",
+    "automatic_commit_push_publish": false,
+    "source_metadata_reconciliation": "Characters/animations/chapter-01-candidate-01/production/visual-r01/source-metadata-reconciliation.json"
+  },
+  "planning_deliverables": {
+    "board": "Characters/animations/chapter-01-candidate-01/planning/shot-board.json",
+    "gallery": "Characters/animations/chapter-01-candidate-01/planning/index.html",
+    "asset_matrix": "Characters/animations/chapter-01-candidate-01/planning/missing-asset-action-matrix.csv",
+    "static_contact_sheet": "Characters/animations/chapter-01-candidate-01/planning/storyboard-contact-sheet.jpg"
+  },
+  "review_repairs": {
+    "human_floor_notes": [
+      "CH01-S04-C black_div",
+      "CH01-S10-A tahmures"
+    ],
+    "floor_status": "machine_repair_visually_checked_owner_recheck_pending",
+    "qwen_report_preserved": true,
+    "planning_fixes": [
+      "F-001 candidate cue retime",
+      "F-002 repeated sentence",
+      "F-003 ledger overlap",
+      "F-005 specified motion tests",
+      "F-008 wide contact pose budget"
+    ],
+    "future_render_checks_pending": [
+      "F-004",
+      "F-006",
+      "F-007",
+      "S01 owner motion/contact review of r04"
+    ],
+    "matrix_rows": 48,
+    "s01_followthrough": {
+      "r02_status": "Owner rejected artwork; prior scan/grip passes retained as historical only",
+      "r03_status": "Wide generated illustration and material counter replace rejected visuals; timed caption/replay/movie tests pass",
+      "reading_performance": "r04 motion produced and technically checked; viewer clarity/contact and owner performance acceptance pending",
+      "r04_status": "Limited wide forearm action implemented, 20.94px one-pass scan; independent image/anchor checks and three broken-motion fixtures pass"
+    }
+  },
+  "review_policy": {
+    "after_each_bounded_part": "Create Qwen review prompt with actual paths, commands, evidence and unresolved risks; Codex reproduces findings; owner acceptance remains separate.",
+    "automatic_provider_submission": false,
+    "s01_prompts": [
+      "editorial/media-handoff/qwen-chapter-01-s01-assets-review-prompt.md",
+      "editorial/media-handoff/qwen-chapter-01-s01-proof-review-prompt.md"
+    ],
+    "current_prompt": "Characters/animations/chapter-01-candidate-01/production/visual-r01/review-packet.md",
+    "s01_prompts_status": "Original two prompts reviewed rejected r02; current follow-up prompt reconciles received r04 review",
+    "external_review_required": false,
+    "current_checker": "Codex local implementation, actual output inspection and deterministic checks; external Qwen unavailable and optional"
+  },
+  "scene_deliveries": {
+    "CH01-S02": {
+      "silent_candidate_complete": true,
+      "final_scene_complete": false,
+      "revision": "s02-r06",
+      "shots": [
+        "CH01-S02-A",
+        "CH01-S02-B",
+        "CH01-S02-C"
+      ],
+      "duration_seconds": 16,
+      "frames_per_language": 480,
+      "languages": [
+        "en",
+        "fa"
+      ],
+      "review_page": "Characters/animations/chapter-01-candidate-01/revisions/s02-r06/index.html",
+      "fresh_artifact_recheck": "Characters/animations/chapter-01-candidate-01/production/visual-r02/deliveries-01/s02/en/verification.json",
+      "art_owner_accepted": true,
+      "motion_owner_accepted": false,
+      "audio_produced": false,
+      "risks": [
+        "New sleeve/body cleanup and upright support need owner motion review",
+        "Voice approach unresolved; silent output only"
+      ],
+      "chapter_interval": [
+        12,
+        28
+      ],
+      "visual_candidate_delivered": true,
+      "chapter_integrated_in_visual_candidate": true
+    },
+    "CH01-S05": {
+      "silent_staging_candidate_complete": true,
+      "silent_performance_complete": false,
+      "final_scene_complete": false,
+      "revision": "s05-r03",
+      "shots": [
+        "CH01-S05-A"
+      ],
+      "duration_seconds": 15,
+      "frames_per_language": 450,
+      "languages": [
+        "en",
+        "fa"
+      ],
+      "review_page": "Characters/animations/chapter-01-candidate-01/revisions/s05-r03/index.html",
+      "fresh_artifact_recheck": "Characters/animations/chapter-01-candidate-01/production/visual-r02/deliveries-01/s05/en/verification.json",
+      "shot_override": "Characters/animations/chapter-01-candidate-01/revisions/s05-r01/shot-override.json",
+      "art_owner_accepted": false,
+      "staging_owner_accepted": false,
+      "actors_static": false,
+      "camera_animated": true,
+      "new_facial_action": true,
+      "audio_produced": false,
+      "approval_request": "Characters/animations/chapter-01-candidate-01/revisions/s05-r01/approval-request.json",
+      "next_performance_unit": "s05-r02 delivered; owner review pending",
+      "risks": [
+        "Bounded face-state art and mask join need owner visual review",
+        "No lip sync or full facial rig; audio deferred by owner"
+      ],
+      "chapter_interval": [
+        69.5,
+        84.5
+      ],
+      "visual_candidate_delivered": true,
+      "chapter_integrated_in_visual_candidate": true,
+      "motion_owner_accepted": false,
+      "whole_body_positions_static": true,
+      "performance_scope": "bounded realization expression-state transition; no lip sync/full facial rig"
+    },
+    "CH01-S10": {
+      "revision": "s10-r02",
+      "silent_candidate_complete": true,
+      "final_scene_complete": false,
+      "shots": [
+        "CH01-S10-A",
+        "CH01-S10-B",
+        "CH01-S10-C",
+        "CH01-S10-D",
+        "CH01-S10-E"
+      ],
+      "duration_seconds": 15,
+      "frames_per_language": 450,
+      "languages": [
+        "en",
+        "fa"
+      ],
+      "review_page": "Characters/animations/chapter-01-candidate-01/revisions/s10-r02/index.html",
+      "fresh_artifact_recheck": "Characters/animations/chapter-01-candidate-01/production/visual-r02/deliveries-01/s10/en/verification.json",
+      "art_owner_accepted": false,
+      "motion_owner_accepted": false,
+      "audio_produced": false,
+      "risks": [
+        "Release/cuff and calm-face derivatives need owner review",
+        "Mounted cutouts have no articulated horse gait",
+        "Long cue and short dawn reprises need playback/readability review; spoken timing deferred"
+      ],
+      "chapter_interval": [
+        167.5,
+        182.5
+      ],
+      "visual_candidate_delivered": true,
+      "chapter_integrated_in_visual_candidate": true,
+      "messenger_cast": "Div-e Sefid"
+    },
+    "CH01-S01": {
+      "revision": "s01-r04",
+      "duration_seconds": 12,
+      "frames_per_language": 360,
+      "languages": [
+        "en",
+        "fa"
+      ],
+      "chapter_interval": [
+        0,
+        12
+      ],
+      "review_page": "Characters/animations/chapter-01-candidate-01/revisions/s01-r04/README.md",
+      "visual_candidate_delivered": true,
+      "chapter_integrated_in_visual_candidate": true,
+      "final_scene_complete": false,
+      "audio_produced": false,
+      "motion_owner_accepted": false
+    },
+    "CH01-S03": {
+      "revision": "s03-r04",
+      "duration_seconds": 16.5,
+      "frames_per_language": 495,
+      "languages": [
+        "en",
+        "fa"
+      ],
+      "chapter_interval": [
+        28,
+        44.5
+      ],
+      "review_page": "Characters/animations/chapter-01-candidate-01/revisions/s03-r04/index.html",
+      "visual_candidate_delivered": true,
+      "chapter_integrated_in_visual_candidate": true,
+      "final_scene_complete": false,
+      "audio_produced": false,
+      "motion_owner_accepted": false,
+      "messenger_cast": "Div-e Sefid",
+      "fresh_artifact_recheck": "Characters/animations/chapter-01-candidate-01/production/visual-r02/deliveries-01/s03/en/verification.json"
+    },
+    "CH01-S04": {
+      "revision": "s04-r04",
+      "duration_seconds": 25,
+      "frames_per_language": 750,
+      "languages": [
+        "en",
+        "fa"
+      ],
+      "chapter_interval": [
+        44.5,
+        69.5
+      ],
+      "review_page": "Characters/animations/chapter-01-candidate-01/revisions/s04-r04/index.html",
+      "visual_candidate_delivered": true,
+      "chapter_integrated_in_visual_candidate": true,
+      "final_scene_complete": false,
+      "audio_produced": false,
+      "motion_owner_accepted": false,
+      "messenger_cast": "Div-e Sefid",
+      "fresh_artifact_recheck": "Characters/animations/chapter-01-candidate-01/production/visual-r02/deliveries-01/s04/en/verification.json"
+    },
+    "CH01-S06": {
+      "revision": "s06-r05",
+      "duration_seconds": 17,
+      "frames_per_language": 510,
+      "languages": [
+        "en",
+        "fa"
+      ],
+      "chapter_interval": [
+        84.5,
+        101.5
+      ],
+      "review_page": "Characters/animations/chapter-01-candidate-01/revisions/s06-r05/index.html",
+      "visual_candidate_delivered": true,
+      "chapter_integrated_in_visual_candidate": true,
+      "final_scene_complete": false,
+      "audio_produced": false,
+      "motion_owner_accepted": false,
+      "messenger_cast": "Div-e Sefid",
+      "historical_simurgh_rule": "human only in clearly indoor handoff; absent outdoors",
+      "fresh_artifact_recheck": "Characters/animations/chapter-01-candidate-01/production/visual-r02/deliveries-01/s06/en/verification.json"
+    },
+    "CH01-S07": {
+      "revision": "s07-r04",
+      "duration_seconds": 31,
+      "frames_per_language": 930,
+      "languages": [
+        "en",
+        "fa"
+      ],
+      "chapter_interval": [
+        101.5,
+        132.5
+      ],
+      "review_page": "Characters/animations/chapter-01-candidate-01/revisions/s07-r04/index.html",
+      "visual_candidate_delivered": true,
+      "chapter_integrated_in_visual_candidate": true,
+      "final_scene_complete": false,
+      "audio_produced": false,
+      "motion_owner_accepted": false,
+      "fresh_artifact_recheck": "Characters/animations/chapter-01-candidate-01/production/visual-r02/deliveries-01/s07/en/verification.json"
+    },
+    "CH01-S08": {
+      "revision": "s08-r05",
+      "duration_seconds": 15,
+      "frames_per_language": 450,
+      "languages": [
+        "en",
+        "fa"
+      ],
+      "chapter_interval": [
+        132.5,
+        147.5
+      ],
+      "review_page": "Characters/animations/chapter-01-candidate-01/revisions/s08-r05/index.html",
+      "visual_candidate_delivered": true,
+      "chapter_integrated_in_visual_candidate": true,
+      "final_scene_complete": false,
+      "audio_produced": false,
+      "motion_owner_accepted": false,
+      "fresh_artifact_recheck": "Characters/animations/chapter-01-candidate-01/production/visual-r02/deliveries-01/s08/en/verification.json"
+    },
+    "CH01-S09": {
+      "revision": "s09-r02",
+      "duration_seconds": 20,
+      "frames_per_language": 600,
+      "languages": [
+        "en",
+        "fa"
+      ],
+      "chapter_interval": [
+        147.5,
+        167.5
+      ],
+      "review_page": "Characters/animations/chapter-01-candidate-01/revisions/s09-r02/index.html",
+      "visual_candidate_delivered": true,
+      "chapter_integrated_in_visual_candidate": true,
+      "final_scene_complete": false,
+      "audio_produced": false,
+      "motion_owner_accepted": false,
+      "fresh_artifact_recheck": "Characters/animations/chapter-01-candidate-01/production/visual-r02/deliveries-01/s09/en/verification.json"
+    },
+    "CH01-S11": {
+      "revision": "s11-r06",
+      "duration_seconds": 15,
+      "frames_per_language": 450,
+      "languages": [
+        "en",
+        "fa"
+      ],
+      "chapter_interval": [
+        182.5,
+        197.5
+      ],
+      "review_page": "Characters/animations/chapter-01-candidate-01/revisions/s11-r06/index.html",
+      "visual_candidate_delivered": true,
+      "chapter_integrated_in_visual_candidate": true,
+      "final_scene_complete": false,
+      "audio_produced": false,
+      "motion_owner_accepted": false,
+      "adaptation": "identified Shahrasp and matched-cuff ledger-writing insert; illustrative ink strokes, exact translated quote separately displayed",
+      "fresh_artifact_recheck": "Characters/animations/chapter-01-candidate-01/production/visual-r02/deliveries-02/s11/en/verification.json"
+    }
+  },
+  "current_visual_build": {
+    "review_page": "Characters/animations/chapter-01-candidate-01/production/visual-r02/index.html",
+    "timeline": "Characters/animations/chapter-01-candidate-01/production/visual-r02/assembly-04/timeline.json",
+    "independent_recheck": "Characters/animations/chapter-01-candidate-01/production/visual-r02/assembly-04/independent-recheck.json",
+    "visual_scope": "all 11 limited-animation scene candidates assembled; detailed gait/facial/contact quality remains owner review",
+    "audio": "deferred_by_owner_2026-10-22",
+    "owner_s11_choice": "Shahrasp writing in ledger",
+    "final_owner_approval": false,
+    "bow_gap_repair": "Retained in S06 r04 / S08 r03; headband gaps also cleared",
+    "package": "Characters/animations/chapter-01-candidate-01/production/visual-r02/chapter-01-visual-r02-round-04.zip",
+    "messenger_cast": "Div-e Sefid",
+    "owner_requested_repairs": "implemented_and_verified",
+    "owner_round_03_repairs": "implemented_and_verified_owner_review_pending",
+    "owner_round_04_repairs": "implemented_and_verified_owner_review_pending"
+  },
+  "lip_sync_pilot": {
+    "scope": [
+      "CH01-S04",
+      "CH01-S05"
+    ],
+    "review_page": "Characters/animations/chapter-01-candidate-01/production/visual-r02/lip-sync-01/index.html",
+    "delivery": "Characters/animations/chapter-01-candidate-01/production/visual-r02/lip-sync-01/delivery.json",
+    "voices": "owner_authorized_synthetic_review_draft",
+    "state": "rendered_verified_owner_artistic_and_language_review_pending",
+    "owner_approved": false,
+    "full_chapter_audio": "pending"
+  },
+  "current_voiced_build": {
+    "review_page": "Characters/animations/chapter-01-candidate-01/production/visual-r02/lip-sync-03/index.html",
+    "timeline": "lip-sync-03/edition-timelines.json",
+    "verification": "lip-sync-03/independent-recheck.json",
+    "package": "lip-sync-03/chapter-lip-sync-refined.zip",
+    "state": "refined_synthetic_draft_technical_checks_passed",
+    "owner_approved": false,
+    "human_pronunciation_review": false
+  },
+  "english_final_build": {
+    "review_page": "Characters/animations/chapter-01-candidate-01/production/english-final-03/index.html",
+    "movie": "Characters/animations/chapter-01-candidate-01/production/english-final-03/assembly/chapter-01-english-final.mp4",
+    "timeline": "Characters/animations/chapter-01-candidate-01/production/english-final-03/timeline.json",
+    "verification": "Characters/animations/chapter-01-candidate-01/production/english-final-03/independent-recheck.json",
+    "package": "Characters/animations/chapter-01-candidate-01/production/english-final-03/chapter-01-english-final.zip",
+    "duration": 251.3,
+    "frames": 7539,
+    "voice_cues": 34,
+    "voice_approval_source": "owner-supplied approved Google voice package",
+    "state": "English_revision_03_render_verified_perceptual_review_pending",
+    "owner_final_picture_approval": false,
+    "persian_changed": false,
+    "title": "Ancient Tablet",
+    "independent_title_scene": "T00",
+    "picture_revision": 3,
+    "human_lip_sync_approved": false,
+    "comparison_page": "Characters/animations/chapter-01-candidate-01/production/english-final-03/review/index.html"
+  }
+}

@@ -1,0 +1,3 @@
+candidate_file_status,asset_id,local_candidate_reference,source_approval,upload_authorized
+NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION,REF-S01-WIDE-v1,assets/reference-images/NOT_APPROVED_FOR_PRODUCTION__REF-S01-WIDE-v1.png,approved_scoped_reference,False
+NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION,CHAR-CHAPAR-HELD-v1,assets/reference-images/NOT_APPROVED_FOR_PRODUCTION__CHAR-CHAPAR-HELD-v1.png,approved_scoped_reference,False

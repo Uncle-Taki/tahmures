@@ -15,7 +15,7 @@ learning_objectives:
 prerequisites: [C01]
 language: "fa"
 translation_of: "part-1/02-models-meaning-and-uncertainty.md"
-source_sha256: "fc44a38cc15339240d23aaae1f3bcecc35b27146f103b53fd75a507cf7e20c23"
+source_sha256: "64f1069c7982414d0520395d5be9325e71f9bed41fc12c146eb14a06ab515690"
 translation_status: "draft"
 last_translated: "2026-07-30"
 ---

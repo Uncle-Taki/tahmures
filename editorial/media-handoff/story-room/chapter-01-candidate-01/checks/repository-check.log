@@ -1,0 +1,257 @@
+NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION
+
+.venv/bin/python -m ruff check examples/python scripts
+All checks passed!
+.venv/bin/python -m ruff format --check examples/python scripts
+50 files already formatted
+test -z "$(gofmt -l examples/go)"
+.venv/bin/python -m pytest
+........................................................................ [  9%]
+........................................................................ [ 18%]
+........................................................................ [ 27%]
+........................................................................ [ 36%]
+........................................................................ [ 45%]
+........................................................................ [ 54%]
+........................................................................ [ 63%]
+........................................................................ [ 72%]
+........................................................................ [ 81%]
+........................................................................ [ 90%]
+........................................................................ [ 99%]
+.....                                                                    [100%]
+797 passed in 3.54s
+GOCACHE=/tmp/tahmures-go-cache go test ./...
+?   	github.com/mehdikhoshtinat/tahmures/examples/go/cmd/tahmures	[no test files]
+ok  	github.com/mehdikhoshtinat/tahmures/examples/go/tahmures	0.030s
+.venv/bin/python scripts/validate_chapters.py
+book/part-1/01-what-is-a-prompt.md: valid
+book/part-1/02-models-meaning-and-uncertainty.md: valid
+book/part-1/03-requirements-before-wording.md: valid
+book/part-1/04-anatomy-of-a-reliable-prompt.md: valid
+book/part-1/05-instruction-hierarchy-and-conflict.md: valid
+book/part-1/06-learning-from-examples.md: valid
+book/part-2/07-reusable-prompt-templates.md: valid
+book/part-2/08-structured-outputs-and-contracts.md: valid
+book/part-2/09-decomposition-and-workflows.md: valid
+book/part-2/10-variance-choice-and-control.md: valid
+book/part-2/11-designing-for-creativity.md: valid
+book/part-2/12-context-windows-and-attention.md: valid
+book/part-3/13-context-engineering.md: valid
+book/part-3/14-retrieval-augmented-generation.md: valid
+book/part-3/15-memory-and-state.md: valid
+book/part-3/16-tools-and-permissions.md: valid
+book/part-3/17-agents-and-termination.md: valid
+book/part-3/18-hand-offs-and-multi-step-systems.md: valid
+book/part-4/19-evaluation-and-rubrics.md: valid
+book/part-4/20-regression-testing-for-prompted-systems.md: valid
+book/part-4/21-prompt-injection-and-trust-boundaries.md: valid
+book/part-4/22-approvals-capabilities-and-consequential-action.md: valid
+book/part-4/23-production-operations-and-drift.md: valid
+book/part-4/24-beyond-prompting-choosing-the-right-control.md: valid
+.venv/bin/python scripts/validate_continuity.py
+narrative continuity: valid
+.venv/bin/python scripts/validate_translations.py
+book/fa/part-1/01-what-is-a-prompt.md: valid
+book/fa/part-1/02-models-meaning-and-uncertainty.md: valid
+book/fa/part-1/03-requirements-before-wording.md: valid
+book/fa/part-1/04-anatomy-of-a-reliable-prompt.md: valid
+book/fa/part-1/05-instruction-hierarchy-and-conflict.md: valid
+book/fa/part-1/06-learning-from-examples.md: valid
+book/fa/part-2/07-reusable-prompt-templates.md: valid
+book/fa/part-2/08-structured-outputs-and-contracts.md: valid
+book/fa/part-2/09-decomposition-and-workflows.md: valid
+book/fa/part-2/10-variance-choice-and-control.md: valid
+book/fa/part-2/11-designing-for-creativity.md: valid
+book/fa/part-2/12-context-windows-and-attention.md: valid
+book/fa/part-3/13-context-engineering.md: valid
+book/fa/part-3/14-retrieval-augmented-generation.md: valid
+book/fa/part-3/15-memory-and-state.md: valid
+book/fa/part-3/16-tools-and-permissions.md: valid
+book/fa/part-3/17-agents-and-termination.md: valid
+book/fa/part-3/18-hand-offs-and-multi-step-systems.md: valid
+book/fa/part-4/19-evaluation-and-rubrics.md: valid
+book/fa/part-4/20-regression-testing-for-prompted-systems.md: valid
+book/fa/part-4/21-prompt-injection-and-trust-boundaries.md: valid
+book/fa/part-4/22-approvals-capabilities-and-consequential-action.md: valid
+book/fa/part-4/23-production-operations-and-drift.md: valid
+book/fa/part-4/24-beyond-prompting-choosing-the-right-control.md: valid
+.venv/bin/python scripts/editorial_check.py
++ /home/mehdi/Project/leela/tahmures/.venv/bin/python /home/mehdi/Project/leela/tahmures/scripts/validate_editorial_status.py --root /home/mehdi/Project/leela/tahmures
+editorial-status: chapters=24 errors=0
++ /home/mehdi/Project/leela/tahmures/.venv/bin/python /home/mehdi/Project/leela/tahmures/scripts/validate_reference_parity.py --root /home/mehdi/Project/leela/tahmures
+reference-parity: checked=24 errors=0 warnings=0
++ /home/mehdi/Project/leela/tahmures/.venv/bin/python /home/mehdi/Project/leela/tahmures/scripts/validate_protected_parity.py --root /home/mehdi/Project/leela/tahmures
+protected-parity: checked=24 errors=0 warnings=0
++ /home/mehdi/Project/leela/tahmures/.venv/bin/python /home/mehdi/Project/leela/tahmures/scripts/validate_fa_editorial.py --root /home/mehdi/Project/leela/tahmures
+WARNING: ch13 /home/mehdi/Project/leela/tahmures/book/fa/part-3/13-context-engineering.md: line≈5 mixed Latin/Persian morphology: 'Agentها'
+WARNING: ch14 /home/mehdi/Project/leela/tahmures/book/fa/part-3/14-retrieval-augmented-generation.md: line≈5 mixed Latin/Persian morphology: 'Agentها'
+WARNING: ch15 /home/mehdi/Project/leela/tahmures/book/fa/part-3/15-memory-and-state.md: line≈5 mixed Latin/Persian morphology: 'Agentها'
+WARNING: ch16 /home/mehdi/Project/leela/tahmures/book/fa/part-3/16-tools-and-permissions.md: line≈5 mixed Latin/Persian morphology: 'Agentها'
+WARNING: ch17 /home/mehdi/Project/leela/tahmures/book/fa/part-3/17-agents-and-termination.md: line≈5 mixed Latin/Persian morphology: 'Agentها'
+WARNING: ch18 /home/mehdi/Project/leela/tahmures/book/fa/part-3/18-hand-offs-and-multi-step-systems.md: line≈5 mixed Latin/Persian morphology: 'Agentها'
+fa-editorial: checked=24 errors=0 warnings=6
+disposition: morphology warnings cover only missing-ZWNJ suffixes; glossary-sanctioned ZWNJ forms and ezafe-ordered mixed phrases are not flagged
++ /home/mehdi/Project/leela/tahmures/.venv/bin/python /home/mehdi/Project/leela/tahmures/scripts/validate_translations.py
+book/fa/part-1/01-what-is-a-prompt.md: valid
+book/fa/part-1/02-models-meaning-and-uncertainty.md: valid
+book/fa/part-1/03-requirements-before-wording.md: valid
+book/fa/part-1/04-anatomy-of-a-reliable-prompt.md: valid
+book/fa/part-1/05-instruction-hierarchy-and-conflict.md: valid
+book/fa/part-1/06-learning-from-examples.md: valid
+book/fa/part-2/07-reusable-prompt-templates.md: valid
+book/fa/part-2/08-structured-outputs-and-contracts.md: valid
+book/fa/part-2/09-decomposition-and-workflows.md: valid
+book/fa/part-2/10-variance-choice-and-control.md: valid
+book/fa/part-2/11-designing-for-creativity.md: valid
+book/fa/part-2/12-context-windows-and-attention.md: valid
+book/fa/part-3/13-context-engineering.md: valid
+book/fa/part-3/14-retrieval-augmented-generation.md: valid
+book/fa/part-3/15-memory-and-state.md: valid
+book/fa/part-3/16-tools-and-permissions.md: valid
+book/fa/part-3/17-agents-and-termination.md: valid
+book/fa/part-3/18-hand-offs-and-multi-step-systems.md: valid
+book/fa/part-4/19-evaluation-and-rubrics.md: valid
+book/fa/part-4/20-regression-testing-for-prompted-systems.md: valid
+book/fa/part-4/21-prompt-injection-and-trust-boundaries.md: valid
+book/fa/part-4/22-approvals-capabilities-and-consequential-action.md: valid
+book/fa/part-4/23-production-operations-and-drift.md: valid
+book/fa/part-4/24-beyond-prompting-choosing-the-right-control.md: valid
+editorial-check: failing_commands=0
+.venv/bin/python scripts/run_all_experiments.py
+ch01-prompt-roles: baseline: pass=0.667, explicit: pass=1.000
+ch02-grounding: baseline: pass=0.333, evidence_bound: pass=1.000
+ch03-requirements: baseline: pass=0.167, decision_brief: pass=1.000
+ch04-prompt-anatomy: blended: pass=0.000, structured: pass=1.000
+ch05-instruction-hierarchy: concatenated: pass=0.000, resolved: pass=1.000
+ch06-few-shot: biased: pass=0.500, representative: pass=1.000, rule_examples: pass=1.000
+ch07-prompt-templates: unchecked: pass=0.600, typed: pass=1.000
+ch08-output-contracts: prose: pass=0.000, contract: pass=1.000
+ch09-workflows: monolithic: pass=0.000, workflow: pass=1.000
+ch10-variance-choice: single: pass=1.000, generate_select: pass=1.000
+ch11-creativity: novelty_only: pass=0.500, explore_accept: pass=1.000
+ch12-context-selection: tail: pass=0.333, priority: pass=1.000
+ch13-context-engineering: concatenate: pass=0.000, engineered: pass=1.000
+ch14-retrieval: unscoped: pass=0.000, scoped: pass=1.000
+ch15-memory: append_only: pass=0.000, governed: pass=1.000
+ch16-tools: instruction_only: pass=0.333, gated: pass=1.000
+ch17-agents: free_running: pass=0.000, bounded: pass=1.000
+ch18-handoffs: summary: pass=0.000, envelope: pass=1.000
+ch19-evaluation: preference_only: pass=0.333, anchored_rubric: pass=1.000
+ch20-regression: single_case_fix: pass=0.333, regression_gate: pass=1.000
+ch21-prompt-injection: concatenated_content: pass=0.333, typed_trust_boundary: pass=1.000
+ch22-approvals: verbal_restriction: pass=0.333, bound_capability: pass=1.000
+ch23-operations: aggregate_only: pass=0.333, versioned_segments: pass=1.000
+ch24-beyond-prompting: prompt_only: pass=0.000, mechanism_first: pass=1.000
+.venv/bin/python scripts/check_parity.py
+ch01-prompt-roles.json: parity confirmed
+ch02-grounding.json: parity confirmed
+ch03-requirements.json: parity confirmed
+ch04-prompt-anatomy.json: parity confirmed
+ch05-instruction-hierarchy.json: parity confirmed
+ch06-few-shot.json: parity confirmed
+ch07-prompt-templates.json: parity confirmed
+ch08-output-contracts.json: parity confirmed
+ch09-workflows.json: parity confirmed
+ch10-variance-choice.json: parity confirmed
+ch11-creativity.json: parity confirmed
+ch12-context-selection.json: parity confirmed
+ch13-context-engineering.json: parity confirmed
+ch14-retrieval.json: parity confirmed
+ch15-memory.json: parity confirmed
+ch16-tools.json: parity confirmed
+ch17-agents.json: parity confirmed
+ch18-handoffs.json: parity confirmed
+ch19-evaluation.json: parity confirmed
+ch20-regression.json: parity confirmed
+ch21-prompt-injection.json: parity confirmed
+ch22-approvals.json: parity confirmed
+ch23-operations.json: parity confirmed
+ch24-beyond-prompting.json: parity confirmed
+.venv/bin/python -m mkdocs build --strict
+
+[31m │  ⚠  Warning from the Material for MkDocs team[0m
+[31m │[0m
+[31m │[0m  MkDocs 2.0, the underlying framework of Material for MkDocs,
+[31m │[0m  will introduce backward-incompatible changes, including:
+[31m │[0m
+[31m │  × [0mAll plugins will stop working – the plugin system has been removed
+[31m │  × [0mAll theme overrides will break – the theming system has been rewritten
+[31m │  × [0mNo migration path exists – existing projects cannot be upgraded
+[31m │  × [0mClosed contribution model – community members can't report bugs
+[31m │  × [0mCurrently unlicensed – unsuitable for production use
+[31m │[0m
+[31m │[0m  Our full analysis:
+[31m │[0m
+[31m │[0m  [4mhttps://squidfunk.github.io/mkdocs-material/blog/2026/02/18/mkdocs-2.0/[0m
+[0m
+INFO    -  Cleaning site directory
+INFO    -  Building documentation to directory: /home/mehdi/Project/leela/tahmures/site
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - fa/index.md
+  - fa/translation-glossary.md
+  - fa/part-1/index.md
+  - fa/part-1/01-what-is-a-prompt.md
+  - fa/part-1/02-models-meaning-and-uncertainty.md
+  - fa/part-1/03-requirements-before-wording.md
+  - fa/part-1/04-anatomy-of-a-reliable-prompt.md
+  - fa/part-1/05-instruction-hierarchy-and-conflict.md
+  - fa/part-1/06-learning-from-examples.md
+  - fa/part-2/index.md
+  - fa/part-2/07-reusable-prompt-templates.md
+  - fa/part-2/08-structured-outputs-and-contracts.md
+  - fa/part-2/09-decomposition-and-workflows.md
+  - fa/part-2/10-variance-choice-and-control.md
+  - fa/part-2/11-designing-for-creativity.md
+  - fa/part-2/12-context-windows-and-attention.md
+  - fa/part-3/index.md
+  - fa/part-3/13-context-engineering.md
+  - fa/part-3/14-retrieval-augmented-generation.md
+  - fa/part-3/15-memory-and-state.md
+  - fa/part-3/16-tools-and-permissions.md
+  - fa/part-3/17-agents-and-termination.md
+  - fa/part-3/18-hand-offs-and-multi-step-systems.md
+  - fa/part-4/index.md
+  - fa/part-4/19-evaluation-and-rubrics.md
+  - fa/part-4/20-regression-testing-for-prompted-systems.md
+  - fa/part-4/21-prompt-injection-and-trust-boundaries.md
+  - fa/part-4/22-approvals-capabilities-and-consequential-action.md
+  - fa/part-4/23-production-operations-and-drift.md
+  - fa/part-4/24-beyond-prompting-choosing-the-right-control.md
+INFO    -  Doc file 'fa/index.md' contains an absolute link '/', it was left as is. Did you mean '../index.md'?
+INFO    -  Doc file 'fa/translation-glossary.md' contains an absolute link '/project-charter/', it was left as is. Did you mean '../project-charter.md'?
+INFO    -  Doc file 'fa/part-1/01-what-is-a-prompt.md' contains an absolute link '/references/', it was left as is. Did you mean '../../references.md'?
+INFO    -  Doc file 'fa/part-1/02-models-meaning-and-uncertainty.md' contains an absolute link '/references/', it was left as is. Did you mean '../../references.md'?
+INFO    -  Doc file 'fa/part-1/03-requirements-before-wording.md' contains an absolute link '/references/', it was left as is. Did you mean '../../references.md'?
+INFO    -  Doc file 'fa/part-1/04-anatomy-of-a-reliable-prompt.md' contains an absolute link '/references/', it was left as is. Did you mean '../../references.md'?
+INFO    -  Doc file 'fa/part-1/05-instruction-hierarchy-and-conflict.md' contains an absolute link '/references/', it was left as is. Did you mean '../../references.md'?
+INFO    -  Doc file 'fa/part-1/06-learning-from-examples.md' contains an absolute link '/references/', it was left as is. Did you mean '../../references.md'?
+INFO    -  Doc file 'fa/part-2/index.md' contains an absolute link '/part-2/', it was left as is. Did you mean '../../part-2/index.md'?
+INFO    -  Documentation built in 2.02 seconds
+.venv/bin/python -m mkdocs build -f mkdocs.fa.yml --strict
+
+[31m │  ⚠  Warning from the Material for MkDocs team[0m
+[31m │[0m
+[31m │[0m  MkDocs 2.0, the underlying framework of Material for MkDocs,
+[31m │[0m  will introduce backward-incompatible changes, including:
+[31m │[0m
+[31m │  × [0mAll plugins will stop working – the plugin system has been removed
+[31m │  × [0mAll theme overrides will break – the theming system has been rewritten
+[31m │  × [0mNo migration path exists – existing projects cannot be upgraded
+[31m │  × [0mClosed contribution model – community members can't report bugs
+[31m │  × [0mCurrently unlicensed – unsuitable for production use
+[31m │[0m
+[31m │[0m  Our full analysis:
+[31m │[0m
+[31m │[0m  [4mhttps://squidfunk.github.io/mkdocs-material/blog/2026/02/18/mkdocs-2.0/[0m
+[0m
+INFO    -  Cleaning site directory
+INFO    -  Building documentation to directory: /home/mehdi/Project/leela/tahmures/site/fa
+INFO    -  Doc file 'index.md' contains an absolute link '/', it was left as is. Did you mean 'index.md'?
+INFO    -  Doc file 'translation-glossary.md' contains an absolute link '/project-charter/', it was left as is.
+INFO    -  Doc file 'part-1/01-what-is-a-prompt.md' contains an absolute link '/references/', it was left as is.
+INFO    -  Doc file 'part-1/02-models-meaning-and-uncertainty.md' contains an absolute link '/references/', it was left as is.
+INFO    -  Doc file 'part-1/03-requirements-before-wording.md' contains an absolute link '/references/', it was left as is.
+INFO    -  Doc file 'part-1/04-anatomy-of-a-reliable-prompt.md' contains an absolute link '/references/', it was left as is.
+INFO    -  Doc file 'part-1/05-instruction-hierarchy-and-conflict.md' contains an absolute link '/references/', it was left as is.
+INFO    -  Doc file 'part-1/06-learning-from-examples.md' contains an absolute link '/references/', it was left as is.
+INFO    -  Doc file 'part-2/index.md' contains an absolute link '/part-2/', it was left as is. Did you mean 'index.md'?
+INFO    -  Documentation built in 4.88 seconds

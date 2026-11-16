@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-30",
+  "status": "PASS \u2014 local file integrity, collection completeness and bounded visual review",
+  "individual_images": 7,
+  "master_copies": 2,
+  "generated_single_portraits": 5,
+  "generation_calls": 5,
+  "all_pngs_opened": true,
+  "source_hashes_unchanged": true,
+  "master_copy_byte_hashes_match": true,
+  "source_board_copy_hashes_match": true,
+  "exactly_one_character_per_image_observed": true,
+  "selected_board_positions_match": true,
+  "div_e_sefid_two_refined_complete_horns_observed": true,
+  "simurgh_bird_only_observed": true,
+  "documentation_links_valid": true,
+  "source_identities_owner_selected": true,
+  "new_derivative_likeness_approval": "not inferred",
+  "rig_and_performance_approval": "not inferred",
+  "repository_gate": {
+    "command": "make check PYTHON=.venv/bin/python",
+    "exit_status": 0,
+    "log": "/tmp/tahmures-selected-paper-cast-14-check.log",
+    "scope": "Book/code validation; not derivative likeness, rig or performance approval."
+  }
+}

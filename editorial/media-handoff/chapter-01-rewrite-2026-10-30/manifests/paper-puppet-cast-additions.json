@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-30",
+  "scope": "Paper Puppet local references only; existing selected collection/source artwork preserved",
+  "characters": [
+    {
+      "id": "chapar",
+      "original_path": "Characters/Paper-Cut Nomad Character Portrait.png",
+      "packaged_name": "chapar_master.png",
+      "sha256": "5fbb5a43f5c17c8ba5990d7f2523d720d77be8ad9ffdc9304fb39fec1f0e44c3",
+      "selection_status": "owner_supplied_identity_for_paper_puppet",
+      "image_status": "unchanged_byte_copy_of_owner_supplied_portrait",
+      "description": "Young clean-shaven courier with wavy dark hair, angular long face, tan shoulder cloak over rust-red tunic, cream sleeves, dark brown waist wrap and trousers, bound brown boots. No crown, horns, armour or bow; no horse or saddlebag supplied in this portrait.",
+      "review_required": false,
+      "motion_approved": false,
+      "selection_evidence": "2026-10-30 current owner request supplies these two portraits as Arash and Chapar for Paper Puppet; role mapping confirmed by nomad courier versus armored archer visual inspection. No V2 assignment."
+    },
+    {
+      "id": "arash",
+      "original_path": "Characters/Stoic Paper-Cutout Archer Warrior.png",
+      "packaged_name": "arash_master.png",
+      "sha256": "467e79191a6f61f99ba8da5a2258c47a458e3852b292785cff1622d3753af135",
+      "selection_status": "owner_supplied_identity_for_paper_puppet",
+      "image_status": "unchanged_byte_copy_of_owner_supplied_portrait",
+      "description": "Dark-haired bearded warrior with pointed metal helmet and cheek guards, charcoal scarf, rust sleeves, brown scale armour with grey metal edging, crossed straps and round metal fasteners, cream loose trousers and brown boots/bracers. Bow is in his left hand on viewer right; quiver above his right shoulder on viewer left. No arrow is nocked; do not invent an arrow-release scene.",
+      "review_required": false,
+      "motion_approved": false,
+      "selection_evidence": "2026-10-30 current owner request supplies these two portraits as Arash and Chapar for Paper Puppet; role mapping confirmed by nomad courier versus armored archer visual inspection. No V2 assignment."
+    }
+  ]
+}

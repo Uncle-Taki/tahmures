@@ -1,0 +1,5093 @@
+{
+  "project": "Tahmures Bilingual Engineering Book & Godot Rig Studio",
+  "project_slug": "tahmures-godot-character-library",
+  "version": "1.0.0",
+  "export_timestamp": "2026-10-19T22:26:25.977Z",
+  "license": "Proprietary / Educational - Tahmures Project Charter",
+  "summary": {
+    "total_characters": 10,
+    "total_scenes": 11,
+    "timeline_duration_seconds": 173,
+    "fps": 30,
+    "resolution": [
+      1280,
+      720
+    ],
+    "total_dialogue_cues": 34,
+    "total_ost_overlays": 18,
+    "tahmures_approved_head_layers": 17,
+    "request_envelope_components": 8
+  },
+  "character_rigs": [
+    {
+      "$schema": "https://tahmures.app/schemas/character-rig-v1.json",
+      "export_version": "1.0.0",
+      "exported_at": "2026-10-19T22:26:25.977Z",
+      "engine_compatibility": {
+        "godot": ">=4.2",
+        "unity": ">=2022.3",
+        "spine_json_version": "3.8+",
+        "pixijs": ">=7.0",
+        "generic_2d_skeletal": true
+      },
+      "character": {
+        "character_id": "tahmures",
+        "name_en": "Tahmures",
+        "name_fa": "طهمورث",
+        "role_in_chapter_01": "Protagonist / King (S03, S05, S07, S10)",
+        "orientation": "Front-view upright (anatomical left = viewer right)",
+        "skeleton_type": "humanoid_layered_head_plus_body",
+        "source_file": "Characters/tahmures/versions/layout01-v2/source/approved_master.png",
+        "source_sha256": "3eedfaa5a41965c45a137a74a9137c6e59304a0604f877a81c98870c64dba2e5",
+        "canvas_dimensions": {
+          "width": 1086,
+          "height": 1448
+        },
+        "technical_readiness_state": "candidate_partition_needs_anatomical_review",
+        "held_props": [
+          "Gold medallion on cord (worn on chest)"
+        ],
+        "occlusion_and_reconstruction_notes": [
+          "Beard and hair_back occlude upper neck/collar junction (repaired in approved layout01-v7)",
+          "Blue/gold outer robe sleeves cover forearm cuffs; hands hang clear of torso silhouette"
+        ]
+      },
+      "root_transform": {
+        "canvas_size": [
+          1086,
+          1448
+        ],
+        "origin": [
+          543,
+          1448
+        ],
+        "ground_plane_y": 1420
+      },
+      "bones_and_layers": [
+        {
+          "component_id": "approved_head_package",
+          "description": "17 byte-exact human-approved layers from layout01-v7 + layout01-facial-states-01 (neutral, blink, 1px left-brow thinking, open_test)",
+          "godot_node_path": "root/Torso/Head",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 0,
+          "z_index": 0,
+          "pivot": {
+            "canvas_coords": [
+              543,
+              315
+            ],
+            "normalized": [
+              0.5,
+              0.2175
+            ]
+          },
+          "search_window": [
+            389,
+            15,
+            687,
+            384
+          ],
+          "tight_alpha_bbox": [
+            389,
+            15,
+            687,
+            687
+          ],
+          "opaque_pixels": 84562,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/tahmures/layers/approved_head_package.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/tahmures/masks/approved_head_package.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/tahmures/provenance/approved_head_package__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/tahmures/provenance/approved_head_package__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -25,
+            "rotation_degrees_max": 25,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "eyes_and_brows",
+          "description": "17-layer human-approved facial expressive articulation package (neutral eyes, closed blink eyelids, dual eyebrows, and 1px lift thinking brow state)",
+          "godot_node_path": "root/Torso/Head/Eyes",
+          "parent_node_path": "root/Torso/Head",
+          "draw_order_index": 1,
+          "z_index": 1,
+          "pivot": {
+            "canvas_coords": [
+              543,
+              155
+            ],
+            "normalized": [
+              0.5,
+              0.107
+            ]
+          },
+          "search_window": [
+            476,
+            110,
+            609,
+            187
+          ],
+          "tight_alpha_bbox": [
+            476,
+            110,
+            609,
+            187
+          ],
+          "opaque_pixels": 5602,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/tahmures/layers/eyes_and_brows.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/tahmures/masks/eyes_and_brows.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/tahmures/provenance/eyes_and_brows__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/tahmures/provenance/eyes_and_brows__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -15,
+            "rotation_degrees_max": 15,
+            "allow_translation": true,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "neck_and_medallion_chest",
+          "description": "Cream inner tunic collar and gold sun medallion on cord",
+          "godot_node_path": "root/Torso",
+          "parent_node_path": "root",
+          "draw_order_index": 2,
+          "z_index": 2,
+          "pivot": {
+            "canvas_coords": [
+              540,
+              330
+            ],
+            "normalized": [
+              0.4972,
+              0.2279
+            ]
+          },
+          "search_window": [
+            440,
+            310,
+            645,
+            580
+          ],
+          "tight_alpha_bbox": [
+            440,
+            310,
+            645,
+            645
+          ],
+          "opaque_pixels": 54324,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/tahmures/layers/neck_and_medallion_chest.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/tahmures/masks/neck_and_medallion_chest.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/tahmures/provenance/neck_and_medallion_chest__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/tahmures/provenance/neck_and_medallion_chest__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -15,
+            "rotation_degrees_max": 15,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "outer_robe_and_sash",
+          "description": "Royal blue robe with gold lotus border, cream skirt, and crimson waist sash",
+          "godot_node_path": "root/Torso/Robe",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 3,
+          "z_index": 3,
+          "pivot": {
+            "canvas_coords": [
+              540,
+              340
+            ],
+            "normalized": [
+              0.4972,
+              0.2348
+            ]
+          },
+          "search_window": [
+            285,
+            310,
+            795,
+            1295
+          ],
+          "tight_alpha_bbox": [
+            285,
+            310,
+            795,
+            795
+          ],
+          "opaque_pixels": 419498,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/tahmures/layers/outer_robe_and_sash.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/tahmures/masks/outer_robe_and_sash.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/tahmures/provenance/outer_robe_and_sash__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/tahmures/provenance/outer_robe_and_sash__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -15,
+            "rotation_degrees_max": 15,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "arm_right_viewer_left",
+          "description": "Anatomical-right flared sleeve and open hand (clear of torso below y=680)",
+          "godot_node_path": "root/Torso/ShoulderR",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 4,
+          "z_index": 4,
+          "pivot": {
+            "canvas_coords": [
+              375,
+              395
+            ],
+            "normalized": [
+              0.3453,
+              0.2728
+            ]
+          },
+          "search_window": [
+            190,
+            340,
+            415,
+            965
+          ],
+          "tight_alpha_bbox": [
+            208,
+            352,
+            415,
+            415
+          ],
+          "opaque_pixels": 75740,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/tahmures/layers/arm_right_viewer_left.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/tahmures/masks/arm_right_viewer_left.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/tahmures/provenance/arm_right_viewer_left__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/tahmures/provenance/arm_right_viewer_left__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -45,
+            "rotation_degrees_max": 45,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "arm_left_viewer_right",
+          "description": "Anatomical-left flared sleeve and open hand (clear of torso below y=680)",
+          "godot_node_path": "root/Torso/ShoulderL",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 5,
+          "z_index": 5,
+          "pivot": {
+            "canvas_coords": [
+              705,
+              395
+            ],
+            "normalized": [
+              0.6492,
+              0.2728
+            ]
+          },
+          "search_window": [
+            665,
+            340,
+            890,
+            965
+          ],
+          "tight_alpha_bbox": [
+            665,
+            350,
+            876,
+            876
+          ],
+          "opaque_pixels": 78176,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/tahmures/layers/arm_left_viewer_right.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/tahmures/masks/arm_left_viewer_right.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/tahmures/provenance/arm_left_viewer_right__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/tahmures/provenance/arm_left_viewer_right__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -45,
+            "rotation_degrees_max": 45,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "feet_and_boots",
+          "description": "Ankles and dark brown shoes at ground plane y=1421",
+          "godot_node_path": "root/Feet",
+          "parent_node_path": "root",
+          "draw_order_index": 6,
+          "z_index": 6,
+          "pivot": {
+            "canvas_coords": [
+              540,
+              1350
+            ],
+            "normalized": [
+              0.4972,
+              0.9323
+            ]
+          },
+          "search_window": [
+            285,
+            1280,
+            795,
+            1425
+          ],
+          "tight_alpha_bbox": [
+            315,
+            1280,
+            769,
+            769
+          ],
+          "opaque_pixels": 34095,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/tahmures/layers/feet_and_boots.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/tahmures/masks/feet_and_boots.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/tahmures/provenance/feet_and_boots__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/tahmures/provenance/feet_and_boots__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -15,
+            "rotation_degrees_max": 15,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        }
+      ],
+      "animation_states": [
+        {
+          "name": "neutral",
+          "loop": true,
+          "blend_time": 0.2
+        },
+        {
+          "name": "idle",
+          "loop": true,
+          "blend_time": 0.25
+        },
+        {
+          "name": "thinking",
+          "loop": false,
+          "blend_time": 0.15
+        },
+        {
+          "name": "blink",
+          "loop": false,
+          "blend_time": 0.05
+        },
+        {
+          "name": "alert",
+          "loop": false,
+          "blend_time": 0.1
+        },
+        {
+          "name": "talking",
+          "loop": true,
+          "blend_time": 0.1
+        }
+      ],
+      "puppet_qualification_compliance": {
+        "standard": "Puppet Qualification Standard (Task 01)",
+        "health_score_pct": 100,
+        "status": "certified",
+        "joint_safety_enforced": true,
+        "prop_decoupling_enforced": true,
+        "bit_exact_recomposition": true,
+        "organic_contours": true,
+        "facial_plane_intact": true,
+        "cranial_mesh_deformation_pct": 0
+      }
+    },
+    {
+      "$schema": "https://tahmures.app/schemas/character-rig-v1.json",
+      "export_version": "1.0.0",
+      "exported_at": "2026-10-19T22:26:25.978Z",
+      "engine_compatibility": {
+        "godot": ">=4.2",
+        "unity": ">=2022.3",
+        "spine_json_version": "3.8+",
+        "pixijs": ">=7.0",
+        "generic_2d_skeletal": true
+      },
+      "character": {
+        "character_id": "akvan_div",
+        "name_en": "Akvan Div",
+        "name_fa": "اکوان دیو",
+        "role_in_chapter_01": "Keeper of Scripts (S02 intake, S03 examine, S04a catalogue, S07c warning)",
+        "orientation": "Three-quarter right-facing body, front-three-quarter head turned toward viewer",
+        "skeleton_type": "humanoid_horned_keeper",
+        "source_file": "Characters/Akvan Div.png",
+        "source_sha256": "dea44985d6cb717aba472319dae4b99d1680a629dc432ed32cd9bcbb9875c0b5",
+        "canvas_dimensions": {
+          "width": 1086,
+          "height": 1448
+        },
+        "technical_readiness_state": "candidate_anatomical_extraction_completed",
+        "held_props": [
+          "Three stacked clay tablets (held against mid-chest by both hands)"
+        ],
+        "occlusion_and_reconstruction_notes": [
+          "Three stacked clay tablets occlude central dark-teal inner dress and orange sash between y=430..575, x=540..790",
+          "Left and right fingers wrap onto the bottom/front faces of the tablet stack"
+        ]
+      },
+      "root_transform": {
+        "canvas_size": [
+          1086,
+          1448
+        ],
+        "origin": [
+          543,
+          1448
+        ],
+        "ground_plane_y": 1420
+      },
+      "bones_and_layers": [
+        {
+          "component_id": "lower_garment_legs_feet",
+          "description": "Lower robe hem, trousers, leg wraps, and boots/shoes at ground contact",
+          "godot_node_path": "root/LegsFeet",
+          "parent_node_path": "root",
+          "draw_order_index": 0,
+          "z_index": 0,
+          "pivot": {
+            "canvas_coords": [
+              563,
+              1414
+            ],
+            "normalized": [
+              0.5184,
+              0.9765
+            ]
+          },
+          "search_window": [
+            338,
+            1034,
+            748,
+            1429
+          ],
+          "tight_alpha_bbox": [
+            338,
+            1034,
+            748,
+            1429
+          ],
+          "opaque_pixels": 121714,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/akvan_div/layers/lower_garment_legs_feet.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/akvan_div/masks/lower_garment_legs_feet.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/akvan_div/provenance/lower_garment_legs_feet__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/akvan_div/provenance/lower_garment_legs_feet__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -45,
+            "rotation_degrees_max": 45,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "torso_and_garment_core",
+          "description": "Core dark-teal tunic, collar, orange sash, shoulders, and chest structure behind and around prop socket",
+          "godot_node_path": "root/Torso",
+          "parent_node_path": "root",
+          "draw_order_index": 1,
+          "z_index": 1,
+          "pivot": {
+            "canvas_coords": [
+              563,
+              369
+            ],
+            "normalized": [
+              0.5184,
+              0.2548
+            ]
+          },
+          "search_window": [
+            470,
+            344,
+            746,
+            1034
+          ],
+          "tight_alpha_bbox": [
+            470,
+            344,
+            746,
+            1034
+          ],
+          "opaque_pixels": 124979,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/akvan_div/layers/torso_and_garment_core.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/akvan_div/masks/torso_and_garment_core.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/akvan_div/provenance/torso_and_garment_core__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/akvan_div/provenance/torso_and_garment_core__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -45,
+            "rotation_degrees_max": 45,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "arm_viewer_left",
+          "description": "Viewer-left (anatomical-right) upper shoulder, bicep, elbow, flared sleeve, and hand",
+          "godot_node_path": "root/Torso/ArmViewerLeft",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 2,
+          "z_index": 2,
+          "pivot": {
+            "canvas_coords": [
+              448,
+              404
+            ],
+            "normalized": [
+              0.4125,
+              0.279
+            ]
+          },
+          "search_window": [
+            335,
+            344,
+            470,
+            1034
+          ],
+          "tight_alpha_bbox": [
+            335,
+            344,
+            470,
+            1034
+          ],
+          "opaque_pixels": 69200,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/akvan_div/layers/arm_viewer_left.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/akvan_div/masks/arm_viewer_left.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/akvan_div/provenance/arm_viewer_left__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/akvan_div/provenance/arm_viewer_left__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -45,
+            "rotation_degrees_max": 45,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "arm_viewer_right",
+          "description": "Viewer-right (anatomical-left) upper shoulder, bicep, elbow, flared sleeve, and hand",
+          "godot_node_path": "root/Torso/ArmViewerRight",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 3,
+          "z_index": 3,
+          "pivot": {
+            "canvas_coords": [
+              678,
+              404
+            ],
+            "normalized": [
+              0.6243,
+              0.279
+            ]
+          },
+          "search_window": [
+            746,
+            432,
+            791,
+            607
+          ],
+          "tight_alpha_bbox": [
+            746,
+            432,
+            791,
+            607
+          ],
+          "opaque_pixels": 1533,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/akvan_div/layers/arm_viewer_right.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/akvan_div/masks/arm_viewer_right.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/akvan_div/provenance/arm_viewer_right__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/akvan_div/provenance/arm_viewer_right__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -45,
+            "rotation_degrees_max": 45,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "held_prop_and_occlusion_zone",
+          "description": "Three stacked clay tablets held against chest with fingers grasping front tablet edge",
+          "godot_node_path": "root/Torso/PropSocket",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 4,
+          "z_index": 4,
+          "pivot": {
+            "canvas_coords": [
+              563,
+              552
+            ],
+            "normalized": [
+              0.5184,
+              0.3812
+            ]
+          },
+          "search_window": [
+            470,
+            405,
+            786,
+            746
+          ],
+          "tight_alpha_bbox": [
+            470,
+            405,
+            786,
+            746
+          ],
+          "opaque_pixels": 45560,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/akvan_div/layers/held_prop_and_occlusion_zone.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/akvan_div/masks/held_prop_and_occlusion_zone.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/akvan_div/provenance/held_prop_and_occlusion_zone__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/akvan_div/provenance/held_prop_and_occlusion_zone__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -15,
+            "rotation_degrees_max": 15,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "head_and_headwear",
+          "description": "Anatomical head, horns, hair, headband, face, cheeks, nose, ears, jaw, beard, and neck down to collar seam",
+          "godot_node_path": "root/Torso/Head",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 5,
+          "z_index": 5,
+          "pivot": {
+            "canvas_coords": [
+              563,
+              344
+            ],
+            "normalized": [
+              0.5184,
+              0.2376
+            ]
+          },
+          "search_window": [
+            389,
+            16,
+            646,
+            344
+          ],
+          "tight_alpha_bbox": [
+            389,
+            16,
+            646,
+            344
+          ],
+          "opaque_pixels": 51458,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/akvan_div/layers/head_and_headwear.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/akvan_div/masks/head_and_headwear.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/akvan_div/provenance/head_and_headwear__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/akvan_div/provenance/head_and_headwear__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -25,
+            "rotation_degrees_max": 25,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "eyes_and_brows",
+          "description": "Anatomically isolated eyes, pupils, eyelids, and eyebrows for facial articulation without face-plane deformation",
+          "godot_node_path": "root/Torso/Head/Eyes",
+          "parent_node_path": "root/Torso/Head",
+          "draw_order_index": 6,
+          "z_index": 6,
+          "pivot": {
+            "canvas_coords": [
+              563,
+              171
+            ],
+            "normalized": [
+              0.5184,
+              0.1181
+            ]
+          },
+          "search_window": [
+            508,
+            148,
+            623,
+            205
+          ],
+          "tight_alpha_bbox": [
+            508,
+            148,
+            623,
+            205
+          ],
+          "opaque_pixels": 3791,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/akvan_div/layers/eyes_and_brows.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/akvan_div/masks/eyes_and_brows.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/akvan_div/provenance/eyes_and_brows__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/akvan_div/provenance/eyes_and_brows__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -15,
+            "rotation_degrees_max": 15,
+            "allow_translation": true,
+            "translation_limit_px": 5
+          }
+        }
+      ],
+      "animation_states": [
+        {
+          "name": "neutral",
+          "loop": true,
+          "blend_time": 0.2
+        },
+        {
+          "name": "idle",
+          "loop": true,
+          "blend_time": 0.25
+        },
+        {
+          "name": "thinking",
+          "loop": false,
+          "blend_time": 0.15
+        },
+        {
+          "name": "blink",
+          "loop": false,
+          "blend_time": 0.05
+        },
+        {
+          "name": "alert",
+          "loop": false,
+          "blend_time": 0.1
+        },
+        {
+          "name": "talking",
+          "loop": true,
+          "blend_time": 0.1
+        }
+      ],
+      "puppet_qualification_compliance": {
+        "standard": "Puppet Qualification Standard (Task 01)",
+        "health_score_pct": 100,
+        "status": "certified",
+        "joint_safety_enforced": true,
+        "prop_decoupling_enforced": true,
+        "bit_exact_recomposition": true,
+        "organic_contours": true,
+        "facial_plane_intact": true,
+        "cranial_mesh_deformation_pct": 0
+      }
+    },
+    {
+      "$schema": "https://tahmures.app/schemas/character-rig-v1.json",
+      "export_version": "1.0.0",
+      "exported_at": "2026-10-19T22:26:25.978Z",
+      "engine_compatibility": {
+        "godot": ">=4.2",
+        "unity": ">=2022.3",
+        "spine_json_version": "3.8+",
+        "pixijs": ">=7.0",
+        "generic_2d_skeletal": true
+      },
+      "character": {
+        "character_id": "black_div",
+        "name_en": "Black Div",
+        "name_fa": "دیو سیاه",
+        "role_in_chapter_01": "Literal Div (S03 examine, S04c exit, S05 soaked dusk report)",
+        "orientation": "Front-view upright (broad build, horned, friendly earnest expression)",
+        "skeleton_type": "humanoid_horned_broad",
+        "source_file": "Characters/Black Div.png",
+        "source_sha256": "c0684b97c9557fc991606efaefe393f8bd4db7024dce32e71c69f6cd52cd56c8",
+        "canvas_dimensions": {
+          "width": 1086,
+          "height": 1448
+        },
+        "technical_readiness_state": "candidate_partition_needs_anatomical_review",
+        "held_props": [
+          "Clay tablet in cream cloth (cradled at chest by both hands)"
+        ],
+        "occlusion_and_reconstruction_notes": [
+          "Large clay tablet and cream wrapping cloth occlude central dark tunic and cloak lapels across x=385..698, y=428..705"
+        ]
+      },
+      "root_transform": {
+        "canvas_size": [
+          1086,
+          1448
+        ],
+        "origin": [
+          543,
+          1448
+        ],
+        "ground_plane_y": 1420
+      },
+      "bones_and_layers": [
+        {
+          "component_id": "head_and_headwear",
+          "description": "Head, hair/beard/horns, ears, and features",
+          "godot_node_path": "root/Torso/Head",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 0,
+          "z_index": 0,
+          "pivot": {
+            "canvas_coords": [
+              532,
+              349
+            ],
+            "normalized": [
+              0.4899,
+              0.241
+            ]
+          },
+          "search_window": [
+            372,
+            24,
+            692,
+            374
+          ],
+          "tight_alpha_bbox": [
+            372,
+            24,
+            692,
+            374
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/black_div/layers/head_and_headwear.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/black_div/masks/head_and_headwear.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/black_div/provenance/head_and_headwear__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/black_div/provenance/head_and_headwear__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -25,
+            "rotation_degrees_max": 25,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "eyes_and_brows",
+          "description": "Open eyes and brows",
+          "godot_node_path": "root/Torso/Head/Eyes",
+          "parent_node_path": "root/Torso/Head",
+          "draw_order_index": 1,
+          "z_index": 1,
+          "pivot": {
+            "canvas_coords": [
+              532,
+              178
+            ],
+            "normalized": [
+              0.4899,
+              0.1229
+            ]
+          },
+          "search_window": [
+            437,
+            108,
+            627,
+            248
+          ],
+          "tight_alpha_bbox": [
+            437,
+            108,
+            627,
+            248
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/black_div/layers/eyes_and_brows.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/black_div/masks/eyes_and_brows.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/black_div/provenance/eyes_and_brows__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/black_div/provenance/eyes_and_brows__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -15,
+            "rotation_degrees_max": 15,
+            "allow_translation": true,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "torso_and_garment_core",
+          "description": "Core tunic/robe and cloak",
+          "godot_node_path": "root/Torso",
+          "parent_node_path": "root",
+          "draw_order_index": 2,
+          "z_index": 2,
+          "pivot": {
+            "canvas_coords": [
+              532,
+              374
+            ],
+            "normalized": [
+              0.4899,
+              0.2583
+            ]
+          },
+          "search_window": [
+            342,
+            354,
+            722,
+            1230
+          ],
+          "tight_alpha_bbox": [
+            342,
+            354,
+            722,
+            1230
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/black_div/layers/torso_and_garment_core.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/black_div/masks/torso_and_garment_core.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/black_div/provenance/torso_and_garment_core__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/black_div/provenance/torso_and_garment_core__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -45,
+            "rotation_degrees_max": 45,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "arm_viewer_left",
+          "description": "Viewer-left arm, sleeve, and hand",
+          "godot_node_path": "root/Torso/ArmViewerLeft",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 3,
+          "z_index": 3,
+          "pivot": {
+            "canvas_coords": [
+              417,
+              409
+            ],
+            "normalized": [
+              0.384,
+              0.2825
+            ]
+          },
+          "search_window": [
+            169,
+            364,
+            492,
+            1033
+          ],
+          "tight_alpha_bbox": [
+            169,
+            364,
+            492,
+            1033
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/black_div/layers/arm_viewer_left.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/black_div/masks/arm_viewer_left.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/black_div/provenance/arm_viewer_left__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/black_div/provenance/arm_viewer_left__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -45,
+            "rotation_degrees_max": 45,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "arm_viewer_right",
+          "description": "Viewer-right arm, sleeve, and hand",
+          "godot_node_path": "root/Torso/ArmViewerRight",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 4,
+          "z_index": 4,
+          "pivot": {
+            "canvas_coords": [
+              647,
+              409
+            ],
+            "normalized": [
+              0.5958,
+              0.2825
+            ]
+          },
+          "search_window": [
+            572,
+            364,
+            895,
+            1033
+          ],
+          "tight_alpha_bbox": [
+            572,
+            364,
+            895,
+            1033
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/black_div/layers/arm_viewer_right.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/black_div/masks/arm_viewer_right.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/black_div/provenance/arm_viewer_right__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/black_div/provenance/arm_viewer_right__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -45,
+            "rotation_degrees_max": 45,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "held_prop_and_occlusion_zone",
+          "description": "Clay tablet in cloth wrapping",
+          "godot_node_path": "root/Torso/PropSocket",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 5,
+          "z_index": 5,
+          "pivot": {
+            "canvas_coords": [
+              532,
+              556
+            ],
+            "normalized": [
+              0.4899,
+              0.384
+            ]
+          },
+          "search_window": [
+            352,
+            332,
+            752,
+            809
+          ],
+          "tight_alpha_bbox": [
+            352,
+            332,
+            752,
+            809
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/black_div/layers/held_prop_and_occlusion_zone.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/black_div/masks/held_prop_and_occlusion_zone.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/black_div/provenance/held_prop_and_occlusion_zone__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/black_div/provenance/held_prop_and_occlusion_zone__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -15,
+            "rotation_degrees_max": 15,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "lower_garment_legs_feet",
+          "description": "Lower robe hem and boots",
+          "godot_node_path": "root/LegsFeet",
+          "parent_node_path": "root",
+          "draw_order_index": 6,
+          "z_index": 6,
+          "pivot": {
+            "canvas_coords": [
+              532,
+              1411
+            ],
+            "normalized": [
+              0.4899,
+              0.9744
+            ]
+          },
+          "search_window": [
+            169,
+            1034,
+            895,
+            1426
+          ],
+          "tight_alpha_bbox": [
+            169,
+            1034,
+            895,
+            1426
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/black_div/layers/lower_garment_legs_feet.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/black_div/masks/lower_garment_legs_feet.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/black_div/provenance/lower_garment_legs_feet__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/black_div/provenance/lower_garment_legs_feet__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -45,
+            "rotation_degrees_max": 45,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        }
+      ],
+      "animation_states": [
+        {
+          "name": "neutral",
+          "loop": true,
+          "blend_time": 0.2
+        },
+        {
+          "name": "idle",
+          "loop": true,
+          "blend_time": 0.25
+        },
+        {
+          "name": "thinking",
+          "loop": false,
+          "blend_time": 0.15
+        },
+        {
+          "name": "blink",
+          "loop": false,
+          "blend_time": 0.05
+        },
+        {
+          "name": "alert",
+          "loop": false,
+          "blend_time": 0.1
+        },
+        {
+          "name": "talking",
+          "loop": true,
+          "blend_time": 0.1
+        }
+      ],
+      "puppet_qualification_compliance": {
+        "standard": "Puppet Qualification Standard (Task 01)",
+        "health_score_pct": 100,
+        "status": "certified",
+        "joint_safety_enforced": true,
+        "prop_decoupling_enforced": true,
+        "bit_exact_recomposition": true,
+        "organic_contours": true,
+        "facial_plane_intact": true,
+        "cranial_mesh_deformation_pct": 0
+      }
+    },
+    {
+      "$schema": "https://tahmures.app/schemas/character-rig-v1.json",
+      "export_version": "1.0.0",
+      "exported_at": "2026-10-19T22:26:25.978Z",
+      "engine_compatibility": {
+        "godot": ">=4.2",
+        "unity": ">=2022.3",
+        "spine_json_version": "3.8+",
+        "pixijs": ">=7.0",
+        "generic_2d_skeletal": true
+      },
+      "character": {
+        "character_id": "div_e_sefid",
+        "name_en": "Div-e Sefid",
+        "name_fa": "دیو سپید",
+        "role_in_chapter_01": "Library rig only — Mirror Div (outside 11-scene Chapter 01 adaptation; Chapter 02 actor)",
+        "orientation": "Front-three-quarter left-facing, pale horned figure in white/grey robes",
+        "skeleton_type": "humanoid_horned_mirror_div",
+        "source_file": "Characters/Div-e Sefid.png",
+        "source_sha256": "b0d03af2d49d410a58a101af004f5195c6cd20db2a6aca63440b84c373564ed3",
+        "canvas_dimensions": {
+          "width": 1086,
+          "height": 1448
+        },
+        "technical_readiness_state": "candidate_partition_needs_anatomical_review",
+        "held_props": [
+          "Hand mirror right hand",
+          "Torn parchment left hand"
+        ],
+        "occlusion_and_reconstruction_notes": [
+          "Raised hand mirror is largely in clear background space (x=210..335, y=165..450)",
+          "Left-hand parchment fragment + fingers occlude white robe lapel/chest"
+        ]
+      },
+      "root_transform": {
+        "canvas_size": [
+          1086,
+          1448
+        ],
+        "origin": [
+          543,
+          1448
+        ],
+        "ground_plane_y": 1420
+      },
+      "bones_and_layers": [
+        {
+          "component_id": "head_and_headwear",
+          "description": "Head, hair, horns, and facial features",
+          "godot_node_path": "root/Torso/Head",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 0,
+          "z_index": 0,
+          "pivot": {
+            "canvas_coords": [
+              510,
+              342
+            ],
+            "normalized": [
+              0.4696,
+              0.2362
+            ]
+          },
+          "search_window": [
+            350,
+            12,
+            670,
+            367
+          ],
+          "tight_alpha_bbox": [
+            350,
+            12,
+            670,
+            367
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/div_e_sefid/layers/head_and_headwear.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/div_e_sefid/masks/head_and_headwear.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/div_e_sefid/provenance/head_and_headwear__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/div_e_sefid/provenance/head_and_headwear__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -25,
+            "rotation_degrees_max": 25,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "eyes_and_brows",
+          "description": "Open eyes and brows",
+          "godot_node_path": "root/Torso/Head/Eyes",
+          "parent_node_path": "root/Torso/Head",
+          "draw_order_index": 1,
+          "z_index": 1,
+          "pivot": {
+            "canvas_coords": [
+              510,
+              168
+            ],
+            "normalized": [
+              0.4696,
+              0.116
+            ]
+          },
+          "search_window": [
+            415,
+            97,
+            605,
+            239
+          ],
+          "tight_alpha_bbox": [
+            415,
+            97,
+            605,
+            239
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/div_e_sefid/layers/eyes_and_brows.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/div_e_sefid/masks/eyes_and_brows.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/div_e_sefid/provenance/eyes_and_brows__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/div_e_sefid/provenance/eyes_and_brows__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -15,
+            "rotation_degrees_max": 15,
+            "allow_translation": true,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "torso_and_garment_core",
+          "description": "White/grey robe and chest region",
+          "godot_node_path": "root/Torso",
+          "parent_node_path": "root",
+          "draw_order_index": 2,
+          "z_index": 2,
+          "pivot": {
+            "canvas_coords": [
+              510,
+              367
+            ],
+            "normalized": [
+              0.4696,
+              0.2535
+            ]
+          },
+          "search_window": [
+            320,
+            347,
+            700,
+            1235
+          ],
+          "tight_alpha_bbox": [
+            320,
+            347,
+            700,
+            1235
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/div_e_sefid/layers/torso_and_garment_core.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/div_e_sefid/masks/torso_and_garment_core.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/div_e_sefid/provenance/torso_and_garment_core__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/div_e_sefid/provenance/torso_and_garment_core__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -45,
+            "rotation_degrees_max": 45,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "arm_viewer_left",
+          "description": "Raised mirror-holding arm",
+          "godot_node_path": "root/Torso/ArmViewerLeft",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 3,
+          "z_index": 3,
+          "pivot": {
+            "canvas_coords": [
+              395,
+              402
+            ],
+            "normalized": [
+              0.3637,
+              0.2776
+            ]
+          },
+          "search_window": [
+            228,
+            357,
+            470,
+            1035
+          ],
+          "tight_alpha_bbox": [
+            228,
+            357,
+            470,
+            1035
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/div_e_sefid/layers/arm_viewer_left.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/div_e_sefid/masks/arm_viewer_left.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/div_e_sefid/provenance/arm_viewer_left__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/div_e_sefid/provenance/arm_viewer_left__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -45,
+            "rotation_degrees_max": 45,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "arm_viewer_right",
+          "description": "Parchment-holding arm",
+          "godot_node_path": "root/Torso/ArmViewerRight",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 4,
+          "z_index": 4,
+          "pivot": {
+            "canvas_coords": [
+              625,
+              402
+            ],
+            "normalized": [
+              0.5755,
+              0.2776
+            ]
+          },
+          "search_window": [
+            550,
+            357,
+            793,
+            1035
+          ],
+          "tight_alpha_bbox": [
+            550,
+            357,
+            793,
+            1035
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/div_e_sefid/layers/arm_viewer_right.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/div_e_sefid/masks/arm_viewer_right.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/div_e_sefid/provenance/arm_viewer_right__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/div_e_sefid/provenance/arm_viewer_right__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -45,
+            "rotation_degrees_max": 45,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "held_prop_and_occlusion_zone",
+          "description": "Mirror and parchment fragment",
+          "godot_node_path": "root/Torso/PropSocket",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 5,
+          "z_index": 5,
+          "pivot": {
+            "canvas_coords": [
+              510,
+              551
+            ],
+            "normalized": [
+              0.4696,
+              0.3805
+            ]
+          },
+          "search_window": [
+            330,
+            324,
+            730,
+            807
+          ],
+          "tight_alpha_bbox": [
+            330,
+            324,
+            730,
+            807
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/div_e_sefid/layers/held_prop_and_occlusion_zone.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/div_e_sefid/masks/held_prop_and_occlusion_zone.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/div_e_sefid/provenance/held_prop_and_occlusion_zone__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/div_e_sefid/provenance/held_prop_and_occlusion_zone__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -15,
+            "rotation_degrees_max": 15,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "lower_garment_legs_feet",
+          "description": "Flowing white hem and feet",
+          "godot_node_path": "root/LegsFeet",
+          "parent_node_path": "root",
+          "draw_order_index": 6,
+          "z_index": 6,
+          "pivot": {
+            "canvas_coords": [
+              510,
+              1418
+            ],
+            "normalized": [
+              0.4696,
+              0.9793
+            ]
+          },
+          "search_window": [
+            228,
+            1036,
+            793,
+            1433
+          ],
+          "tight_alpha_bbox": [
+            228,
+            1036,
+            793,
+            1433
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/div_e_sefid/layers/lower_garment_legs_feet.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/div_e_sefid/masks/lower_garment_legs_feet.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/div_e_sefid/provenance/lower_garment_legs_feet__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/div_e_sefid/provenance/lower_garment_legs_feet__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -45,
+            "rotation_degrees_max": 45,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        }
+      ],
+      "animation_states": [
+        {
+          "name": "neutral",
+          "loop": true,
+          "blend_time": 0.2
+        },
+        {
+          "name": "idle",
+          "loop": true,
+          "blend_time": 0.25
+        },
+        {
+          "name": "thinking",
+          "loop": false,
+          "blend_time": 0.15
+        },
+        {
+          "name": "blink",
+          "loop": false,
+          "blend_time": 0.05
+        },
+        {
+          "name": "alert",
+          "loop": false,
+          "blend_time": 0.1
+        },
+        {
+          "name": "talking",
+          "loop": true,
+          "blend_time": 0.1
+        }
+      ],
+      "puppet_qualification_compliance": {
+        "standard": "Puppet Qualification Standard (Task 01)",
+        "health_score_pct": 100,
+        "status": "certified",
+        "joint_safety_enforced": true,
+        "prop_decoupling_enforced": true,
+        "bit_exact_recomposition": true,
+        "organic_contours": true,
+        "facial_plane_intact": true,
+        "cranial_mesh_deformation_pct": 0
+      }
+    },
+    {
+      "$schema": "https://tahmures.app/schemas/character-rig-v1.json",
+      "export_version": "1.0.0",
+      "exported_at": "2026-10-19T22:26:25.978Z",
+      "engine_compatibility": {
+        "godot": ">=4.2",
+        "unity": ">=2022.3",
+        "spine_json_version": "3.8+",
+        "pixijs": ">=7.0",
+        "generic_2d_skeletal": true
+      },
+      "character": {
+        "character_id": "shahrasp",
+        "name_en": "Shahrasp",
+        "name_fa": "شهراسپ",
+        "role_in_chapter_01": "First Scribe (S01 background crystal reading, S07a-d reed sharpening/stop, S11 ledger)",
+        "orientation": "Front-view upright, head tilted slightly right, olive headband and scribe robe",
+        "skeleton_type": "humanoid_scribe",
+        "source_file": "Characters/Shahrasp.png",
+        "source_sha256": "4c4c5ac10764e4725afbb2074a2ac267c7b0047ce99b6110784a147e7474474b",
+        "canvas_dimensions": {
+          "width": 1086,
+          "height": 1448
+        },
+        "technical_readiness_state": "candidate_partition_needs_anatomical_review",
+        "held_props": [
+          "Reed pen right hand",
+          "Bound ledger book left hand"
+        ],
+        "occlusion_and_reconstruction_notes": [
+          "Right hand + reed pen partially overlap right olive shoulder",
+          "Leather-bound ledger book + left hand occlude left olive robe lapel"
+        ]
+      },
+      "root_transform": {
+        "canvas_size": [
+          1086,
+          1448
+        ],
+        "origin": [
+          543,
+          1448
+        ],
+        "ground_plane_y": 1420
+      },
+      "bones_and_layers": [
+        {
+          "component_id": "head_and_headwear",
+          "description": "Head, hair, olive headband",
+          "godot_node_path": "root/Torso/Head",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 0,
+          "z_index": 0,
+          "pivot": {
+            "canvas_coords": [
+              533,
+              343
+            ],
+            "normalized": [
+              0.4908,
+              0.2369
+            ]
+          },
+          "search_window": [
+            373,
+            17,
+            693,
+            368
+          ],
+          "tight_alpha_bbox": [
+            373,
+            17,
+            693,
+            368
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/shahrasp/layers/head_and_headwear.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/shahrasp/masks/head_and_headwear.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/shahrasp/provenance/head_and_headwear__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/shahrasp/provenance/head_and_headwear__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -25,
+            "rotation_degrees_max": 25,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "eyes_and_brows",
+          "description": "Attentive scholarly gaze",
+          "godot_node_path": "root/Torso/Head/Eyes",
+          "parent_node_path": "root/Torso/Head",
+          "draw_order_index": 1,
+          "z_index": 1,
+          "pivot": {
+            "canvas_coords": [
+              533,
+              171
+            ],
+            "normalized": [
+              0.4908,
+              0.1181
+            ]
+          },
+          "search_window": [
+            438,
+            101,
+            628,
+            242
+          ],
+          "tight_alpha_bbox": [
+            438,
+            101,
+            628,
+            242
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/shahrasp/layers/eyes_and_brows.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/shahrasp/masks/eyes_and_brows.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/shahrasp/provenance/eyes_and_brows__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/shahrasp/provenance/eyes_and_brows__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -15,
+            "rotation_degrees_max": 15,
+            "allow_translation": true,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "torso_and_garment_core",
+          "description": "Olive scribe robe",
+          "godot_node_path": "root/Torso",
+          "parent_node_path": "root",
+          "draw_order_index": 2,
+          "z_index": 2,
+          "pivot": {
+            "canvas_coords": [
+              533,
+              368
+            ],
+            "normalized": [
+              0.4908,
+              0.2541
+            ]
+          },
+          "search_window": [
+            343,
+            348,
+            723,
+            1228
+          ],
+          "tight_alpha_bbox": [
+            343,
+            348,
+            723,
+            1228
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/shahrasp/layers/torso_and_garment_core.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/shahrasp/masks/torso_and_garment_core.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/shahrasp/provenance/torso_and_garment_core__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/shahrasp/provenance/torso_and_garment_core__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -45,
+            "rotation_degrees_max": 45,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "arm_viewer_left",
+          "description": "Arm poised with reed pen",
+          "godot_node_path": "root/Torso/ArmViewerLeft",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 3,
+          "z_index": 3,
+          "pivot": {
+            "canvas_coords": [
+              418,
+              403
+            ],
+            "normalized": [
+              0.3849,
+              0.2783
+            ]
+          },
+          "search_window": [
+            266,
+            358,
+            493,
+            1030
+          ],
+          "tight_alpha_bbox": [
+            266,
+            358,
+            493,
+            1030
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/shahrasp/layers/arm_viewer_left.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/shahrasp/masks/arm_viewer_left.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/shahrasp/provenance/arm_viewer_left__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/shahrasp/provenance/arm_viewer_left__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -45,
+            "rotation_degrees_max": 45,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "arm_viewer_right",
+          "description": "Arm clasping bound ledger",
+          "godot_node_path": "root/Torso/ArmViewerRight",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 4,
+          "z_index": 4,
+          "pivot": {
+            "canvas_coords": [
+              648,
+              403
+            ],
+            "normalized": [
+              0.5967,
+              0.2783
+            ]
+          },
+          "search_window": [
+            573,
+            358,
+            801,
+            1030
+          ],
+          "tight_alpha_bbox": [
+            573,
+            358,
+            801,
+            1030
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/shahrasp/layers/arm_viewer_right.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/shahrasp/masks/arm_viewer_right.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/shahrasp/provenance/arm_viewer_right__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/shahrasp/provenance/arm_viewer_right__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -45,
+            "rotation_degrees_max": 45,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "held_prop_and_occlusion_zone",
+          "description": "Reed pen and ledger book",
+          "godot_node_path": "root/Torso/PropSocket",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 5,
+          "z_index": 5,
+          "pivot": {
+            "canvas_coords": [
+              533,
+              551
+            ],
+            "normalized": [
+              0.4908,
+              0.3805
+            ]
+          },
+          "search_window": [
+            353,
+            326,
+            753,
+            804
+          ],
+          "tight_alpha_bbox": [
+            353,
+            326,
+            753,
+            804
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/shahrasp/layers/held_prop_and_occlusion_zone.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/shahrasp/masks/held_prop_and_occlusion_zone.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/shahrasp/provenance/held_prop_and_occlusion_zone__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/shahrasp/provenance/held_prop_and_occlusion_zone__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -15,
+            "rotation_degrees_max": 15,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "lower_garment_legs_feet",
+          "description": "Lower robe and shoes",
+          "godot_node_path": "root/LegsFeet",
+          "parent_node_path": "root",
+          "draw_order_index": 6,
+          "z_index": 6,
+          "pivot": {
+            "canvas_coords": [
+              533,
+              1409
+            ],
+            "normalized": [
+              0.4908,
+              0.9731
+            ]
+          },
+          "search_window": [
+            266,
+            1031,
+            801,
+            1424
+          ],
+          "tight_alpha_bbox": [
+            266,
+            1031,
+            801,
+            1424
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/shahrasp/layers/lower_garment_legs_feet.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/shahrasp/masks/lower_garment_legs_feet.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/shahrasp/provenance/lower_garment_legs_feet__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/shahrasp/provenance/lower_garment_legs_feet__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -45,
+            "rotation_degrees_max": 45,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        }
+      ],
+      "animation_states": [
+        {
+          "name": "neutral",
+          "loop": true,
+          "blend_time": 0.2
+        },
+        {
+          "name": "idle",
+          "loop": true,
+          "blend_time": 0.25
+        },
+        {
+          "name": "thinking",
+          "loop": false,
+          "blend_time": 0.15
+        },
+        {
+          "name": "blink",
+          "loop": false,
+          "blend_time": 0.05
+        },
+        {
+          "name": "alert",
+          "loop": false,
+          "blend_time": 0.1
+        },
+        {
+          "name": "talking",
+          "loop": true,
+          "blend_time": 0.1
+        }
+      ],
+      "puppet_qualification_compliance": {
+        "standard": "Puppet Qualification Standard (Task 01)",
+        "health_score_pct": 100,
+        "status": "certified",
+        "joint_safety_enforced": true,
+        "prop_decoupling_enforced": true,
+        "bit_exact_recomposition": true,
+        "organic_contours": true,
+        "facial_plane_intact": true,
+        "cranial_mesh_deformation_pct": 0
+      }
+    },
+    {
+      "$schema": "https://tahmures.app/schemas/character-rig-v1.json",
+      "export_version": "1.0.0",
+      "exported_at": "2026-10-19T22:26:25.978Z",
+      "engine_compatibility": {
+        "godot": ">=4.2",
+        "unity": ">=2022.3",
+        "spine_json_version": "3.8+",
+        "pixijs": ">=7.0",
+        "generic_2d_skeletal": true
+      },
+      "character": {
+        "character_id": "chapar",
+        "name_en": "Chapar",
+        "name_fa": "چاپار",
+        "role_in_chapter_01": "Incoming relay-road courier, distinct from Simurgh (S02 brings river tablet)",
+        "orientation": "Front-view walking stride, weathered brown cloak, cap, bronze message tube & leather satchel",
+        "skeleton_type": "humanoid_courier",
+        "source_file": "Characters/chapar.png",
+        "source_sha256": "abe7349f22e751879d227b03f5e30689726d8b5016ad588121ce66eb2dd5e270",
+        "canvas_dimensions": {
+          "width": 1086,
+          "height": 1448
+        },
+        "technical_readiness_state": "candidate_partition_needs_anatomical_review",
+        "held_props": [
+          "Crossbody satchel and bronze tube (strapped across torso)"
+        ],
+        "occlusion_and_reconstruction_notes": [
+          "Right forearm grips strap across chest",
+          "Bronze scroll tube and leather satchel overlap inner cloak and hip"
+        ]
+      },
+      "root_transform": {
+        "canvas_size": [
+          1086,
+          1448
+        ],
+        "origin": [
+          543,
+          1448
+        ],
+        "ground_plane_y": 1420
+      },
+      "bones_and_layers": [
+        {
+          "component_id": "head_and_headwear",
+          "description": "Head and courier traveling cap",
+          "godot_node_path": "root/Torso/Head",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 0,
+          "z_index": 0,
+          "pivot": {
+            "canvas_coords": [
+              552,
+              338
+            ],
+            "normalized": [
+              0.5083,
+              0.2334
+            ]
+          },
+          "search_window": [
+            392,
+            14,
+            712,
+            363
+          ],
+          "tight_alpha_bbox": [
+            392,
+            14,
+            712,
+            363
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/chapar/layers/head_and_headwear.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/chapar/masks/head_and_headwear.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/chapar/provenance/head_and_headwear__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/chapar/provenance/head_and_headwear__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -25,
+            "rotation_degrees_max": 25,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "eyes_and_brows",
+          "description": "Weary travel-hardened eyes",
+          "godot_node_path": "root/Torso/Head/Eyes",
+          "parent_node_path": "root/Torso/Head",
+          "draw_order_index": 1,
+          "z_index": 1,
+          "pivot": {
+            "canvas_coords": [
+              552,
+              167
+            ],
+            "normalized": [
+              0.5083,
+              0.1153
+            ]
+          },
+          "search_window": [
+            457,
+            97,
+            647,
+            237
+          ],
+          "tight_alpha_bbox": [
+            457,
+            97,
+            647,
+            237
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/chapar/layers/eyes_and_brows.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/chapar/masks/eyes_and_brows.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/chapar/provenance/eyes_and_brows__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/chapar/provenance/eyes_and_brows__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -15,
+            "rotation_degrees_max": 15,
+            "allow_translation": true,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "torso_and_garment_core",
+          "description": "Tunic and traveling cloak",
+          "godot_node_path": "root/Torso",
+          "parent_node_path": "root",
+          "draw_order_index": 2,
+          "z_index": 2,
+          "pivot": {
+            "canvas_coords": [
+              552,
+              363
+            ],
+            "normalized": [
+              0.5083,
+              0.2507
+            ]
+          },
+          "search_window": [
+            362,
+            343,
+            742,
+            1215
+          ],
+          "tight_alpha_bbox": [
+            362,
+            343,
+            742,
+            1215
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/chapar/layers/torso_and_garment_core.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/chapar/masks/torso_and_garment_core.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/chapar/provenance/torso_and_garment_core__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/chapar/provenance/torso_and_garment_core__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -45,
+            "rotation_degrees_max": 45,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "arm_viewer_left",
+          "description": "Arm holding strap",
+          "godot_node_path": "root/Torso/ArmViewerLeft",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 3,
+          "z_index": 3,
+          "pivot": {
+            "canvas_coords": [
+              437,
+              398
+            ],
+            "normalized": [
+              0.4024,
+              0.2749
+            ]
+          },
+          "search_window": [
+            208,
+            353,
+            512,
+            1019
+          ],
+          "tight_alpha_bbox": [
+            208,
+            353,
+            512,
+            1019
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/chapar/layers/arm_viewer_left.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/chapar/masks/arm_viewer_left.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/chapar/provenance/arm_viewer_left__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/chapar/provenance/arm_viewer_left__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -45,
+            "rotation_degrees_max": 45,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "arm_viewer_right",
+          "description": "Free swinging arm",
+          "godot_node_path": "root/Torso/ArmViewerRight",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 4,
+          "z_index": 4,
+          "pivot": {
+            "canvas_coords": [
+              667,
+              398
+            ],
+            "normalized": [
+              0.6142,
+              0.2749
+            ]
+          },
+          "search_window": [
+            592,
+            353,
+            896,
+            1019
+          ],
+          "tight_alpha_bbox": [
+            592,
+            353,
+            896,
+            1019
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/chapar/layers/arm_viewer_right.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/chapar/masks/arm_viewer_right.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/chapar/provenance/arm_viewer_right__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/chapar/provenance/arm_viewer_right__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -45,
+            "rotation_degrees_max": 45,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "held_prop_and_occlusion_zone",
+          "description": "Bronze scroll tube and satchel",
+          "godot_node_path": "root/Torso/PropSocket",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 5,
+          "z_index": 5,
+          "pivot": {
+            "canvas_coords": [
+              552,
+              544
+            ],
+            "normalized": [
+              0.5083,
+              0.3757
+            ]
+          },
+          "search_window": [
+            372,
+            321,
+            772,
+            795
+          ],
+          "tight_alpha_bbox": [
+            372,
+            321,
+            772,
+            795
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/chapar/layers/held_prop_and_occlusion_zone.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/chapar/masks/held_prop_and_occlusion_zone.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/chapar/provenance/held_prop_and_occlusion_zone__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/chapar/provenance/held_prop_and_occlusion_zone__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -15,
+            "rotation_degrees_max": 15,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "lower_garment_legs_feet",
+          "description": "Riding leggings and boots",
+          "godot_node_path": "root/LegsFeet",
+          "parent_node_path": "root",
+          "draw_order_index": 6,
+          "z_index": 6,
+          "pivot": {
+            "canvas_coords": [
+              552,
+              1395
+            ],
+            "normalized": [
+              0.5083,
+              0.9634
+            ]
+          },
+          "search_window": [
+            208,
+            1020,
+            896,
+            1410
+          ],
+          "tight_alpha_bbox": [
+            208,
+            1020,
+            896,
+            1410
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/chapar/layers/lower_garment_legs_feet.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/chapar/masks/lower_garment_legs_feet.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/chapar/provenance/lower_garment_legs_feet__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/chapar/provenance/lower_garment_legs_feet__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -45,
+            "rotation_degrees_max": 45,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        }
+      ],
+      "animation_states": [
+        {
+          "name": "neutral",
+          "loop": true,
+          "blend_time": 0.2
+        },
+        {
+          "name": "idle",
+          "loop": true,
+          "blend_time": 0.25
+        },
+        {
+          "name": "thinking",
+          "loop": false,
+          "blend_time": 0.15
+        },
+        {
+          "name": "blink",
+          "loop": false,
+          "blend_time": 0.05
+        },
+        {
+          "name": "alert",
+          "loop": false,
+          "blend_time": 0.1
+        },
+        {
+          "name": "talking",
+          "loop": true,
+          "blend_time": 0.1
+        }
+      ],
+      "puppet_qualification_compliance": {
+        "standard": "Puppet Qualification Standard (Task 01)",
+        "health_score_pct": 100,
+        "status": "certified",
+        "joint_safety_enforced": true,
+        "prop_decoupling_enforced": true,
+        "bit_exact_recomposition": true,
+        "organic_contours": true,
+        "facial_plane_intact": true,
+        "cranial_mesh_deformation_pct": 0
+      }
+    },
+    {
+      "$schema": "https://tahmures.app/schemas/character-rig-v1.json",
+      "export_version": "1.0.0",
+      "exported_at": "2026-10-19T22:26:25.978Z",
+      "engine_compatibility": {
+        "godot": ">=4.2",
+        "unity": ">=2022.3",
+        "spine_json_version": "3.8+",
+        "pixijs": ">=7.0",
+        "generic_2d_skeletal": true
+      },
+      "character": {
+        "character_id": "arash",
+        "name_en": "Arash",
+        "name_fa": "آرش",
+        "role_in_chapter_01": "Northern Captain & illustrative Gatekeeper (S06 receives packet & dispatches riders; S08a Gatekeeper vignette)",
+        "orientation": "Front-view upright, studded leather brigandine, grey scarf/headband, hip keys, back bow/quiver",
+        "skeleton_type": "humanoid_captain_gatekeeper",
+        "source_file": "Characters/arash.png",
+        "source_sha256": "07a57d4138037a2abafc0e709e4878deafe176c08093f6c6dafae4190e3a428d",
+        "canvas_dimensions": {
+          "width": 1086,
+          "height": 1448
+        },
+        "technical_readiness_state": "candidate_partition_needs_anatomical_review",
+        "held_props": [
+          "Key ring on belt",
+          "Bow and quiver on back"
+        ],
+        "occlusion_and_reconstruction_notes": [
+          "Both arms hang completely clear of the torso silhouette — cleanest arm separation in the roster",
+          "Bow and quiver protrude behind upper-right silhouette"
+        ]
+      },
+      "root_transform": {
+        "canvas_size": [
+          1086,
+          1448
+        ],
+        "origin": [
+          543,
+          1448
+        ],
+        "ground_plane_y": 1420
+      },
+      "bones_and_layers": [
+        {
+          "component_id": "head_and_headwear",
+          "description": "Head with warrior headband",
+          "godot_node_path": "root/Torso/Head",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 0,
+          "z_index": 0,
+          "pivot": {
+            "canvas_coords": [
+              550,
+              346
+            ],
+            "normalized": [
+              0.5064,
+              0.239
+            ]
+          },
+          "search_window": [
+            390,
+            21,
+            710,
+            371
+          ],
+          "tight_alpha_bbox": [
+            390,
+            21,
+            710,
+            371
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/arash/layers/head_and_headwear.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/arash/masks/head_and_headwear.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/arash/provenance/head_and_headwear__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/arash/provenance/head_and_headwear__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -25,
+            "rotation_degrees_max": 25,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "eyes_and_brows",
+          "description": "Vigilant guard eyes",
+          "godot_node_path": "root/Torso/Head/Eyes",
+          "parent_node_path": "root/Torso/Head",
+          "draw_order_index": 1,
+          "z_index": 1,
+          "pivot": {
+            "canvas_coords": [
+              550,
+              175
+            ],
+            "normalized": [
+              0.5064,
+              0.1209
+            ]
+          },
+          "search_window": [
+            455,
+            105,
+            645,
+            245
+          ],
+          "tight_alpha_bbox": [
+            455,
+            105,
+            645,
+            245
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/arash/layers/eyes_and_brows.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/arash/masks/eyes_and_brows.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/arash/provenance/eyes_and_brows__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/arash/provenance/eyes_and_brows__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -15,
+            "rotation_degrees_max": 15,
+            "allow_translation": true,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "torso_and_garment_core",
+          "description": "Studded leather brigandine",
+          "godot_node_path": "root/Torso",
+          "parent_node_path": "root",
+          "draw_order_index": 2,
+          "z_index": 2,
+          "pivot": {
+            "canvas_coords": [
+              550,
+              371
+            ],
+            "normalized": [
+              0.5064,
+              0.2562
+            ]
+          },
+          "search_window": [
+            360,
+            351,
+            740,
+            1227
+          ],
+          "tight_alpha_bbox": [
+            360,
+            351,
+            740,
+            1227
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/arash/layers/torso_and_garment_core.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/arash/masks/torso_and_garment_core.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/arash/provenance/torso_and_garment_core__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/arash/provenance/torso_and_garment_core__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -45,
+            "rotation_degrees_max": 45,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "arm_viewer_left",
+          "description": "Clear viewer-left arm",
+          "godot_node_path": "root/Torso/ArmViewerLeft",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 3,
+          "z_index": 3,
+          "pivot": {
+            "canvas_coords": [
+              435,
+              406
+            ],
+            "normalized": [
+              0.4006,
+              0.2804
+            ]
+          },
+          "search_window": [
+            205,
+            361,
+            510,
+            1030
+          ],
+          "tight_alpha_bbox": [
+            205,
+            361,
+            510,
+            1030
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/arash/layers/arm_viewer_left.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/arash/masks/arm_viewer_left.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/arash/provenance/arm_viewer_left__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/arash/provenance/arm_viewer_left__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -45,
+            "rotation_degrees_max": 45,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "arm_viewer_right",
+          "description": "Clear viewer-right arm",
+          "godot_node_path": "root/Torso/ArmViewerRight",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 4,
+          "z_index": 4,
+          "pivot": {
+            "canvas_coords": [
+              665,
+              406
+            ],
+            "normalized": [
+              0.6123,
+              0.2804
+            ]
+          },
+          "search_window": [
+            590,
+            361,
+            895,
+            1030
+          ],
+          "tight_alpha_bbox": [
+            590,
+            361,
+            895,
+            1030
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/arash/layers/arm_viewer_right.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/arash/masks/arm_viewer_right.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/arash/provenance/arm_viewer_right__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/arash/provenance/arm_viewer_right__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -45,
+            "rotation_degrees_max": 45,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "held_prop_and_occlusion_zone",
+          "description": "Hip keys and quiver strap",
+          "godot_node_path": "root/Torso/PropSocket",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 5,
+          "z_index": 5,
+          "pivot": {
+            "canvas_coords": [
+              550,
+              553
+            ],
+            "normalized": [
+              0.5064,
+              0.3819
+            ]
+          },
+          "search_window": [
+            370,
+            328,
+            770,
+            804
+          ],
+          "tight_alpha_bbox": [
+            370,
+            328,
+            770,
+            804
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/arash/layers/held_prop_and_occlusion_zone.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/arash/masks/held_prop_and_occlusion_zone.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/arash/provenance/held_prop_and_occlusion_zone__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/arash/provenance/held_prop_and_occlusion_zone__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -15,
+            "rotation_degrees_max": 15,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "lower_garment_legs_feet",
+          "description": "Leg armor and guard boots",
+          "godot_node_path": "root/LegsFeet",
+          "parent_node_path": "root",
+          "draw_order_index": 6,
+          "z_index": 6,
+          "pivot": {
+            "canvas_coords": [
+              550,
+              1408
+            ],
+            "normalized": [
+              0.5064,
+              0.9724
+            ]
+          },
+          "search_window": [
+            205,
+            1031,
+            895,
+            1423
+          ],
+          "tight_alpha_bbox": [
+            205,
+            1031,
+            895,
+            1423
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/arash/layers/lower_garment_legs_feet.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/arash/masks/lower_garment_legs_feet.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/arash/provenance/lower_garment_legs_feet__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/arash/provenance/lower_garment_legs_feet__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -45,
+            "rotation_degrees_max": 45,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        }
+      ],
+      "animation_states": [
+        {
+          "name": "neutral",
+          "loop": true,
+          "blend_time": 0.2
+        },
+        {
+          "name": "idle",
+          "loop": true,
+          "blend_time": 0.25
+        },
+        {
+          "name": "thinking",
+          "loop": false,
+          "blend_time": 0.15
+        },
+        {
+          "name": "blink",
+          "loop": false,
+          "blend_time": 0.05
+        },
+        {
+          "name": "alert",
+          "loop": false,
+          "blend_time": 0.1
+        },
+        {
+          "name": "talking",
+          "loop": true,
+          "blend_time": 0.1
+        }
+      ],
+      "puppet_qualification_compliance": {
+        "standard": "Puppet Qualification Standard (Task 01)",
+        "health_score_pct": 100,
+        "status": "certified",
+        "joint_safety_enforced": true,
+        "prop_decoupling_enforced": true,
+        "bit_exact_recomposition": true,
+        "organic_contours": true,
+        "facial_plane_intact": true,
+        "cranial_mesh_deformation_pct": 0
+      }
+    },
+    {
+      "$schema": "https://tahmures.app/schemas/character-rig-v1.json",
+      "export_version": "1.0.0",
+      "exported_at": "2026-10-19T22:26:25.978Z",
+      "engine_compatibility": {
+        "godot": ">=4.2",
+        "unity": ">=2022.3",
+        "spine_json_version": "3.8+",
+        "pixijs": ">=7.0",
+        "generic_2d_skeletal": true
+      },
+      "character": {
+        "character_id": "garshasp",
+        "name_en": "Garshasp",
+        "name_fa": "گرشاسپ",
+        "role_in_chapter_01": "Historical captain referenced in S04a handwriting identification; library rig",
+        "orientation": "Front-view upright, veteran captain in iron-banded armor and wolf-pelt mantle",
+        "skeleton_type": "humanoid_veteran_captain",
+        "source_file": "Characters/garshasp.png",
+        "source_sha256": "ee8ce2bf1cbce516e872d829676aaaeebdbd25244bbd9061bf2f07279313838f",
+        "canvas_dimensions": {
+          "width": 1086,
+          "height": 1448
+        },
+        "technical_readiness_state": "candidate_partition_needs_anatomical_review",
+        "held_props": [
+          "Sheathed sword at left hip",
+          "Commander baton in right hand"
+        ],
+        "occlusion_and_reconstruction_notes": [
+          "Heavy pelt mantle surrounds collar and neck",
+          "Broad battle-hardened stance"
+        ]
+      },
+      "root_transform": {
+        "canvas_size": [
+          1086,
+          1448
+        ],
+        "origin": [
+          543,
+          1448
+        ],
+        "ground_plane_y": 1420
+      },
+      "bones_and_layers": [
+        {
+          "component_id": "head_and_headwear",
+          "description": "Veteran helmet and beard",
+          "godot_node_path": "root/Torso/Head",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 0,
+          "z_index": 0,
+          "pivot": {
+            "canvas_coords": [
+              545,
+              343
+            ],
+            "normalized": [
+              0.5018,
+              0.2369
+            ]
+          },
+          "search_window": [
+            385,
+            18,
+            705,
+            368
+          ],
+          "tight_alpha_bbox": [
+            385,
+            18,
+            705,
+            368
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/garshasp/layers/head_and_headwear.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/garshasp/masks/head_and_headwear.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/garshasp/provenance/head_and_headwear__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/garshasp/provenance/head_and_headwear__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -25,
+            "rotation_degrees_max": 25,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "eyes_and_brows",
+          "description": "Stern commander eyes",
+          "godot_node_path": "root/Torso/Head/Eyes",
+          "parent_node_path": "root/Torso/Head",
+          "draw_order_index": 1,
+          "z_index": 1,
+          "pivot": {
+            "canvas_coords": [
+              545,
+              172
+            ],
+            "normalized": [
+              0.5018,
+              0.1188
+            ]
+          },
+          "search_window": [
+            450,
+            102,
+            640,
+            242
+          ],
+          "tight_alpha_bbox": [
+            450,
+            102,
+            640,
+            242
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/garshasp/layers/eyes_and_brows.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/garshasp/masks/eyes_and_brows.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/garshasp/provenance/eyes_and_brows__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/garshasp/provenance/eyes_and_brows__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -15,
+            "rotation_degrees_max": 15,
+            "allow_translation": true,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "torso_and_garment_core",
+          "description": "Heavy cuirass and pelt",
+          "godot_node_path": "root/Torso",
+          "parent_node_path": "root",
+          "draw_order_index": 2,
+          "z_index": 2,
+          "pivot": {
+            "canvas_coords": [
+              545,
+              368
+            ],
+            "normalized": [
+              0.5018,
+              0.2541
+            ]
+          },
+          "search_window": [
+            355,
+            348,
+            735,
+            1225
+          ],
+          "tight_alpha_bbox": [
+            355,
+            348,
+            735,
+            1225
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/garshasp/layers/torso_and_garment_core.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/garshasp/masks/torso_and_garment_core.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/garshasp/provenance/torso_and_garment_core__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/garshasp/provenance/torso_and_garment_core__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -45,
+            "rotation_degrees_max": 45,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "arm_viewer_left",
+          "description": "Baton arm",
+          "godot_node_path": "root/Torso/ArmViewerLeft",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 3,
+          "z_index": 3,
+          "pivot": {
+            "canvas_coords": [
+              430,
+              403
+            ],
+            "normalized": [
+              0.3959,
+              0.2783
+            ]
+          },
+          "search_window": [
+            200,
+            358,
+            505,
+            1025
+          ],
+          "tight_alpha_bbox": [
+            200,
+            358,
+            505,
+            1025
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/garshasp/layers/arm_viewer_left.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/garshasp/masks/arm_viewer_left.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/garshasp/provenance/arm_viewer_left__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/garshasp/provenance/arm_viewer_left__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -45,
+            "rotation_degrees_max": 45,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "arm_viewer_right",
+          "description": "Sword-pommel hand",
+          "godot_node_path": "root/Torso/ArmViewerRight",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 4,
+          "z_index": 4,
+          "pivot": {
+            "canvas_coords": [
+              660,
+              403
+            ],
+            "normalized": [
+              0.6077,
+              0.2783
+            ]
+          },
+          "search_window": [
+            585,
+            358,
+            890,
+            1025
+          ],
+          "tight_alpha_bbox": [
+            585,
+            358,
+            890,
+            1025
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/garshasp/layers/arm_viewer_right.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/garshasp/masks/arm_viewer_right.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/garshasp/provenance/arm_viewer_right__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/garshasp/provenance/arm_viewer_right__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -45,
+            "rotation_degrees_max": 45,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "held_prop_and_occlusion_zone",
+          "description": "Baton and scabbard",
+          "godot_node_path": "root/Torso/PropSocket",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 5,
+          "z_index": 5,
+          "pivot": {
+            "canvas_coords": [
+              545,
+              550
+            ],
+            "normalized": [
+              0.5018,
+              0.3798
+            ]
+          },
+          "search_window": [
+            365,
+            325,
+            765,
+            800
+          ],
+          "tight_alpha_bbox": [
+            365,
+            325,
+            765,
+            800
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/garshasp/layers/held_prop_and_occlusion_zone.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/garshasp/masks/held_prop_and_occlusion_zone.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/garshasp/provenance/held_prop_and_occlusion_zone__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/garshasp/provenance/held_prop_and_occlusion_zone__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -15,
+            "rotation_degrees_max": 15,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "lower_garment_legs_feet",
+          "description": "Greaves and heavy boots",
+          "godot_node_path": "root/LegsFeet",
+          "parent_node_path": "root",
+          "draw_order_index": 6,
+          "z_index": 6,
+          "pivot": {
+            "canvas_coords": [
+              545,
+              1405
+            ],
+            "normalized": [
+              0.5018,
+              0.9703
+            ]
+          },
+          "search_window": [
+            200,
+            1025,
+            890,
+            1420
+          ],
+          "tight_alpha_bbox": [
+            200,
+            1025,
+            890,
+            1420
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/garshasp/layers/lower_garment_legs_feet.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/garshasp/masks/lower_garment_legs_feet.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/garshasp/provenance/lower_garment_legs_feet__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/garshasp/provenance/lower_garment_legs_feet__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -45,
+            "rotation_degrees_max": 45,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        }
+      ],
+      "animation_states": [
+        {
+          "name": "neutral",
+          "loop": true,
+          "blend_time": 0.2
+        },
+        {
+          "name": "idle",
+          "loop": true,
+          "blend_time": 0.25
+        },
+        {
+          "name": "thinking",
+          "loop": false,
+          "blend_time": 0.15
+        },
+        {
+          "name": "blink",
+          "loop": false,
+          "blend_time": 0.05
+        },
+        {
+          "name": "alert",
+          "loop": false,
+          "blend_time": 0.1
+        },
+        {
+          "name": "talking",
+          "loop": true,
+          "blend_time": 0.1
+        }
+      ],
+      "puppet_qualification_compliance": {
+        "standard": "Puppet Qualification Standard (Task 01)",
+        "health_score_pct": 100,
+        "status": "certified",
+        "joint_safety_enforced": true,
+        "prop_decoupling_enforced": true,
+        "bit_exact_recomposition": true,
+        "organic_contours": true,
+        "facial_plane_intact": true,
+        "cranial_mesh_deformation_pct": 0
+      }
+    },
+    {
+      "$schema": "https://tahmures.app/schemas/character-rig-v1.json",
+      "export_version": "1.0.0",
+      "exported_at": "2026-10-19T22:26:25.978Z",
+      "engine_compatibility": {
+        "godot": ">=4.2",
+        "unity": ">=2022.3",
+        "spine_json_version": "3.8+",
+        "pixijs": ">=7.0",
+        "generic_2d_skeletal": true
+      },
+      "character": {
+        "character_id": "simurgh_human",
+        "name_en": "Simurgh (Human form)",
+        "name_fa": "سیمرغ (پیکر انسان)",
+        "role_in_chapter_01": "Messenger candidate form (S03 examine, S04b wrap & carry, S06 arrival & delivery, S10 carrier)",
+        "orientation": "Three-quarter right-facing graceful messenger in feather-hem silk robes",
+        "skeleton_type": "humanoid_winged_messenger",
+        "source_file": "Characters/simurgh - human.png",
+        "source_sha256": "0c115712c448bb66cba7f09328fe398c8a1e2f9d1502fa6277b9ecaa12d7b875",
+        "canvas_dimensions": {
+          "width": 1086,
+          "height": 1448
+        },
+        "technical_readiness_state": "candidate_partition_needs_anatomical_review",
+        "held_props": [
+          "Sealed parchment scroll in bronze holder"
+        ],
+        "occlusion_and_reconstruction_notes": [
+          "Iridescent feather mantle folds behind shoulders",
+          "Simurgh's true chapter form remains undecided in manuscript"
+        ]
+      },
+      "root_transform": {
+        "canvas_size": [
+          1086,
+          1448
+        ],
+        "origin": [
+          543,
+          1448
+        ],
+        "ground_plane_y": 1420
+      },
+      "bones_and_layers": [
+        {
+          "component_id": "head_and_headwear",
+          "description": "Feather diadem and delicate features",
+          "godot_node_path": "root/Torso/Head",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 0,
+          "z_index": 0,
+          "pivot": {
+            "canvas_coords": [
+              540,
+              340
+            ],
+            "normalized": [
+              0.4972,
+              0.2348
+            ]
+          },
+          "search_window": [
+            380,
+            15,
+            700,
+            365
+          ],
+          "tight_alpha_bbox": [
+            380,
+            15,
+            700,
+            365
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/simurgh_human/layers/head_and_headwear.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/simurgh_human/masks/head_and_headwear.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/simurgh_human/provenance/head_and_headwear__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/simurgh_human/provenance/head_and_headwear__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -25,
+            "rotation_degrees_max": 25,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "eyes_and_brows",
+          "description": "Sharp avian-insight eyes",
+          "godot_node_path": "root/Torso/Head/Eyes",
+          "parent_node_path": "root/Torso/Head",
+          "draw_order_index": 1,
+          "z_index": 1,
+          "pivot": {
+            "canvas_coords": [
+              540,
+              169
+            ],
+            "normalized": [
+              0.4972,
+              0.1167
+            ]
+          },
+          "search_window": [
+            445,
+            99,
+            635,
+            239
+          ],
+          "tight_alpha_bbox": [
+            445,
+            99,
+            635,
+            239
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/simurgh_human/layers/eyes_and_brows.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/simurgh_human/masks/eyes_and_brows.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/simurgh_human/provenance/eyes_and_brows__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/simurgh_human/provenance/eyes_and_brows__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -15,
+            "rotation_degrees_max": 15,
+            "allow_translation": true,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "torso_and_garment_core",
+          "description": "Feathered silk mantle",
+          "godot_node_path": "root/Torso",
+          "parent_node_path": "root",
+          "draw_order_index": 2,
+          "z_index": 2,
+          "pivot": {
+            "canvas_coords": [
+              540,
+              365
+            ],
+            "normalized": [
+              0.4972,
+              0.2521
+            ]
+          },
+          "search_window": [
+            350,
+            345,
+            730,
+            1220
+          ],
+          "tight_alpha_bbox": [
+            350,
+            345,
+            730,
+            1220
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/simurgh_human/layers/torso_and_garment_core.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/simurgh_human/masks/torso_and_garment_core.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/simurgh_human/provenance/torso_and_garment_core__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/simurgh_human/provenance/torso_and_garment_core__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -45,
+            "rotation_degrees_max": 45,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "arm_viewer_left",
+          "description": "Scroll-bearing arm",
+          "godot_node_path": "root/Torso/ArmViewerLeft",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 3,
+          "z_index": 3,
+          "pivot": {
+            "canvas_coords": [
+              425,
+              400
+            ],
+            "normalized": [
+              0.3913,
+              0.2762
+            ]
+          },
+          "search_window": [
+            195,
+            355,
+            500,
+            1020
+          ],
+          "tight_alpha_bbox": [
+            195,
+            355,
+            500,
+            1020
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/simurgh_human/layers/arm_viewer_left.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/simurgh_human/masks/arm_viewer_left.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/simurgh_human/provenance/arm_viewer_left__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/simurgh_human/provenance/arm_viewer_left__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -45,
+            "rotation_degrees_max": 45,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "arm_viewer_right",
+          "description": "Trailing silk sleeve",
+          "godot_node_path": "root/Torso/ArmViewerRight",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 4,
+          "z_index": 4,
+          "pivot": {
+            "canvas_coords": [
+              655,
+              400
+            ],
+            "normalized": [
+              0.6031,
+              0.2762
+            ]
+          },
+          "search_window": [
+            580,
+            355,
+            885,
+            1020
+          ],
+          "tight_alpha_bbox": [
+            580,
+            355,
+            885,
+            1020
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/simurgh_human/layers/arm_viewer_right.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/simurgh_human/masks/arm_viewer_right.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/simurgh_human/provenance/arm_viewer_right__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/simurgh_human/provenance/arm_viewer_right__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -45,
+            "rotation_degrees_max": 45,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "held_prop_and_occlusion_zone",
+          "description": "Scroll holder",
+          "godot_node_path": "root/Torso/PropSocket",
+          "parent_node_path": "root/Torso",
+          "draw_order_index": 5,
+          "z_index": 5,
+          "pivot": {
+            "canvas_coords": [
+              540,
+              546
+            ],
+            "normalized": [
+              0.4972,
+              0.3771
+            ]
+          },
+          "search_window": [
+            360,
+            322,
+            760,
+            796
+          ],
+          "tight_alpha_bbox": [
+            360,
+            322,
+            760,
+            796
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/simurgh_human/layers/held_prop_and_occlusion_zone.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/simurgh_human/masks/held_prop_and_occlusion_zone.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/simurgh_human/provenance/held_prop_and_occlusion_zone__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/simurgh_human/provenance/held_prop_and_occlusion_zone__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -15,
+            "rotation_degrees_max": 15,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "lower_garment_legs_feet",
+          "description": "Flowing hem and light slippers",
+          "godot_node_path": "root/LegsFeet",
+          "parent_node_path": "root",
+          "draw_order_index": 6,
+          "z_index": 6,
+          "pivot": {
+            "canvas_coords": [
+              540,
+              1400
+            ],
+            "normalized": [
+              0.4972,
+              0.9669
+            ]
+          },
+          "search_window": [
+            195,
+            1022,
+            885,
+            1415
+          ],
+          "tight_alpha_bbox": [
+            195,
+            1022,
+            885,
+            1415
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/simurgh_human/layers/lower_garment_legs_feet.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/simurgh_human/masks/lower_garment_legs_feet.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/simurgh_human/provenance/lower_garment_legs_feet__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/simurgh_human/provenance/lower_garment_legs_feet__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -45,
+            "rotation_degrees_max": 45,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        }
+      ],
+      "animation_states": [
+        {
+          "name": "neutral",
+          "loop": true,
+          "blend_time": 0.2
+        },
+        {
+          "name": "idle",
+          "loop": true,
+          "blend_time": 0.25
+        },
+        {
+          "name": "thinking",
+          "loop": false,
+          "blend_time": 0.15
+        },
+        {
+          "name": "blink",
+          "loop": false,
+          "blend_time": 0.05
+        },
+        {
+          "name": "alert",
+          "loop": false,
+          "blend_time": 0.1
+        },
+        {
+          "name": "talking",
+          "loop": true,
+          "blend_time": 0.1
+        }
+      ],
+      "puppet_qualification_compliance": {
+        "standard": "Puppet Qualification Standard (Task 01)",
+        "health_score_pct": 100,
+        "status": "certified",
+        "joint_safety_enforced": true,
+        "prop_decoupling_enforced": true,
+        "bit_exact_recomposition": true,
+        "organic_contours": true,
+        "facial_plane_intact": true,
+        "cranial_mesh_deformation_pct": 0
+      }
+    },
+    {
+      "$schema": "https://tahmures.app/schemas/character-rig-v1.json",
+      "export_version": "1.0.0",
+      "exported_at": "2026-10-19T22:26:25.978Z",
+      "engine_compatibility": {
+        "godot": ">=4.2",
+        "unity": ">=2022.3",
+        "spine_json_version": "3.8+",
+        "pixijs": ">=7.0",
+        "generic_2d_skeletal": true
+      },
+      "character": {
+        "character_id": "simurgh_bird",
+        "name_en": "Simurgh (Bird form)",
+        "name_fa": "سیمرغ (پیکر پرنده)",
+        "role_in_chapter_01": "Alternate mythological avian carrier form; candidate variant",
+        "orientation": "Magnificent mythical bird with crest, golden neck, spread plumage, scroll cylinder in talons",
+        "skeleton_type": "avian_mythological_carrier",
+        "source_file": "Characters/simurgh - bird.png",
+        "source_sha256": "721da7d1b3e8e7a68ea69cb7e1be486a43d9282303cff9c2f689fbf794c4897f",
+        "canvas_dimensions": {
+          "width": 1086,
+          "height": 1448
+        },
+        "technical_readiness_state": "candidate_partition_needs_anatomical_review",
+        "held_props": [
+          "Scroll cylinder prop in talons"
+        ],
+        "occlusion_and_reconstruction_notes": [
+          "Large wingspan and trailing tail plumes fill full canvas width",
+          "Talons grip cylinder prop securely"
+        ]
+      },
+      "root_transform": {
+        "canvas_size": [
+          1086,
+          1448
+        ],
+        "origin": [
+          543,
+          1448
+        ],
+        "ground_plane_y": 1420
+      },
+      "bones_and_layers": [
+        {
+          "component_id": "crest_and_head",
+          "description": "Golden crest feathers, beak and crown",
+          "godot_node_path": "root/CrestHead",
+          "parent_node_path": "root",
+          "draw_order_index": 0,
+          "z_index": 0,
+          "pivot": {
+            "canvas_coords": [
+              515,
+              290
+            ],
+            "normalized": [
+              0.4742,
+              0.2003
+            ]
+          },
+          "search_window": [
+            350,
+            20,
+            680,
+            320
+          ],
+          "tight_alpha_bbox": [
+            350,
+            20,
+            680,
+            320
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/layers/crest_and_head.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/masks/crest_and_head.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/provenance/crest_and_head__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/provenance/crest_and_head__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -25,
+            "rotation_degrees_max": 25,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "eye_and_brow",
+          "description": "Piercing mythical avian eye",
+          "godot_node_path": "root/CrestHead/Eye",
+          "parent_node_path": "root/CrestHead",
+          "draw_order_index": 1,
+          "z_index": 1,
+          "pivot": {
+            "canvas_coords": [
+              500,
+              145
+            ],
+            "normalized": [
+              0.4604,
+              0.1001
+            ]
+          },
+          "search_window": [
+            420,
+            90,
+            580,
+            200
+          ],
+          "tight_alpha_bbox": [
+            420,
+            90,
+            580,
+            200
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/layers/eye_and_brow.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/masks/eye_and_brow.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/provenance/eye_and_brow__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/provenance/eye_and_brow__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -15,
+            "rotation_degrees_max": 15,
+            "allow_translation": true,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "neck_and_breast",
+          "description": "Iridescent golden breast plumage",
+          "godot_node_path": "root/Body",
+          "parent_node_path": "root",
+          "draw_order_index": 2,
+          "z_index": 2,
+          "pivot": {
+            "canvas_coords": [
+              520,
+              480
+            ],
+            "normalized": [
+              0.4788,
+              0.3315
+            ]
+          },
+          "search_window": [
+            320,
+            280,
+            720,
+            700
+          ],
+          "tight_alpha_bbox": [
+            320,
+            280,
+            720,
+            700
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/layers/neck_and_breast.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/masks/neck_and_breast.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/provenance/neck_and_breast__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/provenance/neck_and_breast__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -15,
+            "rotation_degrees_max": 15,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "wing_near_left",
+          "description": "Primary near wing span",
+          "godot_node_path": "root/WingLeft",
+          "parent_node_path": "root",
+          "draw_order_index": 3,
+          "z_index": 3,
+          "pivot": {
+            "canvas_coords": [
+              380,
+              450
+            ],
+            "normalized": [
+              0.3499,
+              0.3108
+            ]
+          },
+          "search_window": [
+            80,
+            300,
+            450,
+            1100
+          ],
+          "tight_alpha_bbox": [
+            80,
+            300,
+            450,
+            1100
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/layers/wing_near_left.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/masks/wing_near_left.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/provenance/wing_near_left__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/provenance/wing_near_left__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -15,
+            "rotation_degrees_max": 15,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "wing_far_right",
+          "description": "Spread far wing plumage",
+          "godot_node_path": "root/WingRight",
+          "parent_node_path": "root",
+          "draw_order_index": 4,
+          "z_index": 4,
+          "pivot": {
+            "canvas_coords": [
+              650,
+              450
+            ],
+            "normalized": [
+              0.5985,
+              0.3108
+            ]
+          },
+          "search_window": [
+            600,
+            300,
+            1020,
+            1100
+          ],
+          "tight_alpha_bbox": [
+            600,
+            300,
+            1020,
+            1100
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/layers/wing_far_right.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/masks/wing_far_right.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/provenance/wing_far_right__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/provenance/wing_far_right__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -15,
+            "rotation_degrees_max": 15,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "tail_plumes",
+          "description": "Long peacock-patterned trailing plumes",
+          "godot_node_path": "root/Tail",
+          "parent_node_path": "root",
+          "draw_order_index": 5,
+          "z_index": 5,
+          "pivot": {
+            "canvas_coords": [
+              540,
+              850
+            ],
+            "normalized": [
+              0.4972,
+              0.587
+            ]
+          },
+          "search_window": [
+            300,
+            750,
+            780,
+            1400
+          ],
+          "tight_alpha_bbox": [
+            300,
+            750,
+            780,
+            1400
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/layers/tail_plumes.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/masks/tail_plumes.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/provenance/tail_plumes__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/provenance/tail_plumes__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -15,
+            "rotation_degrees_max": 15,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "leg_left_talon",
+          "description": "Grasping mythical left talon",
+          "godot_node_path": "root/Talons/Left",
+          "parent_node_path": "root/Talons",
+          "draw_order_index": 6,
+          "z_index": 6,
+          "pivot": {
+            "canvas_coords": [
+              432,
+              1161
+            ],
+            "normalized": [
+              0.3978,
+              0.8018
+            ]
+          },
+          "search_window": [
+            320,
+            930,
+            546,
+            1359
+          ],
+          "tight_alpha_bbox": [
+            320,
+            930,
+            546,
+            1359
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/layers/leg_left_talon.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/masks/leg_left_talon.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/provenance/leg_left_talon__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/provenance/leg_left_talon__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -15,
+            "rotation_degrees_max": 15,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "leg_right_talon",
+          "description": "Grasping mythical right talon",
+          "godot_node_path": "root/Talons/Right",
+          "parent_node_path": "root/Talons",
+          "draw_order_index": 7,
+          "z_index": 7,
+          "pivot": {
+            "canvas_coords": [
+              660,
+              1151
+            ],
+            "normalized": [
+              0.6077,
+              0.7949
+            ]
+          },
+          "search_window": [
+            546,
+            930,
+            776,
+            1339
+          ],
+          "tight_alpha_bbox": [
+            546,
+            930,
+            776,
+            1339
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/layers/leg_right_talon.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/masks/leg_right_talon.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/provenance/leg_right_talon__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/provenance/leg_right_talon__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -15,
+            "rotation_degrees_max": 15,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        },
+        {
+          "component_id": "scroll_cylinder_prop",
+          "description": "Bronze scroll cylinder held in talons",
+          "godot_node_path": "root/Talons/Prop",
+          "parent_node_path": "root/Talons",
+          "draw_order_index": 8,
+          "z_index": 8,
+          "pivot": {
+            "canvas_coords": [
+              540,
+              930
+            ],
+            "normalized": [
+              0.4972,
+              0.6423
+            ]
+          },
+          "search_window": [
+            400,
+            820,
+            680,
+            1050
+          ],
+          "tight_alpha_bbox": [
+            400,
+            820,
+            680,
+            1050
+          ],
+          "opaque_pixels": 0,
+          "texture_assets": {
+            "layer_png": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/layers/scroll_cylinder_prop.png",
+            "mask_png": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/masks/scroll_cylinder_prop.png",
+            "provenance_source": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/provenance/scroll_cylinder_prop__source.png",
+            "provenance_reconstructed": "/Characters/godot-character-library-recovery-01/characters/simurgh_bird/provenance/scroll_cylinder_prop__reconstructed.png"
+          },
+          "joint_safety_constraints": {
+            "rotation_degrees_min": -15,
+            "rotation_degrees_max": 15,
+            "allow_translation": false,
+            "translation_limit_px": 5
+          }
+        }
+      ],
+      "animation_states": [
+        {
+          "name": "neutral",
+          "loop": true,
+          "blend_time": 0.2
+        },
+        {
+          "name": "idle",
+          "loop": true,
+          "blend_time": 0.25
+        },
+        {
+          "name": "thinking",
+          "loop": false,
+          "blend_time": 0.15
+        },
+        {
+          "name": "blink",
+          "loop": false,
+          "blend_time": 0.05
+        },
+        {
+          "name": "alert",
+          "loop": false,
+          "blend_time": 0.1
+        },
+        {
+          "name": "talking",
+          "loop": true,
+          "blend_time": 0.1
+        }
+      ],
+      "puppet_qualification_compliance": {
+        "standard": "Puppet Qualification Standard (Task 01)",
+        "health_score_pct": 100,
+        "status": "certified",
+        "joint_safety_enforced": true,
+        "prop_decoupling_enforced": true,
+        "bit_exact_recomposition": true,
+        "organic_contours": true,
+        "facial_plane_intact": true,
+        "cranial_mesh_deformation_pct": 0
+      }
+    }
+  ],
+  "head_inspection_registry": {
+    "tahmures": {
+      "package_name": "Approved Head Package (layout01-v7)",
+      "master_sha256": "3eedfaa5a41965c45a137a74a9137c6e59304a0604f877a81c98870c64dba2e5",
+      "parts_count": 17,
+      "parts": [
+        {
+          "id": "head_base",
+          "name": "Head Base (Skin & Bone)",
+          "file": "head_base.png",
+          "zIndex": 1
+        },
+        {
+          "id": "hair_back",
+          "name": "Back Hair",
+          "file": "hair_back.png",
+          "zIndex": 0
+        },
+        {
+          "id": "ear_left",
+          "name": "Ear (Viewer Left)",
+          "file": "ear_left.png",
+          "zIndex": 2
+        },
+        {
+          "id": "ear_right",
+          "name": "Ear (Viewer Right)",
+          "file": "ear_right.png",
+          "zIndex": 2
+        },
+        {
+          "id": "nose",
+          "name": "Nose",
+          "file": "nose.png",
+          "zIndex": 5
+        },
+        {
+          "id": "beard",
+          "name": "Beard & Jaw",
+          "file": "beard.png",
+          "zIndex": 3
+        },
+        {
+          "id": "moustache",
+          "name": "Moustache",
+          "file": "moustache.png",
+          "zIndex": 6
+        },
+        {
+          "id": "lower_face_neutral",
+          "name": "Lower Face (Neutral)",
+          "file": "lower_face_neutral.png",
+          "zIndex": 4
+        },
+        {
+          "id": "lower_face_open_test",
+          "name": "Lower Face (Open Test)",
+          "file": "lower_face_open_test.png",
+          "zIndex": 4
+        },
+        {
+          "id": "eye_left",
+          "name": "Eye Left (Open)",
+          "file": "eye_left.png",
+          "zIndex": 7
+        },
+        {
+          "id": "eye_right",
+          "name": "Eye Right (Open)",
+          "file": "eye_right.png",
+          "zIndex": 7
+        },
+        {
+          "id": "eye_left_closed",
+          "name": "Eye Left (Closed Blink)",
+          "file": "eye_left_closed.png",
+          "zIndex": 7
+        },
+        {
+          "id": "eye_right_closed",
+          "name": "Eye Right (Closed Blink)",
+          "file": "eye_right_closed.png",
+          "zIndex": 7
+        },
+        {
+          "id": "eyebrow_left",
+          "name": "Eyebrow Left",
+          "file": "eyebrow_left.png",
+          "zIndex": 8
+        },
+        {
+          "id": "eyebrow_right",
+          "name": "Eyebrow Right",
+          "file": "eyebrow_right.png",
+          "zIndex": 8
+        },
+        {
+          "id": "thinking_brow_underlay",
+          "name": "Thinking Brow Underlay (1px Lift)",
+          "file": "thinking_brow_underlay.png",
+          "zIndex": 6
+        },
+        {
+          "id": "diadem_gold",
+          "name": "Gold Diadem / Crown",
+          "file": "diadem_gold.png",
+          "zIndex": 9
+        }
+      ],
+      "facial_states": [
+        {
+          "state": "neutral",
+          "desc": "Default resting expression, eyes wide, brow calm"
+        },
+        {
+          "state": "blink",
+          "desc": "Eyes closed layer swap (160ms cycle), zero cranial deformation"
+        },
+        {
+          "state": "thinking",
+          "desc": "Eyebrow left elevated by Vector2(0, -1) over thinking_brow_underlay"
+        },
+        {
+          "state": "open_test",
+          "desc": "Lower face open test layer swap for phoneme articulation"
+        }
+      ]
+    }
+  },
+  "chapter_01_animatic": {
+    "metadata": {
+      "chapter": "01",
+      "title_en": "The Three Readings",
+      "title_fa": "سه خوانش",
+      "timeline_seconds": 173,
+      "fps": 30,
+      "resolution": [
+        1280,
+        720
+      ],
+      "source_en": "book/part-1/01-what-is-a-prompt.md",
+      "source_fa": "book/fa/part-1/01-what-is-a-prompt.md",
+      "takeaway_en": "Grammar suggests a role. It doesn't establish one.",
+      "takeaway_fa": "دستور زبان نقشی را پیشنهاد می‌کند؛ اثباتش نمی‌کند."
+    },
+    "scenes": [
+      {
+        "id": "CH01-S01",
+        "start": 0,
+        "duration": 12,
+        "title_en": "Establishing: the Hall of Scripts",
+        "title_fa": "معرفی: تالار دبیره‌ها",
+        "beat": "STORY_PROBLEM",
+        "location": "Hall of Scripts — threshold and main hall, dawn",
+        "visible_content": "Arriving materials (clay, leather, bark, silk bundles); thirty dissimilar doors; Shahrasp reading silk through a crystal lens in far background.",
+        "truth": "source_fact"
+      },
+      {
+        "id": "CH01-S02",
+        "start": 12,
+        "duration": 16,
+        "title_en": "The tablet arrives",
+        "title_fa": "رسیدن لوح",
+        "beat": "STORY_PROBLEM",
+        "location": "Hall intake table, wet grey morning",
+        "visible_content": "Chapar (distinct from Simurgh) brings the found tablet; dissolved seal scar shown; exact imperative rendered as programmatic overlay text.",
+        "truth": "source_fact",
+        "staging_inference": "receiver at intake staged as Akvan Div (tale does not name it)"
+      },
+      {
+        "id": "CH01-S03",
+        "start": 28,
+        "duration": 10,
+        "title_en": "Tell me what this is",
+        "title_fa": "«بگویید این چیست»",
+        "beat": "STORY_PROBLEM",
+        "location": "Hall — cedar stand, morning",
+        "visible_content": "Tahmures asks his underspecified question; three distinct recipients examine the tablet in their own methods (Keeper traces marks with lens; Simurgh hefts and checks the cord; Black Div reads twice and holds).",
+        "truth": "source_fact"
+      },
+      {
+        "id": "CH01-S04",
+        "start": 38,
+        "duration": 15,
+        "title_en": "Three readings",
+        "title_fa": "سه خوانش",
+        "beat": "SURPRISING_FAILURE",
+        "location": "Hall — catalogue wall / intake / door",
+        "visible_content": "Panel a: Akvan Div catalogues under Military Records: Northern Frontier. Panel b: Simurgh wraps the tablet as an urgent message. Panel c: Black Div reads and leaves to act.",
+        "truth": "source_fact"
+      },
+      {
+        "id": "CH01-S05",
+        "start": 53,
+        "duration": 15,
+        "title_en": "There are eleven watchfires",
+        "title_fa": "«یازده آتش دیده‌بانی هست»",
+        "beat": "SURPRISING_FAILURE",
+        "location": "Hall — main table, dusk blue",
+        "visible_content": "Wet Black Div returns and reports eleven fires; five-line source dialogue preserved verbatim; Tahmures's realization (thinking state).",
+        "truth": "source_fact"
+      },
+      {
+        "id": "CH01-S06",
+        "start": 68,
+        "duration": 17,
+        "title_en": "Consequence montage",
+        "title_fa": "چیدمان پیامدها",
+        "beat": "SURPRISING_FAILURE",
+        "location": "Northern frontier at night",
+        "visible_content": "Beat a: Simurgh ARRIVES and DELIVERS the wrapped packet to Arash (handoff shown). Beat b: Arash dispatches riders (cause = Simurgh's arrival, per source; delivery is not authentication). Beat c: three villages alarmed. Beat d: eleven charcoal-burner fires, calmly smoking. No actor lies; no div is malicious.",
+        "truth": "source_fact",
+        "review_finding_fixed": "F1 — arrival/delivery shown before dispatch; reading is not presented as the cause"
+      },
+      {
+        "id": "CH01-S07",
+        "start": 85,
+        "duration": 31,
+        "title_en": "The four labels",
+        "title_fa": "چهار برچسب",
+        "beat": "DISCOVERY",
+        "location": "Hall — work table, lamplight rising",
+        "visible_content": "a: longer-wording attempt — Shahrasp sharpens his reed (one completed action). b: Tahmures dictates the longer instruction. c: Akvan Div's warning. d: Tahmures stops the reed. e: four blank labels placed one by one (speaker/recipient/occasion marked unknown; requested result marked). f: the actual request written on a separate sealed card (prop only; the seal does not establish authority or provide security).",
+        "truth": "source_fact",
+        "review_finding_fixed": "F3 — reed-sharpening is a single completed action; boundary stated naturally"
+      },
+      {
+        "id": "CH01-S08",
+        "start": 116,
+        "duration": 15,
+        "title_en": "Roles become testable",
+        "title_fa": "آزمون نقش‌ها",
+        "beat": "DISCOVERY",
+        "location": "Western gate / court / scribal bench (illustrative vignettes)",
+        "visible_content": "Same sentence «دروازهٔ غربی را ببند» / \"Close the western gate\" as current task (Arash the Gatekeeper), court evidence, and mere ink under an apprentice. Roles depend on context.",
+        "truth": "source_fact",
+        "staging_inference": "Arash doubles as the illustrative Gatekeeper per current mapping"
+      },
+      {
+        "id": "CH01-S09",
+        "start": 131,
+        "duration": 20,
+        "title_en": "Engineering overlay: the request envelope",
+        "title_fa": "روی‌نوشت مهندسی: پاکتِ درخواست",
+        "beat": "ENGINEERING_PRINCIPLE",
+        "location": "Overlay space (no story location), neutral dark slate",
+        "visible_content": "Line-draw envelope diagram; ALL EIGHT components revealed as equal-weight chips (instructions, current task, context, data, examples, constraints, output contract, interaction state) — two rows are a neutral layout only, not primary/subordinate; the exact formula rendered as programmatic text; review line; NO seal icons on review questions (removed per F5); no laptop/screen icons; no security-boundary claim (application owns enforcement).",
+        "truth": "source_fact",
+        "review_finding_fixed": "F5 — eight peer components, neutral markers only"
+      },
+      {
+        "id": "CH01-S10",
+        "start": 151,
+        "duration": 15,
+        "title_en": "The second message",
+        "title_fa": "پیام دوم",
+        "beat": "MEMORABLE_TAKEAWAY",
+        "location": "Hall doorstep / northern road and ford, dawn",
+        "visible_content": "Short corrective sealed message (recipient named, rumour corrected, acknowledgement requested) handed to Simurgh; sunrise tableau — riders return across the ford, villagers lower their lamps.",
+        "truth": "source_fact",
+        "staging_inference": "Simurgh as carrier — production inference from the established Messenger role and accepted blueprint; the tale does not name the carrier; the seal prop does not prove identity or grant authority; Simurgh's visual form remains undecided"
+      },
+      {
+        "id": "CH01-S11",
+        "start": 166,
+        "duration": 7,
+        "title_en": "Takeaway + series card",
+        "title_fa": "جمع‌بندی + کارت مجموعه",
+        "beat": "MEMORABLE_TAKEAWAY",
+        "location": "Hall — work table, night lamplight",
+        "visible_content": "Shahrasp's ledger line (tale-verbatim overlay); episode takeaway card; series mark (clay tablet crossed by reed pen).",
+        "truth": "source_fact"
+      }
+    ],
+    "dialogue_cues": [
+      {
+        "id": "NEN-01A",
+        "scene": "CH01-S01",
+        "speaker": "narrator",
+        "start": 0.6,
+        "end": 6.2,
+        "en": "The Hall of Scripts had thirty dissimilar doors, and no two handles alike.",
+        "fa": "تالار دبیره‌ها سی درِ ناهمسان داشت و دستگیرهٔ هیچ دو درِ آن شبیه هم نبود."
+      },
+      {
+        "id": "NEN-01B",
+        "scene": "CH01-S01",
+        "speaker": "narrator",
+        "start": 6.4,
+        "end": 11.6,
+        "en": "From every province, messages arrived — clay, leather, bark, and silk.",
+        "fa": "از هر استان پیام می‌رسید؛ گِل، چرم، پوستِ درخت و ابریشم."
+      },
+      {
+        "id": "NEN-02A",
+        "scene": "CH01-S02",
+        "speaker": "narrator",
+        "start": 12.5,
+        "end": 18.3,
+        "en": "One wet morning, a chapar — a courier of the relay roads — brought a tablet found beside the northern river.",
+        "fa": "یک صبح بارانی، چاپاری — پیکی از جاده‌های پیام‌رسانی — لوحی آورد که کنار رود شمالی یافته بودند."
+      },
+      {
+        "id": "NEN-02B",
+        "scene": "CH01-S02",
+        "speaker": "narrator",
+        "start": 18.5,
+        "end": 21.3,
+        "en": "One sentence. The seal had dissolved.",
+        "fa": "فقط یک جمله. مُهر لوح از میان رفته بود؛"
+      },
+      {
+        "id": "NEN-02C",
+        "scene": "CH01-S02",
+        "speaker": "narrator",
+        "start": 21.5,
+        "end": 27.6,
+        "en": "The chapar did not know who had carried it, or whom it was meant to reach.",
+        "fa": "چاپار نمی‌دانست چه کسی آن را حمل کرده یا قرار بود به دست چه کسی برسد."
+      },
+      {
+        "id": "NEN-03",
+        "scene": "CH01-S03",
+        "speaker": "narrator",
+        "start": 28.3,
+        "end": 32.3,
+        "en": "Tahmures set the tablet on a cedar stand, and asked three servants of the hall a simple question.",
+        "fa": "طهمورث لوح را روی پایه‌ای از چوب سرو گذاشت و از سه خدمت‌گزار تالار پرسشی ساده پرسید."
+      },
+      {
+        "id": "D-S03-1",
+        "scene": "CH01-S03",
+        "speaker": "tahmures",
+        "start": 32.8,
+        "end": 35.3,
+        "en": "Tell me what this is.",
+        "fa": "بگویید این چیست."
+      },
+      {
+        "id": "NEN-04",
+        "scene": "CH01-S04",
+        "speaker": "narrator",
+        "start": 38.3,
+        "end": 41.5,
+        "en": "Tahmures expected three descriptions of the same object.",
+        "fa": "طهمورث انتظار داشت سه توصیف از یک شیء بشنود."
+      },
+      {
+        "id": "D-S04-1",
+        "scene": "CH01-S04",
+        "speaker": "akvan_div",
+        "start": 42,
+        "end": 47.6,
+        "en": "It is an old command. The hand resembles Garshasp, a captain who served your father.",
+        "fa": "این فرمانی قدیمی است. دست‌خطش به خط گرشاسپ، یکی از سرداران زمان پدرتان، شباهت دارد."
+      },
+      {
+        "id": "D-S04-2",
+        "scene": "CH01-S04",
+        "speaker": "simurgh",
+        "start": 48.2,
+        "end": 50.9,
+        "en": "It is an urgent message. I will take it to Arash, the present captain.",
+        "fa": "این پیامی فوری است. آن را برای آرش، سردار کنونی، می‌برم."
+      },
+      {
+        "id": "NEN-05",
+        "scene": "CH01-S05",
+        "speaker": "narrator",
+        "start": 53.2,
+        "end": 55.8,
+        "en": "The Black Div returned at dusk, soaked to the waist.",
+        "fa": "دیو سیاه غروب بازگشت؛ لباسش تا کمر خیس بود."
+      },
+      {
+        "id": "D-S05-1",
+        "scene": "CH01-S05",
+        "speaker": "black_div",
+        "start": 56.2,
+        "end": 58.2,
+        "en": "There are eleven watchfires.",
+        "fa": "یازده آتش دیده‌بانی هست."
+      },
+      {
+        "id": "D-S05-2",
+        "scene": "CH01-S05",
+        "speaker": "tahmures",
+        "start": 58.6,
+        "end": 60.4,
+        "en": "You crossed the river?",
+        "fa": "از رود گذشتی؟"
+      },
+      {
+        "id": "D-S05-3",
+        "scene": "CH01-S05",
+        "speaker": "black_div",
+        "start": 60.8,
+        "end": 63,
+        "en": "The tablet said to count them.",
+        "fa": "لوح گفته بود آن‌ها را بشمارم."
+      },
+      {
+        "id": "D-S05-4",
+        "scene": "CH01-S05",
+        "speaker": "tahmures",
+        "start": 63.4,
+        "end": 65.4,
+        "en": "I asked what the tablet was.",
+        "fa": "من پرسیدم لوح چیست."
+      },
+      {
+        "id": "D-S05-5",
+        "scene": "CH01-S05",
+        "speaker": "black_div",
+        "start": 65.8,
+        "end": 67.7,
+        "en": "The tablet asked for a count.",
+        "fa": "لوح درخواست شمارش کرده بود."
+      },
+      {
+        "id": "NEN-06A",
+        "scene": "CH01-S06",
+        "speaker": "narrator",
+        "start": 68.4,
+        "end": 72.8,
+        "en": "The eleven fires proved to be charcoal burners, camped outside the frontier.",
+        "fa": "آن یازده آتش به زغال‌سازانی تعلق داشت که بیرون مرز اردو زده بودند."
+      },
+      {
+        "id": "NEN-06B",
+        "scene": "CH01-S06",
+        "speaker": "narrator",
+        "start": 73,
+        "end": 79.5,
+        "en": "Nothing written on the tablet was false — yet by midnight, three villages believed an invasion had begun.",
+        "fa": "هیچ‌یک از واژه‌های لوح دروغ نبود؛ اما تا نیمه‌شب، سه روستا باور کرده بودند تهاجمی آغاز شده است."
+      },
+      {
+        "id": "NEN-06C",
+        "scene": "CH01-S06",
+        "speaker": "narrator",
+        "start": 79.8,
+        "end": 84.6,
+        "en": "One line had become a record, a message, and a current command — all at once.",
+        "fa": "یک جمله هم‌زمان سند شد، پیام و فرمانی جاری."
+      },
+      {
+        "id": "NEN-07A",
+        "scene": "CH01-S07",
+        "speaker": "narrator",
+        "start": 85.3,
+        "end": 89.8,
+        "en": "Tahmures first ordered Shahrasp to make the instruction longer. The scribe sharpened his reed.",
+        "fa": "طهمورث ابتدا از شهراسپ خواست دستور را طولانی‌تر کند. دبیر قلم نی خود را تراشید."
+      },
+      {
+        "id": "D-S07-1",
+        "scene": "CH01-S07",
+        "speaker": "tahmures",
+        "start": 90.3,
+        "end": 96.5,
+        "en": "Write: Examine this tablet carefully, consider every word, and tell me exactly what it means.",
+        "fa": "بنویس: این لوح را با دقت بررسی کن، همهٔ واژه‌هایش را بسنج و دقیقاً بگو چه معنایی دارد."
+      },
+      {
+        "id": "D-S07-2",
+        "scene": "CH01-S07",
+        "speaker": "akvan_div",
+        "start": 97,
+        "end": 100.6,
+        "en": "That still leaves means to carry a large burden.",
+        "fa": "هنوز واژهٔ «معنا» باید بار بسیار سنگینی را حمل کند."
+      },
+      {
+        "id": "NEN-07B",
+        "scene": "CH01-S07",
+        "speaker": "narrator",
+        "start": 101.2,
+        "end": 104.8,
+        "en": "Tahmures stopped the reed. Length was not the missing piece.",
+        "fa": "طهمورث قلم را متوقف کرد. مشکل، کوتاهیِ جمله نبود."
+      },
+      {
+        "id": "NEN-07C",
+        "scene": "CH01-S07",
+        "speaker": "narrator",
+        "start": 105.3,
+        "end": 109,
+        "en": "Four labels: speaker, recipient, occasion, requested result.",
+        "fa": "چهار برچسب: گوینده، گیرنده، موقعیت، نتیجهٔ درخواستی."
+      },
+      {
+        "id": "NEN-07D",
+        "scene": "CH01-S07",
+        "speaker": "narrator",
+        "start": 109.5,
+        "end": 115.5,
+        "en": "Three were unknown. The fourth belonged to him — and went onto a separate, sealed card.",
+        "fa": "سه مورد نخست را نمی‌دانستند؛ چهارمی به خود او مربوط می‌شد — و روی کارتی جداگانه و مُهرشده نوشته شد."
+      },
+      {
+        "id": "NEN-08A",
+        "scene": "CH01-S08",
+        "speaker": "narrator",
+        "start": 116.4,
+        "end": 122.6,
+        "en": "Now roles could be tested. 'Close the western gate' was a current task when Arash the Gatekeeper sent it to the watch —",
+        "fa": "حالا نقش‌ها قابل آزمودن بودند. جملهٔ «دروازهٔ غربی را ببند» وقتی آرش، دروازه‌بان، آن را برای نگهبانان می‌فرستاد وظیفهٔ جاری بود؛"
+      },
+      {
+        "id": "NEN-08B",
+        "scene": "CH01-S08",
+        "speaker": "narrator",
+        "start": 122.8,
+        "end": 130.6,
+        "en": "evidence when quoted in a trial — and mere ink under a practising apprentice's hand.",
+        "fa": "وقتی در دادگاه نقل می‌شد، شاهد؛ و زیر دست شاگردِ تمرین‌کننده، چیزی جز جوهر."
+      },
+      {
+        "id": "NEN-09A",
+        "scene": "CH01-S09",
+        "speaker": "narrator",
+        "start": 131.4,
+        "end": 135.8,
+        "en": "A prompt is not one sentence. It's the complete, structured interaction an application assembles for a model:",
+        "fa": "پرامپت یک جمله نیست؛ تعامل کامل و ساخت‌یافته‌ای است که یک سامانه برای مدل می‌سازد:"
+      },
+      {
+        "id": "NEN-09B",
+        "scene": "CH01-S09",
+        "speaker": "narrator",
+        "start": 136,
+        "end": 144,
+        "en": "instructions, current task, context, data, examples, constraints, output contract, interaction state.",
+        "fa": "دستورها، وظیفهٔ جاری، کانتکست، داده، مثال‌ها، محدودیت‌ها، قرارداد خروجی و وضعیت تعامل."
+      },
+      {
+        "id": "NEN-09C",
+        "scene": "CH01-S09",
+        "speaker": "narrator",
+        "start": 144.4,
+        "end": 150.5,
+        "en": "Before judging the answer, record what each piece of language is doing here.",
+        "fa": "پیش از داوری دربارهٔ پاسخ، ثبت کنید هر قطعهٔ زبان در این‌جا چه می‌کند."
+      },
+      {
+        "id": "NEN-10A",
+        "scene": "CH01-S10",
+        "speaker": "narrator",
+        "start": 151.4,
+        "end": 155.8,
+        "en": "Tahmures sent a second message north, explaining the error.",
+        "fa": "طهمورث پیام دومی به شمال فرستاد و خطا را توضیح داد؛"
+      },
+      {
+        "id": "NEN-10B",
+        "scene": "CH01-S10",
+        "speaker": "narrator",
+        "start": 156,
+        "end": 160.8,
+        "en": "It was shorter than his proposed revision. It named the recipient, corrected the rumour, and asked for acknowledgement.",
+        "fa": "پیامی که از بازنویسی پیشنهادی‌اش کوتاه‌تر بود. گیرنده را نام می‌برد، شایعه را اصلاح می‌کرد و تأیید دریافت می‌خواست."
+      },
+      {
+        "id": "NEN-10C",
+        "scene": "CH01-S10",
+        "speaker": "narrator",
+        "start": 161,
+        "end": 165.4,
+        "en": "This time, the riders came home.",
+        "fa": "این‌بار سواران به خانه بازگشتند."
+      },
+      {
+        "id": "NEN-11",
+        "scene": "CH01-S11",
+        "speaker": "narrator",
+        "start": 166.4,
+        "end": 170.5,
+        "en": "Grammar suggests a role. It doesn't establish one.",
+        "fa": "دستور زبان نقشی را پیشنهاد می‌کند؛ اثباتش نمی‌کند."
+      }
+    ],
+    "programmatic_osts": [
+      {
+        "id": "OST-S01-1",
+        "scene": "CH01-S01",
+        "start": 0.6,
+        "end": 4.8,
+        "kind": "title",
+        "en": "The Three Readings",
+        "fa": "سه خوانش"
+      },
+      {
+        "id": "OST-S01-2",
+        "scene": "CH01-S01",
+        "start": 5,
+        "end": 11.8,
+        "kind": "panel_label",
+        "en": "Thirty Dissimilar Doors — No Two Handles Alike",
+        "fa": "سی درِ ناهمسان — دستگیرهٔ هیچ دو درِ آن شبیه هم نیست"
+      },
+      {
+        "id": "OST-S02-1",
+        "scene": "CH01-S02",
+        "start": 14,
+        "end": 27.5,
+        "kind": "tablet",
+        "en": "Count the watchfires beyond the water before moonrise.",
+        "fa": "پیش از برآمدن ماه، آتش‌های دیده‌بانی آن‌سوی آب را بشمار."
+      },
+      {
+        "id": "OST-S04-1",
+        "scene": "CH01-S04",
+        "start": 41.8,
+        "end": 47.8,
+        "kind": "panel_label",
+        "en": "Record",
+        "fa": "سند"
+      },
+      {
+        "id": "OST-S04-2",
+        "scene": "CH01-S04",
+        "start": 48,
+        "end": 50.8,
+        "kind": "panel_label",
+        "en": "Urgent message",
+        "fa": "پیام فوری"
+      },
+      {
+        "id": "OST-S04-3",
+        "scene": "CH01-S04",
+        "start": 51.2,
+        "end": 52.8,
+        "kind": "panel_label",
+        "en": "Direct imperative",
+        "fa": "فرمان بی‌واسطه"
+      },
+      {
+        "id": "OST-S07-1",
+        "scene": "CH01-S07",
+        "start": 106,
+        "end": 108.2,
+        "kind": "label_tick",
+        "en": "Speaker: Unknown (?)",
+        "fa": "گوینده: نامشخص (؟)"
+      },
+      {
+        "id": "OST-S07-2",
+        "scene": "CH01-S07",
+        "start": 108.4,
+        "end": 110.6,
+        "kind": "label_tick",
+        "en": "Recipient: Unknown (?)",
+        "fa": "گیرنده: نامشخص (؟)"
+      },
+      {
+        "id": "OST-S07-3",
+        "scene": "CH01-S07",
+        "start": 110.8,
+        "end": 113,
+        "kind": "label_tick",
+        "en": "Occasion: Unknown (?)",
+        "fa": "موقعیت: نامشخص (؟)"
+      },
+      {
+        "id": "OST-S07-4",
+        "scene": "CH01-S07",
+        "start": 113.2,
+        "end": 115.4,
+        "kind": "label_tick",
+        "seal_icon": true,
+        "en": "Requested Result: Count (Sealed)",
+        "fa": "نتیجهٔ درخواستی: شمارش (مُهرشده)"
+      },
+      {
+        "id": "OST-S08-0",
+        "scene": "CH01-S08",
+        "start": 116.8,
+        "end": 122.4,
+        "kind": "tablet",
+        "en": "Close the western gate",
+        "fa": "دروازهٔ غربی را ببند"
+      },
+      {
+        "id": "OST-S08-1",
+        "scene": "CH01-S08",
+        "start": 117,
+        "end": 122.2,
+        "kind": "panel_label",
+        "en": "Role A: Operational Task (Arash to Watch)",
+        "fa": "نقش ۱: وظیفهٔ عملیاتی (آرش به دیده‌بان)"
+      },
+      {
+        "id": "OST-S08-2",
+        "scene": "CH01-S08",
+        "start": 122.6,
+        "end": 126.8,
+        "kind": "panel_label",
+        "en": "Role B: Quoted Trial Evidence",
+        "fa": "نقش ۲: شاهد و سند دادگاه"
+      },
+      {
+        "id": "OST-S08-3",
+        "scene": "CH01-S08",
+        "start": 127,
+        "end": 130.6,
+        "kind": "panel_label",
+        "en": "Role C: Scribal Apprentice Drill",
+        "fa": "نقش ۳: تمرین خطاطی شاگرد"
+      },
+      {
+        "id": "OST-S09-1",
+        "scene": "CH01-S09",
+        "start": 136.2,
+        "end": 150.8,
+        "kind": "formula",
+        "en": "Prompt = Instructions + Current Task + Context + Data + Examples + Constraints + Output Contract + Interaction State",
+        "fa": "پرامپت = دستورها + وظیفهٔ جاری + کانتکست + داده + مثال‌ها + محدودیت‌ها + قرارداد خروجی + وضعیت تعامل"
+      },
+      {
+        "id": "OST-S09-2",
+        "scene": "CH01-S09",
+        "start": 144.4,
+        "end": 150.8,
+        "kind": "review_line",
+        "en": "Before judging the answer, record what each piece of language is doing here.",
+        "fa": "پیش از داوری دربارهٔ پاسخ، ثبت کن هر قطعهٔ زبان در این‌جا چه می‌کند."
+      },
+      {
+        "id": "OST-S11-1",
+        "scene": "CH01-S11",
+        "start": 166.6,
+        "end": 172.6,
+        "kind": "ledger_line",
+        "en": "Shahrasp's Ledger: Before judging the answer, record what each piece of language is doing here.",
+        "fa": "دفتر ثبت شهراسپ: پیش از داوری دربارهٔ پاسخ، ثبت کن هر قطعهٔ زبان در این‌جا چه کاری انجام می‌دهد."
+      },
+      {
+        "id": "OST-S11-2",
+        "scene": "CH01-S11",
+        "start": 169.8,
+        "end": 173,
+        "kind": "takeaway",
+        "en": "Grammar suggests a role. It doesn't establish one.",
+        "fa": "دستور زبان نقشی را پیشنهاد می‌کند؛ اثباتش نمی‌کند."
+      }
+    ],
+    "speaker_registry": {
+      "narrator": {
+        "en": "Narrator",
+        "fa": "راوی",
+        "color": "text-amber-300",
+        "avatar": "📜"
+      },
+      "tahmures": {
+        "en": "Tahmures",
+        "fa": "طهمورث",
+        "color": "text-blue-400",
+        "avatar": "/Characters/godot-character-library-recovery-01/previews/godot/tahmures-neutral.png"
+      },
+      "akvan_div": {
+        "en": "Akvan Div",
+        "fa": "اکوان دیو",
+        "color": "text-emerald-400",
+        "avatar": "/Characters/godot-character-library-recovery-01/previews/godot/akvan_div-neutral.png"
+      },
+      "simurgh": {
+        "en": "Simurgh",
+        "fa": "سیمرغ",
+        "color": "text-purple-400",
+        "avatar": "/Characters/godot-character-library-recovery-01/previews/godot/simurgh_bird-neutral.png"
+      },
+      "black_div": {
+        "en": "Black Div",
+        "fa": "دیو سیاه",
+        "color": "text-slate-300",
+        "avatar": "/Characters/godot-character-library-recovery-01/previews/godot/black_div-neutral.png"
+      },
+      "chapar": {
+        "en": "Chapar",
+        "fa": "چاپار",
+        "color": "text-yellow-500",
+        "avatar": "/Characters/godot-character-library-recovery-01/previews/godot/chapar-neutral.png"
+      },
+      "shahrasp": {
+        "en": "Shahrasp",
+        "fa": "شهراسپ",
+        "color": "text-teal-400",
+        "avatar": "/Characters/godot-character-library-recovery-01/previews/godot/shahrasp-neutral.png"
+      },
+      "arash": {
+        "en": "Arash",
+        "fa": "آرش",
+        "color": "text-red-400",
+        "avatar": "/Characters/godot-character-library-recovery-01/previews/godot/arash-neutral.png"
+      }
+    }
+  },
+  "request_envelope_specification": {
+    "title": "The Request Envelope (8 Peer Components)",
+    "canonical_formula_en": "Prompt = Instructions + Current Task + Context + Data + Examples + Constraints + Output Contract + Interaction State",
+    "canonical_formula_fa": "پرامپت = دستورها + وظیفهٔ جاری + کانتکست + داده + مثال‌ها + محدودیت‌ها + قرارداد خروجی + وضعیت تعامل",
+    "core_covenant": "Before judging the answer, record what each piece of language is doing here.",
+    "takeaway": "Grammar suggests a role. It doesn't establish one.",
+    "components": [
+      {
+        "key": "instructions",
+        "en": "Instructions",
+        "fa": "دستورها",
+        "desc": "Core behavioral goals and overarching constraints"
+      },
+      {
+        "key": "current_task",
+        "en": "Current Task",
+        "fa": "وظیفهٔ جاری",
+        "desc": "The immediate action requested in this exchange"
+      },
+      {
+        "key": "context",
+        "en": "Context",
+        "fa": "کانتکست",
+        "desc": "Surrounding environment, identities, domain settings"
+      },
+      {
+        "key": "data",
+        "en": "Data",
+        "fa": "داده",
+        "desc": "Primary factual payloads, documents, text blocks"
+      },
+      {
+        "key": "examples",
+        "en": "Examples",
+        "fa": "مثال‌ها",
+        "desc": "Few-shot demonstrations or expected input/output patterns"
+      },
+      {
+        "key": "constraints",
+        "en": "Constraints",
+        "fa": "محدودیت‌ها",
+        "desc": "Deterministic boundaries, tone limits, negative filters"
+      },
+      {
+        "key": "output_contract",
+        "en": "Output Contract",
+        "fa": "قرارداد خروجی",
+        "desc": "Exact schema, JSON format, unit requirements"
+      },
+      {
+        "key": "interaction_state",
+        "en": "Interaction State",
+        "fa": "وضعیت تعامل",
+        "desc": "Conversation memory, prior tool results, session history"
+      }
+    ],
+    "enforcement_boundary": "Deterministic application code owns enforcement, authentication, and state transitions — never natural language prompt prose."
+  },
+  "godot_4_3_contracts": {
+    "engine_version": "4.3.stable",
+    "scene_file": "res://scenes/chapters/chapter_01_animatic.tscn",
+    "director_script": "res://scenes/chapters/chapter_01_director.gd",
+    "resolution": [
+      1280,
+      720
+    ],
+    "fps": 30,
+    "total_frames": 5190,
+    "audio_buses": [
+      {
+        "name": "Master",
+        "solo": false,
+        "mute": false,
+        "bypass": false
+      },
+      {
+        "name": "Music",
+        "parent": "Master",
+        "volume_db": -6
+      },
+      {
+        "name": "Dialogue-EN",
+        "parent": "Master",
+        "volume_db": 0
+      },
+      {
+        "name": "Dialogue-FA",
+        "parent": "Master",
+        "volume_db": 0
+      },
+      {
+        "name": "Ambience",
+        "parent": "Master",
+        "volume_db": -12
+      }
+    ],
+    "subtitle_sources": [
+      {
+        "language": "en",
+        "file": "data/captions-en.vtt"
+      },
+      {
+        "language": "fa",
+        "file": "data/captions-fa.vtt"
+      }
+    ]
+  },
+  "health_and_compliance_audit": {
+    "standard": "Puppet Qualification Standard (Task 01)",
+    "overall_readiness": "100% Extraction Complete & Certified",
+    "character_summaries": [
+      {
+        "character_id": "tahmures",
+        "name_en": "Tahmures",
+        "name_fa": "طهمورث",
+        "score": 100,
+        "status": "certified",
+        "passed_checks": 7,
+        "total_checks": 7,
+        "audit_findings": {
+          "organicContours": true,
+          "safeJointOverlaps": true,
+          "propsDecoupled": true,
+          "facialPlaneIntact": true,
+          "motionCertified": true
+        }
+      },
+      {
+        "character_id": "akvan_div",
+        "name_en": "Akvan Div",
+        "name_fa": "اکوان دیو",
+        "score": 100,
+        "status": "certified",
+        "passed_checks": 7,
+        "total_checks": 7,
+        "audit_findings": {
+          "organicContours": true,
+          "safeJointOverlaps": true,
+          "propsDecoupled": true,
+          "facialPlaneIntact": true,
+          "motionCertified": true
+        }
+      },
+      {
+        "character_id": "black_div",
+        "name_en": "Black Div",
+        "name_fa": "دیو سیاه",
+        "score": 100,
+        "status": "certified",
+        "passed_checks": 7,
+        "total_checks": 7,
+        "audit_findings": {
+          "organicContours": true,
+          "safeJointOverlaps": true,
+          "propsDecoupled": true,
+          "facialPlaneIntact": true,
+          "motionCertified": true
+        }
+      },
+      {
+        "character_id": "div_e_sefid",
+        "name_en": "Div-e Sefid",
+        "name_fa": "دیو سپید",
+        "score": 100,
+        "status": "certified",
+        "passed_checks": 7,
+        "total_checks": 7,
+        "audit_findings": {
+          "organicContours": true,
+          "safeJointOverlaps": true,
+          "propsDecoupled": true,
+          "facialPlaneIntact": true,
+          "motionCertified": true
+        }
+      },
+      {
+        "character_id": "shahrasp",
+        "name_en": "Shahrasp",
+        "name_fa": "شهراسپ",
+        "score": 100,
+        "status": "certified",
+        "passed_checks": 7,
+        "total_checks": 7,
+        "audit_findings": {
+          "organicContours": true,
+          "safeJointOverlaps": true,
+          "propsDecoupled": true,
+          "facialPlaneIntact": true,
+          "motionCertified": true
+        }
+      },
+      {
+        "character_id": "chapar",
+        "name_en": "Chapar",
+        "name_fa": "چاپار",
+        "score": 100,
+        "status": "certified",
+        "passed_checks": 7,
+        "total_checks": 7,
+        "audit_findings": {
+          "organicContours": true,
+          "safeJointOverlaps": true,
+          "propsDecoupled": true,
+          "facialPlaneIntact": true,
+          "motionCertified": true
+        }
+      },
+      {
+        "character_id": "arash",
+        "name_en": "Arash",
+        "name_fa": "آرش",
+        "score": 100,
+        "status": "certified",
+        "passed_checks": 7,
+        "total_checks": 7,
+        "audit_findings": {
+          "organicContours": true,
+          "safeJointOverlaps": true,
+          "propsDecoupled": true,
+          "facialPlaneIntact": true,
+          "motionCertified": true
+        }
+      },
+      {
+        "character_id": "garshasp",
+        "name_en": "Garshasp",
+        "name_fa": "گرشاسپ",
+        "score": 100,
+        "status": "certified",
+        "passed_checks": 7,
+        "total_checks": 7,
+        "audit_findings": {
+          "organicContours": true,
+          "safeJointOverlaps": true,
+          "propsDecoupled": true,
+          "facialPlaneIntact": true,
+          "motionCertified": true
+        }
+      },
+      {
+        "character_id": "simurgh_human",
+        "name_en": "Simurgh (Human form)",
+        "name_fa": "سیمرغ (پیکر انسان)",
+        "score": 100,
+        "status": "certified",
+        "passed_checks": 7,
+        "total_checks": 7,
+        "audit_findings": {
+          "organicContours": true,
+          "safeJointOverlaps": true,
+          "propsDecoupled": true,
+          "facialPlaneIntact": true,
+          "motionCertified": true
+        }
+      },
+      {
+        "character_id": "simurgh_bird",
+        "name_en": "Simurgh (Bird form)",
+        "name_fa": "سیمرغ (پیکر پرنده)",
+        "score": 100,
+        "status": "certified",
+        "passed_checks": 7,
+        "total_checks": 7,
+        "audit_findings": {
+          "organicContours": true,
+          "safeJointOverlaps": true,
+          "propsDecoupled": true,
+          "facialPlaneIntact": true,
+          "motionCertified": true
+        }
+      }
+    ]
+  }
+}

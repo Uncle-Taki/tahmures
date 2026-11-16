@@ -1,0 +1,166 @@
+{
+  "date": "2026-10-30",
+  "scope": "Seven owner-selected paper-cut character designs collected locally; five single-portrait derivatives plus two unchanged master copies. No production recast or manuscript edit.",
+  "selection_evidence": "User current message explicitly selects Shahrasp right, Hushang left, Black Div left, White Div left with horn refinement, Akvan supplied master, Tahmures supplied master, Simurgh middle.",
+  "selection_scope": "Board model selection and master selection recorded; generated single-image derivatives require likeness review and are not automatically approved motion/rig assets.",
+  "characters": [
+    {
+      "id": "tahmures",
+      "name": "Tahmures",
+      "source": "Characters/Paper-Cut King in Regal Robes.png",
+      "source_sha256": "9b8900d8065d0da274489f06facf16928582ea3259772041fe00bbec87c64996",
+      "file": "images/tahmures_master.png",
+      "sha256": "9b8900d8065d0da274489f06facf16928582ea3259772041fe00bbec87c64996",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "selection": "owner supplied master",
+      "selection_status": "owner_selected_master",
+      "image_status": "unchanged_byte_copy_of_selected_master",
+      "requires_new_likeness_review": false
+    },
+    {
+      "id": "akvan-div",
+      "name": "Akvan Div",
+      "source": "Characters/Regal Horned Forest Courtier.png",
+      "source_sha256": "47362a764bc38cce4e09ab022741a093a296fb69918344eb33bf6fa1829e6813",
+      "file": "images/akvan-div_master.png",
+      "sha256": "47362a764bc38cce4e09ab022741a093a296fb69918344eb33bf6fa1829e6813",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "selection": "owner supplied master",
+      "selection_status": "owner_selected_master",
+      "image_status": "unchanged_byte_copy_of_selected_master",
+      "requires_new_likeness_review": false
+    },
+    {
+      "id": "shahrasp",
+      "name": "Shahrasp",
+      "source": "editorial/media-handoff/character-design-options/chapter-01-paper-cut-revisions-13/shahrasp-minister_three-options_candidate_v01.png",
+      "source_sha256": "837f1e26f3e5a627e3c978e88c5235529002927d4b1cb74b940f15f138af7bd2",
+      "source_board_copy": "sources/shahrasp_selected-source-board.png",
+      "selected_position": "right",
+      "selection_status": "owner_selected_board_model",
+      "image_status": "generated_single_portrait_of_owner_selected_model",
+      "requires_new_likeness_review": true,
+      "additional_change": "none; faithful single-image isolation",
+      "prompt_file": "prompts/shahrasp.txt",
+      "file": "images/shahrasp_single_v01.png",
+      "generated_source_path": "/home/mehdi/.codex-gpt-3/generated_images/01a17f68-36b1-7422-94a0-912fc8904313/exec-7edba621-7c0e-44bf-9ac5-3aba001d369a.png",
+      "sha256": "bc3097cdaa37aa37cfa79af6304988177148178f86bf1386e00e2474674a63a8",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "visual_review": "One complete figure observed, matching selected identity category and broad design. Fine likeness, paper texture and small geometry may differ from source; not a pixel-exact crop or separated rig."
+    },
+    {
+      "id": "hushang",
+      "name": "Hushang",
+      "source": "editorial/media-handoff/character-design-options/chapter-01-paper-cut-revisions-13/hushang-father_three-options_candidate_v01.png",
+      "source_sha256": "bca1750dc644f4ca544fee505301b6c3596342b810a0100fd00c1315dd8c5b9b",
+      "source_board_copy": "sources/hushang_selected-source-board.png",
+      "selected_position": "left",
+      "selection_status": "owner_selected_board_model",
+      "image_status": "generated_single_portrait_of_owner_selected_model",
+      "requires_new_likeness_review": true,
+      "additional_change": "none; faithful single-image isolation",
+      "prompt_file": "prompts/hushang.txt",
+      "file": "images/hushang_single_v01.png",
+      "generated_source_path": "/home/mehdi/.codex-gpt-3/generated_images/01a17f68-36b1-7422-94a0-912fc8904313/exec-ae347c48-70e9-4096-9751-2f3da7abb9d3.png",
+      "sha256": "7dc04a0cae54a6121f94e4e9dc6a7c3368372d3e0bcd86d61184d2d51bde43fb",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "visual_review": "One complete figure observed, matching selected identity category and broad design. Fine likeness, paper texture and small geometry may differ from source; not a pixel-exact crop or separated rig."
+    },
+    {
+      "id": "black-div",
+      "name": "Black Div",
+      "source": "editorial/media-handoff/character-design-options/chapter-01-paper-cut-generated-11/black-div_three-options_candidate-board_v01.png",
+      "source_sha256": "4ce4e7ce2c21d6aead8375ba9075b6f6c49bbbf38cb17c9ff2e519974a35b466",
+      "source_board_copy": "sources/black-div_selected-source-board.png",
+      "selected_position": "left",
+      "selection_status": "owner_selected_board_model",
+      "image_status": "generated_single_portrait_of_owner_selected_model",
+      "requires_new_likeness_review": true,
+      "additional_change": "none; faithful single-image isolation",
+      "prompt_file": "prompts/black-div.txt",
+      "file": "images/black-div_single_v01.png",
+      "generated_source_path": "/home/mehdi/.codex-gpt-3/generated_images/01a17f68-36b1-7422-94a0-912fc8904313/exec-7456fb03-d5d8-44d7-85e2-394f992da218.png",
+      "sha256": "aeb740c8e7b2193bfafc4674ffbb8c28079b941799ec82559e46b8ec9508e5cc",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "visual_review": "One complete figure observed, matching selected identity category and broad design. Fine likeness, paper texture and small geometry may differ from source; not a pixel-exact crop or separated rig."
+    },
+    {
+      "id": "div-e-sefid",
+      "name": "Div-e Sefid",
+      "source": "editorial/media-handoff/character-design-options/chapter-01-paper-cut-revisions-13/div-e-sefid-horn-repair_three-options_candidate_v01.png",
+      "source_sha256": "5a37316feb952da80143674d5e3d79aa0d9f18d388ce113d77434b38b7858c2c",
+      "source_board_copy": "sources/div-e-sefid_selected-source-board.png",
+      "selected_position": "left",
+      "selection_status": "owner_selected_board_model",
+      "image_status": "generated_single_portrait_of_owner_selected_model",
+      "requires_new_likeness_review": true,
+      "additional_change": "refine horn pair only",
+      "prompt_file": "prompts/div-e-sefid.txt",
+      "file": "images/div-e-sefid_single_v01.png",
+      "generated_source_path": "/home/mehdi/.codex-gpt-3/generated_images/01a17f68-36b1-7422-94a0-912fc8904313/exec-f71384a4-5b23-4118-9fa7-39791f07ef2b.png",
+      "sha256": "7c0a19e5923ab4c1994d1cec50de05c4db74e0dca00d50c3c82fb54cf268fa17",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "visual_review": "One complete figure observed, matching selected identity category and broad design. Fine likeness, paper texture and small geometry may differ from source; not a pixel-exact crop or separated rig.",
+      "horn_review": "Exactly two complete ivory horns observed; coherent temple roots, outward/back curves and upward tapered tips, separated from silver hair. Owner specifically authorized refinement."
+    },
+    {
+      "id": "simurgh-bird",
+      "name": "Simurgh \u2014 bird only",
+      "source": "editorial/media-handoff/character-design-options/chapter-01-paper-cut-generated-11/simurgh-bird_three-options_candidate-board_v01.png",
+      "source_sha256": "24941f17386de88b9a133acdb9502a68f4a8aad7b63fdf2d359fb0ccc9728340",
+      "source_board_copy": "sources/simurgh-bird_selected-source-board.png",
+      "selected_position": "centre",
+      "selection_status": "owner_selected_board_model",
+      "image_status": "generated_single_portrait_of_owner_selected_model",
+      "requires_new_likeness_review": true,
+      "additional_change": "none; faithful single-image isolation",
+      "prompt_file": "prompts/simurgh-bird.txt",
+      "file": "images/simurgh-bird_single_v01.png",
+      "generated_source_path": "/home/mehdi/.codex-gpt-3/generated_images/01a17f68-36b1-7422-94a0-912fc8904313/exec-376d6757-3a18-4d0f-bc33-f69623573a4c.png",
+      "sha256": "a330e75c6714e231a198e804561dbb144935bdd8394dc2deed0d9cb6af17533b",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "visual_review": "One complete figure observed, matching selected identity category and broad design. Fine likeness, paper texture and small geometry may differ from source; not a pixel-exact crop or separated rig."
+    }
+  ],
+  "method": "built-in image_gen for five single portraits; physical byte copies for two masters",
+  "generation_calls": 5,
+  "status": "SEVEN OWNER-SELECTED DESIGNS COLLECTED; FIVE NEW INDIVIDUAL PORTRAITS PREPARED",
+  "master_byte_copies": 2,
+  "single_portraits_generated": 5,
+  "source_files_unchanged": true,
+  "production_promotion": false,
+  "external_flow_upload": false,
+  "display_name": "Paper Puppet",
+  "paired_version": {
+    "display_name": "Illustrated cast \u2014 V2",
+    "directory": "Characters/selected-illustrated-cast-v2-01"
+  }
+}

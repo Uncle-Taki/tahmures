@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "accepted_on": "2026-10-20",
+      "user_instruction_verbatim": "human accept.continue.",
+      "scope": "S01 r03 wide artwork and illustrated timing preview presented in preceding turn; proceed with next bounded work",
+      "revision": "s01-r03-owner-art-rejection-repair",
+      "artwork": {
+        "path": "Characters/animations/chapter-01-candidate-01/revisions/s01-r03/assets/hall-reading-wide.png",
+        "sha256": "15c86426163b12c10cd37e22f9cfab9b75c5eec4a43a5d6bbf03be76b3eda197"
+      },
+      "manifest_sha256": "71c397e5c8898fcad7643d27ad21f028a7a792aa0f63e8bbd7adef200b677928",
+      "movies": {
+        "en": "583874b58f6eb071b298cc06ed9a51a0591312b4fea60b597f594faaccc71f29",
+        "fa": "5837c7ad0525f38f53c03f9170bbdf6505f9f115b141cfda1f6e149a8e8e058d"
+      },
+      "limits": [
+        "Does not approve animation not yet produced",
+        "Does not approve r02 rejected artwork",
+        "Does not select Simurgh or voices",
+        "Not final chapter acceptance"
+      ]
+    }
+  ]
+}

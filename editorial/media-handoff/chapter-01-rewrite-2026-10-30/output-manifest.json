@@ -1,0 +1,1706 @@
+{
+  "date": "2026-10-31",
+  "scope": "Local handoff and candidate art; latest addition is proposed Scene One ten-second prompts only",
+  "files": [
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/CAST_AND_SCRIPT_ANALYSIS.md",
+      "bytes": 6327,
+      "sha256": "e51f0ea69ff444f9169de437fbc06977ac72873835fc30f13ffb9135c47f1e26"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/CHANGE_IMPACT_MATRIX.csv",
+      "bytes": 9793,
+      "sha256": "ab194e18f24880287c8969e7147ea8d9d1fbb0ef2d1e0d84f389730ae6f3ec92"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/FILE_INDEX.txt",
+      "bytes": 37424,
+      "sha256": "87a44b8100490b3d4431d63f4e28b3bfab637e27815863ed2a84b5857e69fa40"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/HANDOFF_DIFF_AND_PROMOTION.md",
+      "bytes": 2065,
+      "sha256": "25bcb80678b17f941fbf82239a3bced5c5872911f62bfca0cc05db9f9232762c"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/OWNER_DECISIONS.md",
+      "bytes": 1453,
+      "sha256": "f1c4458f86eac0c6df3128beca7a06e0a81f4b30cfa5a15960cda42164f90e73"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/README.md",
+      "bytes": 3931,
+      "sha256": "c8c0a79dbe3cc35e7e65f65719a5f28a43837a38524fc135864a74c221323e5a"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/SOURCE_AND_CHANGE_LOG.md",
+      "bytes": 4841,
+      "sha256": "d242e95b881e507faff4b4d3cb105fcadc11cfb523e87e6a1fac0ac06970bbb4"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/VALIDATION_REPORT.md",
+      "bytes": 5185,
+      "sha256": "7926ba47f0b346295dbde661d8fcdf1ebe9623ff06d91df7c67e02ea486a76da"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/dialogue-audio-map.json",
+      "bytes": 33904,
+      "sha256": "c97b6fd806ef3be6973b9462bd7c9ecfe5b879912b1182a9fc59ec2f0d844708"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/DESIGN_CONSISTENCY_REVIEW.md",
+      "bytes": 5549,
+      "sha256": "7967f2d1a5504bf8bbbbb8e71b6b179f96313e033e6798906041bc5dea3a080a"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/README.md",
+      "bytes": 3179,
+      "sha256": "41354e51431fabb7ab2f647bc887bf6acb0724e0146084e1f37ed3cb271bff0e"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/ROADMAP.md",
+      "bytes": 3749,
+      "sha256": "89347f0ebdb2f35bfdc0207e9d586c34bd92480a11f442012ea7a34e216054d0"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/WORKFLOW.md",
+      "bytes": 4907,
+      "sha256": "ed9924a3a60a1b9bc5cee64d94b0601f5ec9e2486f5b6f28a79f3446c533ce9d"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/agent-instructions/00_BOOTSTRAP.md",
+      "bytes": 693,
+      "sha256": "f5e3d6d9163aecc0e71242fd244a2975de451348e5504eee6bd5b91953b26701"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/agent-instructions/01_STYLE.md",
+      "bytes": 823,
+      "sha256": "3cb0018e0eaec9ab5c499ac85c73d39ac85d404c0ea48dbe20b8a89891b8bbd8"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/agent-instructions/02_IDENTITIES.md",
+      "bytes": 804,
+      "sha256": "60d9deff773f605d717971d7e40cf63af75f79e14ca7d2cc8b6087c1cea50e12"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/agent-instructions/03_STORY_AND_ACTION.md",
+      "bytes": 861,
+      "sha256": "9dcc0dcfe82a7ea3734f2e0a24fe732d864b34889c60b30355afd375028cfc05"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/agent-instructions/04_DIALOGUE_AND_TIMING.md",
+      "bytes": 894,
+      "sha256": "95c8ce9c735ee76ba24967f30e56a376f7eb0557fe3a6662a04d4559f7ac1924"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/agent-instructions/05_SCOPE_AND_RECONCILIATION.md",
+      "bytes": 880,
+      "sha256": "2e78674eb1a63b47cfbe25bf8858c97861b5d7c61815ed2630fec770763bc6e1"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/assets/characters/akvan-div_v2_trousers_v01.png",
+      "bytes": 1562875,
+      "sha256": "aff346407d34e3f7831c48be76eabbf397ebca784ae3679d8ada2119791da0cb"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/assets/characters/black-div_v2.png",
+      "bytes": 1579456,
+      "sha256": "83754d240a48deb6cf31aa87c206158f719b5bd7f6a7f6986a268fce450f6f45"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/assets/characters/div-e-sefid_v2.png",
+      "bytes": 1599129,
+      "sha256": "a8d5eaa928a8a1bcbb6be48a80b1d2c36528e51cbf58f5566ebc234cf77b20cc"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/assets/characters/hushang_v2.png",
+      "bytes": 1653693,
+      "sha256": "25b174226cb6495c28c578929ee2f572835fe9e88eea267f3f8d2f22e2e837e2"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/assets/characters/shahrasp_v2.png",
+      "bytes": 1642597,
+      "sha256": "23b8c48b4669f2b3f5f1722324904ee957f9bee073aade3f69c1dd073d7a9d9d"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/assets/characters/simurgh-bird_v2.png",
+      "bytes": 1656975,
+      "sha256": "3ba7651be82b7c3301d5ed97d963fdb55548df459e4396d970925fc2d308812f"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/assets/characters/tahmures_v2_trousers_v01.png",
+      "bytes": 872372,
+      "sha256": "1f0ff54f15782924f7331d225d22e923f5ee43d618e8997a9552bcdc636fa736"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/assets/local-review-contact-sheet.png",
+      "bytes": 399176,
+      "sha256": "f6348f4cfb3402ca7da84ba9878a1ccaebee2a5d60ae2284d5bc6de9692bcb13"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/context/CHARACTERS.md",
+      "bytes": 2950,
+      "sha256": "84e1ca83380eb31fe318d08973c9da844d4d96ddf043689ea3c333b669fe56ba"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/context/CHARACTER_INFO.md",
+      "bytes": 2191,
+      "sha256": "c4558983ec8738eb876d195d904f7da57359b6a763f8f326aefadc0246893576"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/context/CONTINUITY_AND_BLOCKERS.md",
+      "bytes": 1678,
+      "sha256": "0b2be0f94ab3527e7d8d2d3e2efb365e2cb0ecc10de4c6dffd624d722245930c"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/context/DRAMA_AND_CAST_ANALYSIS.md",
+      "bytes": 6327,
+      "sha256": "e51f0ea69ff444f9169de437fbc06977ac72873835fc30f13ffb9135c47f1e26"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/context/ENVIRONMENTS_AND_PROPS.md",
+      "bytes": 2139,
+      "sha256": "4901efe4dd82b21118641c7336b99df88414346752883895d90b696ad8bd5587"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/context/PRODUCTION_BRIEF.md",
+      "bytes": 2028,
+      "sha256": "84fcbf2d38b597f7f418d05e3e681e952ea2a07dd0217d4d51d0d36404efe9b3"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/context/STYLE.md",
+      "bytes": 1037,
+      "sha256": "43ffe778387b0dd679df620bfe72d2d2c3af13234dbdf7ec5ae6374998e6d175"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/context/SUPPORTING_PERFORMERS.md",
+      "bytes": 1745,
+      "sha256": "04109ce0fcd8b2e317542d989fc6e66e957b48919fe3cdf57752e8ff3a7597ce"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/context/character-info/akvan_div.md",
+      "bytes": 4452,
+      "sha256": "c64920d82e5eda2e9b36768e910966e7549e7c1ce1fc62891c767e42167d0dd5"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/context/character-info/arash.md",
+      "bytes": 4566,
+      "sha256": "2f5dca26f81d75b2a773e2b79fae55c508bc6f6666844fe3cd16f4b35e151222"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/context/character-info/black_div.md",
+      "bytes": 4402,
+      "sha256": "35180e025f243c594bcd4d44c55524687a10041093ac60427cd970d9802b8ffd"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/context/character-info/chapar.md",
+      "bytes": 4031,
+      "sha256": "94ea6c3a897a63a8a52e2af728ae1f06286af7860e372529baea411c53569a82"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/context/character-info/div_e_sefid.md",
+      "bytes": 4755,
+      "sha256": "33556ab09cfe0b903172f7154b9403307fc07d6fc41d3df6add3f58741a63490"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/context/character-info/hushang.md",
+      "bytes": 4326,
+      "sha256": "b61213e289d8a8233da27ca4ea92c32b3f1ac5132efb5d865ae3759272dbf390"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/context/character-info/shahrasp.md",
+      "bytes": 4538,
+      "sha256": "734570f56aa3d07c935001eb8c65f5c1b0719020ed079926344a3b7bc1cf77c2"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/context/character-info/simurgh_bird.md",
+      "bytes": 4681,
+      "sha256": "d8cad76855ef02698c04d747963896391533b6f38fbd3d7f64e1f7813b100175"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/context/character-info/tahmures.md",
+      "bytes": 4949,
+      "sha256": "e12b8e7743f2de7cd2c14784fcafd24afb1891422db702c0919cb423782eeea7"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/design-review/source-evidence.json",
+      "bytes": 2820,
+      "sha256": "bddc1d05f98e4419829d05a182432ef8218163682cfb4b3cef56735e1aed45ca"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/design-review/upper-body-comparison.png",
+      "bytes": 278796,
+      "sha256": "cc1e77443817ab56f92d69a32dec99e0bbb952604d6e0c6334600854b70b460e"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/ASSEMBLY_AND_AUDIO.md",
+      "bytes": 1488,
+      "sha256": "c9ed6c6fda32f37a0c0cc3a425551a5b30347f10e81de4dd9b8289b7af5344bd"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/PROMPT_INDEX.md",
+      "bytes": 2120,
+      "sha256": "2a57908af7e91a739d38e6f0e83436d2c7f5e415b97be7fda45009f782349e61"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/dialogue-audio-map.json",
+      "bytes": 33904,
+      "sha256": "d6f0e4cb40aedef73c43f4e771b9fc7bfdaa759d7055fed7131eeae1e244d2bb"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/scene-index.json",
+      "bytes": 56400,
+      "sha256": "0ce3974ee62c32a38a55881d1bc0baae919460dde97f998b2f06c325fdf86e48"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S01-SH01.md",
+      "bytes": 5177,
+      "sha256": "ac6e64a24a357709b3d1da77a7a483706ea288b2bdb059acda7a1c5e06547b24"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S01-SH02.md",
+      "bytes": 5816,
+      "sha256": "0c802bf904958ef82cf7280a1677548df6bbb48a93a331a4fbc19cf8fad3b55d"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S01-SH03.md",
+      "bytes": 5651,
+      "sha256": "5b8489b675b94363c88e7715f07a5b32d1336244af8a96761b668d9734f532bf"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S01-SH04.md",
+      "bytes": 5037,
+      "sha256": "c165a151238c58824354ef29d4fe25ef65b7d48b6a34d791acd8f961dcfaeaa6"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S02-SH01.md",
+      "bytes": 5327,
+      "sha256": "9bb6b590a3b5e6418e582ef14cbc2eddda59517e05f4904d55bc47464860768b"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S02-SH02.md",
+      "bytes": 5425,
+      "sha256": "f915fbd208859705dc1b3b73359f08268d1808c965d5993f1d6408cdcbe50b26"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S02-SH03.md",
+      "bytes": 5255,
+      "sha256": "b2e52931c8ba00a5a519408da720e3765034d0e1328e2bec8fc23ef5c0ce944e"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S03-SH01.md",
+      "bytes": 5859,
+      "sha256": "893779dd6c38c624cc8dbdd116b35ff478deca80a5c1e3c802f913e230e641b6"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S03-SH02.md",
+      "bytes": 6773,
+      "sha256": "927b124ec91869c9b7cf4130bd675dec1405e2278fc1a8ec0b5976e6fa91622d"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S03-SH03.md",
+      "bytes": 5392,
+      "sha256": "813d19a6ebb719e7bd98c36aad1984d11ea019e37b9e12df842f535170353a38"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S04-SH01.md",
+      "bytes": 6559,
+      "sha256": "d77fe5ee31d678eccb4b905ab99eff8d410b81399decaf740c25464b6f25acdb"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S04-SH02.md",
+      "bytes": 5765,
+      "sha256": "8e84f571642944f18ce6af743377874e97cb316e0d7026b0355d5d4603a975e0"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S04-SH03.md",
+      "bytes": 5882,
+      "sha256": "c8fb5487991546173b396583ba9866a0a15551bcc40c748d34fa5a1c17d0c2f6"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S04-SH04.md",
+      "bytes": 6247,
+      "sha256": "c5e0d1f962f85af3a75afb33da119f283cdeb09a149c1a89ddad5ae93f3b0d9d"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S04-SH05.md",
+      "bytes": 6031,
+      "sha256": "6c4165ae40e38a12196b0bbbc3e90c698116c09680246ba35a58eec92dad65d0"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S05-SH01.md",
+      "bytes": 5645,
+      "sha256": "dfd20443a1888236492634ad7d09a8c2b7536d4753f19f281381771ceb917551"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S05-SH02.md",
+      "bytes": 5641,
+      "sha256": "b2633d18f8a585bfa66248c93f7850ca23a1c6dcc8e51b39396572090e4d1d4e"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S05-SH03.md",
+      "bytes": 5491,
+      "sha256": "89f3566d0c821de1f29a623077c2421e9e9151e8629c6850e6a66ad1d969a390"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S05-SH04.md",
+      "bytes": 5246,
+      "sha256": "1b0fd0d0a41727b43921ae8cb111539b52c27969024fca491c65246edbcf97fe"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S06-SH01.md",
+      "bytes": 5784,
+      "sha256": "7fbf90dd662b648e31df625babf93086a467c66918a44bafc5d0aeb8edae11ab"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S06-SH02.md",
+      "bytes": 5412,
+      "sha256": "8f7449ba38e42e64a67a2b64564b5153c0f8d94971e2087aa7c4366a1df20f58"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S06-SH03.md",
+      "bytes": 5465,
+      "sha256": "aa93c80547172f6709b892652a0f73b83c4491b7b805f2b1ce504d46d6f235d2"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S07-SH01.md",
+      "bytes": 6616,
+      "sha256": "2d655553c7efb14e5c00075492cc9bfbcb44efeee3e245437b29f1a847917b76"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S07-SH02.md",
+      "bytes": 6962,
+      "sha256": "03031e35889750196fdb587268d73dd0147c829b6156cc102f98996903105b39"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S07-SH03.md",
+      "bytes": 6866,
+      "sha256": "9fe392737d189cbb0a9be15f4888ad670b2db82a04c0f99c35e77c265ba51dbd"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S07-SH04.md",
+      "bytes": 6714,
+      "sha256": "1b334638077a1bba5a44a26ad241669313bd8c79917e1e7d8edf82151fab89b7"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S07-SH05.md",
+      "bytes": 6227,
+      "sha256": "d550df9fb6a4af971ccb99e43d821c3aaaffdb1c2759512268ecf1e39b0c50fa"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S08-SH01.md",
+      "bytes": 7425,
+      "sha256": "cabddeba3f46422d8d8a4f382294f740451c76a20554bd27e7b2a63357657215"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S08-SH02.md",
+      "bytes": 5995,
+      "sha256": "327ae6ced9b4d586001c4757fc4e1428bcf8c9567a2e8d87b3a693f390b256cf"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S08-SH03.md",
+      "bytes": 6355,
+      "sha256": "554a084ef5b615e37b4a0714f9ec47f30d010b0481ef807e8e363510c92409ac"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S08-SH04.md",
+      "bytes": 5737,
+      "sha256": "42e9b84362aa3cc1e0ade4aaa074b4fd52accb1bd603d767cb3a6ca2823ddeba"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S09-SH01.md",
+      "bytes": 5979,
+      "sha256": "4ffab80dd2a3c9d01fd26cf9f2ffdcdd00f36c5f80684cc51698925177f1bf69"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S09-SH02.md",
+      "bytes": 6255,
+      "sha256": "76d43495137ccc90e7e23068a8ea36a8e96fbeefc234876df32605a189291116"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S09-SH03.md",
+      "bytes": 6122,
+      "sha256": "537dea1b6d9068fcf85ec50e333c51ac869e98ab9d8a144c91f9226591e24b11"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S09-SH04.md",
+      "bytes": 6022,
+      "sha256": "5241327fa9db25b89f6469d12b1d13ebbef412463d6568e09a865b4767ac6e3d"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S09-SH05.md",
+      "bytes": 5620,
+      "sha256": "1b93269fea406bf0f391e769f87dd3b3a89c6bd56e85180fcd6bb34587f0ca1a"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S10-SH01.md",
+      "bytes": 10476,
+      "sha256": "b3164e5a12d3112036cb583fd60fbbe5cb55c4011e986b1ebfdec112c520895a"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S10-SH02.md",
+      "bytes": 5736,
+      "sha256": "aa19ec7951cc368220cc9576d71cdc640a089bb9c164354b8873ea2356065417"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S11-SH01.md",
+      "bytes": 6911,
+      "sha256": "c10ae79f7ef0e59eceed969f72892af55e4b403050482de189b6e410d9eab342"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S11-SH02.md",
+      "bytes": 5869,
+      "sha256": "69f4acddf59a84f887154bdbbb9b15484bc62c6a309317dd3ba8eae65fb40bc0"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S11-SH03.md",
+      "bytes": 6167,
+      "sha256": "c6f2412cc9c750b4a2aeedfae1ed1037741ca56aa472be6fb9e326e5e0e67af3"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S11-SH04.md",
+      "bytes": 6610,
+      "sha256": "6fadfd9f178664c103e6ad13a7c4e6c0624fb3dc7e2b4352e759c620bb166640"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S11-SH05.md",
+      "bytes": 6077,
+      "sha256": "a7a407b75b3276f08f59bc51f3913b232c870d9239a4fa68acc2d386ebabfcd0"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/shots/RW01-S11-SH06.md",
+      "bytes": 6184,
+      "sha256": "d161245a276656be48202b6fe23415b5166a94e23cef5602a92d9d32e553cedc"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/episode-01/text-overlays.json",
+      "bytes": 1894,
+      "sha256": "4d027549bd4df1cde9a8a4f5c80096bd8927cea6c5f7880d7dee67452bd740cf"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/guides/01_PROJECT_AND_CHARACTERS.md",
+      "bytes": 2116,
+      "sha256": "bbc0bba36b6266f88bd1e2b19af0bb52ab858b93bdb3f792d695fe0da3aa727e"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/guides/02_AGENT_FRAMES_AND_PILOT.md",
+      "bytes": 2366,
+      "sha256": "8d8f29aaf841c3cb7ec52642d1e8c4e1c4e5d13ff24e426805779ca18d954c84"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/guides/03_AUDIO_EXPORT_AND_RETURN.md",
+      "bytes": 2164,
+      "sha256": "736c9ef1f8cffb716193b803ac306a51277b1270a6f794908357b306c46f443a"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/guides/DAILY_CHECKLIST.md",
+      "bytes": 1169,
+      "sha256": "e9ddd4e4ca473854c341b7ef870fa56bd992e828bd79457a8c19870d59c63c5b"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/guides/FLOW_FEATURES.md",
+      "bytes": 1672,
+      "sha256": "2ac5485af5e44927399cc45c6591348d2e2d73bda7414b9b7fbdbc77e9f2f907"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/manifests/VALIDATION_REPORT.md",
+      "bytes": 4560,
+      "sha256": "8aa6607b6ded9ff35881d9ed0c4e94680cbd8a8f89c2c5b88abb204fda6b7bd3"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/manifests/assets.json",
+      "bytes": 11299,
+      "sha256": "ad71849c06e0539f8cfbbd329a690a6857f17d246812062e32714f9b81a40e82"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/manifests/character-info.json",
+      "bytes": 27692,
+      "sha256": "6af803f59045704498d68a73621268b9e7c2a359888c614ad5e8462ada4fa87c"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/manifests/operator-log.csv",
+      "bytes": 141,
+      "sha256": "22cd2e4f30d239ac98314b1afda46e2f79879c95aaf07653356b1241128690a8"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/manifests/scene-progress.csv",
+      "bytes": 1990,
+      "sha256": "e0e0fa9ae4d94d62ea1220323d0bf125dba8852d398f0bcac91077a1d543d66e"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/manifests/shot-to-asset-map.json",
+      "bytes": 63074,
+      "sha256": "ac79153fd07c6b51f6fde4d1b57d6a9152d78ff183bc3abe6b8e2375dfbafd30"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/manifests/upload-plan.csv",
+      "bytes": 1216,
+      "sha256": "a063e5198d884473ff67d31d6a01ea7df4f970a29e43870f9da5e1617741a978"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/portrait-body-candidate-01/PAIR_INDEX.md",
+      "bytes": 1574,
+      "sha256": "26f37fc140a4e8e2573ebd11c3eab96591db0d75671f1fab03f1fb17d820bebb"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/portrait-body-candidate-01/README.md",
+      "bytes": 705,
+      "sha256": "d9a41ca9e081d0066565bef00f05f9eb16b17e52987610b8ce976273096e2ddd"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/portrait-body-candidate-01/USE_IN_FLOW.md",
+      "bytes": 1840,
+      "sha256": "b84980644d2df1baa5cbb1983c36dc88b9ce7c3b6aedaadaf758234128b447bd"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/portrait-body-candidate-01/VALIDATION_REPORT.md",
+      "bytes": 2425,
+      "sha256": "aaca3c1dc46e815d69ff983f259a02e6feb867232631e486963b3008648aa0c3"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/portrait-body-candidate-01/character-info.json",
+      "bytes": 29034,
+      "sha256": "f418ab9958195e4f20fc787d7a09f73e03f19ea94cf4aab0fb65c39d04901e08"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/portrait-body-candidate-01/characters/akvan_div/full-body.png",
+      "bytes": 1562875,
+      "sha256": "aff346407d34e3f7831c48be76eabbf397ebca784ae3679d8ada2119791da0cb"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/portrait-body-candidate-01/characters/akvan_div/portrait.png",
+      "bytes": 273183,
+      "sha256": "063332b37665e69dab4718194704b77279e06037bc8538586b367639c56a9295"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/portrait-body-candidate-01/characters/black_div/full-body.png",
+      "bytes": 1579456,
+      "sha256": "83754d240a48deb6cf31aa87c206158f719b5bd7f6a7f6986a268fce450f6f45"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/portrait-body-candidate-01/characters/black_div/portrait.png",
+      "bytes": 287332,
+      "sha256": "104a6425f821590d286f764e66dea32ff154b93c109ff106aa694eec55a6a19e"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/portrait-body-candidate-01/characters/div_e_sefid/full-body.png",
+      "bytes": 1599129,
+      "sha256": "a8d5eaa928a8a1bcbb6be48a80b1d2c36528e51cbf58f5566ebc234cf77b20cc"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/portrait-body-candidate-01/characters/div_e_sefid/portrait.png",
+      "bytes": 303204,
+      "sha256": "06625c139a40ff80ebc3d16a25e21ac9dbf4ec8ffa46c1cafebd52a927eb1005"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/portrait-body-candidate-01/characters/hushang/full-body.png",
+      "bytes": 1653693,
+      "sha256": "25b174226cb6495c28c578929ee2f572835fe9e88eea267f3f8d2f22e2e837e2"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/portrait-body-candidate-01/characters/hushang/portrait.png",
+      "bytes": 314815,
+      "sha256": "95abf9c78a7d55164c16e9e90b2b9cdcfc15385b02948c1b7c6d38e0fa6348aa"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/portrait-body-candidate-01/characters/shahrasp/full-body.png",
+      "bytes": 1642597,
+      "sha256": "23b8c48b4669f2b3f5f1722324904ee957f9bee073aade3f69c1dd073d7a9d9d"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/portrait-body-candidate-01/characters/shahrasp/portrait.png",
+      "bytes": 296030,
+      "sha256": "fcb5771645fcc7c5e23596cb2e203167a2047cb7252bbf3e9a3cc4a9e7c3e0c6"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/portrait-body-candidate-01/characters/simurgh_bird/full-body.png",
+      "bytes": 1656975,
+      "sha256": "3ba7651be82b7c3301d5ed97d963fdb55548df459e4396d970925fc2d308812f"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/portrait-body-candidate-01/characters/simurgh_bird/portrait.png",
+      "bytes": 381311,
+      "sha256": "4e78caa142902bc4af8a90199257fa7e4bd9a04024621b3269cd08b678e08bc9"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/portrait-body-candidate-01/characters/tahmures/full-body.png",
+      "bytes": 872372,
+      "sha256": "1f0ff54f15782924f7331d225d22e923f5ee43d618e8997a9552bcdc636fa736"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/portrait-body-candidate-01/characters/tahmures/portrait.png",
+      "bytes": 235861,
+      "sha256": "f5a3b9a6358c252d53ee2ecfd21f03d6aadef54ba2ccdce8ce3d403c3bcae918"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/portrait-body-candidate-01/full-body-overview.png",
+      "bytes": 1236934,
+      "sha256": "589a10c0dd928f43b150f0265931849da46a06c207b7067d7abcce4dab9caf37"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/portrait-body-candidate-01/gallery.html",
+      "bytes": 2653,
+      "sha256": "6542cf1ed15474ef1c973be5be282f715ba35d984f4e762cd5f31cd2356ef7ab"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/portrait-body-candidate-01/manifest.json",
+      "bytes": 10813,
+      "sha256": "a10ab99a8c4dc0340ea7a93deceaa0211eed66fc5f13bf2662db5360cc4832d6"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/portrait-body-candidate-01/portrait-overview.png",
+      "bytes": 1207928,
+      "sha256": "17d11cf63c8b67445a7fd2ef406b5779fa1e19f10c1e9763e75b4de72596ccaf"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/portrait-body-candidate-01/shot-to-input-map.json",
+      "bytes": 64673,
+      "sha256": "b72c51c8300d4864cc5a16f7d8fb2577ab0d59acbcae9f71f0d5f29dd751d815"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/portrait-body-candidate-01/upload-plan.csv",
+      "bytes": 1971,
+      "sha256": "c0ea15d4c38f07313e20cb48f878888e98b81a385307590c3d43fe023e693392"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/portrait-body-candidate-01/validation.json",
+      "bytes": 379,
+      "sha256": "3fde8d496e3ab52d7f2c10f98f51643ed9dab7e64902c381f9f2208f392531da"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/script/BILINGUAL_REVIEW.md",
+      "bytes": 7234,
+      "sha256": "256d54fedd21a26d513d028c1ed831f01a47feef96e4861d2031a7f188eeb9f8"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/script/EDITORIAL_NOTES.md",
+      "bytes": 9707,
+      "sha256": "54be030c30ebab95c4b0f0db8029d71e5c78a6b03ba4121cfff5ba4c8ef40e57"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/script/chapter_one_final_en.md",
+      "bytes": 14954,
+      "sha256": "c22af7c520b8a5832ef69f54b67aae03bc4bfdf18b78e6831bbe237c70b92757"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/script/chapter_one_final_fa.md",
+      "bytes": 22831,
+      "sha256": "e492db6bb9b525c0bcb6d119ec10d0af2f5ce2d9624f5ca889bb70fccdc56f1e"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-illustrated-v2/script/episode.json",
+      "bytes": 56590,
+      "sha256": "8b5bce2c803829f0259b1ed4f786f7a7e9542696db4ba2ceb6842761c339cce6"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/DESIGN_CONSISTENCY_REVIEW.md",
+      "bytes": 8427,
+      "sha256": "81f17b9e5909039d6c511d941dc7964fb8962dee3f66d3b80bba864477d0c937"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/README.md",
+      "bytes": 3640,
+      "sha256": "19d8674ac5c6fa3f2a38b67f3332220e1ead40fa9918e5d98593b60d86f9b0af"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/ROADMAP.md",
+      "bytes": 3752,
+      "sha256": "8f9d19c1efba211c938f130e3619031dabd450576cdf92321114aae0fa719a24"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/WORKFLOW.md",
+      "bytes": 4905,
+      "sha256": "40820fadac78b839210631ee89012234bc54ea83d3f164607ea7eac6374de58e"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/agent-instructions/00_BOOTSTRAP.md",
+      "bytes": 691,
+      "sha256": "39e0df47e7c528c98cf632f41d8fd7e68204796a3c938346e0c5caa0e1b40798"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/agent-instructions/01_STYLE.md",
+      "bytes": 883,
+      "sha256": "fd09f41f08ce5ebd787875508d7e937d48567387520a7c3e919c71773e6ed513"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/agent-instructions/02_IDENTITIES.md",
+      "bytes": 873,
+      "sha256": "fcb1dbc9965b24c9c45f4bb70d691fc0f4059113268138ed0f51cae534a5b958"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/agent-instructions/03_STORY_AND_ACTION.md",
+      "bytes": 858,
+      "sha256": "a22f3299e4ca8e1a68d60bc65ed34e6185365308a583294d2a935f3698d045a3"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/agent-instructions/04_DIALOGUE_AND_TIMING.md",
+      "bytes": 891,
+      "sha256": "ce475d56d7800dd1b00bf791cf6a4f3a5d67dc301a3bc0095cd5930b225f124e"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/agent-instructions/05_SCOPE_AND_RECONCILIATION.md",
+      "bytes": 877,
+      "sha256": "dce0ed207321cf744847617d1707985ec9969e603b7a61243832262e85017664"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/assets/characters/akvan-div_master.png",
+      "bytes": 1996154,
+      "sha256": "47362a764bc38cce4e09ab022741a093a296fb69918344eb33bf6fa1829e6813"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/assets/characters/arash_master.png",
+      "bytes": 1843979,
+      "sha256": "467e79191a6f61f99ba8da5a2258c47a458e3852b292785cff1622d3753af135"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/assets/characters/black-div_single_v01.png",
+      "bytes": 1849039,
+      "sha256": "aeb740c8e7b2193bfafc4674ffbb8c28079b941799ec82559e46b8ec9508e5cc"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/assets/characters/chapar_master.png",
+      "bytes": 1743164,
+      "sha256": "5fbb5a43f5c17c8ba5990d7f2523d720d77be8ad9ffdc9304fb39fec1f0e44c3"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/assets/characters/div-e-sefid_single_v01.png",
+      "bytes": 1881257,
+      "sha256": "7c0a19e5923ab4c1994d1cec50de05c4db74e0dca00d50c3c82fb54cf268fa17"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/assets/characters/hushang_single_v01.png",
+      "bytes": 1922898,
+      "sha256": "7dc04a0cae54a6121f94e4e9dc6a7c3368372d3e0bcd86d61184d2d51bde43fb"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/assets/characters/shahrasp_single_v01.png",
+      "bytes": 1770410,
+      "sha256": "bc3097cdaa37aa37cfa79af6304988177148178f86bf1386e00e2474674a63a8"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/assets/characters/simurgh-bird_single_v01.png",
+      "bytes": 1872682,
+      "sha256": "a330e75c6714e231a198e804561dbb144935bdd8394dc2deed0d9cb6af17533b"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/assets/characters/tahmures_master.png",
+      "bytes": 1680809,
+      "sha256": "9b8900d8065d0da274489f06facf16928582ea3259772041fe00bbec87c64996"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/assets/local-review-contact-sheet.png",
+      "bytes": 583371,
+      "sha256": "4f87df337ca364c27acdd9c956d50297cf02dd6fb0fde78972e8541f670d9faa"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/context/CHARACTERS.md",
+      "bytes": 3700,
+      "sha256": "4aec6c628493f26b99770e25532318a6e38ea587e4a29f276f28e54d9777484a"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/context/CHARACTER_INFO.md",
+      "bytes": 2229,
+      "sha256": "da3267054efee56168e2606fae5880a9a94ad06848e40fe8c8e9a2a498daeed3"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/context/CONTINUITY_AND_BLOCKERS.md",
+      "bytes": 1750,
+      "sha256": "8697568ed8de7e639868385d76ca56789dc53b1fd12312a26bf0e1904b920448"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/context/DRAMA_AND_CAST_ANALYSIS.md",
+      "bytes": 6327,
+      "sha256": "e51f0ea69ff444f9169de437fbc06977ac72873835fc30f13ffb9135c47f1e26"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/context/ENVIRONMENTS_AND_PROPS.md",
+      "bytes": 2139,
+      "sha256": "4901efe4dd82b21118641c7336b99df88414346752883895d90b696ad8bd5587"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/context/PRODUCTION_BRIEF.md",
+      "bytes": 2026,
+      "sha256": "0ac4033e80ee50c2d1b89a9a95c1ee131630133ec08f5e6d8015acc4d9d39cd4"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/context/STYLE.md",
+      "bytes": 956,
+      "sha256": "2bf8cb24d700ea4030cef435d8cb88798cef6a48c6e45531f98fbe19e5e27ba0"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/context/SUPPORTING_PERFORMERS.md",
+      "bytes": 1745,
+      "sha256": "04109ce0fcd8b2e317542d989fc6e66e957b48919fe3cdf57752e8ff3a7597ce"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/context/character-info/akvan_div.md",
+      "bytes": 4436,
+      "sha256": "d1d92dd3757e1ad77013bfa18209989f43f36ee4ee9bc4ba828fcab415e0ff23"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/context/character-info/arash.md",
+      "bytes": 5453,
+      "sha256": "e050fd7794b53d8af2f77a1e1d8c2997a154d26e42acd98855f7d9098f5a6efc"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/context/character-info/black_div.md",
+      "bytes": 4385,
+      "sha256": "a986b39a7bea568f310087b53b900cf2ab8c1e88b21b187d28e6860cd57695a4"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/context/character-info/chapar.md",
+      "bytes": 4679,
+      "sha256": "6d2c1aa532803dd43bb658d93adc2230efab4aba5a1ee61860c6dc4f0c802854"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/context/character-info/div_e_sefid.md",
+      "bytes": 4616,
+      "sha256": "0d3e059ed416d7e0eb6f014d9b7ee75a651c0b8c08f36d761b9167ed4fd250cc"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/context/character-info/hushang.md",
+      "bytes": 4403,
+      "sha256": "4ce42a50a1d3dc16c3447227e7a9062d50cabf00edaec9804afafd4d8c5c1415"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/context/character-info/shahrasp.md",
+      "bytes": 4523,
+      "sha256": "036a68ff69d1abb8a3f236bada0883b18aedfe22a1c62862da1f1f1aea29a4a2"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/context/character-info/simurgh_bird.md",
+      "bytes": 4670,
+      "sha256": "ebb303a7134ba440b4223122cecfa70b10e82500f9d2ed828167e6155bdd6660"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/context/character-info/tahmures.md",
+      "bytes": 4711,
+      "sha256": "b1b3aea2919bf66c925386a4a64942d0f67d1683c62abf95ca1073622caf6ffe"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/design-prompts/pilot-missing-assets-01/01_ROYAL_HALL_THREE_OPTIONS.md",
+      "bytes": 3394,
+      "sha256": "a2134f3b7ad0328cb84a8289923aaca8ed1a0c215f118b3f6257133f81310517"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/design-prompts/pilot-missing-assets-01/02_TABLE_AND_BENCHES_THREE_OPTIONS.md",
+      "bytes": 3686,
+      "sha256": "9af8c5d2f9f31a02054eaebfd36a5e8e7ec8a21ab0c7725c8b74d7c6a979f389"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/design-prompts/pilot-missing-assets-01/03_ANCIENT_TABLET_IN_CLOTH_THREE_OPTIONS.md",
+      "bytes": 3638,
+      "sha256": "8e0fa4ee9977a110010157db0bcc1ec4b35c2b20579006e42ae81ef40a7596b8"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/design-prompts/pilot-missing-assets-01/04_NEW_WRITING_SHEET_THREE_OPTIONS.md",
+      "bytes": 3197,
+      "sha256": "f198299b9657e54de18935817beb3a1eab55bd24255bbe2db7828c6422d3e2e5"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/design-prompts/pilot-missing-assets-01/README.md",
+      "bytes": 3740,
+      "sha256": "e8e6b5f27d0e3da776de02b82771e5838b774fd796229008c34338fcc905fa26"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/design-prompts/pilot-missing-assets-01/SELECTION_LOG.csv",
+      "bytes": 478,
+      "sha256": "2edc5b7872ed52f5ab90cdb7a3d0e1baf3105b65812a5f0d78e92972b82d3e18"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/design-prompts/pilot-missing-assets-01/prompt-manifest.json",
+      "bytes": 1213,
+      "sha256": "bb1a5cafca6fcbd2422651531f0197059aadbc40205e08767e9e4566ca16a1dc"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/design-prompts/pilot-missing-assets-01/validation.json",
+      "bytes": 442,
+      "sha256": "e0e355f9aceac5200ca9b715305bc58e08f1a89e09a38dd1a12d211ba8fd3acb"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/design-review/source-evidence.json",
+      "bytes": 3538,
+      "sha256": "d47ecaff5ecd252529f3f79e4fe973cec0997ac1573be4cd9127a95a182100ce"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/design-review/upper-body-comparison.png",
+      "bytes": 413748,
+      "sha256": "cf98cbc4b19c684593c17dd368a76f0da942d125baa875a59076ba46d155daae"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/ASSEMBLY_AND_AUDIO.md",
+      "bytes": 1488,
+      "sha256": "c9ed6c6fda32f37a0c0cc3a425551a5b30347f10e81de4dd9b8289b7af5344bd"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/PROMPT_INDEX.md",
+      "bytes": 2120,
+      "sha256": "2a57908af7e91a739d38e6f0e83436d2c7f5e415b97be7fda45009f782349e61"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/dialogue-audio-map.json",
+      "bytes": 33904,
+      "sha256": "d6f0e4cb40aedef73c43f4e771b9fc7bfdaa759d7055fed7131eeae1e244d2bb"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/scene-index.json",
+      "bytes": 56400,
+      "sha256": "0ce3974ee62c32a38a55881d1bc0baae919460dde97f998b2f06c325fdf86e48"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/scenes/S01/ten-second-parts-01/01_ARRIVAL_AND_DISMOUNT.md",
+      "bytes": 3111,
+      "sha256": "99cb9e421143a81472829740b11b2e7622543220ba5f0371881b2659bc6c007b"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/scenes/S01/ten-second-parts-01/02_LIFT_THE_TABLET.md",
+      "bytes": 3179,
+      "sha256": "26eb606a73310bf75abc7bcf23a88a5d9824238b70de4fbce5fb3c949de156df"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/scenes/S01/ten-second-parts-01/03_INSPECT_THE_DAMAGED_SEAL.md",
+      "bytes": 3635,
+      "sha256": "46096deb713028eb71c6915e682aaac00eee6e2b0a23705f357e699c12d17dc7"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/scenes/S01/ten-second-parts-01/04_LOOK_TOWARDS_THE_FAR_BANK.md",
+      "bytes": 3187,
+      "sha256": "ce19e25b6bd1c850b3fe502bca520bb47f59ee730340ceb734da0f7f9e43932b"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/scenes/S01/ten-second-parts-01/05_WRAP_AND_SECURE_THE_FIND.md",
+      "bytes": 3445,
+      "sha256": "b857095c7937c6b4e7c934ff48e093eed6f908719eab3edeb6287b8a3883086d"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/scenes/S01/ten-second-parts-01/06_MOUNT_AND_LEAVE_FOR_THE_CITY.md",
+      "bytes": 3315,
+      "sha256": "90c41b7bc329dfef773a609645af272b2d46b6068b4b21273c6bae123d8a729d"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/scenes/S01/ten-second-parts-01/CHANGE_IMPACT_MATRIX.csv",
+      "bytes": 1011,
+      "sha256": "0654aa04872e411aa87febd54173fb7ed63ad546a3c88bdea781272afe22c53e"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/scenes/S01/ten-second-parts-01/README.md",
+      "bytes": 4059,
+      "sha256": "e5865bc0da6aca67fa57ba63044506f68fbf2ec285b22d2c2fcf0946402d8c74"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/scenes/S01/ten-second-parts-01/parts.json",
+      "bytes": 15739,
+      "sha256": "58fb495b7e82eb86bde04fd0c37694489ea73e76270a24b210a6f9ad03393782"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/scenes/S01/ten-second-parts-01/validation.json",
+      "bytes": 489,
+      "sha256": "8725be42f0a258067b14d0bd79ef27b5beeb2e8b3747303dc6339db1925ba425"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S01-SH01.md",
+      "bytes": 5318,
+      "sha256": "2bd09940a4c55c73dc9d9e1116a88d0b193413e56a4de85b8b6226a350402ecf"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S01-SH02.md",
+      "bytes": 5957,
+      "sha256": "ca9e637bb047a2ffb1e79e53be16768100d3a0186db9d057c362991dd04fd280"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S01-SH03.md",
+      "bytes": 5792,
+      "sha256": "7a1aa81b3f8f5f59b471bb6da3b41144fe8ab6168bc8bfda0cd7ddc6b5dfbbeb"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S01-SH04.md",
+      "bytes": 5178,
+      "sha256": "505c7938d3636fcaf61d6f038d3cd32b506ee2905b763541f857b430e5413e3f"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S02-SH01.md",
+      "bytes": 5468,
+      "sha256": "05286299e8cec2d8419bb3ad6ac9aeca6eb40b21a281679a33ca213585e91e70"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S02-SH02.md",
+      "bytes": 5566,
+      "sha256": "f1a40a97ce69fca7fc4e91ac6d7b1d044cc08b20b3f5a19cdd59c91f39179a73"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S02-SH03.md",
+      "bytes": 5396,
+      "sha256": "3d78a781281ddcb514eb157f20195211a1d1db9f6a6b30728487d0db5927195e"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S03-SH01.md",
+      "bytes": 6085,
+      "sha256": "2a04235ba2fa1fb017bb02a120e79f2749b6873a64c196b3567a0424fcf9328a"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S03-SH02.md",
+      "bytes": 6999,
+      "sha256": "e0b256dca1b401ccb1000b15f8409f163cd65002c25a098bf4eaae96f681be52"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S03-SH03.md",
+      "bytes": 5618,
+      "sha256": "a8fc959219a672cf62a5070c589409a703a0e5f56c19c480a6cbf8412548b3e8"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S04-SH01.md",
+      "bytes": 6631,
+      "sha256": "7cdde25a6516d94f2ee08f61096bdc2b9b5501e6bc1f0591962d0d5128094bac"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S04-SH02.md",
+      "bytes": 5837,
+      "sha256": "927e3697becc6f680cfcaa267f784a78c20a9e1b767e0080d8723052d99369c8"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S04-SH03.md",
+      "bytes": 5954,
+      "sha256": "c358513b7f1d723fe40a99218919945ea55580a6219cea1b47370e557cc923c4"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S04-SH04.md",
+      "bytes": 6319,
+      "sha256": "429452c471e6a22ecfbdbd389c6f6a0c14ef5956362d50929c484a2b96536691"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S04-SH05.md",
+      "bytes": 6103,
+      "sha256": "37ff2beb5e6999106e433816ae61fa4ef062c67767cf9faad33736752af06c51"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S05-SH01.md",
+      "bytes": 5877,
+      "sha256": "3a8f5ee1167b586ada5751be56460f377e0c00c96ea1ef82cca35330ee78301e"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S05-SH02.md",
+      "bytes": 5873,
+      "sha256": "5ad21e29cd00822635026980c297f73026063e790fb0e16853e4ab9f74270bfb"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S05-SH03.md",
+      "bytes": 5723,
+      "sha256": "547a3b1c0ce74434e1b8f19f64a48d144dc2958a7d5d3c7fdf8d359c588a5a64"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S05-SH04.md",
+      "bytes": 5478,
+      "sha256": "c493cf1e5f33ac2644c855d21b76e3f7c5f9b9b9228b12e082c4e97a144a21dd"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S06-SH01.md",
+      "bytes": 5843,
+      "sha256": "24b55efb9c5ec256f860b4376f50cd9dc4e43fe59030c0a7719c53d6dee8a9e6"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S06-SH02.md",
+      "bytes": 5471,
+      "sha256": "1e8d1fc125fab581a8023eaacf6e2787f920e52f9b80c21a10f1d54126025945"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S06-SH03.md",
+      "bytes": 5524,
+      "sha256": "4d3e9a328e7cf331b62c244bd22e18ae47733b5817cce9ad010b05c7c092f665"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S07-SH01.md",
+      "bytes": 6687,
+      "sha256": "71a3347fbda19bd1193bd3024de57ce095d08849bcfdfd56f8a5350a5f7c1d21"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S07-SH02.md",
+      "bytes": 7033,
+      "sha256": "98f6f964ddd6539c9f5d2976b17aa115329601ef3edf7c420bcd9b4a1633980f"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S07-SH03.md",
+      "bytes": 6937,
+      "sha256": "d3fbae783e74bc65e3c378e88ab7cb2bed4cc01b54c31c432a1b7cb2f35704c0"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S07-SH04.md",
+      "bytes": 6785,
+      "sha256": "34888b0fb729e6c976ad98760b52e59f2773fa011ec14cb076c824c07e6cd1bf"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S07-SH05.md",
+      "bytes": 6298,
+      "sha256": "c46ee21fd085722510edf1ea62efe1e252af02777c898957ef9608acf972bfa3"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S08-SH01.md",
+      "bytes": 7490,
+      "sha256": "cb9376303faf59f0b446d261011f1a86af05a0c9964d4473fe367f222b33e1f0"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S08-SH02.md",
+      "bytes": 6060,
+      "sha256": "666dbb09619761caaac65ebb729498007f09c07021799bbf39b58f2c7a266657"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S08-SH03.md",
+      "bytes": 6420,
+      "sha256": "eb36e9420ad0e4af0a41efade8c827d367e44aee3c878009450c05e73f45b8c6"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S08-SH04.md",
+      "bytes": 5802,
+      "sha256": "f743874fba45503020d642572cc1eebbde8f96cd3b5dcaa16ed5f8ca3c562469"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S09-SH01.md",
+      "bytes": 6210,
+      "sha256": "907535e98bd8d0ad57dacb4d43da5035fce72d9d7b9bc7e9820fce501a9ebab2"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S09-SH02.md",
+      "bytes": 6486,
+      "sha256": "b4ca70f38c32469044bd7938af5d91c4911de9d1988992ca50fe92402c82083e"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S09-SH03.md",
+      "bytes": 6353,
+      "sha256": "bd59a2b7effcfa63368004d6a63648adbc16f6dd5bfca6efc4fca83c7f3b45a0"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S09-SH04.md",
+      "bytes": 6253,
+      "sha256": "f9bb5edd9f378ca78070b4af9e792f6ae702fd04d7ab50046862743ae8104b1b"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S09-SH05.md",
+      "bytes": 5851,
+      "sha256": "07cd3ecab42891aeddafe0b2d86773dcb4de86240c58579c1097fea1e79eae2a"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S10-SH01.md",
+      "bytes": 10542,
+      "sha256": "f0ba3cd114f55101345f9a9fce8a7a1bc91811ba4c7a710d74ff76c895df0601"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S10-SH02.md",
+      "bytes": 5802,
+      "sha256": "c9357d2242e7bbb2ab82b7c3171731f6d34a5df1e468255c50a55bc9c423f05e"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S11-SH01.md",
+      "bytes": 7134,
+      "sha256": "5c8326c71909ae5e3706644995db86f3f0e11a98b356573c276ee2df1d32ed68"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S11-SH02.md",
+      "bytes": 6092,
+      "sha256": "b4b0bb20efc7a3be624c3b244f6fb036c772b4a3fea130cb53e8e9894e7bcc09"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S11-SH03.md",
+      "bytes": 6390,
+      "sha256": "9b6f6e4feb588f3d866987e972f3c37394497f4c0aa2ddf4d6f95c833bdf3678"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S11-SH04.md",
+      "bytes": 6833,
+      "sha256": "7684eb98393a5247310fdc10b9c1634c0336cceb62f9e1d5f880e61956f4a935"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S11-SH05.md",
+      "bytes": 6300,
+      "sha256": "e639fc4e3a7fa1e0620cc4a14afc746de865e3ec04ad851ca13844e9ce2a2eb1"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/shots/RW01-S11-SH06.md",
+      "bytes": 6407,
+      "sha256": "bb9b53aa684f2148ea5ef2db3b08572430204b10d649e0aa69a79941332c6972"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/episode-01/text-overlays.json",
+      "bytes": 1894,
+      "sha256": "4d027549bd4df1cde9a8a4f5c80096bd8927cea6c5f7880d7dee67452bd740cf"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/guides/01_PROJECT_AND_CHARACTERS.md",
+      "bytes": 2114,
+      "sha256": "b0b3fd700f53346a3461e8de4e47cb1ddd37c792a8090f22ce3914b217054fe3"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/guides/02_AGENT_FRAMES_AND_PILOT.md",
+      "bytes": 2885,
+      "sha256": "5ac03dc98eedfbb1c5ca076ed919784ca81532e41c752e347fba2808abdb925b"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/guides/03_AUDIO_EXPORT_AND_RETURN.md",
+      "bytes": 2164,
+      "sha256": "736c9ef1f8cffb716193b803ac306a51277b1270a6f794908357b306c46f443a"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/guides/DAILY_CHECKLIST.md",
+      "bytes": 1169,
+      "sha256": "e9ddd4e4ca473854c341b7ef870fa56bd992e828bd79457a8c19870d59c63c5b"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/guides/FLOW_FEATURES.md",
+      "bytes": 1672,
+      "sha256": "2ac5485af5e44927399cc45c6591348d2e2d73bda7414b9b7fbdbc77e9f2f907"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/manifests/VALIDATION_REPORT.md",
+      "bytes": 4560,
+      "sha256": "8aa6607b6ded9ff35881d9ed0c4e94680cbd8a8f89c2c5b88abb204fda6b7bd3"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/manifests/assets.json",
+      "bytes": 13518,
+      "sha256": "c84c0907a2e0f6107b5957a8fd61096a915e2a47272e0a8a5d53ca029235026c"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/manifests/character-info.json",
+      "bytes": 28007,
+      "sha256": "14bd03bc4efa2a71353973eeb5e35314ded74d49b3ff970d8722dbe229effba4"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/manifests/operator-log.csv",
+      "bytes": 141,
+      "sha256": "22cd2e4f30d239ac98314b1afda46e2f79879c95aaf07653356b1241128690a8"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/manifests/scene-progress.csv",
+      "bytes": 1957,
+      "sha256": "345c14efa7a3c16e99d703425f7f59d13b1d34e12c98656cdbb8414bf95407f4"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/manifests/shot-to-asset-map.json",
+      "bytes": 65811,
+      "sha256": "69aaa1316f8583a691c1452b3937a261dc1518b63838178b75035a2c9e3fabf0"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/manifests/upload-plan.csv",
+      "bytes": 1470,
+      "sha256": "21413fd04d2d686a9fd8bca20d9931d5d9cfd7cbdbfeb94f52fc0c05696dde09"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/DESIGN_GAP_RESOLUTION.md",
+      "bytes": 4099,
+      "sha256": "9261f90034549769a79231a205c0883aed044aad47e8055b584e09a9318a514a"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/PAIR_INDEX.md",
+      "bytes": 2109,
+      "sha256": "8207c88efe50ecc0f499908e82d18e3ea1fd1ff642f3dd2311984a5789856cd8"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/README.md",
+      "bytes": 1114,
+      "sha256": "944626b073f1e8e9e712277b2ee947754d77094670cafae4c00ef66d0bacca29"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/USE_IN_FLOW.md",
+      "bytes": 1840,
+      "sha256": "b84980644d2df1baa5cbb1983c36dc88b9ce7c3b6aedaadaf758234128b447bd"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/VALIDATION_REPORT.md",
+      "bytes": 2425,
+      "sha256": "aaca3c1dc46e815d69ff983f259a02e6feb867232631e486963b3008648aa0c3"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/body-overrides.json",
+      "bytes": 372,
+      "sha256": "c144a2dd64d136898782a0755d12bbdf1e5f191cd1ad6ee895ae012c268b6a75"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/character-info.json",
+      "bytes": 29550,
+      "sha256": "e87ab4b3457b76e24c92f2827de43348b0339d72746473fe757c3f9b959cefd3"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/characters/akvan_div/full-body.png",
+      "bytes": 1996154,
+      "sha256": "47362a764bc38cce4e09ab022741a093a296fb69918344eb33bf6fa1829e6813"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/characters/akvan_div/portrait.png",
+      "bytes": 446302,
+      "sha256": "8b6020268e760999ed47401d12e4906e39c8712d301ce7262c9b23c3b230db59"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/characters/arash/full-body.png",
+      "bytes": 1852631,
+      "sha256": "755b0161287ca03bac8fdcc152fe6d520b61227e5f7e23a8ec842f9cbdc9e150"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/characters/arash/portrait.png",
+      "bytes": 363669,
+      "sha256": "402117e8675e5e2f0661ab0872ce5112ec0eb2e0e0e8a13bf6955fc8161ec58d"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/characters/black_div/full-body.png",
+      "bytes": 1849039,
+      "sha256": "aeb740c8e7b2193bfafc4674ffbb8c28079b941799ec82559e46b8ec9508e5cc"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/characters/black_div/portrait.png",
+      "bytes": 350967,
+      "sha256": "6a59d30990c99291478c0c90e1a00cebd81404ab4e2f9d52d8a4f01833ec4199"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/characters/chapar/full-body.png",
+      "bytes": 1743072,
+      "sha256": "e85822d1692bcaaf805772533b1dfa974dd69ac601e92d40940b96ae63d952fe"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/characters/chapar/portrait.png",
+      "bytes": 317914,
+      "sha256": "aeff9b0797a44298a804de00595130595b39c09be4e78e2e064f76cfd053de13"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/characters/div_e_sefid/full-body.png",
+      "bytes": 1825718,
+      "sha256": "159529e6a65410c795fea43ee10b3b29d021ced657f023013017a2c93244eaa5"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/characters/div_e_sefid/portrait.png",
+      "bytes": 330311,
+      "sha256": "c0cd1f1843b96a9a4e24687cb7a4de6df58dc046a1ace15cf8a44de261c654f6"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/characters/hushang/full-body.png",
+      "bytes": 1922898,
+      "sha256": "7dc04a0cae54a6121f94e4e9dc6a7c3368372d3e0bcd86d61184d2d51bde43fb"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/characters/hushang/portrait.png",
+      "bytes": 351988,
+      "sha256": "72d7511763780e4676ec1435516fd17e2d3e3a528dd82e931bb1cc3d7084256e"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/characters/shahrasp/full-body.png",
+      "bytes": 1770410,
+      "sha256": "bc3097cdaa37aa37cfa79af6304988177148178f86bf1386e00e2474674a63a8"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/characters/shahrasp/portrait.png",
+      "bytes": 300510,
+      "sha256": "85e971b479046ebfc3bdfbc75b815489dd8ee884ba856dbcc503c8ff705b4a26"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/characters/simurgh_bird/full-body.png",
+      "bytes": 1909631,
+      "sha256": "fd687f9a2a0cb9d5be1bfac3397dfb8cbd86d03527e96bd596527797c7ffe960"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/characters/simurgh_bird/portrait.png",
+      "bytes": 407764,
+      "sha256": "ad861af5bec759ccf35e5239ed052b9d03598407563205ef186e31cfd0ae0dbb"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/characters/tahmures/full-body.png",
+      "bytes": 1680809,
+      "sha256": "9b8900d8065d0da274489f06facf16928582ea3259772041fe00bbec87c64996"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/characters/tahmures/portrait.png",
+      "bytes": 293775,
+      "sha256": "51cde25b4674a4e67df6d98596998f27adb35499a589804305c6b626a218b863"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/full-body-overview.png",
+      "bytes": 1643608,
+      "sha256": "42c3c24346c3e4e6a3a2e5b3327b765895f8fa2a77b875d5f41dd9802f036454"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/gallery.html",
+      "bytes": 3198,
+      "sha256": "114058c08c71fc2807b75deefb9d62da05046767013acfc5381b910c6ae0a6f6"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/generated/arash_harmonized_full_body_v01.png",
+      "bytes": 1852631,
+      "sha256": "755b0161287ca03bac8fdcc152fe6d520b61227e5f7e23a8ec842f9cbdc9e150"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/generated/chapar_harmonized_full_body_v01.png",
+      "bytes": 1743072,
+      "sha256": "e85822d1692bcaaf805772533b1dfa974dd69ac601e92d40940b96ae63d952fe"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/generated/div_e_sefid_harmonized_full_body_v01.png",
+      "bytes": 1862150,
+      "sha256": "73a71a28d55ac24f175fe66739daf318a5a23a00abeecb7e6f0541a039f53c2b"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/generated/simurgh_bird_harmonized_full_body_v01.png",
+      "bytes": 1909631,
+      "sha256": "fd687f9a2a0cb9d5be1bfac3397dfb8cbd86d03527e96bd596527797c7ffe960"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/generation-record.json",
+      "bytes": 6349,
+      "sha256": "af39b5df3c23616965f64ce5d7122b994ce35a2ceaf85cf94df38e43dda96266"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/input-snapshot.json",
+      "bytes": 2974,
+      "sha256": "722a312ad26b975ce55b963ed0896740b697753fc291e3ce15597a52eeac38f0"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/manifest.json",
+      "bytes": 14076,
+      "sha256": "1b3dda77a3a90f0744a41b6f6640e3d57c3fad88e8a33e2f335c9aebe2a20f28"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/portrait-overview.png",
+      "bytes": 1922824,
+      "sha256": "75175b6d2abd520087b5c1161a086d46434ff290860a72e326d1363e4a191fdf"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/proposed-scale-lineup.png",
+      "bytes": 5003358,
+      "sha256": "485c14a70718b8e513c18712a9d4dcda6f2859221287da710297a5bce5b59e00"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/proposed-scale-ratios.json",
+      "bytes": 743,
+      "sha256": "41c62a6c31803eabdf6b367d49da09856ef6f8599e18b71cf426945a265d239f"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/revisions/div-e-sefid-horns-r01/full-body.png",
+      "bytes": 1862150,
+      "sha256": "73a71a28d55ac24f175fe66739daf318a5a23a00abeecb7e6f0541a039f53c2b"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/revisions/div-e-sefid-horns-r01/manifest.json",
+      "bytes": 1362,
+      "sha256": "e0b3d0aea473670b34c68b244fed148bbafaf7587467ba949e194dbb3e5b4e43"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/revisions/div-e-sefid-horns-r01/portrait.png",
+      "bytes": 339450,
+      "sha256": "c43122bac51fc23e6e2ca53241c1edf5d071e777fadc15fbad0c35e7e4c709fb"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/revisions/div-e-sefid-horns-r02/README.md",
+      "bytes": 1465,
+      "sha256": "fae2d1da7922cf387360c5743a642533126fa5e65c9a065ddf126183a11941a5"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/revisions/div-e-sefid-horns-r02/full-body.png",
+      "bytes": 1825718,
+      "sha256": "159529e6a65410c795fea43ee10b3b29d021ced657f023013017a2c93244eaa5"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/revisions/div-e-sefid-horns-r02/generation-record.json",
+      "bytes": 2835,
+      "sha256": "273bf19f53fd92d8176e3c004389f6012d67acc56ad59278f1467822f697f161"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/revisions/div-e-sefid-horns-r02/illustrated-v2-preservation-snapshot.json",
+      "bytes": 14189,
+      "sha256": "7444fb0efa17cb3982b8992a9bfdd2d920d530d19ba7b0bebf1547c9f026bdd4"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/revisions/div-e-sefid-horns-r02/make-check.log",
+      "bytes": 16403,
+      "sha256": "0c92853e0bf4c41f3cca4aa86b4390ebe4661adb1f50daabfc256903c001df59"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/revisions/div-e-sefid-horns-r02/manifest.json",
+      "bytes": 1447,
+      "sha256": "2c60faf21238e66135af3e1156f9a10bd3c9d65596ef71c093cbf64be79a51ce"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/revisions/div-e-sefid-horns-r02/portrait.png",
+      "bytes": 330311,
+      "sha256": "c0cd1f1843b96a9a4e24687cb7a4de6df58dc046a1ace15cf8a44de261c654f6"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/revisions/div-e-sefid-horns-r02/validation.json",
+      "bytes": 556,
+      "sha256": "3dbe4b0b99ff32cbd3afce142bdeb50538d64bd08d8a5c3dfe1ce56c94ba2e2f"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/shot-to-input-map.json",
+      "bytes": 73135,
+      "sha256": "6dd886d7e5d173ae04f83be3f9fd78be606c7ea8e6e95d9483bdfb61cd2768b5"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/upload-plan.csv",
+      "bytes": 2481,
+      "sha256": "9e87c68291f518412df8f0561f2118eb9a5f79682d7a1f92e3afcbb1c8514d1b"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/portrait-body-candidate-01/validation.json",
+      "bytes": 379,
+      "sha256": "316ccdbe72579930f5f63d6a3fe8688afbf56ff1829d44535cfc79839a648a60"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/script/BILINGUAL_REVIEW.md",
+      "bytes": 7234,
+      "sha256": "256d54fedd21a26d513d028c1ed831f01a47feef96e4861d2031a7f188eeb9f8"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/script/EDITORIAL_NOTES.md",
+      "bytes": 9707,
+      "sha256": "54be030c30ebab95c4b0f0db8029d71e5c78a6b03ba4121cfff5ba4c8ef40e57"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/script/chapter_one_final_en.md",
+      "bytes": 14954,
+      "sha256": "c22af7c520b8a5832ef69f54b67aae03bc4bfdf18b78e6831bbe237c70b92757"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/script/chapter_one_final_fa.md",
+      "bytes": 22831,
+      "sha256": "e492db6bb9b525c0bcb6d119ec10d0af2f5ce2d9624f5ca889bb70fccdc56f1e"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/flow-paper-puppet/script/episode.json",
+      "bytes": 56590,
+      "sha256": "8b5bce2c803829f0259b1ed4f786f7a7e9542696db4ba2ceb6842761c339cce6"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/history/character-update-01/VALIDATION_REPORT.md",
+      "bytes": 2575,
+      "sha256": "b08cc0bab323f7e22a3a123b5e8f8f41c40bccce9c4aec16e293e352a2289fac"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/history/character-update-01/output-manifest.json",
+      "bytes": 46066,
+      "sha256": "928feda43c0026d88ae11548edb6459850dba1bca34259582b5a94942a73f83b"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/history/character-update-01/validation-results.json",
+      "bytes": 447,
+      "sha256": "754b1e5695f174f465e8c40b37c276f025e1d0ecd5cab5b1490f7ef885ebd583"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/make-check-character-info.log",
+      "bytes": 16403,
+      "sha256": "7b15643766007e91e6122fbf73b471e6d142341245bab2a4d0e1c29ee3b21438"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/make-check-design-review.log",
+      "bytes": 16403,
+      "sha256": "3bf1819c39ba2ccedd6904c3551d6468e1428293efdd123254915f9b51eccaa0"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/make-check-portrait-body.log",
+      "bytes": 16403,
+      "sha256": "feabdb5426bb5859536669c296acb60cf433d195c3c7581991012c82cf79e6ae"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/make-check.log",
+      "bytes": 16403,
+      "sha256": "f04a2e930d3fa936efe4fa056e71b73a90b9b10acbe7ef3648dd5c98540bfe97"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/manifests/paper-puppet-cast-additions.json",
+      "bytes": 2184,
+      "sha256": "bf8e1e7c95a8002bc89a5c19cd828e326d06483d81c4dcd31c9ecc15fbd59f08"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/scene-map.csv",
+      "bytes": 1163,
+      "sha256": "193543637b5242df5397b1a4856002e3ab333340419c1ef8ed0bf1de9b6c42e2"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/scripts/build_character_info.py",
+      "bytes": 31429,
+      "sha256": "d747deba222921c43eb5da59c326820f80afecadaeaef835f957c1b69cfa3ace"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/scripts/build_packages.py",
+      "bytes": 45224,
+      "sha256": "fb0954fa793776d23dfcac9f82c21392f79f1b59bcd82591dfe7e4d52c7c88e2"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/scripts/build_portrait_pairs.py",
+      "bytes": 14240,
+      "sha256": "4aaa1741f6037b3e4ba07f68a104c46517a39801640f1c64d7ebd316740f80e1"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/scripts/review_character_designs.py",
+      "bytes": 2520,
+      "sha256": "6e58bea66d2832a4d27dc949445d7f5a0ef9408d19d0f86eb63f40f952e1383c"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/scripts/validate_packages.py",
+      "bytes": 10998,
+      "sha256": "86cd2c6e942a85c56bdfd757d8d05243ffe01c2f18c4571fc99fab2e001c0176"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/shot-plan.json",
+      "bytes": 42961,
+      "sha256": "53f1e9013b6413975a625feeb6992748230fdc143b0a606d0955d672432bdc62"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/text-overlays.json",
+      "bytes": 1894,
+      "sha256": "4d027549bd4df1cde9a8a4f5c80096bd8927cea6c5f7880d7dee67452bd740cf"
+    },
+    {
+      "path": "editorial/media-handoff/chapter-01-rewrite-2026-10-30/validation-results.json",
+      "bytes": 635,
+      "sha256": "51d1b2711e7f49c50a7331dcc62836770708ff2395645551b913cb67f9e5236c"
+    },
+    {
+      "path": "playscript/chapter-01-final-2026-10-30/BILINGUAL_REVIEW.md",
+      "bytes": 6867,
+      "sha256": "cf3dc0770a8bb6c7d83392614f57caa0e108c28676d5dedacf10d14394d2b833"
+    },
+    {
+      "path": "playscript/chapter-01-final-2026-10-30/EDITORIAL_NOTES.md",
+      "bytes": 9707,
+      "sha256": "54be030c30ebab95c4b0f0db8029d71e5c78a6b03ba4121cfff5ba4c8ef40e57"
+    },
+    {
+      "path": "playscript/chapter-01-final-2026-10-30/README.md",
+      "bytes": 1407,
+      "sha256": "fef5a741edb6e70929b7637d2f6b9209092eb2c7a32164b6a2c12b0323023bc0"
+    },
+    {
+      "path": "playscript/chapter-01-final-2026-10-30/bilingual-parity-map.json",
+      "bytes": 49263,
+      "sha256": "1b98058ff5a14f41e48b8d828db9b9589f7ce54fb4587577eb867d3e9b603214"
+    },
+    {
+      "path": "playscript/chapter-01-final-2026-10-30/bilingual_review.html",
+      "bytes": 46468,
+      "sha256": "48a711d125062a490a37d9ad5d460c64d49232b4d4a7c72bca01cfb95955a26b"
+    },
+    {
+      "path": "playscript/chapter-01-final-2026-10-30/chapter_one_final_en.md",
+      "bytes": 14954,
+      "sha256": "c22af7c520b8a5832ef69f54b67aae03bc4bfdf18b78e6831bbe237c70b92757"
+    },
+    {
+      "path": "playscript/chapter-01-final-2026-10-30/chapter_one_final_en.txt",
+      "bytes": 14655,
+      "sha256": "788e6c83f0524772530ab95db3d86377eecbde22addc68bb11b33a8c2b37bd23"
+    },
+    {
+      "path": "playscript/chapter-01-final-2026-10-30/chapter_one_final_fa.md",
+      "bytes": 22831,
+      "sha256": "e492db6bb9b525c0bcb6d119ec10d0af2f5ce2d9624f5ca889bb70fccdc56f1e"
+    },
+    {
+      "path": "playscript/chapter-01-final-2026-10-30/chapter_one_final_fa.txt",
+      "bytes": 22532,
+      "sha256": "aa0002da12607e92cef30015a2d14b320e20368da5cff5f6b99a3da5f5404576"
+    },
+    {
+      "path": "playscript/chapter-01-final-2026-10-30/episode.json",
+      "bytes": 56590,
+      "sha256": "8b5bce2c803829f0259b1ed4f786f7a7e9542696db4ba2ceb6842761c339cce6"
+    },
+    {
+      "path": "playscript/chapter-01-final-2026-10-30/source-snapshot.json",
+      "bytes": 37836,
+      "sha256": "befc531012f51593b57d8a89eebb10e61c4eb0b9d81452fbd97637314ca7e60f"
+    }
+  ]
+}

@@ -1,0 +1,683 @@
+{
+  "schema_version": 1,
+  "prepared_on": "2026-10-20",
+  "scope": "Chapter 01 only; all backgrounds in the current chapter plan",
+  "classification": "TIER_C_PROJECT_FICTION_STAGING_PROPOSAL",
+  "status": "25_candidate_images_received_or_generated_review_pending",
+  "human_approved": false,
+  "source_plan": "chapter-01-production-plan.json",
+  "master_prompt": "gemini-background-master-prompt.md",
+  "shot_cards": "gemini-background-shot-prompts.md",
+  "image_count": 25,
+  "programmatic_stage_count": 2,
+  "reference_policy": "Reference IDs mean actual owner-selected images must be attached/visible; no image selection has been recorded yet.",
+  "download_policy": "Suggested PNG filenames are targets only. Preserve the actual original full-size download and extension; record its real type and dimensions before any conversion. Do not rename JPEG bytes to .png.",
+  "shots": [
+    {
+      "id": "BG-HALL-00",
+      "title": "Hall master \u2014 geometry and style anchor",
+      "environment": "ENV-HALL",
+      "view": "wide",
+      "lighting": "morning",
+      "scenes": [],
+      "reference_ids": [],
+      "suggested_filename": "bg-hall-00.png",
+      "prompt": "Generate one empty Hall of Scripts master plate in neutral morning light, wide eye-level three-quarter view. Show a modest working hall with warm plaster, cedar furniture, stone or packed-earth flooring and restrained bronze fittings. Place one functional entrance and the intake zone screen-left; keep a broad open central acting floor; place the cedar display stand slightly deeper, catalogue shelves along the right/back wall, a worktable nearby and a quiet scribal bench at the side. High daylight enters from screen-left. Use blank stored clay, leather, bark and silk materials sparingly on shelves to establish the hall's work, without readable marks. The furniture has plausible human scale; the stand and worktable do not form a continuous foreground barrier. Keep the bottom caption area quiet. Match the attached character art without painting any characters. This image proposes the room layout; return only this master first so I can select it before related views.",
+      "purpose": "reference_anchor_not_additional_scene",
+      "status": "candidate_visual_reviewed_not_owner_approved",
+      "human_approved": false,
+      "actual_file": "Characters/environments/chapter-01-candidate-01/ENV-HALL/wide/source/bg-hall-00.jpeg",
+      "actual_model": "Gemini web, reported by owner; exact model unknown",
+      "actual_dimensions": [
+        2752,
+        1536
+      ],
+      "sha256": "0e7400c485561081494570e398f42af38fef9bb0e5a0ee7b311a0574bc98ea58"
+    },
+    {
+      "id": "BG-HALL-01",
+      "title": "Hall wide \u2014 dawn opening",
+      "environment": "ENV-HALL",
+      "view": "wide",
+      "lighting": "dawn",
+      "scenes": [
+        "CH01-S01"
+      ],
+      "reference_ids": [
+        "BG-HALL-00"
+      ],
+      "suggested_filename": "bg-hall-01.png",
+      "prompt": "Edit the selected BG-HALL-00 master into the dawn establishing plate. Preserve its camera, room footprint, architecture, furniture, shelf arrangement and open acting floor. Use soft early golden light from the established high left-side openings with cool residual interior shadows. Keep the room legible and welcoming, rather than a dramatic palace. Leave space for incoming message materials and Shahrasp's reading action as separate assets. Do not add the messages being handled, crystal, ledger or people. Keep the subtitle zone unobtrusive.",
+      "mode": "lighting_edit",
+      "status": "candidate_visual_reviewed_not_owner_approved",
+      "human_approved": false,
+      "actual_file": "Characters/environments/chapter-01-candidate-01/ENV-HALL/wide/source/bg-hall-01.jpeg",
+      "actual_model": "Gemini web, reported by owner; exact model unknown",
+      "actual_dimensions": [
+        2752,
+        1536
+      ],
+      "sha256": "626b0c8a73d3facbf28fc1b0569d777f5a3848da583a4b3924310169ffda1ae7"
+    },
+    {
+      "id": "BG-HALL-02",
+      "title": "Intake \u2014 wet morning",
+      "environment": "ENV-HALL",
+      "view": "intake",
+      "lighting": "wet_morning",
+      "scenes": [
+        "CH01-S02"
+      ],
+      "reference_ids": [
+        "BG-HALL-00"
+      ],
+      "suggested_filename": "bg-hall-02.png",
+      "prompt": "Make a medium-wide view of the same hall's entrance/intake zone. Keep the entrance on the established side, with a modest static intake table off-centre and a clear standing/handoff area beside it. The tabletop must be visible enough for a found tablet to be added later. Light is overcast cool grey from outside, with a small damp patch near the threshold; suggest wet weather through surfaces and light, with no falling rain. Preserve the master's architecture, materials and furniture designs. Show no courier, receiver, tablet, packet, cord or seal trace. Avoid foreground furniture hiding the handoff.",
+      "mode": "new_camera",
+      "status": "candidate_visual_reviewed_not_owner_approved",
+      "human_approved": false,
+      "actual_file": "Characters/environments/chapter-01-candidate-01/ENV-HALL/intake/source/bg-hall-02.png",
+      "actual_model": "built-in image_gen; backend model not exposed",
+      "actual_dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "0302dd67306899a917d598f2dcba7592eb2c6a033c25dff60fd2fbf596af0a67"
+    },
+    {
+      "id": "BG-HALL-03",
+      "title": "Cedar stand \u2014 three recipients",
+      "environment": "ENV-HALL",
+      "view": "cedar_stand",
+      "lighting": "morning",
+      "scenes": [
+        "CH01-S03"
+      ],
+      "reference_ids": [
+        "BG-HALL-00"
+      ],
+      "suggested_filename": "bg-hall-03.png",
+      "prompt": "Frame the established cedar stand and the open floor around it in a medium-wide eye-level three-quarter view of the same hall. The empty stand is low and modest, offset enough to leave natural positions for Tahmures and three recipients, with their body silhouettes and access to the stand unobscured. Keep the stand's top visible for a separate tablet. Morning light comes from the same high left-side source. Retain recognisable catalogue/worktable landmarks in the appropriate background direction. No throne, grand dais, people, tablet, lens, crystal or cord.",
+      "mode": "new_camera",
+      "status": "candidate_visual_reviewed_not_owner_approved",
+      "human_approved": false,
+      "actual_file": "Characters/environments/chapter-01-candidate-01/ENV-HALL/cedar_stand/source/bg-hall-03.png",
+      "actual_model": "built-in image_gen; backend model not exposed",
+      "actual_dimensions": [
+        1676,
+        939
+      ],
+      "sha256": "22c1f1ff04f9b1c89e081b6d73c9cff666b03e0262d859e08ba434e581c8bea0"
+    },
+    {
+      "id": "BG-HALL-04",
+      "title": "Catalogue \u2014 record interpretation",
+      "environment": "ENV-HALL",
+      "view": "catalogue",
+      "lighting": "morning",
+      "scenes": [
+        "CH01-S04"
+      ],
+      "reference_ids": [
+        "BG-HALL-00"
+      ],
+      "suggested_filename": "bg-hall-04.png",
+      "prompt": "Show the hall's established catalogue wall in a medium shot, retaining the same shelf design, neighbouring worktable relationship and morning light direction. Use a small number of large readable shelf shapes, with stored blank clay records and folded materials; no script, invented language or category labels. Leave a clear working position beside the shelving and a visible empty placement surface for later catalogue action. The acting area should suit the supplied front/three-quarter character poses. Do not paint Akvan, the found tablet, an open catalogue book or written labels.",
+      "mode": "new_camera",
+      "status": "candidate_visual_reviewed_not_owner_approved",
+      "human_approved": false,
+      "actual_file": "Characters/environments/chapter-01-candidate-01/ENV-HALL/catalogue/source/bg-hall-04.png",
+      "actual_model": "built-in image_gen; backend model not exposed",
+      "actual_dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "6c544abf67e629b927937dcbbf75614d80581291d54aa65518d82e0388015433"
+    },
+    {
+      "id": "BG-HALL-05",
+      "title": "Intake \u2014 wrapping interpretation",
+      "environment": "ENV-HALL",
+      "view": "intake",
+      "lighting": "morning",
+      "scenes": [
+        "CH01-S04"
+      ],
+      "reference_ids": [
+        "BG-HALL-00",
+        "BG-HALL-02"
+      ],
+      "suggested_filename": "bg-hall-05.png",
+      "prompt": "Edit the selected BG-HALL-02 intake plate into ordinary morning light. Preserve exactly the same camera, table, doorway, architecture and handoff floor. Replace overcast exterior illumination with the hall's established soft morning daylight; reduce the wet-weather cue without redesigning the floor. Keep the tabletop empty for the oilcloth-wrapping action to be composited. No Simurgh, tablet, cloth, packet, readable writing or added furnishings.",
+      "mode": "lighting_edit",
+      "status": "candidate_visual_reviewed_not_owner_approved",
+      "human_approved": false,
+      "actual_file": "Characters/environments/chapter-01-candidate-01/ENV-HALL/intake/source/bg-hall-05.png",
+      "actual_model": "built-in image_gen; backend model not exposed",
+      "actual_dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "5aced1b217386bf3a21dfcaf99d06987b91eb5f08f4dc3bbb9394145aafa42c5"
+    },
+    {
+      "id": "BG-HALL-06",
+      "title": "Threshold \u2014 departure",
+      "environment": "ENV-HALL",
+      "view": "threshold",
+      "lighting": "morning",
+      "scenes": [
+        "CH01-S04"
+      ],
+      "reference_ids": [
+        "BG-HALL-00",
+        "BG-HALL-02"
+      ],
+      "suggested_filename": "bg-hall-06.png",
+      "prompt": "Show the hall's one functional entrance from just inside, with enough hall landmarks to recognise the same intake side and enough exterior path visible to read a departure later. Use an eye-level medium-wide camera and morning light consistent with the hall master. Keep a clear continuous floor/path near the proposed sprite ground line. This is an ordinary entrance, without ornate handles, repeated doorways or portal symbolism. No Black Div, footprints implying an unseen actor, tablet or packet. Keep all later movement space empty.",
+      "mode": "new_camera",
+      "status": "candidate_visual_reviewed_not_owner_approved",
+      "human_approved": false,
+      "actual_file": "Characters/environments/chapter-01-candidate-01/ENV-HALL/threshold/source/bg-hall-06.png",
+      "actual_model": "built-in image_gen; backend model not exposed",
+      "actual_dimensions": [
+        1672,
+        940
+      ],
+      "sha256": "658a48a9a2c09d4743b40b3e62dda85c2384a19d5bba4d750b244c9bf2a51b5c"
+    },
+    {
+      "id": "BG-HALL-07",
+      "title": "Worktable \u2014 dusk report",
+      "environment": "ENV-HALL",
+      "view": "worktable",
+      "lighting": "dusk",
+      "scenes": [
+        "CH01-S05"
+      ],
+      "reference_ids": [
+        "BG-HALL-00"
+      ],
+      "suggested_filename": "bg-hall-07.png",
+      "prompt": "Show the established hall worktable from a medium-wide eye-level three-quarter camera, with an empty work surface and clear floor positions for two or more speakers beside it. Keep the same catalogue wall and entrance relationship as the master. Dusk light from the established windows is cool blue, softened by restrained warm reflected interior tones. Maintain facial readability for characters to be added later; this is a misunderstanding, not a villain's lair. Keep the table off-centre and prevent it hiding all full-body sprites. No people, wet garments, tablet, ledger, cards or active flames.",
+      "mode": "new_camera",
+      "status": "candidate_visual_reviewed_not_owner_approved",
+      "human_approved": false,
+      "actual_file": "Characters/environments/chapter-01-candidate-01/ENV-HALL/worktable/source/bg-hall-07.png",
+      "actual_model": "built-in image_gen; backend model not exposed",
+      "actual_dimensions": [
+        1675,
+        939
+      ],
+      "sha256": "1d76822a7e24fb251190c69ebf829b08859f97bb026b61cfe0ca9c7e66edfd49"
+    },
+    {
+      "id": "BG-HALL-08",
+      "title": "Worktable \u2014 lamplight and recap",
+      "environment": "ENV-HALL",
+      "view": "worktable",
+      "lighting": "lamplight",
+      "scenes": [
+        "CH01-S07",
+        "CH01-S11"
+      ],
+      "reference_ids": [
+        "BG-HALL-00",
+        "BG-HALL-07"
+      ],
+      "suggested_filename": "bg-hall-08.png",
+      "prompt": "Edit selected BG-HALL-07 into its lamplit version. Lock camera, geometry, table, catalogue shelves and empty actor positions. Use warm illumination from a modest fixed oil-lamp fixture, with cool dim surroundings; the lamp housing may be visible but its animated flame is omitted. Keep the tabletop clear and evenly readable for later reed, ledger, four labels and separate request card. These objects and their text must not appear in this plate. The same image supports S07 and a later editorial recap insert in S11; do not introduce evidence of another later night.",
+      "mode": "lighting_edit",
+      "status": "candidate_visual_reviewed_not_owner_approved",
+      "human_approved": false,
+      "actual_file": "Characters/environments/chapter-01-candidate-01/ENV-HALL/worktable/source/bg-hall-08.png",
+      "actual_model": "built-in image_gen; backend model not exposed",
+      "actual_dimensions": [
+        1674,
+        939
+      ],
+      "sha256": "2d656c9359b2dab8e1646aed23a55c955dae77aee39b35436c9a1641c8cc1d1e"
+    },
+    {
+      "id": "BG-HALL-09",
+      "title": "Scribal bench \u2014 practice context",
+      "environment": "ENV-HALL",
+      "view": "scribal_bench",
+      "lighting": "morning",
+      "scenes": [
+        "CH01-S08"
+      ],
+      "reference_ids": [
+        "BG-HALL-00"
+      ],
+      "suggested_filename": "bg-hall-09.png",
+      "prompt": "Create a medium view of the quiet scribal bench already established at the side of the hall. Preserve the master room, furniture materials, daylight direction and scale. A plain empty bench/work surface and an unobtrusive wall or shelf establish a working apprenticeship space. Leave a clear seated/standing action position and accessible tabletop for separate apprentice and practice-sheet assets. Do not add another room, pupil, hand, reed, inked words, loose practice sheet or modern school equipment. Morning lighting, calm and visually restrained.",
+      "mode": "new_camera",
+      "status": "candidate_visual_reviewed_not_owner_approved",
+      "human_approved": false,
+      "actual_file": "Characters/environments/chapter-01-candidate-01/ENV-HALL/scribal_bench/source/bg-hall-09.png",
+      "actual_model": "built-in image_gen; backend model not exposed",
+      "actual_dimensions": [
+        1676,
+        938
+      ],
+      "sha256": "41f071277ed4c1af93a40e6d3d38ad3d7c831f74807174a4add0b034cad316ba"
+    },
+    {
+      "id": "BG-HALL-10",
+      "title": "Threshold \u2014 corrective-message dawn",
+      "environment": "ENV-HALL",
+      "view": "threshold",
+      "lighting": "dawn",
+      "scenes": [
+        "CH01-S10"
+      ],
+      "reference_ids": [
+        "BG-HALL-00",
+        "BG-HALL-06"
+      ],
+      "suggested_filename": "bg-hall-10.png",
+      "prompt": "Edit selected BG-HALL-06 threshold plate to dawn. Retain the exact entrance, camera, interior/exterior geometry and clear transfer floor. Use a fresh warm sunrise outside with cool quiet interior shadows; the scene should support a corrective message leaving the hall. Do not add a messenger in any form, bird, packet, seal, message text or people. Do not decide whether Simurgh is human or bird; the clean set is independent of that later casting decision.",
+      "mode": "lighting_edit",
+      "status": "candidate_visual_reviewed_not_owner_approved",
+      "human_approved": false,
+      "actual_file": "Characters/environments/chapter-01-candidate-01/ENV-HALL/threshold/source/bg-hall-10.png",
+      "actual_model": "built-in image_gen; backend model not exposed",
+      "actual_dimensions": [
+        1672,
+        940
+      ],
+      "sha256": "3c73b3d0df95b9f45ea2857362bdc63420462a788658e94e5be15a0bfa1691ba"
+    },
+    {
+      "id": "BG-POST-01",
+      "title": "Frontier post \u2014 arrival and delivery",
+      "environment": "ENV-POST",
+      "view": "delivery",
+      "lighting": "night",
+      "scenes": [
+        "CH01-S06"
+      ],
+      "reference_ids": [
+        "BG-HALL-00"
+      ],
+      "suggested_filename": "bg-post-01.png",
+      "prompt": "Create an empty modest northern frontier relay/watch post courtyard at night, matching the selected hall's illustrated materials and line treatment, without copying its floor plan. Low plaster/stone walls, a simple shelter and a fixed lamp fixture define an occupational outpost, not a castle or army camp. Leave an unobstructed foreground handoff area between a readable arrival path on screen-left and an open departure track toward screen-right/back. A low static counter may sit to one side without hiding the handoff. Cool night light plus restrained warm fixture illumination. No messenger, captain, horse, soldiers, packet, live flames, smoke, invading army or threat silhouettes.",
+      "mode": "new_set_anchor",
+      "status": "candidate_visual_reviewed_not_owner_approved",
+      "human_approved": false,
+      "actual_file": "Characters/environments/chapter-01-candidate-01/ENV-POST/delivery/source/bg-post-01-r02.png",
+      "actual_model": "built-in image_gen; backend model not exposed",
+      "actual_dimensions": [
+        1676,
+        939
+      ],
+      "sha256": "e3a65f8e7a4f76ce3f591a114c66a52d52c0f3f54d337452e5338a261c3cc96b"
+    },
+    {
+      "id": "BG-POST-02",
+      "title": "Frontier post \u2014 dispatch exit",
+      "environment": "ENV-POST",
+      "view": "rider_departure",
+      "lighting": "night",
+      "scenes": [
+        "CH01-S06"
+      ],
+      "reference_ids": [
+        "BG-HALL-00",
+        "BG-POST-01"
+      ],
+      "suggested_filename": "bg-post-02.png",
+      "prompt": "Reframe the selected BG-POST-01 post toward its departure track, maintaining the same buildings, gate opening, track direction, materials and night lighting. The empty track must provide plausible scale and unobstructed room for riders/horses to be composited moving away. Keep a recognisable part of the delivery courtyard as the reverse landmark, so delivery and dispatch read as one place. No riders, animals, hoof dust, motion streaks, army, alarm banners or written orders. This is the dispatch location following delivery, not a depiction of an attack.",
+      "mode": "new_camera",
+      "status": "candidate_visual_reviewed_not_owner_approved",
+      "human_approved": false,
+      "actual_file": "Characters/environments/chapter-01-candidate-01/ENV-POST/rider_departure/source/bg-post-02.png",
+      "actual_model": "built-in image_gen; backend model not exposed",
+      "actual_dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "12033351c5ca902618d39a649982f534bcd731184f503845b83b1e0a411a08e6"
+    },
+    {
+      "id": "BG-VILLAGE-A-NIGHT",
+      "title": "Village A \u2014 night alarm clean set",
+      "environment": "ENV-VILLAGE",
+      "view": "village_wide",
+      "lighting": "night_alarm",
+      "scenes": [
+        "CH01-S06"
+      ],
+      "reference_ids": [
+        "BG-HALL-00"
+      ],
+      "suggested_filename": "bg-village-a-night.png",
+      "prompt": "Create village A as a distinct location within the shared northern-frontier architectural kit. A small plaster-and-stone cluster beside low terraced fields, with a plain square well toward one side and a wide open foreground path. Match the hall's warm hand-drawn outlines, tactile restrained materials and simple shaded forms. Wide eye-level composition, quiet cool night and small warm window glows; keep homes and path legible rather than horror-dark. Provide open ground for villagers and handheld lamps to be added, with a quiet caption strip. The alarm will be shown by animation, not damage in the scenery. No people, animals, fire, moving smoke, attackers, burning roofs, weapons, flags, signs or readable text. ",
+      "mode": "new_set_anchor",
+      "variant": "A",
+      "status": "candidate_visual_reviewed_not_owner_approved",
+      "human_approved": false,
+      "actual_file": "Characters/environments/chapter-01-candidate-01/ENV-VILLAGE/village_wide/source/bg-village-a-night.png",
+      "actual_model": "built-in image_gen; backend model not exposed",
+      "actual_dimensions": [
+        1675,
+        939
+      ],
+      "sha256": "ffdf81ece7d4d4367bd8fe68691aaf7e7f6c8324f978008f2f1fa0db9015acf0"
+    },
+    {
+      "id": "BG-VILLAGE-B-NIGHT",
+      "title": "Village B \u2014 night alarm clean set",
+      "environment": "ENV-VILLAGE",
+      "view": "village_wide",
+      "lighting": "night_alarm",
+      "scenes": [
+        "CH01-S06"
+      ],
+      "reference_ids": [
+        "BG-HALL-00",
+        "BG-VILLAGE-A-NIGHT"
+      ],
+      "suggested_filename": "bg-village-b-night.png",
+      "prompt": "Create village B as a distinct location within the shared northern-frontier architectural kit. A distinct village on a shallow hillside, with a short low retaining wall, stepped roof silhouettes and a clear gently sloping approach; no dangerous cliff. Match the hall's warm hand-drawn outlines, tactile restrained materials and simple shaded forms. Wide eye-level composition, quiet cool night and small warm window glows; keep homes and path legible rather than horror-dark. Provide open ground for villagers and handheld lamps to be added, with a quiet caption strip. The alarm will be shown by animation, not damage in the scenery. No people, animals, fire, moving smoke, attackers, burning roofs, weapons, flags, signs or readable text. Share materials and scale with village A, but do not duplicate its layout or landmarks.",
+      "mode": "new_set_anchor",
+      "variant": "B",
+      "status": "candidate_visual_reviewed_not_owner_approved",
+      "human_approved": false,
+      "actual_file": "Characters/environments/chapter-01-candidate-01/ENV-VILLAGE/village_wide/source/bg-village-b-night.png",
+      "actual_model": "built-in image_gen; backend model not exposed",
+      "actual_dimensions": [
+        1675,
+        939
+      ],
+      "sha256": "d0721b8e35b6717e2f0a291b9c806276a22fe3e5ad59aa13412cadb030557915"
+    },
+    {
+      "id": "BG-VILLAGE-C-NIGHT",
+      "title": "Village C \u2014 night alarm clean set",
+      "environment": "ENV-VILLAGE",
+      "view": "village_wide",
+      "lighting": "night_alarm",
+      "scenes": [
+        "CH01-S06"
+      ],
+      "reference_ids": [
+        "BG-HALL-00",
+        "BG-VILLAGE-A-NIGHT"
+      ],
+      "suggested_filename": "bg-village-c-night.png",
+      "prompt": "Create village C as a distinct location within the shared northern-frontier architectural kit. A distinct village beside an orchard edge, with a low woven fence, a few simple homes and a broad open lane; no river crossing in this set. Match the hall's warm hand-drawn outlines, tactile restrained materials and simple shaded forms. Wide eye-level composition, quiet cool night and small warm window glows; keep homes and path legible rather than horror-dark. Provide open ground for villagers and handheld lamps to be added, with a quiet caption strip. The alarm will be shown by animation, not damage in the scenery. No people, animals, fire, moving smoke, attackers, burning roofs, weapons, flags, signs or readable text. Share materials and scale with village A, but do not duplicate its layout or landmarks.",
+      "mode": "new_set_anchor",
+      "variant": "C",
+      "status": "candidate_visual_reviewed_not_owner_approved",
+      "human_approved": false,
+      "actual_file": "Characters/environments/chapter-01-candidate-01/ENV-VILLAGE/village_wide/source/bg-village-c-night.png",
+      "actual_model": "built-in image_gen; backend model not exposed",
+      "actual_dimensions": [
+        1674,
+        939
+      ],
+      "sha256": "0a71cb22b1259dd143415485854f03ef4bce4f2e4788d2bf2c49bda344e1bdbc"
+    },
+    {
+      "id": "BG-VILLAGE-A-DAWN",
+      "title": "Village A \u2014 dawn calm reprise",
+      "environment": "ENV-VILLAGE",
+      "view": "village_wide",
+      "lighting": "dawn_calm",
+      "scenes": [
+        "CH01-S10"
+      ],
+      "reference_ids": [
+        "BG-VILLAGE-A-NIGHT"
+      ],
+      "suggested_filename": "bg-village-a-dawn.png",
+      "prompt": "Edit the selected BG-VILLAGE-A-NIGHT into the dawn-calm reprise of that exact village. Keep its camera, horizon, homes, all landmarks, path width and foreground geometry unchanged. Replace cool night with gentle dawn light, warm near the horizon and soft cool shadows; reduce window glow naturally. Calm comes from light and later performance, not newly added objects. Leave all actor positions empty for villagers lowering separate lamps. No people, lamps held by invisible hands, animals, new buildings, smoke, damage, text or changed season.",
+      "mode": "lighting_edit",
+      "variant": "A",
+      "status": "candidate_visual_reviewed_not_owner_approved",
+      "human_approved": false,
+      "actual_file": "Characters/environments/chapter-01-candidate-01/ENV-VILLAGE/village_wide/source/bg-village-a-dawn.png",
+      "actual_model": "built-in image_gen; backend model not exposed",
+      "actual_dimensions": [
+        1675,
+        939
+      ],
+      "sha256": "bb5aaed3e8b2783d07464b99727da02a8af03d9756ccc325e2aeffc3db74df29"
+    },
+    {
+      "id": "BG-VILLAGE-B-DAWN",
+      "title": "Village B \u2014 dawn calm reprise",
+      "environment": "ENV-VILLAGE",
+      "view": "village_wide",
+      "lighting": "dawn_calm",
+      "scenes": [
+        "CH01-S10"
+      ],
+      "reference_ids": [
+        "BG-VILLAGE-B-NIGHT"
+      ],
+      "suggested_filename": "bg-village-b-dawn.png",
+      "prompt": "Edit the selected BG-VILLAGE-B-NIGHT into the dawn-calm reprise of that exact village. Keep its camera, horizon, homes, all landmarks, path width and foreground geometry unchanged. Replace cool night with gentle dawn light, warm near the horizon and soft cool shadows; reduce window glow naturally. Calm comes from light and later performance, not newly added objects. Leave all actor positions empty for villagers lowering separate lamps. No people, lamps held by invisible hands, animals, new buildings, smoke, damage, text or changed season.",
+      "mode": "lighting_edit",
+      "variant": "B",
+      "status": "candidate_visual_reviewed_not_owner_approved",
+      "human_approved": false,
+      "actual_file": "Characters/environments/chapter-01-candidate-01/ENV-VILLAGE/village_wide/source/bg-village-b-dawn.png",
+      "actual_model": "built-in image_gen; backend model not exposed",
+      "actual_dimensions": [
+        1675,
+        939
+      ],
+      "sha256": "12e107a64e4b64b5199f95f5024a7e8f66b530511e248a9744f4928291a6badf"
+    },
+    {
+      "id": "BG-VILLAGE-C-DAWN",
+      "title": "Village C \u2014 dawn calm reprise",
+      "environment": "ENV-VILLAGE",
+      "view": "village_wide",
+      "lighting": "dawn_calm",
+      "scenes": [
+        "CH01-S10"
+      ],
+      "reference_ids": [
+        "BG-VILLAGE-C-NIGHT"
+      ],
+      "suggested_filename": "bg-village-c-dawn.png",
+      "prompt": "Edit the selected BG-VILLAGE-C-NIGHT into the dawn-calm reprise of that exact village. Keep its camera, horizon, homes, all landmarks, path width and foreground geometry unchanged. Replace cool night with gentle dawn light, warm near the horizon and soft cool shadows; reduce window glow naturally. Calm comes from light and later performance, not newly added objects. Leave all actor positions empty for villagers lowering separate lamps. No people, lamps held by invisible hands, animals, new buildings, smoke, damage, text or changed season.",
+      "mode": "lighting_edit",
+      "variant": "C",
+      "status": "candidate_visual_reviewed_not_owner_approved",
+      "human_approved": false,
+      "actual_file": "Characters/environments/chapter-01-candidate-01/ENV-VILLAGE/village_wide/source/bg-village-c-dawn.png",
+      "actual_model": "built-in image_gen; backend model not exposed",
+      "actual_dimensions": [
+        1675,
+        939
+      ],
+      "sha256": "aa19f282fe11b41ee162047bfbc7cfeec00e6aa64fb81683fb165e8e00e30581"
+    },
+    {
+      "id": "BG-CAMP-01",
+      "title": "Charcoal camp \u2014 calm wide",
+      "environment": "ENV-CAMP",
+      "view": "camp_wide",
+      "lighting": "night",
+      "scenes": [
+        "CH01-S06"
+      ],
+      "reference_ids": [
+        "BG-HALL-00"
+      ],
+      "suggested_filename": "bg-camp-01.png",
+      "prompt": "Create a wide empty charcoal-burners' work clearing at night beyond the frontier, matching the same illustrated world. Show a restrained woodland edge, earth ground, a few stable timber/log stacks and simple occupational shelters or charcoal-making structures around the sides. Leave a broad central/midground clearing with enough separated space for eleven small scene-controlled fire effects and charcoal burners to be added later; do not attempt to paint or count the fire instances. The empty clearing should remain readable in soft cool ambient night light. No military formations, watchtowers implying a new threat, live flames, glow pools from missing fires, smoke, embers, people or animals.",
+      "mode": "new_set_anchor",
+      "status": "candidate_visual_reviewed_not_owner_approved",
+      "human_approved": false,
+      "actual_file": "Characters/environments/chapter-01-candidate-01/ENV-CAMP/camp_wide/source/bg-camp-01.png",
+      "actual_model": "built-in image_gen; backend model not exposed",
+      "actual_dimensions": [
+        1676,
+        938
+      ],
+      "sha256": "1bd51abdbd9dc5f01f0fe63c3438ab3e300cb1294d22857ba398b5605bd76671"
+    },
+    {
+      "id": "BG-CAMP-02",
+      "title": "Charcoal camp \u2014 fire-site insert",
+      "environment": "ENV-CAMP",
+      "view": "fire_insert",
+      "lighting": "night",
+      "scenes": [
+        "CH01-S06"
+      ],
+      "reference_ids": [
+        "BG-CAMP-01"
+      ],
+      "suggested_filename": "bg-camp-02.png",
+      "prompt": "Make a closer ground-level insert within the selected BG-CAMP-01 clearing: a bare earth/stone work patch with static fuel wood or a charcoal mound at the edge and a quiet camp context beyond. Preserve the same materials, night exposure and location identity. Leave a central clear place for a separate small occupational fire/smoke effect. No visible flame, smoke, embers, person, hand or new threat. This is a detail camera for a possible camp insert; do not force the full-body character ground-line convention onto this close view.",
+      "mode": "detail_view",
+      "purpose": "optional_insert_not_additional_scene",
+      "status": "candidate_visual_reviewed_not_owner_approved",
+      "human_approved": false,
+      "actual_file": "Characters/environments/chapter-01-candidate-01/ENV-CAMP/fire_insert/source/bg-camp-02.png",
+      "actual_model": "built-in image_gen; backend model not exposed",
+      "actual_dimensions": [
+        1676,
+        938
+      ],
+      "sha256": "3484481a09ef95994e04a201e082efacf94f87097b3881b192a745b94e7ccb52"
+    },
+    {
+      "id": "BG-GATE-01",
+      "title": "Western gate \u2014 current-task context",
+      "environment": "ENV-GATE",
+      "view": "gate_and_watch",
+      "lighting": "day",
+      "scenes": [
+        "CH01-S08"
+      ],
+      "reference_ids": [
+        "BG-HALL-00"
+      ],
+      "suggested_filename": "bg-gate-01.png",
+      "prompt": "Create an empty functional western settlement gate setting in daylight, in the same modest plaster/stone and cedar architectural language as the hall. Show one sturdy ordinary opening with permanent gateposts, hinge recesses, an adjacent watch position and clear swing space. Omit the movable timber gate leaves: a separate matching animated gate asset will be added later. Use eye-level three-quarter framing with an open actor area beside the opening for a watch member. Keep the opening and wall geometry simple enough for that separate gate asset to align. No guards, weapons display, command tablets, banners, written words, decorative door collections or fantasy portal effects.",
+      "mode": "new_set_anchor",
+      "status": "candidate_visual_reviewed_not_owner_approved",
+      "human_approved": false,
+      "actual_file": "Characters/environments/chapter-01-candidate-01/ENV-GATE/gate_and_watch/source/bg-gate-01.png",
+      "actual_model": "built-in image_gen; backend model not exposed",
+      "actual_dimensions": [
+        1676,
+        938
+      ],
+      "sha256": "f8ce3fff76cd8a02ff63cfa7a343bfd59ad84357deb81d2f0a835fd0923772fd"
+    },
+    {
+      "id": "BG-COURT-01",
+      "title": "Court \u2014 evidence context",
+      "environment": "ENV-COURT",
+      "view": "evidence_table",
+      "lighting": "day",
+      "scenes": [
+        "CH01-S08"
+      ],
+      "reference_ids": [
+        "BG-HALL-00"
+      ],
+      "suggested_filename": "bg-court-01.png",
+      "prompt": "Create a modest empty ancient-world hearing courtyard or chamber, consistent with the hall's materials but identifiable as a different place. A low plain exhibit table offset from centre, a few restrained fixed benches and a quiet plaster backdrop establish a place for examining evidence. Daylight, eye-level medium-wide perspective, space for separate participants without the table hiding every body. The exhibit surface is empty for a quoted-sentence document to be added. No people, judge statue, scales-of-justice icon, gavel, throne, readable words, evidence tablet, modern legal equipment or magical seal.",
+      "mode": "new_set_anchor",
+      "status": "candidate_visual_reviewed_not_owner_approved",
+      "human_approved": false,
+      "actual_file": "Characters/environments/chapter-01-candidate-01/ENV-COURT/evidence_table/source/bg-court-01.png",
+      "actual_model": "built-in image_gen; backend model not exposed",
+      "actual_dimensions": [
+        1676,
+        938
+      ],
+      "sha256": "bd0f20443c95527b489d03bb7d49037afa21bc250218ff6006b6ca96781f5ec7"
+    },
+    {
+      "id": "BG-FORD-01",
+      "title": "Northern road \u2014 dawn geography anchor",
+      "environment": "ENV-FORD",
+      "view": "road",
+      "lighting": "dawn",
+      "scenes": [
+        "CH01-S10"
+      ],
+      "reference_ids": [
+        "BG-HALL-00",
+        "BG-VILLAGE-A-NIGHT"
+      ],
+      "suggested_filename": "bg-ford-01.png",
+      "prompt": "Create a wide empty northern road at dawn approaching a shallow, broad ford through low hills. Use the same modest rural landscape and material rendering as the village kit. Establish a readable road direction, near bank and distant crossing that can support a closer return view next. Soft fresh sunrise, quiet terrain, plausible horse travel and a caption-safe foreground. No people, riders, animals, cart, written waymarkers, dramatic storm, deep gorge, broken bridge or drowning incident. The water surface is still, with no animated splashes.",
+      "mode": "new_set_anchor",
+      "purpose": "geography_anchor_or_optional_insert_not_additional_scene",
+      "status": "candidate_visual_reviewed_not_owner_approved",
+      "human_approved": false,
+      "actual_file": "Characters/environments/chapter-01-candidate-01/ENV-FORD/road/source/bg-ford-01.png",
+      "actual_model": "built-in image_gen; backend model not exposed",
+      "actual_dimensions": [
+        1674,
+        940
+      ],
+      "sha256": "70142c9e0a39a678c3778748f59890a72bdf39f24179b7522b114f6a09e8bb8a"
+    },
+    {
+      "id": "BG-FORD-02",
+      "title": "Ford \u2014 riders return",
+      "environment": "ENV-FORD",
+      "view": "ford_return",
+      "lighting": "dawn",
+      "scenes": [
+        "CH01-S10"
+      ],
+      "reference_ids": [
+        "BG-FORD-01"
+      ],
+      "suggested_filename": "bg-ford-02.png",
+      "prompt": "Reframe the selected BG-FORD-01 landscape closer to its shallow crossing, preserving the same hills, banks, road direction and dawn light. Show a legible gentle ford, with a clear route from the far bank toward the near return road and enough lateral space for riders/horses to be composited. Keep shallow water and firm banks readable; no sudden waterfall, dangerous depth, new bridge or water crisis. Use quiet static water, no riders, horses, villagers, splashes, wake trails or motion blur. The return action is a later foreground layer.",
+      "mode": "new_camera",
+      "status": "candidate_visual_reviewed_not_owner_approved",
+      "human_approved": false,
+      "actual_file": "Characters/environments/chapter-01-candidate-01/ENV-FORD/ford_return/source/bg-ford-02.png",
+      "actual_model": "built-in image_gen; backend model not exposed",
+      "actual_dimensions": [
+        1673,
+        940
+      ],
+      "sha256": "54d55dea31fe044d740077f69b767e4fddf5b5a95dfdc2dc011376af73f74387"
+    }
+  ],
+  "programmatic_stages": [
+    {
+      "id": "BG-OVERLAY-01",
+      "environment": "ENV-OVERLAY",
+      "view": "slate",
+      "lighting": "neutral",
+      "scenes": [
+        "CH01-S09"
+      ],
+      "production_method": "Godot Control nodes or editable SVG; not image generation",
+      "instruction": "Create a clean flat dark-slate stage from code, palette chosen after actual plate/character review. Add the eight request-envelope components as equal-weight editable text/chips in a later graphics layer. Keep bilingual text exact and Persian shaping tested. No seal/security icon, computer-screen picture or implied authority hierarchy.",
+      "status": "blank_stage_only_text_and_graphics_pending",
+      "actual_file": "Characters/environments/chapter-01-candidate-01/ENV-OVERLAY/slate/bg-overlay-01.svg"
+    },
+    {
+      "id": "BG-OVERLAY-02",
+      "environment": "ENV-OVERLAY",
+      "view": "end_card",
+      "lighting": "neutral",
+      "scenes": [
+        "CH01-S11"
+      ],
+      "production_method": "Godot Control nodes or editable SVG; not image generation",
+      "instruction": "Reuse the neutral programmatic stage for the takeaway and series end card. Add the reviewed exact text and separate clay-tablet/reed series mark as editable graphics. No generated lettering, painted UI, new story room or implied later-night establishing scene.",
+      "status": "blank_stage_only_text_and_graphics_pending",
+      "actual_file": "Characters/environments/chapter-01-candidate-01/ENV-OVERLAY/end_card/bg-overlay-02.svg"
+    }
+  ]
+}

@@ -1,0 +1,2356 @@
+{
+  "status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+  "approval_status": "PROPOSAL",
+  "owner_approved": false,
+  "assets": [
+    {
+      "id": "REF-S01-WIDE-v1",
+      "original_path": "Characters/animations/chapter-01-candidate-01/revisions/s01-r03/assets/hall-reading-wide.png",
+      "role": "composition",
+      "entity": "shahrasp/hall",
+      "scene_usage": [
+        "S01"
+      ],
+      "approval_evidence": [
+        "editorial/media-handoff/chapter-01-owner-acceptance.json",
+        "Characters/animations/chapter-01-candidate-01/revisions/s01-r03/manifest.json"
+      ],
+      "approval_scope": "2026-10-20: wide illustration and timing preview only; no new action, close-up or final film approval.",
+      "sha256": "15c86426163b12c10cd37e22f9cfab9b75c5eec4a43a5d6bbf03be76b3eda197",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Built-in image generation/edit, recorded in source revision manifest; owner accepted this exact art.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [
+        "Earlier manifest owner_approved=false predates hash-bound owner acceptance; acceptance governs only its stated scope."
+      ],
+      "missing_information": [],
+      "flow_registration": "not_registered",
+      "shot_usage": [
+        "S01_SH01",
+        "S01_SH02"
+      ],
+      "source_asset_approval_status": "approved_scoped_reference",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/upload-ready/storyboard-frames/REF-S01-WIDE-v1.png",
+      "candidate_image_path": "assets/reference-images/NOT_APPROVED_FOR_PRODUCTION__REF-S01-WIDE-v1.png",
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CHAR-CHAPAR-HELD-v1",
+      "original_path": "Characters/animations/chapter-01-candidate-01/revisions/s02-r02/assets/chapar-held-tablet.png",
+      "role": "character",
+      "entity": "chapar",
+      "scene_usage": [
+        "S02"
+      ],
+      "approval_evidence": [
+        "editorial/media-handoff/chapter-01-s02-owner-acceptance.json",
+        "Characters/animations/chapter-01-candidate-01/revisions/s02-r02/manifest.json"
+      ],
+      "approval_scope": "2026-10-21: Chapar held pose/contact art and tablet style only; no release/placement or final scene approval.",
+      "sha256": "d0fc658467459d7baba8e3e8d4203624418a55664f589eb5971dd245f58f59ec",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha": {
+        "channel": true,
+        "extrema": [
+          0,
+          255
+        ]
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Built-in image generation/edit, recorded in source revision manifest; owner accepted this exact art.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [
+        "Starting-pose acceptance does not approve later motion or every framing."
+      ],
+      "missing_information": [],
+      "flow_registration": "not_registered",
+      "shot_usage": [
+        "S02_SH01",
+        "S02_SH02",
+        "S02_SH04"
+      ],
+      "source_asset_approval_status": "approved_scoped_reference",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/upload-ready/characters/CHAR-CHAPAR-HELD-v1.png",
+      "candidate_image_path": "assets/reference-images/NOT_APPROVED_FOR_PRODUCTION__CHAR-CHAPAR-HELD-v1.png",
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-CHAR-TAHMURES-v1",
+      "original_path": "Characters/tahmures/versions/layout01-v2/source/approved_master.png",
+      "role": "character",
+      "entity": "tahmures",
+      "scene_usage": [
+        "S03",
+        "S05",
+        "S07",
+        "S10"
+      ],
+      "approval_evidence": [
+        "Characters/tahmures/README.md"
+      ],
+      "approval_scope": "Approved visual source per 2026-10-08 task as recorded in README; external-use rights and full-body scope need review.",
+      "sha256": "3eedfaa5a41965c45a137a74a9137c6e59304a0604f877a81c98870c64dba2e5",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha": {
+        "channel": true,
+        "extrema": [
+          0,
+          255
+        ]
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [
+        "S03_SH01",
+        "S03_SH02",
+        "S05_SH01",
+        "S05_SH02",
+        "S05_SH03",
+        "S07_SH01",
+        "S07_SH02",
+        "S07_SH03",
+        "S07_SH04",
+        "S07_SH05",
+        "S07_SH06",
+        "S07_SH07",
+        "S10_SH01"
+      ],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-CHAR-TAHMURES-v1.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-CHAR-SHAHRASP-v1",
+      "original_path": "Characters/Shahrasp.png",
+      "role": "character",
+      "entity": "shahrasp",
+      "scene_usage": [
+        "S01",
+        "S07",
+        "S11"
+      ],
+      "approval_evidence": [
+        "Characters/godot-character-library-recovery-01/characters/shahrasp/component-map.json"
+      ],
+      "approval_scope": "Available identity source; no exact-file owner acceptance established here.",
+      "sha256": "4c4c5ac10764e4725afbb2074a2ac267c7b0047ce99b6110784a147e7474474b",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [
+        "S01_SH01",
+        "S01_SH02",
+        "S07_SH01",
+        "S07_SH02",
+        "S07_SH03",
+        "S07_SH05",
+        "S11_SH01",
+        "S11_SH02"
+      ],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-CHAR-SHAHRASP-v1.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-CHAR-AKVAN_DIV-v1",
+      "original_path": "Characters/Akvan Div.png",
+      "role": "character",
+      "entity": "akvan_div",
+      "scene_usage": [
+        "S02",
+        "S03",
+        "S04",
+        "S07"
+      ],
+      "approval_evidence": [
+        "Characters/godot-character-library-recovery-01/characters/akvan_div/component-map.json"
+      ],
+      "approval_scope": "Available identity source; no exact-file owner acceptance established here.",
+      "sha256": "dea44985d6cb717aba472319dae4b99d1680a629dc432ed32cd9bcbb9875c0b5",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [
+        "S02_SH01",
+        "S02_SH02",
+        "S02_SH04",
+        "S03_SH01",
+        "S03_SH02",
+        "S03_SH03",
+        "S04_SH01",
+        "S04_SH02",
+        "S04_SH03",
+        "S07_SH04"
+      ],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-CHAR-AKVAN_DIV-v1.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-CHAR-BLACK_DIV-v1",
+      "original_path": "Characters/Black Div.png",
+      "role": "character",
+      "entity": "black_div",
+      "scene_usage": [
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "approval_evidence": [
+        "Characters/godot-character-library-recovery-01/characters/black_div/component-map.json"
+      ],
+      "approval_scope": "Available identity source; no exact-file owner acceptance established here.",
+      "sha256": "c0684b97c9557fc991606efaefe393f8bd4db7024dce32e71c69f6cd52cd56c8",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [
+        "S03_SH01",
+        "S03_SH02",
+        "S03_SH03",
+        "S04_SH05",
+        "S05_SH01",
+        "S05_SH02",
+        "S05_SH03"
+      ],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-CHAR-BLACK_DIV-v1.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-CHAR-DIV_E_SEFID-v1",
+      "original_path": "Characters/Div-e Sefid.png",
+      "role": "character",
+      "entity": "div_e_sefid",
+      "scene_usage": [
+        "S03",
+        "S04",
+        "S06",
+        "S10"
+      ],
+      "approval_evidence": [
+        "Characters/godot-character-library-recovery-01/characters/div_e_sefid/component-map.json"
+      ],
+      "approval_scope": "Available identity source; no exact-file owner acceptance established here.",
+      "sha256": "b0d03af2d49d410a58a101af004f5195c6cd20db2a6aca63440b84c373564ed3",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [
+        "Source holds mirror/paper rather than current messenger tablet/cloth; never transfer these props into the shot."
+      ],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [
+        "S03_SH01",
+        "S03_SH02",
+        "S03_SH03",
+        "S04_SH04",
+        "S06_SH01",
+        "S10_SH01"
+      ],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-CHAR-DIV_E_SEFID-v1.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-CHAR-ARASH-v1",
+      "original_path": "Characters/arash.png",
+      "role": "character",
+      "entity": "arash",
+      "scene_usage": [
+        "S06",
+        "S08"
+      ],
+      "approval_evidence": [
+        "Characters/godot-character-library-recovery-01/characters/arash/component-map.json"
+      ],
+      "approval_scope": "Available identity source; no exact-file owner acceptance established here.",
+      "sha256": "07a57d4138037a2abafc0e709e4878deafe176c08093f6c6dafae4190e3a428d",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [
+        "S06_SH01",
+        "S06_SH02",
+        "S08_SH01"
+      ],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-CHAR-ARASH-v1.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-BG-HALL-01",
+      "original_path": "Characters/environments/chapter-01-candidate-01/ENV-HALL/wide/source/bg-hall-01.jpeg",
+      "role": "environment",
+      "entity": "ENV-HALL",
+      "scene_usage": [
+        "S01"
+      ],
+      "approval_evidence": [
+        "Characters/environments/chapter-01-candidate-01/manifest.json"
+      ],
+      "approval_scope": "candidate_visual_reviewed_not_owner_approved",
+      "sha256": "626b0c8a73d3facbf28fc1b0569d777f5a3848da583a4b3924310169ffda1ae7",
+      "dimensions": [
+        2752,
+        1536
+      ],
+      "format": "JPEG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [
+        "generated provenance recorded; owner rights review pending"
+      ],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-BG-HALL-01.jpeg",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-BG-HALL-02",
+      "original_path": "Characters/environments/chapter-01-candidate-01/ENV-HALL/intake/source/bg-hall-02.png",
+      "role": "environment",
+      "entity": "ENV-HALL",
+      "scene_usage": [
+        "S02"
+      ],
+      "approval_evidence": [
+        "Characters/environments/chapter-01-candidate-01/manifest.json"
+      ],
+      "approval_scope": "candidate_visual_reviewed_not_owner_approved",
+      "sha256": "0302dd67306899a917d598f2dcba7592eb2c6a033c25dff60fd2fbf596af0a67",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [
+        "generated provenance recorded; owner rights review pending"
+      ],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [
+        "S02_SH01",
+        "S02_SH02",
+        "S02_SH03",
+        "S02_SH04"
+      ],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-BG-HALL-02.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-BG-HALL-03",
+      "original_path": "Characters/environments/chapter-01-candidate-01/ENV-HALL/cedar_stand/source/bg-hall-03.png",
+      "role": "environment",
+      "entity": "ENV-HALL",
+      "scene_usage": [
+        "S03"
+      ],
+      "approval_evidence": [
+        "Characters/environments/chapter-01-candidate-01/manifest.json"
+      ],
+      "approval_scope": "candidate_visual_reviewed_not_owner_approved",
+      "sha256": "22c1f1ff04f9b1c89e081b6d73c9cff666b03e0262d859e08ba434e581c8bea0",
+      "dimensions": [
+        1676,
+        939
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [
+        "generated provenance recorded; owner rights review pending"
+      ],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [
+        "S03_SH01",
+        "S03_SH02",
+        "S03_SH03"
+      ],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-BG-HALL-03.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-BG-HALL-04",
+      "original_path": "Characters/environments/chapter-01-candidate-01/ENV-HALL/catalogue/source/bg-hall-04.png",
+      "role": "environment",
+      "entity": "ENV-HALL",
+      "scene_usage": [
+        "S04"
+      ],
+      "approval_evidence": [
+        "Characters/environments/chapter-01-candidate-01/manifest.json"
+      ],
+      "approval_scope": "candidate_visual_reviewed_not_owner_approved",
+      "sha256": "6c544abf67e629b927937dcbbf75614d80581291d54aa65518d82e0388015433",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [
+        "generated provenance recorded; owner rights review pending"
+      ],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [
+        "S04_SH01",
+        "S04_SH02",
+        "S04_SH03"
+      ],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-BG-HALL-04.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-BG-HALL-05",
+      "original_path": "Characters/environments/chapter-01-candidate-01/ENV-HALL/intake/source/bg-hall-05.png",
+      "role": "environment",
+      "entity": "ENV-HALL",
+      "scene_usage": [
+        "S04"
+      ],
+      "approval_evidence": [
+        "Characters/environments/chapter-01-candidate-01/manifest.json"
+      ],
+      "approval_scope": "candidate_visual_reviewed_not_owner_approved",
+      "sha256": "5aced1b217386bf3a21dfcaf99d06987b91eb5f08f4dc3bbb9394145aafa42c5",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [
+        "generated provenance recorded; owner rights review pending"
+      ],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [
+        "S04_SH04"
+      ],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-BG-HALL-05.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-BG-HALL-06",
+      "original_path": "Characters/environments/chapter-01-candidate-01/ENV-HALL/threshold/source/bg-hall-06.png",
+      "role": "environment",
+      "entity": "ENV-HALL",
+      "scene_usage": [
+        "S04"
+      ],
+      "approval_evidence": [
+        "Characters/environments/chapter-01-candidate-01/manifest.json"
+      ],
+      "approval_scope": "candidate_visual_reviewed_not_owner_approved",
+      "sha256": "658a48a9a2c09d4743b40b3e62dda85c2384a19d5bba4d750b244c9bf2a51b5c",
+      "dimensions": [
+        1672,
+        940
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [
+        "generated provenance recorded; owner rights review pending"
+      ],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [
+        "S04_SH05"
+      ],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-BG-HALL-06.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-BG-HALL-07",
+      "original_path": "Characters/environments/chapter-01-candidate-01/ENV-HALL/worktable/source/bg-hall-07.png",
+      "role": "environment",
+      "entity": "ENV-HALL",
+      "scene_usage": [
+        "S05"
+      ],
+      "approval_evidence": [
+        "Characters/environments/chapter-01-candidate-01/manifest.json"
+      ],
+      "approval_scope": "candidate_visual_reviewed_not_owner_approved",
+      "sha256": "1d76822a7e24fb251190c69ebf829b08859f97bb026b61cfe0ca9c7e66edfd49",
+      "dimensions": [
+        1675,
+        939
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [
+        "generated provenance recorded; owner rights review pending"
+      ],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [
+        "S05_SH01",
+        "S05_SH02",
+        "S05_SH03"
+      ],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-BG-HALL-07.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-BG-HALL-08",
+      "original_path": "Characters/environments/chapter-01-candidate-01/ENV-HALL/worktable/source/bg-hall-08.png",
+      "role": "environment",
+      "entity": "ENV-HALL",
+      "scene_usage": [
+        "S07",
+        "S11"
+      ],
+      "approval_evidence": [
+        "Characters/environments/chapter-01-candidate-01/manifest.json"
+      ],
+      "approval_scope": "candidate_visual_reviewed_not_owner_approved",
+      "sha256": "2d656c9359b2dab8e1646aed23a55c955dae77aee39b35436c9a1641c8cc1d1e",
+      "dimensions": [
+        1674,
+        939
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [
+        "generated provenance recorded; owner rights review pending"
+      ],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [
+        "S07_SH01",
+        "S07_SH02",
+        "S07_SH03",
+        "S07_SH04",
+        "S07_SH05",
+        "S07_SH06",
+        "S07_SH07",
+        "S11_SH01",
+        "S11_SH02"
+      ],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-BG-HALL-08.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-BG-HALL-09",
+      "original_path": "Characters/environments/chapter-01-candidate-01/ENV-HALL/scribal_bench/source/bg-hall-09.png",
+      "role": "environment",
+      "entity": "ENV-HALL",
+      "scene_usage": [
+        "S08"
+      ],
+      "approval_evidence": [
+        "Characters/environments/chapter-01-candidate-01/manifest.json"
+      ],
+      "approval_scope": "candidate_visual_reviewed_not_owner_approved",
+      "sha256": "41f071277ed4c1af93a40e6d3d38ad3d7c831f74807174a4add0b034cad316ba",
+      "dimensions": [
+        1676,
+        938
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [
+        "generated provenance recorded; owner rights review pending"
+      ],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [
+        "S08_SH03"
+      ],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-BG-HALL-09.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-BG-HALL-10",
+      "original_path": "Characters/environments/chapter-01-candidate-01/ENV-HALL/threshold/source/bg-hall-10.png",
+      "role": "environment",
+      "entity": "ENV-HALL",
+      "scene_usage": [
+        "S10"
+      ],
+      "approval_evidence": [
+        "Characters/environments/chapter-01-candidate-01/manifest.json"
+      ],
+      "approval_scope": "candidate_visual_reviewed_not_owner_approved",
+      "sha256": "3c73b3d0df95b9f45ea2857362bdc63420462a788658e94e5be15a0bfa1691ba",
+      "dimensions": [
+        1672,
+        940
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [
+        "generated provenance recorded; owner rights review pending"
+      ],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [
+        "S10_SH01"
+      ],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-BG-HALL-10.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-BG-POST-01",
+      "original_path": "Characters/environments/chapter-01-candidate-01/ENV-POST/delivery/source/bg-post-01-r02.png",
+      "role": "environment",
+      "entity": "ENV-POST",
+      "scene_usage": [
+        "S06"
+      ],
+      "approval_evidence": [
+        "Characters/environments/chapter-01-candidate-01/manifest.json"
+      ],
+      "approval_scope": "candidate_visual_reviewed_not_owner_approved",
+      "sha256": "e3a65f8e7a4f76ce3f591a114c66a52d52c0f3f54d337452e5338a261c3cc96b",
+      "dimensions": [
+        1676,
+        939
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [
+        "generated provenance recorded; owner rights review pending"
+      ],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [
+        "S06_SH01"
+      ],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-BG-POST-01.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-BG-POST-02",
+      "original_path": "Characters/environments/chapter-01-candidate-01/ENV-POST/rider_departure/source/bg-post-02.png",
+      "role": "environment",
+      "entity": "ENV-POST",
+      "scene_usage": [
+        "S06"
+      ],
+      "approval_evidence": [
+        "Characters/environments/chapter-01-candidate-01/manifest.json"
+      ],
+      "approval_scope": "candidate_visual_reviewed_not_owner_approved",
+      "sha256": "12033351c5ca902618d39a649982f534bcd731184f503845b83b1e0a411a08e6",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [
+        "generated provenance recorded; owner rights review pending"
+      ],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [
+        "S06_SH02"
+      ],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-BG-POST-02.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-BG-VILLAGE-A-NIGHT",
+      "original_path": "Characters/environments/chapter-01-candidate-01/ENV-VILLAGE/village_wide/source/bg-village-a-night.png",
+      "role": "environment",
+      "entity": "ENV-VILLAGE",
+      "scene_usage": [
+        "S06"
+      ],
+      "approval_evidence": [
+        "Characters/environments/chapter-01-candidate-01/manifest.json"
+      ],
+      "approval_scope": "candidate_visual_reviewed_not_owner_approved",
+      "sha256": "ffdf81ece7d4d4367bd8fe68691aaf7e7f6c8324f978008f2f1fa0db9015acf0",
+      "dimensions": [
+        1675,
+        939
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [
+        "generated provenance recorded; owner rights review pending"
+      ],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [
+        "S06_SH03"
+      ],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-BG-VILLAGE-A-NIGHT.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-BG-VILLAGE-B-NIGHT",
+      "original_path": "Characters/environments/chapter-01-candidate-01/ENV-VILLAGE/village_wide/source/bg-village-b-night.png",
+      "role": "environment",
+      "entity": "ENV-VILLAGE",
+      "scene_usage": [
+        "S06"
+      ],
+      "approval_evidence": [
+        "Characters/environments/chapter-01-candidate-01/manifest.json"
+      ],
+      "approval_scope": "candidate_visual_reviewed_not_owner_approved",
+      "sha256": "d0721b8e35b6717e2f0a291b9c806276a22fe3e5ad59aa13412cadb030557915",
+      "dimensions": [
+        1675,
+        939
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [
+        "generated provenance recorded; owner rights review pending"
+      ],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [
+        "S06_SH04"
+      ],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-BG-VILLAGE-B-NIGHT.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-BG-VILLAGE-C-NIGHT",
+      "original_path": "Characters/environments/chapter-01-candidate-01/ENV-VILLAGE/village_wide/source/bg-village-c-night.png",
+      "role": "environment",
+      "entity": "ENV-VILLAGE",
+      "scene_usage": [
+        "S06"
+      ],
+      "approval_evidence": [
+        "Characters/environments/chapter-01-candidate-01/manifest.json"
+      ],
+      "approval_scope": "candidate_visual_reviewed_not_owner_approved",
+      "sha256": "0a71cb22b1259dd143415485854f03ef4bce4f2e4788d2bf2c49bda344e1bdbc",
+      "dimensions": [
+        1674,
+        939
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [
+        "generated provenance recorded; owner rights review pending"
+      ],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [
+        "S06_SH05"
+      ],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-BG-VILLAGE-C-NIGHT.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-BG-VILLAGE-A-DAWN",
+      "original_path": "Characters/environments/chapter-01-candidate-01/ENV-VILLAGE/village_wide/source/bg-village-a-dawn.png",
+      "role": "environment",
+      "entity": "ENV-VILLAGE",
+      "scene_usage": [
+        "S10"
+      ],
+      "approval_evidence": [
+        "Characters/environments/chapter-01-candidate-01/manifest.json"
+      ],
+      "approval_scope": "candidate_visual_reviewed_not_owner_approved",
+      "sha256": "bb5aaed3e8b2783d07464b99727da02a8af03d9756ccc325e2aeffc3db74df29",
+      "dimensions": [
+        1675,
+        939
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [
+        "generated provenance recorded; owner rights review pending"
+      ],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [
+        "S10_SH03"
+      ],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-BG-VILLAGE-A-DAWN.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-BG-VILLAGE-B-DAWN",
+      "original_path": "Characters/environments/chapter-01-candidate-01/ENV-VILLAGE/village_wide/source/bg-village-b-dawn.png",
+      "role": "environment",
+      "entity": "ENV-VILLAGE",
+      "scene_usage": [
+        "S10"
+      ],
+      "approval_evidence": [
+        "Characters/environments/chapter-01-candidate-01/manifest.json"
+      ],
+      "approval_scope": "candidate_visual_reviewed_not_owner_approved",
+      "sha256": "12e107a64e4b64b5199f95f5024a7e8f66b530511e248a9744f4928291a6badf",
+      "dimensions": [
+        1675,
+        939
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [
+        "generated provenance recorded; owner rights review pending"
+      ],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [
+        "S10_SH04"
+      ],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-BG-VILLAGE-B-DAWN.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-BG-VILLAGE-C-DAWN",
+      "original_path": "Characters/environments/chapter-01-candidate-01/ENV-VILLAGE/village_wide/source/bg-village-c-dawn.png",
+      "role": "environment",
+      "entity": "ENV-VILLAGE",
+      "scene_usage": [
+        "S10"
+      ],
+      "approval_evidence": [
+        "Characters/environments/chapter-01-candidate-01/manifest.json"
+      ],
+      "approval_scope": "candidate_visual_reviewed_not_owner_approved",
+      "sha256": "aa19f282fe11b41ee162047bfbc7cfeec00e6aa64fb81683fb165e8e00e30581",
+      "dimensions": [
+        1675,
+        939
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [
+        "generated provenance recorded; owner rights review pending"
+      ],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [
+        "S10_SH05"
+      ],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-BG-VILLAGE-C-DAWN.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-BG-CAMP-01",
+      "original_path": "Characters/environments/chapter-01-candidate-01/ENV-CAMP/camp_wide/source/bg-camp-01.png",
+      "role": "environment",
+      "entity": "ENV-CAMP",
+      "scene_usage": [
+        "S06"
+      ],
+      "approval_evidence": [
+        "Characters/environments/chapter-01-candidate-01/manifest.json"
+      ],
+      "approval_scope": "candidate_visual_reviewed_not_owner_approved",
+      "sha256": "1bd51abdbd9dc5f01f0fe63c3438ab3e300cb1294d22857ba398b5605bd76671",
+      "dimensions": [
+        1676,
+        938
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [
+        "generated provenance recorded; owner rights review pending"
+      ],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [
+        "S06_SH06",
+        "S06_SH07"
+      ],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-BG-CAMP-01.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-BG-GATE-01",
+      "original_path": "Characters/environments/chapter-01-candidate-01/ENV-GATE/gate_and_watch/source/bg-gate-01.png",
+      "role": "environment",
+      "entity": "ENV-GATE",
+      "scene_usage": [
+        "S08"
+      ],
+      "approval_evidence": [
+        "Characters/environments/chapter-01-candidate-01/manifest.json"
+      ],
+      "approval_scope": "candidate_visual_reviewed_not_owner_approved",
+      "sha256": "f8ce3fff76cd8a02ff63cfa7a343bfd59ad84357deb81d2f0a835fd0923772fd",
+      "dimensions": [
+        1676,
+        938
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [
+        "generated provenance recorded; owner rights review pending"
+      ],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [
+        "S08_SH01"
+      ],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-BG-GATE-01.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-BG-COURT-01",
+      "original_path": "Characters/environments/chapter-01-candidate-01/ENV-COURT/evidence_table/source/bg-court-01.png",
+      "role": "environment",
+      "entity": "ENV-COURT",
+      "scene_usage": [
+        "S08"
+      ],
+      "approval_evidence": [
+        "Characters/environments/chapter-01-candidate-01/manifest.json"
+      ],
+      "approval_scope": "candidate_visual_reviewed_not_owner_approved",
+      "sha256": "bd0f20443c95527b489d03bb7d49037afa21bc250218ff6006b6ca96781f5ec7",
+      "dimensions": [
+        1676,
+        938
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [
+        "generated provenance recorded; owner rights review pending"
+      ],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [
+        "S08_SH02"
+      ],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-BG-COURT-01.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-BG-FORD-02",
+      "original_path": "Characters/environments/chapter-01-candidate-01/ENV-FORD/ford_return/source/bg-ford-02.png",
+      "role": "environment",
+      "entity": "ENV-FORD",
+      "scene_usage": [
+        "S10"
+      ],
+      "approval_evidence": [
+        "Characters/environments/chapter-01-candidate-01/manifest.json"
+      ],
+      "approval_scope": "candidate_visual_reviewed_not_owner_approved",
+      "sha256": "54d55dea31fe044d740077f69b767e4fddf5b5a95dfdc2dc011376af73f74387",
+      "dimensions": [
+        1673,
+        940
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [
+        "generated provenance recorded; owner rights review pending"
+      ],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [
+        "S10_SH02"
+      ],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-BG-FORD-02.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-BG-OVERLAY-01",
+      "original_path": "Characters/environments/chapter-01-candidate-01/ENV-OVERLAY/slate/bg-overlay-01.svg",
+      "role": "environment",
+      "entity": "ENV-OVERLAY",
+      "scene_usage": [
+        "S09"
+      ],
+      "approval_evidence": [
+        "Characters/environments/chapter-01-candidate-01/manifest.json"
+      ],
+      "approval_scope": "blank_stage_only_text_and_graphics_pending",
+      "sha256": "d71ba6cc442eec103700682abf254d9ed0e0dd7763cc66b36e2d963b22a0e659",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "format": "SVG",
+      "mode": "vector",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [
+        "Rights not recorded"
+      ],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [
+        "S09_SH01",
+        "S09_SH02",
+        "S09_SH03",
+        "S09_SH04"
+      ],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-BG-OVERLAY-01.svg",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-BG-OVERLAY-02",
+      "original_path": "Characters/environments/chapter-01-candidate-01/ENV-OVERLAY/end_card/bg-overlay-02.svg",
+      "role": "environment",
+      "entity": "ENV-OVERLAY",
+      "scene_usage": [
+        "S11"
+      ],
+      "approval_evidence": [
+        "Characters/environments/chapter-01-candidate-01/manifest.json"
+      ],
+      "approval_scope": "blank_stage_only_text_and_graphics_pending",
+      "sha256": "d71ba6cc442eec103700682abf254d9ed0e0dd7763cc66b36e2d963b22a0e659",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "format": "SVG",
+      "mode": "vector",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [
+        "Rights not recorded"
+      ],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [
+        "S11_SH03"
+      ],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-BG-OVERLAY-02.svg",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-PROP-RIVER-TABLET-REFERENCE",
+      "original_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/projects/s04/assets/river-tablet-reference.png",
+      "role": "prop",
+      "entity": "river_tablet",
+      "scene_usage": [
+        "S03",
+        "S04",
+        "S06"
+      ],
+      "approval_evidence": [
+        "Characters/animations/chapter-01-candidate-01/production/english-final-03/REVISION-REPORT.md"
+      ],
+      "approval_scope": "Candidate: no owner approval established",
+      "sha256": "243d5d84bf9fc49468fec6b619a31dbf0e239b32c447469e492d88e8ecb509ba",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha": {
+        "channel": true,
+        "extrema": [
+          0,
+          254
+        ]
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [
+        "Current production derivative; technical use is not exact-image artistic approval."
+      ],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-PROP-RIVER-TABLET-REFERENCE.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-PROP-TABLET-ISOLATED",
+      "original_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/projects/s04/assets/tablet-isolated.png",
+      "role": "prop",
+      "entity": "river_tablet",
+      "scene_usage": [
+        "S03",
+        "S04",
+        "S06"
+      ],
+      "approval_evidence": [
+        "Characters/animations/chapter-01-candidate-01/production/english-final-03/REVISION-REPORT.md"
+      ],
+      "approval_scope": "Candidate: no owner approval established",
+      "sha256": "4bcd030cf007f713215da68174b20f3b22dc4892e81de9d5838d12f84442768f",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha": {
+        "channel": true,
+        "extrema": [
+          0,
+          255
+        ]
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [
+        "Current production derivative; technical use is not exact-image artistic approval."
+      ],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [
+        "S03_SH01",
+        "S03_SH02",
+        "S03_SH03",
+        "S04_SH01",
+        "S04_SH02",
+        "S04_SH03",
+        "S04_SH04",
+        "S04_SH05",
+        "S06_SH01",
+        "S06_SH02",
+        "S06_SH03",
+        "S06_SH04",
+        "S06_SH05",
+        "S06_SH06",
+        "S06_SH07"
+      ],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-PROP-TABLET-ISOLATED.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-PROP-DIV-WRAP",
+      "original_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/projects/s04/assets/div-wrap.png",
+      "role": "character_pose",
+      "entity": "div_e_sefid",
+      "scene_usage": [
+        "S03",
+        "S04",
+        "S06"
+      ],
+      "approval_evidence": [
+        "Characters/animations/chapter-01-candidate-01/production/english-final-03/REVISION-REPORT.md"
+      ],
+      "approval_scope": "Candidate: no owner approval established",
+      "sha256": "41a516c7fd2b0bfb8bd23e39b5b978ce9e4d0367b816c3cef0b7686c2f3514be",
+      "dimensions": [
+        1088,
+        1445
+      ],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha": {
+        "channel": true,
+        "extrema": [
+          0,
+          255
+        ]
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [
+        "Current production derivative; technical use is not exact-image artistic approval."
+      ],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-PROP-DIV-WRAP.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-FRAME-D-S03-1-BEFORE-AFTER",
+      "original_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/review/D-S03-1-before-after.png",
+      "role": "composition",
+      "entity": "D",
+      "scene_usage": [],
+      "approval_evidence": [
+        "Characters/animations/chapter-01-candidate-01/production/english-final-03/REVISION-REPORT.md"
+      ],
+      "approval_scope": "Existing sampled comparison image; final picture approval pending.",
+      "sha256": "a8a07f97d3d7717461c1f2c87b4b946989c64e8d500464a0c297a1485749d90a",
+      "dimensions": [
+        960,
+        360
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-FRAME-D-S03-1-BEFORE-AFTER.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-FRAME-D-S04-1-BEFORE-AFTER",
+      "original_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/review/D-S04-1-before-after.png",
+      "role": "composition",
+      "entity": "D",
+      "scene_usage": [],
+      "approval_evidence": [
+        "Characters/animations/chapter-01-candidate-01/production/english-final-03/REVISION-REPORT.md"
+      ],
+      "approval_scope": "Existing sampled comparison image; final picture approval pending.",
+      "sha256": "7f231512e3635ddceae952838804c00701d620bea963ada61052ca9ed8a13d1e",
+      "dimensions": [
+        960,
+        360
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-FRAME-D-S04-1-BEFORE-AFTER.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-FRAME-D-S04-2-BEFORE-AFTER",
+      "original_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/review/D-S04-2-before-after.png",
+      "role": "composition",
+      "entity": "D",
+      "scene_usage": [],
+      "approval_evidence": [
+        "Characters/animations/chapter-01-candidate-01/production/english-final-03/REVISION-REPORT.md"
+      ],
+      "approval_scope": "Existing sampled comparison image; final picture approval pending.",
+      "sha256": "7fd003684f7d13c965e776dcc294667ed339e6c74f8966ca1f337ab338bf9500",
+      "dimensions": [
+        960,
+        360
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-FRAME-D-S04-2-BEFORE-AFTER.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-FRAME-D-S05-1-BEFORE-AFTER",
+      "original_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/review/D-S05-1-before-after.png",
+      "role": "composition",
+      "entity": "D",
+      "scene_usage": [],
+      "approval_evidence": [
+        "Characters/animations/chapter-01-candidate-01/production/english-final-03/REVISION-REPORT.md"
+      ],
+      "approval_scope": "Existing sampled comparison image; final picture approval pending.",
+      "sha256": "5542caf8bcfb59dbc45a8fa8418049202c262a3aeec57f684f357b1d211ae179",
+      "dimensions": [
+        960,
+        360
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-FRAME-D-S05-1-BEFORE-AFTER.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-FRAME-D-S05-2-BEFORE-AFTER",
+      "original_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/review/D-S05-2-before-after.png",
+      "role": "composition",
+      "entity": "D",
+      "scene_usage": [],
+      "approval_evidence": [
+        "Characters/animations/chapter-01-candidate-01/production/english-final-03/REVISION-REPORT.md"
+      ],
+      "approval_scope": "Existing sampled comparison image; final picture approval pending.",
+      "sha256": "7298ae34c5af68dbcefac650825ba1a756863a9c3cd618f8eff0fcecac1dd0bf",
+      "dimensions": [
+        960,
+        360
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-FRAME-D-S05-2-BEFORE-AFTER.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-FRAME-D-S05-3-BEFORE-AFTER",
+      "original_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/review/D-S05-3-before-after.png",
+      "role": "composition",
+      "entity": "D",
+      "scene_usage": [],
+      "approval_evidence": [
+        "Characters/animations/chapter-01-candidate-01/production/english-final-03/REVISION-REPORT.md"
+      ],
+      "approval_scope": "Existing sampled comparison image; final picture approval pending.",
+      "sha256": "224bcbea3f13dea6b82e9c52913f0f7b5a8d482bc779cfeecc15807aa9f0b5b7",
+      "dimensions": [
+        960,
+        360
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-FRAME-D-S05-3-BEFORE-AFTER.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-FRAME-D-S05-4-BEFORE-AFTER",
+      "original_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/review/D-S05-4-before-after.png",
+      "role": "composition",
+      "entity": "D",
+      "scene_usage": [],
+      "approval_evidence": [
+        "Characters/animations/chapter-01-candidate-01/production/english-final-03/REVISION-REPORT.md"
+      ],
+      "approval_scope": "Existing sampled comparison image; final picture approval pending.",
+      "sha256": "dfba4a73ebd0d005c82b3fdc0ee7b0cef5433f33c3249d6e8fde8b136901082b",
+      "dimensions": [
+        960,
+        360
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-FRAME-D-S05-4-BEFORE-AFTER.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-FRAME-D-S05-5-BEFORE-AFTER",
+      "original_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/review/D-S05-5-before-after.png",
+      "role": "composition",
+      "entity": "D",
+      "scene_usage": [],
+      "approval_evidence": [
+        "Characters/animations/chapter-01-candidate-01/production/english-final-03/REVISION-REPORT.md"
+      ],
+      "approval_scope": "Existing sampled comparison image; final picture approval pending.",
+      "sha256": "2601499350220eaf1ccacf32f85170943583be936a4bd1c1fa1b914acfc97b11",
+      "dimensions": [
+        960,
+        360
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-FRAME-D-S05-5-BEFORE-AFTER.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-FRAME-D-S07-1-BEFORE-AFTER",
+      "original_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/review/D-S07-1-before-after.png",
+      "role": "composition",
+      "entity": "D",
+      "scene_usage": [],
+      "approval_evidence": [
+        "Characters/animations/chapter-01-candidate-01/production/english-final-03/REVISION-REPORT.md"
+      ],
+      "approval_scope": "Existing sampled comparison image; final picture approval pending.",
+      "sha256": "5489f58442317abd44c25da0a6f5d0ec5b83cd9f6b699984cbcd1c39ea167c7e",
+      "dimensions": [
+        960,
+        360
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-FRAME-D-S07-1-BEFORE-AFTER.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-FRAME-D-S07-2-BEFORE-AFTER",
+      "original_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/review/D-S07-2-before-after.png",
+      "role": "composition",
+      "entity": "D",
+      "scene_usage": [],
+      "approval_evidence": [
+        "Characters/animations/chapter-01-candidate-01/production/english-final-03/REVISION-REPORT.md"
+      ],
+      "approval_scope": "Existing sampled comparison image; final picture approval pending.",
+      "sha256": "c00d85cc65522ea341d178652766fa0f01a495a2aa446bbdaf29865dfe38c112",
+      "dimensions": [
+        960,
+        360
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-FRAME-D-S07-2-BEFORE-AFTER.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-FRAME-S03-17_3-AFTER",
+      "original_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/review/s03-17.3-after.png",
+      "role": "composition",
+      "entity": "s03",
+      "scene_usage": [],
+      "approval_evidence": [
+        "Characters/animations/chapter-01-candidate-01/production/english-final-03/REVISION-REPORT.md"
+      ],
+      "approval_scope": "Existing sampled comparison image; final picture approval pending.",
+      "sha256": "31492e31c25d5040aa15c332bb5c29634ba528b3c4d75484b3d764fffc91c028",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-FRAME-S03-17_3-AFTER.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-FRAME-S07-25_2-AFTER",
+      "original_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/review/s07-25.2-after.png",
+      "role": "composition",
+      "entity": "s07",
+      "scene_usage": [],
+      "approval_evidence": [
+        "Characters/animations/chapter-01-candidate-01/production/english-final-03/REVISION-REPORT.md"
+      ],
+      "approval_scope": "Existing sampled comparison image; final picture approval pending.",
+      "sha256": "725cb63b456842d14369644c29eaf4408e3051bf3b9ad913d3b7f337e1a3bd79",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-FRAME-S07-25_2-AFTER.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-FRAME-S08-14_6-AFTER",
+      "original_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/review/s08-14.6-after.png",
+      "role": "composition",
+      "entity": "s08",
+      "scene_usage": [],
+      "approval_evidence": [
+        "Characters/animations/chapter-01-candidate-01/production/english-final-03/REVISION-REPORT.md"
+      ],
+      "approval_scope": "Existing sampled comparison image; final picture approval pending.",
+      "sha256": "dab252d6f9eb142ba0f1f938cea423c1dd06fac33fd479535a2bb571e2218583",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-FRAME-S08-14_6-AFTER.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-FRAME-S09-3_0-AFTER",
+      "original_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/review/s09-3.0-after.png",
+      "role": "composition",
+      "entity": "s09",
+      "scene_usage": [],
+      "approval_evidence": [
+        "Characters/animations/chapter-01-candidate-01/production/english-final-03/REVISION-REPORT.md"
+      ],
+      "approval_scope": "Existing sampled comparison image; final picture approval pending.",
+      "sha256": "b35d2b69d58d0e7e97f835beb7c5819586c4bd4be3623723827b845f8f8f659f",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-FRAME-S09-3_0-AFTER.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-FRAME-S11-12_0-AFTER",
+      "original_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/review/s11-12.0-after.png",
+      "role": "composition",
+      "entity": "s11",
+      "scene_usage": [],
+      "approval_evidence": [
+        "Characters/animations/chapter-01-candidate-01/production/english-final-03/REVISION-REPORT.md"
+      ],
+      "approval_scope": "Existing sampled comparison image; final picture approval pending.",
+      "sha256": "538087a68e286c43f7cc2e09e97a13d2cd5b4bfed6a51bdb8cb3da42802e3207",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-FRAME-S11-12_0-AFTER.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    },
+    {
+      "id": "CAND-FRAME-S11-8_7-AFTER",
+      "original_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/review/s11-8.7-after.png",
+      "role": "composition",
+      "entity": "s11",
+      "scene_usage": [],
+      "approval_evidence": [
+        "Characters/animations/chapter-01-candidate-01/production/english-final-03/REVISION-REPORT.md"
+      ],
+      "approval_scope": "Existing sampled comparison image; final picture approval pending.",
+      "sha256": "52efb41a4a6e46a944824f96f8fa24a788c09e4b041b1d7a482c62ef6f9559bd",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "alpha": {
+        "channel": false,
+        "extrema": null
+      },
+      "derivatives": [],
+      "copy_method": "byte_identical_physical_copy",
+      "rights_provenance": "Project production source; see evidence; external rights/approval not established by this inventory.",
+      "preparation_authorization": "Current owner request: local handoff only",
+      "external_upload_performed": false,
+      "external_upload_authorization": "Owner must decide before actual upload",
+      "conflicts": [],
+      "missing_information": [
+        "Owner approval for this exact reference and external-use eligibility"
+      ],
+      "flow_registration": "not_registered",
+      "shot_usage": [],
+      "source_asset_approval_status": "needs_review",
+      "candidate_package_status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+      "candidate_owner_approved": false,
+      "official_handoff_path": "Characters/animations/chapter-01-candidate-01/production/english-final-03/flow-handoff/assets/needs-review/CAND-FRAME-S11-8_7-AFTER.png",
+      "candidate_image_path": null,
+      "role_in_candidate": "Source reference only; no new pose, performance or upload approval"
+    }
+  ],
+  "copied_images": 2,
+  "uncopied_needs_review_references": 49
+}

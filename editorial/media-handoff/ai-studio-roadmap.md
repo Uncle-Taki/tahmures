@@ -1,11 +1,37 @@
 # Tahmures: Codex direction, AI Studio implementation, local acceptance
 
+**Routing update — 2026-10-20:** the owner asked Codex to take over implementation.
+Use [the current Chapter 01 workflow](chapter-01-animation-workflow.md) and its
+status/next-task files. The AI Studio procedure below is optional historical
+handoff guidance, not a required next step. Background candidates and the beard
+alpha repair now exist; older phase descriptions below are dated snapshots.
+
 Prepared 2026-10-18. This is a task roadmap, subordinate to `AGENTS.md`,
 `meta-prompt.md`, the project charter, narrative continuity and existing scoped
 approval records. It does not replace `workflow/phase-status.json` or grant art,
 voice, manuscript or release approval. Earlier upload packs remain historical
 handoffs. The owner has pushed the project to a private GitHub repository;
 use the repository workflow below as the primary handoff.
+
+## Review update — 2026-10-20
+
+The received `tahmures_complete_studio_bundle.json` is a specification draft,
+not the implementation return required by task 01. Its certification flags do
+not advance any phase. See `2026-10-20-studio-bundle-review.md` and the measured
+`studio-bundle-review.json` for missing assets and metadata/semantic errors.
+
+The corrected `chapter-01-production-plan.json` is the current **planning
+candidate** for scenes/cues/environment dependencies; it is not a runtime manifest
+or an approved screenplay. The current manuscript/continuity remain canonical.
+The owner removed the hall's door-count/handle motif; the ordinary western gate
+remains necessary for the role example. Raw/rejected history stays unchanged.
+
+Task 01 (real Akvan extraction) remains pending. In parallel, task 02 produces
+one Hall of Scripts environment candidate under `Characters/environments/`.
+The brief defines eight reusable sets and all eleven scene mappings. Background
+work, props/extras, camera blocking, text/font, audio, Godot implementation and
+release evidence have separate bundles and gates. Complete character/set reviews
+before a single S01 integration test; do not jump to a full chapter render.
 
 ## Roles and the working loop
 
@@ -71,6 +97,7 @@ and scoped metadata reconciliation on that separate track before release.
 |---|---|---|
 | 0 — Local baseline repair | Codex: repaired scripts, ten generated candidates, validators, real Godot captures and command logs. | Local candidate checks pass; anatomical and editorial limitations remain explicit. Completed for the current baseline. |
 | 1 — Anatomical cuts | AI Studio: one character per task, starting with Akvan. Explicit contour masks, correct part ownership, source/derived distinction and component plates. Then the other sources, with both Simurgh forms separate. | Codex checks source preservation, masks, layer-only recomposition and actual isolated parts. Rectangular tiles renamed as limbs do not pass. No synthetic hidden pixels masquerade as source extraction. |
+| 1E — Environment design (parallel) | AI Studio task 02: one Hall of Scripts floor plan and editable wide-view candidate, then other views/lighting and the seven additional sets. | Codex checks actual source-character composite, perspective/ground/occlusion/caption regions; owner reviews actual art. No background is complete from a JSON claim. |
 | 2 — Joint and prop review | AI Studio: parent/child rig hierarchy, pivots, honest coupled prop assemblies, documented uncovered regions and constrained movement. Reuse accepted Tahmures head. | Actual neutral/reset, supported motion and frame comparisons on light/dark/checker. Owner reviews any reconstructed art and selects Simurgh's chapter form. Unsupported blink/gaze/limb motion stays disabled. |
 | 3 — Chapter recovery | AI Studio: new candidate project using real reusable layered rigs, with source-canvas-aware framing and no named-character fallback. Salvage verified timeline/caption code after inspection. | Codex tests all 11 scenes, seek/reset/replay, missing resources, HUD bounds, bilingual layout and 173-second duration plan. Old GLM project remains intact. Garshasp offstage; Div-e Sefid outside the current adaptation. |
 | 4 — Complete silent exports | Local Godot execution under Codex review: EN and FA movies plus timed scene samples. AI Studio can supply scripts but must identify unavailable runtime tools. | Probe both actual files for duration/frame count, streams and complete ending. Visually inspect Persian/English captions and scene causality. File presence is not completion. |
@@ -78,7 +105,8 @@ and scoped metadata reconciliation on that separate track before release.
 | 6 — Final package and publication preparation | Codex reviews a minimal standalone package, rebuild dependencies and documentation. | Required media gates and full repository gate pass; final art/performance approval exists. Only explicitly selected final files are candidates for publication. No automatic commit, push or deployment. |
 | 7 — Reuse | Repeat reviewed templates for Chapters 02–04 before scaling to 05–24. | Each chapter has its own narrative/caption/timing evidence and approval; pilot approval does not approve later chapters. |
 
-Phase 1 is the immediate next task. Do not jump from a successful import to Phase 3.
+Phase 1 remains the character task; Phase 1E can proceed independently for set
+design. Do not jump from a successful import or export to Phase 3.
 Planning for later phases may proceed while art decisions remain pending.
 
 ## Google AI Studio Build mode: practical use
@@ -157,6 +185,7 @@ book gate remains a separate check with its recorded editorial baseline failures
 
 Import the updated repository branch **main**, and paste
 `ai-studio-start-here.md`. Task 01 repairs **Akvan only** and returns real changed files.
-Bring its export/patch and response back here. Codex will inspect isolated head,
+Task 02 may proceed separately for one hall set, under its own allowed paths.
+Bring each actual export/patch and response back here. Codex will inspect isolated head,
 face, torso, arms and coupled tablet-hold masks and run the next local acceptance
 pass before expanding the operation to the rest of the library.

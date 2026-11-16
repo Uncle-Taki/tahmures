@@ -13,6 +13,8 @@ engineering and reliable language-model systems.
 - Experiments run offline with committed synthetic datasets and fixtures.
 - `meta-prompt.md` is the editorial operating contract.
 - `book/project-charter.md` is the approved project charter.
+- Chapter 01 also has character, environment, animation, and audio production
+  work under `Characters/`; media adaptations retain their own scoped approvals.
 
 Do not add provider calls, deployment, commits, or pushes unless explicitly
 requested.
@@ -28,6 +30,12 @@ requested.
 - `prompts/versions/` — experiment prompt variants
 - `scripts/` — validation, parity, experiment, and editorial automation
 - `editorial/` — human editorial state, review findings, terminology candidates, and toolchain policy
+- `editorial/review-status.yml` — recorded Persian human and machine review state
+- `editorial/media-handoff/` — media workflow, production status, and scoped owner acceptance records
+- `Characters/tahmures/` — character sources, versions, prototypes, and approval records
+- `Characters/godot-character-library-recovery-01/` — local Godot character-library recovery candidate
+- `Characters/environments/` — environment candidates, provenance, and previews
+- `Characters/animations/chapter-01-candidate-01/` — Chapter 01 planning, scene revisions, and production builds
 - `.agents/skills/tahmures-editorial/` — project-local Codex editorial orchestrator
 - `mkdocs.yml` and `mkdocs.fa.yml` — English and Persian sites
 
@@ -100,6 +108,8 @@ When translating or editing Persian:
 - Persian Chapters 01–09 have received human review and form the calibration
   corpus for Persian editorial quality.
 - Persian Chapters 10–24 have not yet received human line-by-line review.
+- `editorial/review-status.yml` currently records Chapters 10–24 as
+  `machine_prechecked`; consult this file for the recorded chapter-level state.
 - The failure classes discovered in Chapters 01–09 must be checked proactively
   in Chapters 10–24.
 - A machine pass may mark Chapters 10–24 as `machine_prechecked`; it must not
@@ -153,7 +163,7 @@ Run the editorial checks directly with:
 .venv/bin/python scripts/editorial_check.py
 ```
 
-or, after the root Makefile includes `editorial.mk`:
+or through the root Makefile, which already includes `editorial.mk`:
 
 ```bash
 make editorial-check PYTHON=.venv/bin/python
@@ -163,6 +173,51 @@ Editorial validation includes reference identity parity, protected-content parit
 Persian regression checks, and review-state validation. Heuristic Persian warnings
 must be inspected; known blocker/high-severity regression failures must be fixed.
 
+## Character and Animation Production
+
+Read `editorial/media-handoff/chapter-01-animation-status.json` and the selected
+production revision's README, timeline, manifests, and review records before
+continuing media work. `chapter-01-animation-workflow.md` describes the production
+process; its earlier unit reports and older handoff next-task instructions are
+historical where superseded by later revision records. Codex implements and checks
+locally; Gemini web, AI Studio, and external review prompts are optional helpers.
+
+Current English production entry:
+`Characters/animations/chapter-01-candidate-01/production/english-final-03/`.
+Its title is *Ancient Tablet*, and `timeline.json` defines its production timing.
+The recorded state is a technically verified render awaiting perceptual review;
+final picture and human lip-sync approval remain pending. Approved source voice
+recordings do not imply approval of automatic mouth alignment. Persian media has
+separate outputs and review state; English production changes do not authorize
+changes to Persian media or either manuscript.
+
+- English chapter prose and `book/narrative-continuity.md` remain canonical for
+  story facts. Record scoped media adaptations in continuity. The owner-approved
+  Chapter 01 animation uses Div-e Sefid as messenger; Chapar remains a separate
+  courier. Preserve the distinction between media adaptation and manuscript text.
+- Reuse approved identity artwork within its recorded scope. Keep source artwork,
+  derived candidates, historical revisions, provenance, and approval evidence.
+  Work in the repository's active directories rather than received ZIPs or
+  duplicate exchange copies.
+- New art and performance remain candidates until their concrete revision receives
+  owner approval. Technical validation, pixel recomposition, or a filename such as
+  `final` does not establish artistic approval, anatomical rig readiness, or
+  completed performance. Do not infer approval from silence.
+- Validate actual renders for identity, alpha edges, floor/hand/prop contact,
+  occlusion, custody, captions, and Persian shaping where applicable. Exercise
+  deterministic seek/reset/replay and explicit missing-resource failures.
+- Follow the selected revision's rebuild and verification commands after source,
+  timing, or alignment changes. Check actual exported frame counts, duration,
+  audio streams, source hashes, and package contents; regenerate evidence for
+  changed outputs. Preserve historical captures and scoped approvals.
+- Use existing local tools and approved recordings. Provider calls, new voice
+  generation, uploads, and publication require explicit instruction. Veo shot
+  preparation follows the selected production revision's
+  `veo-consistency-agent-instructions.md` when applicable; preparing a prompt
+  does not authorize generation.
+- Run media-specific checks from the affected project's README in addition to the
+  repository gate. The root `make check` covers the book/code workflow and does
+  not by itself validate Godot projects, exported movies, or artistic quality.
 
 ## Code and Experiment Rules
 

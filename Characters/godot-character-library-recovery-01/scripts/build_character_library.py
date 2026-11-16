@@ -4,7 +4,8 @@
 Executes Phase A & Phase B asset generation on the local repository:
 1. Verifies SHA-256 hashes of Tahmures approved packages (layout01-v7 and
    layout01-facial-states-01) and all 9 owner-supplied character PNGs in Characters/.
-2. Performs edge-seeded border flood-fill background removal into derived RGBA
+2. Preserves existing RGBA transparency; for RGB inputs performs edge-seeded
+   border flood-fill background removal into derived RGBA
    working images, preserving interior pale clothing, white robes (Div-e Sefid),
    eyes, teeth, and fine outlines. Leaves original source PNGs untouched.
 3. Exports disjoint full-canvas RGBA component layers for each character so that
@@ -45,6 +46,13 @@ def remove_bg_border_flood(
 ) -> tuple[np.ndarray, np.ndarray]:
     if arr.ndim != 3 or arr.shape[2] not in (3, 4) or tol < 0:
         raise ValueError("Expected RGB/RGBA input and a nonnegative tolerance")
+    if arr.shape[2] == 4:
+        # Existing transparency is authoritative. Colour flood-fill can enter
+        # dark hair/beard outlines through transparent black border pixels.
+        rgba = arr.copy()
+        foreground = rgba[:, :, 3] > 0
+        rgba[~foreground] = 0
+        return rgba, foreground
     h, w = arr.shape[:2]
     corners = np.array(
         [arr[0, 0, :3], arr[0, w - 1, :3], arr[h - 1, 0, :3], arr[h - 1, w - 1, :3]],
@@ -53,8 +61,6 @@ def remove_bg_border_flood(
     bg_color = np.median(corners, axis=0).astype(np.int32)
     diff = np.abs(arr[:, :, :3].astype(np.int32) - bg_color).max(axis=2)
     candidate_bg = diff <= tol
-    if arr.shape[2] == 4:
-        candidate_bg |= arr[:, :, 3] == 0
 
     visited = np.zeros((h, w), dtype=bool)
     visited[0, :] = candidate_bg[0, :]
@@ -73,13 +79,9 @@ def remove_bg_border_flood(
         changed = int(visited.sum()) != old_sum
 
     fg = ~visited
-    if arr.shape[2] == 4:
-        fg &= arr[:, :, 3] > 0
     rgba = np.zeros((h, w, 4), dtype=np.uint8)
     rgba[:, :, :3] = arr[:, :, :3]
-    rgba[:, :, 3] = np.where(fg, arr[:, :, 3] if arr.shape[2] == 4 else 255, 0).astype(
-        np.uint8
-    )
+    rgba[:, :, 3] = np.where(fg, 255, 0).astype(np.uint8)
     rgba[rgba[:, :, 3] == 0] = 0
     return rgba, fg
 

@@ -17,6 +17,9 @@ working directory only.
 
 ## What actually works
 
+- Existing RGBA transparency is preserved. The 2026-10-20 beard repair removes
+  colour-based erasure of dark Tahmures outline pixels; RGB inputs still use
+  border flood-fill. Source artwork and approved-head assets remain unchanged.
 - Ten source PNG hashes, two complete approval-bound indexes (146 + 128 files),
   and all 17 accepted head copies are verified before generation.
 - Local cutouts, disjoint candidate partitions, masks, source/reconstruction

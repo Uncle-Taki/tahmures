@@ -1,0 +1,197 @@
+{
+  "date": "2026-10-30",
+  "display_name": "Illustrated cast \u2014 V2",
+  "paired_version": {
+    "display_name": "Paper Puppet",
+    "directory": "Characters/selected-paper-cut-cast-01"
+  },
+  "status": "SEVEN V2 CHARACTERS COLLECTED \u2014 TWO REQUESTED TROUSER EDITS PREPARED",
+  "scope": "Seven physical copies with two new lower-garment derivatives, originals preserved. Edits apply to v2 only.",
+  "characters": [
+    {
+      "id": "tahmures",
+      "name": "Tahmures",
+      "original_source": "Characters/v2/ChatGPT Image Oct 29, 2026, 03_24_49 AM.png",
+      "source_copy": "sources/tahmures_v2_original.png",
+      "source_sha256": "3eedfaa5a41965c45a137a74a9137c6e59304a0604f877a81c98870c64dba2e5",
+      "source_dimensions": [
+        1086,
+        1448
+      ],
+      "source_mode": "RGBA",
+      "source_alpha_extrema": [
+        0,
+        255
+      ],
+      "selection_scope": "Owner supplied v2 cast for a separate local collection; no film replacement or new performance approval inferred.",
+      "image_status": "owner_requested_lower_garment_derivative_for_review",
+      "requires_garment_review": true,
+      "file": "images/tahmures_v2_trousers_v01.png",
+      "generated_source_path": "/home/mehdi/.codex-gpt-3/generated_images/01a17f68-36b1-7422-94a0-912fc8904313/exec-23fc01b3-b526-4f3a-92ce-05f20e0af2e8.png",
+      "sha256": "1f0ff54f15782924f7331d225d22e923f5ee43d618e8997a9552bcdc636fa736",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "edit": "Knee-length cream inner tunic, separate loose brown trousers tapered/gathered toward ankles, long original outer coat and original footwear retained.",
+      "visual_review": "Visible two-leg trousers and source head/body/outer-costume identity checked. Image model can change subtle lines/colour/folds beyond the garment; not a pixel-exact patch."
+    },
+    {
+      "id": "akvan-div",
+      "name": "Akvan Div",
+      "original_source": "Characters/v2/Teal-Horned Fantasy Character Portrait.png",
+      "source_copy": "sources/akvan-div_v2_original.png",
+      "source_sha256": "d9bb80dd205276419ec6d21cf2ea7cc6ee4ed20ff22b4053bba4917c546873cc",
+      "source_dimensions": [
+        1088,
+        1446
+      ],
+      "source_mode": "RGB",
+      "source_alpha_extrema": null,
+      "selection_scope": "Owner supplied v2 cast for a separate local collection; no film replacement or new performance approval inferred.",
+      "image_status": "owner_requested_lower_garment_derivative_for_review",
+      "requires_garment_review": true,
+      "file": "images/akvan-div_v2_trousers_v01.png",
+      "generated_source_path": "/home/mehdi/.codex-gpt-3/generated_images/01a17f68-36b1-7422-94a0-912fc8904313/exec-a758b521-7253-49ad-ab6d-698acf3c73a1.png",
+      "sha256": "aff346407d34e3f7831c48be76eabbf397ebca784ae3679d8ada2119791da0cb",
+      "dimensions": [
+        1088,
+        1446
+      ],
+      "mode": "RGB",
+      "alpha_extrema": null,
+      "edit": "Knee-length cream inner tunic, separate loose brown trousers tapered/gathered toward ankles, long original outer coat and original footwear retained.",
+      "visual_review": "Visible two-leg trousers and source head/body/outer-costume identity checked. Image model can change subtle lines/colour/folds beyond the garment; not a pixel-exact patch."
+    },
+    {
+      "id": "black-div",
+      "name": "Black Div",
+      "original_source": "Characters/v2/Friendly Horned Fantasy Character.png",
+      "source_copy": "sources/black-div_v2_original.png",
+      "source_sha256": "83754d240a48deb6cf31aa87c206158f719b5bd7f6a7f6986a268fce450f6f45",
+      "source_dimensions": [
+        1086,
+        1448
+      ],
+      "source_mode": "RGB",
+      "source_alpha_extrema": null,
+      "selection_scope": "Owner supplied v2 cast for a separate local collection; no film replacement or new performance approval inferred.",
+      "image_status": "unchanged_copy_of_owner_supplied_v2",
+      "requires_garment_review": false,
+      "file": "images/black-div_v2.png",
+      "sha256": "83754d240a48deb6cf31aa87c206158f719b5bd7f6a7f6986a268fce450f6f45",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB"
+    },
+    {
+      "id": "shahrasp",
+      "name": "Shahrasp",
+      "original_source": "Characters/v2/sharasb.png",
+      "source_copy": "sources/shahrasp_v2_original.png",
+      "source_sha256": "23b8c48b4669f2b3f5f1722324904ee957f9bee073aade3f69c1dd073d7a9d9d",
+      "source_dimensions": [
+        1086,
+        1448
+      ],
+      "source_mode": "RGB",
+      "source_alpha_extrema": null,
+      "selection_scope": "Owner supplied v2 cast for a separate local collection; no film replacement or new performance approval inferred.",
+      "image_status": "unchanged_copy_of_owner_supplied_v2",
+      "requires_garment_review": false,
+      "file": "images/shahrasp_v2.png",
+      "sha256": "23b8c48b4669f2b3f5f1722324904ee957f9bee073aade3f69c1dd073d7a9d9d",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB"
+    },
+    {
+      "id": "div-e-sefid",
+      "name": "Div-e Sefid",
+      "original_source": "Characters/v2/Silver-Horned Elf in Layered Robes.png",
+      "source_copy": "sources/div-e-sefid_v2_original.png",
+      "source_sha256": "a8d5eaa928a8a1bcbb6be48a80b1d2c36528e51cbf58f5566ebc234cf77b20cc",
+      "source_dimensions": [
+        1086,
+        1448
+      ],
+      "source_mode": "RGB",
+      "source_alpha_extrema": null,
+      "selection_scope": "Owner supplied v2 cast for a separate local collection; no film replacement or new performance approval inferred.",
+      "image_status": "unchanged_copy_of_owner_supplied_v2",
+      "requires_garment_review": false,
+      "file": "images/div-e-sefid_v2.png",
+      "sha256": "a8d5eaa928a8a1bcbb6be48a80b1d2c36528e51cbf58f5566ebc234cf77b20cc",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB"
+    },
+    {
+      "id": "hushang",
+      "name": "Hushang",
+      "original_source": "Characters/v2/hushang.png",
+      "source_copy": "sources/hushang_v2_original.png",
+      "source_sha256": "25b174226cb6495c28c578929ee2f572835fe9e88eea267f3f8d2f22e2e837e2",
+      "source_dimensions": [
+        1087,
+        1447
+      ],
+      "source_mode": "RGB",
+      "source_alpha_extrema": null,
+      "selection_scope": "Owner supplied v2 cast for a separate local collection; no film replacement or new performance approval inferred.",
+      "image_status": "unchanged_copy_of_owner_supplied_v2",
+      "requires_garment_review": false,
+      "file": "images/hushang_v2.png",
+      "sha256": "25b174226cb6495c28c578929ee2f572835fe9e88eea267f3f8d2f22e2e837e2",
+      "dimensions": [
+        1087,
+        1447
+      ],
+      "mode": "RGB"
+    },
+    {
+      "id": "simurgh-bird",
+      "name": "Simurgh \u2014 bird only",
+      "original_source": "Characters/v2/Noble Teal and Gold Bird Character.png",
+      "source_copy": "sources/simurgh-bird_v2_original.png",
+      "source_sha256": "3ba7651be82b7c3301d5ed97d963fdb55548df459e4396d970925fc2d308812f",
+      "source_dimensions": [
+        1086,
+        1448
+      ],
+      "source_mode": "RGB",
+      "source_alpha_extrema": null,
+      "selection_scope": "Owner supplied v2 cast for a separate local collection; no film replacement or new performance approval inferred.",
+      "image_status": "unchanged_copy_of_owner_supplied_v2",
+      "requires_garment_review": false,
+      "file": "images/simurgh-bird_v2.png",
+      "sha256": "3ba7651be82b7c3301d5ed97d963fdb55548df459e4396d970925fc2d308812f",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB"
+    }
+  ],
+  "trouser_reference": {
+    "path": "Characters/garshasp.png",
+    "copy": "sources/garshasp_trouser_reference.png",
+    "sha256": "19c57419274c5da0be086219cd86f53eab4980fa84f5eedec125a0b32e39f73e"
+  },
+  "generation_calls": 2,
+  "unchanged_current_images": 5,
+  "source_files_unchanged": true,
+  "garment_derivatives_approved": false,
+  "production_promotion": false
+}

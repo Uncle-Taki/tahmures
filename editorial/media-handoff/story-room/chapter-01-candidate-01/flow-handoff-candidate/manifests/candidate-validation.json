@@ -1,0 +1,22 @@
+{
+  "status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+  "validation_result": "PASS",
+  "source_snapshot_files": 989,
+  "source_hashes": "UNCHANGED",
+  "existing_handoff": "UNCHANGED",
+  "narrative_scenes": 11,
+  "title_segments": 1,
+  "candidate_shot_briefs": 48,
+  "impact_rows": 53,
+  "source_audio_cues": 34,
+  "candidate_spoken_entries": 36,
+  "new_or_replacement_recordings_missing": 3,
+  "copied_reference_images": 2,
+  "unapproved_source_reference_pointers": 49,
+  "candidate_runtime": "TBD",
+  "owner_approved": false,
+  "production_authorized": false,
+  "artistic_quality": "NOT VERIFIED",
+  "actual_flow_account_state": "NOT ACCESSED",
+  "negative_path_checks": "PASS"
+}

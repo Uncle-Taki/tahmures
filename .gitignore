@@ -22,8 +22,21 @@ coverage.xml
 # Local upload archives and duplicated exchange trees, not project sources.
 /editorial/media-handoff/*.zip
 /editorial/media-handoff/ai-studio-exchange/
+/editorial/media-handoff/gemini-background-reference-pack/
 /editorial/media-handoff/gemini-web-upload-*/
 /Characters/**/*.zip
+
+# S01 reproducible bulk captures; keep selected stills, traces, reports and movies.
+/Characters/animations/chapter-01-candidate-01/renders/**/frames/
+/Characters/animations/chapter-01-candidate-01/renders/**/checks/
+
+# S05 reproducible bulk PNG captures; keep trace/report/movie/contact-sheet evidence.
+/Characters/animations/chapter-01-candidate-01/revisions/s05-r01/evidence/**/frames/*.png
+/Characters/animations/chapter-01-candidate-01/revisions/s05-r01/evidence/**/seek/*.png
+
+# S10 reproducible captures; retain movies, traces, controls and reports.
+/Characters/animations/chapter-01-candidate-01/revisions/s10-r01/evidence/**/frames/*.png
+/Characters/animations/chapter-01-candidate-01/revisions/s10-r01/evidence/**/seek/*.png
 
 # Rejected chapter movie exports. Keep its salvageable scripts/resources.
 # The accepted POC's stage-a-preview.avi remains visible: integrity checks need it.

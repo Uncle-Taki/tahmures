@@ -312,6 +312,15 @@ its current function being self-evident.
 **Rules established:** An object's wording, material, route, and interaction
 role are distinct.
 
+**Setting revision (owner request, 2026-10-20):** Remove the thirty-door and
+unlike-handle description from Chapter 1 in both editions and from new media
+adaptations. It was decorative project fiction, not a causal mechanism or an
+engineering concept. The opening now establishes the hall through incoming
+messages on clay, leather, bark, and silk and Shahrasp's crystal-assisted reading.
+Do not turn the removed detail into thirty rooms, portals, or a symbolic puzzle.
+Background layout and any ordinary entrance are staging proposals, not new
+story facts. Historical rejected renders/exports may retain the earlier detail.
+
 ### Royal Archive
 
 **Meaning:** Preserved context, provenance, memory, and the danger of granting
@@ -627,3 +636,17 @@ schema, code, storage, access control, and human judgement own distinct duties.
 | 2026-10-10 | Correction 01: recorded Jamshid's Chapter 04 life status as unspecified per owner clarification (removed the draft "dead by Chapter 04" wording from his entry and both Chapter 04 tales); corrected the Persian Chapter 03 Nariman sentence to drop the unsupported "from the market" detail | GPT review findings and owner clarification (pending GPT recheck and human signoff) |
 | 2026-10-10 | Spelling alignment: the four Persian Chapters 01–04 tale headings changed from «روایت تهمورث» to «روایت طهمورث» (prose already used طهمورث); the translation validator now enforces the tale heading per chapter range (01–04 طهمورث, 05–24 تهمورث) | Owner-authorized scoped Persian spelling decision (pending GPT recheck and human signoff); Chapters 05–24 and the translation glossary keep تهمورث pending a separate book-wide terminology decision |
 | 2026-10-10 | Record correction 02: added the owner-locked project-fiction relationship — Keyumars as Tahmures's grandfather — to the Keyumars entry as `TIER_C_PROJECT_FICTION`, with the source genealogy (Keyumars → Siamak → Hushang → Tahmures, i.e. great-grandfather read literally) kept distinct and unaltered; no tale text changed | Claude final-review finding B1 (bounded record fix, pending GPT recheck and human signoff); the relationship is an owner-authorized adaptation, not an on-page fact or a source claim |
+
+
+### Chapter 01 animation adaptation — owner decision, 2026-10-24
+
+For the local Chapter 01 animation revision only, the owner requested replacing
+Simurgh with Div-e Sefid in every scene. Div-e Sefid therefore performs the
+messenger's inspection, wrapping, frontier delivery and corrective-message
+receipt in this adaptation. Chapar remains the separate relay-road courier.
+This is `TIER_C_PROJECT_FICTION`, preserving the same failure of interpreting
+an unidentified record as a current command. It does not claim a Shahnameh
+source for these actions. The canonical English and Persian manuscripts and
+previous scoped approvals remain unchanged; this decision does not promote a
+book-wide cast migration. The concrete media work and per-scene function map
+are recorded in `Characters/animations/chapter-01-candidate-01/production/visual-r02/repair-plan.json`.

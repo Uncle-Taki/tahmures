@@ -1,0 +1,3 @@
+**NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION**
+
+[PROPOSAL] 2026-10-28: discovery/source snapshot; skill phases 1–9; independent first pass; selected revisions R1–R5; full candidate synchronization; independent second pass; final technical audit. R1 changed king’s diagnosis to cost-only acknowledgement, R2 changed “Longer” to “More”, R3 attributed unsupported obviousness to Div-e Sefid, R4 clarified courier eyeline/held-art fallback, R5 made delivery→Arash decision→dispatch explicit and invalidated inherited cut assumptions. Prior rejected wording stays only in review history, not selected script/maps/prompts. No owner signoff recorded.

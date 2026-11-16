@@ -1,0 +1,1352 @@
+{
+  "schema_version": 1,
+  "prepared_on": "2026-10-20",
+  "status": "REVIEWED_PLANNING_CANDIDATE_NOT_IMPLEMENTATION",
+  "human_approved": false,
+  "received_bundle": {
+    "path": "tahmures_complete_studio_bundle.json",
+    "sha256": "e3c320a70288fdaeb4661ed5c524f1ef6236535f0162dfeffa5b36f07d210109",
+    "preserved_unchanged": true
+  },
+  "canonical_sources": [
+    {
+      "path": "book/part-1/01-what-is-a-prompt.md",
+      "sha256": "90aca2acb1f5082aeae8a17ffb6ba4dd85f501dbba014acc1159686a22729c0e"
+    },
+    {
+      "path": "book/fa/part-1/01-what-is-a-prompt.md",
+      "sha256": "fc50e5da5488228676adfa7e0ab8a9ee825d3ff161383367692d23eb8702c027"
+    }
+  ],
+  "owner_change": "2026-10-20: remove hall door-count/handle motif; retain messages/materials and crystal reading.",
+  "licences": {
+    "content": "CC-BY-4.0; see LICENSE-CONTENT.md",
+    "code": "Apache-2.0; see LICENSE-CODE",
+    "new_art": "record actual provenance/rights before promotion; do not adopt received proprietary label"
+  },
+  "timing": {
+    "target_seconds": 173,
+    "fps": 30,
+    "target_frames": 5190,
+    "resolution": [
+      1280,
+      720
+    ],
+    "status": "proposed_budget_not_measured_export",
+    "cue_durations_require_bilingual_read_through": true
+  },
+  "chapter": {
+    "metadata": {
+      "chapter": "01",
+      "title_en": "The Three Readings",
+      "title_fa": "سه خوانش",
+      "timeline_seconds": 173,
+      "fps": 30,
+      "resolution": [
+        1280,
+        720
+      ],
+      "source_en": "book/part-1/01-what-is-a-prompt.md",
+      "source_fa": "book/fa/part-1/01-what-is-a-prompt.md",
+      "takeaway_en": "Grammar suggests a role. It doesn't establish one.",
+      "takeaway_fa": "دستور زبان نقشی را پیشنهاد می‌کند؛ اثباتش نمی‌کند."
+    },
+    "scenes": [
+      {
+        "id": "CH01-S01",
+        "start": 0,
+        "duration": 12,
+        "title_en": "Establishing: the Hall of Scripts",
+        "title_fa": "معرفی: تالار دبیره‌ها",
+        "beat": "STORY_PROBLEM",
+        "location": "Hall of Scripts — threshold and main hall, dawn",
+        "visible_content": "Arriving clay, leather, bark and silk messages; Shahrasp reading fine silk writing through a polished crystal. The hall is established through its work, without a door-count or handle motif.",
+        "source_alignment": "candidate_adaptation_requires_review",
+        "received_truth_claim": "source_fact",
+        "status": "planning_only_no_render_acceptance"
+      },
+      {
+        "id": "CH01-S02",
+        "start": 12,
+        "duration": 16,
+        "title_en": "The tablet arrives",
+        "title_fa": "رسیدن لوح",
+        "beat": "STORY_PROBLEM",
+        "location": "Hall intake table, wet grey morning",
+        "visible_content": "Chapar (distinct from Simurgh) brings the found tablet; dissolved seal scar shown; exact imperative rendered as programmatic overlay text.",
+        "staging_inference": "receiver at intake staged as Akvan Div (tale does not name it)",
+        "source_alignment": "candidate_adaptation_requires_review",
+        "received_truth_claim": "source_fact",
+        "status": "planning_only_no_render_acceptance"
+      },
+      {
+        "id": "CH01-S03",
+        "start": 28,
+        "duration": 10,
+        "title_en": "Tell me what this is",
+        "title_fa": "«بگویید این چیست»",
+        "beat": "STORY_PROBLEM",
+        "location": "Hall — cedar stand, morning",
+        "visible_content": "Tahmures asks his underspecified question; three distinct recipients examine the tablet in their own methods (Keeper traces marks with lens; Simurgh hefts and checks the cord; Black Div reads twice and holds).",
+        "source_alignment": "candidate_adaptation_requires_review",
+        "received_truth_claim": "source_fact",
+        "status": "planning_only_no_render_acceptance"
+      },
+      {
+        "id": "CH01-S04",
+        "start": 38,
+        "duration": 15,
+        "title_en": "Three readings",
+        "title_fa": "سه خوانش",
+        "beat": "SURPRISING_FAILURE",
+        "location": "Hall — catalogue wall / intake / door",
+        "visible_content": "Panel a: Akvan Div catalogues under Military Records: Northern Frontier. Panel b: Simurgh wraps the tablet as an urgent message. Panel c: Black Div reads and leaves to act.",
+        "source_alignment": "candidate_adaptation_requires_review",
+        "received_truth_claim": "source_fact",
+        "status": "planning_only_no_render_acceptance"
+      },
+      {
+        "id": "CH01-S05",
+        "start": 53,
+        "duration": 15,
+        "title_en": "There are eleven watchfires",
+        "title_fa": "«یازده آتش دیده‌بانی هست»",
+        "beat": "SURPRISING_FAILURE",
+        "location": "Hall — main table, dusk blue",
+        "visible_content": "Wet Black Div returns and reports eleven fires; five-line source dialogue preserved verbatim; Tahmures's realization (thinking state).",
+        "source_alignment": "candidate_adaptation_requires_review",
+        "received_truth_claim": "source_fact",
+        "status": "planning_only_no_render_acceptance"
+      },
+      {
+        "id": "CH01-S06",
+        "start": 68,
+        "duration": 17,
+        "title_en": "Consequence montage",
+        "title_fa": "چیدمان پیامدها",
+        "beat": "SURPRISING_FAILURE",
+        "location": "Northern frontier at night",
+        "visible_content": "Beat a: Simurgh ARRIVES and DELIVERS the wrapped packet to Arash (handoff shown). Beat b: Arash dispatches riders (cause = Simurgh's arrival, per source; delivery is not authentication). Beat c: three villages alarmed. Beat d: eleven charcoal-burner fires, calmly smoking. No actor lies; no div is malicious.",
+        "source_alignment": "candidate_adaptation_requires_review",
+        "received_truth_claim": "source_fact",
+        "status": "planning_only_no_render_acceptance",
+        "received_repair_claim_unverified": "F1 — arrival/delivery shown before dispatch; reading is not presented as the cause"
+      },
+      {
+        "id": "CH01-S07",
+        "start": 85,
+        "duration": 31,
+        "title_en": "The four labels",
+        "title_fa": "چهار برچسب",
+        "beat": "DISCOVERY",
+        "location": "Hall — work table, lamplight rising",
+        "visible_content": "a: longer-wording attempt — Shahrasp sharpens his reed (one completed action). b: Tahmures dictates the longer instruction. c: Akvan Div's warning. d: Tahmures stops the reed. e: four blank labels placed one by one (speaker/recipient/occasion marked unknown; requested result marked). f: the actual request written on a separate sealed card (prop only; the seal does not establish authority or provide security).",
+        "source_alignment": "candidate_adaptation_requires_review",
+        "received_truth_claim": "source_fact",
+        "status": "planning_only_no_render_acceptance",
+        "received_repair_claim_unverified": "F3 — reed-sharpening is a single completed action; boundary stated naturally"
+      },
+      {
+        "id": "CH01-S08",
+        "start": 116,
+        "duration": 15,
+        "title_en": "Roles become testable",
+        "title_fa": "آزمون نقش‌ها",
+        "beat": "DISCOVERY",
+        "location": "Western gate / court / scribal bench (illustrative vignettes)",
+        "visible_content": "Same sentence «دروازهٔ غربی را ببند» / \"Close the western gate\" as current task (Arash the Gatekeeper), court evidence, and mere ink under an apprentice. Roles depend on context.",
+        "staging_inference": "Arash doubles as the illustrative Gatekeeper per current mapping",
+        "source_alignment": "candidate_adaptation_requires_review",
+        "received_truth_claim": "source_fact",
+        "status": "planning_only_no_render_acceptance"
+      },
+      {
+        "id": "CH01-S09",
+        "start": 131,
+        "duration": 20,
+        "title_en": "Engineering overlay: the request envelope",
+        "title_fa": "روی‌نوشت مهندسی: پاکتِ درخواست",
+        "beat": "ENGINEERING_PRINCIPLE",
+        "location": "Overlay space (no story location), neutral dark slate",
+        "visible_content": "Line-draw envelope diagram; ALL EIGHT components revealed as equal-weight chips (instructions, current task, context, data, examples, constraints, output contract, interaction state) — two rows are a neutral layout only, not primary/subordinate; the exact formula rendered as programmatic text; review line; NO seal icons on review questions (removed per F5); no laptop/screen icons; no security-boundary claim (application owns enforcement).",
+        "source_alignment": "candidate_adaptation_requires_review",
+        "received_truth_claim": "source_fact",
+        "status": "planning_only_no_render_acceptance",
+        "received_repair_claim_unverified": "F5 — eight peer components, neutral markers only"
+      },
+      {
+        "id": "CH01-S10",
+        "start": 151,
+        "duration": 15,
+        "title_en": "The second message",
+        "title_fa": "پیام دوم",
+        "beat": "MEMORABLE_TAKEAWAY",
+        "location": "Hall doorstep / northern road and ford, dawn",
+        "visible_content": "Short corrective sealed message (recipient named, rumour corrected, acknowledgement requested) handed to Simurgh; sunrise tableau — riders return across the ford, villagers lower their lamps.",
+        "staging_inference": "Simurgh as carrier — production inference from the established Messenger role and accepted blueprint; the tale does not name the carrier; the seal prop does not prove identity or grant authority; Simurgh's visual form remains undecided",
+        "source_alignment": "candidate_adaptation_requires_review",
+        "received_truth_claim": "source_fact",
+        "status": "planning_only_no_render_acceptance"
+      },
+      {
+        "id": "CH01-S11",
+        "start": 166,
+        "duration": 7,
+        "title_en": "Takeaway + series card",
+        "title_fa": "جمع‌بندی + کارت مجموعه",
+        "beat": "MEMORABLE_TAKEAWAY",
+        "location": "Hall ledger close-up / neutral end card (recap insert, not a new later night)",
+        "visible_content": "Shahrasp's ledger line (tale-verbatim overlay); episode takeaway card; series mark (clay tablet crossed by reed pen).",
+        "source_alignment": "candidate_adaptation_requires_review",
+        "received_truth_claim": "source_fact",
+        "status": "planning_only_no_render_acceptance"
+      }
+    ],
+    "dialogue_cues": [
+      {
+        "id": "NEN-01A",
+        "scene": "CH01-S01",
+        "speaker": "narrator",
+        "start": 0.6,
+        "end": 6.2,
+        "en": "In the Hall of Scripts, Shahrasp read fine silk writing through a polished crystal.",
+        "fa": "در تالار دبیره‌ها، شهراسپ نوشته‌های ریز ابریشم را از پشت بلوری صیقل‌خورده می‌خواند."
+      },
+      {
+        "id": "NEN-01B",
+        "scene": "CH01-S01",
+        "speaker": "narrator",
+        "start": 6.4,
+        "end": 11.6,
+        "en": "From every province, messages arrived — clay, leather, bark, and silk.",
+        "fa": "از هر استان پیام می‌رسید؛ گِل، چرم، پوستِ درخت و ابریشم."
+      },
+      {
+        "id": "NEN-02A",
+        "scene": "CH01-S02",
+        "speaker": "narrator",
+        "start": 12.5,
+        "end": 18.3,
+        "en": "One wet morning, a chapar — a courier of the relay roads — brought a tablet found beside the northern river.",
+        "fa": "یک صبح بارانی، چاپاری — پیکی از جاده‌های پیام‌رسانی — لوحی آورد که کنار رود شمالی یافته بودند."
+      },
+      {
+        "id": "NEN-02B",
+        "scene": "CH01-S02",
+        "speaker": "narrator",
+        "start": 18.5,
+        "end": 21.3,
+        "en": "One sentence. The seal had dissolved.",
+        "fa": "فقط یک جمله. مُهر لوح از میان رفته بود؛"
+      },
+      {
+        "id": "NEN-02C",
+        "scene": "CH01-S02",
+        "speaker": "narrator",
+        "start": 21.5,
+        "end": 27.6,
+        "en": "The chapar did not know who had carried it, or whom it was meant to reach.",
+        "fa": "چاپار نمی‌دانست چه کسی آن را حمل کرده یا قرار بود به دست چه کسی برسد."
+      },
+      {
+        "id": "NEN-03",
+        "scene": "CH01-S03",
+        "speaker": "narrator",
+        "start": 28.3,
+        "end": 32.3,
+        "en": "Tahmures set the tablet on a cedar stand, and asked three servants of the hall a simple question.",
+        "fa": "طهمورث لوح را روی پایه‌ای از چوب سرو گذاشت و از سه خدمت‌گزار تالار پرسشی ساده پرسید."
+      },
+      {
+        "id": "D-S03-1",
+        "scene": "CH01-S03",
+        "speaker": "tahmures",
+        "start": 32.8,
+        "end": 35.3,
+        "en": "Tell me what this is.",
+        "fa": "بگویید این چیست."
+      },
+      {
+        "id": "NEN-04",
+        "scene": "CH01-S04",
+        "speaker": "narrator",
+        "start": 38.3,
+        "end": 41.5,
+        "en": "Tahmures expected three descriptions of the same object.",
+        "fa": "طهمورث انتظار داشت سه توصیف از یک شیء بشنود."
+      },
+      {
+        "id": "D-S04-1",
+        "scene": "CH01-S04",
+        "speaker": "akvan_div",
+        "start": 42,
+        "end": 47.6,
+        "en": "It is an old command. The hand resembles Garshasp, a captain who served your father.",
+        "fa": "این فرمانی قدیمی است. دست‌خطش به خط گرشاسپ، یکی از سرداران زمان پدرتان، شباهت دارد."
+      },
+      {
+        "id": "D-S04-2",
+        "scene": "CH01-S04",
+        "speaker": "simurgh",
+        "start": 48.2,
+        "end": 50.9,
+        "en": "It is an urgent message. I will take it to Arash, the present captain.",
+        "fa": "این پیامی فوری است. آن را برای آرش، سردار کنونی، می‌برم."
+      },
+      {
+        "id": "NEN-05",
+        "scene": "CH01-S05",
+        "speaker": "narrator",
+        "start": 53.2,
+        "end": 55.8,
+        "en": "The Black Div returned at dusk, soaked to the waist.",
+        "fa": "دیو سیاه غروب بازگشت؛ لباسش تا کمر خیس بود."
+      },
+      {
+        "id": "D-S05-1",
+        "scene": "CH01-S05",
+        "speaker": "black_div",
+        "start": 56.2,
+        "end": 58.2,
+        "en": "There are eleven watchfires.",
+        "fa": "یازده آتش دیده‌بانی هست."
+      },
+      {
+        "id": "D-S05-2",
+        "scene": "CH01-S05",
+        "speaker": "tahmures",
+        "start": 58.6,
+        "end": 60.4,
+        "en": "You crossed the river?",
+        "fa": "از رود گذشتی؟"
+      },
+      {
+        "id": "D-S05-3",
+        "scene": "CH01-S05",
+        "speaker": "black_div",
+        "start": 60.8,
+        "end": 63,
+        "en": "The tablet said to count them.",
+        "fa": "لوح گفته بود آن‌ها را بشمارم."
+      },
+      {
+        "id": "D-S05-4",
+        "scene": "CH01-S05",
+        "speaker": "tahmures",
+        "start": 63.4,
+        "end": 65.4,
+        "en": "I asked what the tablet was.",
+        "fa": "من پرسیدم لوح چیست."
+      },
+      {
+        "id": "D-S05-5",
+        "scene": "CH01-S05",
+        "speaker": "black_div",
+        "start": 65.8,
+        "end": 67.7,
+        "en": "The tablet asked for a count.",
+        "fa": "لوح درخواست شمارش کرده بود."
+      },
+      {
+        "id": "NEN-06A",
+        "scene": "CH01-S06",
+        "speaker": "narrator",
+        "start": 68.4,
+        "end": 72.8,
+        "en": "The eleven fires proved to be charcoal burners, camped outside the frontier.",
+        "fa": "آن یازده آتش به زغال‌سازانی تعلق داشت که بیرون مرز اردو زده بودند."
+      },
+      {
+        "id": "NEN-06B",
+        "scene": "CH01-S06",
+        "speaker": "narrator",
+        "start": 73,
+        "end": 79.5,
+        "en": "Nothing written on the tablet was false — yet by midnight, three villages believed an invasion had begun.",
+        "fa": "هیچ‌یک از واژه‌های لوح دروغ نبود؛ اما تا نیمه‌شب، سه روستا باور کرده بودند تهاجمی آغاز شده است."
+      },
+      {
+        "id": "NEN-06C",
+        "scene": "CH01-S06",
+        "speaker": "narrator",
+        "start": 79.8,
+        "end": 84.6,
+        "en": "One line had become a record, a message, and a current command — all at once.",
+        "fa": "یک جمله هم‌زمان سند شد، پیام و فرمانی جاری."
+      },
+      {
+        "id": "NEN-07A",
+        "scene": "CH01-S07",
+        "speaker": "narrator",
+        "start": 85.3,
+        "end": 89.8,
+        "en": "Tahmures first ordered Shahrasp to make the instruction longer. The scribe sharpened his reed.",
+        "fa": "طهمورث ابتدا از شهراسپ خواست دستور را طولانی‌تر کند. دبیر قلم نی خود را تراشید."
+      },
+      {
+        "id": "D-S07-1",
+        "scene": "CH01-S07",
+        "speaker": "tahmures",
+        "start": 90.3,
+        "end": 96.5,
+        "en": "Write: Examine this tablet carefully, consider every word, and tell me exactly what it means.",
+        "fa": "بنویس: این لوح را با دقت بررسی کن، همهٔ واژه‌هایش را بسنج و دقیقاً بگو چه معنایی دارد."
+      },
+      {
+        "id": "D-S07-2",
+        "scene": "CH01-S07",
+        "speaker": "akvan_div",
+        "start": 97,
+        "end": 100.6,
+        "en": "That still leaves means to carry a large burden.",
+        "fa": "هنوز واژهٔ «معنا» باید بار بسیار سنگینی را حمل کند."
+      },
+      {
+        "id": "NEN-07B",
+        "scene": "CH01-S07",
+        "speaker": "narrator",
+        "start": 101.2,
+        "end": 104.8,
+        "en": "Tahmures stopped the reed. Length was not the missing piece.",
+        "fa": "طهمورث قلم را متوقف کرد. مشکل، کوتاهیِ جمله نبود."
+      },
+      {
+        "id": "NEN-07C",
+        "scene": "CH01-S07",
+        "speaker": "narrator",
+        "start": 105.3,
+        "end": 109,
+        "en": "Four labels: speaker, recipient, occasion, requested result.",
+        "fa": "چهار برچسب: گوینده، گیرنده، موقعیت، نتیجهٔ درخواستی."
+      },
+      {
+        "id": "NEN-07D",
+        "scene": "CH01-S07",
+        "speaker": "narrator",
+        "start": 109.5,
+        "end": 115.5,
+        "en": "Three were unknown. The fourth belonged to him — and went onto a separate, sealed card.",
+        "fa": "سه مورد نخست را نمی‌دانستند؛ چهارمی به خود او مربوط می‌شد — و روی کارتی جداگانه و مُهرشده نوشته شد."
+      },
+      {
+        "id": "NEN-08A",
+        "scene": "CH01-S08",
+        "speaker": "narrator",
+        "start": 116.4,
+        "end": 122.6,
+        "en": "Now roles could be tested. 'Close the western gate' was a current task when Arash the Gatekeeper sent it to the watch —",
+        "fa": "حالا نقش‌ها قابل آزمودن بودند. جملهٔ «دروازهٔ غربی را ببند» وقتی آرش، دروازه‌بان، آن را برای نگهبانان می‌فرستاد وظیفهٔ جاری بود؛"
+      },
+      {
+        "id": "NEN-08B",
+        "scene": "CH01-S08",
+        "speaker": "narrator",
+        "start": 122.8,
+        "end": 130.6,
+        "en": "evidence when quoted in a trial — and mere ink under a practising apprentice's hand.",
+        "fa": "وقتی در دادگاه نقل می‌شد، شاهد؛ و زیر دست شاگردِ تمرین‌کننده، چیزی جز جوهر."
+      },
+      {
+        "id": "NEN-09A",
+        "scene": "CH01-S09",
+        "speaker": "narrator",
+        "start": 131.4,
+        "end": 135.8,
+        "en": "A prompt is not one sentence. It's the complete, structured interaction an application assembles for a model:",
+        "fa": "پرامپت یک جمله نیست؛ تعامل کامل و ساخت‌یافته‌ای است که یک سامانه برای مدل می‌سازد:"
+      },
+      {
+        "id": "NEN-09B",
+        "scene": "CH01-S09",
+        "speaker": "narrator",
+        "start": 136,
+        "end": 144,
+        "en": "instructions, current task, context, data, examples, constraints, output contract, interaction state.",
+        "fa": "دستورها، وظیفهٔ جاری، کانتکست، داده، مثال‌ها، محدودیت‌ها، قرارداد خروجی و وضعیت تعامل."
+      },
+      {
+        "id": "NEN-09C",
+        "scene": "CH01-S09",
+        "speaker": "narrator",
+        "start": 144.4,
+        "end": 150.5,
+        "en": "Before judging the answer, record what each piece of language is doing here.",
+        "fa": "پیش از داوری دربارهٔ پاسخ، ثبت کنید هر قطعهٔ زبان در این‌جا چه می‌کند."
+      },
+      {
+        "id": "NEN-10A",
+        "scene": "CH01-S10",
+        "speaker": "narrator",
+        "start": 151.4,
+        "end": 155.8,
+        "en": "Tahmures sent a second message north, explaining the error.",
+        "fa": "طهمورث پیام دومی به شمال فرستاد و خطا را توضیح داد؛"
+      },
+      {
+        "id": "NEN-10B",
+        "scene": "CH01-S10",
+        "speaker": "narrator",
+        "start": 156,
+        "end": 160.8,
+        "en": "It was shorter than his proposed revision. It named the recipient, corrected the rumour, and asked for acknowledgement.",
+        "fa": "پیامی که از بازنویسی پیشنهادی‌اش کوتاه‌تر بود. گیرنده را نام می‌برد، شایعه را اصلاح می‌کرد و تأیید دریافت می‌خواست."
+      },
+      {
+        "id": "NEN-10C",
+        "scene": "CH01-S10",
+        "speaker": "narrator",
+        "start": 161,
+        "end": 165.4,
+        "en": "This time, the riders came home.",
+        "fa": "این‌بار سواران به خانه بازگشتند."
+      },
+      {
+        "id": "NEN-11",
+        "scene": "CH01-S11",
+        "speaker": "narrator",
+        "start": 166.4,
+        "end": 170.5,
+        "en": "Grammar suggests a role. It doesn't establish one.",
+        "fa": "دستور زبان نقشی را پیشنهاد می‌کند؛ اثباتش نمی‌کند."
+      }
+    ],
+    "programmatic_osts": [
+      {
+        "id": "OST-S01-1",
+        "scene": "CH01-S01",
+        "start": 0.6,
+        "end": 4.8,
+        "kind": "title",
+        "en": "The Three Readings",
+        "fa": "سه خوانش"
+      },
+      {
+        "id": "OST-S01-2",
+        "scene": "CH01-S01",
+        "start": 5,
+        "end": 11.8,
+        "kind": "panel_label",
+        "en": "The Hall of Scripts",
+        "fa": "تالار دبیره‌ها"
+      },
+      {
+        "id": "OST-S02-1",
+        "scene": "CH01-S02",
+        "start": 14,
+        "end": 27.5,
+        "kind": "tablet",
+        "en": "Count the watchfires beyond the water before moonrise.",
+        "fa": "پیش از برآمدن ماه، آتش‌های دیده‌بانی آن‌سوی آب را بشمار."
+      },
+      {
+        "id": "OST-S04-1",
+        "scene": "CH01-S04",
+        "start": 41.8,
+        "end": 47.8,
+        "kind": "panel_label",
+        "en": "Record",
+        "fa": "سند"
+      },
+      {
+        "id": "OST-S04-2",
+        "scene": "CH01-S04",
+        "start": 48,
+        "end": 50.8,
+        "kind": "panel_label",
+        "en": "Urgent message",
+        "fa": "پیام فوری"
+      },
+      {
+        "id": "OST-S04-3",
+        "scene": "CH01-S04",
+        "start": 51.2,
+        "end": 52.8,
+        "kind": "panel_label",
+        "en": "Direct imperative",
+        "fa": "فرمان بی‌واسطه"
+      },
+      {
+        "id": "OST-S07-1",
+        "scene": "CH01-S07",
+        "start": 106,
+        "end": 108.2,
+        "kind": "label_tick",
+        "en": "Speaker: Unknown (?)",
+        "fa": "گوینده: نامشخص (؟)"
+      },
+      {
+        "id": "OST-S07-2",
+        "scene": "CH01-S07",
+        "start": 108.4,
+        "end": 110.6,
+        "kind": "label_tick",
+        "en": "Recipient: Unknown (?)",
+        "fa": "گیرنده: نامشخص (؟)"
+      },
+      {
+        "id": "OST-S07-3",
+        "scene": "CH01-S07",
+        "start": 110.8,
+        "end": 113,
+        "kind": "label_tick",
+        "en": "Occasion: Unknown (?)",
+        "fa": "موقعیت: نامشخص (؟)"
+      },
+      {
+        "id": "OST-S07-4",
+        "scene": "CH01-S07",
+        "start": 113.2,
+        "end": 115.4,
+        "kind": "label_tick",
+        "en": "Requested result: classify the object and identify missing context",
+        "fa": "نتیجهٔ درخواستی: طبقه‌بندی شیء و مشخص‌کردن اطلاعات گمشده",
+        "boundary_note": "The physical card is separate; its seal does not prove identity or authority."
+      },
+      {
+        "id": "OST-S08-0",
+        "scene": "CH01-S08",
+        "start": 116.8,
+        "end": 122.4,
+        "kind": "tablet",
+        "en": "Close the western gate",
+        "fa": "دروازهٔ غربی را ببند"
+      },
+      {
+        "id": "OST-S08-1",
+        "scene": "CH01-S08",
+        "start": 117,
+        "end": 122.2,
+        "kind": "panel_label",
+        "en": "Role A: Operational Task (Arash to Watch)",
+        "fa": "نقش ۱: وظیفهٔ عملیاتی (آرش به دیده‌بان)"
+      },
+      {
+        "id": "OST-S08-2",
+        "scene": "CH01-S08",
+        "start": 122.6,
+        "end": 126.8,
+        "kind": "panel_label",
+        "en": "Role B: Quoted Trial Evidence",
+        "fa": "نقش ۲: شاهد و سند دادگاه"
+      },
+      {
+        "id": "OST-S08-3",
+        "scene": "CH01-S08",
+        "start": 127,
+        "end": 130.6,
+        "kind": "panel_label",
+        "en": "Role C: Scribal Apprentice Drill",
+        "fa": "نقش ۳: تمرین خطاطی شاگرد"
+      },
+      {
+        "id": "OST-S09-1",
+        "scene": "CH01-S09",
+        "start": 136.2,
+        "end": 150.8,
+        "kind": "formula",
+        "en": "Prompt = Instructions + Current Task + Context + Data + Examples + Constraints + Output Contract + Interaction State",
+        "fa": "پرامپت = دستورها + وظیفهٔ جاری + کانتکست + داده + مثال‌ها + محدودیت‌ها + قرارداد خروجی + وضعیت تعامل"
+      },
+      {
+        "id": "OST-S09-2",
+        "scene": "CH01-S09",
+        "start": 144.4,
+        "end": 150.8,
+        "kind": "review_line",
+        "en": "Before judging the answer, record what each piece of language is doing here.",
+        "fa": "پیش از داوری دربارهٔ پاسخ، ثبت کن هر قطعهٔ زبان در این‌جا چه می‌کند."
+      },
+      {
+        "id": "OST-S11-1",
+        "scene": "CH01-S11",
+        "start": 166.6,
+        "end": 172.6,
+        "kind": "ledger_line",
+        "en": "Shahrasp's Ledger: Before judging the answer, record what each piece of language is doing here.",
+        "fa": "دفتر ثبت شهراسپ: پیش از داوری دربارهٔ پاسخ، ثبت کن هر قطعهٔ زبان در این‌جا چه کاری انجام می‌دهد."
+      },
+      {
+        "id": "OST-S11-2",
+        "scene": "CH01-S11",
+        "start": 169.8,
+        "end": 173,
+        "kind": "takeaway",
+        "en": "Grammar suggests a role. It doesn't establish one.",
+        "fa": "دستور زبان نقشی را پیشنهاد می‌کند؛ اثباتش نمی‌کند."
+      }
+    ],
+    "speaker_registry": {
+      "narrator": {
+        "en": "Narrator",
+        "fa": "راوی",
+        "color": "text-amber-300",
+        "avatar": "📜"
+      },
+      "tahmures": {
+        "en": "Tahmures",
+        "fa": "طهمورث",
+        "color": "text-blue-400",
+        "avatar": "/Characters/godot-character-library-recovery-01/previews/godot/tahmures-neutral.png"
+      },
+      "akvan_div": {
+        "en": "Akvan Div",
+        "fa": "اکوان دیو",
+        "color": "text-emerald-400",
+        "avatar": "/Characters/godot-character-library-recovery-01/previews/godot/akvan_div-neutral.png"
+      },
+      "simurgh": {
+        "en": "Simurgh",
+        "fa": "سیمرغ",
+        "color": "text-purple-400",
+        "avatar": "/Characters/godot-character-library-recovery-01/previews/godot/simurgh_bird-neutral.png"
+      },
+      "black_div": {
+        "en": "Black Div",
+        "fa": "دیو سیاه",
+        "color": "text-slate-300",
+        "avatar": "/Characters/godot-character-library-recovery-01/previews/godot/black_div-neutral.png"
+      },
+      "chapar": {
+        "en": "Chapar",
+        "fa": "چاپار",
+        "color": "text-yellow-500",
+        "avatar": "/Characters/godot-character-library-recovery-01/previews/godot/chapar-neutral.png"
+      },
+      "shahrasp": {
+        "en": "Shahrasp",
+        "fa": "شهراسپ",
+        "color": "text-teal-400",
+        "avatar": "/Characters/godot-character-library-recovery-01/previews/godot/shahrasp-neutral.png"
+      },
+      "arash": {
+        "en": "Arash",
+        "fa": "آرش",
+        "color": "text-red-400",
+        "avatar": "/Characters/godot-character-library-recovery-01/previews/godot/arash-neutral.png"
+      }
+    }
+  },
+  "decisions_pending": [
+    "Simurgh chapter form: human or bird (prepare both; do not select automatically)",
+    "Anatomical extraction/joint/prop review of actual new assets",
+    "Owner review of hall layout/art and of any reconstructed surfaces",
+    "Owner voice/performance and optional mouth behavior"
+  ],
+  "environments": [
+    {
+      "id": "ENV-HALL",
+      "title": "Hall of Scripts",
+      "status": "design_brief_only_art_missing",
+      "classification": "TIER_C_PROJECT_FICTION_STAGING_PROPOSAL",
+      "views": [
+        "wide",
+        "threshold",
+        "intake",
+        "cedar_stand",
+        "catalogue",
+        "worktable",
+        "scribal_bench"
+      ],
+      "lighting_variants": [
+        "dawn",
+        "wet_morning",
+        "morning",
+        "dusk",
+        "lamplight"
+      ],
+      "visual_requirements": [
+        "One stable floor plan reused across scenes: intake near entrance, cedar stand centrally, catalogue wall behind worktable.",
+        "Message materials, crystal lens, reed and ledger explain the work. No decorative door-count or unlike-handle motif.",
+        "Eye-level three-quarter staging matches source character art; top-down inserts show props only.",
+        "Ordinary entrance allowed as functional staging; architecture is a proposed illustration, not a historical reconstruction."
+      ],
+      "required_deliverables": [
+        "editable layered source",
+        "clean background PNG",
+        "transparent foreground/occluder PNGs",
+        "layout and ground-line JSON",
+        "light/dark/caption-zone contact sheet",
+        "provenance and actual review record"
+      ]
+    },
+    {
+      "id": "ENV-POST",
+      "title": "Northern frontier post",
+      "status": "design_brief_only_art_missing",
+      "classification": "TIER_C_PROJECT_FICTION_STAGING_PROPOSAL",
+      "views": [
+        "delivery",
+        "rider_departure"
+      ],
+      "lighting_variants": [
+        "night"
+      ],
+      "visual_requirements": [
+        "Clear arrival/handoff zone and road exit; Simurgh delivery visibly precedes Arash dispatch.",
+        "Readable silhouettes without battle banners or an actual invading army."
+      ],
+      "required_deliverables": [
+        "editable layered source",
+        "clean background PNG",
+        "transparent foreground/occluder PNGs",
+        "layout and ground-line JSON",
+        "light/dark/caption-zone contact sheet",
+        "provenance and actual review record"
+      ]
+    },
+    {
+      "id": "ENV-VILLAGE",
+      "title": "Frontier village",
+      "status": "design_brief_only_art_missing",
+      "classification": "TIER_C_PROJECT_FICTION_STAGING_PROPOSAL",
+      "views": [
+        "village_wide"
+      ],
+      "lighting_variants": [
+        "night_alarm",
+        "dawn_calm"
+      ],
+      "visual_requirements": [
+        "Three distinct village panels share an architectural kit; uncertainty is shown through lamps and alert movement, not attack.",
+        "Anonymous villagers are separate extra assets; do not duplicate a named hero as a crowd."
+      ],
+      "required_deliverables": [
+        "editable layered source",
+        "clean background PNG",
+        "transparent foreground/occluder PNGs",
+        "layout and ground-line JSON",
+        "light/dark/caption-zone contact sheet",
+        "provenance and actual review record"
+      ]
+    },
+    {
+      "id": "ENV-CAMP",
+      "title": "Charcoal-burner camp beyond the frontier",
+      "status": "design_brief_only_art_missing",
+      "classification": "TIER_C_PROJECT_FICTION_STAGING_PROPOSAL",
+      "views": [
+        "camp_wide",
+        "fire_insert"
+      ],
+      "lighting_variants": [
+        "night"
+      ],
+      "visual_requirements": [
+        "Eleven fire instances controlled in scene data, with smoke/embers as separate effect layers.",
+        "Occupational camp, charcoal baskets and calm work; no enemies or military watchtowers implied."
+      ],
+      "required_deliverables": [
+        "editable layered source",
+        "clean background PNG",
+        "transparent foreground/occluder PNGs",
+        "layout and ground-line JSON",
+        "light/dark/caption-zone contact sheet",
+        "provenance and actual review record"
+      ]
+    },
+    {
+      "id": "ENV-GATE",
+      "title": "Western gate",
+      "status": "design_brief_only_art_missing",
+      "classification": "TIER_C_PROJECT_FICTION_STAGING_PROPOSAL",
+      "views": [
+        "gate_and_watch"
+      ],
+      "lighting_variants": [
+        "day"
+      ],
+      "visual_requirements": [
+        "Ordinary operational gate for the contextual-command vignette, unrelated to the removed hall-door motif.",
+        "Room for Arash and anonymous watch; text stays in programmatic overlay."
+      ],
+      "required_deliverables": [
+        "editable layered source",
+        "clean background PNG",
+        "transparent foreground/occluder PNGs",
+        "layout and ground-line JSON",
+        "light/dark/caption-zone contact sheet",
+        "provenance and actual review record"
+      ]
+    },
+    {
+      "id": "ENV-COURT",
+      "title": "Court evidence vignette",
+      "status": "design_brief_only_art_missing",
+      "classification": "TIER_C_PROJECT_FICTION_STAGING_PROPOSAL",
+      "views": [
+        "evidence_table"
+      ],
+      "lighting_variants": [
+        "day"
+      ],
+      "visual_requirements": [
+        "Quoted instruction sits as an exhibit, not a current order.",
+        "Restrained hearing space and anonymous attendants; no invented judgement or punishment."
+      ],
+      "required_deliverables": [
+        "editable layered source",
+        "clean background PNG",
+        "transparent foreground/occluder PNGs",
+        "layout and ground-line JSON",
+        "light/dark/caption-zone contact sheet",
+        "provenance and actual review record"
+      ]
+    },
+    {
+      "id": "ENV-FORD",
+      "title": "Northern road and ford",
+      "status": "design_brief_only_art_missing",
+      "classification": "TIER_C_PROJECT_FICTION_STAGING_PROPOSAL",
+      "views": [
+        "road",
+        "ford_return"
+      ],
+      "lighting_variants": [
+        "dawn"
+      ],
+      "visual_requirements": [
+        "A legible shallow crossing and return direction; no newly invented water accident.",
+        "Horses/riders and ripples are separate reusable assets; consistent horizon and scale."
+      ],
+      "required_deliverables": [
+        "editable layered source",
+        "clean background PNG",
+        "transparent foreground/occluder PNGs",
+        "layout and ground-line JSON",
+        "light/dark/caption-zone contact sheet",
+        "provenance and actual review record"
+      ]
+    },
+    {
+      "id": "ENV-OVERLAY",
+      "title": "Engineering explanation stage",
+      "status": "design_brief_only_art_missing",
+      "classification": "TIER_C_PROJECT_FICTION_STAGING_PROPOSAL",
+      "views": [
+        "slate",
+        "end_card"
+      ],
+      "lighting_variants": [
+        "neutral"
+      ],
+      "visual_requirements": [
+        "Code-native flat stage, not a story location or painted computer screen.",
+        "Eight components have equal visual weight; no seal icons or implied security hierarchy."
+      ],
+      "required_deliverables": [
+        "editable layered source",
+        "clean background PNG",
+        "transparent foreground/occluder PNGs",
+        "layout and ground-line JSON",
+        "light/dark/caption-zone contact sheet",
+        "provenance and actual review record"
+      ]
+    }
+  ],
+  "scene_asset_map": [
+    {
+      "scene": "CH01-S01",
+      "backgrounds": [
+        {
+          "environment": "ENV-HALL",
+          "view": "wide",
+          "lighting": "dawn"
+        }
+      ],
+      "prop_assets": [
+        "PROP-MESSAGES",
+        "PROP-CRYSTAL"
+      ],
+      "extras_or_effects": [],
+      "staging_requirement": "Establish incoming work and readable source materials."
+    },
+    {
+      "scene": "CH01-S02",
+      "backgrounds": [
+        {
+          "environment": "ENV-HALL",
+          "view": "intake",
+          "lighting": "wet_morning"
+        }
+      ],
+      "prop_assets": [
+        "PROP-RIVER-TABLET",
+        "PROP-SEAL-TRACE"
+      ],
+      "extras_or_effects": [
+        "FX-RAIN"
+      ],
+      "staging_requirement": "Chapar delivers the found record; the earlier carrier/recipient remain unknown."
+    },
+    {
+      "scene": "CH01-S03",
+      "backgrounds": [
+        {
+          "environment": "ENV-HALL",
+          "view": "cedar_stand",
+          "lighting": "morning"
+        }
+      ],
+      "prop_assets": [
+        "PROP-RIVER-TABLET",
+        "PROP-CRYSTAL"
+      ],
+      "extras_or_effects": [],
+      "staging_requirement": "Keep all three recipients and the underspecified question visible."
+    },
+    {
+      "scene": "CH01-S04",
+      "backgrounds": [
+        {
+          "environment": "ENV-HALL",
+          "view": "catalogue",
+          "lighting": "morning"
+        },
+        {
+          "environment": "ENV-HALL",
+          "view": "intake",
+          "lighting": "morning"
+        },
+        {
+          "environment": "ENV-HALL",
+          "view": "threshold",
+          "lighting": "morning"
+        }
+      ],
+      "prop_assets": [
+        "PROP-CATALOGUE",
+        "PROP-OILCLOTH",
+        "PROP-RIVER-TABLET"
+      ],
+      "extras_or_effects": [],
+      "staging_requirement": "Record, urgent message and current command are interpretations of the same sentence."
+    },
+    {
+      "scene": "CH01-S05",
+      "backgrounds": [
+        {
+          "environment": "ENV-HALL",
+          "view": "worktable",
+          "lighting": "dusk"
+        }
+      ],
+      "prop_assets": [
+        "PROP-RIVER-TABLET"
+      ],
+      "extras_or_effects": [
+        "FX-WET-CLOTH"
+      ],
+      "staging_requirement": "Five-line exchange; Black Div reports his action without villain framing."
+    },
+    {
+      "scene": "CH01-S06",
+      "backgrounds": [
+        {
+          "environment": "ENV-POST",
+          "view": "delivery",
+          "lighting": "night"
+        },
+        {
+          "environment": "ENV-POST",
+          "view": "rider_departure",
+          "lighting": "night"
+        },
+        {
+          "environment": "ENV-VILLAGE",
+          "view": "village_wide",
+          "lighting": "night_alarm"
+        },
+        {
+          "environment": "ENV-CAMP",
+          "view": "camp_wide",
+          "lighting": "night"
+        }
+      ],
+      "prop_assets": [
+        "PROP-PACKET",
+        "PROP-CAMP-KIT"
+      ],
+      "extras_or_effects": [
+        "EXTRA-RIDERS",
+        "EXTRA-VILLAGERS",
+        "EXTRA-CHARCOAL-BURNERS",
+        "FX-FIRE-SMOKE"
+      ],
+      "staging_requirement": "Ordered beats: delivery, dispatch, three alarmed villages, calm eleven-fire camp."
+    },
+    {
+      "scene": "CH01-S07",
+      "backgrounds": [
+        {
+          "environment": "ENV-HALL",
+          "view": "worktable",
+          "lighting": "lamplight"
+        }
+      ],
+      "prop_assets": [
+        "PROP-REED-LEDGER",
+        "PROP-FOUR-LABELS",
+        "PROP-REQUEST-CARD"
+      ],
+      "extras_or_effects": [
+        "EXTRA-SCRIBE-HAND-INSERT"
+      ],
+      "staging_requirement": "Requested result is classification and missing information; separate card is not authentication."
+    },
+    {
+      "scene": "CH01-S08",
+      "backgrounds": [
+        {
+          "environment": "ENV-GATE",
+          "view": "gate_and_watch",
+          "lighting": "day"
+        },
+        {
+          "environment": "ENV-COURT",
+          "view": "evidence_table",
+          "lighting": "day"
+        },
+        {
+          "environment": "ENV-HALL",
+          "view": "scribal_bench",
+          "lighting": "morning"
+        }
+      ],
+      "prop_assets": [
+        "PROP-GATE-ORDER",
+        "PROP-EVIDENCE-EXHIBIT",
+        "PROP-PRACTICE-SHEET"
+      ],
+      "extras_or_effects": [
+        "EXTRA-WATCH",
+        "EXTRA-COURT",
+        "EXTRA-APPRENTICE"
+      ],
+      "staging_requirement": "The same words have different contextual roles. Keep the physical western gate."
+    },
+    {
+      "scene": "CH01-S09",
+      "backgrounds": [
+        {
+          "environment": "ENV-OVERLAY",
+          "view": "slate",
+          "lighting": "neutral"
+        }
+      ],
+      "prop_assets": [
+        "GRAPH-REQUEST-ENVELOPE"
+      ],
+      "extras_or_effects": [],
+      "staging_requirement": "Eight peer components; deterministic application owns enforcement."
+    },
+    {
+      "scene": "CH01-S10",
+      "backgrounds": [
+        {
+          "environment": "ENV-HALL",
+          "view": "threshold",
+          "lighting": "dawn"
+        },
+        {
+          "environment": "ENV-FORD",
+          "view": "ford_return",
+          "lighting": "dawn"
+        },
+        {
+          "environment": "ENV-VILLAGE",
+          "view": "village_wide",
+          "lighting": "dawn_calm"
+        }
+      ],
+      "prop_assets": [
+        "PROP-CORRECTION-MESSAGE"
+      ],
+      "extras_or_effects": [
+        "EXTRA-RIDERS",
+        "EXTRA-VILLAGERS"
+      ],
+      "staging_requirement": "Named recipient, corrected rumour, acknowledgement requested; Simurgh carrier remains a staging proposal."
+    },
+    {
+      "scene": "CH01-S11",
+      "backgrounds": [
+        {
+          "environment": "ENV-HALL",
+          "view": "worktable",
+          "lighting": "lamplight"
+        },
+        {
+          "environment": "ENV-OVERLAY",
+          "view": "end_card",
+          "lighting": "neutral"
+        }
+      ],
+      "prop_assets": [
+        "PROP-REED-LEDGER",
+        "GRAPH-SERIES-MARK"
+      ],
+      "extras_or_effects": [],
+      "staging_requirement": "Ledger recap insert and takeaway; do not imply another night after the dawn return."
+    }
+  ],
+  "production_bundles": [
+    {
+      "id": "B01-CHARACTERS",
+      "status": "existing_candidates_not_qualified",
+      "deliverables": [
+        "real contours/masks per character",
+        "safe limited joints",
+        "coupled prop accounting",
+        "Godot scenes and source comparisons"
+      ],
+      "gate": "Akvan task 01 passes Codex technical/visual review before repeating for the other characters."
+    },
+    {
+      "id": "B02-ENVIRONMENTS",
+      "status": "missing_art_briefs_prepared",
+      "deliverables": [
+        "eight reusable sets and required views/lighting variants",
+        "floor plans, horizon, ground lines and occluders",
+        "scene-mapping manifest"
+      ],
+      "gate": "First ENV-HALL wide candidate reviewed against actual supplied character art."
+    },
+    {
+      "id": "B03-PROPS",
+      "status": "scene_ready_separable_assets_missing",
+      "deliverables": [
+        "PROP-CAMP-KIT",
+        "PROP-CATALOGUE",
+        "PROP-CORRECTION-MESSAGE",
+        "PROP-CRYSTAL",
+        "PROP-EVIDENCE-EXHIBIT",
+        "PROP-FOUR-LABELS",
+        "PROP-GATE-ORDER",
+        "PROP-MESSAGES",
+        "PROP-OILCLOTH",
+        "PROP-PACKET",
+        "PROP-PRACTICE-SHEET",
+        "PROP-REED-LEDGER",
+        "PROP-REQUEST-CARD",
+        "PROP-RIVER-TABLET",
+        "PROP-SEAL-TRACE"
+      ],
+      "gate": "Same river tablet identity across shots; no duplicated held prop or invented hidden surfaces."
+    },
+    {
+      "id": "B04-EXTRAS-FX",
+      "status": "missing_or_unverified",
+      "deliverables": [
+        "EXTRA-APPRENTICE",
+        "EXTRA-CHARCOAL-BURNERS",
+        "EXTRA-COURT",
+        "EXTRA-RIDERS",
+        "EXTRA-SCRIBE-HAND-INSERT",
+        "EXTRA-VILLAGERS",
+        "EXTRA-WATCH",
+        "FX-FIRE-SMOKE",
+        "FX-RAIN",
+        "FX-WET-CLOTH"
+      ],
+      "gate": "Three villages, eleven fires, delivery-before-dispatch; named cast not used as substitute crowds."
+    },
+    {
+      "id": "B05-BOARD-CAMERA",
+      "status": "missing",
+      "deliverables": [
+        "11-scene storyboard with S06/S08 subshots",
+        "safe framing and ground coordinates",
+        "camera and prop interaction blocking",
+        "neutral reset/seek behavior"
+      ],
+      "gate": "One approved 12-second S01 integration test before the full chapter."
+    },
+    {
+      "id": "B06-TEXT-GRAPHICS",
+      "status": "text_candidates_only",
+      "deliverables": [
+        "34 reviewed bilingual cues",
+        "18 reviewed OST entries",
+        "tested Persian-capable font and licence",
+        "eight-peer diagram and series mark",
+        "caption positions/durations"
+      ],
+      "gate": "Fix S07 result and receiver-underlay ordering; inspect Persian shaping/RTL and label scope."
+    },
+    {
+      "id": "B07-AUDIO",
+      "status": "owner_recordings_and_timing_missing",
+      "deliverables": [
+        "approved EN and FA recordings",
+        "verbatim transcripts and timed VTT",
+        "ambient/effect tracks with provenance",
+        "language routing and mouth decision"
+      ],
+      "gate": "Human listening/performance approval; no automatic fabricated voice or claimed phoneme lip-sync."
+    },
+    {
+      "id": "B08-GODOT",
+      "status": "export_declared_files_missing",
+      "deliverables": [
+        "real chapter scene and director",
+        "validated asset loader and contracts",
+        "audio buses",
+        "runtime scene/reset/caption tests"
+      ],
+      "gate": "Use actual local Godot toolchain; declared 4.3 compatibility is not tested compatibility."
+    },
+    {
+      "id": "B09-RELEASE",
+      "status": "not_ready",
+      "deliverables": [
+        "all-file hashes and provenance/licences",
+        "actual full EN/FA renders and ffprobe evidence",
+        "recorded Codex and owner reviews",
+        "standalone package plus editorial release checks"
+      ],
+      "gate": "Media acceptance, owner art/audio approval and repository release gate remain distinct."
+    }
+  ],
+  "layout_contract": {
+    "reference_viewport": [
+      1280,
+      720
+    ],
+    "art_canvas_proposal": [
+      1920,
+      1080
+    ],
+    "coordinate_policy": "Top-left pixels in 1280x720 reference space; scale backgrounds uniformly; source character canvases retain their native dimensions.",
+    "caption_safe_rect": [
+      64,
+      600,
+      1152,
+      104
+    ],
+    "story_action_rect": [
+      64,
+      64,
+      1152,
+      512
+    ],
+    "default_character_ground_y": 552,
+    "camera": "eye_level_three_quarter",
+    "final_debug_hud": false,
+    "text_baked_into_art": false,
+    "layer_order": [
+      "far_architecture",
+      "midground_set",
+      "character_and_prop_interaction",
+      "foreground_occluders",
+      "effects",
+      "programmatic_overlays",
+      "captions"
+    ],
+    "all_values": "proposed_until_actual_composite_review; captions must never hide the interaction"
+  },
+  "next_tasks": [
+    "Return missing Akvan implementation assets/code, not another certification JSON.",
+    "Prepare ENV-HALL floor plan and one wide neutral-light design candidate in parallel; no paid/image service action implied.",
+    "After character/set reviews, assemble and inspect S01 only before extending the chapter."
+  ]
+}

@@ -15,7 +15,7 @@ learning_objectives:
 prerequisites: [C01, C03]
 language: "fa"
 translation_of: "part-1/04-anatomy-of-a-reliable-prompt.md"
-source_sha256: "f75fbbaf0a379aa393b4999ad55c72cedd41c0b7e882a1a8184ea486612253d3"
+source_sha256: "37c14f5d0aa031bfad6716af998cad88f73d1073414afe330ffd38211ffc85e2"
 translation_status: "draft"
 last_translated: "2026-07-30"
 ---

@@ -30,6 +30,14 @@ request ignored upload archives, duplicate extractions, movie renders or
 files/patches and the completed return template; if separately authorized to sync,
 provide the actual result commit. Prose or Canvas references alone are insufficient.
 
+## Prior return: not accepted
+
+The owner supplied `tahmures_complete_studio_bundle.json`, which declares all ten
+rigs certified but returns no new Akvan contour masks, extracted PNGs, code or
+execution evidence. Read `2026-10-20-studio-bundle-review.md` in this handoff
+folder. Return the actual required implementation below; do not repeat a
+readiness score, change all characters or replace measured metadata with claims.
+
 ## Problem
 
 The Gemini web package used overlapping rectangular windows to assign pixels.

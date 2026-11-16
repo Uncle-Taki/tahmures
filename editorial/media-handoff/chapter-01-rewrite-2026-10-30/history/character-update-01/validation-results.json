@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "date": "2026-10-30",
+  "editorial_scenes": 11,
+  "original_author_scenes": 8,
+  "paired_blocks": 114,
+  "shots_per_branch": 44,
+  "spoken_cues_per_language": 66,
+  "physical_character_copies": 14,
+  "protected_sources_unchanged": 203,
+  "errors": [],
+  "limits": "Structure/hash/path/text audits plus separate machine bilingual read-through; not human approval, runtime measurement or moving-image/lip-sync validation."
+}

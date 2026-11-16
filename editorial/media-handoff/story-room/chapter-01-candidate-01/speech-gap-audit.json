@@ -1,0 +1,314 @@
+{
+  "status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+  "approval_status": "PROPOSAL",
+  "owner_approved": false,
+  "gaps": [
+    {
+      "scene": "S01",
+      "cue_id": "NEN-01A",
+      "source_speech_end": 9.36,
+      "source_next_speech_or_scene_end": 9.76,
+      "available_speech_free_seconds": 0.40000000000000036,
+      "artistic_silence": "UNKNOWN",
+      "candidate_silence": "TBD"
+    },
+    {
+      "scene": "S01",
+      "cue_id": "NEN-01B",
+      "source_speech_end": 17.2,
+      "source_next_speech_or_scene_end": 17.8,
+      "available_speech_free_seconds": 0.6000000000000014,
+      "artistic_silence": "UNKNOWN",
+      "candidate_silence": "TBD"
+    },
+    {
+      "scene": "S02",
+      "cue_id": "NEN-02A",
+      "source_speech_end": 27.18,
+      "source_next_speech_or_scene_end": 27.580000000000002,
+      "available_speech_free_seconds": 0.40000000000000213,
+      "artistic_silence": "UNKNOWN",
+      "candidate_silence": "TBD"
+    },
+    {
+      "scene": "S02",
+      "cue_id": "NEN-02B",
+      "source_speech_end": 31.42,
+      "source_next_speech_or_scene_end": 31.82,
+      "available_speech_free_seconds": 0.3999999999999986,
+      "artistic_silence": "UNKNOWN",
+      "candidate_silence": "TBD"
+    },
+    {
+      "scene": "S02",
+      "cue_id": "NEN-02C",
+      "source_speech_end": 37.62,
+      "source_next_speech_or_scene_end": 38.333333333333336,
+      "available_speech_free_seconds": 0.7133333333333383,
+      "artistic_silence": "UNKNOWN",
+      "candidate_silence": "TBD"
+    },
+    {
+      "scene": "S03",
+      "cue_id": "NEN-03",
+      "source_speech_end": 44.95333333333333,
+      "source_next_speech_or_scene_end": 45.653333333333336,
+      "available_speech_free_seconds": 0.7000000000000028,
+      "artistic_silence": "UNKNOWN",
+      "candidate_silence": "TBD"
+    },
+    {
+      "scene": "S03",
+      "cue_id": "D-S03-1",
+      "source_speech_end": 48.13333333333333,
+      "source_next_speech_or_scene_end": 57.53333333333333,
+      "available_speech_free_seconds": 9.399999999999999,
+      "artistic_silence": "UNKNOWN",
+      "candidate_silence": "TBD"
+    },
+    {
+      "scene": "S04",
+      "cue_id": "NEN-04",
+      "source_speech_end": 62.39333333333333,
+      "source_next_speech_or_scene_end": 63.093333333333334,
+      "available_speech_free_seconds": 0.7000000000000028,
+      "artistic_silence": "UNKNOWN",
+      "candidate_silence": "TBD"
+    },
+    {
+      "scene": "S04",
+      "cue_id": "D-S04-1",
+      "source_speech_end": 70.17333333333333,
+      "source_next_speech_or_scene_end": 71.97333333333333,
+      "available_speech_free_seconds": 1.7999999999999972,
+      "artistic_silence": "UNKNOWN",
+      "candidate_silence": "TBD"
+    },
+    {
+      "scene": "S04",
+      "cue_id": "D-S04-2",
+      "source_speech_end": 76.05333333333333,
+      "source_next_speech_or_scene_end": 85.8,
+      "available_speech_free_seconds": 9.74666666666667,
+      "artistic_silence": "UNKNOWN",
+      "candidate_silence": "TBD"
+    },
+    {
+      "scene": "S05",
+      "cue_id": "NEN-05",
+      "source_speech_end": 90.48,
+      "source_next_speech_or_scene_end": 91.08,
+      "available_speech_free_seconds": 0.5999999999999943,
+      "artistic_silence": "UNKNOWN",
+      "candidate_silence": "TBD"
+    },
+    {
+      "scene": "S05",
+      "cue_id": "D-S05-1",
+      "source_speech_end": 94.0,
+      "source_next_speech_or_scene_end": 94.6,
+      "available_speech_free_seconds": 0.5999999999999943,
+      "artistic_silence": "UNKNOWN",
+      "candidate_silence": "TBD"
+    },
+    {
+      "scene": "S05",
+      "cue_id": "D-S05-2",
+      "source_speech_end": 96.64,
+      "source_next_speech_or_scene_end": 97.24,
+      "available_speech_free_seconds": 0.5999999999999943,
+      "artistic_silence": "UNKNOWN",
+      "candidate_silence": "TBD"
+    },
+    {
+      "scene": "S05",
+      "cue_id": "D-S05-3",
+      "source_speech_end": 99.39999999999999,
+      "source_next_speech_or_scene_end": 100.0,
+      "available_speech_free_seconds": 0.6000000000000085,
+      "artistic_silence": "UNKNOWN",
+      "candidate_silence": "TBD"
+    },
+    {
+      "scene": "S05",
+      "cue_id": "D-S05-4",
+      "source_speech_end": 103.24,
+      "source_next_speech_or_scene_end": 103.84,
+      "available_speech_free_seconds": 0.6000000000000085,
+      "artistic_silence": "UNKNOWN",
+      "candidate_silence": "TBD"
+    },
+    {
+      "scene": "S05",
+      "cue_id": "D-S05-5",
+      "source_speech_end": 105.92,
+      "source_next_speech_or_scene_end": 106.43333333333334,
+      "available_speech_free_seconds": 0.5133333333333354,
+      "artistic_silence": "UNKNOWN",
+      "candidate_silence": "TBD"
+    },
+    {
+      "scene": "S06",
+      "cue_id": "NEN-06B",
+      "source_speech_end": 114.99333333333334,
+      "source_next_speech_or_scene_end": 115.39333333333333,
+      "available_speech_free_seconds": 0.3999999999999915,
+      "artistic_silence": "UNKNOWN",
+      "candidate_silence": "TBD"
+    },
+    {
+      "scene": "S06",
+      "cue_id": "NEN-06C",
+      "source_speech_end": 122.71333333333334,
+      "source_next_speech_or_scene_end": 123.21333333333334,
+      "available_speech_free_seconds": 0.5,
+      "artistic_silence": "UNKNOWN",
+      "candidate_silence": "TBD"
+    },
+    {
+      "scene": "S06",
+      "cue_id": "NEN-06A",
+      "source_speech_end": 129.37333333333333,
+      "source_next_speech_or_scene_end": 130.2,
+      "available_speech_free_seconds": 0.8266666666666538,
+      "artistic_silence": "UNKNOWN",
+      "candidate_silence": "TBD"
+    },
+    {
+      "scene": "S07",
+      "cue_id": "NEN-07A",
+      "source_speech_end": 137.86,
+      "source_next_speech_or_scene_end": 138.56,
+      "available_speech_free_seconds": 0.6999999999999886,
+      "artistic_silence": "UNKNOWN",
+      "candidate_silence": "TBD"
+    },
+    {
+      "scene": "S07",
+      "cue_id": "D-S07-1",
+      "source_speech_end": 147.16,
+      "source_next_speech_or_scene_end": 147.85999999999999,
+      "available_speech_free_seconds": 0.6999999999999886,
+      "artistic_silence": "UNKNOWN",
+      "candidate_silence": "TBD"
+    },
+    {
+      "scene": "S07",
+      "cue_id": "D-S07-2",
+      "source_speech_end": 152.1,
+      "source_next_speech_or_scene_end": 152.89999999999998,
+      "available_speech_free_seconds": 0.799999999999983,
+      "artistic_silence": "UNKNOWN",
+      "candidate_silence": "TBD"
+    },
+    {
+      "scene": "S07",
+      "cue_id": "NEN-07B",
+      "source_speech_end": 157.57999999999998,
+      "source_next_speech_or_scene_end": 158.27999999999997,
+      "available_speech_free_seconds": 0.6999999999999886,
+      "artistic_silence": "UNKNOWN",
+      "candidate_silence": "TBD"
+    },
+    {
+      "scene": "S07",
+      "cue_id": "NEN-07C",
+      "source_speech_end": 164.39999999999998,
+      "source_next_speech_or_scene_end": 165.1,
+      "available_speech_free_seconds": 0.700000000000017,
+      "artistic_silence": "UNKNOWN",
+      "candidate_silence": "TBD"
+    },
+    {
+      "scene": "S07",
+      "cue_id": "NEN-07D",
+      "source_speech_end": 173.1,
+      "source_next_speech_or_scene_end": 173.8,
+      "available_speech_free_seconds": 0.700000000000017,
+      "artistic_silence": "UNKNOWN",
+      "candidate_silence": "TBD"
+    },
+    {
+      "scene": "S08",
+      "cue_id": "NEN-08A",
+      "source_speech_end": 181.72000000000003,
+      "source_next_speech_or_scene_end": 182.12,
+      "available_speech_free_seconds": 0.39999999999997726,
+      "artistic_silence": "UNKNOWN",
+      "candidate_silence": "TBD"
+    },
+    {
+      "scene": "S08",
+      "cue_id": "NEN-08B",
+      "source_speech_end": 188.24,
+      "source_next_speech_or_scene_end": 190.33333333333334,
+      "available_speech_free_seconds": 2.0933333333333337,
+      "artistic_silence": "UNKNOWN",
+      "candidate_silence": "TBD"
+    },
+    {
+      "scene": "S09",
+      "cue_id": "NEN-09A",
+      "source_speech_end": 198.41333333333336,
+      "source_next_speech_or_scene_end": 198.81333333333333,
+      "available_speech_free_seconds": 0.39999999999997726,
+      "artistic_silence": "UNKNOWN",
+      "candidate_silence": "TBD"
+    },
+    {
+      "scene": "S09",
+      "cue_id": "NEN-09B",
+      "source_speech_end": 209.85333333333332,
+      "source_next_speech_or_scene_end": 210.45333333333335,
+      "available_speech_free_seconds": 0.6000000000000227,
+      "artistic_silence": "UNKNOWN",
+      "candidate_silence": "TBD"
+    },
+    {
+      "scene": "S09",
+      "cue_id": "NEN-09C",
+      "source_speech_end": 215.49333333333334,
+      "source_next_speech_or_scene_end": 217.06666666666666,
+      "available_speech_free_seconds": 1.5733333333333235,
+      "artistic_silence": "UNKNOWN",
+      "candidate_silence": "TBD"
+    },
+    {
+      "scene": "S10",
+      "cue_id": "NEN-10A",
+      "source_speech_end": 221.82666666666668,
+      "source_next_speech_or_scene_end": 222.22666666666666,
+      "available_speech_free_seconds": 0.39999999999997726,
+      "artistic_silence": "UNKNOWN",
+      "candidate_silence": "TBD"
+    },
+    {
+      "scene": "S10",
+      "cue_id": "NEN-10B",
+      "source_speech_end": 230.54666666666665,
+      "source_next_speech_or_scene_end": 230.94666666666666,
+      "available_speech_free_seconds": 0.4000000000000057,
+      "artistic_silence": "UNKNOWN",
+      "candidate_silence": "TBD"
+    },
+    {
+      "scene": "S10",
+      "cue_id": "NEN-10C",
+      "source_speech_end": 233.90666666666667,
+      "source_next_speech_or_scene_end": 235.96666666666667,
+      "available_speech_free_seconds": 2.0600000000000023,
+      "artistic_silence": "UNKNOWN",
+      "candidate_silence": "TBD"
+    },
+    {
+      "scene": "S11",
+      "cue_id": "NEN-11",
+      "source_speech_end": 250.88666666666666,
+      "source_next_speech_or_scene_end": 251.3,
+      "available_speech_free_seconds": 0.4133333333333553,
+      "artistic_silence": "UNKNOWN",
+      "candidate_silence": "TBD"
+    }
+  ],
+  "method": "Timeline speech onset plus actual recorded duration; this is not a full soundtrack or phoneme analysis."
+}

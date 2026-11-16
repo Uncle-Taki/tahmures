@@ -15,7 +15,7 @@ learning_objectives:
 prerequisites: [C01]
 language: "fa"
 translation_of: "part-1/03-requirements-before-wording.md"
-source_sha256: "fde7667e4df7c9569ed7c93746ccccc584321c7fa57a17b52574e7e6c0f6e2dd"
+source_sha256: "523a9f286cee0c8ca0f59a453d7f6f28b4e67c9ff4d61b732103607fdb299485"
 translation_status: "draft"
 last_translated: "2026-07-30"
 ---

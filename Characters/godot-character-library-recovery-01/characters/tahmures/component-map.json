@@ -35,8 +35,8 @@
         310
       ],
       "local_motion_approved": false,
-      "opaque_pixels": 65656,
-      "sha256": "5eacecc88370477511b257f46ac8bbf92ffb30d55c44e7d312d64d529d057c9a"
+      "opaque_pixels": 69391,
+      "sha256": "5e646e3610163084f65adae981f7842354c39ab499b0e851843c5ba3c5590580"
     },
     {
       "component_id": "neck_and_medallion_chest",
@@ -56,14 +56,14 @@
         340
       ],
       "tight_alpha_bbox": [
-        311,
-        310,
-        770,
-        1428
+        0,
+        13,
+        1068,
+        1432
       ],
       "local_motion_approved": false,
-      "opaque_pixels": 289872,
-      "sha256": "efddbb664eeae2be247c6ebe18a4b5e96c0377d40088d1665d0d9f71e0202434"
+      "opaque_pixels": 298587,
+      "sha256": "544c1bec6990b995112e89fa34fa78095276450fab1d6db2a0878ab87e811daa"
     },
     {
       "component_id": "arm_right_viewer_left",
@@ -73,13 +73,13 @@
       ],
       "tight_alpha_bbox": [
         208,
-        352,
+        350,
         415,
         965
       ],
       "local_motion_approved": false,
-      "opaque_pixels": 75740,
-      "sha256": "8b57d2acabcdea6cf3672dbdbbbdd328d5af59911917f0f2c4efcfa8a20e5a8d"
+      "opaque_pixels": 79989,
+      "sha256": "d1e49aefc7f79677a4cf505ed1e9a191cbb8e5e177360a69460b4125b5066f4c"
     },
     {
       "component_id": "arm_left_viewer_right",
@@ -90,12 +90,12 @@
       "tight_alpha_bbox": [
         665,
         350,
-        876,
+        877,
         965
       ],
       "local_motion_approved": false,
-      "opaque_pixels": 78176,
-      "sha256": "e39a2b179a1a439cd4c6bcb9daeef3576e6670bfffd9b91795cf088b25a63533"
+      "opaque_pixels": 82447,
+      "sha256": "b5921969528d28cbdcd4c7ba69bf2597260101ee25ca9d90adf7853b74f58e8c"
     },
     {
       "component_id": "feet_and_boots",
@@ -104,14 +104,14 @@
         1350
       ],
       "tight_alpha_bbox": [
-        315,
+        291,
         1280,
-        769,
+        772,
         1425
       ],
       "local_motion_approved": false,
-      "opaque_pixels": 34095,
-      "sha256": "2145f0c9f35d6baa1f9f6385464afad401ccac27a020c6e7d43d84a4be226bcb"
+      "opaque_pixels": 38569,
+      "sha256": "45496ec9c559446ff0cf2a5a6648fa3f7e82500ee8f7dc003727fb99d8ee5420"
     }
   ],
   "sockets": []

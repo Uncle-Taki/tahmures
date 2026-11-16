@@ -1,0 +1,2 @@
+candidate_file_status,shot_id,take_id,reference_ids,actual_model,actual_mode,actual_credit_spend,download_path,sha256,review_status,owner_decision
+NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION,TBD,NONE,TBD,UNKNOWN,UNKNOWN,0,NONE,NONE,PROPOSAL,PENDING

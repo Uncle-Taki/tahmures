@@ -1,0 +1,7 @@
+**NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION**
+
+[PROPOSAL] Research lens, accessed 2026-10-28: Saeed Talajooy’s [Cinema Iranica essay](https://cinema.iranicaonline.org/article/bahram-bayzais-dramatic-and-cinematic-oeuvre/) discusses framing/reframing, outsider knowledge and authority. The [St Andrews volume abstract](https://research-portal.st-andrews.ac.uk/en/publications/the-plays-and-films-of-bahram-beyzaie-origins-forms-and-functions/) describes performance traditions and voices situated outside social power. These support broad analytical lenses, not a licence to imitate a writer’s language or transplant a named work.
+
+[PROPOSAL interpretation] The candidate applies those lenses to Tahmures’s own objects and conflicts: a courier’s uncertainty withstands confident authority; a soaked literal reader changes the ruler’s attention; a stopped reed exposes disagreement; a second damaged document challenges the apparent resolution. Restrained language is selected, ceremonial alternatives remain unselected. No Beyzai lines/scenes/monologues were copied or translated. This is a craft judgement, not an exhaustive similarity or legal certificate.
+
+[UNKNOWN] DOI 10.1080/00210862.2013.789735 was not accessible through the browser; no claim is based on having read that article. No historical performance convention is asserted as an ancient practice of this fictional court. Human cultural/performer review is still needed.

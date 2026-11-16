@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-30",
+  "status": "PASS \u2014 collection integrity and bounded visual review, not artistic approval",
+  "current_images": 7,
+  "unchanged_v2_copies": 5,
+  "new_trouser_derivatives": 2,
+  "preserved_v2_originals": 7,
+  "generation_calls": 2,
+  "all_current_and_source_pngs_opened": true,
+  "source_hashes_unchanged": true,
+  "unchanged_current_copy_hashes_match": true,
+  "garshasp_reference_hash_unchanged": true,
+  "tahmures_real_alpha_preserved": true,
+  "paper_puppet_image_hashes_unchanged": true,
+  "paper_puppet_metadata_only_changes": true,
+  "document_links_valid": true,
+  "two_separate_trouser_legs_observed": true,
+  "garment_review": "pending owner review",
+  "repository_gate": {
+    "command": "make check PYTHON=.venv/bin/python",
+    "exit_status": 0,
+    "log": "/tmp/tahmures-v2-trouser-collection-check.log",
+    "scope": "Book/code validation, not artistic approval or rig readiness."
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "accepted_on": "2026-10-21",
+      "user_instruction_verbatim": "cool,  I approved the s02.continue process",
+      "scope": "S02 r02 Chapar held-pose character/contact art and redrawn tablet design/style; starting art selection only",
+      "revision": "s02-r02-chapar-held-art-check",
+      "files_sha256": {
+        "Characters/animations/chapter-01-candidate-01/revisions/s02-r02/assets/chapar-held-tablet.png": "d0fc658467459d7baba8e3e8d4203624418a55664f589eb5971dd245f58f59ec",
+        "Characters/animations/chapter-01-candidate-01/revisions/s02-r02/manifest.json": "27722f8dc0a774b9cf2d7940c680fdd8b91cae8c632a7565719312e8e68d1db9",
+        "Characters/animations/chapter-01-candidate-01/revisions/s02-r02/evidence/local-02/en-hall/study.png": "6fceb5ae5b46c5295ee3e20ea7e99a298b3c03fa0f338e19751f75a3d2ddca2b",
+        "Characters/animations/chapter-01-candidate-01/revisions/s02-r02/evidence/local-02/fa-hall/study.png": "061ab01717835567e34f26180bdbaee68c76dc8b985a183eeb81a8cdadf46dc0",
+        "Characters/animations/chapter-01-candidate-01/revisions/s02-r02/evidence/local-02/en-contact/study.png": "478f7e9a4142a141c353aef4c3360b3f237efe5bd11f36814d708e891dba015b"
+      },
+      "limits": [
+        "Release or placement animation not produced",
+        "Independent anatomical/prop masks not produced",
+        "S01 r04 motion acceptance remains separate",
+        "Final S02 text/framing or full chapter acceptance",
+        "Simurgh form or voice choice"
+      ],
+      "approval_request_sha256": "aa87dbdd752a4c7c0d20bb00d97f34680a5a0b130ef0632685a797da18f9d29f"
+    }
+  ]
+}

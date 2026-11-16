@@ -33,9 +33,9 @@ By the end of this chapter, you will be able to:
 
 ### The Setting
 
-The Hall of Scripts had thirty doors and no two handles alike. Messages arrived
-there from every province: clay impressed at the border, leather folded into
-bronze tubes, bark marked by charcoal, and silk carrying characters so fine
+Messages arrived at the Hall of Scripts from every province: clay impressed
+at the border, leather folded into bronze tubes, bark marked by charcoal,
+and silk carrying characters so fine
 that Shahrasp, the First Scribe, read them through a polished crystal.
 
 One wet morning a chapar — a courier of the relay roads — brought a tablet found

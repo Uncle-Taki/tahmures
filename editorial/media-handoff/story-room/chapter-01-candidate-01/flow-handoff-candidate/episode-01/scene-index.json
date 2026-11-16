@@ -1,0 +1,119 @@
+{
+  "status": "NOT APPROVED FOR PRODUCTION / NOT AUTHORIZED FOR FLOW GENERATION",
+  "approval_status": "PROPOSAL",
+  "owner_approved": false,
+  "source_timeline": "Characters/animations/chapter-01-candidate-01/production/english-final-03/timeline.json",
+  "source_duration_seconds": 251.3,
+  "candidate_duration_seconds": "TBD",
+  "source_title_count": 1,
+  "source_scenes": [
+    {
+      "source_id": "T00",
+      "source_start": 0,
+      "source_end": 3,
+      "source_frames": 90,
+      "kind": "title",
+      "candidate_start": "TBD",
+      "candidate_end": "TBD"
+    },
+    {
+      "source_id": "S01",
+      "source_start": 3,
+      "source_end": 17.8,
+      "source_frames": 444,
+      "kind": "narrative",
+      "candidate_start": "TBD",
+      "candidate_end": "TBD"
+    },
+    {
+      "source_id": "S02",
+      "source_start": 17.8,
+      "source_end": 38.333333333333336,
+      "source_frames": 616,
+      "kind": "narrative",
+      "candidate_start": "TBD",
+      "candidate_end": "TBD"
+    },
+    {
+      "source_id": "S03",
+      "source_start": 38.333333333333336,
+      "source_end": 57.53333333333333,
+      "source_frames": 576,
+      "kind": "narrative",
+      "candidate_start": "TBD",
+      "candidate_end": "TBD"
+    },
+    {
+      "source_id": "S04",
+      "source_start": 57.53333333333333,
+      "source_end": 85.8,
+      "source_frames": 848,
+      "kind": "narrative",
+      "candidate_start": "TBD",
+      "candidate_end": "TBD"
+    },
+    {
+      "source_id": "S05",
+      "source_start": 85.8,
+      "source_end": 106.43333333333334,
+      "source_frames": 619,
+      "kind": "narrative",
+      "candidate_start": "TBD",
+      "candidate_end": "TBD"
+    },
+    {
+      "source_id": "S06",
+      "source_start": 106.43333333333334,
+      "source_end": 130.2,
+      "source_frames": 713,
+      "kind": "narrative",
+      "candidate_start": "TBD",
+      "candidate_end": "TBD"
+    },
+    {
+      "source_id": "S07",
+      "source_start": 130.2,
+      "source_end": 173.8,
+      "source_frames": 1308,
+      "kind": "narrative",
+      "candidate_start": "TBD",
+      "candidate_end": "TBD"
+    },
+    {
+      "source_id": "S08",
+      "source_start": 173.8,
+      "source_end": 190.33333333333334,
+      "source_frames": 496,
+      "kind": "narrative",
+      "candidate_start": "TBD",
+      "candidate_end": "TBD"
+    },
+    {
+      "source_id": "S09",
+      "source_start": 190.33333333333334,
+      "source_end": 217.06666666666666,
+      "source_frames": 802,
+      "kind": "narrative",
+      "candidate_start": "TBD",
+      "candidate_end": "TBD"
+    },
+    {
+      "source_id": "S10",
+      "source_start": 217.06666666666666,
+      "source_end": 235.96666666666667,
+      "source_frames": 567,
+      "kind": "narrative",
+      "candidate_start": "TBD",
+      "candidate_end": "TBD"
+    },
+    {
+      "source_id": "S11",
+      "source_start": 235.96666666666667,
+      "source_end": 251.3,
+      "source_frames": 460,
+      "kind": "narrative",
+      "candidate_start": "TBD",
+      "candidate_end": "TBD"
+    }
+  ]
+}

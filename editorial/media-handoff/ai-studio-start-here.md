@@ -17,7 +17,8 @@ Read in this order from the repository root:
 4. `editorial/media-handoff/ai-studio-baseline.json`.
 5. `Characters/godot-character-library-recovery-01/README.md`.
 6. `editorial/media-handoff/ai-studio-task-01.md`.
-7. `editorial/media-handoff/ai-studio-return-template.md`.
+7. `editorial/media-handoff/2026-10-20-studio-bundle-review.md`.
+8. `editorial/media-handoff/ai-studio-return-template.md`.
 
 Start by identifying the actual accessible repository, imported branch/revision,
 files and execution tools. The fixed media baseline is
@@ -27,7 +28,11 @@ source/approval and non-target character hashes against the baseline JSON. Do
 not overwrite that manifest, reset to the older commit or claim an ancestry
 check when your interface does not expose Git history.
 
-Do **task 01 only: Akvan anatomical extraction**. The current pipeline runs and
+The previous all-ten JSON export did not complete task 01. Do not copy its
+certification flags, dimensions or motion claims into the working project.
+Use the measured audit and corrected chapter planning candidate for context.
+
+Default assignment: **task 01 only: Akvan anatomical extraction**. The current pipeline runs and
 recomposes source-pose candidates, but its received rectangular partitions are
 not anatomically valid. Correct Akvan using its actual supplied art and the
 task's contour/mask, provenance and QA requirements. Keep the other nine
@@ -52,3 +57,12 @@ protected-hash checks, real output files, actual tests and remaining limitations
 Do not commit, sync/push, merge, deploy, install dependencies or call generation
 services without a separate instruction from me. Do not stop at a proposed plan
 when the available tools can produce the actual task deliverables.
+
+
+A separate assignment is ready in `editorial/media-handoff/ai-studio-task-02-environments.md`:
+one Hall of Scripts floor-plan/wide-view candidate. If the owner assigns that
+workstream instead, follow its separate output scope and return actual editable
+art/layout evidence. Never treat background work as character acceptance or run
+both assignments as an uncontrolled whole-film rewrite. All future scenes use
+`chapter-01-production-plan.json` as the reviewed planning candidate, not the
+received raw JSON; current manuscript and continuity still control story facts.
