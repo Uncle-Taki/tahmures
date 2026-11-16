@@ -1,0 +1,16 @@
+{
+  "project_id": "0e30c69f-b841-40f9-ae7b-4b3a577a20ac",
+  "operation_id": "idem_7ae59a2330d89d9014a114eb00516193bdc343300429ef2532c8c44ce827606c",
+  "job_id": "4af8b4f6-cf0b-411a-b0b8-22d180816299",
+  "project_url": "https://blendstra.com/studio?workspace=wsp_2ec9696ea4e975b7db2cc0053c2a9eeb5f28494b&project=0e30c69f-b841-40f9-ae7b-4b3a577a20ac",
+  "status_at_submission": "queued",
+  "source": "build_scene.py",
+  "first_attempt": {
+    "operation_id": "idem_ae73bf9207818eccc0d5df8783fb11312fb92b6fd8a466b3d57c235eca707d4a",
+    "status": "failed",
+    "reason": "AttributeError: scene.world was None in empty hosted scene",
+    "fix": "Create World datablock explicitly"
+  },
+  "charged_usd": 0,
+  "owner_approved": false
+}

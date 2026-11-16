@@ -31,3 +31,18 @@ Every completed stage is committed to `try2`.
 3. Rendered sample, measurements, review evidence and result report.
 
 See `chapter-context.json`, `WORKLOG.md` and the stage deliverables.
+
+## Rebuild and inspect
+
+Requirements: Blender 4.3+ and FFmpeg. The scene generator uses only Blender's bundled Python.
+
+```bash
+blender --background --python Characters/animations/chapter-01-try2/render_local.py -- --build --audit
+blender --background --python Characters/animations/chapter-01-try2/render_local.py -- --stills
+blender --background --python Characters/animations/chapter-01-try2/render_local.py -- --frames 1 120
+```
+
+Open `output/chapter-01-try2.blend`, use the production camera, and play frames 1–120 at 12 fps. Named timeline markers identify the three beats. `render_local.py` measures visible head framing, stationary tablet support, actual transform changes and deterministic seek/reset/replay. It does not establish full collision-free motion, artistic acceptance or a finished character rig.
+
+The local Blender build lacks OpenImageDenoise; the local wrapper disables that feature explicitly. Hosted creation starts with an empty world, so the generator creates a World datablock when needed. These are recorded compatibility fixes, not changes to the story.
+
