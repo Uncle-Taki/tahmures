@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "status": "candidate_previsualisation",
+  "branch": "try2",
+  "repository": "Uncle-Taki/tahmures",
+  "source_commit": "e8afb28d077e7daa5623d2fec9ab041236395724",
+  "sources": [
+    {
+      "path": "book/part-1/01-what-is-a-prompt.md",
+      "git_blob_sha": "54cf0aa4e048a613e4e53fb5f9c67888ffa83faa",
+      "authority": "canonical technical meaning"
+    },
+    {
+      "path": "playscript/chapter-01-final-2026-10-30/chapter_one_final_en.md",
+      "git_blob_sha": "c751ace95429a753fe2fa96a9e7eb0bb5a3447ed",
+      "authority": "media story source; editorial final for owner review, not picture/audio approval"
+    },
+    {
+      "path": "book/narrative-continuity.md",
+      "authority": "canonical continuity; scoped Div-e Sefid messenger adaptation"
+    },
+    {
+      "path": "Characters/selected-illustrated-cast-v2-01/manifest.json",
+      "git_blob_sha": "92c167f5a220492f3664fd6b318809450b7e41f0",
+      "authority": "visual reference provenance; no new likeness or motion approval"
+    }
+  ],
+  "chapter": {
+    "title": "What Is a Prompt?",
+    "episode": "The Three Readings",
+    "media_title": "Ancient Tablet",
+    "fiction": "Original teaching fiction inspired by Iranian epic tradition; not reconstructed Shahnameh.",
+    "lesson": "The role of text depends on speaker, recipient, occasion and requested result; an embedded imperative is not automatically a current instruction.",
+    "failure_owner": "The king's ambiguous requested result and delivery context, not simply disobedient divs."
+  },
+  "excerpt": {
+    "scene": "S04 — Three Readings",
+    "setting": "Divan House, at night",
+    "duration_seconds": 10,
+    "fps": 12,
+    "frame_start": 1,
+    "frame_end": 120,
+    "cast": [
+      "Akvan Div",
+      "Black Div",
+      "Div-e Sefid"
+    ],
+    "beat_order": [
+      "Akvan studies letter shapes against a record",
+      "Black Div leans to read, then turns away empty-handed",
+      "Div-e Sefid reaches toward the tablet; stop before custody transfer"
+    ],
+    "tablet_text": "Before sunrise, count the watchfires beyond the water.",
+    "custody": "One tablet stays supported on the round table throughout this short excerpt.",
+    "omissions": [
+      "Dialogue and lip sync",
+      "Later travel, fortress and consequences",
+      "No Chapar, Hushang, Tahmures or Simurgh in this scene"
+    ]
+  },
+  "adaptation_boundaries": {
+    "manuscripts_changed": false,
+    "persian_changed": false,
+    "existing_media_changed": false,
+    "new_voices": false,
+    "existing_approvals_reused_as_performance_approval": false,
+    "artistic_approval": "pending explicit owner review"
+  },
+  "design": {
+    "style": "stylised 3D stage blocking; interpretations of Illustrated V2 references",
+    "camera": "three-quarter fixed cinema view of round table and three distinct figures",
+    "animation": "named object-transform actions with reproducible frame ranges",
+    "budget": {
+      "meshy_credits": 0,
+      "provider_calls": 0,
+      "source_frames": 120,
+      "max_source_frames": 240,
+      "max_triangles": 150000
+    }
+  },
+  "blendstra": {
+    "project_id": "0e30c69f-b841-40f9-ae7b-4b3a577a20ac",
+    "project_url": "https://blendstra.com/studio?project=0e30c69f-b841-40f9-ae7b-4b3a577a20ac",
+    "execution": "hosted Blender; CPU",
+    "full_preview": "local render from the same script; optional hosted clip covers at most two seconds"
+  }
+}
