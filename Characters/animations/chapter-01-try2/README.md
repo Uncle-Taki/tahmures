@@ -17,6 +17,15 @@ Primary MCP source, checked 2026-11-16: https://github.com/ahujasid/mcp-for-blen
 Blendstra source: connected authoring guide v2026-11-14.1, topics modeling, animation, geometry; runtime Blender 4.5.3; CPU available.
 Room workflow source: installed Build 3D Game Rooms instructions and custom adapter.
 
+## Phase 0 — workstation audit
+
+The 2026-11-17 workstation audit is recorded in
+[PHASE-0-ENVIRONMENT-AUDIT.md](PHASE-0-ENVIRONMENT-AUDIT.md).
+Hardware assessment is complete; Blender installation/path, local checkout,
+and MCP connectivity remain unverified. The audit preserves the known-good
+Blender 4.3.2 sample and recommends Eevee for interactive work and CPU Cycles
+for path-traced rendering on the detected Intel Iris Xe workstation.
+
 ## Sample scope
 A **10-second silent 3D blocking study** of S04, “Three Readings”, at 12 fps (frames 1–120). Akvan studies the record, Black Div leans toward the inscription then turns to leave empty-handed, and Div-e Sefid reaches toward the still-unidentified tablet. One tablet remains on the table throughout this excerpt; this stops before the later wrapping/delivery. No newly invented dialogue or performance approval.
 

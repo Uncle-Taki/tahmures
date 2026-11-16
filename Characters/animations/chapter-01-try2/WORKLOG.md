@@ -23,3 +23,13 @@
 - Hosted export rejected authored object IDs; a third submission delegates ID assignment to the fixed exporter.
 - Recovered interrupted local frame ranges without discarding completed renders.
 - Full movie verification and hosted result are recorded in RESULT.md.
+
+
+## Follow-up Phase 0 — workstation environment audit (2026-11-17)
+- Recorded the owner's Ubuntu 24.04.5 hardware/software diagnostic in `PHASE-0-ENVIRONMENT-AUDIT.md`.
+- Confirmed Intel Iris Xe / Mesa OpenGL 4.6, 38 GiB RAM, 299 GiB free disk, FFmpeg 6.1.1 and ChatGPT Desktop 26.1007.21434.
+- Set Eevee as the interactive viewport target and CPU Cycles as the reliable path-tracing baseline; the detected Iris Xe is not a supported Intel Arc Xe HPG device for Cycles oneAPI.
+- Did not install drivers or software. No NVIDIA GPU was detected; do not install NVIDIA drivers for this machine.
+- Blender was not found in the diagnostic shell's `PATH`, and the shell was outside a Git working tree. Blender's package/alternate install state and the local checkout path remain unverified.
+- No local Blender rebuild, render benchmark, or MCP handshake was possible from the supplied output. ChatGPT Desktop presence does not establish MCP connectivity.
+- Existing Blender 4.3.2 sample, native source and verification evidence remain unchanged. Next gate: locate Blender and the local checkout, then run a real launch/render and MCP handshake before selecting an upgrade path.
