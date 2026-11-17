@@ -45,3 +45,12 @@
 - Kept Blender 4.3.2 as the compatibility baseline for the existing S04 sample. Blenderwright/Blender 5.2+ is a future migration candidate only; no version upgrade was performed.
 - No new Blender scene, render, character asset, or room was generated. Existing S04 source, render, logs, and verification evidence were not overwritten.
 - Runtime acceptance tests remain open pending Blender 4.3.2 discovery/installation, add-on activation, Desktop MCP handshake, and a controlled render/round-trip test.
+
+## Blender 5.3 workflow correction (2026-11-17)
+- Owner selected the Blender 5.3 download in `/home/mehdi/Downloads/Persepolis/Compressed`.
+- Superseded the instruction to install 4.3.2 first; preserve its historical source/render evidence.
+- Added a version-checked offline installer and complete installation, 5.3-specific add-on, Desktop handshake, isolated S04 migration and render-validation flow.
+- Updated active documentation and production routing. Preserve the existing controller pending actual benchmark evidence; Blenderwright is eligible on 5.3.
+- Updated private plugin v0.1.1 and verified its saved release and instructions, preserving the other 26 skills, MCP configuration, identity and sharing scope.
+- Owner explicitly authorized committing and pushing this prepared update to `try2`.
+- No local installation, Blender 5.3 render, MCP handshake or artistic approval is claimed.

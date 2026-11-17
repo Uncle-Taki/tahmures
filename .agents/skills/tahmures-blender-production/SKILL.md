@@ -85,7 +85,7 @@ Use the connected Blendstra app when it is available and the task benefits from 
 
 Use the local `mcp-for-blender` server when Blender is installed and the user wants direct control of a local scene or local `.blend` files.
 
-- The project's current sample baseline is Blender 4.3.2. Preserve that version for the existing `try2` sample and test the local MCP against it before any version migration.
+- The active workstation target is Blender 5.3.0 stable. The owner reports the download in `/home/mehdi/Downloads/Persepolis/Compressed`. Installing 4.3.2 first is unnecessary; preserve its historical source/render evidence and test 5.3 in a new compatibility candidate. Read `Characters/animations/chapter-01-try2/BLENDER-5.3-WORKFLOW.md` for installation, the 5.3-specific add-on directory, handshake and validation.
 - Keep the Blender add-on socket bound to loopback (`127.0.0.1` / `localhost`) and port `9876`. Never expose the unauthenticated socket to a LAN, public network, or tunnel.
 - Start with `BLENDER_MCP_SAFE_MODE=1` and `DISABLE_TELEMETRY=true`. Safe mode is a guardrail, not a security sandbox.
 - Prefer structured MCP tools over arbitrary Python execution. Review every script before running it. Do not disable safe mode or run unreviewed arbitrary code unless the user explicitly approves the specific operation.
@@ -103,7 +103,7 @@ Use the separately installed Build 3D Game Rooms workflow for room/environment l
 
 ### Other MCP candidates
 
-Do not migrate the current project to a different Blender MCP solely because it has more tools. Any replacement must first pass the same local scene, animation, visual review, recovery, export, and compatibility tests. In particular, Blenderwright requires Blender 5.2+ and is a separate migration candidate, not a drop-in replacement for the existing Blender 4.3.2 baseline.
+Do not migrate the current project to a different Blender MCP solely because it has more tools. Any replacement must first pass the same local scene, animation, visual review, recovery, export, and compatibility tests. Blender 5.3 meets Blenderwright's stated 5.2+ minimum, making it eligible for a controlled benchmark. Keep the packaged controller until runtime results justify switching.
 
 ## Required scene/shot contract
 

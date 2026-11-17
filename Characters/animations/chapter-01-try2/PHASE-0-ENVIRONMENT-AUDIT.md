@@ -5,6 +5,10 @@
 **Branch:** `try2`  
 **Scope:** Read-only interpretation of the workstation diagnostics supplied by the owner. No packages, drivers, Blender builds, project files, or local settings were changed by this audit.
 
+## Current follow-up — Blender 5.3 (2026-11-17)
+
+The subsequent owner search found no Blender executable and identified several Tahmures directories. The owner now reports downloading Blender 5.3 into `/home/mehdi/Downloads/Persepolis/Compressed`. Use [BLENDER-5.3-WORKFLOW.md](BLENDER-5.3-WORKFLOW.md) as the active setup sequence. Installing historical 4.3.2 first is unnecessary. Exact archive filename, active Git root, installation and runtime tests remain unverified. Original audit findings below remain evidence at capture time.
+
 ## Executive result
 
 **Status: hardware assessment complete; local software and integration preflight incomplete.**

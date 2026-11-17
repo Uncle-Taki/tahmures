@@ -10,7 +10,7 @@
 The three tools in the original project decision are complementary, not interchangeable:
 
 1. **Blendstra** remains the connected cloud-side prototyping and model-editing path. It is the immediate execution route while this workstation has no discoverable Blender executable and it preserves the already-established Chapter 01 connected trial.
-2. **MCP for Blender** (`ahujasid/mcp-for-blender`) is the planned local execution path for direct operations on a running Blender instance and local `.blend` files. It must be installed and tested against the project's existing Blender 4.3.2 baseline before any version migration.
+2. **MCP for Blender** (`ahujasid/mcp-for-blender`) is the planned local execution path for direct operations on a running Blender instance and local `.blend` files. Use Blender 5.3.0 for the new local setup and validate a separate S04 compatibility candidate. Blender 4.3.2 remains historical evidence.
 3. **Build 3D Game Rooms** is a specialist room/environment workflow. Use it for room layout, environment dressing, and room-specific assets; it is not the primary character-animation controller.
 
 Do not replace one with another globally. Blendstra is the connected prototype route; local MCP is the direct local authoring route; Build 3D Game Rooms is a supporting environment specialist.
@@ -33,7 +33,7 @@ The current context labels the work as a **candidate previsualisation**. It is n
 
 ### Additional MCP candidate considered
 
-**Blenderwright** offers a broader structured tool surface and authenticated localhost communication, but its current release targets Blender 5.2 LTS or newer. The current Tahmures Chapter 01 sample and source workflow use Blender 4.3.2. Therefore Blenderwright is a future migration candidate, not a drop-in replacement for this Phase 1 baseline. Do not upgrade the project merely to gain a larger tool catalogue.
+**Blenderwright** offers a broader structured tool surface and authenticated localhost communication, but its current release targets Blender 5.2 LTS or newer. The historical Tahmures Chapter 01 sample used Blender 4.3.2. Blender 5.3.0 meets that stated minimum, making Blenderwright eligible for a separate runtime benchmark. Keep the existing plugin controller until evidence justifies switching.
 
 No numerical performance winner is claimed. The existing Blendstra sample is a prior connected workflow result, not a controlled head-to-head benchmark of Blendstra and local MCP.
 
@@ -69,7 +69,7 @@ The plugin is private and not publicly published. Creating it does not mean the 
 
 The workstation audit did not find a Blender executable in `PATH` or in the searched installation locations. However, the existing Tahmures sample records Blender 4.3.2 as its baseline.
 
-Install or locate **Blender 4.3.2** first and preserve it side-by-side. The selected `mcp-for-blender` implementation supports the existing 4.3.2 baseline. Do not install Blender 5.2.4 as the default for this branch; that would be a separate compatibility migration and is only needed to test Blenderwright.
+Use **Blender 5.3.0 stable** for the new workstation setup. The owner already downloaded the archive into `/home/mehdi/Downloads/Persepolis/Compressed`. Follow [BLENDER-5.3-WORKFLOW.md](BLENDER-5.3-WORKFLOW.md) for offline extraction, versioned installation, the 5.3-specific add-on directory, Desktop handshake and isolated S04 validation. Installing 4.3.2 first is unnecessary; retain its original evidence. Blender 5.3 is a regular stable release, not LTS.
 
 The local workstation has an i5-12500H, 38 GiB RAM, and Intel Iris Xe graphics. Use Eevee for interactive previews and CPU Cycles as the reliable path-tracing baseline. No NVIDIA driver installation is warranted for the detected hardware.
 
@@ -77,7 +77,7 @@ The local workstation has an i5-12500H, 38 GiB RAM, and Intel Iris Xe graphics. 
 
 The following tests are not claimed complete:
 
-1. Locate/install Blender 4.3.2 and verify the executable version.
+1. Install the downloaded Blender 5.3.0 archive and verify the executable version.
 2. Install and enable the `mcp-for-blender` add-on.
 3. Start the add-on server on `127.0.0.1:9876`.
 4. Install the private plugin in ChatGPT Desktop and verify a successful MCP handshake.
@@ -102,8 +102,8 @@ A local stdio MCP plugin runs on the user's computer and is a **ChatGPT Desktop-
 - MCP for Blender: https://github.com/ahujasid/mcp-for-blender
 - Blenderwright (future migration candidate): https://github.com/HoldMyBeer-gg/blenderwright
 - ChatGPT plugins and local MCP: https://help.openai.com/en/articles/20001256-plugins-in-chatgpt
-- Blender download archive: https://download.blender.org/release/Blender4.3/
+- Blender download archive: https://download.blender.org/release/Blender5.3/
 
 ## Completion gate
 
-Phase 1 architecture and skill integration are complete. Phase 1 runtime validation remains open until Blender 4.3.2, the add-on, and the local ChatGPT Desktop MCP handshake are verified. No existing Chapter 01 asset was modified or overwritten by this phase.
+Phase 1 architecture and skill integration are complete. Phase 1 runtime validation remains open until Blender 5.3.0, the add-on, and the local ChatGPT Desktop MCP handshake are verified. No existing Chapter 01 asset was modified or overwritten by this phase.

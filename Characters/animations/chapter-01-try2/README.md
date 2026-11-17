@@ -43,7 +43,9 @@ See `chapter-context.json`, `WORKLOG.md` and the stage deliverables.
 
 ## Rebuild and inspect
 
-Requirements: Blender 4.3+ and FFmpeg. The scene generator uses only Blender's bundled Python.
+Historical rebuild commands below use the original output directory. For the active Blender 5.3.0 setup use [BLENDER-5.3-WORKFLOW.md](BLENDER-5.3-WORKFLOW.md), which isolates outputs and reuses the download in `/home/mehdi/Downloads/Persepolis/Compressed`.
+
+Requirements: the historical sample was tested on Blender 4.3.2 and FFmpeg; 5.3 compatibility remains unverified. The scene generator uses only Blender's bundled Python.
 
 ```bash
 blender --background --python Characters/animations/chapter-01-try2/render_local.py -- --build --audit
@@ -59,4 +61,4 @@ The local Blender build lacks OpenImageDenoise; the local wrapper disables that 
 
 ## Phase 1 — Blender tool and skill integration
 
-See [PHASE-1-BLENDER-INTEGRATION.md](PHASE-1-BLENDER-INTEGRATION.md) for the tool comparison, 26-skill routing architecture, local MCP security configuration, and runtime acceptance tests. The new project skill is [tahmures-blender-production](../../../.agents/skills/tahmures-blender-production/SKILL.md). The private ChatGPT Desktop plugin `Tahmures Blender Studio` v0.1.0 packages 27 skills and a local `mcp-for-blender` configuration; it is not published and has not yet completed a local MCP handshake. The existing Blendstra sample and all prior artifacts remain unchanged.
+See [PHASE-1-BLENDER-INTEGRATION.md](PHASE-1-BLENDER-INTEGRATION.md) for the tool comparison, 26-skill routing architecture, local MCP security configuration, and runtime acceptance tests. The new project skill is [tahmures-blender-production](../../../.agents/skills/tahmures-blender-production/SKILL.md). The private ChatGPT Desktop plugin `Tahmures Blender Studio` v0.1.1 targets Blender 5.3.0 and packages 27 skills and a local `mcp-for-blender` configuration; it is not published and has not yet completed a local MCP handshake. The existing Blendstra sample and all prior artifacts remain unchanged.
