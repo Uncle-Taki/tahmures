@@ -54,3 +54,11 @@
 - Updated private plugin v0.1.1 and verified its saved release and instructions, preserving the other 26 skills, MCP configuration, identity and sharing scope.
 - Owner explicitly authorized committing and pushing this prepared update to `try2`.
 - No local installation, Blender 5.3 render, MCP handshake or artistic approval is claimed.
+
+## Blender 5.3 render launcher and main integration (2026-11-17)
+- Owner requested a new branch followed by merge to main; created `fix/blender53-render-workflow` from main `1109187ca31e1645c3704b66ae24749291551526`. Earlier try2 changes were already in main.
+- Owner terminal evidence: Blender 5.3.0 hash 02f0899d78e3 saved the native scene, passed the 120-frame/12-FPS audit (31,139 triangles, 235 objects, eight animated objects, stationary tablet and deterministic seek/reset/replay), and saved pose frames 1, 46, 82 and 120. Images were not supplied for visual review.
+- Diagnosed encoding failure: `trial` was scoped to a subshell, and the full animation sequence had not been rendered.
+- Added `run_blender53.sh` to render and encode within one shell; supports fresh isolated candidates and continuing an existing candidate. Updated workflow/README and current runtime status before pushing. Preserve historical source/render evidence.
+- Launcher verification passed with a simulated Blender process and real FFmpeg/ffprobe: fresh build path, existing-candidate continuation, paths containing spaces, 120-frame H.264 verification, preservation of existing movies, rejection of missing frame 120, and propagation of Blender failure. Shell syntax passed.
+- Full repository `make check` is delegated to the existing pull-request CI quality gate. Local Blender 5.3 render, full owner video, visual approval and MCP handshake are not claimed complete.

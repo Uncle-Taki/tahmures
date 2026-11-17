@@ -21,8 +21,7 @@ Room workflow source: installed Build 3D Game Rooms instructions and custom adap
 
 The 2026-11-17 workstation audit is recorded in
 [PHASE-0-ENVIRONMENT-AUDIT.md](PHASE-0-ENVIRONMENT-AUDIT.md).
-Hardware assessment is complete; Blender installation/path, local checkout,
-and MCP connectivity remain unverified. The audit preserves the known-good
+Hardware assessment is complete. Owner-supplied logs now confirm Blender 5.3.0 scene build/audit and four still renders; full-video verification, visual review and MCP connectivity remain open. The audit preserves the known-good
 Blender 4.3.2 sample and recommends Eevee for interactive work and CPU Cycles
 for path-traced rendering on the detected Intel Iris Xe workstation.
 
@@ -34,7 +33,7 @@ New procedural, stylised 3D interpretations use the observed Illustrated V2 colo
 The room workflow is applied to a **previsualisation set only**. No approved Function, Form or Runtime milestone is claimed. No Meshy generation, image alteration, voice generation, publication or runtime deployment is part of this trial.
 
 ## Stages and branch
-Every completed stage is committed to `try2`.
+Historical stages were committed to `try2`. Further changes use a new branch and pull request into `main`, as directed by the owner.
 1. Tool comparison and pinned Chapter 1 context.
 2. Reproducible Blender source and private Blendstra submission.
 3. Rendered sample, measurements, review evidence and result report.
@@ -45,7 +44,7 @@ See `chapter-context.json`, `WORKLOG.md` and the stage deliverables.
 
 Historical rebuild commands below use the original output directory. For the active Blender 5.3.0 setup use [BLENDER-5.3-WORKFLOW.md](BLENDER-5.3-WORKFLOW.md), which isolates outputs and reuses the download in `/home/mehdi/Downloads/Persepolis/Compressed`.
 
-Requirements: the historical sample was tested on Blender 4.3.2 and FFmpeg; 5.3 compatibility remains unverified. The scene generator uses only Blender's bundled Python.
+Requirements: the historical sample was tested on Blender 4.3.2 and FFmpeg; the owner has since demonstrated the 5.3.0 build/audit and four still renders. Full-video and visual acceptance remain open. The scene generator uses only Blender's bundled Python.
 
 ```bash
 blender --background --python Characters/animations/chapter-01-try2/render_local.py -- --build --audit
@@ -62,3 +61,7 @@ The local Blender build lacks OpenImageDenoise; the local wrapper disables that 
 ## Phase 1 — Blender tool and skill integration
 
 See [PHASE-1-BLENDER-INTEGRATION.md](PHASE-1-BLENDER-INTEGRATION.md) for the tool comparison, 26-skill routing architecture, local MCP security configuration, and runtime acceptance tests. The new project skill is [tahmures-blender-production](../../../.agents/skills/tahmures-blender-production/SKILL.md). The private ChatGPT Desktop plugin `Tahmures Blender Studio` v0.1.1 targets Blender 5.3.0 and packages 27 skills and a local `mcp-for-blender` configuration; it is not published and has not yet completed a local MCP handshake. The existing Blendstra sample and all prior artifacts remain unchanged.
+
+## Blender 5.3 render launcher
+
+From the repository root run `bash Characters/animations/chapter-01-try2/run_blender53.sh` to create an isolated candidate, build/audit, render four stills and 120 animation frames, encode `preview.mp4`, and validate it. Pass an existing candidate directory as the sole argument to continue its render. The default executable is `$HOME/.local/bin/blender-5.3`; `BLENDER_BIN` can override it. Existing preview movies are preserved. See [BLENDER-5.3-WORKFLOW.md](BLENDER-5.3-WORKFLOW.md) for exact commands. This launcher produces the silent compatibility preview; the historical `render_sequence.py` retains its separate captioned sample workflow.
