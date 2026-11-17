@@ -1,6 +1,6 @@
 # Blender 5.3 workstation flow
 
-**Updated:** 2026-11-17 · **Branch:** try2 · **Target:** Blender 5.3.0 stable (not LTS).
+**Updated:** 2026-11-17 · **Integration target:** main · **Target:** Blender 5.3.0 stable (not LTS).
 This supersedes earlier instructions to install Blender 4.3.2 first or to use the generic download page as a version-pinned 5.2.4 link.
 
 ## 0. Inputs and actual status
@@ -10,7 +10,7 @@ The owner reports downloading Blender into:
 
 Expected official Linux x86_64 archive: `blender-5.3.0-linux-x64.tar.xz`.
 The directory and filename have not been inspected from this remote session.
-Installation, Blender 5.3 scene compatibility, viewport rendering and Desktop MCP connectivity remain unverified.
+Owner-supplied terminal output confirms Blender 5.3.0 launched, saved the native scene, passed its technical audit, and rendered four stills. A full 120-frame video, visual approval, interactive viewport and Desktop MCP handshake remain unverified.
 
 The existing 4.3.2 source/render evidence remains historical. Installing 4.3.2 is not a prerequisite for this new flow. Use a separate 5.3 candidate and preserve original artifacts.
 
@@ -48,7 +48,7 @@ git status --short --branch
 git log -1 --oneline
 ```
 
-This is the candidate checkout path supplied by the owner's search, not yet a verified Git root. Confirm it is the intended repository and on `try2`. Preserve uncommitted changes. With a clean tree on `try2`, retrieve the revised flow using `git pull --ff-only origin try2`. Do not use backup, nested, or Gemini cache copies as the active source.
+This is the candidate checkout path supplied by the owner's search, not yet a verified Git root. Confirm it is the intended repository. Preserve uncommitted changes. After this update is merged, use a clean `main` checkout and `git pull --ff-only origin main` to retrieve it. Do not use backup, nested, or Gemini cache copies as the active source.
 
 ## 3. Blender 5.3 launch and rendering gate
 
@@ -84,41 +84,39 @@ If Desktop cannot resolve `uvx`, use the absolute path reported by `command -v u
 
 First ask for add-on status and scene information. Confirm the returned Blender version is 5.3.0. Then create/save/reopen a disposable scene and inspect its viewport. A listening port is not a successful MCP handshake, and a saved plugin is not proof of Desktop execution.
 
-## 6. Migrate and validate S04 in an isolated copy
+## 6. Render and validate S04 in an isolated copy
 
-The current render wrapper writes beside itself to `output/`. Running it in the original sample directory would overwrite historical evidence. Copy the source files to a fresh candidate first:
-
-```bash
-cd /home/mehdi/Project/leela/tahmures
-(
-  set -e
-  sample="Characters/animations/chapter-01-try2"
-  trial="$sample/compatibility/blender-5.3-$(date +%Y%m%d-%H%M%S)"
-  mkdir -p "$sample/compatibility"
-  mkdir "$trial"
-  cp "$sample/build_scene.py" "$sample/render_local.py" "$trial/"
-  "$HOME/.local/bin/blender-5.3" --background --factory-startup \
-    --python-exit-code 1 --python "$trial/render_local.py" -- --build --audit
-  "$HOME/.local/bin/blender-5.3" --background --factory-startup \
-    --python-exit-code 1 --python "$trial/render_local.py" -- --stills
-  printf 'Candidate: %s\n' "$trial"
-)
-```
-
-Inspect stills at frames 1, 46, 82 and 120 for identity, framing, materials, contacts and motion. If Blender 5.3 API changes break the generator/audit, stop at the failure and patch the new candidate; never reinterpret old verification as a 5.3 pass.
-
-After stills and the audit pass, render frames 1–120 using the copied wrapper's `--frames 1 120` option. Encode with FFmpeg:
+Use the launcher from the repository root:
 
 ```bash
-# Set trial to the exact candidate path printed above.
-ffmpeg -n -framerate 12 -start_number 1 -i "$trial/output/frames/frame-%04d.png" \
-  -frames:v 120 -c:v libx264 -pix_fmt yuv420p "$trial/output/preview.mp4"
-ffprobe -v error -count_frames -select_streams v:0 \
-  -show_entries stream=codec_name,width,height,r_frame_rate,nb_read_frames:format=duration \
-  -of json "$trial/output/preview.mp4"
+bash Characters/animations/chapter-01-try2/run_blender53.sh
 ```
 
-Expected: H.264, 768 × 432, 12 FPS, 120 decoded frames, 10 seconds. Reopen the saved .blend in Blender 5.3 and verify animation/asset state. Save new audit evidence, logs and first/middle/last previews.
+It creates a new compatibility candidate, copies the source scripts, builds/audits the scene,
+renders four stills and all 120 animation frames, encodes preview.mp4, and validates the video.
+It keeps the candidate path within one shell; no external `trial` variable is needed.
+Original committed outputs are preserved. CPU rendering takes time.
+
+To continue the candidate in the owner's successful terminal log:
+
+```bash
+bash Characters/animations/chapter-01-try2/run_blender53.sh \
+  "/home/mehdi/Project/leela/tahmures/Characters/animations/chapter-01-try2/compatibility/blender-5.3-20261117-045601"
+```
+
+This reuses that candidate's saved .blend and render_local.py, renders frames 1–120,
+and encodes/validates the video. It refuses to overwrite an existing preview.mp4.
+Override the executable only when needed: `BLENDER_BIN=/absolute/path/to/blender bash .../run_blender53.sh`.
+The default is `$HOME/.local/bin/blender-5.3`.
+
+The prior command failed for two independent reasons: `trial` was assigned inside a
+subshell and was unavailable afterward, and `--stills` produced four pose images rather
+than the animation frame sequence. Do not send FFmpeg directly to an unrendered frame directory.
+
+Expected video: H.264, 768 × 432, 12 FPS, 120 decoded frames, 10 seconds.
+Inspect representative stills and the video for identity, framing, materials, contacts and motion.
+Reopen the saved .blend in Blender 5.3 and verify animation/asset state.
+A technical audit does not approve the character likeness, rig, lip-sync or performance.
 
 ## 7. Controller benchmark and completion
 
