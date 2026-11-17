@@ -1,0 +1,19 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 768
+PlayResY: 432
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Title,DejaVu Sans,19,&H00EAE5DD,&H00FFFFFF,&H003A2415,&H80000000,1,0,0,0,100,100,0,0,1,1,1,7,20,20,15,1
+Style: Note,DejaVu Sans,12,&H00EAE5DD,&H00FFFFFF,&H003A2415,&H80000000,0,0,0,0,100,100,0,0,1,1,1,9,20,20,19,1
+Style: Caption,DejaVu Sans,17,&H00FFFFFF,&H00FFFFFF,&H00282017,&HA0000000,0,0,0,0,100,100,0,0,3,1,0,2,30,30,16,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:10.00,Title,,0,0,0,,ANCIENT TABLET  /  THREE READINGS
+Dialogue: 0,0:00:00.00,0:00:10.00,Note,,0,0,0,,try2 / silent blocking study
+Dialogue: 0,0:00:00.00,0:00:03.90,Caption,,0,0,0,,Akvan compares the record. Black Div reads the inscription.
+Dialogue: 0,0:00:03.90,0:00:06.70,Caption,,0,0,0,,Black Div turns away, ready to act.
+Dialogue: 0,0:00:06.70,0:00:10.00,Caption,,0,0,0,,Div-e Sefid reaches towards the tablet.

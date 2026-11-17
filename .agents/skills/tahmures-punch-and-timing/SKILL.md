@@ -1,6 +1,6 @@
 ---
 name: tahmures-punch-and-timing
-description: Locate, measure and improve dramatic punch times: revelation, reversal, decision, threat, emotional turn, ironic beat, purposeful silence and episode hook.
+description: "Locate, measure and improve dramatic punch times: revelation, reversal, decision, threat, emotional turn, ironic beat, purposeful silence and episode hook."
 ---
 
 # Punch moments and temporal design
