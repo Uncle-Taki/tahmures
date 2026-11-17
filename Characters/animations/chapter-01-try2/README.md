@@ -55,3 +55,8 @@ Open `output/chapter-01-try2.blend`, use the production camera, and play frames 
 
 The local Blender build lacks OpenImageDenoise; the local wrapper disables that feature explicitly. Hosted creation starts with an empty world, so the generator creates a World datablock when needed. These are recorded compatibility fixes, not changes to the story.
 
+
+
+## Phase 1 — Blender tool and skill integration
+
+See [PHASE-1-BLENDER-INTEGRATION.md](PHASE-1-BLENDER-INTEGRATION.md) for the tool comparison, 26-skill routing architecture, local MCP security configuration, and runtime acceptance tests. The new project skill is [tahmures-blender-production](../../../.agents/skills/tahmures-blender-production/SKILL.md). The private ChatGPT Desktop plugin `Tahmures Blender Studio` v0.1.0 packages 27 skills and a local `mcp-for-blender` configuration; it is not published and has not yet completed a local MCP handshake. The existing Blendstra sample and all prior artifacts remain unchanged.

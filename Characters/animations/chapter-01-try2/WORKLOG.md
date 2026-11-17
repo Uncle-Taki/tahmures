@@ -33,3 +33,15 @@
 - Blender was not found in the diagnostic shell's `PATH`, and the shell was outside a Git working tree. Blender's package/alternate install state and the local checkout path remain unverified.
 - No local Blender rebuild, render benchmark, or MCP handshake was possible from the supplied output. ChatGPT Desktop presence does not establish MCP connectivity.
 - Existing Blender 4.3.2 sample, native source and verification evidence remain unchanged. Next gate: locate Blender and the local checkout, then run a real launch/render and MCP handshake before selecting an upgrade path.
+
+
+## Phase 1 — Blender tool and skill integration (2026-11-17)
+- Reviewed the existing `try2` baseline and preserved the documented tool roles: Blendstra for connected/cloud prototyping, MCP for Blender for planned local scene control, and Build 3D Game Rooms for room/environment-specific work.
+- Inventoried the 26 existing `.agents/skills` modules (12 general publishing/production skills and 14 Tahmures-specific skills).
+- Added `.agents/skills/tahmures-blender-production/SKILL.md` as an orchestration layer; it routes to the existing specialists and preserves canon, approval, continuity, and media-production gates.
+- Corrected the unquoted YAML description in `tahmures-punch-and-timing/SKILL.md`; no skill body or meaning changed.
+- Created private ChatGPT Desktop plugin `Tahmures Blender Studio` v0.1.0, packaging the 26 existing skills plus the new orchestrator and a local `mcp-for-blender` stdio configuration.
+- Configured local MCP for loopback `127.0.0.1:9876`, safe mode enabled, telemetry disabled, and managed Python 3.11. The plugin has not yet been installed in Desktop or connected to Blender.
+- Kept Blender 4.3.2 as the compatibility baseline for the existing S04 sample. Blenderwright/Blender 5.2+ is a future migration candidate only; no version upgrade was performed.
+- No new Blender scene, render, character asset, or room was generated. Existing S04 source, render, logs, and verification evidence were not overwritten.
+- Runtime acceptance tests remain open pending Blender 4.3.2 discovery/installation, add-on activation, Desktop MCP handshake, and a controlled render/round-trip test.

@@ -37,6 +37,7 @@ requested.
 - `Characters/environments/` — environment candidates, provenance, and previews
 - `Characters/animations/chapter-01-candidate-01/` — Chapter 01 planning, scene revisions, and production builds
 - `.agents/skills/tahmures-editorial/` — project-local Codex editorial orchestrator
+- `.agents/skills/tahmures-blender-production/` — production orchestrator for Blender scene, animation, and render work; delegates to existing Tahmures skills
 - `mkdocs.yml` and `mkdocs.fa.yml` — English and Persian sites
 
 ## Development Commands
@@ -174,6 +175,8 @@ Persian regression checks, and review-state validation. Heuristic Persian warnin
 must be inspected; known blocker/high-severity regression failures must be fixed.
 
 ## Character and Animation Production
+
+Use `.agents/skills/tahmures-blender-production/SKILL.md` when translating approved media plans into Blender scenes or animation. It coordinates the existing project skills and does not override canon, media approvals, or the selected production revision.
 
 Read `editorial/media-handoff/chapter-01-animation-status.json` and the selected
 production revision's README, timeline, manifests, and review records before
