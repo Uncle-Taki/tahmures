@@ -1,5 +1,5 @@
 .PHONY: install format lint test-python test-go test parity validate \
-	validate-translations experiments docs docs-en docs-fa serve serve-en serve-fa check
+	validate-translations experiments docs docs-en docs-fa serve serve-en serve-fa check test-blender-integration
 
 PYTHON ?= python3
 GOCACHE ?= /tmp/tahmures-go-cache
@@ -24,6 +24,16 @@ test-go:
 	GOCACHE=$(GOCACHE) go test ./...
 
 test: test-python test-go
+
+# The controller tests stub privileged/network commands; bridge tests use only
+# ephemeral loopback fixtures. No live controller activation is performed.
+test-blender-integration:
+	$(PYTHON) -m ruff check integrations/blender-mcp
+	$(PYTHON) -m ruff format --check integrations/blender-mcp
+	bash -n integrations/blender-mcp/scripts/cloudflare-proxy.sh
+	bash -n integrations/blender-mcp/scripts/run-bridge.sh
+	bash -n integrations/blender-mcp/scripts/check-bridge.sh
+	$(PYTHON) -m unittest discover -s integrations/blender-mcp/tests -v
 
 parity:
 	$(PYTHON) scripts/check_parity.py
@@ -55,6 +65,6 @@ serve-en:
 serve-fa:
 	$(PYTHON) -m mkdocs serve -f mkdocs.fa.yml
 
-check: lint test validate validate-translations editorial-check experiments parity docs
+check: lint test test-blender-integration validate validate-translations editorial-check experiments parity docs
 
 -include editorial.mk

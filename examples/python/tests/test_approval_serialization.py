@@ -7,7 +7,6 @@ from dataclasses import asdict, replace
 from pathlib import Path
 
 import pytest
-from tahmures import approvals as module
 from tahmures.approvals import (
     ApprovalPolicy,
     ApprovalRecord,
@@ -15,6 +14,8 @@ from tahmures.approvals import (
     authorize,
     request_digest,
 )
+
+from tahmures import approvals as module
 
 CORPUS = json.loads(
     (Path(__file__).parents[2] / "shared/approval_digest_cases.json").read_text()

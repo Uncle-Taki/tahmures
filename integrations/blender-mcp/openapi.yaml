@@ -1,0 +1,152 @@
+openapi: 3.1.0
+info:
+  title: Local Blender Read-Only Bridge
+  version: 1.0.0
+  description: >-
+    Phase 1 HTTP adapter, not an MCP endpoint. No arbitrary commands or writes.
+    Replace the loopback server URL only during a later reviewed HTTPS tunnel phase.
+servers:
+  - url: http://127.0.0.1:8765
+security: []
+paths:
+  /healthz:
+    get:
+      operationId: getBridgeHealth
+      summary: Generic bridge health without accessing Blender
+      security: []
+      responses:
+        '200':
+          description: Bridge HTTP process is responding; does not imply Blender health
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: false
+                required: [status]
+                properties:
+                  status:
+                    type: string
+                    const: ok
+        default:
+          $ref: '#/components/responses/Error'
+  /v1/blender/status:
+    get:
+      operationId: getBlenderStatus
+      summary: Verify Blender connectivity using the fixed ping command
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Blender returned a valid pong
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: false
+                required: [connected]
+                properties:
+                  connected:
+                    type: boolean
+                    const: true
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '502':
+          $ref: '#/components/responses/Error'
+        '503':
+          $ref: '#/components/responses/Error'
+        '504':
+          $ref: '#/components/responses/Error'
+        default:
+          $ref: '#/components/responses/Error'
+  /v1/blender/scene:
+    get:
+      operationId: getBlenderScene
+      summary: Inspect the scene using the fixed get_scene_info command
+      description: >-
+        Returns all-object count and at most ten object summaries. Locations are
+        local coordinates rounded to two decimals. Material count is file-wide.
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Scene information returned by Blender
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Scene'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '502':
+          $ref: '#/components/responses/Error'
+        '503':
+          $ref: '#/components/responses/Error'
+        '504':
+          $ref: '#/components/responses/Error'
+        default:
+          $ref: '#/components/responses/Error'
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: External-file shared token; never include a literal token in this document
+  responses:
+    Unauthorized:
+      description: Missing, duplicate, or invalid Bearer authentication
+      headers:
+        WWW-Authenticate:
+          schema:
+            type: string
+            const: Bearer
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    Error:
+      description: >-
+        Generic error without upstream details. 400 bodies/transfer encoding;
+        404 unrecognized exact route; 405 unsupported method; 431 header budget;
+        502 malformed, oversized or error Blender response; 503 unavailable or
+        busy Blender; 504 socket deadline. Unknown HTTP methods may return 501.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+  schemas:
+    Error:
+      type: object
+      additionalProperties: false
+      required: [error]
+      properties:
+        error:
+          type: string
+          examples: [unauthorized, blender_unavailable, blender_timeout]
+    Scene:
+      type: object
+      required: [name, object_count, materials_count, objects]
+      properties:
+        name:
+          type: string
+        object_count:
+          type: integer
+          minimum: 0
+        materials_count:
+          type: integer
+          minimum: 0
+        objects:
+          type: array
+          maxItems: 10
+          items:
+            type: object
+            required: [name, type, location]
+            properties:
+              name:
+                type: string
+              type:
+                type: string
+              location:
+                type: array
+                minItems: 3
+                maxItems: 3
+                items:
+                  type: number
