@@ -1,13 +1,14 @@
 openapi: 3.1.0
 info:
-  title: Local Blender Read-Only Bridge
-  version: 1.0.0
+  title: Local Blender Character-Building Bridge
+  version: 2.0.0
   description: >-
-    Phase 1 HTTP adapter, not an MCP endpoint. No arbitrary commands or writes.
-    Replace the loopback server URL only during a later reviewed HTTPS tunnel phase.
+    HTTP adapter for scene inspection, restricted base-mesh modeling, reference
+    images, and controlled saves.
 servers:
   - url: http://127.0.0.1:8765
-security: []
+security:
+  - bearerAuth: []
 paths:
   /healthz:
     get:
@@ -84,6 +85,163 @@ paths:
           $ref: '#/components/responses/Error'
         default:
           $ref: '#/components/responses/Error'
+  /v1/blender/execute:
+    post:
+      operationId: executeBlenderModelingCode
+      summary: Run guarded Python for character base modeling
+      description: >-
+        Accepts guarded Python for mesh, material, and armature modeling,
+        including functions, conditionals, and bounded loops and comprehensions.
+        The JSON body is limited to 64 KiB and the syntax tree to 4096 nodes.
+        The Blender reply deadline is 30 seconds. A timeout cannot undo work already started.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+              required: [code]
+              properties:
+                code:
+                  type: string
+                  minLength: 1
+                  examples:
+                    - |
+                      import bpy
+                      bpy.ops.mesh.primitive_cube_add(size=1, location=(0, 0, 1))
+                      bpy.context.object.name = 'Body Base'
+      responses:
+        '200':
+          description: Modeling code completed
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: false
+                required: [status, result]
+                properties:
+                  status: {const: ok}
+                  result:
+                    type: string
+                    description: Sanitized standard output
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        default:
+          $ref: '#/components/responses/Error'
+  /v1/blender/viewport:
+    post:
+      operationId: captureBlenderViewport
+      summary: Capture the current 3D viewport as PNG
+      description: The longest side is at most 800 pixels. The PNG is capped at 4 MiB before base64 encoding.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+      responses:
+        '200':
+          description: Captured viewport image
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: false
+                required: [mime_type, image_base64, width, height]
+                properties:
+                  mime_type: {const: image/png}
+                  image_base64:
+                    type: string
+                    contentEncoding: base64
+                    contentMediaType: image/png
+                  width: {type: integer, minimum: 1, maximum: 800}
+                  height: {type: integer, minimum: 1, maximum: 800}
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        default:
+          $ref: '#/components/responses/Error'
+  /v1/blender/load-reference:
+    post:
+      operationId: loadBlenderReference
+      summary: Add a locked front-orthographic reference image Empty
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+              required: [repo_path, name, height_meters]
+              properties:
+                repo_path:
+                  type: string
+                  pattern: '^Characters/'
+                  description: Repository-relative path to an existing PNG, JPG, JPEG, or WebP.
+                name:
+                  type: string
+                  minLength: 1
+                  maxLength: 63
+                  description: UTF-8 name of at most 63 bytes using letters, digits, underscore, space, period, or hyphen.
+                height_meters:
+                  type: number
+                  exclusiveMinimum: 0
+                  maximum: 1000
+      responses:
+        '200':
+          description: Reference image added to the current collection
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: false
+                required: [status, name]
+                properties:
+                  status: {const: ok}
+                  name: {type: string, description: Actual object name assigned by Blender}
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        default:
+          $ref: '#/components/responses/Error'
+  /v1/blender/save:
+    post:
+      operationId: saveBlenderCharacter
+      summary: Save a copy of the current Blender project
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+              required: [filename]
+              properties:
+                filename:
+                  type: string
+                  minLength: 1
+                  maxLength: 512
+                  description: Relative .blend path under Characters/blender/ without symlink components.
+                  examples: [akvan_div/akvan_div_base_v01.blend]
+                overwrite: {type: boolean, default: false}
+      responses:
+        '200':
+          description: The saved copy was published at the requested destination
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: false
+                required: [status, repo_path, size_bytes]
+                properties:
+                  status: {const: ok}
+                  repo_path: {type: string}
+                  size_bytes: {type: integer, minimum: 1}
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '409':
+          $ref: '#/components/responses/Error'
+        default:
+          $ref: '#/components/responses/Error'
 components:
   securitySchemes:
     bearerAuth:
@@ -105,7 +263,9 @@ components:
     Error:
       description: >-
         Generic error without upstream details. 400 bodies/transfer encoding;
-        404 unrecognized exact route; 405 unsupported method; 431 header budget;
+        404 unrecognized GET route; 405 unsupported route or method;
+        408 request body deadline; 409 destination exists; 413 body budget;
+        415 unsupported media type; 431 header budget;
         502 malformed, oversized or error Blender response; 503 unavailable or
         busy Blender; 504 socket deadline. Unknown HTTP methods may return 501.
       content:
@@ -121,6 +281,10 @@ components:
         error:
           type: string
           examples: [unauthorized, blender_unavailable, blender_timeout]
+        detail:
+          type: string
+          description: Validator rule and optional identifier when error is unsafe_modeling_code.
+          examples: ["blocked_import: os", "blocked_attribute: wm", "blocked_syntax: While"]
     Scene:
       type: object
       required: [name, object_count, materials_count, objects]

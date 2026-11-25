@@ -1,4 +1,4 @@
-# Local read-only Blender HTTP bridge
+# Local Blender HTTP bridge
 
 This is an HTTP adapter, not an MCP server. No ChatGPT, Sites, tunnel, or provider
 connection is established by the bridge itself. The optional controller below
@@ -12,7 +12,7 @@ ChatGPT Work Web → Sites-hosted MCP plugin → Cloudflare HTTPS tunnel →
 Inspected the installed file at
 `/home/mehdi/.config/blender/5.3/scripts/addons/blender_mcp.py`, not an upstream
 substitute. Its SHA-256 at inspection was
-`35e5f317b932d15b485a37d914f7c9d7b527c7ea527f526569c1c111e5f39a05`.
+`b363e5b4765ec53895c92bc98f34335242065a164d95b673f1f843322ac4e03b`.
 The installed add-on declares version 2.0, protocol 16, on Blender 5.3.0.
 
 `_handle_client` accumulates TCP bytes, UTF-8 decodes them, and calls `json.loads`.
@@ -20,7 +20,7 @@ There is no newline, length prefix, HTTP, or MCP framing. Send exactly one JSON
 object per connection; do not pipeline. Commands are queued and processed on
 Blender's main thread by `_drain_command_queue`.
 
-The two bridge requests are exactly:
+The read-only bridge requests are:
 
 ```json
 {"type":"ping","params":{}}
@@ -51,31 +51,60 @@ Replies are unframed JSON and the socket remains open. The bridge reads until
 one complete JSON value, then closes its own connection; it never waits for EOF
 after a valid reply. Incomplete or malformed replies that remain open time out.
 
-The installed dispatcher also exposes commands such as `get_addon_info`,
-`get_object_info`, `list_scene_items`, `execute_code`, and `export_scene`, plus
-conditional asset/generation commands. **None are exposed by this bridge.**
+The character-building routes use two more add-on commands.
+
+- `execute_code` takes `{"code":"..."}` and returns
+  `{"status":"success","result":{"executed":true,"result":"<stdout>"}}`.
+- `get_viewport_screenshot` takes `filepath`, `max_size`, and `format`. It writes
+  the image to that path and returns `success`, `width`, `height`, `filepath`,
+  `method`, `file`, `scene`, `scene_count`, and an optional `view` inside the
+  success envelope. The HTTP response includes the image and dimensions.
+
+The add-on also implements `get_object_info` with a `name` argument. Its result
+contains name, type, location, rotation, scale, visibility, and material names,
+plus bounds and vertex, edge, and polygon counts for mesh objects.
 
 ## API and limits
 
-| GET route | Authentication | Result |
+| Route | Authentication | Result |
 | --- | --- | --- |
-| `/healthz` | None | Generic `{"status":"ok"}`; no Blender call |
-| `/v1/blender/status` | Bearer | Ping; `{"connected":true}` on success |
-| `/v1/blender/scene` | Bearer | Scene result object |
+| `GET /healthz` | None | Generic `{"status":"ok"}` without a Blender call |
+| `GET /v1/blender/status` | Bearer | `{"connected":true}` on successful ping |
+| `GET /v1/blender/scene` | Bearer | Scene result object |
+| `POST /v1/blender/execute` | Bearer | Guarded `{"code":"..."}` modeling and sanitized stdout |
+| `POST /v1/blender/viewport` | Bearer | Base64 PNG and image dimensions. Body may be omitted or `{}` |
+| `POST /v1/blender/load-reference` | Bearer | Load `repo_path`, `name`, and `height_meters` as a locked front orthographic image Empty |
+| `POST /v1/blender/save` | Bearer | Save a copy from `filename` and optional `overwrite`. Returns repository-relative path and bytes |
 
-Failures return `{"error":"generic_code"}`: 400 invalid body, 401 authentication,
-404 unknown exact route (queries and trailing slashes included), 405 unsupported
-method, 431 oversized headers, 502 invalid/error/oversized Blender reply, 503
-unavailable/busy Blender, 504 timeout. Unknown HTTP methods receive generic 501.
+Failures return `{"error":"generic_code"}`. See the OpenAPI contract for HTTP
+statuses, including 409 when a save would overwrite an existing file.
 
 Only IPv4 loopback is bound. At most 16 HTTP workers run; excess connections are
-closed. Header/request-line budget is 8 KiB; request bodies and transfer encoding
-are rejected. HTTP reads time out after five seconds. Blender commands are
-serialized across bridge requests, with a five-second lock wait and a separate
-five-second total socket deadline. TCP input and HTTP output are capped at 1 MiB.
-There are no retries. JSON duplicate keys and non-finite constants are rejected.
+closed. The header budget is 8 KiB and POST JSON bodies have a 64 KiB limit
+and a five-second read deadline. Transfer encoding is rejected. Blender
+commands share a five-second lock wait. The TCP reply deadline is 30 seconds
+for code execution and five seconds for ping, scene inspection, and viewport
+capture. Started Blender work may finish after a timeout. Check scene state
+before retrying a mutation. TCP replies and ordinary HTTP responses are capped
+at 1 MiB. Viewport PNG data is capped at 4 MiB before base64 encoding, with an
+800-pixel longest side. Duplicate JSON keys and non-finite constants are rejected.
 No CORS headers are emitted. Requests, tokens, upstream exception text, and scene
 contents are not logged. HTTP responses disable caching.
+
+The AST allowlist supports guarded Python for meshes, materials, and armatures.
+Scripts can define top-level helpers, branch, and use bounded loops and
+comprehensions. The bridge limits scripts to 4,096 AST nodes and permits
+explicitly listed Blender operations, attributes, and shader node types.
+Imports are limited to `bpy`, `bmesh`, `math`, `mathutils`, `json`, `collections`,
+and `itertools`. A rejected script returns HTTP 400 with `unsafe_modeling_code`
+and a `detail` field identifying the blocked rule or API symbol. Send small
+modeling batches so you can inspect the scene between steps.
+
+Reference images are loaded from `Characters/` and packed into the Blender
+project. Use Blender’s front orthographic view to see the image. Saves are
+staged and published in `Characters/blender/`, with symlink components rejected
+and overwrite disabled by default. A save creates a copy and retains the open
+file’s identity and relative asset paths.
 
 The token is loaded once at startup from `BLENDER_BRIDGE_TOKEN_FILE`. It must be
 outside this repository, a regular file owned by the current user, with no group

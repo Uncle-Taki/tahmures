@@ -20,6 +20,21 @@ bash integrations/blender-mcp/scripts/port443-tunnel.sh reload
 
 Copy the final `BLENDER_BRIDGE_URL=...` line into `BLENDER_BRIDGE_URL` in ChatGPT Sites, then smoke-test `check_bridge_health` and `get_blender_status`.
 
+## Character-building API
+
+Restart the local HTTP process after updating the bridge. Use `openapi.yaml`
+when updating the client’s tools. The existing startup check is read-only.
+The new POST routes all require Bearer authentication.
+
+1. `/v1/blender/load-reference` loads an approved image from `Characters/`.
+   Switch Blender to front orthographic view to see the reference.
+2. `/v1/blender/execute` applies a small batch of guarded modeling code.
+3. `/v1/blender/viewport` captures the current 3D view as a base64 PNG. Use it
+   to inspect each batch. After a timeout, check the scene before retrying
+   because a command already started in Blender may still finish.
+4. `/v1/blender/save` writes a copy under `Characters/blender/`. Use a new
+   versioned filename if the server returns HTTP 409.
+
 ## Clean Shutdown
 
 Stop the public tunnel, then stop the foreground bridge process:

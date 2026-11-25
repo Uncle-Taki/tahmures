@@ -44,10 +44,22 @@ is_running() {
 
 extract_https_url() {
   [[ -f "$LOG_FILE" ]] || return 1
-  sed -r 's/\x1B\[[0-9;]*[[:alpha:]]//g' "$LOG_FILE" \
-    | grep -Eo 'https://[a-zA-Z0-9.-]+\.pinggy\.link' \
-    | grep -Ev '^https://dashboard\.pinggy\.io$' \
-    | head -n 1
+  LC_ALL=C sed -E \
+    -e 's/\x1B\][^\x07\x1B]*(\x07|\x1B\\)//g' \
+    -e 's/\x1B\[[0-?]*[ -/]*[@-~]//g; s/\r//g' \
+    "$LOG_FILE" \
+    | LC_ALL=C awk '
+      !found {
+        for (i = 1; i <= NF; i++) {
+          if ($i ~ /^https:\/\/([a-zA-Z0-9-]+\.)+(pinggy-free\.link|pinggy\.(link|net))$/) {
+            print $i
+            found = 1
+            break
+          }
+        }
+      }
+      END { exit !found }
+    '
 }
 
 check_bridge() {

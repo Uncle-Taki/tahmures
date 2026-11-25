@@ -1,0 +1,57 @@
+{
+  "version": "1.0",
+  "score_range": [
+    0,
+    5
+  ],
+  "profiles": {
+    "2d": {
+      "weights": {
+        "approved_reference_fidelity": 25,
+        "silhouette_shape_language": 20,
+        "character_sheet_completeness": 15,
+        "costume_palette_consistency": 15,
+        "2d_asset_readiness": 10,
+        "handoff_to_3d": 10,
+        "reproducibility_qa": 5
+      },
+      "required_gates": [
+        "approved_reference_available",
+        "visual_identity_preserved",
+        "asset_provenance_recorded"
+      ]
+    },
+    "3d": {
+      "weights": {
+        "approved_reference_fidelity": 20,
+        "silhouette_proportion_quality": 15,
+        "modular_mesh_quality": 15,
+        "materials_palette_consistency": 10,
+        "rigging_deformation_readiness": 10,
+        "blender_53_compatibility": 10,
+        "non_destructive_reproducibility": 10,
+        "validation_evidence": 10
+      },
+      "required_gates": [
+        "approved_reference_available",
+        "visual_identity_preserved",
+        "blender_version_verified",
+        "non_destructive_editing",
+        "asset_provenance_recorded"
+      ]
+    }
+  },
+  "interpretation": {
+    "90-100": "strong fit",
+    "80-89.9": "good fit",
+    "70-79.9": "supporting fit",
+    "60-69.9": "limited fit",
+    "below 60": "weak fit"
+  },
+  "notes": [
+    "Weights are Tahmures-specific priorities, not industry benchmarks.",
+    "A missing or null gate is unverified and makes the result provisional.",
+    "A false required gate excludes the workflow regardless of its numeric score.",
+    "If paid external generation is used, require a separate explicit spend-authorization gate before submission."
+  ]
+}
